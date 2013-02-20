@@ -1,0 +1,36 @@
+﻿<Window x:Class="StylesAndTemplates_TreeMap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+	<telerik:RadTreeMap Name="treeMap1">
+		<telerik:RadTreeMap.TypeDefinitions>
+			<telerik:TypeDefinition TargetTypeName="File"
+									ValuePath="Size"
+									LabelPath="Name">
+				<telerik:TypeDefinition.ItemStyle>
+					<Style TargetType="telerik:RadTreeMapItem" >
+						<Setter Property="Control.Foreground" Value="Blue" />
+						<Setter Property="Template">
+							<Setter.Value>
+								<ControlTemplate>
+									<Border BorderBrush="Red"
+											BorderThickness="2">
+										<TextBlock Text="{Binding Label}"
+												   VerticalAlignment="Center"/>
+									</Border>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</telerik:TypeDefinition.ItemStyle>
+			</telerik:TypeDefinition>
+			<telerik:TypeDefinition TargetTypeName="Folder"
+									ValuePath="Size"
+									ChildrenPath="Children"
+									LabelPath="Name" />
+		</telerik:RadTreeMap.TypeDefinitions>
+	</telerik:RadTreeMap>
+</Window>

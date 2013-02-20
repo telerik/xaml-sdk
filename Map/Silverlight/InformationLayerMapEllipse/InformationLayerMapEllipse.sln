@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapEllipse", "InformationLayerMapEllipse\InformationLayerMapEllipse.csproj", "{F646E4D9-3355-47F2-BC46-42D678CA1486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapEllipse.Web", "InformationLayerMapEllipse.Web\InformationLayerMapEllipse.Web.csproj", "{34A4013D-0AA9-4363-8723-7C8388B3A351}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F646E4D9-3355-47F2-BC46-42D678CA1486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F646E4D9-3355-47F2-BC46-42D678CA1486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F646E4D9-3355-47F2-BC46-42D678CA1486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F646E4D9-3355-47F2-BC46-42D678CA1486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A4013D-0AA9-4363-8723-7C8388B3A351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A4013D-0AA9-4363-8723-7C8388B3A351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A4013D-0AA9-4363-8723-7C8388B3A351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A4013D-0AA9-4363-8723-7C8388B3A351}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

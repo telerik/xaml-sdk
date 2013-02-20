@@ -1,0 +1,37 @@
+	<Reference Include="Telerik.Windows.Controls">
+	  <SpecificVersion>False</SpecificVersion>
+	  <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
+	</Reference>
+	 <Reference Include="Telerik.Windows.Controls.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Spreadsheet">
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+       <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>

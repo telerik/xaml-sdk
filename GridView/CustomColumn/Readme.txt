@@ -1,0 +1,1 @@
+This example demonstrates how to implement custom column inherited from GridViewDataColumn.

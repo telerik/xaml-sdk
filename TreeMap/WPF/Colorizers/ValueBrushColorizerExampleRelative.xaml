@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Colorizers.ValueBrushColorizerExampleRelative"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+			 d:DesignWidth="300">
+	<UserControl.Resources>
+		<SolidColorBrush Color="#FFE10000" x:Key="Thousand" />
+		<SolidColorBrush Color="#FFF5A4A4" x:Key="TwoThousand" />
+		<SolidColorBrush Color="#FFBDDDFF" x:Key="ThreeThousand"/>
+		<SolidColorBrush Color="#FF87C2FF" x:Key="FourThousand" />
+		<SolidColorBrush Color="#FF0C6BBF" x:Key="FiveThousand" />
+
+		<telerik:RangeBrushCollection x:Key="ColorizerBrushes">
+			<telerik:RangeBrush Brush="{StaticResource FourThousand}" From="0" To="0.5" />
+			<telerik:RangeBrush Brush="{StaticResource FiveThousand}" From="0.6" To="1"  />
+		</telerik:RangeBrushCollection>
+	</UserControl.Resources>
+	
+	<telerik:RadTreeMap x:Name="treeMap1"
+						ItemsSource="{Binding}"
+						LayoutStrategy="Squarified"
+						BorderThickness="1"
+						BorderBrush="#FF5F031C">
+		<telerik:RadTreeMap.TypeDefinitions>
+			<telerik:TypeDefinition TargetTypeName="GdpInfo"
+									ValuePath="Gdp"
+									LabelPath="Country"
+									ToolTipPath="Gdp"
+									ToolTipFormat="{}{0:C2} mln" >
+				<telerik:TypeDefinition.Mappings>
+					<telerik:ValueBrushColorizer IsAbsolute="False"
+												 Brushes="{StaticResource ColorizerBrushes}">
+					</telerik:ValueBrushColorizer>
+				</telerik:TypeDefinition.Mappings>
+			</telerik:TypeDefinition>
+		</telerik:RadTreeMap.TypeDefinitions>
+	</telerik:RadTreeMap>
+</UserControl>

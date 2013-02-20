@@ -1,0 +1,257 @@
+﻿<UserControl x:Class="RecurringTask.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:local="clr-namespace:RecurringTask"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			 xmlns:scheduling="clr-namespace:Telerik.Windows.Controls.Scheduling;assembly=Telerik.Windows.Scheduling.Core"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+	<UserControl.DataContext>
+		<local:ViewModel/>
+	</UserControl.DataContext>
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="DeadLineBrush" Color="Red" />
+		<LinearGradientBrush x:Key="EventBackground_Normal" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFFFFFFF" Offset="0" />
+			<GradientStop Color="#FFD4D4D4" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="Event_OuterBorderBrush_Normal" Color="#FF848484" />
+		<SolidColorBrush x:Key="EventForeground_Normal" Color="#FF000000" />
+		<CornerRadius x:Key="Event_OuterCornerRadius">1</CornerRadius>
+		<sys:Double x:Key="Event_RadiusX">1</sys:Double>
+		<sys:Double x:Key="Event_RadiusY">1</sys:Double>
+		<SolidColorBrush x:Key="Event_InnerBorderBrush_Normal" Color="#FFFFFFFF" />
+		<LinearGradientBrush x:Key="Event_OuterBorderBrush_Selected" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FF705400" Offset="0" />
+			<GradientStop Color="#FFFFC92B" Offset="1" />
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="EventBackground_Selected" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFFCE79F" Offset="1" />
+			<GradientStop Color="#FFFFBA74" />
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="EventBackground_Highlighted" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFFCDCDC" />
+			<GradientStop Color="#FFFCC1C1" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="Event_OuterBorderBrush_Highlighted" Color="#FFE22F07" />
+		<SolidColorBrush x:Key="Event_OuterBorderBrush_MouseOver" Color="#FFFFC92B" />
+		<LinearGradientBrush x:Key="EventBackground_MouseOver" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFFFFBA3" Offset="1" />
+			<GradientStop Color="#FFFFFBDA" Offset="0" />
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="EventBackground_MouseOverHighlighted" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFFFFFFF" Offset="0" />
+			<GradientStop Color="#FFD4D4D4" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="Event_OuterBorderBrush_MouseOverHighlighted" Color="#FFFFC92B" />
+		<SolidColorBrush x:Key="Event_InnerBorderBrush_MouseOverHighlighted" Color="#FFFFFFFF" />
+		<SolidColorBrush x:Key="Event_InnerBorderBrush_MouseOver" Color="#FFFFFFFF" />
+		<LinearGradientBrush x:Key="ProgressFill" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FF727272" Offset="0" />
+			<GradientStop Color="#FF2F2F2F" Offset="1" />
+		</LinearGradientBrush>
+		<!--Milestone Brushes-->
+		<LinearGradientBrush x:Key="MilestoneFill_Normal" EndPoint="0.8,0.8" StartPoint="0.14,0.14">
+			<GradientStop Color="#FF747474" Offset="0" />
+			<GradientStop Color="#FF1C1C1C" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="MilestoneStroke_Normal" Color="#FF000000" />
+		<LinearGradientBrush x:Key="MilestoneFill_Selected" EndPoint="0.85,0.85" StartPoint="0.14,0.14">
+			<GradientStop Color="#FF434343" Offset="0" />
+			<GradientStop Color="#FF040404" Offset="1" />
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="MilestoneFill_Highlighted" EndPoint="0.552,0.748" StartPoint="0.448,0.251">
+			<GradientStop Color="#FFFCDCDC" />
+			<GradientStop Color="#FFFCC1C1" Offset="1" />
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="MilestoneFill_MouseOver" EndPoint="0.854,0.854" StartPoint="0.146,0.146">
+			<GradientStop Color="#FF5B5B5B" Offset="1" />
+			<GradientStop Color="#FFB1B1B1" />
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="MilestoneStroke_MouseOver" Color="#FF393939" />
+		<SolidColorBrush x:Key="MilestoneStroke_Selected" Color="#FF000000" />
+		<SolidColorBrush x:Key="MilestoneStroke_Highlighted" Color="#FFE22F07" />
+
+		<Style TargetType="local:TimeLineRecurrenceContainer">
+			<Setter Property="scheduling:DragDropElement.Type" Value="Drag" />
+			<Setter Property="Background" Value="{StaticResource EventBackground_Normal}" />
+			<Setter Property="BorderBrush" Value="{StaticResource Event_OuterBorderBrush_Normal}" />
+			<Setter Property="BorderThickness" Value="1" />
+			<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+			<Setter Property="VerticalContentAlignment" Value="Stretch" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="MinHeight" Value="17" />
+			<Setter Property="Padding" Value="2 0" />
+			<Setter Property="telerik:ZIndexManager.ZIndex" Value="35" />
+			<Setter Property="Foreground" Value="{StaticResource EventForeground_Normal}" />
+			<Setter Property="FontSize" Value="10" />
+			<Setter Property="FontFamily" Value="Segoe UI" />
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="local:TimeLineRecurrenceContainer">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal" />
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="MouseOverVisual"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0">
+													<DiscreteObjectKeyFrame.Value>
+														<Visibility>Visible</Visibility>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="MouseOverHighlighted">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="BackgroundBorder"
+												Storyboard.TargetProperty="Background">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0"
+													Value="{StaticResource EventBackground_MouseOverHighlighted}" />
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="BackgroundBorder"
+												Storyboard.TargetProperty="BorderBrush">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0"
+													Value="{StaticResource Event_OuterBorderBrush_MouseOverHighlighted}" />
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="BackgroundInnerBorder"
+												Storyboard.TargetProperty="Stroke">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0"
+													Value="{StaticResource Event_InnerBorderBrush_MouseOverHighlighted}" />
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled" />
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="SelectionStates">
+									<VisualState x:Name="Unselected" />
+									<VisualState x:Name="Selected">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="CommonStatesVisual"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0">
+													<DiscreteObjectKeyFrame.Value>
+														<Visibility>Visible</Visibility>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused" />
+									<VisualState x:Name="Unfocused" />
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="HighlightStates">
+									<VisualState x:Name="NotHighlighted" />
+									<VisualState x:Name="Highlighted">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Duration="0:0:0"
+												Storyboard.TargetName="HighlightVisual"
+												Storyboard.TargetProperty="Visibility">
+												<DiscreteObjectKeyFrame KeyTime="0:0:0">
+													<DiscreteObjectKeyFrame.Value>
+														<Visibility>Visible</Visibility>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+
+							<telerik:ToolTipManager.ToolTip>
+								<ToolTip>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock Text="{Binding OriginalEvent.Title}" TextWrapping="NoWrap" TextTrimming="None" />
+									</StackPanel>
+								</ToolTip>
+							</telerik:ToolTipManager.ToolTip>
+
+							<Border x:Name="BackgroundBorder"
+								CornerRadius="{StaticResource Event_OuterCornerRadius}"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								Background="{TemplateBinding Background}">
+								<Rectangle x:Name="BackgroundInnerBorder" Stroke="{StaticResource Event_InnerBorderBrush_Normal}" StrokeThickness="1"
+									Fill="Transparent" RadiusX="{StaticResource Event_RadiusX}"
+									RadiusY="{StaticResource Event_RadiusY}" />
+							</Border>
+
+							<Border x:Name="CommonStatesVisual" Visibility="Collapsed"
+								CornerRadius="{StaticResource Event_OuterCornerRadius}" 
+								BorderBrush="{StaticResource Event_OuterBorderBrush_Selected}"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								Background="{StaticResource EventBackground_Selected}">
+								<Rectangle Stroke="{StaticResource Event_InnerBorderBrush_Normal}" StrokeThickness="1"
+									Fill="Transparent" RadiusX="{StaticResource Event_RadiusX}"
+									RadiusY="{StaticResource Event_RadiusY}" />
+							</Border>
+
+							<Border x:Name="HighlightVisual" Visibility="Collapsed"
+								Background="{StaticResource EventBackground_Highlighted}"
+								CornerRadius="{StaticResource Event_OuterCornerRadius}"
+								BorderBrush="{StaticResource Event_OuterBorderBrush_Highlighted}"
+								BorderThickness="{TemplateBinding BorderThickness}">
+								<Rectangle Stroke="{StaticResource Event_InnerBorderBrush_Normal}" StrokeThickness="1"
+									Fill="Transparent" RadiusX="{StaticResource Event_RadiusX}"
+									RadiusY="{StaticResource Event_RadiusY}" />
+							</Border>
+
+							<Border x:Name="MouseOverVisual" Visibility="Collapsed"
+							CornerRadius="{StaticResource Event_OuterCornerRadius}"
+							BorderBrush="{StaticResource Event_OuterBorderBrush_MouseOver}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							Background="{StaticResource EventBackground_MouseOver}">
+								<Rectangle Stroke="{StaticResource Event_InnerBorderBrush_MouseOver}" StrokeThickness="1"
+								Fill="Transparent" RadiusX="{StaticResource Event_RadiusX}"
+								RadiusY="{StaticResource Event_RadiusY}" />
+							</Border>
+
+							<Grid Grid.Column="1" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="*" />
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<TextBlock x:Name="txtBlock" Text="{Binding OriginalEvent.Title}" />
+								<telerik:ProgressPresenter Grid.Row="1"  VerticalAlignment="Bottom" Height="2" Margin="0 0 0 2"
+									HorizontalAlignment="Stretch" Progress="{Binding OriginalEvent.Progress}" Orientation="Horizontal">
+									<Rectangle Fill="{StaticResource ProgressFill}" VerticalAlignment="Stretch"
+										HorizontalAlignment="Stretch" />
+								</telerik:ProgressPresenter>
+							</Grid>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</UserControl.Resources>
+	<Grid>
+		<telerik:RadGanttView VisibleRange="{Binding VisibleRange}" 
+                              PixelLength="00:02:00"
+                              InitialExpandBehavior="Expanded"
+                              TimeLineVisualizationBehavior="{Binding TimeLineRecurrenceBehavior}"
+                              SpecialSlotsGenerator="{Binding SpecialSlotsGenerator}"
+				              TasksSource="{Binding Tasks}">
+			<telerik:RadGanttView.TimelineContainerSelector>
+				<local:TimeLineRecurrenceContainerSelector/>
+			</telerik:RadGanttView.TimelineContainerSelector>
+			<telerik:RadGanttView.Columns>
+				<telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="200"/>
+				<telerik:ColumnDefinition Header="Start" MemberBinding="{Binding Start}" ColumnWidth="120"/>
+				<telerik:ColumnDefinition Header="End" MemberBinding="{Binding End}" ColumnWidth="120"/>
+			</telerik:RadGanttView.Columns>
+		</telerik:RadGanttView>
+	</Grid>
+</UserControl>

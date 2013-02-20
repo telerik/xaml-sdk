@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="HowToCustomZoomLevelsForMapZoomBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <DataTemplate x:Key="CustomCommandDataTemplate">
+                <telerik:RadButton Command="{Binding Path=Command}"
+                                   CommandParameter="{Binding CommandParameter}"
+                                   HorizontalContentAlignment="Stretch"
+                                   Height="26"
+                                   Margin="0,3"
+                                   CornerRadius="3"
+                                   Opacity="0.8"
+                                   BorderBrush="#FF848484">
+                    <telerik:RadButton.Background>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#FFD4D4D4" Offset="1"/>
+                            <GradientStop Color="Gainsboro" Offset="0.5"/>
+                            <GradientStop Color="#FFADADAD" Offset="0.51"/>
+                        </LinearGradientBrush>
+                    </telerik:RadButton.Background>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="32" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Path=Command.Text}"
+                                   TextAlignment="Center" 
+                                   HorizontalAlignment="Stretch" 
+                                   Padding="7,0"
+                                   FontSize="11" 
+                                   FontWeight="Bold" />
+                        <Image Grid.Column="1" Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image.Source>
+                                <BitmapImage UriSource="{Binding ImageUri}" />
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                </telerik:RadButton>
+            </DataTemplate>
+        </Grid.Resources>
+        <telerik:RadMap x:Name="RadMap1" 
+                        ZoomLevel="15"
+                        MinZoomLevel="15"
+                        GeoBounds="42.3683598045287, -71.0789727419614, 3.9167707221002743, 2.1883037274811104">
+            <telerik:RadMap.Provider>
+                <telerik:OpenStreetMapProvider />
+            </telerik:RadMap.Provider>
+        </telerik:RadMap>
+    </Grid>
+</UserControl>

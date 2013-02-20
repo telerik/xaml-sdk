@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToRestrictPanningAndZoomingRegion", "HowToRestrictPanningAndZoomingRegion\HowToRestrictPanningAndZoomingRegion.csproj", "{973D31E7-2514-4D71-A287-C990B121A658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToRestrictPanningAndZoomingRegion.Web", "HowToRestrictPanningAndZoomingRegion.Web\HowToRestrictPanningAndZoomingRegion.Web.csproj", "{8BBA7DB8-6B56-4485-82AA-DE9FF89998A7}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{973D31E7-2514-4D71-A287-C990B121A658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973D31E7-2514-4D71-A287-C990B121A658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973D31E7-2514-4D71-A287-C990B121A658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973D31E7-2514-4D71-A287-C990B121A658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBA7DB8-6B56-4485-82AA-DE9FF89998A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBA7DB8-6B56-4485-82AA-DE9FF89998A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBA7DB8-6B56-4485-82AA-DE9FF89998A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBA7DB8-6B56-4485-82AA-DE9FF89998A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

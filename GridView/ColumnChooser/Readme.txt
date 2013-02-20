@@ -1,0 +1,1 @@
+This example demonstrates how to implement custom column chooser in order to hide/show desired columns in RadGridView for Silverlight and WPF

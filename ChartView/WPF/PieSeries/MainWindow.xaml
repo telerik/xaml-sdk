@@ -1,0 +1,84 @@
+﻿<Window x:Class="PieSeries.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="450"
+		Width="950">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<telerik:RadPieChart Palette="Metro">
+			<telerik:PieSeries ShowLabels="True"
+							   RadiusFactor="0.7">
+				<telerik:PieSeries.DataPoints>
+					<telerik:PieDataPoint Value="43.46" Label="France 43.46%"/>
+					<telerik:PieDataPoint Value="27.53" Label="Germany 27.53%" />
+					<telerik:PieDataPoint Value="15.11" Label="Belgium 15.11%" />
+					<telerik:PieDataPoint Value="10.35" Label="Holland 10.35%" />
+					<telerik:PieDataPoint Value="3.55" Label="Italy 3.55%" />
+				</telerik:PieSeries.DataPoints>
+				
+				<telerik:PieSeries.LabelDefinitions>
+					<telerik:ChartSeriesLabelDefinition Margin="-30,0,0,0"/>
+				</telerik:PieSeries.LabelDefinitions>
+				
+				<telerik:PieSeries.AngleRange>
+					<telerik:AngleRange StartAngle="180"
+										SweepAngle="180"/>
+				</telerik:PieSeries.AngleRange>
+			</telerik:PieSeries>
+		</telerik:RadPieChart>
+		
+		<TextBlock Text="PieSeries with custom label definition"
+				   Grid.Row="1"
+				   HorizontalAlignment="Center"/>
+
+		<telerik:RadPieChart Grid.Column="1">
+			<telerik:PieSeries>
+				<telerik:PieSeries.SliceStyles>
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="Orange"/>
+					</Style>
+					
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="Gray"/>
+					</Style>
+					
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="Cyan"/>
+					</Style>
+					
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="Purple"/>
+					</Style>
+					
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="Green"/>
+					</Style>
+				</telerik:PieSeries.SliceStyles>
+				
+				<telerik:PieSeries.DataPoints>
+					<telerik:PieDataPoint Value="10"/>
+					<telerik:PieDataPoint Value="4"/>
+					<telerik:PieDataPoint Value="7"/>
+					<telerik:PieDataPoint Value="11"/>
+					<telerik:PieDataPoint Value="15"/>
+				</telerik:PieSeries.DataPoints>
+			</telerik:PieSeries>
+		</telerik:RadPieChart>
+		
+		<TextBlock Text="PieSeries with default label definition"
+				   HorizontalAlignment="Center"
+				   Grid.Column="1"
+				   Grid.Row="1"/>
+	</Grid>
+</Window>

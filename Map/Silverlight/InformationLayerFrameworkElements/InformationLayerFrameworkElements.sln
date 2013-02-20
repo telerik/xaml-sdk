@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerFrameworkElements", "InformationLayerFrameworkElements\InformationLayerFrameworkElements.csproj", "{9AFA28E6-BA96-4DB9-8B51-7B4E58D7EBAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerFrameworkElements.Web", "InformationLayerFrameworkElements.Web\InformationLayerFrameworkElements.Web.csproj", "{1E778B76-1F7A-4501-B2FC-869EEFA195AA}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AFA28E6-BA96-4DB9-8B51-7B4E58D7EBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFA28E6-BA96-4DB9-8B51-7B4E58D7EBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFA28E6-BA96-4DB9-8B51-7B4E58D7EBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFA28E6-BA96-4DB9-8B51-7B4E58D7EBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E778B76-1F7A-4501-B2FC-869EEFA195AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E778B76-1F7A-4501-B2FC-869EEFA195AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E778B76-1F7A-4501-B2FC-869EEFA195AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E778B76-1F7A-4501-B2FC-869EEFA195AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

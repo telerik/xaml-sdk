@@ -1,0 +1,1 @@
+This example demonstrates how to customize ListBoxDragDropBehavior of RadListBox. In the example the right ListBox control has the custom MyListBoxDragDropBehavior and when items are dragged/dropped from/in it an Alert massage is shown with the items details.

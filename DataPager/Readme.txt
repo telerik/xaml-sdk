@@ -1,0 +1,1 @@
+Examples related to RadDataPager for Silverlight and WPF

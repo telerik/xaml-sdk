@@ -1,0 +1,31 @@
+﻿<toolSettingsHeader:ToolSettingsHeader  x:Class="CustomWatermarkTool.WatermarkToolSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolSettingsHeader="clr-namespace:Telerik.Windows.Media.Imaging.Tools.UI;assembly=Telerik.Windows.Controls.ImageEditor"
+    xmlns:local="clr-namespace:CustomWatermarkTool"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto "/>
+            <RowDefinition Height="Auto "/>
+            <RowDefinition Height="Auto "/>
+            <RowDefinition Height="Auto "/>
+            <RowDefinition Height="Auto "/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Open image" Grid.Row="0" Grid.Column="0" Margin="9" VerticalAlignment="Center" Foreground="#FF1E395B"/>
+        <telerik:RadButton x:Name="open" Content="Open" Height="23" Width="60" Margin="9" Grid.Column="1" />
+        <telerik:NumericPropertyEditor PropertyName="Opacity" x:Name="opacity" Grid.Row="2" MinimumValue="0" MaximumValue="1" Grid.ColumnSpan="2" Margin="5" />
+        <telerik:NumericPropertyEditor PropertyName="Rotation" x:Name="rotation" Grid.Row="3" MinimumValue="0" MaximumValue="360" Grid.ColumnSpan="2" Margin="5"/>
+        <telerik:NumericPropertyEditor PropertyName="Scale" x:Name="scale" MinimumValue="0.1" MaximumValue="5" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" />
+    </Grid>
+</toolSettingsHeader:ToolSettingsHeader>
+

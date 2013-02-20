@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="LogarithmicAxis.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400"
+			 Height="400"
+			 Width="600">
+	<Grid>
+		<telerik:RadCartesianChart x:Name="chart">
+			<telerik:RadCartesianChart.HorizontalAxis>
+				<telerik:LogarithmicAxis LogarithmBase="2"/>
+			</telerik:RadCartesianChart.HorizontalAxis>
+
+			<telerik:RadCartesianChart.VerticalAxis>
+				<telerik:LinearAxis/>
+			</telerik:RadCartesianChart.VerticalAxis>
+
+			<telerik:ScatterLineSeries>
+				<telerik:ScatterLineSeries.DataPoints>
+					<telerik:ScatterDataPoint XValue="2" YValue="1"/>
+					<telerik:ScatterDataPoint XValue="4" YValue="2"/>
+					<telerik:ScatterDataPoint XValue="16" YValue="3"/>
+					<telerik:ScatterDataPoint XValue="256" YValue="4"/>
+					<telerik:ScatterDataPoint XValue="65536" YValue="5"/>
+				</telerik:ScatterLineSeries.DataPoints>
+			</telerik:ScatterLineSeries>
+		</telerik:RadCartesianChart>
+	</Grid>
+</UserControl>

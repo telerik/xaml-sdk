@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" mc:Ignorable="d"
+    xmlns:behavior="clr-namespace:BindingSelectedItemsFromViewModel"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerik:RadGridView ItemsSource="{Binding View}" SelectionMode="Extended" Margin="5"
+                             behavior:MySelectedItemsBindingBehavior.SelectedItems="{Binding SelectedItems}">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewSelectColumn />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <TextBlock Text="SelectedItems:" Margin="5" Grid.Row="1" />
+        <ListBox ItemsSource="{Binding SelectedItems}" DisplayMemberPath="ID" Grid.Row="2" Margin="5" />
+    </Grid>
+</UserControl>

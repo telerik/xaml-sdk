@@ -1,0 +1,1 @@
+This example demonstrates how to implement image column distinct values.

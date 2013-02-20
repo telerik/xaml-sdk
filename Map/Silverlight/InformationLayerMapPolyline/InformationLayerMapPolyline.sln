@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapPolyline", "InformationLayerMapPolyline\InformationLayerMapPolyline.csproj", "{53EE770B-7EA2-4DC1-95B5-F47AAB09075D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapPolyline.Web", "InformationLayerMapPolyline.Web\InformationLayerMapPolyline.Web.csproj", "{7E24F8EC-4163-4963-BC2D-5319D3C24DC0}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53EE770B-7EA2-4DC1-95B5-F47AAB09075D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53EE770B-7EA2-4DC1-95B5-F47AAB09075D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53EE770B-7EA2-4DC1-95B5-F47AAB09075D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53EE770B-7EA2-4DC1-95B5-F47AAB09075D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E24F8EC-4163-4963-BC2D-5319D3C24DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E24F8EC-4163-4963-BC2D-5319D3C24DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E24F8EC-4163-4963-BC2D-5319D3C24DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E24F8EC-4163-4963-BC2D-5319D3C24DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

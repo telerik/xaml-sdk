@@ -1,0 +1,130 @@
+﻿<Window x:Class="PdfViewerCustomSaveCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+        x:Name="_this">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar DataContext="{Binding ElementName=pdfViewer, Path=Commands}">
+            <telerik:RadToolBar.Resources>
+                <converters:DoubleToStringPercentConverter x:Key="doubleToStringPercentConverter" />
+                <converters:FixedDocumentViewerModeConverter x:Key="ModeConverter" />
+            </telerik:RadToolBar.Resources>
+
+            <telerik:RadButton Padding="4" DataContext="{Binding ElementName=_this, Path=Commands}"  Command="{Binding OpenCommand}">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/open.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Padding="4" DataContext="{Binding ElementName=_this, Path=Commands}" Command="{Binding SaveCommand}">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Save" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/save.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Command="{Binding PrintPdfDocumentCommand}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Print" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/printer.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:RadButton Command="{Binding PageUpCommand}"  HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Previous page" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/previous.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Command="{Binding PageDownCommand}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Next page" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/next.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <TextBox Width="30" Margin="2" Text="{Binding FixedDocumentViewer.CurrentPageNumber, Mode=TwoWay}" HorizontalContentAlignment="Center" x:Name="tbCurrentPage" KeyDown="tbCurrentPage_KeyDown"/>
+            <TextBlock VerticalAlignment="Center" Margin="2" Text="/" />
+            <TextBlock VerticalAlignment="Center" Margin="2" Text="{Binding ElementName=pdfViewer, Path=Document.Pages.Count}" />
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:RadButton Command="{Binding ZoomInCommand}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Zoom in" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/zoom-in.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton x:Name="PART_btnZoomOut" Command="{Binding ZoomOutCommand}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Zoom out" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/zoom-out.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadComboBox IsEditable="True" Margin="2" MaxWidth="95" SelectedIndex="4" x:Name="cbScale"
+                         Text="{Binding FixedDocumentViewer.ScaleFactor, Converter={StaticResource doubleToStringPercentConverter}, Mode=TwoWay}">
+                <telerik:RadComboBoxItem Content="10%" />
+                <telerik:RadComboBoxItem Content="25%" />
+                <telerik:RadComboBoxItem Content="50%" />
+                <telerik:RadComboBoxItem Content="75%" />
+                <telerik:RadComboBoxItem Content="100%" />
+                <telerik:RadComboBoxItem Content="150%" />
+                <telerik:RadComboBoxItem Content="200%" />
+                <telerik:RadComboBoxItem Content="500%" />
+                <telerik:RadComboBoxItem Content="1000%" />
+                <telerik:RadComboBoxItem Content="2000%" />
+            </telerik:RadComboBox>
+            <telerik:RadToolBarSeparator />
+
+            <telerik:RadToggleButton IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=Pan}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Pan" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/hand-free.png" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToggleButton IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=TextSelection}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Text Selection" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/text-selection.png" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToolBarSeparator />
+            <telerik:RadWatermarkTextBox Margin="2" x:Name="tbFind" KeyDown="tbFind_KeyDown"  Width="100">
+                <telerik:RadWatermarkTextBox.WatermarkContent>
+                    <TextBlock Text="Find" FontStyle="Normal" />
+                </telerik:RadWatermarkTextBox.WatermarkContent>
+            </telerik:RadWatermarkTextBox>
+
+            <telerik:RadButton x:Name="btnPrev" Visibility="Collapsed" Command="{Binding FindPreviousCommand}" CommandParameter="{Binding ElementName=tbFind, Path=Text}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Find Previous" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/find-previous.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton x:Name="btnNext" Visibility="Collapsed" Command="{Binding FindCommand}" CommandParameter="{Binding ElementName=tbFind, Path=Text}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Find Next" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/find-next.png" Stretch="None" />
+            </telerik:RadButton>
+        </telerik:RadToolBar>
+
+        <telerik:RadPdfViewer Grid.Row="1" x:Name="pdfViewer" />
+    </Grid>
+</Window>

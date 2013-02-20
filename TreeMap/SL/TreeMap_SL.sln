@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylesAndTemplates_PivotMap", "StylesAndTempaltes_PivotMap\StylesAndTemplates_PivotMap.csproj", "{A910FBBE-647A-4B65-9E2E-E5701DB596AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylesAndTemplates_TreeMap", "StylesAndTemplates_TreeMap\StylesAndTemplates_TreeMap.csproj", "{E6B783B8-1DDD-41DB-BB3F-FCB56ADC890A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulatingWithData_TreeMap", "PopulatingWithData_TreeMap\PopulatingWithData_TreeMap.csproj", "{5F4F098C-7CE4-4512-91B1-F79D112D42B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulatingWithData_PivotMap", "PopulatingWithData_PivotMap\PopulatingWithData_PivotMap.csproj", "{D9D8387D-3E71-494A-B183-412C4B41C8BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappings", "Mappings\Mappings.csproj", "{98B4F835-7E2E-4C33-9BCF-490247A06A81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colorizers", "Colorizers\Colorizers.csproj", "{47CD5347-75FB-4325-86E6-D18B3B393A88}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A910FBBE-647A-4B65-9E2E-E5701DB596AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A910FBBE-647A-4B65-9E2E-E5701DB596AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A910FBBE-647A-4B65-9E2E-E5701DB596AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A910FBBE-647A-4B65-9E2E-E5701DB596AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B783B8-1DDD-41DB-BB3F-FCB56ADC890A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B783B8-1DDD-41DB-BB3F-FCB56ADC890A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B783B8-1DDD-41DB-BB3F-FCB56ADC890A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B783B8-1DDD-41DB-BB3F-FCB56ADC890A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4F098C-7CE4-4512-91B1-F79D112D42B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4F098C-7CE4-4512-91B1-F79D112D42B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4F098C-7CE4-4512-91B1-F79D112D42B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4F098C-7CE4-4512-91B1-F79D112D42B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D8387D-3E71-494A-B183-412C4B41C8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D8387D-3E71-494A-B183-412C4B41C8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D8387D-3E71-494A-B183-412C4B41C8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D8387D-3E71-494A-B183-412C4B41C8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B4F835-7E2E-4C33-9BCF-490247A06A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B4F835-7E2E-4C33-9BCF-490247A06A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B4F835-7E2E-4C33-9BCF-490247A06A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B4F835-7E2E-4C33-9BCF-490247A06A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CD5347-75FB-4325-86E6-D18B3B393A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CD5347-75FB-4325-86E6-D18B3B393A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CD5347-75FB-4325-86E6-D18B3B393A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CD5347-75FB-4325-86E6-D18B3B393A88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

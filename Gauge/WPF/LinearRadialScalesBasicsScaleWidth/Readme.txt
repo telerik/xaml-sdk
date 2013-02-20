@@ -1,0 +1,1 @@
+﻿You are allowed to specify the width of the scale at its beginning and at its end. For this purpose the GraphicScale class exposes the StartWidth and EndWidth properties.

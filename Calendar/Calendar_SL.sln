@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_SL", "TodayButton\TodayButton_SL.csproj", "{8CF4BC07-04EA-4694-9539-8525E799F025}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CF4BC07-04EA-4694-9539-8525E799F025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF4BC07-04EA-4694-9539-8525E799F025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF4BC07-04EA-4694-9539-8525E799F025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF4BC07-04EA-4694-9539-8525E799F025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

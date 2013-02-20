@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="AnnotationTypes.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:local="clr-namespace:AnnotationTypes"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300" d:DesignWidth="400">
+
+	<Grid>
+		<telerik:RadTabControl>
+			<telerik:RadTabControl.Items>
+				<telerik:RadTabItem Header="CartesianGridLineAnnotation">
+					<local:CartesianGridLineAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="PolarAxisGridLineAnnotation">
+					<local:PolarAxisGridLineAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="RadialAxisGridLineAnnotation">
+					<local:RadialAxisGridLineAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="CartesianPlotBandAnnotation">
+					<local:CartesianPlotBandAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="PolarAxisPlotBandAnnotation">
+					<local:PolarAxisPlotBandAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="RadialAxisPlotBandAnnotation">
+					<local:RadialAxisPlotBandAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="CartesianCustomAnnotation">
+					<local:CartesianCustomAnnotationDemo/>
+				</telerik:RadTabItem>
+
+				<telerik:RadTabItem Header="PolarCustomAnnotation">
+					<local:PolarCustomAnnotationDemo/>
+				</telerik:RadTabItem>
+			</telerik:RadTabControl.Items>
+		</telerik:RadTabControl>
+	</Grid>
+</UserControl>

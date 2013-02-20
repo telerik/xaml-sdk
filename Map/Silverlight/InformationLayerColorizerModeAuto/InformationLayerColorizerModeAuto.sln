@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeAuto", "InformationLayerColorizerModeAuto\InformationLayerColorizerModeAuto.csproj", "{0F93A469-322A-4F39-8EC6-638EA888FD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeAuto.Web", "InformationLayerColorizerModeAuto.Web\InformationLayerColorizerModeAuto.Web.csproj", "{CFFE696C-242F-455D-AE8E-8590F6CC462E}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F93A469-322A-4F39-8EC6-638EA888FD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F93A469-322A-4F39-8EC6-638EA888FD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F93A469-322A-4F39-8EC6-638EA888FD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F93A469-322A-4F39-8EC6-638EA888FD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFE696C-242F-455D-AE8E-8590F6CC462E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFE696C-242F-455D-AE8E-8590F6CC462E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFE696C-242F-455D-AE8E-8590F6CC462E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFE696C-242F-455D-AE8E-8590F6CC462E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

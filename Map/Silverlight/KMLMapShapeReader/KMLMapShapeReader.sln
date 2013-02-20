@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMLMapShapeReader", "KMLMapShapeReader\KMLMapShapeReader.csproj", "{2CFBE9F4-DBE6-428D-B31D-4BDAF2EDA7CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMLMapShapeReader.Web", "KMLMapShapeReader.Web\KMLMapShapeReader.Web.csproj", "{3ADC125E-2F7E-4A5F-891F-C82F1DE6E8BA}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CFBE9F4-DBE6-428D-B31D-4BDAF2EDA7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFBE9F4-DBE6-428D-B31D-4BDAF2EDA7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFBE9F4-DBE6-428D-B31D-4BDAF2EDA7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFBE9F4-DBE6-428D-B31D-4BDAF2EDA7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADC125E-2F7E-4A5F-891F-C82F1DE6E8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADC125E-2F7E-4A5F-891F-C82F1DE6E8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADC125E-2F7E-4A5F-891F-C82F1DE6E8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADC125E-2F7E-4A5F-891F-C82F1DE6E8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

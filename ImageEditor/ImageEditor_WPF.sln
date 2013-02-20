@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadImageEditorUIFirstLook_WPF", "RadImageEditorUIFirstLook\RadImageEditorUIFirstLook_WPF.csproj", "{420D0D51-6BF7-4B33-8C53-7886844C2FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUIRadImageEditor_WPF", "CustomUIRadImageEditor\CustomUIRadImageEditor_WPF.csproj", "{ED273FC2-E517-4B1A-B963-4F2F520C369A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomWatermarkTool_WPF", "CustomWatermarkTool\CustomWatermarkTool_WPF.csproj", "{2F533CE8-56B2-4C6B-B65B-8BA8A72064D5}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{420D0D51-6BF7-4B33-8C53-7886844C2FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420D0D51-6BF7-4B33-8C53-7886844C2FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420D0D51-6BF7-4B33-8C53-7886844C2FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420D0D51-6BF7-4B33-8C53-7886844C2FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED273FC2-E517-4B1A-B963-4F2F520C369A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED273FC2-E517-4B1A-B963-4F2F520C369A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED273FC2-E517-4B1A-B963-4F2F520C369A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED273FC2-E517-4B1A-B963-4F2F520C369A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F533CE8-56B2-4C6B-B65B-8BA8A72064D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F533CE8-56B2-4C6B-B65B-8BA8A72064D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F533CE8-56B2-4C6B-B65B-8BA8A72064D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F533CE8-56B2-4C6B-B65B-8BA8A72064D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

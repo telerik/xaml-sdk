@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeStep", "InformationLayerColorizerModeStep\InformationLayerColorizerModeStep.csproj", "{FCEFC41B-5FB4-4155-93A4-AC35E0E1EE15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeStep.Web", "InformationLayerColorizerModeStep.Web\InformationLayerColorizerModeStep.Web.csproj", "{043FE428-90B4-4481-BA30-3EF3265A526D}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCEFC41B-5FB4-4155-93A4-AC35E0E1EE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEFC41B-5FB4-4155-93A4-AC35E0E1EE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEFC41B-5FB4-4155-93A4-AC35E0E1EE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEFC41B-5FB4-4155-93A4-AC35E0E1EE15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043FE428-90B4-4481-BA30-3EF3265A526D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043FE428-90B4-4481-BA30-3EF3265A526D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043FE428-90B4-4481-BA30-3EF3265A526D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043FE428-90B4-4481-BA30-3EF3265A526D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

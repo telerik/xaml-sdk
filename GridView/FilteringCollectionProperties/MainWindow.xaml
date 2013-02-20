@@ -1,0 +1,20 @@
+﻿<Window x:Class="FilteringCollectionProperties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:my="clr-namespace:FilteringCollectionProperties"
+        Title="MainWindow" Height="350" Width="525">
+	<Grid x:Name="LayoutRoot" Background="White" >
+		<telerik:RadGridView Name="radGridView" 
+							 AutoGenerateColumns="False"
+							 FilterOperatorsLoading="OnFilterOperatorsLoading"
+							 DistinctValuesLoading="OnDistinctValuesLoading"
+							 FieldFilterEditorCreated="OnFieldFilterEditorCreated">
+			<telerik:RadGridView.Columns>
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
+				<my:CollectionPropertyColumn DataMemberBinding="{Binding WorkingDays}" 
+											 IsReadOnly="True"/>
+			</telerik:RadGridView.Columns>
+		</telerik:RadGridView>
+	</Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToBringALocationIntoView", "HowToBringALocationIntoView\HowToBringALocationIntoView.csproj", "{CE75B65D-6D35-4D42-8519-0B309B97FB04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToBringALocationIntoView.Web", "HowToBringALocationIntoView.Web\HowToBringALocationIntoView.Web.csproj", "{69A09E0C-541C-459D-99A4-A83C08E5AAB8}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE75B65D-6D35-4D42-8519-0B309B97FB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE75B65D-6D35-4D42-8519-0B309B97FB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE75B65D-6D35-4D42-8519-0B309B97FB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE75B65D-6D35-4D42-8519-0B309B97FB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A09E0C-541C-459D-99A4-A83C08E5AAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A09E0C-541C-459D-99A4-A83C08E5AAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A09E0C-541C-459D-99A4-A83C08E5AAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A09E0C-541C-459D-99A4-A83C08E5AAB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

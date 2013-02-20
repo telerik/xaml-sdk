@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="InformationLayerColorizerModeRanges.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid>
+        <telerik:RadMap x:Name="radMap">
+            <telerik:RadMap.Provider>
+                <telerik:EmptyProvider />
+            </telerik:RadMap.Provider>
+            <telerik:InformationLayer x:Name="informationLayer">
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader DataSource="/InformationLayerColorizerModeRanges;component/Resources/world.dbf"
+                                            Source="/InformationLayerColorizerModeRanges;component/Resources/world.shp" />
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.Colorizer>
+                    <telerik:ColorMeasureScale ExtendedPropertyName="SQKM" Mode="Ranges">
+                        <telerik:ColorMeasureScale.ShapeFillCollection>
+                            <telerik:MapShapeFill Fill="#FFFAB935" Stroke="White" StrokeThickness="2" />
+                            <telerik:MapShapeFill Fill="#FFC9441C" Stroke="White" StrokeThickness="2" />
+                        </telerik:ColorMeasureScale.ShapeFillCollection>
+                        <telerik:ColorMeasureScale.RangeCollection>
+                            <telerik:MapRange MinValue="0" MaxValue="1000000" />
+                            <telerik:MapRange MinValue="1000000" MaxValue="5000000" />
+                            <telerik:MapRange MinValue="5000000" MaxValue="10000000" />
+                            <telerik:MapRange MinValue="10000000" MaxValue="15000000" />
+                            <telerik:MapRange MinValue="15000000" MaxValue="20000000" />
+                            <telerik:MapRange MinValue="20000000" MaxValue="25000000" />
+                            <telerik:MapRange MinValue="25000000" MaxValue="30000000" />
+                            <telerik:MapRange MinValue="35000000" MaxValue="40000000" />
+                        </telerik:ColorMeasureScale.RangeCollection>
+                    </telerik:ColorMeasureScale>
+                </telerik:InformationLayer.Colorizer>
+            </telerik:InformationLayer>
+        </telerik:RadMap>
+    </Grid>
+</UserControl>

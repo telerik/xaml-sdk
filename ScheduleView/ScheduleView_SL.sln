@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentColorBasedOnResource_SL", "AppointmentColorBasedOnResource\AppointmentColorBasedOnResource_SL.csproj", "{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthViewInitiallyExpanded_SL", "MonthViewInitiallyExpanded\MonthViewInitiallyExpanded_SL.csproj", "{20FBB5CB-6716-4CDD-9636-F0FEDDEC461C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlotsToolTip_SL", "SpecialSlotsToolTip\SpecialSlotsToolTip_SL.csproj", "{6C5107FD-3E6D-4FBC-ADAE-9DD3532CFD42}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FBB5CB-6716-4CDD-9636-F0FEDDEC461C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FBB5CB-6716-4CDD-9636-F0FEDDEC461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FBB5CB-6716-4CDD-9636-F0FEDDEC461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FBB5CB-6716-4CDD-9636-F0FEDDEC461C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5107FD-3E6D-4FBC-ADAE-9DD3532CFD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5107FD-3E6D-4FBC-ADAE-9DD3532CFD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5107FD-3E6D-4FBC-ADAE-9DD3532CFD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5107FD-3E6D-4FBC-ADAE-9DD3532CFD42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,47 @@
+﻿<Window x:Class="GaugeRangeTicksAppearance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True"
+		  Height="250"
+		  Width="100"
+		  VerticalAlignment="Center"
+		  HorizontalAlignment="Center">
+		<telerik:RadVerticalLinearGauge telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale Min="0"
+										 Max="30"
+										 MajorTicks="3"
+										 MajorTickUseRangeColor="True"
+										 MiddleTickUseRangeColor="True"
+										 MinorTickUseRangeColor="True"
+										 RangeLocation="OverOutside">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Background="#FFA3A3A3"
+										TickBackground="#FFA3A3A3"
+										StrokeThickness="2"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Min="0"
+										Max="10"/>
+					<telerik:GaugeRange Background="#FF000000"
+										TickBackground="#FF000000"
+										StrokeThickness="2"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Min="10"
+										Max="20"  />
+					<telerik:GaugeRange Background="#FFE50000"
+										TickBackground="#FFE50000"
+										StrokeThickness="2"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Min="20"
+										Max="30" />
+				</telerik:VerticalLinearScale.Ranges>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

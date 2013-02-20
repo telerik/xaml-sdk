@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="HowToSetTheBestViewForInformationLayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid>
+        <telerik:RadMap x:Name="radMap">
+            <telerik:RadMap.Provider>
+                <telerik:OpenStreetMapProvider />
+            </telerik:RadMap.Provider>
+            <telerik:InformationLayer x:Name="informationLayer">
+                <telerik:InformationLayer.DataMappings>
+                    <telerik:DataMapping FieldName="Location"
+                                         ValueMember="Location" />
+                    <telerik:DataMapping FieldName="BaseZoomLevel"
+                                         ValueMember="ZoomLevel" />
+                    <telerik:DataMapping FieldName="ZoomRange"
+                                         ValueMember="ZoomRange" />
+                </telerik:InformationLayer.DataMappings>
+                <telerik:InformationLayer.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <telerik:MapLayer.HotSpot>
+                                <telerik:HotSpot X="0.5"
+                                                 Y="0.5"
+                                                 ElementName="PART_Ellipse" />
+                            </telerik:MapLayer.HotSpot>
+                            <Ellipse x:Name="PART_Ellipse"
+                                     Width="20"
+                                     Height="20"
+                                     Stroke="Red"
+                                     StrokeThickness="3"
+                                     Fill="Transparent">
+                                <ToolTipService.ToolTip>
+                                    <ToolTip Content="{Binding Caption}" />
+                                </ToolTipService.ToolTip>
+                            </Ellipse>
+                        </Grid>
+                    </DataTemplate>
+                </telerik:InformationLayer.ItemTemplate>
+            </telerik:InformationLayer>
+        </telerik:RadMap>
+    </Grid>
+</UserControl>

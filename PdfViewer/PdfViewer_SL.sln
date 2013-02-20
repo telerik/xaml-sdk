@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerCustomSaveCommand_SL", "PdfViewerCustomSaveCommand\PdfViewerCustomSaveCommand_SL.csproj", "{D28A4241-2E70-4158-A306-C755BE6161BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeScaleFactor_SL", "ChangeScaleFactor\ChangeScaleFactor_SL.csproj", "{CEF9FC73-819E-4280-A184-E3FBD1C22035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLook_SL", "FirstLook\FirstLook_SL.csproj", "{BE59A6A7-DCFD-4D4C-8E0C-EFF93F2D2500}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D28A4241-2E70-4158-A306-C755BE6161BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28A4241-2E70-4158-A306-C755BE6161BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28A4241-2E70-4158-A306-C755BE6161BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28A4241-2E70-4158-A306-C755BE6161BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF9FC73-819E-4280-A184-E3FBD1C22035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF9FC73-819E-4280-A184-E3FBD1C22035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF9FC73-819E-4280-A184-E3FBD1C22035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF9FC73-819E-4280-A184-E3FBD1C22035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE59A6A7-DCFD-4D4C-8E0C-EFF93F2D2500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE59A6A7-DCFD-4D4C-8E0C-EFF93F2D2500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE59A6A7-DCFD-4D4C-8E0C-EFF93F2D2500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE59A6A7-DCFD-4D4C-8E0C-EFF93F2D2500}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

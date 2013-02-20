@@ -1,0 +1,251 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="TodayButton.App"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			 xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls"
+			 xmlns:telerikChromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls"
+             >
+    <Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Telerik.Windows.Controls;component/Themes/Generic.xaml"/>
+				<ResourceDictionary Source="/Telerik.Windows.Controls.Input;component/Themes/Generic.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+
+			<Style TargetType="telerik:RadDateTimePicker" BasedOn="{StaticResource RadDateTimePickerStyle}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="telerik:RadDateTimePicker">
+							<Grid>
+								<VisualStateManager.VisualStateGroups>
+									<VisualStateGroup x:Name="CommonStates">
+										<VisualState x:Name="Normal">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="00:00:00.150">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+													<LinearDoubleKeyFrame KeyTime="00:00:00.150" Value="0" />
+												</DoubleAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderEnabled">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>True</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="MouseOver">
+											<Storyboard>
+												<DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+													<LinearDoubleKeyFrame KeyTime="0:0:0.115" Value="1" />
+												</DoubleAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderActive">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>True</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Foreground">
+													<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconForeground_MouseOver}" />
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Background">
+													<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconBackground_MouseOver}" />
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderEnabled">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>True</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Disabled">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundVisual" Storyboard.TargetProperty="BorderBrush">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ControlOuterBorder_Disabled}" />
+												</ObjectAnimationUsingKeyFrames>
+												<DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+													<LinearDoubleKeyFrame KeyTime="0:0:0.050" Value="0" />
+												</DoubleAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0.050">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<DoubleAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Opacity">
+													<LinearDoubleKeyFrame KeyTime="00:00:00.150" Value="0.5" />
+												</DoubleAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderEnabled">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>False</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+									</VisualStateGroup>
+									<VisualStateGroup x:Name="FocusStates">
+										<VisualState x:Name="Focused">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderFocused">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>False</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="00:00:00.115">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Unfocused" />
+									</VisualStateGroup>
+									<VisualStateGroup x:Name="InputTypeStates">
+										<VisualState x:Name="DateTimePicker" />
+										<VisualState x:Name="DatePicker">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Clock" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="CloseButtonContainer" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="TimePicker">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Calendar" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="CloseButtonContainer" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Collapsed</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+									</VisualStateGroup>
+									<VisualStateGroup x:Name="ValidationStates">
+										<VisualState x:Name="Valid" />
+										<VisualState x:Name="InvalidUnfocused">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="InvalidFocused">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+												</ObjectAnimationUsingKeyFrames>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="IsOpen">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+														<DiscreteObjectKeyFrame.Value>
+															<sys:Boolean>True</sys:Boolean>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+									</VisualStateGroup>
+								</VisualStateManager.VisualStateGroups>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition Width="auto" />
+								</Grid.ColumnDefinitions>
+								<Border x:Name="BackgroundVisual" Grid.ColumnSpan="2" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource SplitButton_SpanCornerRadius}" />
+								<Border x:Name="MouseOverVisual" Grid.ColumnSpan="2" IsHitTestVisible="False" BorderBrush="{StaticResource ControlOuterBorder_MouseOver}" BorderThickness="{TemplateBinding BorderThickness}" Opacity="0" Visibility="Collapsed" CornerRadius="{StaticResource SplitButton_SpanCornerRadius}" />
+								<telerik:RadWatermarkTextBox x:Name="PART_DateTimeInput" Grid.Column="0" Text="{Binding DateTimeText, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" CurrentText="{Binding CurrentDateTimeText, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" IsReadOnly="{TemplateBinding IsReadOnly}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Stretch" Padding="{TemplateBinding Padding}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" MinHeight="0" Margin="{TemplateBinding BorderThickness}" WatermarkContent="{TemplateBinding DateTimeWatermarkContent}" WatermarkTemplate="{TemplateBinding DateTimeWatermarkTemplate}" TextAlignment="{TemplateBinding TextAlignment}" TabIndex="0" SelectionOnFocus="{TemplateBinding SelectionOnFocus}" />
+								<Border x:Name="FocusVisual" Visibility="Collapsed" Grid.ColumnSpan="2" IsHitTestVisible="False" BorderBrush="{StaticResource ControlOuterBorder_Focused}" CornerRadius="{StaticResource SplitButton_SpanCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}">
+									<Border BorderBrush="{StaticResource ControlInnerBorder_Focused}" CornerRadius="{StaticResource SplitButton_SpanInnerCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" />
+								</Border>
+								<telerik:RadDropDownButton Grid.Column="1" TabIndex="1" Margin="-1 0 0 0" Padding="0" DropDownIndicatorVisibility="Collapsed" x:Name="PART_DropDownButton" PopupPlacementTarget="{Binding ElementName=PART_DateTimeInput}" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" CloseOnEnter="True" IsTabStop="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" telerik:DateTimePickerExtensions.FocusContentOnOpen="True">
+									<telerik:RadDropDownButton.DropDownContent>
+										<Grid>
+											<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+											</Grid.RowDefinitions>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="*" />
+												<ColumnDefinition Width="*" />
+											</Grid.ColumnDefinitions>
+											<telerik:RadCalendar x:Name="PART_Calendar" Grid.Column="0" Grid.Row="0" IsReadOnly="{TemplateBinding IsReadOnly}" DateSelectionMode="{TemplateBinding DateSelectionMode}" Culture="{TemplateBinding Culture}" SelectionMode="Single" Style="{TemplateBinding CalendarStyle}" DisplayDateStart="{Binding DisplayDateStart, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" DisplayDate="{Binding DisplayDate, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" DisplayDateEnd="{Binding DisplayDateEnd, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" SelectableDateStart="{Binding SelectableDateStart, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" BlackoutDates="{Binding BlackoutDates, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" SelectedDate="{Binding SelectedDate, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" SelectableDateEnd="{Binding SelectableDateEnd, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" />
+											<telerik:DateTimePickerClock x:Name="PART_Clock" Grid.Column="1" Grid.Row="0" ItemsSource="{TemplateBinding ClockItemsSource}" StartTime="{TemplateBinding StartTime}" EndTime="{TemplateBinding EndTime}" TimeInterval="{Binding TimeInterval, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" IsReadOnly="{TemplateBinding IsReadOnly}" Style="{TemplateBinding ClockStyle}" Culture="{TemplateBinding Culture}" SelectedTime="{Binding SelectedTime, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+											<Border x:Name="CloseButtonContainer" Grid.ColumnSpan="2" Grid.Row="1" Background="{StaticResource PanelBackground}" BorderThickness="1 0 1 1" BorderBrush="{StaticResource CalendarOuterBorder}">
+												<Border BorderThickness="1 0 1 1" BorderBrush="{StaticResource CalendarInnerBorder}">
+													<telerik:RadToggleButton x:Name="PART_Close" IsBackgroundVisible="False" HorizontalAlignment="Right" Padding="8 3" Margin="2" IsThreeState="False" telerik:LocalizationManager.ResourceKey="Close" Style="{StaticResource CloseButtonStyle}" IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" />
+												</Border>
+											</Border>
+											<telerik:RadButton x:Name="TodayButton" Command="telerik:RadDateTimePickerCommands.SetToday" Content="Today" Grid.Column="0" Grid.Row="1" IsBackgroundVisible="False"  Padding="8 3" Margin="2"/>
+										</Grid>
+									</telerik:RadDropDownButton.DropDownContent>
+									<telerik:RadDropDownButton.Template>
+										<ControlTemplate TargetType="telerik:RadDropDownButton">
+											<Grid>
+												<ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+												<primitives:Popup x:Name="DropDownPopup">
+													<ContentPresenter x:Name="DropDownPopupContent" Content="{TemplateBinding DropDownContent}" ContentTemplate="{TemplateBinding DropDownContentTemplate}" DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext}" />
+												</primitives:Popup>
+											</Grid>
+										</ControlTemplate>
+									</telerik:RadDropDownButton.Template>
+									<Grid>
+										<telerikChromes:ButtonChrome x:Name="ButtonChrome" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" RenderMouseOver="{Binding IsMouseOver, ElementName=PART_DropDownButton}" CornerRadius="{StaticResource SplitButton_RightPartCornerRadius}" />
+										<ContentControl x:Name="DropDownIcon" IsTabStop="False" Template="{StaticResource CalendarIcon}" Background="{StaticResource ButtonIconBackground_Normal}" Foreground="{StaticResource ButtonIconForeground_Normal}" />
+									</Grid>
+								</telerik:RadDropDownButton>
+								<telerikChromes:ValidationTooltip x:Name="ValidationTooltip" Grid.ColumnSpan="2" Visibility="Collapsed" TooltipPlacementTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}" TooltipContent="{Binding Path=(Validation.Errors), RelativeSource={RelativeSource TemplatedParent}}" />
+								<primitives:Popup Owner="{Binding RelativeSource={RelativeSource TemplatedParent}}" IsOpen="{Binding IsTooltipOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" Placement="Top">
+									<telerik:PopupPlacement.PopupPlacement>
+										<telerik:PopupPlacement PlacementTarget="{Binding ElementName=PART_DateTimeInput}" />
+									</telerik:PopupPlacement.PopupPlacement>
+									<ContentPresenter Content="{TemplateBinding TooltipContent}" ContentTemplate="{TemplateBinding TooltipTemplate}" />
+								</primitives:Popup>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

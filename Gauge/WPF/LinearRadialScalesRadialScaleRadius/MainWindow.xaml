@@ -1,0 +1,33 @@
+﻿<Window x:Class="LinearRadialScalesRadialScaleRadius.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<telerik:RadRadialGauge Width="200"
+								Height="200"
+								telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Min="0"
+								 Max="12"
+								 Radius="1">
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+
+		<telerik:RadRadialGauge Width="200"
+								Height="200"
+								Grid.Column="1"
+								telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Min="0"
+								 Max="12"
+								 Radius="1.2">
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+	</Grid>
+</Window>

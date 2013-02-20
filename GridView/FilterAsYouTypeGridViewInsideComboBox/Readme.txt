@@ -1,0 +1,1 @@
+This example demonstrates how to implement filter as you type in RadGridView inside RadComboBox.

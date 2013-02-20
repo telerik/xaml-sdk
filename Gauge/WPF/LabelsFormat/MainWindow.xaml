@@ -1,0 +1,19 @@
+﻿<Window x:Class="LabelsFormat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True"
+		  Margin="20">
+		<telerik:RadRadialGauge telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Min="0"
+								 Max="100"
+								 LabelOffset="0.05*"
+								 LabelRotationMode="None"
+								 LabelFormat="{}{0}%" >
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+	</Grid>
+</Window>

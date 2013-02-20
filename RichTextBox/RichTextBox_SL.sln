@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFindReplaceDialog_SL", "CustomFindReplaceDialog\CustomFindReplaceDialog_SL.csproj", "{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragAndDrop_SL", "DragAndDropRRTB\DragAndDrop_SL.csproj", "{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAndHighlight_SL", "SearchAndHighlight\SearchAndHighlight_SL.csproj", "{C6B0DD84-1A72-428C-8472-033FBD71B769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadToolBarUI_SL", "RadToolBarUI\RadToolBarUI_SL.csproj", "{354D7C63-84A8-40A8-9EA6-462FD5A478DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikEditorDemo_SL", "TelerikEditor\TelerikEditorDemo_SL.csproj", "{4A69A4D9-A648-42C7-B36B-E07A9FDEEF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlainTextEditor_SL", "PlainTextEditor\PlainTextEditor_SL.csproj", "{31221A88-893C-4048-9CD8-A92296C1CE9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStarted_SL", "GettingStarted\GettingStarted_SL.csproj", "{2A5D62CC-785F-4524-B0F7-7E625F2CD7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeDocuments_SL", "MergeDocuments\MergeDocuments_SL.csproj", "{0E58C189-B865-4508-BC0C-7A6D524C81C2}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B0DD84-1A72-428C-8472-033FBD71B769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B0DD84-1A72-428C-8472-033FBD71B769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B0DD84-1A72-428C-8472-033FBD71B769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B0DD84-1A72-428C-8472-033FBD71B769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354D7C63-84A8-40A8-9EA6-462FD5A478DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354D7C63-84A8-40A8-9EA6-462FD5A478DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354D7C63-84A8-40A8-9EA6-462FD5A478DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354D7C63-84A8-40A8-9EA6-462FD5A478DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A69A4D9-A648-42C7-B36B-E07A9FDEEF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A69A4D9-A648-42C7-B36B-E07A9FDEEF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A69A4D9-A648-42C7-B36B-E07A9FDEEF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A69A4D9-A648-42C7-B36B-E07A9FDEEF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31221A88-893C-4048-9CD8-A92296C1CE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31221A88-893C-4048-9CD8-A92296C1CE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31221A88-893C-4048-9CD8-A92296C1CE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31221A88-893C-4048-9CD8-A92296C1CE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5D62CC-785F-4524-B0F7-7E625F2CD7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5D62CC-785F-4524-B0F7-7E625F2CD7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5D62CC-785F-4524-B0F7-7E625F2CD7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5D62CC-785F-4524-B0F7-7E625F2CD7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

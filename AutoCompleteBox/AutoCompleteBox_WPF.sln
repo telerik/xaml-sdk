@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_WPF", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_WPF.csproj", "{B7A1BFA7-9E77-4C68-872F-3334816071E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehavior_WPF", "TwoPropertiesFilteringBehavior\TwoPropertiesFilteringBehavior_WPF.csproj", "{474FFE7C-983F-487A-81A7-460CE0CA996F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWithDropDownButton_WPF", "OpenWithDropDownButton\OpenWithDropDownButton_WPF.csproj", "{7369C81A-F5C2-4407-A78C-5F8A10EBD400}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A1BFA7-9E77-4C68-872F-3334816071E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A1BFA7-9E77-4C68-872F-3334816071E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A1BFA7-9E77-4C68-872F-3334816071E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A1BFA7-9E77-4C68-872F-3334816071E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474FFE7C-983F-487A-81A7-460CE0CA996F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474FFE7C-983F-487A-81A7-460CE0CA996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474FFE7C-983F-487A-81A7-460CE0CA996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474FFE7C-983F-487A-81A7-460CE0CA996F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

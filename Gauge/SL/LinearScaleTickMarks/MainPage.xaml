@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="LinearScaleTickMarks.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400"
+			 VerticalAlignment="Stretch"
+			 Width="550">
+	<ScrollViewer UseLayoutRounding="True">
+		<StackPanel HorizontalAlignment="Center">
+			<TextBlock Text="Setting ticks using the MajorTicks property:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="100"
+											   MajorTicks="5" />
+			</telerik:RadHorizontalLinearGauge>
+
+			<TextBlock Text="Setting ticks using the MajorTickStep property:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="100"
+											   MajorTickStep="50" />
+			</telerik:RadHorizontalLinearGauge>
+
+			<TextBlock Text="Overlapping ticks when using MajorTickStep:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="102"
+											   MajorTickStep="20"/>
+			</telerik:RadHorizontalLinearGauge>
+
+			<TextBlock Text="Fixing overlapping ticks with ShowLastLabel=&quot;False&quot;:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="102"
+											   MajorTickStep="20"
+											   ShowLastLabel="False"/>
+			</telerik:RadHorizontalLinearGauge>
+
+			<TextBlock Text="Demonstrating StartTickOffset and EndTickOffset:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="100"
+											   StartTickOffset="10"
+											   EndTickOffset="-10" />
+			</telerik:RadHorizontalLinearGauge>
+
+			<TextBlock Text="Making ticks use range color:"
+					   HorizontalAlignment="Center"
+					   Margin="0 20 0 5"/>
+			<telerik:RadHorizontalLinearGauge Width="250"
+											  Height="100"
+											  telerik:StyleManager.Theme="Windows8">
+				<telerik:HorizontalLinearScale Min="0"
+											   Max="100"
+											   MajorTickUseRangeColor="True"
+											   MiddleTickUseRangeColor="True"
+											   MinorTickUseRangeColor="True">
+					<telerik:HorizontalLinearScale.Ranges>
+						<telerik:GaugeRange Min="60"
+											Max="100"
+											TickBackground="#FFE50000" />
+					</telerik:HorizontalLinearScale.Ranges>
+				</telerik:HorizontalLinearScale>
+			</telerik:RadHorizontalLinearGauge>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

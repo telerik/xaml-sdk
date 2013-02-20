@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapefileMapShapeReader", "ShapefileMapShapeReader\ShapefileMapShapeReader.csproj", "{B1BD8911-63C4-4E20-AEFB-51868A57C5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapefileMapShapeReader.Web", "ShapefileMapShapeReader.Web\ShapefileMapShapeReader.Web.csproj", "{857C4B51-D704-4583-A7D8-1A3352DCEA56}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1BD8911-63C4-4E20-AEFB-51868A57C5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BD8911-63C4-4E20-AEFB-51868A57C5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BD8911-63C4-4E20-AEFB-51868A57C5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BD8911-63C4-4E20-AEFB-51868A57C5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857C4B51-D704-4583-A7D8-1A3352DCEA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857C4B51-D704-4583-A7D8-1A3352DCEA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857C4B51-D704-4583-A7D8-1A3352DCEA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857C4B51-D704-4583-A7D8-1A3352DCEA56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

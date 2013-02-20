@@ -1,0 +1,1 @@
+This example demonstrates how to implement custom hierarchy using row-details and GridViewToggleRowDetailsColumn.

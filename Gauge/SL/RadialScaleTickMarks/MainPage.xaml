@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="RadialScaleTickMarks.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400"
+			 Height="500"
+			 Width="600">
+	<ScrollViewer UseLayoutRounding="True">
+		<StackPanel>
+			<TextBlock Text="Adding ticks using MajorTicks=&quot;10&quot;"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale Min="0"
+									 Max="100"
+									 MajorTicks="10">
+					<telerik:RadialScale.Indicators>
+						<telerik:Needle x:Name="needle"
+										Value="80"/>
+						<telerik:Pinpoint/>
+					</telerik:RadialScale.Indicators>
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+
+			<TextBlock Text="Adding ticks using MajorTickStep=&quot;20&quot;"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale Min="0"
+									 Max="100"
+									 MajorTickStep="20">
+					<telerik:RadialScale.Indicators>
+						<telerik:Pinpoint/>
+					</telerik:RadialScale.Indicators>
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+
+			<TextBlock Text="MajorTickStep=&quot;20&quot; creates situations when major tick mark at the end point of scale is shown very close to the last regular one:"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"
+					   TextWrapping="Wrap"
+					   TextAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale Min="0"
+									 Max="102"
+									 MajorTickStep="10">
+					<telerik:RadialScale.Indicators>
+						<telerik:Pinpoint/>
+					</telerik:RadialScale.Indicators>
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+
+			<TextBlock Text="In this situation we can use ShowLastLabel property to indicate whether the tick mark at the end position should be shown: MajorTickStep=&quot;10&quot; ShowLastLabel=&quot;False&quot;"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"
+					   TextWrapping="Wrap"
+					   TextAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale Min="0"
+									 Max="102"
+									 MajorTickStep="10"
+									 ShowLastLabel="False">
+					<telerik:RadialScale.Indicators>
+						<telerik:Pinpoint/>
+					</telerik:RadialScale.Indicators>
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+
+			<TextBlock Text="Changing the layout of the tickmarks:"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale Min="0"
+									 Max="100"
+									 StartTickOffset="10"
+									 EndTickOffset="-10"
+									 MajorTicks="8"
+									 MiddleTicks="2"
+									 MinorTicks="3"
+									 MajorTickLocation="OverCenter"
+									 MajorTickRelativeHeight="0.1*"
+									 MiddleTickLocation="OverCenter"
+									 MiddleTickRelativeHeight="0.08*"
+									 MinorTickLocation="OverCenter"
+									 MinorTickRelativeHeight="0.05*">
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+
+			<TextBlock Text="Ticks using range color:"
+					   Margin="0 20 0 5"
+					   HorizontalAlignment="Center"/>
+			<telerik:RadRadialGauge Width="200"
+									Height="200"
+									telerik:StyleManager.Theme="Windows8">
+				<telerik:RadialScale MajorTickLocation="OverCenter"
+									 MajorTickUseRangeColor="True"
+									 MiddleTickLocation="OverCenter"
+									 MiddleTickUseRangeColor="True"
+									 MinorTickLocation="OverCenter"
+									 MinorTickUseRangeColor="True">
+					<telerik:RadialScale.Ranges>
+						<telerik:GaugeRange Min="70"
+											Max="100"
+											Background="Yellow"
+											StrokeThickness="1"
+											TickBackground="Red"
+											StartWidth="0"
+											EndWidth="0.1">
+						</telerik:GaugeRange>
+					</telerik:RadialScale.Ranges>
+				</telerik:RadialScale>
+			</telerik:RadRadialGauge>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

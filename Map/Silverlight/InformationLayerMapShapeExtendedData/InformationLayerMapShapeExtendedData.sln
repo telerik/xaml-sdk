@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapShapeExtendedData", "InformationLayerMapShapeExtendedData\InformationLayerMapShapeExtendedData.csproj", "{E55B91B6-0BB0-4D32-987D-0C40821F39CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerMapShapeExtendedData.Web", "InformationLayerMapShapeExtendedData.Web\InformationLayerMapShapeExtendedData.Web.csproj", "{19C8F1A1-D01D-4083-AE94-11F12AD72F17}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E55B91B6-0BB0-4D32-987D-0C40821F39CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55B91B6-0BB0-4D32-987D-0C40821F39CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55B91B6-0BB0-4D32-987D-0C40821F39CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55B91B6-0BB0-4D32-987D-0C40821F39CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C8F1A1-D01D-4083-AE94-11F12AD72F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C8F1A1-D01D-4083-AE94-11F12AD72F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C8F1A1-D01D-4083-AE94-11F12AD72F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C8F1A1-D01D-4083-AE94-11F12AD72F17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

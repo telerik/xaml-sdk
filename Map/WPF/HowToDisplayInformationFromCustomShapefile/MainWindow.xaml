@@ -1,0 +1,113 @@
+﻿<Window x:Class="HowToDisplayInformationFromCustomShapefile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:HowToDisplayInformationFromCustomShapefile"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="800" Width="1200">
+    
+    <Window.Resources>
+        <local:ExampleViewModel x:Key="DataContext" />
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <telerik:RadMap x:Name="RadMap1" 
+                        Background="White"
+                        UseDefaultLayout="False"
+                        MouseClickMode="None" 
+                        MouseDoubleClickMode="None"
+                        MouseDragMode="None"
+                        IsMouseWheelZoomEnabled="False">
+            <telerik:RadMap.Provider>
+                <telerik:EmptyProvider />
+            </telerik:RadMap.Provider>
+
+            <telerik:InformationLayer x:Name="SeatsLayer">
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader Source="{Binding Source={StaticResource DataContext}, Path=StadiumSeatsSourceUri}"
+                                            DataSource="{Binding Source={StaticResource DataContext}, Path=StadiumSeatsDataSourceUri}"
+                                            ReadCompleted="MapShapeReader_ReadCompleted">
+                    </telerik:MapShapeReader>
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.HighlightFill>
+                    <telerik:MapShapeFill Fill="#F7E4A2" />
+                </telerik:InformationLayer.HighlightFill>
+            </telerik:InformationLayer>
+
+            <telerik:InformationLayer>
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader Source="{Binding Source={StaticResource DataContext}, Path=PlaygroundFieldSourceUri}">
+                    </telerik:MapShapeReader>
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.ShapeFill>
+                    <telerik:MapShapeFill Fill="#4D5251" />
+                </telerik:InformationLayer.ShapeFill>
+            </telerik:InformationLayer>
+
+            <telerik:InformationLayer>
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader Source="{Binding Source={StaticResource DataContext}, Path=PlaygroundGrassSourceUri}">
+                    </telerik:MapShapeReader>
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.ShapeFill>
+                    <telerik:MapShapeFill Fill="#7EC350" />
+                </telerik:InformationLayer.ShapeFill>
+            </telerik:InformationLayer>
+
+            <telerik:InformationLayer>
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader Source="{Binding Source={StaticResource DataContext}, Path=PlaygroundLinesSourceUri}">
+                    </telerik:MapShapeReader>
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.ShapeFill>
+                    <telerik:MapShapeFill Stroke="White" StrokeThickness="1" />
+                </telerik:InformationLayer.ShapeFill>
+            </telerik:InformationLayer>
+
+        </telerik:RadMap>
+
+        <StackPanel Grid.Column="1" Margin="30,60,30,0">
+            <telerik:RadGridView ItemsSource="{Binding Source={StaticResource DataContext}, Path=Data}" AutoGenerateColumns="False"
+                                 Height="132" Width="408" IsReadOnly="True" ShowGroupPanel="False" RowIndicatorVisibility="Collapsed" 
+                                 CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserFreezeColumns="False" 
+                                 CanUserSelect="False" SelectedItem="{Binding Source={StaticResource DataContext}, Path=SelectedItem, Mode=TwoWay}">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Width="70" IsFilterable="False" IsResizable="False"
+                                                Header="Color" HeaderTextAlignment="Center">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <Rectangle Height="15" Width="15" Fill="{Binding ColorCode}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding Sector}" Width="*"
+                                                Header="Sector" HeaderTextAlignment="Center"
+                                                IsFilterable="False" IsResizable="False" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding AdultPrice, StringFormat=\{0:C0\}}" Width="70" 
+                                                Header="Adults" HeaderTextAlignment="Center" TextAlignment="Right"
+                                                IsFilterable="False" IsResizable="False" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding SeniorPrice, StringFormat=\{0:C0\}}" Width="70" 
+                                                Header="Seniors" HeaderTextAlignment="Center" TextAlignment="Right" 
+                                                IsFilterable="False" IsResizable="False" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding JuniorPrice, StringFormat=\{0:C0\}}" Width="70"
+                                                Header="Juniors" HeaderTextAlignment="Center" TextAlignment="Right" 
+                                                IsFilterable="False"  IsResizable="False" />
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+
+            <telerik:RadTransitionControl x:Name="TransitionWrapper" Transition="PerspectiveRotation">
+                <telerik:RadTransitionControl.Content>
+                    <Border Margin="0,60" BorderThickness="4" BorderBrush="#CCCCCC">
+                        <Image Source="{Binding Source={StaticResource DataContext}, Path=StadiumViewImageUri}" Height="261" Width="400" />
+                    </Border>
+                </telerik:RadTransitionControl.Content>
+            </telerik:RadTransitionControl>
+
+        </StackPanel>
+    </Grid>
+</Window>

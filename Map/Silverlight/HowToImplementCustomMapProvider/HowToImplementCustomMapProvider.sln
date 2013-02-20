@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToImplementCustomMapProvider", "HowToImplementCustomMapProvider\HowToImplementCustomMapProvider.csproj", "{FF0167D7-AC53-40AF-8B7B-85AA1AFD8FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToImplementCustomMapProvider.Web", "HowToImplementCustomMapProvider.Web\HowToImplementCustomMapProvider.Web.csproj", "{8D91AE9B-C1DD-4E26-B5C3-5DA27B4792C7}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF0167D7-AC53-40AF-8B7B-85AA1AFD8FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0167D7-AC53-40AF-8B7B-85AA1AFD8FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0167D7-AC53-40AF-8B7B-85AA1AFD8FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0167D7-AC53-40AF-8B7B-85AA1AFD8FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D91AE9B-C1DD-4E26-B5C3-5DA27B4792C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D91AE9B-C1DD-4E26-B5C3-5DA27B4792C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D91AE9B-C1DD-4E26-B5C3-5DA27B4792C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D91AE9B-C1DD-4E26-B5C3-5DA27B4792C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

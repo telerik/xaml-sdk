@@ -1,0 +1,1 @@
+This example demonstrates how to implement search as you type functionality. The first row to match the search text is scrolled into view.

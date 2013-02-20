@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="CustomUIRadImageEditor.CustomSettingsContainer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300"  d:DesignWidth="400" Visibility="Collapsed">
+
+    <Grid x:Name="LayoutRoot">
+        <Border HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 14 0 0" Background="#AAF0F4FA" CornerRadius="10" Padding="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="4 0 4 0">
+                <telerik:RadImageEditorButton x:Name="btnApply" Click="btnApply_Click"
+                                              Image="/CustomUIRadImageEditor;Component/Images/Apply.png"/>
+                <telerik:RadImageEditorButton x:Name="btnCancel" Click="btnCancel_Click"
+                                              Image="/CustomUIRadImageEditor;Component/Images/Cancel.png" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="OpenClosedPanesWithContextMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="700" Width="900">
+	<Window.Resources>
+		<HierarchicalDataTemplate x:Key="MenuItemTemplate"
+										  ItemsSource="{Binding SubItems}">
+			<TextBlock Text="{Binding Header}" />
+		</HierarchicalDataTemplate>
+	</Window.Resources>
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+			<telerik:RadButton Content="Permanently close Tabbed Pane 3" 
+							   Click="RadButtonPermanentlyCloseClick" 
+							   Margin="30, 30, 30, 30"
+							   HorizontalAlignment="Center"
+							   x:Name="PermanentlyCloseButton"
+							   VerticalAlignment="Center" />
+			<TextBlock Text="This example demonstrates how to show the closed RadPanes when you close them by their close button by adding them to a RadContextMenu. To show a closed Pane right click the mouse somewhere in the Docking control and click the 'Show ...' MenuItem. Also this example shows how to permanently close a RadPane with the 'Permanently close Tabbed Pane 3' button." 
+					   TextWrapping="Wrap" 
+					   Width="400"
+					   FontWeight="Bold"
+					   Margin="0, 30, 30, 30"/>
+		</StackPanel>
+		<telerik:RadDocking Close="RadDocking_Close_1" Grid.Row="1">
+			<telerik:RadContextMenu.ContextMenu>
+				<telerik:RadContextMenu x:Name="RadContextMenu"
+										ItemTemplate="{StaticResource MenuItemTemplate}"
+										ItemClick="RadContextMenuItemClick1"/>
+			</telerik:RadContextMenu.ContextMenu>
+			<telerik:RadDocking.DocumentHost>
+				<telerik:RadSplitContainer>
+					<telerik:RadPaneGroup x:Name="PaneGroup1">
+						<telerik:RadPane Header="Tabbed Pane 1"/>
+						<telerik:RadPane Header="Tabbed Pane 2"/>
+						<telerik:RadPane Header="Tabbed Pane 3" x:Name="TabbedPane3" CanUserClose="False"/>
+					</telerik:RadPaneGroup>
+				</telerik:RadSplitContainer>
+			</telerik:RadDocking.DocumentHost>
+			<telerik:RadSplitContainer>
+				<telerik:RadPaneGroup>
+					<telerik:RadPane Header="Pane 1"/>
+					<telerik:RadPane Header="Pane 2"/>
+					<telerik:RadPane Header="Pane 3"/>
+				</telerik:RadPaneGroup>
+			</telerik:RadSplitContainer>
+		</telerik:RadDocking>
+	</Grid>
+</Window>

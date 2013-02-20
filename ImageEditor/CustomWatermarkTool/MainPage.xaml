@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="CustomWatermarkTool.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"  
+    xmlns:commands="clr-namespace:Telerik.Windows.Media.Imaging.ImageEditorCommands.RoutedCommands;assembly=Telerik.Windows.Controls.ImageEditor"
+    xmlns:watermark="clr-namespace:CustomWatermarkTool"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <watermark:WatermarkTool x:Key="WatermarkTool" />
+            <tools:RoundCornersTool x:Key="RoundCornersTool" />
+            <tools:CropTool x:Key="CropTool" />
+            <tools:DrawTextTool x:Key="DrawText" />
+        </Grid.Resources>
+        <telerik:RadImageEditorUI x:Name="imageEditor">
+            <telerik:RadImageEditorUI.ImageToolsSections>
+                <telerik:ImageToolsSection Header="Transform">
+                    <telerik:ImageToolItem ImageKey="Crop" Text="Crop"  Command="commands:ImageEditorRoutedCommands.ExecuteTool"
+                                           CommandParameter="{StaticResource CropTool}"/>
+                    <telerik:ImageToolItem ImageKey="Rotate90CW" Text="Rotate 90"  Command="commands:ImageEditorRoutedCommands.Rotate90Clockwise" />
+                    <telerik:ImageToolItem ImageKey="Rotate90CCW" Text="Rotate 270"  Command="commands:ImageEditorRoutedCommands.Rotate90Counterclockwise" />
+                    <telerik:ImageToolItem ImageKey="FlipHorizontal" Text="Flip Horizontal"  Command="commands:ImageEditorRoutedCommands.FlipHorizontal" />
+                    <telerik:ImageToolItem ImageKey="FlipVertical" Text="Flip Vertical"  Command="commands:ImageEditorRoutedCommands.FlipVertical" />
+                    <telerik:ImageToolItem ImageKey="RoundCorners" Text="Round Corners"  Command="commands:ImageEditorRoutedCommands.ExecuteTool"
+                                           CommandParameter="{StaticResource RoundCornersTool}"/>
+                    <telerik:ImageToolItem ImageKey="DrawText" Text="Draw Text" Command="commands:ImageEditorRoutedCommands.ExecuteTool" 
+                                           CommandParameter="{StaticResource DrawText}"/>
+                </telerik:ImageToolsSection>
+                <telerik:ImageToolsSection Header="Custom Tools">
+                    <telerik:ImageToolItem Text="Watermark"  Command="commands:ImageEditorRoutedCommands.ExecuteTool" 
+                                           Image="/CustomWatermarkTool;Component/Images/WatermarkTool.png"
+                                           CommandParameter="{StaticResource WatermarkTool}"/>
+                </telerik:ImageToolsSection>
+            </telerik:RadImageEditorUI.ImageToolsSections>
+        </telerik:RadImageEditorUI>
+    </Grid>
+</UserControl>

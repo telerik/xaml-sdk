@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="AnnotationTypes.PolarAxisPlotBandAnnotationDemo"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d" 
+			 d:DesignHeight="300"
+			 d:DesignWidth="300">
+	<Grid>
+		<telerik:RadPolarChart Grid.Column="1">
+			<telerik:RadPolarChart.Annotations>
+				<telerik:PolarAxisPlotBandAnnotation From="6" To="9"/>
+			</telerik:RadPolarChart.Annotations>
+
+			<telerik:RadPolarChart.Series>
+				<telerik:PolarPointSeries>
+					<telerik:PolarPointSeries.DataPoints>
+						<telerik:PolarDataPoint Value="2" Angle="30"/>
+						<telerik:PolarDataPoint Value="7" Angle="90"/>
+						<telerik:PolarDataPoint Value="8" Angle="230"/>
+					</telerik:PolarPointSeries.DataPoints>
+				</telerik:PolarPointSeries>
+			</telerik:RadPolarChart.Series>
+
+			<telerik:RadPolarChart.RadialAxis>
+				<telerik:NumericRadialAxis/>
+			</telerik:RadPolarChart.RadialAxis>
+
+			<telerik:RadPolarChart.PolarAxis>
+				<telerik:PolarAxis/>
+			</telerik:RadPolarChart.PolarAxis>
+		</telerik:RadPolarChart>
+	</Grid>
+</UserControl>

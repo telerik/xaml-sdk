@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomingDisabled", "ZoomingDisabled\ZoomingDisabled.csproj", "{86B699DF-38C6-4A82-8232-D82E087C7E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomingDisabled.Web", "ZoomingDisabled.Web\ZoomingDisabled.Web.csproj", "{AE8EC305-F92B-4DA0-B1EF-90521D5079D5}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86B699DF-38C6-4A82-8232-D82E087C7E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B699DF-38C6-4A82-8232-D82E087C7E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B699DF-38C6-4A82-8232-D82E087C7E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B699DF-38C6-4A82-8232-D82E087C7E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8EC305-F92B-4DA0-B1EF-90521D5079D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8EC305-F92B-4DA0-B1EF-90521D5079D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8EC305-F92B-4DA0-B1EF-90521D5079D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8EC305-F92B-4DA0-B1EF-90521D5079D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

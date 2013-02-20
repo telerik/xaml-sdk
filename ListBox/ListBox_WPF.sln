@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListBoxDragDropBehavior_WPF", "CustomListBoxDragDropBehavior\CustomListBoxDragDropBehavior_WPF.csproj", "{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropCueWithWrapPanel_WPF", "CustomDropCueWithWrapPanel\CustomDropCueWithWrapPanel_WPF.csproj", "{7267FE87-2911-43B7-BE48-F0B599BA71FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItems_WPF", "SelectedItems\SelectedItems_WPF.csproj", "{651C4722-1D53-4090-8E59-275C446161AB}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

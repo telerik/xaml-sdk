@@ -1,0 +1,1 @@
+The example shows how the DataContext of RadRichTextBoxRIbbonUI can be changed run-time.

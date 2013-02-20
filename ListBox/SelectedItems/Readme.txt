@@ -1,0 +1,2 @@
+This example demonstrates how to create an attached property that could be used in order to bind a collection of objects to the control 
+and use it as a collection of selected items for Silverlight and WPF.

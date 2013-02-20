@@ -1,0 +1,10 @@
+﻿<Window x:Class="RecurringTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:RecurringTask"
+        Title="MainWindow" Height="250" Width="1200">
+	
+	<Grid>
+		<local:Example/>
+	</Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="LinearScaleStateIndicator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True"
+		  HorizontalAlignment="Center"
+		  VerticalAlignment="Center">
+		<telerik:RadVerticalLinearGauge Width="100"
+										Height="250"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale IsInteractive="True"
+										 RangeLocation="Outside"
+										 RangeOffset="-0.02*">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FF23568F"
+										TickBackground="#FF23568F"
+										LabelForeground="#FF23568F"
+										IndicatorBackground="#FF23568F" />
+					<telerik:GaugeRange Min="50"
+										Max="100"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FFA0CCFF"
+										TickBackground="#FFA0CCFF"
+										LabelForeground="#FFA0CCFF"
+										IndicatorBackground="#FFA0CCFF" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator UseRangeColor="True"
+										  Value="60"
+										  StartWidth="0.06"/>
+					<telerik:StateIndicator UseRangeColor="True"
+											Value="60"
+											telerik:ScaleObject.RelativeWidth="0.10*"
+											telerik:ScaleObject.RelativeHeight="0.04*"
+											telerik:ScaleObject.RelativeX="0.04"
+											telerik:ScaleObject.RelativeY="0.12"/>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

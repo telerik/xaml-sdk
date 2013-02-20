@@ -1,0 +1,1 @@
+This example demonstrates how to implement runtime change for all implicit themes.

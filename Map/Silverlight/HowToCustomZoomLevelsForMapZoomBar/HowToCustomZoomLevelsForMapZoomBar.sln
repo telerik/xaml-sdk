@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToCustomZoomLevelsForMapZoomBar", "HowToCustomZoomLevelsForMapZoomBar\HowToCustomZoomLevelsForMapZoomBar.csproj", "{0798E7C7-CACA-43E1-A4BD-11A92867CC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToCustomZoomLevelsForMapZoomBar.Web", "HowToCustomZoomLevelsForMapZoomBar.Web\HowToCustomZoomLevelsForMapZoomBar.Web.csproj", "{6A550F63-E135-47A3-BE68-9F22748356D6}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0798E7C7-CACA-43E1-A4BD-11A92867CC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0798E7C7-CACA-43E1-A4BD-11A92867CC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0798E7C7-CACA-43E1-A4BD-11A92867CC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0798E7C7-CACA-43E1-A4BD-11A92867CC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A550F63-E135-47A3-BE68-9F22748356D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A550F63-E135-47A3-BE68-9F22748356D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A550F63-E135-47A3-BE68-9F22748356D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A550F63-E135-47A3-BE68-9F22748356D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

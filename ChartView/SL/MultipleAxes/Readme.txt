@@ -1,0 +1,1 @@
+﻿Additional horizontal / vertical axes can be specified through the CartesianSeries.HorizontalAxis / VerticalAxis properties.

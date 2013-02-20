@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeRanges", "InformationLayerColorizerModeRanges\InformationLayerColorizerModeRanges.csproj", "{415F4C2D-334E-412A-A195-84BBBC0A9951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeRanges.Web", "InformationLayerColorizerModeRanges.Web\InformationLayerColorizerModeRanges.Web.csproj", "{EA2D4161-68E1-4A0E-A4C6-F3CF104C0CBE}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{415F4C2D-334E-412A-A195-84BBBC0A9951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415F4C2D-334E-412A-A195-84BBBC0A9951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415F4C2D-334E-412A-A195-84BBBC0A9951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415F4C2D-334E-412A-A195-84BBBC0A9951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2D4161-68E1-4A0E-A4C6-F3CF104C0CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2D4161-68E1-4A0E-A4C6-F3CF104C0CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2D4161-68E1-4A0E-A4C6-F3CF104C0CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2D4161-68E1-4A0E-A4C6-F3CF104C0CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
