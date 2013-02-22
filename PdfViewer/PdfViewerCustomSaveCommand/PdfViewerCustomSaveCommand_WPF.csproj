@@ -52,24 +52,13 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.Fixed.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls"/>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers"/>
+    <Reference Include="Telerik.Windows.Controls.Input"/>
+    <Reference Include="Telerik.Windows.Controls.Navigation"/>
+	<Reference Include="Telerik.Windows.Documents.Core"/>
+    <Reference Include="Telerik.Windows.Documents.Fixed"/>
+    <Reference Include="Telerik.Windows.Zip"/>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -110,3 +99,4 @@
   </Target>
   -->
 </Project>
+

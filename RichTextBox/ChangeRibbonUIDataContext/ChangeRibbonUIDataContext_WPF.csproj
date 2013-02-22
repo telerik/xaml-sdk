@@ -53,51 +53,20 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ImageEditor">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RibbonView">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.RibbonView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\WPF\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls" />
+    <Reference Include="Telerik.Windows.Controls.ImageEditor" />
+    <Reference Include="Telerik.Windows.Controls.Input" />
+    <Reference Include="Telerik.Windows.Controls.Navigation" />
+    <Reference Include="Telerik.Windows.Controls.RibbonView" />
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI" />
+    <Reference Include="Telerik.Windows.Data" />
+    <Reference Include="Telerik.Windows.Documents" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml" />
+    <Reference Include="Telerik.Windows.Zip" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

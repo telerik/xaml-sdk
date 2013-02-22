@@ -73,15 +73,9 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="Telerik.Windows.Documents">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.Proofing.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Documents"/>
+    <Reference Include="Telerik.Windows.Documents.Proofing"/>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

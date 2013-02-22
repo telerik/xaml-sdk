@@ -20,7 +20,7 @@ namespace HowToImplementCustomMapProvider
             }
         }
 
-        public new object Clone()
+        public object Clone()
         {
             CustomTiledMapProvider clone = new CustomTiledMapProvider();
             this.InheritCurrentSource(clone);

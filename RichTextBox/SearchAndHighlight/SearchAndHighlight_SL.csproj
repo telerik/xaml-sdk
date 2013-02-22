@@ -74,34 +74,20 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RibbonView">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.RibbonView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls" />
+    <Reference Include="Telerik.Windows.Controls.ImageEditor" />
+    <Reference Include="Telerik.Windows.Controls.Input" />
+    <Reference Include="Telerik.Windows.Controls.Navigation" />
+    <Reference Include="Telerik.Windows.Controls.RibbonView" />
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI" />
+    <Reference Include="Telerik.Windows.Data" />
+    <Reference Include="Telerik.Windows.Documents" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf" />
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml" />
+    <Reference Include="Telerik.Windows.Zip" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_SL.xaml.cs">

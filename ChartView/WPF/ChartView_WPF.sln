@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationTypes", "Annotati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizingScatterPoints", "CustomizingScatterPoints\CustomizingScatterPoints.csproj", "{84EDDD23-3D2C-49A0-B6E9-731DB6DEAC7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesProvider", "SeriesProvider\SeriesProvider.csproj", "{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +184,10 @@ Global
 		{84EDDD23-3D2C-49A0-B6E9-731DB6DEAC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84EDDD23-3D2C-49A0-B6E9-731DB6DEAC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84EDDD23-3D2C-49A0-B6E9-731DB6DEAC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

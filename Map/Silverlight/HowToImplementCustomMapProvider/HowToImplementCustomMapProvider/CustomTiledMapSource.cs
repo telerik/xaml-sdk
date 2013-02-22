@@ -14,7 +14,7 @@ namespace HowToImplementCustomMapProvider
         public override void Initialize()
         {
             // Raise provider initialized event.
-            this.RaiseIntializeCompleted();
+            this.RaiseInitializeCompleted();
         }
 
         protected override Uri GetTile(int tileLevel, int tilePositionX, int tilePositionY)

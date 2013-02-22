@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsAdding", "AnnotationsAdding\AnnotationsAdding.csproj", "{180BF7E5-F209-468F-8BAE-990B02E33D0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationTypes", "AnnotationTypes\AnnotationTypes.csproj", "{06E708A0-45AD-46E7-ABC6-B062D89A04AB}"
@@ -56,6 +56,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooltip", "Tooltip\Tooltip.csproj", "{8520B220-4372-4071-B44D-B86BF178DB09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackBall", "TrackBall\TrackBall.csproj", "{6151D63D-7F2F-4710-8801-869C2E1E0E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesProvider", "SeriesProvider\SeriesProvider.csproj", "{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}"
 EndProject
 Global
 	 
@@ -176,6 +178,10 @@ Global
 		{6151D63D-7F2F-4710-8801-869C2E1E0E88}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{6151D63D-7F2F-4710-8801-869C2E1E0E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6151D63D-7F2F-4710-8801-869C2E1E0E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

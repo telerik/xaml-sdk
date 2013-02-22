@@ -19,7 +19,6 @@ namespace Selection
 		public MainPage()
 		{
 			InitializeComponent();
-			RadCartesianChart d;
 			var series = RadChart1.Series[0] as ScatterPointSeries;
 			series.XValueBinding = new PropertyNameDataPointBinding("XValue");
 			series.YValueBinding = new PropertyNameDataPointBinding("YValue");

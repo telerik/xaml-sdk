@@ -60,9 +60,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Windows.RadUploadHandler, Version=2012.3.1017.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.RadUploadHandler">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Binaries\Silverlight\ServerSide\Telerik.Windows.RadUploadHandler.dll</HintPath>
+      <HintPath>Binaries\Telerik.Windows.RadUploadHandler.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

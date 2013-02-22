@@ -48,24 +48,12 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls"/>
+    <Reference Include="Telerik.Windows.Controls.Input"/>
+    <Reference Include="Telerik.Windows.Controls.Navigation"/>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI"/>
+    <Reference Include="Telerik.Windows.Data"/>
+    <Reference Include="Telerik.Windows.Documents"/>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

@@ -73,18 +73,9 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ImageEditor">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\WPF_Scrum\Development\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls" />
+    <Reference Include="Telerik.Windows.Controls.ImageEditor" />
+    <Reference Include="Telerik.Windows.Controls.Input" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

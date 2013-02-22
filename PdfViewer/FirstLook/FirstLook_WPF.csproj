@@ -49,27 +49,13 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Diagrams.Core">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Diagrams.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Documents.Fixed.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip">
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
+    <Reference Include="Telerik.Windows.Controls"/>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers"/>
+    <Reference Include="Telerik.Windows.Controls.Input"/>
+    <Reference Include="Telerik.Windows.Controls.Navigation"/>
+    <Reference Include="Telerik.Windows.Diagrams.Core"/>
+    <Reference Include="Telerik.Windows.Documents.Fixed"/>
+    <Reference Include="Telerik.Windows.Zip"/>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -129,3 +115,4 @@
   </Target>
   -->
 </Project>
+
