@@ -72,20 +72,54 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="Telerik.Windows.Controls" />
-    <Reference Include="Telerik.Windows.Controls.ImageEditor" />
-    <Reference Include="Telerik.Windows.Controls.Input" />
-    <Reference Include="Telerik.Windows.Controls.Navigation" />
-    <Reference Include="Telerik.Windows.Controls.RibbonView" />
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI" />
-    <Reference Include="Telerik.Windows.Data" />
-    <Reference Include="Telerik.Windows.Documents" />
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html" />
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml" />
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf" />
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf" />
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml" />
-    <Reference Include="Telerik.Windows.Zip" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_SL.xaml.cs">

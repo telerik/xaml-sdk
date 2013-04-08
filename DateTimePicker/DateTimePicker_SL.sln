@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_SL", "TodayButton\TodayButton_SL.csproj", "{BFF97BF5-22F3-48D1-9585-7711FDC66AF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyInputField_SL", "ReadonlyInputField\ReadonlyInputField_SL.csproj", "{58518E6B-CCF2-49A6-A334-B70A5E45E982}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +16,10 @@ Global
 		{BFF97BF5-22F3-48D1-9585-7711FDC66AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFF97BF5-22F3-48D1-9585-7711FDC66AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFF97BF5-22F3-48D1-9585-7711FDC66AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

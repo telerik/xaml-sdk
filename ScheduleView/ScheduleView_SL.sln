@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentColorBasedOnResource_SL", "AppointmentColorBasedOnResource\AppointmentColorBasedOnResource_SL.csproj", "{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}"

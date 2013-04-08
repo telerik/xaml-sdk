@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStarted_WPF", "Getti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeDocuments_WPF", "MergeDocuments\MergeDocuments_WPF.csproj", "{47425D82-1B9A-4F8E-AF6D-EB85DEDBD0AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watermark_WPF", "Watermark\Watermark_WPF.csproj", "{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +134,16 @@ Global
 		{47425D82-1B9A-4F8E-AF6D-EB85DEDBD0AA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{47425D82-1B9A-4F8E-AF6D-EB85DEDBD0AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{47425D82-1B9A-4F8E-AF6D-EB85DEDBD0AA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

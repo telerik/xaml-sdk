@@ -73,9 +73,15 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="Telerik.Windows.Documents"/>
-    <Reference Include="Telerik.Windows.Documents.Proofing"/>
-    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US"/>
+    <Reference Include="Telerik.Windows.Documents">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Proofing.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

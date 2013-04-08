@@ -62,12 +62,18 @@ namespace PaneGroupItemsSource
 
 		private void ButtonDelFirst_Click(object sender, RoutedEventArgs e)
 		{
-			this.panes.RemoveAt(0);
+			if (this.panes.Count != 0)
+			{
+				this.panes.RemoveAt(0);
+			}
 		}
 
 		private void ButtonDelLast_Click(object sender, RoutedEventArgs e)
 		{
-			this.panes.Remove(this.panes.Last());
+			if (this.panes.Count != 0)
+			{
+				this.panes.Remove(this.panes.Last());
+			}
 		}
 
 		private void ButtonFloating_Click(object sender, RoutedEventArgs e)

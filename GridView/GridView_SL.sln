@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomColumnFilterDescripto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringCollectionProperties_SL", "FilteringCollectionProperties\FilteringCollectionProperties_SL.csproj", "{2784D47F-86E9-4A03-9570-1335E4B84058}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingRowDetailsElementWidth_SL", "BindingRowDetailsElementWidth\BindingRowDetailsElementWidth_SL.csproj", "{A8DFC36F-CE99-4837-9838-DC99679A2015}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{2784D47F-86E9-4A03-9570-1335E4B84058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2784D47F-86E9-4A03-9570-1335E4B84058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2784D47F-86E9-4A03-9570-1335E4B84058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DFC36F-CE99-4837-9838-DC99679A2015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DFC36F-CE99-4837-9838-DC99679A2015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DFC36F-CE99-4837-9838-DC99679A2015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DFC36F-CE99-4837-9838-DC99679A2015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

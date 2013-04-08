@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStarted_SL", "Gettin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeDocuments_SL", "MergeDocuments\MergeDocuments_SL.csproj", "{0E58C189-B865-4508-BC0C-7A6D524C81C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watermark_SL", "Watermark\Watermark_SL.csproj", "{596852DF-5A87-4B9E-8AC7-9FE476234E0F}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E58C189-B865-4508-BC0C-7A6D524C81C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596852DF-5A87-4B9E-8AC7-9FE476234E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596852DF-5A87-4B9E-8AC7-9FE476234E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596852DF-5A87-4B9E-8AC7-9FE476234E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596852DF-5A87-4B9E-8AC7-9FE476234E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
