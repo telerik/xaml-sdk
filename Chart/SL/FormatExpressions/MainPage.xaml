@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="FormatExpressions.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400">
+	<Grid x:Name="LayoutRoot"
+		  Background="White">
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartTitle>
+						<telerik:ChartTitle Content="MSFT"
+											HorizontalAlignment="Center" />
+					</telerik:ChartDefaultView.ChartTitle>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX DefaultLabelFormat="dd-MMM"
+											   LayoutMode="Inside">
+								</telerik:AxisX>
+							</telerik:ChartArea.AxisX>
+							<telerik:ChartArea.AxisY>
+								<telerik:AxisY DefaultLabelFormat="#VAL{C2}">
+								</telerik:AxisY>
+							</telerik:ChartArea.AxisY>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition ShowItemLabels="True"
+													  ShowItemToolTips="True"
+													  ItemLabelFormat="#Y{C2}"
+													  ItemToolTipFormat="High/Low: #DATAITEM.High{C4}/#DATAITEM.Low{C4}
+Volume: #DATAITEM.Volume{#,###,###,##0}" />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping DataPointMember="YValue"
+											 FieldName="Close" />
+						<telerik:ItemMapping DataPointMember="XValue"
+											 FieldName="FromDate" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+		</telerik:RadChart>
+	</Grid>
+</UserControl>

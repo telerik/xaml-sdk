@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="DataBindingToManyChartAreas.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400"
+			 Height="450"
+			 Width="900">
+	<Grid>
+		<telerik:RadChart x:Name="radChart"
+						  UseDefaultLayout="False"
+						  ItemsSource="{Binding}">
+			<Grid Margin="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<telerik:ChartTitle Margin="0,0,0,10"
+									HorizontalAlignment="Center"
+									Content="Year 2008"
+									Grid.Row="0"
+									Grid.Column="0" />
+				<telerik:ChartArea x:Name="webBrowsersShare2008Chart"
+								   Grid.Row="1"
+								   Grid.Column="0" />
+				<telerik:ChartTitle HorizontalAlignment="Center"
+									Content="Year 2009"
+									Margin="0,0,0,10"
+									Grid.Row="0"
+									Grid.Column="1" />
+				<telerik:ChartArea x:Name="webBrowsersShare2009Chart"
+								   Grid.Row="1"
+								   Grid.Column="1" />
+			</Grid>
+
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping CollectionIndex="0"
+									   ChartAreaName="webBrowsersShare2008Chart">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:DoughnutSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="Value"
+											 DataPointMember="YValue" />
+						<telerik:ItemMapping FieldName="Description"
+											 DataPointMember="Label" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+				<telerik:SeriesMapping CollectionIndex="1"
+									   ChartAreaName="webBrowsersShare2009Chart">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:DoughnutSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="Value"
+											 DataPointMember="YValue" />
+						<telerik:ItemMapping FieldName="Description"
+											 DataPointMember="Label" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+		</telerik:RadChart>
+	</Grid>
+</UserControl>

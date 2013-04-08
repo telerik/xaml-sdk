@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="StylingTheAxisLine.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400">
+	<UserControl.Resources>
+		<Style x:Key="AxisLineStyle"
+			   TargetType="Line">
+			<Setter Property="Stroke"
+					Value="Orange" />
+			<Setter Property="StrokeThickness"
+					Value="5" />
+		</Style>
+	</UserControl.Resources>
+	<Grid>
+		<telerik:RadChart Name="radChart"
+						  ItemsSource="{Binding}" />
+	</Grid>
+</UserControl>
