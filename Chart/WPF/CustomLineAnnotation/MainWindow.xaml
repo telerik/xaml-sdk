@@ -1,0 +1,35 @@
+﻿<Window x:Class="CustomLineAnnotation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+        Height="350"
+        Width="525">
+    <Grid>
+        <telerik:RadChart x:Name="radChart">
+            <telerik:RadChart.DefaultView>
+                <telerik:ChartDefaultView>
+                    <telerik:ChartDefaultView.ChartArea>
+                        <telerik:ChartArea>
+                            <telerik:ChartArea.Annotations>
+                                <telerik:CustomLine MinX="2"
+                                                    MinY="2"
+                                                    MaxX="5"
+                                                    MaxY="10"
+                                                    Slope="2.66"
+                                                    YIntercept="-3.32"
+                                                    Stroke="Red"
+                                                    StrokeThickness="2" />
+                                <telerik:CustomLine Stroke="Green"
+                                                    Slope="Infinity"
+                                                    XIntercept="2"
+                                                    MinY="-100"
+                                                    MaxY="200" />
+                            </telerik:ChartArea.Annotations>
+                        </telerik:ChartArea>
+                    </telerik:ChartDefaultView.ChartArea>
+                </telerik:ChartDefaultView>
+            </telerik:RadChart.DefaultView>
+        </telerik:RadChart>
+    </Grid>
+</Window>

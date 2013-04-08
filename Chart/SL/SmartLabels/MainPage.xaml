@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="SmartLabels.MainPage"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:local="clr-namespace:SmartLabels"
+			 mc:Ignorable="d"
+			 d:DesignHeight="300"
+			 d:DesignWidth="400">
+	<Grid x:Name="LayoutRoot"
+		  Background="White">
+		<telerik:RadTabControl>
+			<telerik:RadTabItem Header="Smart Labels">
+				<local:SmartLabelsDemo />
+			</telerik:RadTabItem>
+
+			<telerik:RadTabItem Header="Label Settings">
+				<local:LabelSettingsDemo />
+			</telerik:RadTabItem>
+
+			<telerik:RadTabItem Header="Bar Label Settings">
+				<local:BarLabelSettingsDemo />
+			</telerik:RadTabItem>
+
+			<telerik:RadTabItem Header="Radial Label Settings">
+				<local:RadialLabelSettingsDemo />
+			</telerik:RadTabItem>
+		</telerik:RadTabControl>
+	</Grid>
+</UserControl>

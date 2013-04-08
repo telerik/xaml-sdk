@@ -1,0 +1,1 @@
+﻿This example demonstrates how to synchronize the width of the element defined in RowDetailsTemplate to its parent grid in RadGridView for Silverlight and WPF

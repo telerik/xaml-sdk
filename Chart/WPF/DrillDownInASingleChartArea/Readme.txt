@@ -1,0 +1,1 @@
+﻿Displaying a drill down chart in a single chart area means that the different hierarchy levels won't be visible at the same time. The chart area will visualize only the currently selected one. 

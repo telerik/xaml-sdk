@@ -1,0 +1,1 @@
+﻿This example demonstrates how to populate RadCartesianChart with dynamic number of series. The actual number of series created depends on the data chart is bound to. In this example the chart is bound to a collection of 3 SeriesProviderDataImte objects, hence 3 ChartSeries are created. Each of them contains 4 items, so each series ends up with 4 DataPoints.

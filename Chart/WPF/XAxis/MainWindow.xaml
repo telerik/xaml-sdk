@@ -1,0 +1,98 @@
+﻿<Window x:Class="XAxis.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="500"
+		Width="850">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:SplineSeriesDefinition ShowItemLabels="False"
+														ShowPointMarks="False" />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="Date"
+											 DataPointMember="XValue" />
+						<telerik:ItemMapping FieldName="Value"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX IsDateTime="True"
+											   Step="5"
+											   LabelStep="2"
+											   DefaultLabelFormat="dd-MMM"
+											   StepLabelLevelCount="3"
+											   StepLabelLevelHeight="10">
+								</telerik:AxisX>
+							</telerik:ChartArea.AxisX>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+
+		<TextBlock Text="AutoRange is turned on (default)"
+				   Grid.Row="1"
+				   HorizontalAlignment="Center" />
+
+		<telerik:RadChart x:Name="radChart2"
+						  Grid.Column="1">
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:SplineSeriesDefinition ShowItemLabels="False"
+														ShowPointMarks="False" />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="Date"
+											 DataPointMember="XValue" />
+						<telerik:ItemMapping FieldName="Value"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX IsDateTime="True"
+											   AutoRange="False"
+											   MinValue="40900.0"
+											   MaxValue="41010.0"
+											   Step="5"
+											   LabelStep="2"
+											   DefaultLabelFormat="dd-MMM"
+											   LabelRotationAngle="45" />
+							</telerik:ChartArea.AxisX>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+
+		<TextBlock Text="AutoRange is turned off"
+				   Grid.Column="1"
+				   Grid.Row="1"
+				   HorizontalAlignment="Center" />
+	</Grid>
+</Window>
