@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropFromExternalSource_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecurringTask_WPF", "RecurringTask\RecurringTask_WPF.csproj", "{B832F111-F913-4B11-A167-356EC9220939}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependenciesEditing_WPF", "DependenciesEditing\DependenciesEditing_WPF.csproj", "{DA78F134-9700-4D56-A393-47072BC6BE9B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,6 +122,16 @@ Global
 		{B832F111-F913-4B11-A167-356EC9220939}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B832F111-F913-4B11-A167-356EC9220939}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B832F111-F913-4B11-A167-356EC9220939}.Release|x86.ActiveCfg = Release|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DA78F134-9700-4D56-A393-47072BC6BE9B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

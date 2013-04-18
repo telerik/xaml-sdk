@@ -9,9 +9,7 @@ namespace NoMatchFilteringBehavior
 	{
 		public override IEnumerable<object> FindMatchingItems(string searchText, IList items, IEnumerable<object> escapedItems, string textSearchPath, TextSearchMode textSearchMode)
 		{
-			var matches = base.FindMatchingItems(searchText, items, escapedItems, textSearchPath, textSearchMode);
-
-			if (matches.Count() == 0 && !string.IsNullOrEmpty(searchText))
+			if (string.IsNullOrEmpty(searchText))
 			{
 				return (List<object>)items;
 			}

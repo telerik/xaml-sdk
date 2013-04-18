@@ -19,7 +19,7 @@ namespace NoMatchFilteringBehavior
 			var autoCompleteBox = sender as RadAutoCompleteBox;
 			if (string.IsNullOrEmpty(autoCompleteBox.SearchText))
 			{
-				autoCompleteBox.Populate("Non existing search");
+				autoCompleteBox.Populate("");
 			}
 			else
 			{

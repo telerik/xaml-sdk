@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropFromExternalSource_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecurringTask_SL", "RecurringTask\RecurringTask_SL.csproj", "{444E82DA-6FE0-48AF-906E-373C8678DCA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependenciesEditing_SL", "DependenciesEditing\DependenciesEditing_SL.csproj", "{EDBEA4D5-7AF9-4684-B03B-E367F406D854}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{444E82DA-6FE0-48AF-906E-373C8678DCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{444E82DA-6FE0-48AF-906E-373C8678DCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{444E82DA-6FE0-48AF-906E-373C8678DCA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

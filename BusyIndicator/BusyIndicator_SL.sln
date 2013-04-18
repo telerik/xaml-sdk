@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimateOnFrozenUI.Web", "An
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AnimatedOnFrozenUI", "AnimatedOnFrozenUI", "{0F3B37C7-235A-4A46-9351-3255B0CBB009}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestoreFocus_SL", "RestoreFocus\RestoreFocus_SL.csproj", "{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

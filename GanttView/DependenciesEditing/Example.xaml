@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="DependenciesEditing.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:DependenciesEditing"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <local:ViewModel x:Key="ViewModel" />
+        <local:RemoveSelectedTaskConverter x:Key="RemoveSelectedTaskConverter"/>
+        <local:SelectedItemsToVisibilityConverter x:Key="SelectedItemsToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource ViewModel}}">
+        <telerik:RadGanttView TasksSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}" 
+                              VisibleRange="{Binding VisibleRange}" 
+                              PixelLength="00:03:00">
+            <telerik:RadGanttView.Columns>
+                <telerik:TreeColumnDefinition Header="Title" ColumnWidth="50" />
+                <telerik:ColumnDefinition MemberBinding="{Binding Start}" Header="Start" ColumnWidth="140" />
+                <telerik:ColumnDefinition MemberBinding="{Binding End}" Header="End" ColumnWidth="140" />
+                <telerik:ColumnDefinition MemberBinding="{Binding DependencyDisplay}" Header="Dependency" Width="200">
+                    <telerik:ColumnDefinition.CellEditTemplate>
+                        <DataTemplate>
+                            <telerik:RadDropDownButton IsOpen="True" KeepOpen="True" HorizontalContentAlignment="Left" CloseOnEscape="True">
+                                <telerik:RadDropDownButton.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" HorizontalAlignment="Left" TextAlignment="Left" Text="{Binding Path=SelectedItem.FromTask, ElementName=autoComplete}"/>
+                                        <Path Data="M3.4836135,5.0604753 C3.7849054,5.0604753 4.0089135,5.0552769 4.5231185,5.2057066 C5.037324,5.3561373 4.6583242,6.7946892 4.5809951,6.9490814 C3.9298837,6.6861358 3.2932413,6.7968502 2.8269851,6.8953462 L2.7284722,6.9462714 C2.1446736,7.3051605 1.7418106,8.067234 1.7418106,8.9493532 L1.7418106,11.171571 C1.7418106,12.398868 2.5216441,13.393788 3.4836173,13.393788 C4.445591,13.393788 5.1383328,12.471526 5.2065239,10.384115 C5.2065239,10.384115 7.0000005,9.4663544 7.0000005,9.4663544 L6.967227,11.727127 C6.967227,13.568072 5.4075603,15.060453 3.4836135,15.060453 C1.5596671,15.060453 8.9406967E-08,13.568072 0,11.727127 L0,8.3938007 C8.9406967E-08,6.552856 1.5596671,5.0604753 3.4836135,5.0604753 z M3.7422655,0 C5.6512299,3.7754127E-08 7.1987519,1.492381 7.1987519,3.3333261 L7.1987519,6.6666522 C7.1987519,8.507597 5.6512299,9.9999781 3.7422655,9.9999781 C3.4433198,9.9999781 3.221056,10.005177 2.710855,9.8547468 C2.200654,9.7043161 2.5767024,8.2657642 2.653429,8.111372 C3.2994704,8.3743172 3.9311552,8.2636032 4.3937807,8.1651077 L4.4915266,8.1141825 C5.0707788,7.7552929 5.4705048,6.9932199 5.4705048,6.1111002 L5.4705048,3.8888824 C5.4705048,2.6615856 4.692625,1.5812463 3.7422616,1.666665 C2.410862,1.7863312 1.9984226,2.9019992 2.0327713,4.4604034 C2.0327716,4.4604034 0.1987519,5.925045 0.19875199,5.925045 L0.28577891,3.3333261 C0.28577882,1.492381 1.8333006,3.7754127E-08 3.7422655,0 z" 
+                                              Fill="Gray" Margin="8 0 0 0" Grid.Column="1"
+                                              HorizontalAlignment="Right" RenderTransformOrigin="0.51380460803998,0.331995316624905" Stretch="Fill" UseLayoutRounding="False" Width="7"
+                                              Visibility="{Binding Path=SelectedItems.Count, ElementName=autoComplete, Converter={StaticResource SelectedItemsToVisibilityConverter}}">
+                                        <Path.RenderTransform>
+                                            <RotateTransform Angle="45" CenterX="-0.014644301792467118" CenterY="0.035355080487484258"/>
+                                        </Path.RenderTransform>
+                                        </Path>
+                                    </Grid>
+                                </telerik:RadDropDownButton.Content>
+                                <telerik:RadDropDownButton.DropDownContent>
+                                    <telerik:RadAutoCompleteBox DropDownWidth="Auto" Width="300" DisplayMemberPath="FromTask" x:Name="autoComplete" AutoCompleteMode="Suggest" SelectionMode="Multiple" GotFocus="RadAutoCompleteBox_GotFocus_1" SelectedItems="{Binding Dependencies}" 
+                                                        ItemsSource="{Binding Path=., ConverterParameter={StaticResource ViewModel}, Converter={StaticResource RemoveSelectedTaskConverter}}">
+                                        <telerik:RadAutoCompleteBox.DropDownItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding FromTask.Title}" />
+                                                    <TextBlock Text=" - " />
+                                                    <TextBlock Text="{Binding Type}"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </telerik:RadAutoCompleteBox.DropDownItemTemplate>
+                                        <telerik:RadAutoCompleteBox.BoxesItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding FromTask.Title}" />
+                                                    <TextBlock Text=" - " />
+                                                    <TextBlock Text="{Binding Type}"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </telerik:RadAutoCompleteBox.BoxesItemTemplate>
+                                        <telerik:RadAutoCompleteBox.FilteringBehavior>
+                                            <local:CustomFiltering />
+                                        </telerik:RadAutoCompleteBox.FilteringBehavior>
+                                    </telerik:RadAutoCompleteBox>
+                                </telerik:RadDropDownButton.DropDownContent>
+                            </telerik:RadDropDownButton>
+                        </DataTemplate>
+                    </telerik:ColumnDefinition.CellEditTemplate>
+                    <telerik:ColumnDefinition.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Edit dependencies" />
+                        </DataTemplate>
+                    </telerik:ColumnDefinition.CellTemplate>
+                </telerik:ColumnDefinition>
+            </telerik:RadGanttView.Columns>
+        </telerik:RadGanttView>
+    </Grid>
+</UserControl>

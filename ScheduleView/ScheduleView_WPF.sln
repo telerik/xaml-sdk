@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthViewInitiallyExpanded_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlotsToolTip_WPF", "SpecialSlotsToolTip\SpecialSlotsToolTip_WPF.csproj", "{D9B74C97-66DE-4D68-8CF6-0844B4A83C68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotsAndAppointmentsNavigation_WPF", "SlotsAndAppointmentsNavigation\SlotsAndAppointmentsNavigation_WPF.csproj", "{D208C908-1101-4B86-BADD-3E3C48176FB9}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +62,16 @@ Global
 		{D9B74C97-66DE-4D68-8CF6-0844B4A83C68}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D9B74C97-66DE-4D68-8CF6-0844B4A83C68}.Release|x86.ActiveCfg = Release|x86
 		{D9B74C97-66DE-4D68-8CF6-0844B4A83C68}.Release|x86.Build.0 = Release|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Debug|x86.ActiveCfg = Debug|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Debug|x86.Build.0 = Debug|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Release|Any CPU.ActiveCfg = Release|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Release|x86.ActiveCfg = Release|x86
+		{D208C908-1101-4B86-BADD-3E3C48176FB9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
