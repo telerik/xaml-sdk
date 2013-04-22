@@ -15,7 +15,7 @@ Unites States in the drop down portion of the control.
 		</Example>
 	</Control>
 	<Control Name="Book" ExamplesCount="1" TimeStamp="1" Path="Book/Book.zip">
-		<Example Name="Book">This example shows you how to use the RadBook with DataBinding.
+		<Example Name="DataBinding">This example shows you how to use the RadBook with DataBinding.
 		</Example>
 	</Control>
 	<Control Name="Chart" ExamplesCount="0" TimeStamp="2" Path="Chart/Chart.zip">
