@@ -38,6 +38,11 @@
                             <tools:CropTool />
                         </telerik:ImageToolItem.CommandParameter>
                     </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="DrawText" telerik:LocalizationManager.ResourceKey="ImageEditor_DrawText" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:DrawTextTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
                 </telerik:ImageToolsSection>
                 <telerik:ImageToolsSection Header="Adjust">
                     <telerik:ImageToolItem ImageKey="HueShift" Text="HueShift" Command="commands:ImageEditorRoutedCommands.ExecuteTool">

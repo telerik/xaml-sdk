@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWithDropDownButton_WPF", "OpenWithDropDownButton\OpenWithDropDownButton_WPF.csproj", "{7369C81A-F5C2-4407-A78C-5F8A10EBD400}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropDownItemTemplate_WPF", "CustomDropDownItemTemplate\CustomDropDownItemTemplate_WPF.csproj", "{E5EF8447-4813-423F-A7AB-5F08D14352F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithGridView_WPF", "WithGridView\WithGridView_WPF.csproj", "{C67ED566-5207-4AF7-A803-043859442003}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,14 @@ Global
 		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7369C81A-F5C2-4407-A78C-5F8A10EBD400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EF8447-4813-423F-A7AB-5F08D14352F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EF8447-4813-423F-A7AB-5F08D14352F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EF8447-4813-423F-A7AB-5F08D14352F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EF8447-4813-423F-A7AB-5F08D14352F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67ED566-5207-4AF7-A803-043859442003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67ED566-5207-4AF7-A803-043859442003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67ED566-5207-4AF7-A803-043859442003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67ED566-5207-4AF7-A803-043859442003}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

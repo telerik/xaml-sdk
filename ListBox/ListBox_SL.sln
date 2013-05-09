@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropCueWithWrapPanel_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItems_SL", "SelectedItems\SelectedItems_SL.csproj", "{8D7D0939-06F9-4765-96C2-3EC78BAAD25D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisualStyle_SL", "CustomDragVisualStyle\CustomDragVisualStyle_SL.csproj", "{5CB21658-74AC-469F-B4F5-51946299BD5C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{8D7D0939-06F9-4765-96C2-3EC78BAAD25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7D0939-06F9-4765-96C2-3EC78BAAD25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7D0939-06F9-4765-96C2-3EC78BAAD25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB21658-74AC-469F-B4F5-51946299BD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB21658-74AC-469F-B4F5-51946299BD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB21658-74AC-469F-B4F5-51946299BD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB21658-74AC-469F-B4F5-51946299BD5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

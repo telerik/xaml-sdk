@@ -1,0 +1,129 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:telerikDragDrop="clr-namespace:Telerik.Windows.DragDrop;assembly=Telerik.Windows.Controls"
+			 xmlns:dragDrop="clr-namespace:Telerik.Windows.Controls.DragDrop;assembly=Telerik.Windows.Controls"
+             x:Class="CustomDragVisualStyle.App"
+             >
+    <Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+				<ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+
+			<Style TargetType="telerikDragDrop:ListBoxDragVisual" BasedOn="{StaticResource DragVisualStyle}">
+				<Setter Property="Foreground" Value="White"/>
+				<Setter Property="BorderBrush" Value="DarkGreen"/>
+				<Setter Property="Background" Value="Green"/>
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="telerikDragDrop:DragVisual">
+							<Grid>
+								<VisualStateManager.VisualStateGroups>
+									<VisualStateGroup x:Name="EffectStates">
+										<VisualState x:Name="None">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="NoneEffect" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Move">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="MoveEffect" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Copy">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="CopyEffect" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Link">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="LinkEffect" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+										<VisualState x:Name="Scroll">
+											<Storyboard>
+												<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ScrollEffect" Storyboard.TargetProperty="Visibility">
+													<DiscreteObjectKeyFrame KeyTime="0:0:0">
+														<DiscreteObjectKeyFrame.Value>
+															<Visibility>Visible</Visibility>
+														</DiscreteObjectKeyFrame.Value>
+													</DiscreteObjectKeyFrame>
+												</ObjectAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+									</VisualStateGroup>
+								</VisualStateManager.VisualStateGroups>
+								<Border x:Name="SecondItemVisual" Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsDraggingMultipleItems, Converter={StaticResource BooleanToVisibilityConverter}}" CornerRadius="2" Margin="4 4 0 0" BorderBrush="{StaticResource DragVisualMultyItemBorder}" Background="{StaticResource DragVisualMultyItemBackground}" BorderThickness="1" />
+								<Border x:Name="ThirdthItemVisual" Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsDraggingMultipleItems, Converter={StaticResource BooleanToVisibilityConverter}}" CornerRadius="2" Margin="2 2 2 2" BorderBrush="{StaticResource DragVisualMultyItemBorder}" Background="{StaticResource DragVisualMultyItemBackground}" BorderThickness="1" />
+								<Border x:Name="DragBackgroundVisual" CornerRadius="2" Margin="0 0 4 4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" />
+								<Border Margin="0 0 4 4" Padding="{TemplateBinding BorderThickness}">
+								<Grid Margin="2, 0, 2, 0">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto" />
+										<ColumnDefinition Width="*" />
+									</Grid.ColumnDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="20"/>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="20"/>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="20"/>
+									</Grid.RowDefinitions>
+									<Path x:Name="NoneEffect" Visibility="Collapsed" Margin="5" Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M2,8 L8,2 M9,5 C9,7.2 7.2,9 5,9 C2.7,9 1,7 1,5 C1,2.8 2.8,1 5,1 C7.2,1 9,2.8 9,5 z" Stroke="{StaticResource DragVisualEffectImportant}" StrokeThickness="2" />
+									<Path x:Name="MoveEffect" Visibility="Collapsed" Margin="5" Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M0,5 L8,5 M4,1 L8,5 4,9" Stroke="{StaticResource DragVisualEffectNormal}" StrokeThickness="2" />
+									<Path x:Name="CopyEffect" Visibility="Collapsed" Margin="5" Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5,1 L5,9 M1,5 L9,5" Stroke="{StaticResource DragVisualEffectNormal}" StrokeThickness="2" />
+									<Path x:Name="LinkEffect" Visibility="Collapsed" Margin="5 7 4 7" Height="6" Width="11" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M8,0.5 C9.4,0.5 10.5,1.6 10.5,3 C10.5,4.4 9.4,5.5 8,5.5 C6.6,5.5 5.5,4.4 5.5,3 C5.5,1.6 6.6,0.5 8,0.5 z M3,0.5 C4.4,0.5 5.5,1.6 5.5,3 C5.5,4.4 4.4,5.5 3,5.5 C1.6,5.5 0.5,4.4 0.5,3 C0.5,1.6 1.6,0.5 3,0.5 z" Stroke="{StaticResource DragVisualEffectImportant}" StrokeThickness="1" />
+									<Path x:Name="ScrollEffect" Visibility="Collapsed" Margin="5 4" Width="10" Height="12" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M0,5 L5,0 10,5Z M0,7 L5,12 10,7Z" Fill="{StaticResource DragVisualEffectNormal}" />
+									<StackPanel Orientation="Horizontal" Margin="15, 0, 0, 0" Grid.Row="0" VerticalAlignment="Center">
+										<TextBlock Text="ID: "/>
+										<TextBlock Text="{Binding Content.Id, RelativeSource={RelativeSource TemplatedParent}}"
+													FontWeight="Bold"/>
+									</StackPanel>
+									<Border Background="White" Height="1" Grid.Row="1"/>
+									<StackPanel Orientation="Horizontal" Margin="15, 0, 0, 0" Grid.Row="2" VerticalAlignment="Center">
+										<TextBlock Text="Name: "/>
+										<TextBlock Text="{Binding Content.Name, RelativeSource={RelativeSource TemplatedParent}}"
+													FontWeight="Bold"/>
+									</StackPanel>
+									<Border Background="White" Height="1" Grid.Row="3"/>
+									<StackPanel Orientation="Horizontal" Margin="15, 0, 0, 0" Grid.Row="4" VerticalAlignment="Center">
+										<TextBlock Text="Capital: "/>
+										<TextBlock Text="{Binding Content.Capital, RelativeSource={RelativeSource TemplatedParent}}"
+													FontWeight="Bold"/>
+									</StackPanel>
+								</Grid>
+							</Border>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

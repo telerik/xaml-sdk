@@ -21,7 +21,7 @@
 		<telerik:RadAutoCompleteBox VerticalAlignment="Center" HorizontalAlignment="Center" Width="300"
 									ItemsSource="{Binding Countries}"
 									Grid.Row="1"
-									TextSearchMode="Contains"
+									TextSearchMode="StartsWith"
 									AutoCompleteMode="Suggest"
 									WatermarkContent="Enter Country or Country, Capital"
 									FilteringBehavior="{StaticResource MyFilteringBehavior}"

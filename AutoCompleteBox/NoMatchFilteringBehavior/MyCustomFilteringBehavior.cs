@@ -9,12 +9,14 @@ namespace NoMatchFilteringBehavior
 	{
 		public override IEnumerable<object> FindMatchingItems(string searchText, IList items, IEnumerable<object> escapedItems, string textSearchPath, TextSearchMode textSearchMode)
 		{
-			if (string.IsNullOrEmpty(searchText))
+			var result = base.FindMatchingItems(searchText, items, escapedItems, textSearchPath, textSearchMode) as IEnumerable<object>;
+ 
+			if (string.IsNullOrEmpty(searchText) || !result.Any())
 			{
-				return (List<object>)items;
+				return ((IEnumerable<object>)items).Where(x => !escapedItems.Contains(x));
 			}
 
-			return base.FindMatchingItems(searchText, items, escapedItems, textSearchPath, textSearchMode);
+			return result;
 		}
 	}
 }

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneGroupItemsSource_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosedPanesWithContextMenu_SL", "OpenClosedPanesWithContextMenu\OpenClosedPanesWithContextMenu_SL.csproj", "{CB179E0F-1D08-4006-8779-E057A66F34EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloseSinglePaneInToolWindow_SL", "CloseSinglePaneInToolWindow\CloseSinglePaneInToolWindow_SL.csproj", "{53845EBB-9543-4007-B16A-1DEA84F75551}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{CB179E0F-1D08-4006-8779-E057A66F34EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB179E0F-1D08-4006-8779-E057A66F34EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB179E0F-1D08-4006-8779-E057A66F34EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53845EBB-9543-4007-B16A-1DEA84F75551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53845EBB-9543-4007-B16A-1DEA84F75551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53845EBB-9543-4007-B16A-1DEA84F75551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53845EBB-9543-4007-B16A-1DEA84F75551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
