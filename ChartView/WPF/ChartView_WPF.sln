@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizingScatterPoints", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesProvider", "SeriesProvider\SeriesProvider.csproj", "{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollAndZoomSyncedCharts", "ScrollAndZoomSyncedCharts\ScrollAndZoomSyncedCharts.csproj", "{6432F65D-3580-4314-8726-22C7D95A194F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crosshair", "Crosshair\Crosshair.csproj", "{AB1A72BF-9821-427B-88B7-46A75F15D727}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -188,6 +192,14 @@ Global
 		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D7D5A9E-2B0D-4A87-93DC-F9300C7AB963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6432F65D-3580-4314-8726-22C7D95A194F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6432F65D-3580-4314-8726-22C7D95A194F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6432F65D-3580-4314-8726-22C7D95A194F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6432F65D-3580-4314-8726-22C7D95A194F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1A72BF-9821-427B-88B7-46A75F15D727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1A72BF-9821-427B-88B7-46A75F15D727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1A72BF-9821-427B-88B7-46A75F15D727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1A72BF-9821-427B-88B7-46A75F15D727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

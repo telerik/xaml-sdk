@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeDocuments_WPF", "Merge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watermark_WPF", "Watermark\Watermark_WPF.csproj", "{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInsertHyperlinkDialog_WPF", "CustomInsertHyperlinkDialog\CustomInsertHyperlinkDialog_WPF.csproj", "{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCodeFormattingLanguage_WPF", "CustomCodeFormattingLanguage\CustomCodeFormattingLanguage_WPF.csproj", "{6F2B9406-2E8F-4287-99F8-8B943A594520}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -144,6 +148,26 @@ Global
 		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C0C42DFB-620C-4BDC-9349-EBE2E9DA7DE7}.Release|x86.ActiveCfg = Release|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{13195B5F-C9EF-4ABB-97F5-CE283B9424E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

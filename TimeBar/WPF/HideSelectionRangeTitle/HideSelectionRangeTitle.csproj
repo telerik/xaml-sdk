@@ -51,16 +51,13 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.DataVisualization">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF45\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

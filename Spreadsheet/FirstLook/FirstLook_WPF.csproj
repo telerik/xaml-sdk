@@ -49,14 +49,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2013.1.219.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2013.1.219.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -67,6 +59,10 @@
     <Reference Include="Telerik.Windows.Controls.Data">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
@@ -89,6 +85,13 @@
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Spreadsheet">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

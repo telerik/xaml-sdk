@@ -82,6 +82,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>

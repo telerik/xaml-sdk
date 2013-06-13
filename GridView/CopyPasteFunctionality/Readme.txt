@@ -1,0 +1,1 @@
+This example demonstrates different copy/paste scenarios supported by RadGridView.

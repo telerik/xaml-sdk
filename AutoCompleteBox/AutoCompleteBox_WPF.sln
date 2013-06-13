@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropDownItemTemplate_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithGridView_WPF", "WithGridView\WithGridView_WPF.csproj", "{C67ED566-5207-4AF7-A803-043859442003}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDataForm_WPF", "WithDataForm\WithDataForm_WPF.csproj", "{4A831362-CDC5-45EC-8CA7-2566B75D2F12}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{C67ED566-5207-4AF7-A803-043859442003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C67ED566-5207-4AF7-A803-043859442003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C67ED566-5207-4AF7-A803-043859442003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

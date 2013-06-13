@@ -59,6 +59,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackBall", "TrackBall\Trac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesProvider", "SeriesProvider\SeriesProvider.csproj", "{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollAndZoomSyncedCharts", "ScrollAndZoomSyncedCharts\ScrollAndZoomSyncedCharts.csproj", "{667150D4-2C28-4370-A81E-3998F0ACEEB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crosshair", "Crosshair\Crosshair.csproj", "{234B431D-2E19-4D82-9138-95132B6E6F00}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +186,14 @@ Global
 		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BB37D7-DDF8-413D-BB78-23C1D4BCD2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667150D4-2C28-4370-A81E-3998F0ACEEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667150D4-2C28-4370-A81E-3998F0ACEEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667150D4-2C28-4370-A81E-3998F0ACEEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667150D4-2C28-4370-A81E-3998F0ACEEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234B431D-2E19-4D82-9138-95132B6E6F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234B431D-2E19-4D82-9138-95132B6E6F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234B431D-2E19-4D82-9138-95132B6E6F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234B431D-2E19-4D82-9138-95132B6E6F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

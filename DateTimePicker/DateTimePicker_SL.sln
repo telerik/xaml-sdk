@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_SL", "TodayButt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyInputField_SL", "ReadonlyInputField\ReadonlyInputField_SL.csproj", "{58518E6B-CCF2-49A6-A334-B70A5E45E982}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeIntervalsScrollViewer_SL", "TimeIntervalsScrollViewer\TimeIntervalsScrollViewer_SL.csproj", "{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58518E6B-CCF2-49A6-A334-B70A5E45E982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

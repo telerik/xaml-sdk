@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToDynamicData_SL", "BindingToDynamicData\BindingToDynamicData_SL.csproj", "{F2623007-9A7C-4A65-9478-6AF97A66A867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingIconColumnWidth_SL", "UsingIconColumnWidth\UsingIconColumnWidth_SL.csproj", "{BA1C8D0B-6393-4A0B-B185-22225D8A5729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollingMenuItems_SL", "ScrollingMenuItems\ScrollingMenuItems_SL.csproj", "{5CF84E79-527E-4DF6-A298-A9B41830BCF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingPopupProperties_SL", "SettingPopupProperties\SettingPopupProperties_SL.csproj", "{D817897A-F409-4392-999F-B6F38DBD0086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customization_MVVM_SL", "Customization_MVVM\Customization_MVVM_SL.csproj", "{DF8A825C-DEE5-435A-9C99-7499DDB4A362}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2623007-9A7C-4A65-9478-6AF97A66A867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2623007-9A7C-4A65-9478-6AF97A66A867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2623007-9A7C-4A65-9478-6AF97A66A867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2623007-9A7C-4A65-9478-6AF97A66A867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1C8D0B-6393-4A0B-B185-22225D8A5729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1C8D0B-6393-4A0B-B185-22225D8A5729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1C8D0B-6393-4A0B-B185-22225D8A5729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1C8D0B-6393-4A0B-B185-22225D8A5729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF84E79-527E-4DF6-A298-A9B41830BCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF84E79-527E-4DF6-A298-A9B41830BCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF84E79-527E-4DF6-A298-A9B41830BCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF84E79-527E-4DF6-A298-A9B41830BCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D817897A-F409-4392-999F-B6F38DBD0086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D817897A-F409-4392-999F-B6F38DBD0086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D817897A-F409-4392-999F-B6F38DBD0086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D817897A-F409-4392-999F-B6F38DBD0086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

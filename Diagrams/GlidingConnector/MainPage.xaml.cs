@@ -172,7 +172,6 @@ namespace GlidingConnector
 			c8.StrokeDashArray = new DoubleCollection { 3, 2 };
 			c8.SourceCapType = CapType.Arrow5Filled;
 			c8.Content = "Async";
-			c8.ConnectionType = ConnectionType.RoundedPolyline;
 			c8.BezierTension = .72;
 			c8.ManipulationPoints[0].Position = new Point(50, 550);
 			c8.UpdateLayout();

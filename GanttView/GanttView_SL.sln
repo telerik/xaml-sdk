@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecurringTask_SL", "Recurri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependenciesEditing_SL", "DependenciesEditing\DependenciesEditing_SL.csproj", "{EDBEA4D5-7AF9-4684-B03B-E367F406D854}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baseline_SL", "Baseline\Baseline_SL.csproj", "{542CE41A-16BD-48A6-9FA3-C684D1693425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingAndExporting_SL", "PrintingAndExporting\PrintingAndExporting_SL.csproj", "{604DAE39-D1D7-46F1-8677-003CB6DA9104}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +72,14 @@ Global
 		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDBEA4D5-7AF9-4684-B03B-E367F406D854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542CE41A-16BD-48A6-9FA3-C684D1693425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542CE41A-16BD-48A6-9FA3-C684D1693425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542CE41A-16BD-48A6-9FA3-C684D1693425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542CE41A-16BD-48A6-9FA3-C684D1693425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604DAE39-D1D7-46F1-8677-003CB6DA9104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604DAE39-D1D7-46F1-8677-003CB6DA9104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604DAE39-D1D7-46F1-8677-003CB6DA9104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604DAE39-D1D7-46F1-8677-003CB6DA9104}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

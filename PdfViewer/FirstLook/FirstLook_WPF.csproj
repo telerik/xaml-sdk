@@ -61,8 +61,8 @@
     <Reference Include="Telerik.Windows.Controls.Navigation">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Diagrams.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Fixed">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>

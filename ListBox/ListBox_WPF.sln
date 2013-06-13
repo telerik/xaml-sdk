@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItems_WPF", "Select
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisualStyle_WPF", "CustomDragVisualStyle\CustomDragVisualStyle_WPF.csproj", "{00792FFE-E34A-4DE6-A082-CDC345C04F03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithScheduleView_WPF", "DragDropWithScheduleView\DragDropWithScheduleView_WPF.csproj", "{D427F3F8-1FE9-4B75-A1BB-D65B20462100}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

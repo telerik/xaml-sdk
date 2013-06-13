@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Serialization.SerializeAdomdProvider"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <pivot:AdomdDataProvider x:Key="dataProvider">
+            <pivot:AdomdDataProvider.ConnectionSettings>
+                <pivot:AdomdConnectionSettings 
+                        Cube="Adventure Works"
+                        Database="Adventure Works DW 2008R2"
+                        ConnectionString="Data Source=http://demos.telerik.com/olap/msmdpump.dll;Catalog=Adventure Works DW 2008R2"/>
+            </pivot:AdomdDataProvider.ConnectionSettings>
+
+            <pivot:AdomdDataProvider.FilterDescriptions>
+                <pivot:AdomdFilterDescription MemberName="[Date].[Calendar]">
+                    <pivot:AdomdFilterDescription.Levels>
+                        <pivot:AdomdLevelFilterDescription MemberName="[Date].[Calendar].[Calendar Year]">
+                            <pivot:AdomdLevelFilterDescription.Condition>
+                                <pivot:OlapSetCondition Comparison="DoesNotInclude">
+                                    <pivot:OlapSetCondition.Items>
+                                        <sys:String>[Date].[Calendar].[Calendar Year].&amp;[2006]</sys:String>
+                                    </pivot:OlapSetCondition.Items>
+                                </pivot:OlapSetCondition>
+                            </pivot:AdomdLevelFilterDescription.Condition>
+                        </pivot:AdomdLevelFilterDescription>
+                    </pivot:AdomdFilterDescription.Levels>
+                </pivot:AdomdFilterDescription>
+            </pivot:AdomdDataProvider.FilterDescriptions>
+
+            <pivot:AdomdDataProvider.RowGroupDescriptions>
+
+                <pivot:AdomdGroupDescription MemberName="[Product].[Product Model Lines]">
+                    <pivot:AdomdGroupDescription.Levels>
+                        <pivot:AdomdLevelGroupDescription MemberName="[Product].[Product Model Lines].[Product Line]" SortOrder="Descending"/>
+                        <pivot:AdomdLevelGroupDescription MemberName="[Product].[Product Model Lines].[Model]" SortOrder="Descending">
+                            <pivot:AdomdLevelGroupDescription.GroupComparer>
+                                <pivot:GrandTotalComparer AggregateIndex="0"/>
+                            </pivot:AdomdLevelGroupDescription.GroupComparer>
+                        </pivot:AdomdLevelGroupDescription>
+                    </pivot:AdomdGroupDescription.Levels>
+                </pivot:AdomdGroupDescription>
+            </pivot:AdomdDataProvider.RowGroupDescriptions>
+
+            <pivot:AdomdDataProvider.ColumnGroupDescriptions>
+                <pivot:AdomdGroupDescription MemberName="[Sales Territory].[Sales Territory Country]"/>
+            </pivot:AdomdDataProvider.ColumnGroupDescriptions>
+
+            <pivot:AdomdDataProvider.AggregateDescriptions>
+                <pivot:AdomdAggregateDescription MemberName="[Measures].[Reseller Order Quantity]"/>
+            </pivot:AdomdDataProvider.AggregateDescriptions>
+
+        </pivot:AdomdDataProvider>
+    </UserControl.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <pivot:RadPivotGrid x:Name="pivot" Grid.Column="0" Grid.Row="1" DataProvider="{StaticResource dataProvider}" />
+        <pivot:RadPivotFieldList x:Name="fieldList" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="4 0 0 0" DataProvider="{StaticResource dataProvider}" />
+
+        <StackPanel Margin="3" Grid.Row="2">
+            <telerik:RadButton x:Name="buttonSave"
+                               Margin="0 2"
+                               Click="OnSave"
+                               Content="Save" />
+            <telerik:RadButton x:Name="buttonLoad"
+                               Margin="0 2"
+                               Click="OnLoad"
+                               Content="Load" />
+        </StackPanel>
+    </Grid>
+</UserControl>

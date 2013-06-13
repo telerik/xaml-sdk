@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="TimeIntervalsScrollViewer.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:local="clr-namespace:TimeIntervalsScrollViewer"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+	<UserControl.Resources>
+		<Style x:Key="RadClockStyle" TargetType="telerik:RadClock" BasedOn="{StaticResource RadClockStyle}">
+			<Setter Property="Height" Value="187" />
+			<Setter Property="VerticalAlignment" Value="Top"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="telerik:RadClock">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Border x:Name="BackgroundVisual" Grid.RowSpan="2" Background="{TemplateBinding Background}" CornerRadius="{StaticResource ClockOuterBorderCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+								<Border CornerRadius="{StaticResource ClockInnerBorderCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{StaticResource ClockInnerBorderBrush}" />
+							</Border>
+							<Border x:Name="Header" BorderThickness="{StaticResource CalendarHeaderBorderThickness}" CornerRadius="{StaticResource CalendarHeaderOuterCornerRadius}" BorderBrush="{StaticResource HeaderOuterBorder}" Background="{StaticResource HeaderBackground}" MinHeight="32">
+								<Border BorderThickness="{StaticResource CalendarHeaderBorderThickness}" BorderBrush="{StaticResource HeaderInnerBorder}" CornerRadius="{StaticResource CalendarHeaderInnerCornerRadius}" Padding="{TemplateBinding Padding}">
+									<ContentControl Foreground="{StaticResource HeaderTextForeground}" IsTabStop="False" FontWeight="{StaticResource HeaderTextFontWeight}" Content="{TemplateBinding Header}" ContentTemplate="{TemplateBinding HeaderTemplate}" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+								</Border>
+							</Border>
+							<ScrollViewer VerticalScrollBarVisibility="Visible"  Grid.Row="1" BorderThickness="0 0 1 0" BorderBrush="{TemplateBinding BorderBrush}">
+								<ItemsPresenter Margin="{StaticResource ClockItemsMargin}" />
+							</ScrollViewer>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<Style x:Key="RadDateTimePickerStyle" TargetType="telerik:RadDateTimePicker" BasedOn="{StaticResource RadDateTimePickerStyle}">
+			<Setter Property="ClockStyle" Value="{StaticResource RadClockStyle}" />
+		</Style>
+	</UserControl.Resources>
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<TextBlock Width="450"
+				   Text="This example demonstrates how to add a scrollbar to the time intervals portion of the control. When setting a small TimeInterval this would help in not stretching the controls Tempalte for Silverlight and WPF."
+				   Margin="20"
+				   FontWeight="Bold"
+				   TextWrapping="Wrap"/>
+		<Grid Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Text="Normal RadDateTimePicker (TimeInterval): 1:00" Margin="10" Grid.Column="0" 
+					   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<TextBlock Text="Normal RadDateTimePicker (TimeInterval): 0:15" Margin="10" Grid.Column="1"
+					   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<TextBlock Text="Custom RadDateTimePicker (TimeInterval): 0:15" Margin="10" Grid.Column="2"
+					   VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextDecorations="Underline"/>
+			<telerik:RadDateTimePicker Margin="20" Grid.Column="0" Grid.Row="1"
+									   Width="130"
+									   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<telerik:RadDateTimePicker TimeInterval="00:15" 
+									   Width="130"
+									   Margin="20" Grid.Column="1" Grid.Row="1"
+									   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<telerik:RadDateTimePicker TimeInterval="00:15"
+									   Width="130"
+									   Margin="20" Grid.Column="2" Grid.Row="1"
+									   VerticalAlignment="Center" HorizontalAlignment="Center"
+									   Style="{StaticResource RadDateTimePickerStyle}"/>
+		</Grid>
+	</Grid>
+</UserControl>

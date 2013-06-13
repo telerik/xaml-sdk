@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DiagramFirstLookDemo"
+                    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <local:PercentageConverter x:Key="PercentConverter" />
+
+    <DataTemplate x:Key="UndoItemTemplate">
+        <TextBlock Margin="5" Text="{Binding Name}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="SamplesTemplate">
+        <Border Padding="30 15" BorderBrush="White" Background="White">
+            <Border Background="DarkGray" CornerRadius="0" Padding="10"
+					Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="6" ShadowDepth="2" Color="#F1A7A7A7" />
+                </Border.Effect>
+                <Image Width="220" Height="Auto" Source="{Binding Icon}" />
+            </Border>
+        </Border>
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="UniformGridPanelTemplate">
+        <telerik:RadUniformGrid Columns="3" />
+    </ItemsPanelTemplate>
+
+    <Style x:Key="PanelBarItemSecondLevelStyle" TargetType="telerik:RadPanelBarItem">
+        <Setter Property="Height" Value="108" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="telerik:DragDropManager.AllowDrag" Value="True" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerik:RadPanelBarItem">
+                    <Border Background="{TemplateBinding Background}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverVisual"
+												Storyboard.TargetProperty="Opacity" To="1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOut">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverVisual"
+												Storyboard.TargetProperty="Opacity" To="0" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected" />
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="SelectionVisual"
+												Storyboard.TargetProperty="Opacity" To="1" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid x:Name="HeaderRow" Background="Transparent">
+                            <Border x:Name="MouseOverVisual" Background="#26000000" BorderThickness="0" CornerRadius="1"
+									Opacity="0" />
+                            <Border x:Name="SelectionVisual" Background="#3F000000" BorderThickness="0" CornerRadius="1"
+									Opacity="0" />
+                            <ContentControl x:Name="Header" Margin="{TemplateBinding Padding}"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+									ContentTemplate="{TemplateBinding HeaderTemplate}"
+									Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PanelBarItemFirstLevelStyle" TargetType="telerik:RadPanelBarItem">
+        <Setter Property="ItemsPanel" Value="{StaticResource UniformGridPanelTemplate}" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource PanelBarItemSecondLevelStyle}" />
+    </Style>
+
+    <DataTemplate x:Key="ToolboxItemTemplate">
+        <Grid Margin="0 1 1 0" Width="76" Height="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="42" />
+            </Grid.RowDefinitions>
+            <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="5 5 5 0">
+                <ContentPresenter Content="{Binding Shape}" Margin="5" IsHitTestVisible="False" />
+            </Viewbox>
+            <TextBlock Grid.Row="1" Text="{Binding Header}" TextWrapping="Wrap" Margin="5" FontSize="12"
+					TextAlignment="Center" FontFamily="Segoe UI Semibold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Grid>
+    </DataTemplate>
+
+    <local:HierarchicalDataTemplate x:Key="ToolboxTemplate" ItemsSource="{Binding Items}"
+			ItemTemplate="{StaticResource ToolboxItemTemplate}">
+        <TextBlock Text="{Binding Header}" MinWidth="55" />
+    </local:HierarchicalDataTemplate>
+
+</ResourceDictionary>

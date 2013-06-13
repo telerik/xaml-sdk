@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="CustomizeFieldTree.CustomizeDateTimeFieldTreeAndHideProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+             xmlns:data="clr-namespace:RadPivotGrid_Data"
+             xmlns:local="clr-namespace:CustomizeFieldTree"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <data:SampleOrders x:Key="source" />
+        <pivot:LocalDataSourceProvider x:Key="dataProvider" ItemsSource="{StaticResource source}">
+            <pivot:LocalDataSourceProvider.FieldDescriptionsProvider>
+                <pivot:LocalDataSourceFieldDescriptionsProvider AddingContainerNode="LocalDataSourceFieldDescriptionsProvider_ContainerNodeAdded_1"/>
+            </pivot:LocalDataSourceProvider.FieldDescriptionsProvider>
+            <pivot:LocalDataSourceProvider.RowGroupDescriptions>
+                <pivot:DateTimeGroupDescription PropertyName="Date" Step="Quarter"/>
+            </pivot:LocalDataSourceProvider.RowGroupDescriptions>
+            <pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+                <pivot:PropertyGroupDescription  PropertyName="Promotion"/>
+            </pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+            <pivot:LocalDataSourceProvider.AggregateDescriptions>
+                <pivot:PropertyAggregateDescription PropertyName="Quantity"/>
+            </pivot:LocalDataSourceProvider.AggregateDescriptions>
+        </pivot:LocalDataSourceProvider>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <pivot:RadPivotGrid Grid.Column="0" DataProvider="{StaticResource dataProvider}"/>
+        <pivot:RadPivotFieldList Grid.Column="1" Margin="4 0 0 0" DataProvider="{StaticResource dataProvider}" />
+    </Grid>
+</UserControl>

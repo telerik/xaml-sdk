@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropDownItemTemplate_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithGridView_SL", "WithGridView\WithGridView_SL.csproj", "{8F979BF9-EE89-4F84-B1BC-03C12C4C4D19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDataForm_SL", "WithDataForm\WithDataForm_SL.csproj", "{1B21B49D-2AAF-423C-ACE7-794E722EC734}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{8F979BF9-EE89-4F84-B1BC-03C12C4C4D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F979BF9-EE89-4F84-B1BC-03C12C4C4D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F979BF9-EE89-4F84-B1BC-03C12C4C4D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B21B49D-2AAF-423C-ACE7-794E722EC734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B21B49D-2AAF-423C-ACE7-794E722EC734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B21B49D-2AAF-423C-ACE7-794E722EC734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B21B49D-2AAF-423C-ACE7-794E722EC734}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

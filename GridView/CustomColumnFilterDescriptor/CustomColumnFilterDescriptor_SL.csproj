@@ -73,10 +73,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.Windows.Controls" />
-    <Reference Include="Telerik.Windows.Controls.GridView" />
-    <Reference Include="Telerik.Windows.Controls.Input" />
-    <Reference Include="Telerik.Windows.Data" />
+	  <Reference Include="Telerik.Windows.Controls">
+		  <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Telerik.Windows.Data">
+		  <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Telerik.Windows.Controls.Input">
+		  <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Telerik.Windows.Controls.GridView">
+		  <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.GridView.dll</HintPath>
+	  </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_SL.xaml.cs">

@@ -31,7 +31,7 @@ namespace AppointmentsReminders
         {
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 30);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 10);
             dispatcherTimer.Start();
             reminderViewModel = new ReminderWindowViewModel(this, sv);
             reminderWindow = new ReminderWindow() { DataContext = reminderViewModel };
@@ -125,7 +125,7 @@ namespace AppointmentsReminders
                 .Where(a => a.SelectedReminder != null).ToList();
             foreach (var app in startList)
             {
-                if (app.Start.Add(app.SelectedReminder.Value) <= DateTime.Now)
+				if (app.Start <= DateTime.Now.Add(app.SelectedReminder.Value))
                 {
                     this.SelectedAppointment = app;
                     if (this.SelectedAppointment != null && this.SelectedAppointment.SelectedReminder != null)
