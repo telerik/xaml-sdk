@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyInputField_WPF", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeIntervalsScrollViewer_WPF", "TimeIntervalsScrollViewer\TimeIntervalsScrollViewer_WPF.csproj", "{64971FDC-26DB-4F4D-AFD1-4A7067D059FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringFormatMVVM_WPF", "StringFormatMVVM\StringFormatMVVM_WPF.csproj", "{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{64971FDC-26DB-4F4D-AFD1-4A7067D059FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64971FDC-26DB-4F4D-AFD1-4A7067D059FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64971FDC-26DB-4F4D-AFD1-4A7067D059FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

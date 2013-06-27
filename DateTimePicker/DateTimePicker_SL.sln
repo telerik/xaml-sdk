@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyInputField_SL", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeIntervalsScrollViewer_SL", "TimeIntervalsScrollViewer\TimeIntervalsScrollViewer_SL.csproj", "{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringFormatMVVM_SL", "StringFormatMVVM\StringFormatMVVM_SL.csproj", "{CB37EAE6-39C7-4A25-BD7B-8F1CE06E4080}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6CE41AD-8DE3-4FDA-9ED2-B8BE58D52C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB37EAE6-39C7-4A25-BD7B-8F1CE06E4080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB37EAE6-39C7-4A25-BD7B-8F1CE06E4080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB37EAE6-39C7-4A25-BD7B-8F1CE06E4080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB37EAE6-39C7-4A25-BD7B-8F1CE06E4080}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
