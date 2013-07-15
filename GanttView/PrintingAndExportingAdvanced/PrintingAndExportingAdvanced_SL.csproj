@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{604DAE39-D1D7-46F1-8677-003CB6DA9104}</ProjectGuid>
+    <ProjectGuid>{EEA39AC3-022E-4DEF-A4CD-B5A5D97CBC93}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrintingAndExporting</RootNamespace>
-    <AssemblyName>PrintingAndExporting</AssemblyName>
+    <RootNamespace>PrintingAndExportingAdvanced</RootNamespace>
+    <AssemblyName>PrintingAndExportingAdvanced</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -19,10 +19,10 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>PrintingAndExporting.xap</XapFilename>
+    <XapFilename>PrintingAndExportingAdvanced.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>PrintingAndExporting.App</SilverlightAppEntry>
-    <TestPageFileName>PrintingAndExportingTestPage.html</TestPageFileName>
+    <SilverlightAppEntry>PrintingAndExportingAdvanced.App</SilverlightAppEntry>
+    <TestPageFileName>PrintingAndExportingAdvancedTestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
     <EnableOutOfBrowser>false</EnableOutOfBrowser>
@@ -79,6 +79,12 @@
     <Reference Include="Telerik.Windows.Controls.GanttView">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.GanttView.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Scheduling.Core">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Scheduling.Core.dll</HintPath>
     </Reference>
@@ -87,21 +93,29 @@
     <Compile Include="App_SL.xaml.cs">
       <DependentUpon>App_SL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomPrintDialog.xaml.cs">
+      <DependentUpon>CustomPrintDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Example.xaml.cs">
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PreviewPage.cs" />
+    <Compile Include="PrintingAndExportingViewModel.cs" />
     <Compile Include="PrintingService_SL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App_SL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="CustomPrintDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Example.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -115,7 +129,7 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <CodeAnalysisDictionary Include="Readme.txt" />
+    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E96571B-8D91-4A83-8C41-496C6EBFBB24}</ProjectGuid>
+    <ProjectGuid>{76AA3433-A0FE-4839-AF00-0982E868E181}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrintingAndExporting</RootNamespace>
-    <AssemblyName>PrintingAndExporting</AssemblyName>
+    <RootNamespace>ZeroTaskLevelInitiallyCollapsed</RootNamespace>
+    <AssemblyName>ZeroTaskLevelInitiallyCollapsed</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -66,10 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomInitialExpandBehavior.cs" />
     <Compile Include="Example.xaml.cs">
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PrintingService_WPF.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="Example.xaml">
       <SubType>Designer</SubType>
@@ -83,7 +83,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GanttPaginator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
