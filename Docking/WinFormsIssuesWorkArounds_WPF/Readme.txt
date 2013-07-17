@@ -3,3 +3,8 @@ In order to be work-arounded all Popups, including the Windows, should have Allo
 This leads to some glitches in the Docking control, which fixes are provided in the project.
 
 In order to trigger ActivePaneChanged and set properly ActivePane for the RadDocking when clicking on WinForms control, you should handle MouseDown WinForms event.
+
+This project demonstrates the work-arounds for the following problems:
+- http://www.telerik.com/support/pits.aspx#/details/Issue=13056
+- http://www.telerik.com/support/pits.aspx#/details/Issue=8633
+- http://www.telerik.com/support/pits.aspx#/details/Issue=3191
