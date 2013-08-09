@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="SpecialSlots.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <telerik:RadTimeline x:Name="timeline"
+                                 VerticalScrollBarVisibility="Visible"
+                                 PeriodStart="1-Jan-2010 12:00:00 AM" PeriodEnd="31-Dec-2011 11:59:59 PM"
+                                 VisiblePeriodStart="11-Nov-2010 12:00:00 AM" VisiblePeriodEnd="1-Dec-2010 11:59:59 PM">
+                <telerik:RadTimeline.Intervals>
+                    <telerik:YearInterval />
+                    <telerik:MonthInterval />
+                    <telerik:WeekInterval />
+                    <telerik:DayInterval />
+                </telerik:RadTimeline.Intervals>
+            </telerik:RadTimeline>
+        </Grid>
+
+        <StackPanel Grid.Column="1">
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <StackPanel>
+                    <TextBlock>First Day:
+                    </TextBlock>
+                    <ComboBox x:Name="FirstDayComboBox" SelectionChanged="FirstDayComboBox_SelectionChanged">
+                        <ComboBoxItem>Monday</ComboBoxItem>
+                        <ComboBoxItem>Tuesday</ComboBoxItem>
+                        <ComboBoxItem>Wednesday</ComboBoxItem>
+                        <ComboBoxItem>Thursday</ComboBoxItem>
+                        <ComboBoxItem>Friday</ComboBoxItem>
+                        <ComboBoxItem>Saturday</ComboBoxItem>
+                        <ComboBoxItem>Sunday</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock>Number of Days:</TextBlock>
+                    <ComboBox x:Name="DaysCountComboBox" SelectionChanged="DaysCountComboBox_SelectionChanged">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                    </ComboBox>
+                    <RadioButton x:Name="radioButton1"
+                                 GroupName="SpecialSlotProvider"
+                                 Checked="RadioButton_Checked" 
+                                 Background="Yellow"
+                                 FontSize="16"
+                                 Content="Custom Week Days"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <RadioButton x:Name="radioButton2" 
+                         GroupName="SpecialSlotProvider" 
+                         Checked="RadioButton_Checked"
+                         Background="Yellow"
+                         FontSize="16"
+                         Content="Work Days"/>
+            </Border>
+
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <RadioButton x:Name="radioButton3"
+                         GroupName="SpecialSlotProvider" 
+                         Checked="RadioButton_Checked"
+                         Background="Yellow"
+                         FontSize="16"
+                         Content="Weekend Days"/>
+            </Border>
+
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <StackPanel>
+                    <TextBlock>Number of the day in the month</TextBlock>
+                    <TextBox x:Name="DayOfTheMonthTextBox" Text="15"></TextBox>
+                    <RadioButton x:Name="radioButton4" 
+                                 GroupName="SpecialSlotProvider" 
+                                 Checked="RadioButton_Checked"
+                                 Background="Yellow"
+                                 FontSize="16"
+                                 Content="Month Day"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="Black"
+                    BorderThickness="1">
+                <RadioButton x:Name="radioButton5" 
+                         GroupName="SpecialSlotProvider" 
+                         Checked="RadioButton_Checked"
+                         Background="Yellow"
+                         FontSize="16"
+                         Content="None"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

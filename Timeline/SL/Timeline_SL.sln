@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection", "Selection\Sele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooltips", "Tooltips\Tooltips.csproj", "{5501F472-2E48-4654-BEE9-F2398F223F97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlots", "SpecialSlots\SpecialSlots.csproj", "{9E27D339-B5F4-4EA2-8DA5-9167D6781456}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{5501F472-2E48-4654-BEE9-F2398F223F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5501F472-2E48-4654-BEE9-F2398F223F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5501F472-2E48-4654-BEE9-F2398F223F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

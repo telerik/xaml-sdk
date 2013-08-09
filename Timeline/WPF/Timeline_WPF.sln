@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection", "Selection\Sele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grouping", "Grouping\Grouping.csproj", "{4E6897E5-98D0-4A25-AC4E-E87F7A53084C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlots", "SpecialSlots\SpecialSlots.csproj", "{9DB548F1-0DF0-4C62-A43C-C4C79B8CA34B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{4E6897E5-98D0-4A25-AC4E-E87F7A53084C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E6897E5-98D0-4A25-AC4E-E87F7A53084C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E6897E5-98D0-4A25-AC4E-E87F7A53084C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DB548F1-0DF0-4C62-A43C-C4C79B8CA34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB548F1-0DF0-4C62-A43C-C4C79B8CA34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB548F1-0DF0-4C62-A43C-C4C79B8CA34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB548F1-0DF0-4C62-A43C-C4C79B8CA34B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

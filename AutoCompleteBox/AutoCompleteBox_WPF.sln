@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithGridView_WPF", "WithGri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDataForm_WPF", "WithDataForm\WithDataForm_WPF.csproj", "{4A831362-CDC5-45EC-8CA7-2566B75D2F12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightMatchingItemsText_WPF", "HighlightMatchingItemsText_WPF\HighlightMatchingItemsText_WPF.csproj", "{AEFA23DE-1248-463B-92A9-0B5936A8369D}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A831362-CDC5-45EC-8CA7-2566B75D2F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFA23DE-1248-463B-92A9-0B5936A8369D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFA23DE-1248-463B-92A9-0B5936A8369D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFA23DE-1248-463B-92A9-0B5936A8369D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFA23DE-1248-463B-92A9-0B5936A8369D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

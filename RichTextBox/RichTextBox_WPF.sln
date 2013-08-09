@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInsertHyperlinkDialog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCodeFormattingLanguage_WPF", "CustomCodeFormattingLanguage\CustomCodeFormattingLanguage_WPF.csproj", "{6F2B9406-2E8F-4287-99F8-8B943A594520}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSpellCheckingDialog_WPF", "CustomSpellCheckingDialog\CustomSpellCheckingDialog_WPF.csproj", "{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +170,16 @@ Global
 		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6F2B9406-2E8F-4287-99F8-8B943A594520}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

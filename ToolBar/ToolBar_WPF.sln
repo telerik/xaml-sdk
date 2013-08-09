@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarMVVM", "ToolBarMVVM\ToolBarMVVM.csproj", "{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarCustomStyledElements_WPF", "ToolBarCustomStyledElements\ToolBarCustomStyledElements_WPF.csproj", "{E72916A9-9942-4CA5-8006-AD13DA110B9A}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72916A9-9942-4CA5-8006-AD13DA110B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72916A9-9942-4CA5-8006-AD13DA110B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72916A9-9942-4CA5-8006-AD13DA110B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72916A9-9942-4CA5-8006-AD13DA110B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

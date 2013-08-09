@@ -1,0 +1,3 @@
+This example demonstrates how to mark SplitContainers and PaneGroups as auto-generated. In that way the Docking control will clean them once they are not needed, i.e. when there is nothing inside them, which can be used later. Only the RadSplitContainers and RadPaneGroups can have this property set. All the children of a SplitContainer should be marked as auto-generated in order it to be cleaned up by the Docking control. 
+
+The example shows how to set this property in XAML and in code to the dynamically generated RadPanes. The saving of the layout in xml file demonstrates easier how the elements are removed if they are auto-generated.

@@ -1,17 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BringIntoView_SL", "BringIntoView\BringIntoView_SL.csproj", "{FF4C18C3-DEAF-4CA1-89C0-06D1064ECDC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterSearchSort_SL", "FilterSearchSort\FilterSearchSort_SL.csproj", "{96F65FD5-9442-40E6-B0DB-546CBA62F155}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextMenu_SL", "AddContextMenu\ContextMenu_SL.csproj", "{83A951DC-E1E1-4F63-B95C-421416257401}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenyDropVisualFeedback_SL", "DenyDropVisualFeedback\DenyDropVisualFeedback_SL.csproj", "{95EA4171-D973-4D79-A278-19B31BD26751}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnableOnlyDropInsideItem_SL", "EnableOnlyDropInsideItem\EnableOnlyDropInsideItem_SL.csproj", "{088A8466-ACCF-4780-8742-7F7DC2421BBC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropTreeViewToControls_SL", "DragDropTreeViewToControls\DragDropTreeViewToControls_SL.csproj", "{F64B81F1-5254-4F5D-BB4D-9B055C137A8C}"
 EndProject
 Global
 	 
@@ -28,22 +20,6 @@ Global
 		{96F65FD5-9442-40E6-B0DB-546CBA62F155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F65FD5-9442-40E6-B0DB-546CBA62F155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F65FD5-9442-40E6-B0DB-546CBA62F155}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83A951DC-E1E1-4F63-B95C-421416257401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83A951DC-E1E1-4F63-B95C-421416257401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83A951DC-E1E1-4F63-B95C-421416257401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83A951DC-E1E1-4F63-B95C-421416257401}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95EA4171-D973-4D79-A278-19B31BD26751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95EA4171-D973-4D79-A278-19B31BD26751}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95EA4171-D973-4D79-A278-19B31BD26751}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95EA4171-D973-4D79-A278-19B31BD26751}.Release|Any CPU.Build.0 = Release|Any CPU
-		{088A8466-ACCF-4780-8742-7F7DC2421BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{088A8466-ACCF-4780-8742-7F7DC2421BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{088A8466-ACCF-4780-8742-7F7DC2421BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{088A8466-ACCF-4780-8742-7F7DC2421BBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F64B81F1-5254-4F5D-BB4D-9B055C137A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F64B81F1-5254-4F5D-BB4D-9B055C137A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F64B81F1-5254-4F5D-BB4D-9B055C137A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F64B81F1-5254-4F5D-BB4D-9B055C137A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

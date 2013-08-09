@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInsertHyperlinkDialog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCodeFormattingLanguage_SL", "CustomCodeFormattingLanguage\CustomCodeFormattingLanguage_SL.csproj", "{485CE77B-9CD5-4468-8BF9-A5839DAC1740}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSpellCheckingDialog_SL", "CustomSpellCheckingDialog\CustomSpellCheckingDialog_SL.csproj", "{4BA142BB-2A66-4411-B75B-C4A77780B99F}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{485CE77B-9CD5-4468-8BF9-A5839DAC1740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485CE77B-9CD5-4468-8BF9-A5839DAC1740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485CE77B-9CD5-4468-8BF9-A5839DAC1740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA142BB-2A66-4411-B75B-C4A77780B99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA142BB-2A66-4411-B75B-C4A77780B99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA142BB-2A66-4411-B75B-C4A77780B99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA142BB-2A66-4411-B75B-C4A77780B99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

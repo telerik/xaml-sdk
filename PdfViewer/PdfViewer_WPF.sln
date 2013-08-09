@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLook_WPF", "FirstLook\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thumbnails_WPF", "Thumbnails\Thumbnails_WPF.csproj", "{C911F946-C840-4713-A048-D4ACBD85518A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextMenu_WPF", "ContextMenu\ContextMenu_WPF.csproj", "{BAD06C02-8688-4CE1-B53E-3E8EC50A7355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCommandDescriptor_WPF", "CustomCommandDescriptor\CustomCommandDescriptor_WPF.csproj", "{7734805C-5405-4464-A0B5-E996F36E3343}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,14 @@ Global
 		{C911F946-C840-4713-A048-D4ACBD85518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C911F946-C840-4713-A048-D4ACBD85518A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C911F946-C840-4713-A048-D4ACBD85518A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAD06C02-8688-4CE1-B53E-3E8EC50A7355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD06C02-8688-4CE1-B53E-3E8EC50A7355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD06C02-8688-4CE1-B53E-3E8EC50A7355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD06C02-8688-4CE1-B53E-3E8EC50A7355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7734805C-5405-4464-A0B5-E996F36E3343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7734805C-5405-4464-A0B5-E996F36E3343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7734805C-5405-4464-A0B5-E996F36E3343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7734805C-5405-4464-A0B5-E996F36E3343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

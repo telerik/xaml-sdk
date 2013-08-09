@@ -1,0 +1,1 @@
+This example illustrates how the default SpellCheckingDialog can be replaced by a custom one.

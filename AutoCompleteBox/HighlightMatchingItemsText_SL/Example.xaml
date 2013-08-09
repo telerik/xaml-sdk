@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="HighlightMatchingItemsText.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:HighlightMatchingItemsText"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="300">
+    <UserControl.DataContext>
+        <local:ViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Search for names of countries e.g. Australia, Bulgaria, Canada" 
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   Margin="20"/>
+        <telerik:RadAutoCompleteBox x:Name="AutoComplete" 
+                                    Grid.Row="1"
+                                    Margin="20"
+                                    ItemsSource="{Binding Countries}"
+                                    TextSearchPath="Name"
+                                    TextSearchMode="Contains"
+                                    AutoCompleteMode="Suggest">
+            <telerik:RadAutoCompleteBox.DropDownItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <local:TextBlockWithHighlight SearchText="{Binding ElementName=AutoComplete, Path=SearchText}"
+                                                      ItemText="{Binding Name}" />
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadAutoCompleteBox.DropDownItemTemplate>
+        </telerik:RadAutoCompleteBox>
+    </Grid>
+</UserControl>

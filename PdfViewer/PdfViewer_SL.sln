@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLook_SL", "FirstLook\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thumbnails_SL", "Thumbnails\Thumbnails_SL.csproj", "{233DBF6F-3034-46AA-B44D-FD07B76EA2C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextMenu_SL", "ContextMenu\ContextMenu_SL.csproj", "{9CABD467-8754-4B31-A3F2-DB5ED57CD0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCommandDescriptor_SL", "CustomCommandDescriptor\CustomCommandDescriptor_SL.csproj", "{C2D4E96B-531B-4DA1-8E34-88C4B2CB67FA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,14 @@ Global
 		{233DBF6F-3034-46AA-B44D-FD07B76EA2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{233DBF6F-3034-46AA-B44D-FD07B76EA2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{233DBF6F-3034-46AA-B44D-FD07B76EA2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CABD467-8754-4B31-A3F2-DB5ED57CD0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CABD467-8754-4B31-A3F2-DB5ED57CD0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CABD467-8754-4B31-A3F2-DB5ED57CD0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CABD467-8754-4B31-A3F2-DB5ED57CD0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D4E96B-531B-4DA1-8E34-88C4B2CB67FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D4E96B-531B-4DA1-8E34-88C4B2CB67FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D4E96B-531B-4DA1-8E34-88C4B2CB67FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D4E96B-531B-4DA1-8E34-88C4B2CB67FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

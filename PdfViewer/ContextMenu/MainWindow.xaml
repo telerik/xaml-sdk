@@ -1,0 +1,60 @@
+﻿<Window x:Class="ContextMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:fixed="clr-namespace:Telerik.Windows.Documents.Fixed;assembly=Telerik.Windows.Controls.FixedDocumentViewers"             
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+        Title="MainWindow" Height="350" Width="525">
+
+        <Window.Resources>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <converters:FixedDocumentViewerModeConverter x:Key="ModeConverter" />
+        </Window.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar DataContext="{Binding ElementName=viewer, Path=CommandDescriptors}">
+
+            <telerik:RadButton Command="{Binding OpenCommandDescriptor.Command}">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/open.png" Stretch="None" />
+            </telerik:RadButton>
+        </telerik:RadToolBar>
+
+        <telerik:RadPdfViewer Grid.Row="1" x:Name="viewer" DocumentSource="/ContextMenu;component/SampleData/Sample.pdf" DataContext="{Binding ElementName=viewer, Path=CommandDescriptors}" >
+            <telerik:RadContextMenu.ContextMenu>
+                <telerik:RadContextMenu x:Name="menu">
+                    <telerik:RadMenuItem Header="Copy" Command="{Binding CopyCommandDescriptor.Command}"
+                                        Visibility="{Binding CopyCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    <telerik:RadMenuItem Header="Select All" Command="{Binding SelectAllCommandDescriptor.Command}"
+                                        Visibility="{Binding SelectAllCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    <telerik:RadMenuItem IsSeparator="True" 
+                                        Visibility="{Binding TextSelectionCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                    <telerik:RadMenuItem IsCheckable="True" IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=Pan}" Header="Pan" />
+                    <telerik:RadMenuItem IsCheckable="True" IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=TextSelection}" Header="Text Selection" />
+
+                    <telerik:RadMenuItem IsSeparator="True"
+                                        Visibility="{Binding ViewSelectionCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Zoom In" Command="{Binding ZoomInCommandDescriptor.Command}"
+                                        Visibility="{Binding ZoomInCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Zoom Out" Command="{Binding ZoomOutCommandDescriptor.Command}"
+                                        Visibility="{Binding ZoomOutCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    <telerik:RadMenuItem IsSeparator="True" />
+
+                    <telerik:RadMenuItem Header="Print" Command="{Binding PrintCommandDescriptor.Command}"
+                                        Visibility="{Binding PrintCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                </telerik:RadContextMenu>
+            </telerik:RadContextMenu.ContextMenu>
+        </telerik:RadPdfViewer>
+    </Grid>
+</Window>

@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylingItemsAndGroups", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{D588BD5A-B83C-4A8C-8F31-9F39B065D3C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlots", "SpecialSlots\SpecialSlots.csproj", "{A836C18F-2E97-4864-A479-6D7DFF7BF6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineInsideTimeBar", "TimelineInsideTimeBar\TimelineInsideTimeBar.csproj", "{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,14 @@ Global
 		{D588BD5A-B83C-4A8C-8F31-9F39B065D3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D588BD5A-B83C-4A8C-8F31-9F39B065D3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D588BD5A-B83C-4A8C-8F31-9F39B065D3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A836C18F-2E97-4864-A479-6D7DFF7BF6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A836C18F-2E97-4864-A479-6D7DFF7BF6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A836C18F-2E97-4864-A479-6D7DFF7BF6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A836C18F-2E97-4864-A479-6D7DFF7BF6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
