@@ -25,7 +25,7 @@ namespace HighlightMatchingItemsText
                 new Country() { Name = "Italy", Capital = "Rome" },
                 new Country() { Name = "Norway", Capital = "Oslo" },
                 new Country() { Name = "Russia", Capital = "Moscow" },
-                new Country() { Name = "Spain ", Capital = "Madrid" },
+                new Country() { Name = "Spain", Capital = "Madrid" },
                 new Country() { Name = "United Kingdom", Capital = "London" },
                 new Country() { Name = "United States", Capital = "Washington, D.C." },
             };
