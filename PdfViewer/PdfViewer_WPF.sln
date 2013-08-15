@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextMenu_WPF", "ContextM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCommandDescriptor_WPF", "CustomCommandDescriptor\CustomCommandDescriptor_WPF.csproj", "{7734805C-5405-4464-A0B5-E996F36E3343}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragContentToRadRichTextBox_WPF", "DragContentToRadRichTextBox\DragContentToRadRichTextBox_WPF.csproj", "{62EE7831-38EC-4016-A0D7-43C7093AA253}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{7734805C-5405-4464-A0B5-E996F36E3343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7734805C-5405-4464-A0B5-E996F36E3343}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7734805C-5405-4464-A0B5-E996F36E3343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62EE7831-38EC-4016-A0D7-43C7093AA253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62EE7831-38EC-4016-A0D7-43C7093AA253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62EE7831-38EC-4016-A0D7-43C7093AA253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62EE7831-38EC-4016-A0D7-43C7093AA253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
