@@ -27,7 +27,8 @@
 		<TextBox Text="Lose the focus by clicking here" Grid.Column="0" Grid.Row="1"
 				 Margin="20"/>
 		<telerik:RadAutoCompleteBox ItemsSource="{Binding Countries, Source={StaticResource ViewModel}}"
-									DisplayMemberPath="Name" 
+									DisplayMemberPath="Name"  
+                                    AutoCompleteMode="Suggest"
 									TextSearchMode="StartsWith"
 									WatermarkContent="Enter Country Name"
 									Width="200" VerticalAlignment="Center"
