@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCodeFormattingLanguag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSpellCheckingDialog_WPF", "CustomSpellCheckingDialog\CustomSpellCheckingDialog_WPF.csproj", "{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageEditorDialog_WPF", "CustomImageEditorDialog\CustomImageEditorDialog_WPF.csproj", "{1E146EB9-906D-4D4A-A025-1CC042611DFC}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +182,16 @@ Global
 		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EFFB7F62-BD4F-4B2B-AD77-739D7341B351}.Release|x86.ActiveCfg = Release|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
