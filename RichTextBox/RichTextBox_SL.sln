@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSpellCheckingDialog_S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageEditorDialog_SL", "CustomImageEditorDialog\CustomImageEditorDialog_SL.csproj", "{B073F0DF-49F2-4260-8E91-F06A9910FEBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFloatingBlockPropertiesDialogDemo_SL", "CustomFloatingBlockPropertiesDialogDemo\CustomFloatingBlockPropertiesDialogDemo_SL.csproj", "{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,10 @@ Global
 		{B073F0DF-49F2-4260-8E91-F06A9910FEBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B073F0DF-49F2-4260-8E91-F06A9910FEBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B073F0DF-49F2-4260-8E91-F06A9910FEBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

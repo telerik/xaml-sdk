@@ -1,0 +1,45 @@
+﻿<local:RadRichTextBoxWindow x:Class="CustomFloatingBlockPropertiesDialogDemo.CustomFloatingBlockPropertiesDialogSL"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           xmlns:local="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+           xmlns:myFloatingBlockProperties="clr-namespace:CustomFloatingBlockPropertiesDialogDemo"
+           MinWidth="500" MinHeight="500"
+           x:Name="rootControl"
+           WindowStartupLocation="CenterOwner" 
+           ResizeMode="NoResize"
+           KeyDown="RadWindow_KeyDown"
+           Closed="RadWindow_Closed"
+           telerik:LocalizationManager.ResourceKey="Documents_FloatingBlockPropertiesDialog_Header">
+
+    <Grid>
+        <Grid x:Name="LayoutRoot" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <telerik:RadTabControl Grid.Row="0">
+                <telerik:RadTabItem x:Name="tabItemFloatingBlockPosition" Padding="10 3" IsSelected="False" telerik:LocalizationManager.ResourceKey="Documents_FloatingBlockPropertiesDialog_Position">
+                    <myFloatingBlockProperties:MyPositionProperties x:Name="positionProperties" />
+                </telerik:RadTabItem>
+                <telerik:RadTabItem x:Name="tabItemFloatingBlockTextWrapping" Padding="10 3" telerik:LocalizationManager.ResourceKey="Documents_FloatingBlockPropertiesDialog_TextWrapping" IsSelected="True">
+                    <myFloatingBlockProperties:MyTextWrappingProperties x:Name="textWrappingProperties" WrappingStyleChanged="textWrappingProperties_WrappingStyleChanged" />
+                </telerik:RadTabItem>
+            </telerik:RadTabControl>
+            <local:DialogFooter Grid.Row="1" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <telerik:RadButton Margin="6" Grid.Column="0" x:Name="DefaultButton" telerik:LocalizationManager.ResourceKey="ResetAll" Click="DefaultButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="75" />
+                    <telerik:RadButton Margin="6" Grid.Column="2" x:Name="OKButton" telerik:LocalizationManager.ResourceKey="Ok" Click="OKButton_Click" MinWidth="75" VerticalAlignment="Center" />
+                    <telerik:RadButton Margin="6" Grid.Column="3" x:Name="CancelButton" telerik:LocalizationManager.ResourceKey="Cancel" Click="CancelButton_Click" MinWidth="75" VerticalAlignment="Center" />
+                </Grid>
+            </local:DialogFooter>
+        </Grid>
+    </Grid>
+    </local:RadRichTextBoxWindow>

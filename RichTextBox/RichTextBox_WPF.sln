@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSpellCheckingDialog_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageEditorDialog_WPF", "CustomImageEditorDialog\CustomImageEditorDialog_WPF.csproj", "{1E146EB9-906D-4D4A-A025-1CC042611DFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFloatingBlockPropertiesDialogDemo_WPF", "CustomFloatingBlockPropertiesDialogDemo\CustomFloatingBlockPropertiesDialogDemo_WPF.csproj", "{18915990-20DD-4B63-A95E-8B7051ECC4DC}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -192,6 +194,16 @@ Global
 		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1E146EB9-906D-4D4A-A025-1CC042611DFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{18915990-20DD-4B63-A95E-8B7051ECC4DC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
