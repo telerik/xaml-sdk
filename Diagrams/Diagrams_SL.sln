@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramRibbonUI_SL", "Diagr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDesignToolBox_SL", "DiagramToolBox\DiagramDesignToolBox_SL.csproj", "{6D486576-7B9B-4DDF-881A-DD9876B670D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomToolboxDragDrop_SL", "CustomToolboxDragDrop\CustomToolboxDragDrop_SL.csproj", "{CA98B167-2D2E-435C-A48E-636CE302822E}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +182,16 @@ Global
 		{6D486576-7B9B-4DDF-881A-DD9876B670D3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6D486576-7B9B-4DDF-881A-DD9876B670D3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6D486576-7B9B-4DDF-881A-DD9876B670D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

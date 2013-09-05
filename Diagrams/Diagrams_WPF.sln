@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramRibbonUI_WPF", "Diag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDesignToolBox_WPF", "DiagramToolBox\DiagramDesignToolBox_WPF.csproj", "{35A5992B-1EF3-49F7-A7E1-CFCBB71204AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomToolboxDragDrop_WPF", "CustomToolboxDragDrop\CustomToolboxDragDrop_WPF.csproj", "{509FC0FC-4775-49A8-A16D-D6E031E42A9C}"
+EndProject
 Global
 	 
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -195,6 +197,16 @@ Global
 		{35A5992B-1EF3-49F7-A7E1-CFCBB71204AF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{35A5992B-1EF3-49F7-A7E1-CFCBB71204AF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{35A5992B-1EF3-49F7-A7E1-CFCBB71204AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{509FC0FC-4775-49A8-A16D-D6E031E42A9C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

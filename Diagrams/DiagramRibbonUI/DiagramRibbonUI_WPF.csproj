@@ -49,29 +49,24 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Diagrams">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
-    </Reference>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>    </Reference>
     <Reference Include="Telerik.Windows.Controls.RibbonView">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>
-    </Reference>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>    </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>    </Reference>
     <Reference Include="Telerik.Windows.Diagrams.Core">
-      <HintPath>..\..\Binaries\2013_Q1\RadControls_for_WPF_2013_1_0403_Trial_hotfix\Binaries\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>
-    </Reference>
+        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
