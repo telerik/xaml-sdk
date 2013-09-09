@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroTaskLevelInitiallyColla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummaryTaskConsistency_SL", "SummaryTaskConsistency\SummaryTaskConsistency_SL.csproj", "{0CF61795-1D50-4967-9D22-FEFB82084DDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragReorderBehavior_SL", "CustomDragReorderBehavior\CustomDragReorderBehavior_SL.csproj", "{33A48A6C-E2D2-41FB-A438-DA8F74F49261}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +106,10 @@ Global
 		{0CF61795-1D50-4967-9D22-FEFB82084DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF61795-1D50-4967-9D22-FEFB82084DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF61795-1D50-4967-9D22-FEFB82084DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
