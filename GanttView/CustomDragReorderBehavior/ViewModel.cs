@@ -88,7 +88,7 @@ namespace CustomDragReorderBehavior
             var milestone = new CustomGanttTask()
             {
                 Start = date.AddDays(7),
-                End = date.AddDays(9),
+                End = date.AddDays(7).AddHours(1),
                 Title = "Review",
                 Description = "Description: Review",
                 IsMilestone = true,

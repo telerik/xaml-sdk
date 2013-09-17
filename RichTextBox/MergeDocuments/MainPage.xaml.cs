@@ -67,14 +67,12 @@ namespace MergeDocuments
                 }
                 else
                 {
-                    radRichTextBox.Document.InsertSectionBreak(radRichTextBox.Document.CaretPosition,
-                                           radRichTextBox.Document.CaretPosition.GetCurrentInline().ExtractStyleFromLocalProperties(), SectionBreakType.NextPage);
+                    this.radRichTextBox.InsertSectionBreak(SectionBreakType.NextPage);
                 }
 
                 document.Selection.SelectAll();
-                DocumentFragment frag = document.Selection.CopySelectedDocumentElements();
-                document.Selection.Clear();
-                radRichTextBox.Document.InsertFragment(frag);
+                DocumentFragment frag = new DocumentFragment(document.Selection);
+                radRichTextBox.InsertFragment(frag);
 
                 CopySectionProperties(document, radRichTextBox.Document);
             }
