@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}</ProjectGuid>
+    <ProjectGuid>{491DCE48-23C2-4603-983E-B05310C9C7E2}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TasksWithDifferentColors</RootNamespace>
-    <AssemblyName>TasksWithDifferentColors_SL</AssemblyName>
+    <AssemblyName>TasksWithDifferentColors</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -19,10 +19,10 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>GanttCustomizations_SL.xap</XapFilename>
+    <XapFilename>TasksWithDifferentColors.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>TasksWithDifferentColors.App</SilverlightAppEntry>
-    <TestPageFileName>GanttCustomizations_SLTestPage.html</TestPageFileName>
+    <TestPageFileName>TasksWithDifferentColorsTestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
     <EnableOutOfBrowser>false</EnableOutOfBrowser>
@@ -67,7 +67,9 @@
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
-    <Reference Include="System.Core" />
+    <Reference Include="System.Core">
+      <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
@@ -96,10 +98,10 @@
     <Compile Include="ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App_SL.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="App_SL.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Example.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

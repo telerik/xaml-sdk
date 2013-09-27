@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeHeadersBackground_WPF", "ChangeHeadersBackground\ChangeHeadersBackground_WPF.csproj", "{5FD8A444-A8A8-4718-A098-E8490FE6DD16}"
 EndProject
 Global
+	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

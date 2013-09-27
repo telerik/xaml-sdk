@@ -1,0 +1,1 @@
+This example demonstrates how use GridViewComboBoxColumn with ItemsSourceBinding and FilterMemberPath properties in RadGridView for Silverlight and WPF.

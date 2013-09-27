@@ -11,7 +11,7 @@ namespace PrintingAndExporting
 		public static void Print(RadGanttView ganttView)
 		{
 			var isFirstPass = true;
-			var exportImages = Enumerable.Empty<BitmapSource>();
+            var exportImages = Enumerable.Empty<ImageInfo>();
 			var enumerator = exportImages.GetEnumerator();
 			var pd = new System.Windows.Printing.PrintDocument();
 			pd.PrintPage += (s, e) =>
@@ -21,14 +21,14 @@ namespace PrintingAndExporting
 					var printingSettings = new ImageExportSettings(e.PrintableArea, true, GanttArea.AllAreas);
 					using (var export = ganttView.ExportingService.BeginExporting(printingSettings))
 					{
-						exportImages = export.ImageInfos.ToList().Select(info => info.Export());
+						exportImages = export.ImageInfos;
 						enumerator = exportImages.GetEnumerator();
 						enumerator.MoveNext();
 					}
 					isFirstPass = false;
 				}
 
-				e.PageVisual = PrintPage(enumerator.Current);
+				e.PageVisual = PrintPage(enumerator.Current.Export());
 				enumerator.MoveNext();
 				e.HasMorePages = enumerator.Current != null;
 			};

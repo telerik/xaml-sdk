@@ -1,8 +1,9 @@
-﻿<Window x:Class="TasksWithDifferentColors.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:local="clr-namespace:TasksWithDifferentColors"
-		Title="MainWindow" Height="350" Width="525">
-	<Grid>
-		<local:Example />
-	</Grid>
+﻿<Window x:Class="TasksWithDifferentColors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TasksWithDifferentColors"
+        Title="MainWindow" Height="350" Width="590">
+    <Grid>
+        <local:Example/>
+    </Grid>
 </Window>

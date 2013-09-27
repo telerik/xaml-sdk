@@ -64,9 +64,15 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Telerik.Windows.Controls" />
-    <Reference Include="Telerik.Windows.Data" />
-    <Reference Include="Telerik.Windows.Controls.Navigation" />
+      <Reference Include="Telerik.Windows.Controls">
+          <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      </Reference>
+      <Reference Include="Telerik.Windows.Data">
+          <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="Telerik.Windows.Controls.Navigation">
+          <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

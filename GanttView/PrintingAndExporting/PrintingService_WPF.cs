@@ -17,13 +17,13 @@ namespace PrintingAndExporting
 			var printDialog = new PrintDialog();
 			if (printDialog.ShowDialog() == true)
 			{
-				var exportImages = Enumerable.Empty<BitmapSource>();
+                var exportImages = Enumerable.Empty<ImageInfo>();
 				var printingSettings = new ImageExportSettings(
 					new Size(printDialog.PrintableAreaWidth, printDialog.PrintableAreaHeight), 
 					true, GanttArea.AllAreas);
 				using (var export = ganttView.ExportingService.BeginExporting(printingSettings))
 				{
-					exportImages = export.ImageInfos.ToList().Select(info => info.Export());
+					exportImages = export.ImageInfos;
 				}
 
 				var paginator = new GanttPaginator(exportImages);

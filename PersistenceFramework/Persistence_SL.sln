@@ -8,6 +8,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipIntegration_SL", "ZipIntegration\ZipIntegration_SL.csproj", "{0FD75365-E109-498F-936D-10A26DCE4794}"
 EndProject
 Global
+	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

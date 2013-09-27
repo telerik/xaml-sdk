@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDoubleClick_SL", "Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridSorting_SL", "GridSorting\GridSorting_SL.csproj", "{D4BE9C01-36D3-41B7-8C08-09A1B3030F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksWithDifferentColors_SL", "TasksWithDifferentColors\TasksWithDifferentColors_SL.csproj", "{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksWithDifferentColors_SL", "TasksWithDifferentColors\TasksWithDifferentColors_SL.csproj", "{491DCE48-23C2-4603-983E-B05310C9C7E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGanttTaskWithStatus_SL", "CustomGanttTaskWithStatus\CustomGanttTaskWithStatus_SL.csproj", "{82D14585-468B-4E08-B9E3-79F587DB042B}"
 EndProject
@@ -58,10 +58,10 @@ Global
 		{D4BE9C01-36D3-41B7-8C08-09A1B3030F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BE9C01-36D3-41B7-8C08-09A1B3030F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BE9C01-36D3-41B7-8C08-09A1B3030F33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{235A6B71-F179-4DDC-8D5E-FCC78EA2F87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491DCE48-23C2-4603-983E-B05310C9C7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491DCE48-23C2-4603-983E-B05310C9C7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491DCE48-23C2-4603-983E-B05310C9C7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491DCE48-23C2-4603-983E-B05310C9C7E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82D14585-468B-4E08-B9E3-79F587DB042B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82D14585-468B-4E08-B9E3-79F587DB042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D14585-468B-4E08-B9E3-79F587DB042B}.Release|Any CPU.ActiveCfg = Release|Any CPU

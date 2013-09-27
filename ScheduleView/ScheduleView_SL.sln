@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlotsZIndex_SL", "Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayViewDefinition_SL", "TodayViewDefinition\TodayViewDefinition_SL.csproj", "{39F6DFB5-A278-427F-9B11-17B3AAFB0D30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidOverlappingAppointments_SL", "AvoidOverlappingAppointments\AvoidOverlappingAppointments_SL.csproj", "{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{39F6DFB5-A278-427F-9B11-17B3AAFB0D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F6DFB5-A278-427F-9B11-17B3AAFB0D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F6DFB5-A278-427F-9B11-17B3AAFB0D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

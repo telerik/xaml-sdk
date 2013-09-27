@@ -5,21 +5,22 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media.Imaging;
+using Telerik.Windows.Controls.GanttView;
 
 namespace PrintingAndExporting
 {
 	public class GanttPaginator : DocumentPaginator
 	{
-		private IList<BitmapSource> exportImages;
+        private IList<ImageInfo> exportImages;
 
-		public GanttPaginator(IEnumerable<BitmapSource> exportImages)
+        public GanttPaginator(IEnumerable<ImageInfo> exportImages)
 		{
 			this.exportImages = exportImages.ToList();
 		}
 
 		public override DocumentPage GetPage(int pageNumber)
 		{
-			var bitmap = this.exportImages[pageNumber];
+            var bitmap = this.exportImages[pageNumber].Export();
 			var imageSize = new Size(bitmap.Width, bitmap.Height);
 			var image = new Image { Source = bitmap };
 			image.Measure(imageSize);

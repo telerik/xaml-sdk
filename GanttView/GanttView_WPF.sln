@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDoubleClick_WPF", "Eve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridSorting_WPF", "GridSorting\GridSorting_WPF.csproj", "{9B325A15-1C3C-46A8-A999-5A7F02131F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksWithDifferentColors_WPF", "TasksWithDifferentColors\TasksWithDifferentColors_WPF.csproj", "{802B516D-8EA8-428F-9A00-D7EFBBEC833E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksWithDifferentColors_WPF", "TasksWithDifferentColors\TasksWithDifferentColors_WPF.csproj", "{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGanttTaskWithStatus_WPF", "CustomGanttTaskWithStatus\CustomGanttTaskWithStatus_WPF.csproj", "{E8A37383-A17E-43A3-A8AE-7CC172183B79}"
 EndProject
@@ -86,16 +86,16 @@ Global
 		{9B325A15-1C3C-46A8-A999-5A7F02131F5A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9B325A15-1C3C-46A8-A999-5A7F02131F5A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9B325A15-1C3C-46A8-A999-5A7F02131F5A}.Release|x86.ActiveCfg = Release|Any CPU
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Debug|x86.ActiveCfg = Debug|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Debug|x86.Build.0 = Debug|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Release|Any CPU.ActiveCfg = Release|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Release|Mixed Platforms.Build.0 = Release|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Release|x86.ActiveCfg = Release|x86
-		{802B516D-8EA8-428F-9A00-D7EFBBEC833E}.Release|x86.Build.0 = Release|x86
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{89AE15B7-DCB6-4D12-8CDF-4ABD2B363EAA}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8A37383-A17E-43A3-A8AE-7CC172183B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8A37383-A17E-43A3-A8AE-7CC172183B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A37383-A17E-43A3-A8AE-7CC172183B79}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

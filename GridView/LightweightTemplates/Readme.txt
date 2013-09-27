@@ -1,0 +1,1 @@
+This example demonstrates how to apply lightweight templates for RadGridView and RadTreeListView.
