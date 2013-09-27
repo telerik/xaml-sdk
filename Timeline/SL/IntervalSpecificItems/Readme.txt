@@ -1,0 +1,1 @@
+﻿This example demonstrates how you can present interval specific items by changing the ItemsSource on the ItemIntervalChanged event.

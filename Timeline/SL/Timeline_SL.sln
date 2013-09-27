@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsMargin", "AnnotationsMargin\AnnotationsMargin.csproj", "{518C2214-60D7-4B53-973D-783DB570E8D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsSource", "AnnotationsSource\AnnotationsSource.csproj", "{2AFE8A16-546B-455E-9D89-E9BAB3A45263}"
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooltips", "Tooltips\Tooltips.csproj", "{5501F472-2E48-4654-BEE9-F2398F223F97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlots", "SpecialSlots\SpecialSlots.csproj", "{9E27D339-B5F4-4EA2-8DA5-9167D6781456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntervalSpecificItems", "IntervalSpecificItems\IntervalSpecificItems.csproj", "{6144C3F7-CF65-42AC-ABAB-5DF2925878D5}"
 EndProject
 Global
 	 
@@ -74,6 +76,10 @@ Global
 		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E27D339-B5F4-4EA2-8DA5-9167D6781456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6144C3F7-CF65-42AC-ABAB-5DF2925878D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6144C3F7-CF65-42AC-ABAB-5DF2925878D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6144C3F7-CF65-42AC-ABAB-5DF2925878D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6144C3F7-CF65-42AC-ABAB-5DF2925878D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
