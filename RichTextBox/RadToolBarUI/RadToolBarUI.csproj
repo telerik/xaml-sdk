@@ -48,10 +48,16 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-	<Reference Include="Telerik.Windows.Controls">
+    <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
@@ -97,9 +103,9 @@
     <Reference Include="Telerik.Windows.Zip">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
-	<Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
-	  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
-	</Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

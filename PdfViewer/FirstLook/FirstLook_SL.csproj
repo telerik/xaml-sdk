@@ -81,6 +81,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI, Version=2013.3.731.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input, Version=2012.3.1017.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>

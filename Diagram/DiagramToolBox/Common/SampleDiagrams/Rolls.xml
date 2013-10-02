@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadDiagram Type="Telerik.Windows.Diagrams.Core.IGraphInternal" Version="2012.1">
+  <Metadata Id="04ca8e75-89fd-461d-af41-f993856d5cc1" Zoom="1" IsRotationEnabled="true" IsResizingEnabled="true" SelectionMode="Extended" IsSnapEnabled="false" SnapX="10" SnapY="10" IsGridVisible="true" IsEditable="true" IsDraggingEnabled="true" IsPanEnabled="true" IsZoomEnabled="true" IsConnectorsManipulationEnabled="true" AllowDelete="true" AllowCut="true" AllowCopy="true" AllowPaste="true">
+    <Title>
+      <![CDATA[Diagram [9/02/2012 9:13:35]]]>
+    </Title>
+    <Description>
+      <![CDATA[]]>
+    </Description>
+  </Metadata>
+  <Shapes QNs="Telerik.Windows.Controls.Diagrams, Version=2012.1.213.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7;">
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="8606a7ce-f9b0-47df-8e97-7fe22a471d85" ZIndex="3" Position="135;99" Stroke="#00FFFFFF" Size="185;80" RotationAngle="0" Content="PLAN  " Background="#FFBEBEBE" Foreground="#FFFFFFFF" BorderBrush="#FFBEBEBE" Thickness="0;0;0;0" FontSize="16" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L53.27,0.5 74.5,37.5 53.27,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="1c7c4146-359c-4583-a76d-ddd9d9809e9b" ZIndex="2" Position="260;99" Stroke="#00FFFFFF" Size="190;80" RotationAngle="0" Content="    CREATE" Background="#FF8BC03F" Foreground="#FFFFFFFF" BorderBrush="#FF8BC03F" Thickness="0;0;0;0" FontSize="16" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L53.27,0.5 74.5,37.5 53.27,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="f7c22482-f55d-49d0-a461-4f8fff399722" ZIndex="1" Position="390;99" Stroke="#00FFFFFF" Size="190;80" RotationAngle="0" Content="   TEST" Background="#FF878787" Foreground="#FFFFFFFF" BorderBrush="#FF878787" Thickness="0;0;0;0" FontSize="16" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L53.27,0.5 74.5,37.5 53.27,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="fb89da2b-1d99-42c1-83fb-d5ab2eea5cb9" ZIndex="1" Position="135;181" Stroke="#00FFFFFF" Size="129;105" RotationAngle="0" Content="LEARN&#xD;&#xA;RESEARCH&#xD;&#xA;STRATEGIZE" Background="#FFFFFFFF" Foreground="#FFA5A5A5" BorderBrush="#FFCCCCCC" Thickness="0;0;0;0" FontSize="12" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L111.5,0.5 111.5,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="5ee699bf-8fcb-4f38-bd2a-c7c8cb00f300" ZIndex="1" Position="266.5;181" Stroke="#00FFFFFF" Size="128;105" RotationAngle="0" Content="&#xD;&#xA;DESIGN&#xD;&#xA;BUILD&#xD;&#xA;DEVELOP&#xD;&#xA;" Background="#FFFFFFFF" Foreground="#FF8BC03F" BorderBrush="#FF8BC03F" Thickness="0;0;0;0" FontSize="12" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L111.5,0.5 111.5,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="fe0eb5be-446d-42a3-82f0-85548f2683a5" ZIndex="1" Position="397;181" Stroke="#00FFFFFF" Size="128;105" RotationAngle="0" Content="TEST&#xD;&#xA;REPAIR&#xD;&#xA;IMPROVE" Background="#FFFFFFFF" Foreground="#FF838383" BorderBrush="#FF838383" Thickness="0;0;0;0" FontSize="12" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L111.5,0.5 111.5,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="1ec337b4-9c0d-4bf4-8e1a-b098bef495bc" ZIndex="0" Position="522;99" Stroke="#00FFFFFF" Size="190;80" RotationAngle="0" Content="  CROW" Background="#FFF19720" Foreground="#FFFFFFFF" BorderBrush="#FFF19720" Thickness="0;0;0;0" FontSize="16" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L53.27,0.5 74.5,37.5 53.27,74.5 0.5,74.5z" QN="0" />
+    <RadDiagramShape Type="Telerik.Windows.Controls.RadDiagramShape" Id="501f1fe4-1d19-4a88-bab0-8fa667c0ac5e" ZIndex="1" Position="527.5;181" Stroke="#00FFFFFF" Size="130;105" RotationAngle="0" Content="EVALUATE&#xD;&#xA;MANAGE&#xD;&#xA;ENVISION" Background="#FFFFFFFF" Foreground="#FFF19720" BorderBrush="#FFF19720" Thickness="0;0;0;0" FontSize="12" FontWeight="400" FontFamily="Segoe UI" Geometry="M0.5,0.5L111.5,0.5 111.5,74.5 0.5,74.5z" QN="0" />
+  </Shapes>
+  <Connections />
+</RadDiagram>

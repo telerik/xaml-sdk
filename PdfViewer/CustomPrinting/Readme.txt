@@ -1,0 +1,1 @@
+The example demonstrates how to print silently with given printer.

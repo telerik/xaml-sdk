@@ -99,6 +99,13 @@
     <Reference Include="Telerik.Windows.Documents">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2013.2.724.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
     </Reference>

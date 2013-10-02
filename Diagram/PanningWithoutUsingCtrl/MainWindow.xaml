@@ -1,0 +1,18 @@
+﻿<Window x:Class="PanningWithoutUsingCtrl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+        Width="525"
+        Height="350">
+    <Grid>
+        <telerik:RadDiagram x:Name="diagram"
+                            ActiveTool="PanTool"
+                            KeyDown="RadDiagram_KeyDown"
+                            KeyUp="RadDiagram_KeyUp">
+            <telerik:RadDiagramShape Content="shape 1" Position="100, 100" />
+            <telerik:RadDiagramShape Content="shape 2" Position="100, 200" />
+            <telerik:RadDiagramShape Content="shape 3" Position="200, 100" />
+        </telerik:RadDiagram>
+    </Grid>
+</Window>

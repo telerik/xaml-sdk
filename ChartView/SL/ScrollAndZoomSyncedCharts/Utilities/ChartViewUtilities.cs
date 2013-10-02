@@ -7,6 +7,12 @@ namespace ScrollAndZoomSyncedCharts
 {
     public static class ChartViewUtilities
     {
+        // In older assemblies there are no HorizontalZoomRangeStart and HorizontalZoomRangeEnd properties. To sync the 
+        // two charts you can use this utilities class.
+        //<telerik:RadCartesianChart util:ChartViewUtilities.IsHorizontalRangeEnabled="True" 
+        //                           util:ChartViewUtilities.HorizontalStart="{Binding SelectionStart, Mode=TwoWay}"
+        //                           util:ChartViewUtilities.HorizontalEnd="{Binding SelectionEnd, Mode=TwoWay}" />
+
         public static readonly DependencyProperty IsHorizontalRangeEnabledProperty = DependencyProperty.RegisterAttached(
             "IsHorizontalRangeEnabled",
             typeof(bool),

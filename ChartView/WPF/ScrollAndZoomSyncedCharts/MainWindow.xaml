@@ -27,9 +27,8 @@
             <ColumnDefinition />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <telerik:RadCartesianChart util:ChartViewUtilities.IsHorizontalRangeEnabled="True" 
-                                   util:ChartViewUtilities.HorizontalStart="{Binding SelectionStart, Mode=TwoWay}"
-                                   util:ChartViewUtilities.HorizontalEnd="{Binding SelectionEnd, Mode=TwoWay}"
+        <telerik:RadCartesianChart HorizontalZoomRangeStart="{Binding SelectionStart, Mode=TwoWay}"
+                                   HorizontalZoomRangeEnd="{Binding SelectionEnd, Mode=TwoWay}"
                                    Margin="2"
                                    BorderBrush="LightGray" 
                                    BorderThickness="1">
@@ -46,9 +45,8 @@
                 <telerik:ChartPanAndZoomBehavior />
             </telerik:RadCartesianChart.Behaviors>
         </telerik:RadCartesianChart>
-        <telerik:RadCartesianChart util:ChartViewUtilities.IsHorizontalRangeEnabled="True" 
-                                   util:ChartViewUtilities.HorizontalStart="{Binding SelectionStart, Mode=TwoWay}"
-                                   util:ChartViewUtilities.HorizontalEnd="{Binding SelectionEnd, Mode=TwoWay}"
+        <telerik:RadCartesianChart HorizontalZoomRangeStart="{Binding SelectionStart, Mode=TwoWay}"
+                                   HorizontalZoomRangeEnd="{Binding SelectionEnd, Mode=TwoWay}"
                                    Margin="2"
                                    Grid.Row="1" 
                                    BorderBrush="LightGray" 

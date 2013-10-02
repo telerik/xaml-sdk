@@ -1,0 +1,18 @@
+﻿<Window x:Class="CustomFindDialog.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerik:RadToolBar DataContext="{Binding ElementName=viewer, Path=Commands}">
+            <telerik:RadButton Content="Open" Command="{Binding OpenPdfDocumentCommand}"> 
+            </telerik:RadButton>
+        </telerik:RadToolBar>
+
+        <telerik:RadPdfViewer Mode="TextSelection" Grid.Row="1" x:Name="viewer" DocumentSource="/CustomFindDialog;component/SampleData/Sample.pdf"/>
+    </Grid>
+</Window>

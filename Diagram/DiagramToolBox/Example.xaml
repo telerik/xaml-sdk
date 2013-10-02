@@ -1,0 +1,248 @@
+﻿<UserControl x:Class="DiagramDesignToolBox.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		    xmlns:extensions="clr-namespace:Telerik.Windows.Controls.Diagrams.Extensions;assembly=Telerik.Windows.Controls.Diagrams.Extensions"
+		    xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <telerik:ColorToBrushConverter x:Key="customColorToBrushConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--Diagram-->
+        <Border Grid.Row="1" Margin="0,5,0,0" Background="Transparent" BorderThickness="1"
+				BorderBrush="DarkGray">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="0 0 1 0" BorderBrush="DarkGray"
+						Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0 0 -1 0"/>
+                <telerik:RadDiagramRuler Grid.Row="0" Grid.Column="1" Placement="Top" Height="20"
+						BorderThickness="1 0 0 1" Diagram="{Binding ElementName=diagram}" />
+                <telerik:RadDiagramRuler Grid.Row="1" Grid.Column="0" Placement="Left" Width="20"
+						BorderThickness="0 1 1 0" Diagram="{Binding ElementName=diagram}" />
+                <telerik:RadDiagramToolbox Grid.RowSpan="2" Grid.Column="2" ItemsSource="{Binding Items}"
+						Title="Gallery" Margin="5 0 0 0"
+						Header="{Binding SelectedItem.Header, RelativeSource={RelativeSource Self}}"
+						Visibility="{Binding IsChecked, ElementName=toolboxButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <telerik:RadDiagram x:Name="diagram" Grid.Row="1" Grid.Column="1" MinWidth="500"
+						ConnectionStyle="{StaticResource ConnectionStyle}"
+						telerik:DiagramExtensionProperties.ShouldDetachConnections="True"
+						ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+						ScrollViewer.VerticalScrollBarVisibility="Hidden" Zoom="{Binding ZoomLevel}"
+						Background="{Binding SelectedColor, ElementName=BackgroundColorEditor, Converter={StaticResource customColorToBrushConverter}}"
+						primitives:BackgroundGrid.IsGridVisible="{Binding ElementName=ShowGridCheckBox, Path=IsChecked}"
+						primitives:BackgroundGrid.LineStroke="{Binding SelectedColor, ElementName=GridColorEditor, Converter={StaticResource customColorToBrushConverter}}"
+						primitives:BackgroundGrid.CellSize="{Binding CellSize}"
+						IsSnapToGridEnabled="{Binding IsSnapEnabled}" SnapX="{Binding SnapValue}"
+						SnapY="{Binding SnapValue}"
+						primitives:BackgroundPageGrid.IsGridVisible="{Binding ElementName=ShowPagesCheckBox, Path=IsChecked}"
+						primitives:BackgroundPageGrid.LineStroke="{Binding SelectedColor, ElementName=PagesColorEditor, Converter={StaticResource customColorToBrushConverter}}">
+                    <primitives:ItemInformationAdorner.AdditionalContent>
+                        <telerik:SettingsPane Diagram="{Binding ElementName=diagram}" />
+                    </primitives:ItemInformationAdorner.AdditionalContent>
+                </telerik:RadDiagram>
+                <telerik:RadDiagramNavigationPane Diagram="{Binding ElementName=diagram}" x:Name="navigationPane"
+						Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+            </Grid>
+        </Border>
+        <!--  Toolbar  -->
+        <Border Grid.ColumnSpan="4" BorderBrush="#d6d4d4" BorderThickness="1">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Clear"
+						CommandTarget="{Binding ElementName=diagram}" Content="new"
+						Geometry="M11,0 L18,7 L11,7 z M0,0 L10,0 L10,7 L10,8 L18,8 L18,21 L0,21 z"
+						ToolTipService.ToolTip="new" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Open" Content="open" Grid.Column="1"
+						Geometry="M10,0L17,0C17.5523,1.19209e-007 18,0.447715 18,1L18.5,3L21,3C21.5523,3 22,3.44772 22,4L22,18C22,18.5523 21.5523,19 21,19L1,19C0.447715,19 0,18.5523 0,18L0,4C0,3.44772 0.447715,3 1,3L8.5,3L9,1C9,0.447715 9.44771,1.19209e-007 10,0z"
+						ToolTipService.ToolTip="open" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Save" Content="save" Grid.Column="2"
+						Geometry="F1 M0,0 L22,0 L22,22 L16,22 L16,15 L6,15 L6,22 L0,22 L0,0 z M8,22 L8,19 L12,19 L12,22 L8,22 z M5,2 L5,8 L18,8 L18,2 L5,2 z"
+						ToolTipService.ToolTip="save" />
+                <telerik:RadGeometryDropDownButton Content="export" ToolTipService.ToolTip="export" Grid.Column="3"
+						DropDownHeight="110" DropDownWidth="144"
+						Geometry="M11,0L18,7L11,7zM0,0L10,0L10,7L10,8L18,8L18,12L8.88893,12L8.88893,9L3.82715,14L8.88893,19L8.88893,16L18,16L18,21L0,21z">
+                    <telerik:RadGeometryDropDownButton.DropDownContent>
+                        <StackPanel Margin="10">
+                            <telerik:RadGeometryButton Content="Export To Png" Command="telerik:DiagramCommands.Export"
+									CommandParameter="Png" CommandTarget="{Binding ElementName=diagram}"
+									Style="{StaticResource GeometryButtonMenuItemStyle}"
+									Geometry="M6.7093377,5.0820007 C10.505837,5.0813236 12.205385,8.5835428 13.709369,8.4989958 C15.616847,8.3917685 16.999527,6.8087606 16.999527,6.8087606 L17.000025,13.080002 L3.0000243,13.080002 L3.0000243,7.9753876 C3.0000243,7.9753876 4.842936,5.0823336 6.7093377,5.0820007 z M1.9999999,2.0000048 L1.9999999,13.999995 L18,13.999995 L18,2.0000048 z M1.1920929E-06,0 L20,0 L20,16 L0,16 z" />
+                            <telerik:RadGeometryButton Content="Export To Bmp"
+									CommandTarget="{Binding ElementName=diagram}"
+									Command="telerik:DiagramCommands.Export" CommandParameter="Bmp"
+									Style="{StaticResource GeometryButtonMenuItemStyle}"
+									Geometry="M6.7093377,5.0820007 C10.505837,5.0813236 12.205385,8.5835428 13.709369,8.4989958 C15.616847,8.3917685 16.999527,6.8087606 16.999527,6.8087606 L17.000025,13.080002 L3.0000243,13.080002 L3.0000243,7.9753876 C3.0000243,7.9753876 4.842936,5.0823336 6.7093377,5.0820007 z M1.9999999,2.0000048 L1.9999999,13.999995 L18,13.999995 L18,2.0000048 z M1.1920929E-06,0 L20,0 L20,16 L0,16 z" />
+                            <telerik:RadGeometryButton Content="Export To HTML" Click="ExportToHtml"
+									Style="{StaticResource GeometryButtonMenuItemStyle}"
+									Geometry="M12.5,4 L14.500284,4 L17,8 L14.500284,12 L12.5,12 L15,8 z M10,4 L12,4 L10.00029,12 L8,12 z M5.5,4 L7.5,4 L5,8 L7.5,12 L5.5,12 L3,8 z M2,2 L2,14 L18,14 L18,2 z M1.1920929E-06,0 L20,0 L20,16 L0,16 z" />
+                        </StackPanel>
+                    </telerik:RadGeometryDropDownButton.DropDownContent>
+                </telerik:RadGeometryDropDownButton>
+                <telerik:RadGeometryButton Content="print" ToolTipService.ToolTip="print" Grid.Column="4"
+						Command="telerik:DiagramExtensionCommands.Print" CommandTarget="{Binding ElementName=diagram}"
+						Geometry="M4,20 L18,20 L18,22 L4,22 z M0,11 L3,11 L3,13 L19,13 L19,11 L22,11 L22,19 L0,19 z M13,0 L18,5.0427322 L13,5 z M4,0 L12,0 L12,6 L18,6 L18,12 L4,12 z" />
+                <Border Width="1" Grid.Column="4" HorizontalAlignment="Right" Margin="0 -5"
+						Background="{telerik:Windows8Resource ResourceKey=BasicBrush}" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Undo" Grid.Column="5"
+						CommandTarget="{Binding ElementName=diagram}" Content="undo"
+						Geometry="M4.2667065,0 L8.4021349,0 L5.2587953,4.1229997 L13.039669,4.1229997 C16.905663,4.1229997 20.039669,7.2570057 20.039669,11.122999 C20.039669,14.988993 16.905663,18.122999 13.039669,18.122999 L11.825022,18.122999 L11.825022,14.123001 L13.039669,14.123001 C14.696525,14.123001 16.039671,12.779856 16.039671,11.123001 C16.039671,9.4661465 14.696525,8.1230011 13.039669,8.1230011 L5.2947307,8.1230011 L8.4021349,12.248009 L4.2667065,12.248009 L0,5.9990273 z"
+						ToolTipService.ToolTip="undo" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Redo" Grid.Column="6"
+						CommandTarget="{Binding ElementName=diagram}" Content="redo"
+						Geometry="M12,0 L16,0 L20,6 L16,12 L12,12 L14.666667,8 L7,8 C5.3431458,8 4,9.3431454 4,11 C4,12.656855 5.3431458,14 7,14 L8,14 L8,18 L7,18 C3.1340067,18 0,14.865993 0,11 C0,7.134007 3.1340067,4 7,4 L14.666667,4 z"
+						ToolTipService.ToolTip="redo" />
+                <Border Width="1" Grid.Column="6" HorizontalAlignment="Right" Margin="0 -5"
+						Background="{telerik:Windows8Resource ResourceKey=BasicBrush}" />
+                <telerik:RadGeometryButton x:Name="copy" Command="telerik:DiagramCommands.Copy" Grid.Column="7"
+						CommandTarget="{Binding ElementName=diagram}" Content="copy"
+						Geometry="M4.0000019,4.000001 L9.000001,4.000001 L9.000001,9.999999 L10,9.999999 L10,4.000001 L10.093751,4.000001 L16.15,10 L16,10 L14,10 L9,10 L9,11 L14,11 L16,11 L16.15,11 L16.15,20 L4.0374999,20 L4.0374999,17 L4.0000019,17 z M0,0 L6.0562496,0 L8.2640638,3.000001 L3.0000017,3.000001 L3.0000017,4.000001 L3.000001,17 L0,17 z"
+						ToolTipService.ToolTip="copy" />
+                <telerik:RadGeometryButton x:Name="cut" Command="telerik:DiagramCommands.Cut" Grid.Column="8"
+						CommandTarget="{Binding ElementName=diagram}" Content="cut"
+						Geometry="M12.5,14.9284C11.6716,14.9284 11,15.5999 11,16.4284C11,17.2568 11.6716,17.9284 12.5,17.9284C13.3284,17.9284 14,17.2568 14,16.4284C14,15.5999 13.3284,14.9284 12.5,14.9284zM3.5,14.9284C2.67157,14.9284 2,15.5999 2,16.4284C2,17.2568 2.67157,17.9284 3.5,17.9284C4.32843,17.9284 5,17.2568 5,16.4284C5,15.5999 4.32843,14.9284 3.5,14.9284zM11.69,0L13.4221,0.99998L9.11202,8.46498L11.7376,13.0126L11.7946,12.9995C12.0225,12.9528 12.2584,12.9284 12.5,12.9284C14.433,12.9284 16,14.4954 16,16.4284C16,18.3613 14.433,19.9284 12.5,19.9284C10.567,19.9284 9,18.3613 9,16.4284C9,15.5223 9.34431,14.6966 9.90924,14.075L9.99161,13.9886L7.95725,10.465L5.95438,13.9339L5.97487,13.9535C6.60825,14.5869 7,15.4619 7,16.4284C7,18.3613 5.433,19.9284 3.5,19.9284C1.567,19.9284 -5.1724e-008,18.3613 0,16.4284C-5.1724e-008,14.4954 1.567,12.9284 3.5,12.9284C3.68122,12.9284 3.85922,12.9421 4.03302,12.9687L4.18644,12.9961L6.80255,8.46502L2.49271,1.00017L4.22483,0.000128746L7.95732,6.46498z"
+						ToolTipService.ToolTip="cut" />
+                <telerik:RadGeometryButton x:Name="paste" Command="telerik:DiagramCommands.Paste" Grid.Column="9"
+						CommandTarget="{Binding ElementName=diagram}" Content="paste"
+						Geometry="M11,7L15.7778,12L11,12zM5,7L10,7L10,13L16,13L16,21L5,21zM0,3C1.49012e-007,3 14,3 14,3L14,8.37596L11.6667,6L4,6L4,19L6.25849e-007,19zM5,0L9,0C9.55229,0 10,0.447715 10,1L10,2L4,2L4,1C4,0.447715 4.44772,0 5,0z"
+						ToolTipService.ToolTip="paste" />
+                <telerik:RadGeometryButton x:Name="delete" Command="telerik:DiagramCommands.Delete" Grid.Column="10"
+						CommandTarget="{Binding ElementName=diagram}" Content="delete"
+						Geometry="M13,8.98689C12.4477,8.98689 12,9.43461 12,9.9869L12,17.987C12,18.5393 12.4477,18.987 13,18.987C13.5523,18.987 14,18.5393 14,17.987L14,9.9869C14,9.43461 13.5523,8.98689 13,8.98689zM9,8.98689C8.44772,8.98689 8,9.43461 8,9.9869L8,17.987C8,18.5393 8.44772,18.987 9,18.987C9.55228,18.987 10,18.5393 10,17.987L10,9.9869C10,9.43461 9.55228,8.98689 9,8.98689zM5,8.98689C4.44772,8.98689 4,9.43461 4,9.9869L4,17.987C4,18.5393 4.44772,18.987 5,18.987C5.55228,18.987 6,18.5393 6,17.987L6,9.9869C6,9.43461 5.55228,8.98689 5,8.98689zM2,6.02091L16,6.02091L16,6.85235L16,18.987L16,19.938L16,19.987C16,20.5393 15.5523,20.987 15,20.987L3,20.987C2.44772,20.987 2,20.5393 2,19.987L2,19.938L2,18.987L2,6.85235zM0,2.826L18,2.826L18,4.83918L0,4.83918zM6,0L12,0L12,2L6,2z"
+						ToolTipService.ToolTip="delete" />
+                <Border Width="1" Grid.Column="10" HorizontalAlignment="Right" Margin="0 -5"
+						Background="{telerik:Windows8Resource ResourceKey=BasicBrush}" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Group" Grid.Column="11"
+						CommandTarget="{Binding ElementName=diagram}" Content="group"
+						Geometry="M0,0 L14,0 L14,5.999999 L20,5.999999 L20,6.4999275 L20,19.5 L20,20 L6.000001,20 L6.000001,14.000002 L0,14.000002 L0,13.50003 L0,0.50000012 z"
+						ToolTipService.ToolTip="Group" />
+                <telerik:RadGeometryButton Command="telerik:DiagramCommands.Ungroup" Grid.Column="12"
+						CommandTarget="{Binding ElementName=diagram}" Content="ungroup"
+						Geometry="M20,5.999999 L20,20 L6.000001,20 L6,6 z M0,0 L14,0 L14,5 L5,5 L5,14.000002 L0,14.000002 z"
+						ToolTipService.ToolTip="Ungroup" />
+                <Border Width="1" Grid.Column="12" HorizontalAlignment="Right" Margin="0 -5"
+						Background="{telerik:Windows8Resource ResourceKey=BasicBrush}" />
+                <Border Grid.Column="13">
+                    <telerik:RadGeometryDropDownButton Content="page setup" CloseOnClick="False"
+							Geometry="M5.43706,12.9221C5.06338,12.9302 4.68594,13.02 4.33144,13.2C3.07102,13.85 2.57086,15.4 3.22107,16.66C3.86129,17.93 5.4118,18.43 6.67222,17.78C7.94265,17.13 8.43281,15.58 7.78259,14.32C7.32244,13.4144 6.39202,12.9014 5.43706,12.9221zM4.85162,10L5.47182,11.36C5.82194,11.36 6.17206,11.41 6.50217,11.5L7.48249,10.28L9.04301,11.25L8.47282,12.65C8.67289,12.87 8.85295,13.11 9.013,13.38L10.5735,13.21L11.0037,15L9.6132,15.58C9.6032,15.89 9.56319,16.2 9.49316,16.49L10.7036,17.47L9.74325,19.04L8.37279,18.47C8.15272,18.69 7.89263,18.88 7.62254,19.05L7.78259,20.57L5.992,21L5.43181,19.66C5.1017,19.66 4.78159,19.61 4.46149,19.53L3.52117,20.7L1.96065,19.73L2.50083,18.41C2.27076,18.18 2.07069,17.91 1.90063,17.61L0.430143,17.77L0,15.98L1.32044,15.43C1.33044,15.1 1.38046,14.77 1.46049,14.45L0.3001,13.51L1.27042,11.94L2.62087,12.5C2.82094,12.31 3.04101,12.14 3.2911,11.98L3.08103,10.48zM12,0L17.5,5.5L12,5.5zM2.00067,0L11,0L11,5.5L11,6.5L12,6.5L18,6.5L18,20L12.004,20L12.004,18L12,18L12,9L4.00059,9L4,9L2.00067,9z">
+                        <telerik:RadDropDownButton.DropDownContent>
+                            <StackPanel>
+                                <TextBlock Text="BACKGROUND COLOR" Margin="10 12 10 7" Foreground="#25a0da" />
+                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                    <TextBlock Text="Color" Width="90" Margin="20 0" VerticalAlignment="Center" />
+                                    <telerik:RadDropDownButton Width="80" DropDownWidth="210"
+											HorizontalContentAlignment="Right" FlowDirection="RightToLeft"
+											DropDownButtonPosition="Left">
+                                        <Border Width="12" Height="12" Margin="2 3"
+												Background="{Binding SelectedColor, ElementName=BackgroundColorEditor, Converter={StaticResource customColorToBrushConverter}}"
+												BorderBrush="#d6d4d4" BorderThickness="1" />
+                                        <telerik:RadDropDownButton.DropDownContent>
+                                            <telerik:RadColorEditor x:Name="BackgroundColorEditor"
+													FlowDirection="LeftToRight"
+													ActiveSections="SaturationValuePad, HuePad" HistoryCapacity="8" />
+                                        </telerik:RadDropDownButton.DropDownContent>
+                                    </telerik:RadDropDownButton>
+                                </StackPanel>
+
+                                <TextBlock Text="GRID" Margin="10 12 10 7" Foreground="#25a0da" />
+                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                    <CheckBox x:Name="ShowGridCheckBox" Content="Show Grid" Width="110"
+											Margin="0 0 20 0"
+											Foreground="{telerik:Windows8Resource ResourceKey=StrongBrush}"
+											VerticalAlignment="Center" />
+                                    <telerik:RadDropDownButton Width="80" DropDownWidth="210"
+											HorizontalContentAlignment="Right" FlowDirection="RightToLeft"
+											DropDownButtonPosition="Left">
+                                        <Border Width="12" Height="12" Margin="2 3"
+												Background="{Binding SelectedColor, ElementName=GridColorEditor, Converter={StaticResource customColorToBrushConverter}}"
+												BorderBrush="#d6d4d4" BorderThickness="1" />
+                                        <telerik:RadDropDownButton.DropDownContent>
+                                            <telerik:RadColorEditor x:Name="GridColorEditor" FlowDirection="LeftToRight"
+													ActiveSections="SaturationValuePad, HuePad" HistoryCapacity="8"
+													SelectedColor="#FFEEEEEE" />
+                                        </telerik:RadDropDownButton.DropDownContent>
+                                    </telerik:RadDropDownButton>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="10 12 10 0">
+                                    <TextBlock Text="Cell Size" Width="90" Margin="20 0" VerticalAlignment="Center" />
+                                    <TextBox Width="80" Text="{Binding CellSize, Mode=TwoWay}" />
+                                </StackPanel>
+                                <CheckBox Content="Snap to Grid" Margin="10 7 10 0"
+										Foreground="{telerik:Windows8Resource ResourceKey=StrongBrush}"
+										IsChecked="{Binding IsSnapEnabled, Mode=TwoWay}" />
+
+                                <StackPanel Orientation="Horizontal" Margin="10 7 10 0">
+                                    <TextBlock Text="Snap Value" Width="90" Margin="20 0" VerticalAlignment="Center" />
+                                    <TextBox Width="80" Text="{Binding SnapValue, Mode=TwoWay}" />
+                                </StackPanel>
+
+                                <TextBlock Text="PAGES" Margin="10 12 10 7" Foreground="#25a0da" />
+                                <StackPanel Orientation="Horizontal" Margin="10 0 10 12">
+                                    <CheckBox x:Name="ShowPagesCheckBox" Content="Show Breaks"
+											Foreground="{telerik:Windows8Resource ResourceKey=StrongBrush}" Width="110"
+											Margin="0 0 20 0" VerticalAlignment="Center" />
+                                    <telerik:RadDropDownButton Width="80" DropDownWidth="210"
+											HorizontalContentAlignment="Right" FlowDirection="RightToLeft"
+											DropDownButtonPosition="Left">
+                                        <Border Width="12" Height="12" Margin="2 3"
+												Background="{Binding SelectedColor, ElementName=PagesColorEditor, Converter={StaticResource customColorToBrushConverter}}"
+												BorderBrush="#d6d4d4" BorderThickness="1" />
+                                        <telerik:RadDropDownButton.DropDownContent>
+                                            <telerik:RadColorEditor x:Name="PagesColorEditor"
+													FlowDirection="LeftToRight"
+													ActiveSections="SaturationValuePad, HuePad" HistoryCapacity="8"
+													SelectedColor="#FFEEEEEE" />
+                                        </telerik:RadDropDownButton.DropDownContent>
+                                    </telerik:RadDropDownButton>
+                                </StackPanel>
+                            </StackPanel>
+                        </telerik:RadDropDownButton.DropDownContent>
+                    </telerik:RadGeometryDropDownButton>
+                </Border>
+
+                <Border Width="1" Grid.Column="13" HorizontalAlignment="Right" Margin="0 -5"
+						Background="{telerik:Windows8Resource ResourceKey=BasicBrush}" />
+                <telerik:RadGeometryToggleButton x:Name="toolboxButton" Content="toolbox" Grid.Column="14"
+						IsChecked="True" BorderBrush="#FFD6D4D4"
+						Geometry="M12,14L16,14L16,19L12,19zM7,14L11,14L11,19L7,19zM2,14L6,14L6,19L2,19zM12,8L16,8L16,13L12,13zM7,8L11,8L11,13L7,13zM2,8L6,8L6,13L2,13zM12,2L16,2L16,7L12,7zM7,2L11,2L11,7L7,7zM2,2L6,2L6,7L2,7zM1,1L1,20L17,20L17,1zM0,0L18,0L18,21L0,21z" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

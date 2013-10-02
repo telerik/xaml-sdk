@@ -26,10 +26,6 @@ namespace Windows_Explorer_Like_TreeView_WPF
 			if (drive != null)
 			{
 				ServiceFacade.Instance.LoadChildren(drive);
-				if (drive.Children.Count == 0)
-				{
-					expandedItem.IsLoadOnDemandEnabled = false;
-				}
 				return;
 			}
 
@@ -37,10 +33,6 @@ namespace Windows_Explorer_Like_TreeView_WPF
 			if (directory != null)
 			{
 				ServiceFacade.Instance.LoadChildren(directory);
-				if (directory.Children.Count == 0)
-				{
-					expandedItem.IsLoadOnDemandEnabled = false;
-				}
 			}
 		}
 

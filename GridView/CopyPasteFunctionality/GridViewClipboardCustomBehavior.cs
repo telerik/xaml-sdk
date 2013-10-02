@@ -74,7 +74,16 @@ namespace CopyPasteFunctionality
 			if (!this.dataContext.ShouldCopySelectColumn && this.grid.ClipboardCopyMode.HasFlag(GridViewClipboardCopyMode.Header))
 			{
 				string originalText = Clipboard.GetData(DataFormats.UnicodeText).ToString();
-				var updatedText = originalText.Remove(0, 1);
+				string updatedText = string.Empty;
+				if (this.grid.SelectionMode == System.Windows.Controls.SelectionMode.Single)
+				{
+					updatedText = originalText.Remove(0, 1);
+				}
+				else
+				{
+					var originalColumnHeader = originalText.Split('\t').FirstOrDefault(t => t.Contains("CheckBox"));
+					updatedText = originalText.Remove(0, originalColumnHeader.Length + 1);
+				}
 				Clipboard.SetData(DataFormats.UnicodeText, updatedText);
 			}
 

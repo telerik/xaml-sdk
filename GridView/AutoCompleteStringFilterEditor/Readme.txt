@@ -1,0 +1,1 @@
+This example demonstrates how you can extend a string column, so that its field filter editors have the auto-complete functionality

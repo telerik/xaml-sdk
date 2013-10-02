@@ -66,6 +66,9 @@
     <Reference Include="Telerik.Windows.Documents.Fixed">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Zip">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
     </Reference>

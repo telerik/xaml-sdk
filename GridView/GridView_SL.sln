@@ -46,6 +46,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CascadingComboboxColumns_SL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboboxColumnItemsSourceBinding_SL", "ComboboxColumnItemsSourceBinding\ComboboxColumnItemsSourceBinding_SL.csproj", "{B22DA82E-2B0B-4F36-A95F-E83F37730D90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCompleteStringFilterEditor_SL", "AutoCompleteStringFilterEditor\AutoCompleteStringFilterEditor_SL.csproj", "{A77D3670-74FE-4230-B658-070D15861AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlPanel_SL", "ControlPanel\ControlPanel_SL.csproj", "{DA73E1EE-D68A-4DDD-8C65-CE099F618109}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +137,14 @@ Global
 		{B22DA82E-2B0B-4F36-A95F-E83F37730D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B22DA82E-2B0B-4F36-A95F-E83F37730D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B22DA82E-2B0B-4F36-A95F-E83F37730D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77D3670-74FE-4230-B658-070D15861AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77D3670-74FE-4230-B658-070D15861AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77D3670-74FE-4230-B658-070D15861AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77D3670-74FE-4230-B658-070D15861AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

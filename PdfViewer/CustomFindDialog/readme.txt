@@ -1,0 +1,1 @@
+This example demonstrates how to create a custom find dialog for RadPdfViewer.
