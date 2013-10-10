@@ -80,6 +80,9 @@
     <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>

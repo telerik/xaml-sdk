@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayViewDefinition_SL", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidOverlappingAppointments_SL", "AvoidOverlappingAppointments\AvoidOverlappingAppointments_SL.csproj", "{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingAndFilteringWithTreeView_SL", "GroupingAndFilteringWithTreeView\GroupingAndFilteringWithTreeView_SL.csproj", "{007F448C-2148-4D17-A083-6EB19E0F865B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDF6C343-D472-4DB2-AA98-0A778DA27DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007F448C-2148-4D17-A083-6EB19E0F865B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007F448C-2148-4D17-A083-6EB19E0F865B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007F448C-2148-4D17-A083-6EB19E0F865B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007F448C-2148-4D17-A083-6EB19E0F865B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

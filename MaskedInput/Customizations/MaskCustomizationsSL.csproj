@@ -72,11 +72,11 @@
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls, Version=2012.3.1017.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Silverlight Q3 2012\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input, Version=2012.3.1017.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Silverlight Q3 2012\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

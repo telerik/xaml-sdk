@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525"
         xmlns:local="clr-namespace:FirstLook" >
-    
     <Grid>
         <local:MainPage />
     </Grid>

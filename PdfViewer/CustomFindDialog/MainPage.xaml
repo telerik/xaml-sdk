@@ -5,14 +5,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400"
+    xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <telerik:RadToolBar DataContext="{Binding ElementName=viewer, Path=Commands}">
-            <telerik:RadButton Content="Open" Command="{Binding OpenPdfDocumentCommand}">
+        <telerik:RadToolBar DataContext="{Binding ElementName=viewer, Path=CommandDescriptors}">
+            <telerik:RadToolBar.Resources>
+                <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            </telerik:RadToolBar.Resources>
+            
+            <telerik:RadButton Command="{Binding OpenCommandDescriptor.Command}" Visibility="{Binding OpenCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/open.png" Stretch="None" />
             </telerik:RadButton>
         </telerik:RadToolBar>
 

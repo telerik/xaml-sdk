@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Telerik.Windows.Documents.Fixed.UI.Dialogs;
 using Telerik.Windows.Documents.Fixed.UI.Extensibility;
 
 namespace CustomFindDialog
@@ -22,7 +23,9 @@ namespace CustomFindDialog
     {
         public MainWindow()
         {
-            ExtensibilityManager.RegisterFindDialog(new FindDialog());
+            FindDialog findDialog = new FindDialog();
+            findDialog.Owner = this;
+            ExtensibilityManager.RegisterFindDialog(findDialog);
             InitializeComponent();
         }
     }

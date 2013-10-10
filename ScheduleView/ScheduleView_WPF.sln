@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayViewDefinition_WPF", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidOverlappingAppointments_WPF", "AvoidOverlappingAppointments\AvoidOverlappingAppointments_WPF.csproj", "{B3289FCD-9CC7-474D-8B32-59C9083515FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingAndFilteringWithTreeView_WPF", "GroupingAndFilteringWithTreeView\GroupingAndFilteringWithTreeView_WPF.csproj", "{E0CF7674-47FF-4A12-90B4-827B80DC3E15}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,6 +122,16 @@ Global
 		{B3289FCD-9CC7-474D-8B32-59C9083515FD}.Release|Mixed Platforms.Build.0 = Release|x86
 		{B3289FCD-9CC7-474D-8B32-59C9083515FD}.Release|x86.ActiveCfg = Release|x86
 		{B3289FCD-9CC7-474D-8B32-59C9083515FD}.Release|x86.Build.0 = Release|x86
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLook_SL", "FirstLook\FirstLook_SL.csproj", "{0EE38E29-756F-42A0-8529-A0B1C31797EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localization\Localization_SL.csproj", "{1542543E-D0BB-4DB8-9582-D06F6DF6496D}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +16,10 @@ Global
 		{0EE38E29-756F-42A0-8529-A0B1C31797EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE38E29-756F-42A0-8529-A0B1C31797EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE38E29-756F-42A0-8529-A0B1C31797EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1542543E-D0BB-4DB8-9582-D06F6DF6496D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1542543E-D0BB-4DB8-9582-D06F6DF6496D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1542543E-D0BB-4DB8-9582-D06F6DF6496D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1542543E-D0BB-4DB8-9582-D06F6DF6496D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

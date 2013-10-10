@@ -7,37 +7,18 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="radRichTextBoxParent" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <telerik:RadRichTextBoxRibbonUI CollapseThresholdSize="50,50" DataContext="{Binding Commands, ElementName=radRichTextBox}" >
+        <telerik:RadRichTextBoxRibbonUI BackstageClippingElement="{Binding ElementName=radRichTextBoxParent}" CollapseThresholdSize="50,50" 
+                                        DataContext="{Binding Commands, ElementName=radRichTextBox}" >
             <telerik:RadRichTextBoxRibbonUI.Resources>
                 <telerik:FontFamiliesProvider x:Key="FontFamiliesProvider"/>
                 <telerik:EditingContextTypeToBoolConverter x:Key="EditingContextTypeToBoolConverter"/>
             </telerik:RadRichTextBoxRibbonUI.Resources>
-            <telerik:RadRichTextBoxRibbonUI.ContextualGroups>
-                <telerik:RadRibbonContextualGroup x:Name="TableTools" Header="Table Tools">
-                    <telerik:RadRibbonContextualGroup.IsActive>
-                        <Binding Converter="{StaticResource EditingContextTypeToBoolConverter}" Mode="OneWay" Path="AssociatedRichTextBox.CurrentEditingContext.Type">
-                            <Binding.ConverterParameter>
-                                <telerik:EditingContextTypes>Table</telerik:EditingContextTypes>
-                            </Binding.ConverterParameter>
-                        </Binding>
-                    </telerik:RadRibbonContextualGroup.IsActive>
-                </telerik:RadRibbonContextualGroup>
-                <telerik:RadRibbonContextualGroup x:Name="HeaderFooterTools" Header="Header &amp; Footer Tools">
-                    <telerik:RadRibbonContextualGroup.IsActive>
-                        <Binding Converter="{StaticResource EditingContextTypeToBoolConverter}" Mode="OneWay" Path="AssociatedRichTextBox.CurrentEditingContext.Type">
-                            <Binding.ConverterParameter>
-                                <telerik:EditingContextTypes>HeaderFooter</telerik:EditingContextTypes>
-                            </Binding.ConverterParameter>
-                        </Binding>
-                    </telerik:RadRibbonContextualGroup.IsActive>
-                </telerik:RadRibbonContextualGroup>
-            </telerik:RadRichTextBoxRibbonUI.ContextualGroups>
             <telerik:RadRichTextBoxRibbonUI.Backstage>
                 <telerik:RadRibbonBackstage>
                     <telerik:RadRibbonBackstageItem Header="New" Icon="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/new.png" IsSelectable="false" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding NewDocumentCommand}"/>
@@ -138,6 +119,26 @@
                     </telerik:RadRibbonBackstageItem>
                 </telerik:RadRibbonBackstage>
             </telerik:RadRichTextBoxRibbonUI.Backstage>
+            <telerik:RadRichTextBoxRibbonUI.ContextualGroups>
+                <telerik:RadRibbonContextualGroup x:Name="TableTools" Header="Table Tools">
+                    <telerik:RadRibbonContextualGroup.IsActive>
+                        <Binding Converter="{StaticResource EditingContextTypeToBoolConverter}" Mode="OneWay" Path="AssociatedRichTextBox.CurrentEditingContext.Type">
+                            <Binding.ConverterParameter>
+                                <telerik:EditingContextTypes>Table</telerik:EditingContextTypes>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </telerik:RadRibbonContextualGroup.IsActive>
+                </telerik:RadRibbonContextualGroup>
+                <telerik:RadRibbonContextualGroup x:Name="HeaderFooterTools" Header="Header &amp; Footer Tools">
+                    <telerik:RadRibbonContextualGroup.IsActive>
+                        <Binding Converter="{StaticResource EditingContextTypeToBoolConverter}" Mode="OneWay" Path="AssociatedRichTextBox.CurrentEditingContext.Type">
+                            <Binding.ConverterParameter>
+                                <telerik:EditingContextTypes>HeaderFooter</telerik:EditingContextTypes>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </telerik:RadRibbonContextualGroup.IsActive>
+                </telerik:RadRibbonContextualGroup>
+            </telerik:RadRichTextBoxRibbonUI.ContextualGroups>
             <telerik:RadRichTextBoxRibbonUI.QuickAccessToolBar>
                 <telerik:QuickAccessToolBar>
                     <telerik:RadRibbonButton telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding SaveCommand}" Size="Small" SmallImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/save.png" Text="Save"/>
@@ -328,7 +329,7 @@
                 <telerik:RadRibbonGroup Header="Page Setup">
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding ChangePaperTypeCommand}" telerik:ScreenTip.Description="Choose a paper size for the current section." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageSize.png" Size="Large" Text="Size" telerik:ScreenTip.Title="Page Size">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
-                            <telerik:RadGallery ItemWidth="184" MaxHeight="320" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangePaperTypeCommand}" ViewportWidth="185">
+                            <telerik:RadGallery ItemWidth="184" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangePaperTypeCommand}" ViewportWidth="185" MaxHeight="320">
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="A0">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock FontWeight="Bold" Text="A0" VerticalAlignment="Center"/>
@@ -840,6 +841,21 @@
                     </telerik:RadRibbonButton>
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
+            <telerik:RadRibbonTab ContextualGroupName="TableTools" Header="Design">
+                <telerik:RadRibbonGroup Header="Table Style Options">
+                    <telerik:RadCollapsiblePanel>
+                        <CheckBox Content="Header Row" telerik:ScreenTip.Description="Display special formatting for the first row of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookFirstRowOptionCommand}" telerik:ScreenTip.Title="Header Row"/>
+                        <CheckBox Content="Total Row" telerik:ScreenTip.Description="Display special formatting for the last row of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookLastRowOptionCommand}" telerik:ScreenTip.Title="Total Row"/>
+                        <CheckBox Content="Banded Rows" telerik:ScreenTip.Description="Display banded rows, in which even rows are formatted differently from odd rows.&amp;#10;&amp;#10;This banding can make tables easier to read." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookRowBandingOptionCommand}" telerik:ScreenTip.Title="Banded Rows"/>
+                        <CheckBox Content="First Column" telerik:ScreenTip.Description="Display special formatting for the first column of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookFirstColumnOptionCommand}" telerik:ScreenTip.Title="First Column"/>
+                        <CheckBox Content="Last Column" telerik:ScreenTip.Description="Display special formatting for the last column of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookLastColumnOptionCommand}" telerik:ScreenTip.Title="Last Column"/>
+                        <CheckBox Content="Banded Columns" telerik:ScreenTip.Description="Display banded columns, in which even columns are formatted differently from odd columns.&amp;#10;&amp;#10;This banding can make tables easier to read." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookColumnBandingOptionCommand}" telerik:ScreenTip.Title="Banded Columns"/>
+                    </telerik:RadCollapsiblePanel>
+                </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Table Styles">
+                    <telerik:TableStylesGallery AssociatedRichTextBox="{Binding AssociatedRichTextBox, Mode=OneWay}"/>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
             <telerik:RadRibbonTab ContextualGroupName="TableTools" Header="Layout">
                 <telerik:RadRibbonGroup Header="Table">
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding SelectTableEmptyCommand}" telerik:ScreenTip.Description="Select rows, columns, cells, or the entire table." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/SelectTableTools.png" Size="Large" Text="Select" telerik:ScreenTip.Title="Select Table">
@@ -922,23 +938,10 @@
                     </Grid>
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
-            <telerik:RadRibbonTab ContextualGroupName="TableTools" Header="Design">
-                <telerik:RadRibbonGroup Header="Table Style Options">
-                    <telerik:RadCollapsiblePanel>
-                        <CheckBox Content="Header Row" telerik:ScreenTip.Description="Display special formatting for the first row of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookFirstRowOptionCommand}" telerik:ScreenTip.Title="Header Row"/>
-                        <CheckBox Content="Total Row" telerik:ScreenTip.Description="Display special formatting for the last row of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookLastRowOptionCommand}" telerik:ScreenTip.Title="Total Row"/>
-                        <CheckBox Content="Banded Rows" telerik:ScreenTip.Description="Display banded rows, in which even rows are formatted differently from odd rows.&amp;#10;&amp;#10;This banding can make tables easier to read." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookRowBandingOptionCommand}" telerik:ScreenTip.Title="Banded Rows"/>
-                        <CheckBox Content="First Column" telerik:ScreenTip.Description="Display special formatting for the first column of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookFirstColumnOptionCommand}" telerik:ScreenTip.Title="First Column"/>
-                        <CheckBox Content="Last Column" telerik:ScreenTip.Description="Display special formatting for the last column of the table." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookLastColumnOptionCommand}" telerik:ScreenTip.Title="Last Column"/>
-                        <CheckBox Content="Banded Columns" telerik:ScreenTip.Description="Display banded columns, in which even columns are formatted differently from odd columns.&amp;#10;&amp;#10;This banding can make tables easier to read." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookColumnBandingOptionCommand}" telerik:ScreenTip.Title="Banded Columns"/>
-                    </telerik:RadCollapsiblePanel>
-                </telerik:RadRibbonGroup>
-            </telerik:RadRibbonTab>
             <telerik:RadRibbonTab ContextualGroupName="HeaderFooterTools" Header="Design" Width="140">
                 <telerik:RadRibbonGroup Header="Insert">
                     <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert the current date or time into the current document." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/InsertDateTime.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ShowInsertDateTimeDialogCommand}" Size="Large" Text="Date &amp; Time" telerik:ScreenTip.Title="Insert Date and Time"/>
                     <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert page numbers into the document." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/InsertPageNumber.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertPageFieldCommand}" Size="Large" Text="Page Number" telerik:ScreenTip.Title="Insert Page Number"/>
-                    <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert block containing formatted programming source code." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/CodeBlock.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ShowCodeFormattingDialogCommand}" Size="Large" Text="Code" telerik:ScreenTip.Title="Insert Code Block"/>
                 </telerik:RadRibbonGroup>
                 <telerik:RadRibbonGroup Header="Navigation">
                     <StackPanel>

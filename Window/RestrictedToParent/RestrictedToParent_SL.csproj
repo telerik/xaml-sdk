@@ -80,7 +80,7 @@
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>..\..\..\Users\amiorkov\Desktop\Current Released DLLs\2013 Q2 SP\RadControls_for_Silverlight5_2013_2_0724_Trial_hotfix\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

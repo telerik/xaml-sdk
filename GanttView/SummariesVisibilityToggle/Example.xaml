@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="SummariesVisibilityToggle.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:SummariesVisibilityToggle"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.DataContext>
+        <local:ViewModel/>
+    </UserControl.DataContext>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to achieve a behavior with which the Summary task is hidden when its inner children tasks are visible and visible when they are collapsed."
+                   TextWrapping="Wrap" Width="400" Margin="20 50 20 20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="RadGanttView with default TimeLineVisualizationBehavior:" Margin="20" />
+            <telerik:RadGanttView TasksSource="{Binding Tasks}" 
+                                  Margin="20, 20, 20, 20" Grid.Row="1"
+							      VerticalAlignment="Top"
+							      VisibleRange="{Binding VisibleTime}"
+							      Height="200">
+                <telerik:RadGanttView.Columns>
+                    <telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="160"/>
+                    <telerik:ColumnDefinition MemberBinding="{Binding Start}" Header="Start" ColumnWidth="140"/>
+                    <telerik:ColumnDefinition MemberBinding="{Binding End}" Header="End" ColumnWidth="140"/>
+                </telerik:RadGanttView.Columns>
+            </telerik:RadGanttView>
+            <TextBlock Text="RadGanttView with custom TimeLineVisualizationBehavior:" Grid.Row="2" Margin="20"/>
+            <telerik:RadGanttView TasksSource="{Binding Tasks}" 
+                                  Margin="20, 20, 20, 20" Grid.Row="3"
+							      VerticalAlignment="Top"
+							      VisibleRange="{Binding VisibleTime}"
+							      Height="200">
+                <telerik:RadGanttView.Columns>
+                    <telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="160"/>
+                    <telerik:ColumnDefinition MemberBinding="{Binding Start}" Header="Start" ColumnWidth="140"/>
+                    <telerik:ColumnDefinition MemberBinding="{Binding End}" Header="End" ColumnWidth="140"/>
+                </telerik:RadGanttView.Columns>
+                <telerik:RadGanttView.TimeLineVisualizationBehavior>
+                    <local:CustomGanttTimeLineVisualizationBehavior />
+                </telerik:RadGanttView.TimeLineVisualizationBehavior>
+            </telerik:RadGanttView>
+        </Grid>
+    </Grid>
+</UserControl>

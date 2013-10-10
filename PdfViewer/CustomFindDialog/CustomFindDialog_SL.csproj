@@ -74,19 +74,22 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\..\..\..\..\..\..\Work\WPF_SCRUM\Development\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>..\..\..\..\..\..\..\..\Work\WPF_SCRUM\Development\Binaries\Silverlight\Telerik.Windows.Controls.Data.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>..\..\..\..\..\..\..\..\Work\WPF_SCRUM\Development\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\..\..\..\..\..\..\Work\WPF_SCRUM\Development\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Fixed">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+	    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

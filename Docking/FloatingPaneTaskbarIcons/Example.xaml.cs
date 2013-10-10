@@ -64,18 +64,18 @@ namespace FloatingPaneTaskbarIcons
         {
             if (e.TargetGroup != null)
             {
-                e.Compass.IsCenterIndicatorVisible = CanDockIn(e.DraggedSplitContainer, e.TargetGroup, DockPosition.Center);
-                e.Compass.IsLeftIndicatorVisible = CanDockIn(e.DraggedSplitContainer, e.TargetGroup, DockPosition.Left);
-                e.Compass.IsTopIndicatorVisible = CanDockIn(e.DraggedSplitContainer, e.TargetGroup, DockPosition.Top);
-                e.Compass.IsRightIndicatorVisible = CanDockIn(e.DraggedSplitContainer, e.TargetGroup, DockPosition.Right);
-                e.Compass.IsBottomIndicatorVisible = CanDockIn(e.DraggedSplitContainer, e.TargetGroup, DockPosition.Bottom);
+                e.Compass.IsCenterIndicatorVisible = CanDockIn((RadSplitContainer)e.DraggedElement, e.TargetGroup, DockPosition.Center);
+                e.Compass.IsLeftIndicatorVisible = CanDockIn((RadSplitContainer)e.DraggedElement, e.TargetGroup, DockPosition.Left);
+                e.Compass.IsTopIndicatorVisible = CanDockIn((RadSplitContainer)e.DraggedElement, e.TargetGroup, DockPosition.Top);
+                e.Compass.IsRightIndicatorVisible = CanDockIn((RadSplitContainer)e.DraggedElement, e.TargetGroup, DockPosition.Right);
+                e.Compass.IsBottomIndicatorVisible = CanDockIn((RadSplitContainer)e.DraggedElement, e.TargetGroup, DockPosition.Bottom);
             }
             else
             {
-                e.Compass.IsLeftIndicatorVisible = CanDock(e.DraggedSplitContainer, DockPosition.Left);
-                e.Compass.IsTopIndicatorVisible = CanDock(e.DraggedSplitContainer, DockPosition.Top);
-                e.Compass.IsRightIndicatorVisible = CanDock(e.DraggedSplitContainer, DockPosition.Right);
-                e.Compass.IsBottomIndicatorVisible = CanDock(e.DraggedSplitContainer, DockPosition.Bottom);
+                e.Compass.IsLeftIndicatorVisible = CanDock((RadSplitContainer)e.DraggedElement, DockPosition.Left);
+                e.Compass.IsTopIndicatorVisible = CanDock((RadSplitContainer)e.DraggedElement, DockPosition.Top);
+                e.Compass.IsRightIndicatorVisible = CanDock((RadSplitContainer)e.DraggedElement, DockPosition.Right);
+                e.Compass.IsBottomIndicatorVisible = CanDock((RadSplitContainer)e.DraggedElement, DockPosition.Bottom);
             }
             e.Canceled = !(CompassNeedsToShow(e.Compass));
         }

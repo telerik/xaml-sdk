@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisualStyle_SL", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithScheduleView_SL", "DragDropWithScheduleView\DragDropWithScheduleView_SL.csproj", "{21026FFB-9DBC-4466-A070-F48BF56B778C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropDataConversion_SL", "DragDropDataConversion\DragDropDataConversion_SL.csproj", "{9ED06F3A-BB2C-4FE2-93E9-3358FE8F91EF}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{21026FFB-9DBC-4466-A070-F48BF56B778C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21026FFB-9DBC-4466-A070-F48BF56B778C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21026FFB-9DBC-4466-A070-F48BF56B778C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED06F3A-BB2C-4FE2-93E9-3358FE8F91EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED06F3A-BB2C-4FE2-93E9-3358FE8F91EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED06F3A-BB2C-4FE2-93E9-3358FE8F91EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED06F3A-BB2C-4FE2-93E9-3358FE8F91EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

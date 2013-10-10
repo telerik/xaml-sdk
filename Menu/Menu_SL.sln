@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingPopupProperties_SL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customization_MVVM_SL", "Customization_MVVM\Customization_MVVM_SL.csproj", "{DF8A825C-DEE5-435A-9C99-7499DDB4A362}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldMenuAndItemStyle_SL", "OldMenuAndItemStyle\OldMenuAndItemStyle_SL.csproj", "{3A867216-E0FF-4377-A6EB-D5C53614C94B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF8A825C-DEE5-435A-9C99-7499DDB4A362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A867216-E0FF-4377-A6EB-D5C53614C94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A867216-E0FF-4377-A6EB-D5C53614C94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A867216-E0FF-4377-A6EB-D5C53614C94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A867216-E0FF-4377-A6EB-D5C53614C94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

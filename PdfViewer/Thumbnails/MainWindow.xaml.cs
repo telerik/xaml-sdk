@@ -52,17 +52,7 @@ namespace Thumbnails
                     textBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
                 }
             }
-        }
-
-        private void TbFind_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == System.Windows.Input.Key.Enter)
-            {
-                this.pdfViewer.Commands.FindCommand.Execute(this.tbFind.Text);
-                this.btnPrev.Visibility = System.Windows.Visibility.Visible;
-                this.btnNext.Visibility = System.Windows.Visibility.Visible;
-            }
-        }
+        } 
 
         private void ChangePageNavigationPanelVisibility(object sender, RoutedEventArgs e)
         {

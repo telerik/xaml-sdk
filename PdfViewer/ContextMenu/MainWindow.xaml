@@ -10,8 +10,7 @@
             <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
             <converters:FixedDocumentViewerModeConverter x:Key="ModeConverter" />
         </Window.Resources>
-
-
+ 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

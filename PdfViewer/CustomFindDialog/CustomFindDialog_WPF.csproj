@@ -49,23 +49,25 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\..\..\..\Development\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>..\..\..\..\..\Development\Binaries\WPF\Telerik.Windows.Controls.Data.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>..\..\..\..\..\Development\Binaries\WPF\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\..\..\..\Development\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2013.3.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Telerik.Windows.Documents.Fixed">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+	    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

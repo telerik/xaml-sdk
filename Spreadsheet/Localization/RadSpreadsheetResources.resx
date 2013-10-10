@@ -1,0 +1,3522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_EMailAddress" xml:space="preserve">
+    <value>E-mail address</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_EMailAddressColumn" xml:space="preserve">
+    <value>E-mail address:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_RecentlyUsedCellReferences" xml:space="preserve">
+    <value>Recently used cell references:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_RecentlyUsedEMailAddresses" xml:space="preserve">
+    <value>Recently used e-mail addresses:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_RecentlyUsedWebPages" xml:space="preserve">
+    <value>Recently used web pages:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_Subject" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_TypeTheCellReference" xml:space="preserve">
+    <value>Type the cell reference:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_WebPage" xml:space="preserve">
+    <value>Web page</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_ScreenTip" xml:space="preserve">
+    <value>ScreenTip:</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Color1" xml:space="preserve">
+    <value>Color 1:</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Color2" xml:space="preserve">
+    <value>Color 2:</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Colors" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_DiagonalDown" xml:space="preserve">
+    <value>Diagonal down</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_DiagonalUp" xml:space="preserve">
+    <value>Diagonal up</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_FromCenter" xml:space="preserve">
+    <value>From center</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_FromCorner" xml:space="preserve">
+    <value>From corner</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_GradientTab" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Header" xml:space="preserve">
+    <value>Fill Effects</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Horizontal" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Sample" xml:space="preserve">
+    <value>Sample:</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_ShadingStyles" xml:space="preserve">
+    <value>Shading styles</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Variants" xml:space="preserve">
+    <value>Variants</value>
+  </data>
+  <data name="Spreadsheet_FillEffectsDialog_Vertical" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Header" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Horizontal" xml:space="preserve">
+    <value>Horizontal:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Indent" xml:space="preserve">
+    <value>Indent:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_MergeCells" xml:space="preserve">
+    <value>Merge cells</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_TextAlignment" xml:space="preserve">
+    <value>Text Alignment</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_TextControl" xml:space="preserve">
+    <value>Text control</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_Vertical" xml:space="preserve">
+    <value>Vertical:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_WrapText" xml:space="preserve">
+    <value>Wrap text</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Font" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_FontInfo" xml:space="preserve">
+    <value>This is a TrueType font. The same font will be used on both your printer and your screen.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_FontStyle" xml:space="preserve">
+    <value>Font style:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Header" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_NormalFont" xml:space="preserve">
+    <value>Normal font</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Underline" xml:space="preserve">
+    <value>Underline:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Header" xml:space="preserve">
+    <value>Format Cells</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Accounting" xml:space="preserve">
+    <value>Accounting</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Category" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Fraction" xml:space="preserve">
+    <value>Fraction</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_GeneralInfo" xml:space="preserve">
+    <value>General format cells have no specific number format.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Header" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Sample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Scientific" xml:space="preserve">
+    <value>Scientific</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AccountingInfo" xml:space="preserve">
+    <value>Accounting formats line up the currency symbols and decimal points in a column.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_CurrencyInfo" xml:space="preserve">
+    <value>Currency formats are used for general monetary values. Use Accounting formats to align decimal points in a column.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_CustomInfo" xml:space="preserve">
+    <value>Type the number format code, using one of the existing codes as a starting point.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_DateInfo" xml:space="preserve">
+    <value>Date formats display date and time serial numbers as date values. Date formats that begin with an asterisk (*) respond to changes in regional date and time settings that are specified for the operating system. Formats without asterisk are not affected by operating system settings.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_DecimalPlaces" xml:space="preserve">
+    <value>Decimal places</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Locale" xml:space="preserve">
+    <value>Locale (location):</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_NegativeNumbers" xml:space="preserve">
+    <value>Negative numbers:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_NumberInfo" xml:space="preserve">
+    <value>Number is used for general display of numbers. Currency and Accounting offer specialized formatting for monetary value.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_PercentageInfo" xml:space="preserve">
+    <value>Percentage formats multiply the cell value by 100 and display the result with a percent symbol.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_SpecialInfo" xml:space="preserve">
+    <value>Special formats are useful for tracking list and database values.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Symbol" xml:space="preserve">
+    <value>Symbol:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_TextInfo" xml:space="preserve">
+    <value>Text format cells are treated as text even a number is in the cell. The cell is displayed exactly as entered.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_TimeInfo" xml:space="preserve">
+    <value>Time formats display date and time serial numbers as date values. Time formats that begin with an asterisk (*) respond to changes in regional date and time settings that are specified for the operating system. Formats without an asterisk are not affected by operating system settings.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_UseSeparator" xml:space="preserve">
+    <value>Use 1000 Separator (,)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Header" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_BackgroundColor" xml:space="preserve">
+    <value>Background Color:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_FillEffects" xml:space="preserve">
+    <value>Fill Effects...</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_Header" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_MoreColors" xml:space="preserve">
+    <value>More Colors...</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_NoColor" xml:space="preserve">
+    <value>No Color</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_PatternColor" xml:space="preserve">
+    <value>Pattern Color:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_PatternStyle" xml:space="preserve">
+    <value>Pattern Style:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Fill_Sample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Body" xml:space="preserve">
+    <value>(Body)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Headings" xml:space="preserve">
+    <value>(Headings)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Alignment_IndentBracketed" xml:space="preserve">
+    <value>(Indent)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Border" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Info" xml:space="preserve">
+    <value>The selected border style can be applied by clicking the presets, preview diagram or buttons above.</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Inside" xml:space="preserve">
+    <value>Inside</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Outline" xml:space="preserve">
+    <value>Outline</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Presets" xml:space="preserve">
+    <value>Presets</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Style" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Border_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_AaBbCcYyZz" xml:space="preserve">
+    <value>AaBbCcYyZz</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsEighths" xml:space="preserve">
+    <value>As eighths (4/8)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsHalves" xml:space="preserve">
+    <value>As halves (1/2)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsHundredths" xml:space="preserve">
+    <value>As hundredths (30/100)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsQuarters" xml:space="preserve">
+    <value>As quarters (1/4)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsSixteenths" xml:space="preserve">
+    <value>As sixteenths (8/16)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_AsTenths" xml:space="preserve">
+    <value>As tenths (3/10)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_UpToOneDigit" xml:space="preserve">
+    <value>Up to one digit (1/4)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_UpToThreeDigits" xml:space="preserve">
+    <value>Up to three digits (312/943)</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_UpToTwoDigits" xml:space="preserve">
+    <value>Up to two digits (21/25)</value>
+  </data>
+  <data name="Spreadsheet_SelectColorDialog_Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="Spreadsheet_SelectColorDialog_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_SelectColorDialog_Header" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="Spreadsheet_SelectColorDialog_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Spreadsheet_SelectColorDialog_Standard" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_ColumnWidth" xml:space="preserve">
+    <value>Column width</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_ColumnWidthHeader" xml:space="preserve">
+    <value>Column Width</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_RowHeight" xml:space="preserve">
+    <value>Row height</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_RowHeightHeader" xml:space="preserve">
+    <value>Row Height</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_StandardHeight" xml:space="preserve">
+    <value>Standard row height</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_StandardHeightHeader" xml:space="preserve">
+    <value>Standard Height</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_StandardWidth" xml:space="preserve">
+    <value>Standard column width</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_StandardWidthHeader" xml:space="preserve">
+    <value>Standard Width</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_EntireColumn" xml:space="preserve">
+    <value>Entire column</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_EntireRow" xml:space="preserve">
+    <value>Entire row</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_Header" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_ShiftCellsDown" xml:space="preserve">
+    <value>Shift cells down</value>
+  </data>
+  <data name="Spreadsheet_InsertCellsDialog_ShiftCellsRight" xml:space="preserve">
+    <value>Shift cells right</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_DateTime" xml:space="preserve">
+    <value>Date &amp; Time</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Financial" xml:space="preserve">
+    <value>Financial</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Header" xml:space="preserve">
+    <value>Insert Function</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Logical" xml:space="preserve">
+    <value>Logical</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_LookupReference" xml:space="preserve">
+    <value>Lookup &amp; Reference</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_MathTrig" xml:space="preserve">
+    <value>Math &amp; Trig</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_MostRecentlyUsed" xml:space="preserve">
+    <value>Most Recently Used</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_SearchForAFunction" xml:space="preserve">
+    <value>Search for a function:</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_SelectAFunction" xml:space="preserve">
+    <value>Select a function:</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_SelectCategory" xml:space="preserve">
+    <value>Or select a category:</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Statistical" xml:space="preserve">
+    <value>Statistical</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Type" xml:space="preserve">
+    <value>Type a brief description of what you want to do and then click Go</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_EntireColumn" xml:space="preserve">
+    <value>Entire column</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_EntireRow" xml:space="preserve">
+    <value>Entire row</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_Header" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_ShiftCellsLeft" xml:space="preserve">
+    <value>Shift cells left</value>
+  </data>
+  <data name="Spreadsheet_RemoveCellsDialog_ShiftCellsUp" xml:space="preserve">
+    <value>Shift cells up</value>
+  </data>
+  <data name="Spreadsheet_ScaleFactorDialog_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_ScaleFactorDialog_Header" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="Spreadsheet_ScaleFactorDialog_Magnification" xml:space="preserve">
+    <value>Magnification</value>
+  </data>
+  <data name="Spreadsheet_Functions_Abs_Info" xml:space="preserve">
+    <value>Returns the absolute value of a number. The absolute value of a number is the number without its sign.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Abs_NumberInfo" xml:space="preserve">
+    <value>is the real number for which you want the absolute value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_Info" xml:space="preserve">
+    <value>Returns the accrued interest for a security that pays interest at maturity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_IssueInfo" xml:space="preserve">
+    <value>is the security's issue date, expressed as a serial date number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_ParInfo" xml:space="preserve">
+    <value>is the security's par value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_RateInfo" xml:space="preserve">
+    <value>is the security's annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AccrIntM_SettlementInfo" xml:space="preserve">
+    <value>is the security's maturity date, expressed as a serial date number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acosh_Info" xml:space="preserve">
+    <value>Returns the inverse hyperbolic cosine of a number. The number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is number, so ACOSH(COSH(number)) equals number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acosh_NumberInfo" xml:space="preserve">
+    <value>is any real number equal to or greater than 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acos_Info" xml:space="preserve">
+    <value>Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is number. The returned angle is given in radians in the range 0 (zero) to pi.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acos_NumberInfo" xml:space="preserve">
+    <value>is the cosine of the angle you want and must be from -1 to 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acoth_Info" xml:space="preserve">
+    <value>Returns the inverse hyperbolic cotangent of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acoth_NumberInfo" xml:space="preserve">
+    <value>The absolute value of Number must be greater than 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acot_Info" xml:space="preserve">
+    <value>Returns the principal value of the arccotangent, or inverse cotangent, of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Acot_NumberInfo" xml:space="preserve">
+    <value>is the cotangent of the angle you want. This must be a real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_BasisInfo" xml:space="preserve">
+    <value>is the year basis to be used.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_CostInfo" xml:space="preserve">
+    <value>is the cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_DatePurchasedInfo" xml:space="preserve">
+    <value>is the date of the purchase of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_FirstPeriodInfo" xml:space="preserve">
+    <value>is the date of the end of the first period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_Info" xml:space="preserve">
+    <value>Returns the depreciation for each accounting period. This function is provided for the French accounting system. If an asset is purchased in the middle of the accounting period, the prorated depreciation is taken into account. The function is similar to AMORLINC, except that a depreciation coefficient is applied in the calculation depending on the life of the assets.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_PeriodInfo" xml:space="preserve">
+    <value>is the period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_RateInfo" xml:space="preserve">
+    <value>is the rate of depreciation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorDegrc_SalvageInfo" xml:space="preserve">
+    <value>is the salvage value at the end of the life of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_BasisInfo" xml:space="preserve">
+    <value>is the year basis to be used.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_CostInfo" xml:space="preserve">
+    <value>is the cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_DatePurchasedInfo" xml:space="preserve">
+    <value>is the date of the purchase of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_FirstperiodInfo" xml:space="preserve">
+    <value>is the date of the end of the first period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_Info" xml:space="preserve">
+    <value>Returns the depreciation for each accounting period. This function is provided for the French accounting system. If an asset is purchased in the middle of the accounting period, the prorated depreciation is taken into account.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_PeriodInfo" xml:space="preserve">
+    <value>is the period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_RateInfo" xml:space="preserve">
+    <value>is the rate of depreciation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AmorLinc_SalvageInfo" xml:space="preserve">
+    <value>is the salvage value at the end of the life of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_And_Info" xml:space="preserve">
+    <value>Returns TRUE if all its arguments are TRUE; returns FALSE if one or more argument is FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_And_LogicalInfo" xml:space="preserve">
+    <value>Logical1, logical2, ...     are 1 to 30 conditions you want to test that can be either TRUE or FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Basis" xml:space="preserve">
+    <value>Basis</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_DatePurchased" xml:space="preserve">
+    <value>DatePurchased</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_FirstPeriod" xml:space="preserve">
+    <value>FirstPeriod</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Issue" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Logical" xml:space="preserve">
+    <value>Logical</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Par" xml:space="preserve">
+    <value>Par</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Salvage" xml:space="preserve">
+    <value>Salvage</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Settlement" xml:space="preserve">
+    <value>Settlement</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_XNum" xml:space="preserve">
+    <value>X_num</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_YNum" xml:space="preserve">
+    <value>Y_num</value>
+  </data>
+  <data name="Spreadsheet_Functions_Asinh_Info" xml:space="preserve">
+    <value>Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is number, so ASINH(SINH(number)) equals number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Asinh_NumberInfo" xml:space="preserve">
+    <value>is any real number equal to or greater than 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Asin_Info" xml:space="preserve">
+    <value>Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is number. The returned angle is given in radians in the range -pi/2 to pi/2.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Asin_NumberInfo" xml:space="preserve">
+    <value>is the sine of the angle you want and must be from -1 to 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atan2_Info" xml:space="preserve">
+    <value>Returns the arctangent, or inverse tangent, of the specified x- and y-coordinates. The arctangent is the angle from the x-axis to a line containing the origin (0, 0) and a point with coordinates (x_num, y_num). The angle is given in radians between -pi and pi, excluding -pi.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atan2_XNumInfo" xml:space="preserve">
+    <value>is the x-coordinate of the point.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atan2_YNumInfo" xml:space="preserve">
+    <value>is the y-coordinate of the point.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atanh_Info" xml:space="preserve">
+    <value>Returns the inverse hyperbolic tangent of a number. Number must be between -1 and 1 (excluding -1 and 1). The inverse hyperbolic tangent is the value whose hyperbolic tangent is number, so ATANH(TANH(number)) equals number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atanh_NumberInfo" xml:space="preserve">
+    <value>is any real number between -1 and 1 excluding -1 and 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atan_Info" xml:space="preserve">
+    <value>Returns the arctangent, or inverse tangent, of a number. The arctangent is the angle whose tangent is number. The returned angle is given in radians in the range -pi/2 to pi/2.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Atan_NumberInfo" xml:space="preserve">
+    <value>is the tangent of the angle you want.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AverageA_Info" xml:space="preserve">
+    <value>Calculates the average (arithmetic mean) of the values in the list of arguments. Logical values and text representations of numbers that you type directly into the list of arguments are counted.</value>
+  </data>
+  <data name="Spreadsheet_Functions_AverageA_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 cells, ranges of cells, or values for which you want the average.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Average_Info" xml:space="preserve">
+    <value>Returns the average (arithmetic mean) of its arguments, which can be numbers or names, arrays, or references that contain numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Average_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are the numeric arguments for which you want the average.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Mode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Significance" xml:space="preserve">
+    <value>Significance</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingMath_Info" xml:space="preserve">
+    <value>Rounds a number up to the nearest integer or to the nearest multiple of significance.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingMath_ModeInfo" xml:space="preserve">
+    <value>For negative numbers, controls whether Number is rounded toward or away from zero.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingMath_NumberInfo" xml:space="preserve">
+    <value>is the value you want to round. Number must be less than 9.99E+307 and greater than -2.229E-308.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingMath_SignificanceInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingPrecise_Info" xml:space="preserve">
+    <value>Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. Regardless of the sign of the number, the number is rounded up. However, if the number or the significance is zero, zero is returned.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingPrecise_NumberInfo" xml:space="preserve">
+    <value>is the value you want to round</value>
+  </data>
+  <data name="Spreadsheet_Functions_CeilingPrecise_SignificanceInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round. If significance is omitted, its default value is 1</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ceiling_Info" xml:space="preserve">
+    <value>Returns number rounded up, away from zero, to the nearest multiple of significance. For example, if you want to avoid using pennies in your prices and your product is priced at $4.42, use the formula =CEILING(4.42,0.05) to round prices up to the nearest nickel.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ceiling_NumberInfo" xml:space="preserve">
+    <value>is the value you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ceiling_SignificanceInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Char_Info" xml:space="preserve">
+    <value>Returns the character specified by a number. Use CHAR to translate code page numbers you might get from files on other types of computers into characters.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Char_NumberInfo" xml:space="preserve">
+    <value>is a number between 1 and 255 specifying which character you want. The character is from the character set used by your computer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Code_Info" xml:space="preserve">
+    <value>Returns a numeric code for the first character in a text string. The returned code corresponds to the character set used by your computer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Code_TextInfo" xml:space="preserve">
+    <value>is the text for which you want the code of the first character.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_NumberChosen" xml:space="preserve">
+    <value>NumberChosen</value>
+  </data>
+  <data name="Spreadsheet_Functions_Combin_Info" xml:space="preserve">
+    <value>Returns the number of combinations for a given number of items. Use COMBIN to determine the total possible number of groups for a given number of items.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Combin_NumberChosenInfo" xml:space="preserve">
+    <value>is the number of items in each combination.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Combin_NumberInfo" xml:space="preserve">
+    <value>is the number of items</value>
+  </data>
+  <data name="Spreadsheet_Functions_Concatenate_Info" xml:space="preserve">
+    <value>Joins several text strings into one text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Concatenate_TextInfo" xml:space="preserve">
+    <value>Text1, text2, ...     are 1 to 30 text items to be joined into a single text item. The text items can be text strings, numbers, or single-cell references.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Angle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Coupon" xml:space="preserve">
+    <value>Coupon</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_DateText" xml:space="preserve">
+    <value>DateText</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_DecimalDollar" xml:space="preserve">
+    <value>DecimalDollar</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_EndPeriod" xml:space="preserve">
+    <value>EndPeriod</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Fraction" xml:space="preserve">
+    <value>Fraction</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_FractionalDollar" xml:space="preserve">
+    <value>FractionalDollar</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Life" xml:space="preserve">
+    <value>Life</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Maturity" xml:space="preserve">
+    <value>Maturity</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_N" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Nper" xml:space="preserve">
+    <value>Nper</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Places" xml:space="preserve">
+    <value>Places</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Pr" xml:space="preserve">
+    <value>Pr</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Pv" xml:space="preserve">
+    <value>Pv</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Redemption" xml:space="preserve">
+    <value>Redemption</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_SerialNumber" xml:space="preserve">
+    <value>SerialNumber</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_StartPeriod" xml:space="preserve">
+    <value>StartPeriod</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_X" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Yld" xml:space="preserve">
+    <value>Yld</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselI_Info" xml:space="preserve">
+    <value>Returns the modified Bessel function, which is equivalent to the Bessel function evaluated for purely imaginary arguments.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselI_NInfo" xml:space="preserve">
+    <value>The order of the Bessel function. If n is not an integer, it is truncated. Must be &gt;= 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselI_XInfo" xml:space="preserve">
+    <value>The value at which to evaluate the function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselJ_Info" xml:space="preserve">
+    <value>Returns the Bessel function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselJ_NInfo" xml:space="preserve">
+    <value>The order of the Bessel function. If n is not an integer, it is truncated. Must be &gt;= 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselJ_XInfo" xml:space="preserve">
+    <value>The value at which to evaluate the function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Dec_Info" xml:space="preserve">
+    <value>Converts a binary number to decimal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Dec_NumberInfo" xml:space="preserve">
+    <value>The binary number you want to convert. Number cannot contain more than 10 characters (10 bits). The most significant bit of number is the sign bit. The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cosh_Info" xml:space="preserve">
+    <value>Returns the hyperbolic cosine of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cosh_NumberInfo" xml:space="preserve">
+    <value>is any real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cos_Info" xml:space="preserve">
+    <value>Returns the cosine of an angle.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cos_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians of which you want the cosine.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coth_Info" xml:space="preserve">
+    <value>Return the hyperbolic cotangent of a hyperbolic angle.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coth_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the hyperbolic cotangent.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cot_Info" xml:space="preserve">
+    <value>Return the cotangent of an angle specified in radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cot_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the cotangent.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupDayBs_Info" xml:space="preserve">
+    <value>Returns the number of days from the beginning of a coupon period until its settlement date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupDaysNc_Info" xml:space="preserve">
+    <value>Returns the number of days from the settlement date to the next coupon date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupDays_Info" xml:space="preserve">
+    <value>Returns the number of days in the coupon period that contains the settlement date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupNcd_Info" xml:space="preserve">
+    <value>Returns a number that represents the next coupon date after the settlement date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupNum_Info" xml:space="preserve">
+    <value>Returns the number of coupons payable between the settlement date and maturity date, rounded up to the nearest whole coupon.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CoupPcd_Info" xml:space="preserve">
+    <value>Returns a number that represents the previous coupon date before the settlement date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coup_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coup_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coup_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Coup_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Csch_Info" xml:space="preserve">
+    <value>Return the hyperbolic cosecant of an angle specified in radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Csch_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the hyperbolic cosecant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Csc_Info" xml:space="preserve">
+    <value>Returns the secant of an angle specified in radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Csc_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the secant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CumIPmt_Info" xml:space="preserve">
+    <value>Returns the cumulative interest paid on a loan between start_period and end_period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_CumPrinc_Info" xml:space="preserve">
+    <value>Returns the cumulative principal paid on a loan between start_period and end_period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_EndPeriodInfo" xml:space="preserve">
+    <value>is the last period in the calculation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_PvInfo" xml:space="preserve">
+    <value>is the present value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_RateInfo" xml:space="preserve">
+    <value>is the interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_StartPeriodInfo" xml:space="preserve">
+    <value>is the first period in the calculation. Payment periods are numbered beginning with 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Cum_TypeInfo" xml:space="preserve">
+    <value>is the timing of the payment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Datevalue_DateTextInfo" xml:space="preserve">
+    <value>is text that represents a date in a Microsoft Excel date format. For example, \"1/30/2008\" or \"30-Jan-2008\" are text strings within quotation marks that represent dates.</value>
+  </data>
+  <data name="Spreadsheet_Functions_DateValue_Info" xml:space="preserve">
+    <value>Returns the serial number of the date represented by date_text. Use DATEVALUE to convert a date represented by text to a serial number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Date_DayInfo" xml:space="preserve">
+    <value>is a positive or negative integer representing the day of the month from 1 to 31.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Date_Info" xml:space="preserve">
+    <value>Returns the sequential serial number that represents a particular date. If the cell format was General before the function was entered, the result is formatted as a date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Date_MonthInfo" xml:space="preserve">
+    <value>is a positive or negative integer representing the month of the year from 1 to 12 (January to December).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Date_YearInfo" xml:space="preserve">
+    <value>can be one to four digits. Microsoft Excel interprets the year argument according to the date system you are using. By default, Excel for Windows uses the 1900 date system; Excel for the Macintosh uses the 1904 date system.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Day_Info" xml:space="preserve">
+    <value>Returns the day of a date, represented by a serial number. The day is given as an integer ranging from 1 to 31.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Day_SerialNumberInfo" xml:space="preserve">
+    <value>is the date of the day you are trying to find. Dates should be entered by using the DATE function, or as results of other formulas or functions.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_CostInfo" xml:space="preserve">
+    <value>is the initial cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_Info" xml:space="preserve">
+    <value>Returns the depreciation of an asset for a specified period using the fixed-declining balance method.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_LifeInfo" xml:space="preserve">
+    <value>is the number of periods over which the asset is being depreciated (sometimes called the useful life of the asset).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_MonthInfo" xml:space="preserve">
+    <value>is the number of months in the first year. If month is omitted, it is assumed to be 12.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_PeriodInfo" xml:space="preserve">
+    <value>is the period for which you want to calculate the depreciation. Period must use the same units as life.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Db_SalvageInfo" xml:space="preserve">
+    <value>is the value at the end of the depreciation (sometimes called the salvage value of the asset).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Bin_Info" xml:space="preserve">
+    <value>Converts a decimal number to binary.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Bin_NumberInfo" xml:space="preserve">
+    <value>The decimal integer you want to convert. If number is negative, valid place values are ignored and DEC2BIN returns a 10-character (10-bit) binary number in which the most significant bit is the sign bit. The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Bin_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, DEC2BIN uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Hex_Info" xml:space="preserve">
+    <value>Converts a decimal number to hexadecimal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Hex_NumberInfo" xml:space="preserve">
+    <value>The decimal integer you want to convert. If number is negative, places is ignored and DEC2HEX returns a 10-character (40-bit) hexadecimal number in which the most significant bit is the sign bit. The remaining 39 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Hex_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, DEC2HEX uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Oct_Info" xml:space="preserve">
+    <value>Converts a decimal number to octal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Oct_NumberInfo" xml:space="preserve">
+    <value>The decimal integer you want to convert. If number is negative, places is ignored and DEC2OCT returns a 10-character (30-bit) octal number in which the most significant bit is the sign bit. The remaining 29 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dec2Oct_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, DEC2OCT uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Degrees_AngleInfo" xml:space="preserve">
+    <value>is the angle in radians that you want to convert.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Degrees_Info" xml:space="preserve">
+    <value>Converts radians into degrees.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_Info" xml:space="preserve">
+    <value>Returns the discount rate for a security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_PrInfo" xml:space="preserve">
+    <value>is the security's price per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_RedemptionInfo" xml:space="preserve">
+    <value>is the security's redemption value per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Disc_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_DollarDe_FractionalDollarInfo" xml:space="preserve">
+    <value>is the number expressed as an integer part and a fraction part, separated by a decimal symbol.</value>
+  </data>
+  <data name="Spreadsheet_Functions_DollarDe_Info" xml:space="preserve">
+    <value>Converts a dollar price expressed as an integer part and a fraction part, such as 1.02, into a dollar price expressed as a decimal number. Fractional dollar numbers are sometimes used for security prices. The fraction part of the value is divided by an integer that you specify. For example, if you want your price to be expressed to a precision of 1/16 of a dollar, you divide the fraction part by 16. In this case, 1.02 represents $1.125 ($1 + 2/16 = $1.125).</value>
+  </data>
+  <data name="Spreadsheet_Functions_DollarFr_DecimalDollarInfo" xml:space="preserve">
+    <value>is a decimal number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_DollarFr_Info" xml:space="preserve">
+    <value>Converts decimal numbers to fractional dollar numbers, such as securities prices.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Dollar_FractionInfo" xml:space="preserve">
+    <value>is the integer to use in the denominator of the fraction.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_CouponInfo" xml:space="preserve">
+    <value>is the security's annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_Info" xml:space="preserve">
+    <value>Returns the Macauley duration for an assumed par value of $100. Duration is defined as the weighted average of the present value of the cash flows and is used as a measure of a bond price's response to changes in yield.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Duration_YldInfo" xml:space="preserve">
+    <value>is the security's annual yield.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_NominalRate" xml:space="preserve">
+    <value>NominalRate</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Npery" xml:space="preserve">
+    <value>Npery</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Spreadsheet_Functions_Effect_Info" xml:space="preserve">
+    <value>Returns the effective annual interest rate, given the nominal annual interest rate and the number of compounding periods per year.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Effect_NominalRateInfo" xml:space="preserve">
+    <value>is the nominal interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Effect_NperyInfo" xml:space="preserve">
+    <value>is the number of compounding periods per year.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErrorType_Info" xml:space="preserve">
+    <value>Returns a number corresponding to one of the error values in Microsoft Excel or returns the #N/A error if no error exists. You can use ERROR.TYPE in an IF function to test for an error value and return a text string, such as a message, instead of the error value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErrorType_ValueInfo" xml:space="preserve">
+    <value>is the error value whose identifying number you want to find. Although error_val can be the actual error value, it will usually be a reference to a cell containing a formula that you want to test.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Even_Info" xml:space="preserve">
+    <value>Returns number rounded up to the nearest even integer. You can use this function for processing items that come in twos. For example, a packing crate accepts rows of one or two items. The crate is full when the number of items, rounded up to the nearest two, matches the crate's capacity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Even_NumberInfo" xml:space="preserve">
+    <value>is the value to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Exact_Info" xml:space="preserve">
+    <value>Compares two text strings and returns TRUE if they are exactly the same, FALSE otherwise. EXACT is case-sensitive but ignores formatting differences. Use EXACT to test text being entered into a document.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Exact_Text1Info" xml:space="preserve">
+    <value>is the first text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Exact_Text2Info" xml:space="preserve">
+    <value>is the second text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Exp_Info" xml:space="preserve">
+    <value>Returns e raised to the power of number. The constant e equals 2.71828182845904, the base of the natural logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Exp_NumberInfo" xml:space="preserve">
+    <value>is the exponent applied to the base e.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fact_Info" xml:space="preserve">
+    <value>Returns the factorial of a number. The factorial of a number is equal to 1*2*3*...* number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fact_NumberInfo" xml:space="preserve">
+    <value>is the nonnegative number you want the factorial of. If number is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Divisor" xml:space="preserve">
+    <value>Divisor</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_EffectRate" xml:space="preserve">
+    <value>EffectRate</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_FindText" xml:space="preserve">
+    <value>FindText</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_FriendlyName" xml:space="preserve">
+    <value>Friendly Name</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Fv" xml:space="preserve">
+    <value>Fv</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Investment" xml:space="preserve">
+    <value>Investment</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LinkLocation" xml:space="preserve">
+    <value>Link Location</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LogicalTest" xml:space="preserve">
+    <value>Logical test</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Per" xml:space="preserve">
+    <value>Per</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Pmt" xml:space="preserve">
+    <value>Pmt</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Reference" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_StartNumber" xml:space="preserve">
+    <value>StartNumber</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Value1" xml:space="preserve">
+    <value>Value1</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Value2" xml:space="preserve">
+    <value>Value2</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_ValueIfFalse" xml:space="preserve">
+    <value>Value if false</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_ValueIfTrue" xml:space="preserve">
+    <value>Value if true</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_WithinText" xml:space="preserve">
+    <value>WithinText</value>
+  </data>
+  <data name="Spreadsheet_Functions_Factdouble_Info" xml:space="preserve">
+    <value>Returns the double factorial of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Factdouble_NumberInfo" xml:space="preserve">
+    <value>is the value for which to return the double factorial. If number is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_False_Info" xml:space="preserve">
+    <value>Returns the logical value FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FindSearch_FindTextInfo" xml:space="preserve">
+    <value>is the text you want to find.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Find_Info" xml:space="preserve">
+    <value>Locate one text string within a second text string, and return the number of the starting position of the first text string from the first character of the second text string. FIND always counts each character, whether single-byte or double-byte, as 1, no matter what the default language setting is.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FindSearch_StartNumberInfo" xml:space="preserve">
+    <value>specifies the character at which to start the search. The first character in within_text is character number 1. If you omit start_num, it is assumed to be 1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FindSearch_WithinTextInfo" xml:space="preserve">
+    <value>is the text containing the text you want to find.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FloorMath_Info" xml:space="preserve">
+    <value>Round a number down to the nearest integer or to the nearest multiple of significance.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FloorMath_ModeInfo" xml:space="preserve">
+    <value>is the direction (toward or away from 0) to round negative numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_FloorPrecise_Info" xml:space="preserve">
+    <value>Returns a number that is rounded down to the nearest integer or to the nearest multiple of significance. Regardless of the sign of the number, the number is rounded down. However, if the number or the significance is zero, zero is returned.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Floor_Info" xml:space="preserve">
+    <value>Rounds number down, toward zero, to the nearest multiple of significance.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Floor_NumberInfo" xml:space="preserve">
+    <value>is the value you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Floor_SignificanceInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_Info" xml:space="preserve">
+    <value>Returns the future value of an investment based on periodic, constant payments and a constant interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_PmtInfo" xml:space="preserve">
+    <value>is the payment made each period; it cannot change over the life of the annuity. Typically, pmt contains principal and interest but no other fees or taxes. If pmt is omitted, you must include the pv argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_PvInfo" xml:space="preserve">
+    <value>is the present value, or the lump-sum amount that a series of future payments is worth right now. If pv is omitted, it is assumed to be 0 (zero), and you must include the pmt argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Fv_TypeInfo" xml:space="preserve">
+    <value>is the indicates when payments are due. If type is omitted, it is assumed to be 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Gcd_Info" xml:space="preserve">
+    <value>Returns the greatest common divisor of two or more integers. The greatest common divisor is the largest integer that divides both number1 and number2 without a remainder.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Gcd_NumberInfo" xml:space="preserve">
+    <value>Number1, number2, ...     are 1 to 29 values. If any value is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hour_Info" xml:space="preserve">
+    <value>Returns the hour of a time value. The hour is given as an integer, ranging from 0 (12:00 A.M.) to 23 (11:00 P.M.).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hour_SerialNumberInfo" xml:space="preserve">
+    <value>is the time that contains the hour you want to find. Times may be entered as text strings within quotation marks (for example, \"6:45 PM\"), as decimal numbers (for example, 0.78125, which represents 6:45 PM), or as results of other formulas or functions (for example, TIMEVALUE(\"6:45 PM\")).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hyperlink_FriendlyNameInfo" xml:space="preserve">
+    <value>specifies the jump text or numeric value that is displayed in the cell. Friendly Name is displayed in blue and is underlined. If Friendly Name is omitted, the cell displays the Link Location as the jump text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hyperlink_Info" xml:space="preserve">
+    <value>Creates a shortcut or jump that opens a document stored on a network server, an intranet, or the Internet.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hyperlink_LinkLocationInfo" xml:space="preserve">
+    <value>is the path and file name to the document to be opened. Link Location can refer to a place in a document — such as a specific cell or named range in a worksheet or workbook. The path can be to a file that is stored on a hard disk drive.</value>
+  </data>
+  <data name="Spreadsheet_Functions_If_Info" xml:space="preserve">
+    <value>The IF function returns one value if a condition you specify evaluates to TRUE, and another value if that condition evaluates to FALSE. For example, the formula =IF(A1&gt;10,\"Over 10\",\"10 or less\") returns \"Over 10\" if A1 is greater than 10, and \"10 or less\" if A1 is less than or equal to 10.</value>
+  </data>
+  <data name="Spreadsheet_Functions_If_LogicalTestInfo" xml:space="preserve">
+    <value>Any value or expression that can be evaluated to TRUE or FALSE. For example, A10=100 is a logical expression; if the value in cell A10 is equal to 100, the expression evaluates to TRUE. Otherwise, the expression evaluates to FALSE. This argument can use any comparison calculation operator.</value>
+  </data>
+  <data name="Spreadsheet_Functions_If_ValueIfFalseInfo" xml:space="preserve">
+    <value>The value that you want to be returned if the logical test argument evaluates to FALSE. For example, if the value of this argument is the text string \"Over budget\" and the logical test argument evaluates to FALSE, the IF function returns the text \"Over budget.\" If logical test evaluates to FALSE and the value if false argument is omitted, (that is, there is no comma following the value if true argument), the IF function returns the logical value FALSE. If logical test evaluates to FALSE and the value of the value if false argument is blank (that is, there is only a comma following the value if true argument), the IF function returns the value 0 (zero).</value>
+  </data>
+  <data name="Spreadsheet_Functions_If_ValueIfTrueInfo" xml:space="preserve">
+    <value>The value that you want to be returned if the logical test argument evaluates to TRUE. For example, if the value of this argument is the text string \"Within budget\" and the logical test argument evaluates to TRUE, the IF function returns the text \"Within budget.\" If logical test evaluates to TRUE and the value if true argument is omitted (that is, there is only a comma following the logical test argument), the IF function returns 0 (zero). To display the word TRUE, use the logical value TRUE for the value if true argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_Info" xml:space="preserve">
+    <value>Returns the interest rate for a fully invested security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_InvestmentInfo" xml:space="preserve">
+    <value>is the amount invested in the security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_RedemptionInfo" xml:space="preserve">
+    <value>is the security's redemption value per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IntRate_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Int_Info" xml:space="preserve">
+    <value>Rounds a number down to the nearest integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Int_NumberInfo" xml:space="preserve">
+    <value>is the real number you want to round down to an integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_FvInfo" xml:space="preserve">
+    <value>is the future value, or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_Info" xml:space="preserve">
+    <value>Returns the interest payment for a given period for an investment based on periodic, constant payments and a constant interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_PerInfo" xml:space="preserve">
+    <value>is the period for which you want to find the interest and must be in the range 1 to nper.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_PvInfo" xml:space="preserve">
+    <value>is the present value, or the lump-sum amount that a series of future payments is worth right now. If pv is omitted, it is assumed to be 0 (zero), and you must include the pmt argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ipmt_TypeInfo" xml:space="preserve">
+    <value>is the indicates when payments are due. If type is omitted, it is assumed to be 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsBlank_Info" xml:space="preserve">
+    <value>Returns the logical value TRUE if the value argument is a reference to an empty cell; otherwise it returns FALSE</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsBlank_ValueInfo" xml:space="preserve">
+    <value>The value that you want tested. The value argument can be a blank (empty cell), error, logical value, text, number, or reference value, or a name referring to any of these.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsError_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is any error value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsErr_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is any error value except #N/A.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsErr_ValueInfo" xml:space="preserve">
+    <value>is the value you want tested. Value can be a blank (empty cell), error, logical, text, number, or reference value, or a name referring to any of these, that you want to test.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsEven_Info" xml:space="preserve">
+    <value>Returns TRUE if number is even, or FALSE if number is odd.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsEven_NumberInfo" xml:space="preserve">
+    <value>Required. The value to test. If number is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsFormula_Info" xml:space="preserve">
+    <value>Checks whether there is a reference to a cell that contains a formula, and returns TRUE or FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsFormula_ReferenceInfo" xml:space="preserve">
+    <value>Reference is a reference to the cell you want to test. Reference can be a cell reference, a formula, or a name that refers to a cell.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsLogical_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is a logical value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsNA_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is the #N/A error value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsNonText_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is not text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsNumber_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsoCeiling_Info" xml:space="preserve">
+    <value>Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. Regardless of the sign of the number, the number is rounded up. However, if the number or the significance is zero, zero is returned.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsoCeiling_NumberInfo" xml:space="preserve">
+    <value>is the value you want to round</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsoCeiling_SignificanceInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round. If significance is omitted, its default value is 1</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsOdd_Info" xml:space="preserve">
+    <value>Returns TRUE if number is odd, or FALSE if number is even.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsOdd_NumberInfo" xml:space="preserve">
+    <value>Required. The value to test. If number is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ispmt_Info" xml:space="preserve">
+    <value>Calculates the interest paid during a specific period of an investment. This function is provided for compatibility with Lotus 1-2-3.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ispmt_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ispmt_PerInfo" xml:space="preserve">
+    <value>is the period for which you want to find the interest and must be in the range 1 to nper.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ispmt_PvInfo" xml:space="preserve">
+    <value>is the present value, or the lump-sum amount that a series of future payments is worth right now. If pv is omitted, it is assumed to be 0 (zero), and you must include the pmt argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ispmt_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsRef_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is a reference.</value>
+  </data>
+  <data name="Spreadsheet_Functions_IsText_Info" xml:space="preserve">
+    <value>Returns TRUE if the value is text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Is_ValueInfo" xml:space="preserve">
+    <value>is the value you want tested. Value can be a blank (empty cell), error, logical, text, number, or reference value, or a name referring to any of these, that you want to test.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lcm_Info" xml:space="preserve">
+    <value>Returns the least common multiple of integers. The least common multiple is the smallest positive integer that is a multiple of all integer arguments number1, number2, and so on. Use LCM to add fractions with different denominators.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lcm_NumberInfo" xml:space="preserve">
+    <value>Number1, number2, ...     are 1 to 29 values for which you want the least common multiple. If value is not an integer, it is truncated.</value>
+  </data>
+  <data name="Spreadsheet_Functions_LeftRight_TextInfo" xml:space="preserve">
+    <value>is the text string that contains the characters you want to extract.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Left_Info" xml:space="preserve">
+    <value>Returns the first character or characters in a text string, based on the number of characters you specify.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Left_NumberInfo" xml:space="preserve">
+    <value>specifies the number of characters you want LEFT to extract.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Len_Info" xml:space="preserve">
+    <value>Returns the number of characters in a text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Len_TextInfo" xml:space="preserve">
+    <value>is the text whose length you want to find. Spaces count as characters.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ln_Info" xml:space="preserve">
+    <value>Returns the natural logarithm of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ln_NumberInfo" xml:space="preserve">
+    <value>is the positive real number for which you want the natural logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Log10_Info" xml:space="preserve">
+    <value>Returns the base-10 logarithm of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Log10_NumberInfo" xml:space="preserve">
+    <value>is the positive real number for which you want the base-10 logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Log_BaseInfo" xml:space="preserve">
+    <value>is the positive real number for which you want the logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Log_Info" xml:space="preserve">
+    <value>Returns the logarithm of a number to the base you specify.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Log_NumberInfo" xml:space="preserve">
+    <value>is the positive real number for which you want the logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lower_Info" xml:space="preserve">
+    <value>Converts all uppercase letters in a text string to lowercase.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lower_TextInfo" xml:space="preserve">
+    <value>is the text you want to convert to lowercase. LOWER does not change characters in text that are not letters.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MaxA_Info" xml:space="preserve">
+    <value>Returns the largest value in a list of arguments. Arguments can be the following: numbers; names, arrays, or references that contain numbers; text representations of numbers; or logical values, such as TRUE and FALSE, in a reference.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MaxA_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 values for which you want to find the largest value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Max_Info" xml:space="preserve">
+    <value>Returns the largest value in a set of values. Ignores logical values and text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Max_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are empty cells, logical values, or text numbers for which you want the maximum.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_CouponInfo" xml:space="preserve">
+    <value>is the security's annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_Info" xml:space="preserve">
+    <value>Returns the modified Macauley duration for a security with an assumed par value of $100.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MDuration_YldInfo" xml:space="preserve">
+    <value>is the security's annual yield.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Median_Info" xml:space="preserve">
+    <value>Returns the median of the given numbers. The median is the number in the middle of a set of numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Median_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 numbers for which you want the median.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MinA_Info" xml:space="preserve">
+    <value>Returns the smallest value in the list of arguments. Arguments can be the following: numbers; names, arrays, or references that contain numbers; text representations of numbers; or logical values, such as TRUE and FALSE, in a reference.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MinA_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 values for which you want to find the smallest value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Minute_Info" xml:space="preserve">
+    <value>Returns the minutes of a time value. The minute is given as an integer, ranging from 0 to 59.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Minute_SerialNumberInfo" xml:space="preserve">
+    <value>is the time that contains the minute you want to find. Times may be entered as text strings within quotation marks (for example, \"6:45 PM\"), as decimal numbers (for example, 0.78125, which represents 6:45 PM), or as results of other formulas or functions (for example, TIMEVALUE(\"6:45 PM\")).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Min_Info" xml:space="preserve">
+    <value>Returns the smallest number in a set of values. Ignores logical values and text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Min_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 255 numbers, empty cells, logical values, or text numbers for which you want the minimum.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Mode_Info" xml:space="preserve">
+    <value>Returns the most frequently occurring, or repetitive, value in an array or range of data.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Mode_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 arguments for which you want to calculate the mode. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Mod_DivisorInfo" xml:space="preserve">
+    <value>is the number by which you want to divide number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Mod_Info" xml:space="preserve">
+    <value>Returns the remainder after number is divided by divisor. The result has the same sign as divisor.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Mod_NumberInfo" xml:space="preserve">
+    <value>is the number for which you want to find the remainder.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Month_Info" xml:space="preserve">
+    <value>Returns the month of a date represented by a serial number. The month is given as an integer, ranging from 1 (January) to 12 (December).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Month_SerialNumberInfo" xml:space="preserve">
+    <value>is the date of the month you are trying to find. Dates should be entered by using the DATE function, or as results of other formulas or functions.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MRound_Info" xml:space="preserve">
+    <value>Returns a number rounded to the desired multiple. MROUND rounds up, away from zero, if the remainder of dividing number by multiple is greater than or equal to half the value of multiple.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MRound_MultipleInfo" xml:space="preserve">
+    <value>is the multiple to which you want to round number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_MRound_NumberInfo" xml:space="preserve">
+    <value>is the value to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Multinomial_Info" xml:space="preserve">
+    <value>Returns the ratio of the factorial of a sum of values to the product of factorials.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Multinomial_NumberInfo" xml:space="preserve">
+    <value>Number1,number2, ...     are 1 to 29 values for which you want the multinomial.</value>
+  </data>
+  <data name="Spreadsheet_Functions_NA_Info" xml:space="preserve">
+    <value>Returns the error value #N/A. #N/A is the error value that means \"no value is available.\" Use NA to mark empty cells. By entering #N/A in cells where you are missing information, you can avoid the problem of unintentionally including empty cells in your calculations. (When a formula refers to a cell containing #N/A, the formula returns the #N/A error value.)</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nominal_EffectRateInfo" xml:space="preserve">
+    <value>is the effective interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nominal_Info" xml:space="preserve">
+    <value>Returns the nominal annual interest rate, given the effective rate and the number of compounding periods per year.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nominal_NperyInfo" xml:space="preserve">
+    <value>is the number of compounding periods per year.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Not_Info" xml:space="preserve">
+    <value>Reverses the value of its argument. Use NOT when you want to make sure a value is not equal to one particular value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Not_LogicalInfo" xml:space="preserve">
+    <value>is a value or expression that can be evaluated to TRUE or FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_FvInfo" xml:space="preserve">
+    <value>is the future value, or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_Info" xml:space="preserve">
+    <value>Returns the number of periods for an investment based on periodic, constant payments and a constant interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_PmtInfo" xml:space="preserve">
+    <value>is the present value, or the lump-sum amount that a series of future payments is worth right now.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_PvInfo" xml:space="preserve">
+    <value>is the payment made each period; it cannot change over the life of the annuity. Typically, pmt contains principal and interest but no other fees or taxes.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period. For example, use 6%/4 for quarterly payments at 6% APR.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Nper_TypeInfo" xml:space="preserve">
+    <value>is the number 0 or 1 and indicates when payments are due.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Npv_Info" xml:space="preserve">
+    <value>Calculates the net present value of an investment by using a discount rate and a series of future payments (negative values) and income (positive values).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Npv_RateInfo" xml:space="preserve">
+    <value>is the rate of discount over the length of one period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Npv_ValueInfo" xml:space="preserve">
+    <value>must be equally spaced in time and occur at the end of each period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_N_Info" xml:space="preserve">
+    <value>Returns a value converted to a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_N_ValueInfo" xml:space="preserve">
+    <value>The value you want converted. N converts values listed in the following table.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Right_Info" xml:space="preserve">
+    <value>Returns the last character or characters in a text string, based on the number of characters you specify.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Right_NumberInfo" xml:space="preserve">
+    <value>specifies the number of characters you want RIGHT to extract.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_FirstCoupon" xml:space="preserve">
+    <value>FirstCoupon</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LastInterest" xml:space="preserve">
+    <value>LastInterest</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_RateInfo" xml:space="preserve">
+    <value>is the security's interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_RedemptionInfo" xml:space="preserve">
+    <value>is the security's redemption value per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFL_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFPrice_Info" xml:space="preserve">
+    <value>Returns the price per $100 face value of a security having an odd (short or long) first period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddFYield_Info" xml:space="preserve">
+    <value>Returns the yield of a security that has an odd (short or long) first period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddF_FirstCouponInfo" xml:space="preserve">
+    <value>is the security's first coupon date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddF_IssueInfo" xml:space="preserve">
+    <value>is the security's issue date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddLPrice_Info" xml:space="preserve">
+    <value>Returns the price per $100 face value of a security having an odd (short or long) last coupon period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddLPrice_LastInterestInfo" xml:space="preserve">
+    <value>is the security's last coupon date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddLYield_Info" xml:space="preserve">
+    <value>Returns the yield of a security that has an odd (short or long) last period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddLYield_LastInterestInfo" xml:space="preserve">
+    <value>is the security's first coupon date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddPrice_YldInfo" xml:space="preserve">
+    <value>is the security's annual yield.</value>
+  </data>
+  <data name="Spreadsheet_Functions_OddYield_PrInfo" xml:space="preserve">
+    <value>is the security's price.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Odd_Info" xml:space="preserve">
+    <value>Rounds a positive number up and negative number down to the nearest odd integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Odd_NumberInfo" xml:space="preserve">
+    <value>is the value to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Or_Info" xml:space="preserve">
+    <value>Returns TRUE if any argument is TRUE; returns FALSE if all arguments are FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Or_LogicalInfo" xml:space="preserve">
+    <value>Logical1, logical2, ...     are 1 to 30 conditions you want to test that can be either TRUE or FALSE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PDuration_FvInfo" xml:space="preserve">
+    <value>is the desired future value of the investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PDuration_Info" xml:space="preserve">
+    <value>Returns the number of periods required by an investment to reach a specified value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PDuration_PvInfo" xml:space="preserve">
+    <value>is the present value of the investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PDuration_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pi_Info" xml:space="preserve">
+    <value>Returns the value of Pi, 3.14159265358979, accurate to 15 digits.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_FvInfo" xml:space="preserve">
+    <value>is the future value, or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_Info" xml:space="preserve">
+    <value>Calculates the payment for a loan based on constant payments and a constant interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_NperInfo" xml:space="preserve">
+    <value>is the total number of payments for the loan.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_PvInfo" xml:space="preserve">
+    <value>is the present value, or the lump-sum amount that a series of future payments is worth right now.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period. For example, use 6%/4 for quarterly payments at 6% APR.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pmt_TypeInfo" xml:space="preserve">
+    <value>is the number 0 or 1 and indicates when payments are due.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Power_Info" xml:space="preserve">
+    <value>Returns the result of a number raised to a power.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Power_NumberInfo" xml:space="preserve">
+    <value>is the base number, any real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Power_PowerInfo" xml:space="preserve">
+    <value>is the exponent, to which the base number is raised.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ppmt_Info" xml:space="preserve">
+    <value>Returns the payment on the principal for a given period for an investment based on periodic, constant payments and a constant interest rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ppmt_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Ppmt_PerInfo" xml:space="preserve">
+    <value>is the period and must be in the range 1 to nper.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Denominator" xml:space="preserve">
+    <value>Denominator</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LowerLimit" xml:space="preserve">
+    <value>lower_limit</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Number1" xml:space="preserve">
+    <value>Number1</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Number2" xml:space="preserve">
+    <value>Number2</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Numerator" xml:space="preserve">
+    <value>Numerator</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_ShiftAmount" xml:space="preserve">
+    <value>Shift_amount</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_UpperLimit" xml:space="preserve">
+    <value>upper_limit</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitAnd_Info" xml:space="preserve">
+    <value>Returns a bitwise 'AND' of two numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitAnd_NumberInfo" xml:space="preserve">
+    <value>Must be in decimal form and greater than or equal to 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitLShift_Info" xml:space="preserve">
+    <value>Returns a number shifted left by the specified number of bits.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitOr_Info" xml:space="preserve">
+    <value>Returns a bitwise 'OR' of two numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitOr_NumberInfo" xml:space="preserve">
+    <value>Must be in decimal form and greater than or equal to 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitRShift_Info" xml:space="preserve">
+    <value>Returns a number shifted right by the specified number of bits.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitShift_NumberInfo" xml:space="preserve">
+    <value>Number must be an integer greater than or equal to 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitShift_ShiftAmountInfo" xml:space="preserve">
+    <value>Shift_amount must be an integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BitXor_Info" xml:space="preserve">
+    <value>Returns a bitwise 'XOR' of two numbers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Delta_Info" xml:space="preserve">
+    <value>Tests whether two values are equal. Returns 1 if number1 = number2; returns 0 otherwise. Use this function to filter a set of values. For example, by summing several DELTA functions you calculate the count of equal pairs. This function is also known as the Kronecker Delta function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Delta_Number1Info" xml:space="preserve">
+    <value>The first number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Delta_Number2Info" xml:space="preserve">
+    <value>The second number. If omitted, number2 is assumed to be zero.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfCPrecise_Info" xml:space="preserve">
+    <value>Returns the complementary ERFC.PRECISE function integrated between x and infinity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfCPrecise_XInfo" xml:space="preserve">
+    <value>The lower bound for integrating ERFC.PRECISE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfC_Info" xml:space="preserve">
+    <value>Returns the complementary ERF function integrated between x and infinity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfC_XInfo" xml:space="preserve">
+    <value>The lower bound for integrating ERFC.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfPrecise_Info" xml:space="preserve">
+    <value>Returns the error function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ErfPrecise_XInfo" xml:space="preserve">
+    <value>The lower bound for integrating ERF.PRECISE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Erf_Info" xml:space="preserve">
+    <value>Returns the error function integrated between lower_limit and upper_limit.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Erf_LowerLimitInfo" xml:space="preserve">
+    <value>The lower bound for integrating ERF.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Erf_UpperLimitInfo" xml:space="preserve">
+    <value>The upper bound for integrating ERF. If omitted, ERF integrates between zero and lower_limit.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PriceDisc_DiscountInfo" xml:space="preserve">
+    <value>is the security's discount rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_PriceDisc_Info" xml:space="preserve">
+    <value>Returns the price per $100 face value of a discounted security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_Info" xml:space="preserve">
+    <value>Returns the price per $100 face value of a security that pays periodic interest.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_RateInfo" xml:space="preserve">
+    <value>is the annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_RedemptionInfo" xml:space="preserve">
+    <value>is the security's redemption value per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Price_YldInfo" xml:space="preserve">
+    <value>is the security's annual yield.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Product_Info" xml:space="preserve">
+    <value>Multiplies all the numbers given as arguments and returns the product.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Product_NumberInfo" xml:space="preserve">
+    <value>Number1, number2, ... are 1 to 30 numbers that you want to multiply.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_FvInfo" xml:space="preserve">
+    <value>is future value, or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0). For example, if you want to save $50,000 to pay for a special project in 18 years, then $50,000 is the future value. You could then make a conservative guess at an interest rate and determine how much you must save each month. If fv is omitted, you must include the pmt argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_Info" xml:space="preserve">
+    <value>Returns the present value of an investment. The present value is the total amount that a series of future payments is worth now. For example, when you borrow money, the loan amount is the present value to the lender.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity. For example, if you get a four-year car loan and make monthly payments, your loan has 4*12 (or 48) periods. You would enter 48 into the formula for nper.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_PmtInfo" xml:space="preserve">
+    <value>is the payment made each period and cannot change over the life of the annuity. Typically, pmt includes principal and interest but no other fees or taxes. For example, the monthly payments on a $10,000, four-year car loan at 12 percent are $263.33. You would enter -263.33 into the formula as the pmt. If pmt is omitted, you must include the fv argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_RateInfo" xml:space="preserve">
+    <value>is the interest rate per period. For example, if you obtain an automobile loan at a 10 percent annual interest rate and make monthly payments, your interest rate per month is 10%/12, or 0.83%. You would enter 10%/12, or 0.83%, or 0.0083, into the formula as the rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Pv_TypeInfo" xml:space="preserve">
+    <value>is the number 0 or 1 and indicates when payments are due.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Quotient_DenominatorInfo" xml:space="preserve">
+    <value>is the divisor.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Quotient_Info" xml:space="preserve">
+    <value>Returns the integer portion of a division. Use this function when you want to discard the remainder of a division.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Quotient_NumeratorInfo" xml:space="preserve">
+    <value>is the dividend.</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_Header" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_LinkTo" xml:space="preserve">
+    <value>Link to:</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_PlaceInDocument" xml:space="preserve">
+    <value>Place in this document</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_TextToDisplay" xml:space="preserve">
+    <value>Text to display:</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Factor" xml:space="preserve">
+    <value>Factor</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Guess" xml:space="preserve">
+    <value>Guess</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Minute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_NoSwitch" xml:space="preserve">
+    <value>NoSwitch</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_NumberTimes" xml:space="preserve">
+    <value>NumberTimes</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_NumDigits" xml:space="preserve">
+    <value>Num_digits</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Second" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_TimeText" xml:space="preserve">
+    <value>TimeText</value>
+  </data>
+  <data name="Spreadsheet_Functions_Radians_AngleInfo" xml:space="preserve">
+    <value>is an angle in degrees that you want to convert.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Radians_Info" xml:space="preserve">
+    <value>Converts degrees to radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_FvInfo" xml:space="preserve">
+    <value>is future value, or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0). For example, if you want to save $50,000 to pay for a special project in 18 years, then $50,000 is the future value. You could then make a conservative guess at an interest rate and determine how much you must save each month. If fv is omitted, you must include the pmt argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_GuessInfo" xml:space="preserve">
+    <value>is your guess for what the rate will be.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_Info" xml:space="preserve">
+    <value>Returns the interest rate per period of an annuity. RATE is calculated by iteration and can have zero or more solutions. If the successive results of RATE do not converge to within 0.0000001 after 20 iterations, RATE returns the #NUM! error value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_NperInfo" xml:space="preserve">
+    <value>is the total number of payment periods in an annuity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_PmtInfo" xml:space="preserve">
+    <value>is the payment made each period and cannot change over the life of the annuity. Typically, pmt includes principal and interest but no other fees or taxes. If pmt is omitted, you must include the fv argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_PvInfo" xml:space="preserve">
+    <value>is the total amount that a series of future payments is worth now.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rate_TypeInfo" xml:space="preserve">
+    <value>is the number 0 or 1 and indicates when payments are due.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_DiscountInfo" xml:space="preserve">
+    <value>is the security's discount rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_Info" xml:space="preserve">
+    <value>Returns the amount received at maturity for a fully invested security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_InvestmentInfo" xml:space="preserve">
+    <value>is the amount invested in the security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Received_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rept_Info" xml:space="preserve">
+    <value>Repeats text a given number of times. Use REPT to fill a cell with a number of instances of a text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rept_NumberTimesInfo" xml:space="preserve">
+    <value>is a positive number specifying the number of times to repeat text.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rept_TextInfo" xml:space="preserve">
+    <value>is the text you want to repeat.</value>
+  </data>
+  <data name="Spreadsheet_Functions_RoundDown_Info" xml:space="preserve">
+    <value>Rounds a number down, toward zero.</value>
+  </data>
+  <data name="Spreadsheet_Functions_RoundDown_NumberInfo" xml:space="preserve">
+    <value>is any real number that you want rounded down.</value>
+  </data>
+  <data name="Spreadsheet_Functions_RoundUpDown_NumDigitsInfo" xml:space="preserve">
+    <value>is the number of digits to which you want to round. Negative rounds to the left of the decimal point; zero or omitted, to the nearest integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_RoundUp_Info" xml:space="preserve">
+    <value>Rounds a number up, away from zero.</value>
+  </data>
+  <data name="Spreadsheet_Functions_RoundUp_NumberInfo" xml:space="preserve">
+    <value>is any real number that you want rounded up.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Round_Info" xml:space="preserve">
+    <value>Rounds a number to a specified number of digits.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Round_NumberInfo" xml:space="preserve">
+    <value>is the number you want to round.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Round_NumDigitsInfo" xml:space="preserve">
+    <value>is the number of digits to which you want to round. Negative rounds to the left of the decimal point; zero to the nearest integer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rri_FvInfo" xml:space="preserve">
+    <value>is the future value of the investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rri_Info" xml:space="preserve">
+    <value>Returns an equivalent interest rate for the growth of an investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rri_NperInfo" xml:space="preserve">
+    <value>is the number of periods for the investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Rri_PvInfo" xml:space="preserve">
+    <value>is the present value of the investment.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Search_Info" xml:space="preserve">
+    <value>Locates one text string within a second text string, and return the number of the starting position of the first text string from the first character of the second text string. SEARCH is not case sensitive. If you want to do a case sensitive search, you can use FIND.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sech_Info" xml:space="preserve">
+    <value>Returns the hyperbolic secant of an angle specified in radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sech_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the hyperbolic secant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Second_Info" xml:space="preserve">
+    <value>Returns the seconds of a time value. The second is given as an integer in the range 0 (zero) to 59.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Second_SerialNumberInfo" xml:space="preserve">
+    <value>is the time that contains the minute you want to find. Times may be entered as text strings within quotation marks (for example, \"6:45 PM\"), as decimal numbers (for example, 0.78125, which represents 6:45 PM), or as results of other formulas or functions (for example, TIMEVALUE(\"6:45 PM\")).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sec_Info" xml:space="preserve">
+    <value>Returns the secant of an angle specified in radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sec_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the secant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sign_Info" xml:space="preserve">
+    <value>Returns the sign of a number: 1 if the number is positive, zero if the number is zero, or -1 if the number is negative.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sign_NumberInfo" xml:space="preserve">
+    <value>is any real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sinh_Info" xml:space="preserve">
+    <value>Returns the hyperbolic sine of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sinh_NumberInfo" xml:space="preserve">
+    <value>is any real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sin_Info" xml:space="preserve">
+    <value>Returns the sine of an angle.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sin_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the sine. Degrees * Pi()/180 = radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sln_CostInfo" xml:space="preserve">
+    <value>is the initial cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sln_Info" xml:space="preserve">
+    <value>Returns the straight-line depreciation of an asset for one period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sln_LifeInfo" xml:space="preserve">
+    <value>is the number of periods over which the asset is depreciated (sometimes called the useful life of the asset).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sln_SalvageInfo" xml:space="preserve">
+    <value>is the value at the end of the depreciation (sometimes called the salvage value of the asset).</value>
+  </data>
+  <data name="Spreadsheet_Functions_SqrtPi_Info" xml:space="preserve">
+    <value>Returns the square root of (number * pi).</value>
+  </data>
+  <data name="Spreadsheet_Functions_SqrtPi_NumberInfo" xml:space="preserve">
+    <value>is the number by which pi is multiplied.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sqrt_Info" xml:space="preserve">
+    <value>Returns the square root of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sqrt_NumberInfo" xml:space="preserve">
+    <value>is the number for which you want the square root.</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevA_Info" xml:space="preserve">
+    <value>Estimates standard deviation based on a sample. The standard deviation is a measure of how widely values are dispersed from the average value (the mean).</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevA_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 values corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevPA_Info" xml:space="preserve">
+    <value>Calculates standard deviation based on the entire population given as arguments, including text and logical values. The standard deviation is a measure of how widely values are dispersed from the average value (the mean).</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevPA_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 values corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevP_Info" xml:space="preserve">
+    <value>Calculates standard deviation based on the entire population given as arguments. The standard deviation is a measure of how widely values are dispersed from the average value (the mean).</value>
+  </data>
+  <data name="Spreadsheet_Functions_StdevP_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 number arguments corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Stdev_Info" xml:space="preserve">
+    <value>Estimates standard deviation based on a sample. The standard deviation is a measure of how widely values are dispersed from the average value (the mean).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Stdev_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are 1 to 30 number arguments corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumSq_Info" xml:space="preserve">
+    <value>Returns the sum of the squares of the arguments.</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumSq_NumberInfo" xml:space="preserve">
+    <value>Number1, number2, ... are 1 to 30 arguments for which you want the sum of the squares. You can also use a single array or a reference to an array instead of arguments separated by commas.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sum_Info" xml:space="preserve">
+    <value>Adds all the numbers in range of cells.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Sum_NumberInfo" xml:space="preserve">
+    <value>number1, number2,... are the numbers to sum. Logical values and text are ignored in cells, included if typed as arguments.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Syd_CostInfo" xml:space="preserve">
+    <value>is the initial cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Syd_Info" xml:space="preserve">
+    <value>Returns the sum-of-years' digits depreciation of an asset for a specified period.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Syd_LifeInfo" xml:space="preserve">
+    <value>is the number of periods over which the asset is depreciated (sometimes called the useful life of the asset).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Syd_PerInfo" xml:space="preserve">
+    <value>is the period and must use the same units as life.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Syd_SalvageInfo" xml:space="preserve">
+    <value>is the value at the end of the depreciation (sometimes called the salvage value of the asset)</value>
+  </data>
+  <data name="Spreadsheet_Functions_Tanh_Info" xml:space="preserve">
+    <value>Returns the hyperbolic tangent of a number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Tanh_NumberInfo" xml:space="preserve">
+    <value>is any real number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Tan_Info" xml:space="preserve">
+    <value>Returns the tangent of an angle.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Tan_NumberInfo" xml:space="preserve">
+    <value>is the angle in radians for which you want the tangent. Degrees * Pi()/180 = radians.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBillEq_Info" xml:space="preserve">
+    <value>Returns the bond-equivalent yield for a Treasury bill.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBillPrice_Info" xml:space="preserve">
+    <value>Returns the price per $100 face value for a Treasury bill.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBillYield_Info" xml:space="preserve">
+    <value>Returns the yield for a Treasury bill.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBillYield_PrInfo" xml:space="preserve">
+    <value>is the Treasury bill's price per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBill_DiscountInfo" xml:space="preserve">
+    <value>is the Treasury bill's discount rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBill_MaturityInfo" xml:space="preserve">
+    <value>is the Treasury bill's maturity date. The maturity date is the date when the Treasury bill expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TBill_SettlementInfo" xml:space="preserve">
+    <value>is the Treasury bill's settlement date. The security settlement date is the date after the issue date when the Treasury bill is traded to the buyer.</value>
+  </data>
+  <data name="Spreadsheet_Functions_TimeValue_Info" xml:space="preserve">
+    <value>Returns the decimal number of the time represented by a text string. The decimal number is a value ranging from 0 (zero) to 0.99999999, representing the times from 0:00:00 (12:00:00 AM) to 23:59:59 (11:59:59 P.M.).</value>
+  </data>
+  <data name="Spreadsheet_Functions_TimeValue_TimeTextInfo" xml:space="preserve">
+    <value>is a text string that represents a time in any one of the Microsoft Excel time formats; for example, \"6:45 PM\" and \"18:45\" text strings within quotation marks that represent time.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Time_HourInfo" xml:space="preserve">
+    <value>is a number from 0 (zero) to 32767 representing the hour. Any value greater than 23 will be divided by 24 and the remainder will be treated as the hour value. For example, TIME(27,0,0) = TIME(3,0,0) = .125 or 3:00 AM.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Time_Info" xml:space="preserve">
+    <value>Returns the decimal number for a particular time. If the cell format was General before the function was entered, the result is formatted as a date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Time_MinuteInfo" xml:space="preserve">
+    <value>is a number from 0 to 32767 representing the minute. Any value greater than 59 will be converted to hours and minutes. For example, TIME(0,750,0) = TIME(12,30,0) = .520833 or 12:30 PM.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Time_SecondInfo" xml:space="preserve">
+    <value>is a number from 0 to 32767 representing the second. Any value greater than 59 will be converted to hours, minutes, and seconds. For example, TIME(0,0,2000) = TIME(0,33,22) = .023148 or 12:33:20 AM</value>
+  </data>
+  <data name="Spreadsheet_Functions_Today_Info" xml:space="preserve">
+    <value>Returns the serial number of the current date. If the cell format was General before the function was entered, the result is formatted as a date.</value>
+  </data>
+  <data name="Spreadsheet_Functions_True_Info" xml:space="preserve">
+    <value>Returns the logical value TRUE.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Trunc_Info" xml:space="preserve">
+    <value>Truncates a number to an integer by removing the fractional part of the number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Trunc_NumberInfo" xml:space="preserve">
+    <value>is the number you want to truncate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Trunc_NumDigitsInfo" xml:space="preserve">
+    <value>is a number specifying the precision of the truncation. The default value for num_digits is 0 (zero).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Type_Info" xml:space="preserve">
+    <value>Returns the type of value. Use TYPE when the behavior of another function depends on the type of value in a particular cell.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Type_ValueInfo" xml:space="preserve">
+    <value>can be any RadSpreadsheet value, such as a number, text, logical value, and so on.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Upper_Info" xml:space="preserve">
+    <value>Converts text to uppercase.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Upper_TextInfo" xml:space="preserve">
+    <value>is the text you want converted to uppercase. Text can be a reference or text string.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_CostInfo" xml:space="preserve">
+    <value>is the initial cost of the asset.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_EndPeriodInfo" xml:space="preserve">
+    <value>is the ending period for which you want to calculate the depreciation. End_period must use the same units as life.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_FactorInfo" xml:space="preserve">
+    <value>is the rate at which the balance declines. If factor is omitted, it is assumed to be 2 (the double-declining balance method). Change factor if you do not want to use the double-declining balance method. For a description of the double-declining balance method, see DDB.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_Info" xml:space="preserve">
+    <value>Returns the depreciation for each accounting period. This function is provided for the French accounting system. If an asset is purchased in the middle of the accounting period, the prorated depreciation is taken into account. The function is similar to AMORLINC, except that a depreciation coefficient is applied in the calculation depending on the life of the assets.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_LifeInfo" xml:space="preserve">
+    <value>is the number of periods over which the asset is depreciated (sometimes called the useful life of the asset)..</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_NoSwitchInfo" xml:space="preserve">
+    <value>A logical value specifying whether to switch to straight-line depreciation when depreciation is greater than the declining balance calculation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_SalvageInfo" xml:space="preserve">
+    <value>is the value at the end of the depreciation (sometimes called the salvage value of the asset). This value can be 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Vdb_StartPeriodInfo" xml:space="preserve">
+    <value>is the starting period for which you want to calculate the depreciation. Start_period must use the same units as life.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Xor_Info" xml:space="preserve">
+    <value>The result of XOR is TRUE when the number of TRUE inputs is odd and FALSE when the number of TRUE inputs is even.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Xor_LogicalInfo" xml:space="preserve">
+    <value>Logical1 is required, subsequent logical values are optional. 1 to 254 conditions you want to test that can be either TRUE or FALSE, and can be logical values, arrays, or references.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Year_Info" xml:space="preserve">
+    <value>Returns the year corresponding to a date. The year is returned as an integer in the range 1900-9999.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Year_SerialNumberInfo" xml:space="preserve">
+    <value>is the date of the year you want to find. Dates should be entered by using the DATE function, or as results of other formulas or functions.</value>
+  </data>
+  <data name="Spreadsheet_Functions_YieldDisc_Info" xml:space="preserve">
+    <value>Returns the annual yield for a discounted security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_YieldMat_Info" xml:space="preserve">
+    <value>Returns the annual yield of a security that pays interest at maturity.</value>
+  </data>
+  <data name="Spreadsheet_Functions_YieldMat_IssueInfo" xml:space="preserve">
+    <value>is the security's issue date, expressed as a serial date number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_YieldMat_PrInfo" xml:space="preserve">
+    <value>is the type of day count basis to use</value>
+  </data>
+  <data name="Spreadsheet_Functions_YieldMat_RateInfo" xml:space="preserve">
+    <value>is the annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_BasisInfo" xml:space="preserve">
+    <value>is the type of day count basis to use.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_FrequencyInfo" xml:space="preserve">
+    <value>is the number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_Info" xml:space="preserve">
+    <value>Returns the annual yield for a discounted security.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_MaturityInfo" xml:space="preserve">
+    <value>is the security's maturity date. The maturity date is the date when the security expires.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_PrInfo" xml:space="preserve">
+    <value>is the security's price per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_RateInfo" xml:space="preserve">
+    <value>is the security's annual coupon rate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_RedemptionInfo" xml:space="preserve">
+    <value>is the security's redemption value per $100 face value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Yield_SettlementInfo" xml:space="preserve">
+    <value>is the security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent1" xml:space="preserve">
+    <value>Accent 1</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent2" xml:space="preserve">
+    <value>Accent 2</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent3" xml:space="preserve">
+    <value>Accent 3</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent4" xml:space="preserve">
+    <value>Accent 4</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent5" xml:space="preserve">
+    <value>Accent 5</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Accent6" xml:space="preserve">
+    <value>Accent 6</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_FollowedHyperlink" xml:space="preserve">
+    <value>Followed Hyperlink</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Header" xml:space="preserve">
+    <value>Create New Theme Colors</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Hyperlink" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Sample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_TextBackGroundDark1" xml:space="preserve">
+    <value>Text/Background - Dark 1</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_TextBackGroundDark2" xml:space="preserve">
+    <value>Text/Background - Dark 2</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_TextBackGroundLight1" xml:space="preserve">
+    <value>Text/Background - Light 1</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_TextBackGroundLight2" xml:space="preserve">
+    <value>Text/Background - Light 2</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeColorsDialog_ThemeColors" xml:space="preserve">
+    <value>Theme colors</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_BodyFont" xml:space="preserve">
+    <value>Body font:</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_BodyText1" xml:space="preserve">
+    <value>Body text body text body text.</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_BodyText2" xml:space="preserve">
+    <value>Body text body text.</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_Header" xml:space="preserve">
+    <value>Create New Theme Fonts</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_Heading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_HeadingFont" xml:space="preserve">
+    <value>Heading font:</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Spreadsheet_CreateNewThemeFontsDialog_Sample" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Spreadsheet_CreateNewTheme_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Find" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_FindWhat" xml:space="preserve">
+    <value>Find what:</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Header" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_LookIn" xml:space="preserve">
+    <value>Look in:</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_MatchCase" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_MatchEntireContent" xml:space="preserve">
+    <value>Match entire cell contents</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_ReplaceWith" xml:space="preserve">
+    <value>Replace with:</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Search" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Within" xml:space="preserve">
+    <value>Within:</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_AutoFill" xml:space="preserve">
+    <value>AutoFill</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Columns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_DateUnit" xml:space="preserve">
+    <value>Date unit</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Growth" xml:space="preserve">
+    <value>Growth</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Header" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Linear" xml:space="preserve">
+    <value>Linear</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Rows" xml:space="preserve">
+    <value>Rows</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_SeriesIn" xml:space="preserve">
+    <value>Series in</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_StepValue" xml:space="preserve">
+    <value>Step value:</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_StopValue" xml:space="preserve">
+    <value>Stop value:</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Trend" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Weekday" xml:space="preserve">
+    <value>Weekday</value>
+  </data>
+  <data name="Spreadsheet_SeriesDialog_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Aligned" xml:space="preserve">
+    <value>Aligned</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Body" xml:space="preserve">
+    <value> (Body)</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Bold" xml:space="preserve">
+    <value>Bold </value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Border" xml:space="preserve">
+    <value> Border</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Borders" xml:space="preserve">
+    <value> Borders</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_DiagonalDown" xml:space="preserve">
+    <value>DiagonalDown</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_DiagonalUp" xml:space="preserve">
+    <value>DiagonalUp</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_NoBorders" xml:space="preserve">
+    <value>No Borders</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_BorderProperties_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_DuplicatedStyleName" xml:space="preserve">
+    <value>This style name already exists.</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Format" xml:space="preserve">
+    <value>Format...</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Header" xml:space="preserve">
+    <value>Cell Style</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Headings" xml:space="preserve">
+    <value> (Headings)</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_CenterContinuous" xml:space="preserve">
+    <value>CenterContinuous</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Distributed" xml:space="preserve">
+    <value>Distributed</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Fill" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Justify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_HorizontalAlignment_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Indents" xml:space="preserve">
+    <value>Indents</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Italic" xml:space="preserve">
+    <value>Italic </value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_NoShading" xml:space="preserve">
+    <value>No Shading</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Shaded" xml:space="preserve">
+    <value>Shaded</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_StyleIncludes" xml:space="preserve">
+    <value>Style Includes (By Example)</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_StyleName" xml:space="preserve">
+    <value>Style name:</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent1" xml:space="preserve">
+    <value>Accent1</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent2" xml:space="preserve">
+    <value>Accent2</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent3" xml:space="preserve">
+    <value>Accent3</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent4" xml:space="preserve">
+    <value>Accent4</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent5" xml:space="preserve">
+    <value>Accent5</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Accent6" xml:space="preserve">
+    <value>Accent6</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Background1" xml:space="preserve">
+    <value>Background1</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Background2" xml:space="preserve">
+    <value>Background2</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_FollowedHyperlink" xml:space="preserve">
+    <value>FollowedHyperlink</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Hyperlink" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Text1" xml:space="preserve">
+    <value>Text1</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_ThemeColorType_Text2" xml:space="preserve">
+    <value>Text2</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Underline" xml:space="preserve">
+    <value>Underline </value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Distributed" xml:space="preserve">
+    <value>Distributed</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Justify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_VerticalAlignment_Undetermined" xml:space="preserve">
+    <value>Undetermined</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Wrap" xml:space="preserve">
+    <value>(Wrap)</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Cell" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_ByColumns" xml:space="preserve">
+    <value>By Columns</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_FindAll" xml:space="preserve">
+    <value>Find All</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_FindNext" xml:space="preserve">
+    <value>Find Next</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Formula" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Formulas" xml:space="preserve">
+    <value>Formulas</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_ReplaceAll" xml:space="preserve">
+    <value>Replace All</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_ByRows" xml:space="preserve">
+    <value>By Rows</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Sheet" xml:space="preserve">
+    <value>Sheet</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_SheetColumn" xml:space="preserve">
+    <value>Sheet</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Values" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_Workbook" xml:space="preserve">
+    <value>Workbook</value>
+  </data>
+  <data name="Spreadsheet_ColorGallery_ConfirmThemeColorsDelete" xml:space="preserve">
+    <value>Delete these theme colors?</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_MustBeDecimalBetween" xml:space="preserve">
+    <value>{0} must be a decimal number between {1} and {2}.</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_MustBeDecimalGreater" xml:space="preserve">
+    <value>{0} must be a decimal number greater or equal than {1}.</value>
+  </data>
+  <data name="Spreadsheet_DecimalNumberPromptDialog_MustBeDecimalLess" xml:space="preserve">
+    <value>{0} must be a decimal number less or equal than {1}.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CyclicReferenceErrorMessage" xml:space="preserve">
+    <value>Cyclic Reference</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CyclicReferenceMessage" xml:space="preserve">
+    <value>Careful, we found one or more circular references in your workbook that might cause your formulas to calculate incorrectly.
+
+FYI: A circular reference can be a formula that refers to its own cell value, or refers to a cell dependent on its own cell value.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_DivideByZeroErrorMessage" xml:space="preserve">
+    <value>Divide by Zero Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_GeneralErrorMessage" xml:space="preserve">
+    <value>We found a problem with this formula. Try clicking Insert Function on the Formulas tab to fix it.
+
+Not trying to type a formula? When the first character is an equal (=) or minus (-) sign, RadSpreadsheet thinks it is a formula. For example, when you type =1+1 the cell shows 2.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidSheetNameErrorMessage" xml:space="preserve">
+    <value>Sheet name is not valid. A valid sheet name must meet the following criteria:
+- The name cannot be empty
+- The name cannot exceed 31 characters
+- The name cannot start or end with a single quote (')
+- The name cannot contain any of the following characters: \ / ? * [ ] :</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_MissingOperandMessage" xml:space="preserve">
+    <value>Your formula is incomplete. You must include an operand following each operator. For example, =A1+A2+ is missing an operand following the second plus sign. Try one of the following:
+
+• Add the missing operand to the formula, or delete the extra operator.
+• If you are not trying to enter a formula, avoid using an equal sign (=) or a minus sign (-).</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NameErrorMessage" xml:space="preserve">
+    <value>Invalid Name Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NotAvailableErrorMessage" xml:space="preserve">
+    <value>Value Not Available Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NotUniqueSheetNameErrorMessage" xml:space="preserve">
+    <value>Cannot rename a sheet to the same name as another sheet.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NullErrorMessage" xml:space="preserve">
+    <value>Null Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NumberErrorMessage" xml:space="preserve">
+    <value>Number Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ReferenceErrorMessage" xml:space="preserve">
+    <value>Invalid Cell Reference Error</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ValueErrorMessage" xml:space="preserve">
+    <value>Error in Value</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_CannotFindData" xml:space="preserve">
+    <value>Cannot find the data you're searching for.</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_CannotFindDataToReplace" xml:space="preserve">
+    <value>Can not find any data to replace. Check if your search criteria is defined correctly.</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_CannotFindMatch" xml:space="preserve">
+    <value>Can not find a match.</value>
+  </data>
+  <data name="Spreadsheet_FindAndReplaceDialog_SearchWasCompleted" xml:space="preserve">
+    <value>Search was completed and {0} replacements were made.</value>
+  </data>
+  <data name="Spreadsheet_FontGallery_ConfirmThemeFontsDelete" xml:space="preserve">
+    <value>Delete these theme fonts?</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_SizeError" xml:space="preserve">
+    <value>Font size must be between 1 and 409 points.</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_CommandCannotBeUsed" xml:space="preserve">
+    <value>That command cannot be used on multiple selections.</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_ConfirmUnmergingCellsMessage" xml:space="preserve">
+    <value>This operation will cause some merged cells to unmerge. Do you wish to continue?</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_InvalidReference" xml:space="preserve">
+    <value>Invalid Reference</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_InvalidReferenceDescription" xml:space="preserve">
+    <value>Reference is not valid. Check the reference and try again.</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_InvalidUri" xml:space="preserve">
+    <value>Invalid Uri</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_InvalidUriDescription" xml:space="preserve">
+    <value>The address of this site is not valid. Check the address and try again.</value>
+  </data>
+  <data name="Spreadsheet_NameBox_InvalidNameMessage" xml:space="preserve">
+    <value>You must enter a valid reference you want to go to,
+or type a valid name for the selection.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Hex_Info" xml:space="preserve">
+    <value>Converts an octal number to hexadecimal.</value>
+  </data>
+  <data name="Spreadsheet_InsertHyperlinkDialog_Address" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_From_unit" xml:space="preserve">
+    <value>From_unit</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Inumber" xml:space="preserve">
+    <value>Inumber</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Inumber1" xml:space="preserve">
+    <value>Inumber1</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Inumber2" xml:space="preserve">
+    <value>Inumber2</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_I_num" xml:space="preserve">
+    <value>I_num</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Real_num" xml:space="preserve">
+    <value>Real_num</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Step" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Suffix" xml:space="preserve">
+    <value>Suffix</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_To_unit" xml:space="preserve">
+    <value>To_unit</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselK_Info" xml:space="preserve">
+    <value>Returns the modified Bessel function, which is equivalent to the Bessel functions evaluated for purely imaginary arguments.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselK_NInfo" xml:space="preserve">
+    <value>The order of the Bessel function. If n is not an integer, it is truncated. Must be &gt;= 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselK_XInfo" xml:space="preserve">
+    <value>The value at which to evaluate the function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselY_Info" xml:space="preserve">
+    <value>Returns the Bessel function, which is also called the Weber function or the Neumann function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselY_NInfo" xml:space="preserve">
+    <value>The order of the function. If n is not an integer, it is truncated. Must be &gt;= 0.</value>
+  </data>
+  <data name="Spreadsheet_Functions_BesselY_XInfo" xml:space="preserve">
+    <value>The value at which to evaluate the function.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Hex_Info" xml:space="preserve">
+    <value>Converts a binary number to hexadecimal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Hex_NumberInfo" xml:space="preserve">
+    <value>The binary number you want to convert. Number cannot contain more than 10 characters (10 bits). The most significant bit of number is the sign bit. The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Hex_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, BIN2HEX uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Oct_Info" xml:space="preserve">
+    <value>Converts a binary number to octal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Oct_NumberInfo" xml:space="preserve">
+    <value>The binary number you want to convert. Number cannot contain more than 10 characters (10 bits). The most significant bit of number is the sign bit. The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Bin2Oct_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, BIN2OCT uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Complex_Info" xml:space="preserve">
+    <value>Converts real and imaginary coefficients into a complex number of the form x + yi or x + yj.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Complex_I_numInfo" xml:space="preserve">
+    <value>The imaginary coefficient of the complex number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Complex_Real_numInfo" xml:space="preserve">
+    <value>The real coefficient of the complex number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Complex_SuffixInfo" xml:space="preserve">
+    <value>The suffix for the imaginary component of the complex number. If omitted, suffix is assumed to be "i".</value>
+  </data>
+  <data name="Spreadsheet_Functions_Convert_From_unitInfo" xml:space="preserve">
+    <value>The units for the Number argument.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Convert_Info" xml:space="preserve">
+    <value>Converts a number from one measurement system to another. For example, CONVERT can translate a table of distances in miles to a table of distances in kilometers.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Convert_NumberInfo" xml:space="preserve">
+    <value>A complex number you want to raise to a power.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Convert_To_unitInfo" xml:space="preserve">
+    <value>The units for the CONVERT function's result.</value>
+  </data>
+  <data name="Spreadsheet_Functions_GEStep_Info" xml:space="preserve">
+    <value>Returns 1 if number ≥ step; returns 0 (zero) otherwise. Use this function to filter a set of values. For example, by summing several GESTEP functions you calculate the count of values that exceed a threshold.</value>
+  </data>
+  <data name="Spreadsheet_Functions_GEStep_NumberInfo" xml:space="preserve">
+    <value>The value to test against step.</value>
+  </data>
+  <data name="Spreadsheet_Functions_GEStep_StepInfo" xml:space="preserve">
+    <value>The threshold value. If you omit a value for step, GESTEP uses zero.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Bin_Info" xml:space="preserve">
+    <value>Converts a hexadecimal number to binary.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Bin_NumberInfo" xml:space="preserve">
+    <value>The hexadecimal number you want to convert. Number cannot contain more than 10 characters. The most significant bit of number is the sign bit (40th bit from the right). The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Bin_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, HEX2BIN uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Dec_Info" xml:space="preserve">
+    <value>Converts a hexadecimal number to decimal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Dec_NumberInfo" xml:space="preserve">
+    <value>The hexadecimal number you want to convert. Number cannot contain more than 10 characters (40 bits). The most significant bit of number is the sign bit. The remaining 39 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Oct_Info" xml:space="preserve">
+    <value>Converts a hexadecimal number to octal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Oct_NumberInfo" xml:space="preserve">
+    <value>The hexadecimal number you want to convert. Number cannot contain more than 10 characters. The most significant bit of number is the sign bit. The remaining 39 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Hex2Oct_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, HEX2OCT uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImAbs_Info" xml:space="preserve">
+    <value>Returns the absolute value (modulus) of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImAbs_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the absolute value.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Imaginary_Info" xml:space="preserve">
+    <value>Returns the imaginary coefficient of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Imaginary_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the imaginary coefficient.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImArgument_Info" xml:space="preserve">
+    <value>Returns the argument θ (theta), an angle expressed in radians, such that: x+yi = |x+yi|(cos(θ) + i sin(θ))</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImArgument_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the argument θ (theta).</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImConjugate_Info" xml:space="preserve">
+    <value>Returns the complex conjugate of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImConjugate_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the conjugate.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCosh_Info" xml:space="preserve">
+    <value>Returns the hyperbolic cosine of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCosh_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the hyperbolic cosine.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCos_Info" xml:space="preserve">
+    <value>Returns the cosine of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCos_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the cosine.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCot_Info" xml:space="preserve">
+    <value>Returns the cotangent of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCot_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the cotangent.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCsch_Info" xml:space="preserve">
+    <value>Returns the hyperbolic cosecant of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCsch_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the hyperbolic cosecant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCsc_Info" xml:space="preserve">
+    <value>Returns the cosecant of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImCsc_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the cosecant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImDiv_Info" xml:space="preserve">
+    <value>Returns the quotient of two complex numbers in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImDiv_Inumber1Info" xml:space="preserve">
+    <value>The complex numerator or dividend.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImDiv_Inumber2Info" xml:space="preserve">
+    <value>The complex denominator or divisor.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImExp_Info" xml:space="preserve">
+    <value>Returns the exponential of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImExp_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the exponential.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLn_Info" xml:space="preserve">
+    <value>Returns the natural logarithm of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLn_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the natural logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLog10_Info" xml:space="preserve">
+    <value>Returns the common logarithm (base 10) of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLog10_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the common logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLog2_Info" xml:space="preserve">
+    <value>Returns the base-2 logarithm of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImLog2_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the base-2 logarithm.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImPower_Info" xml:space="preserve">
+    <value>Returns a complex number in x + yi or x + yj text format raised to a power.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImPower_InumberInfo" xml:space="preserve">
+    <value>A complex number you want to raise to a power.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImPower_NumberInfo" xml:space="preserve">
+    <value>The power to which you want to raise the complex number.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImProduct_Info" xml:space="preserve">
+    <value>Returns the product of 1 to 255 complex numbers in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImProduct_InumberInfo" xml:space="preserve">
+    <value>Inumber1, Inumber2,... are the complex numbers to multiply.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImReal_Info" xml:space="preserve">
+    <value>Returns the real coefficient of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImReal_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the real coefficient.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSech_Info" xml:space="preserve">
+    <value>Returns the hyperbolic secant of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSech_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the hyperbolic secant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSec_Info" xml:space="preserve">
+    <value>Returns the secant of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSec_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the secant.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSinh_Info" xml:space="preserve">
+    <value>Returns the hyperbolic sine of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSinh_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the hyperbolic sine.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSin_Info" xml:space="preserve">
+    <value>Returns the sine of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSin_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the sine.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSqrt_Info" xml:space="preserve">
+    <value>Returns the square root of a complex number in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSqrt_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the square root.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSub_Info" xml:space="preserve">
+    <value>Returns the difference of two complex numbers in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSub_Inumber1Info" xml:space="preserve">
+    <value>The complex number from which to subtract inumber2.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSub_Inumber2Info" xml:space="preserve">
+    <value>The complex number to subtract from inumber1.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSum_Info" xml:space="preserve">
+    <value>Returns the sum of one or more complex numbers in x + yi or x + yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImSum_InumberInfo" xml:space="preserve">
+    <value>Inumber1, Inumber2,... are the complex numbers to sum.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImTan_Info" xml:space="preserve">
+    <value>Returns the tangent of a complex number in x+yi or x+yj text format.</value>
+  </data>
+  <data name="Spreadsheet_Functions_ImTan_InumberInfo" xml:space="preserve">
+    <value>A complex number for which you want the tangent.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Bin_Info" xml:space="preserve">
+    <value>Converts an octal number to binary.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Bin_NumberInfo" xml:space="preserve">
+    <value>The octal number you want to convert. Number may not contain more than 10 characters. The most significant bit of number is the sign bit. The remaining 29 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Bin_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, OCT2BIN uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Dec_Info" xml:space="preserve">
+    <value>Converts an octal number to decimal.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Dec_NumberInfo" xml:space="preserve">
+    <value>The octal number you want to convert. Number may not contain more than 10 octal characters (30 bits). The most significant bit of number is the sign bit. The remaining 29 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Hex_NumberInfo" xml:space="preserve">
+    <value>The octal number you want to convert. Number may not contain more than 10 octal characters (30 bits). The most significant bit of number is the sign bit. The remaining 29 bits are magnitude bits. Negative numbers are represented using two's-complement notation.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Oct2Hex_PlacesInfo" xml:space="preserve">
+    <value>The number of characters to use. If places is omitted, OCT2HEX uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_OperationCantBePerformed" xml:space="preserve">
+    <value>Operation cannot be performed.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_UnsupportedType" xml:space="preserve">
+    <value>Unsupported type [{0}]</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Spreadsheet_NumberFormatCombobox_LongDate" xml:space="preserve">
+    <value>Long Date</value>
+  </data>
+  <data name="Spreadsheet_NumberFormatCombobox_ShortDate" xml:space="preserve">
+    <value>Short Date</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_DataAndModel" xml:space="preserve">
+    <value>Data And Model</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_GoodBadAndNeutral" xml:space="preserve">
+    <value>Good, Bad And Neutral</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_NumberFormat" xml:space="preserve">
+    <value>Number Format</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_ThemedCellStyles" xml:space="preserve">
+    <value>Themed Cell Styles</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_TitlesAndHeadings" xml:space="preserve">
+    <value>Titles And Headings</value>
+  </data>
+  <data name="Spreadsheet_Themes_BuiltIn" xml:space="preserve">
+    <value>Built-in</value>
+  </data>
+  <data name="Spreadsheet_Themes_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_FileOpenError" xml:space="preserve">
+    <value>The file cannot be opened. It might be locked by another application.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_FormatNotSupported" xml:space="preserve">
+    <value>File format "{0}" is not supported.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_FormatStringIncorrectFormat" xml:space="preserve">
+    <value>Format string is not in the correct format.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NamedObjectExistsError" xml:space="preserve">
+    <value>Item with name {0} already exists.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ParameterConvertError" xml:space="preserve">
+    <value>Parameter could not be converted to caret move type.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_SheetTypeInvalidError" xml:space="preserve">
+    <value>Invalid sheet type </value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_SheetTypeUnsupportedError" xml:space="preserve">
+    <value>The sheet type {0} is not supported</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_TokenNotContained" xml:space="preserve">
+    <value>Token not contained in the InputStringCollection</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_TokenNotFound" xml:space="preserve">
+    <value>Expected token not found: </value>
+  </data>
+  <data name="Spreadsheet_ScaleFactorDialog_RangeError" xml:space="preserve">
+    <value>The number must be between {0} and {1}. 
+Try again by entering a number in this range.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CannotChangeMergedCell" xml:space="preserve">
+    <value>Cannot change part of a merged cell.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CannotParseValue" xml:space="preserve">
+    <value>Cannot parse value to ICellValue.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CannotPasteDueToSize" xml:space="preserve">
+    <value>The information cannot be pasted because the Copy area and 
+the paste area are not the same size and shape.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CannotPasteGeneral" xml:space="preserve">
+    <value>The information cannot be pasted.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CantMergeSingle" xml:space="preserve">
+    <value>Cannot merge single cell.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CantRedoInBeginUndo" xml:space="preserve">
+    <value>Cannot Redo while in begin undo group.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_CantUndoInBeginUndo" xml:space="preserve">
+    <value>Cannot Undo while in begin undo group.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ClearUndo" xml:space="preserve">
+    <value>Clear Undo while in begin undo group</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ExistingSheetName" xml:space="preserve">
+    <value>Sheet with Name={0} already exist.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_FormatStringInvalid" xml:space="preserve">
+    <value>Invalid Formatting String.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_FormulaValueRequired" xml:space="preserve">
+    <value>Name requires formula cell value</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_GreaterOrEqual" xml:space="preserve">
+    <value>{0} should be greater or equal than {1}.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_HistoryDepth" xml:space="preserve">
+    <value>History depth should be a positive number</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidFormatStringType" xml:space="preserve">
+    <value>Invalid format string type.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidModificator" xml:space="preserve">
+    <value>Invalid modificator.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidMonth" xml:space="preserve">
+    <value>Invalid month.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidName" xml:space="preserve">
+    <value>The name that you entered is not valid.
+
+Reasons for this can include:
+1. The name does not begin with a letter or underscore
+2. The name contains a space or other invalid characters
+3. The name conflicts with a built-in name or the name of another object in the workbook</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidRowName" xml:space="preserve">
+    <value>'{0}' is invalid row name.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ItemAlreadyAdded" xml:space="preserve">
+    <value>The item has already been added to another worksheet.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_LessOrEqual" xml:space="preserve">
+    <value>{0} should be less or equal than {1}.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_Missing" xml:space="preserve">
+    <value> is missing!</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_MustBeFalse" xml:space="preserve">
+    <value>{0} must be false.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_MustBeTrue" xml:space="preserve">
+    <value>{0} must be true.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_MustBeValidDouble" xml:space="preserve">
+    <value>{0} must be a valid double.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NameExists" xml:space="preserve">
+    <value>The name entered already exists. Enter a unique name.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NoActiveSuspend" xml:space="preserve">
+    <value>There is no active suspend to end.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NoActiveSuspendToResume" xml:space="preserve">
+    <value>There is no active suspend to resume.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NoActiveUpdate" xml:space="preserve">
+    <value>There is no active update to end.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_NotSupportedInStyles" xml:space="preserve">
+    <value>The {0} property is not supported in styles.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_OnDetachAction" xml:space="preserve">
+    <value>OnDetachAction method must be static otherwise the event WeakEventListener cannot guarantee to unregister the handler.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_OnEventAction" xml:space="preserve">
+    <value>OnEventAction method must be static otherwise the event WeakEventListener class does not prevent memory leaks.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_OwnerType" xml:space="preserve">
+    <value>owner must be of type </value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_PositiveHeight" xml:space="preserve">
+    <value>Height must be greater or equal to 0</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_PositiveWidth" xml:space="preserve">
+    <value>Width must be greater or equal to 0</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_PositiveWidthAndHeight" xml:space="preserve">
+    <value>Width and height must be greater or equal to 0</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_SameWorkbook" xml:space="preserve">
+    <value>Worksheets should be in the same workbook.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_SheetAlreadyAdded" xml:space="preserve">
+    <value>The sheet has already been added to another workbook.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ShouldBeEqual" xml:space="preserve">
+    <value>{0} should be equal to {1}.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ShouldBeNull" xml:space="preserve">
+    <value> should be null</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_StyleExists" xml:space="preserve">
+    <value>Style with name '{0}' already exists.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_UnknownUnitType" xml:space="preserve">
+    <value>Unknown UnitType</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_UpdateContextType" xml:space="preserve">
+    <value>updateContext must be of type </value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ValueError" xml:space="preserve">
+    <value>The value must belong to the same workbook.</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_WithinRange" xml:space="preserve">
+    <value>{0} should be greater or equal than {1} and less or equal than {2}.</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Recommended" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="Spreadsheet_Themes_Delete" xml:space="preserve">
+    <value>Delete...</value>
+  </data>
+  <data name="Spreadsheet_Themes_Edit" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="Spreadsheet_NumberFormatCombobox_NoFormat" xml:space="preserve">
+    <value>No specific format</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_NewCellStyle" xml:space="preserve">
+    <value>New Cell Style...</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_AllBorder" xml:space="preserve">
+    <value>All Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_Borders" xml:space="preserve">
+    <value>Borders</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_BottomBorder" xml:space="preserve">
+    <value>Bottom Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_DrawBorders" xml:space="preserve">
+    <value>Draw Borders</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_LeftBorder" xml:space="preserve">
+    <value>Left Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_LineColor" xml:space="preserve">
+    <value>Line Color</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_LineStyle" xml:space="preserve">
+    <value>Line Style</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_MoreBorders" xml:space="preserve">
+    <value>More Borders</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_NoBorder" xml:space="preserve">
+    <value>No Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_OutsideBorder" xml:space="preserve">
+    <value>Outside Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_RightBorder" xml:space="preserve">
+    <value>Right Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_ThickBottomBorder" xml:space="preserve">
+    <value>Thick Bottom Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_ThickBoxBorder" xml:space="preserve">
+    <value>Thick Box Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_TopAndBottomBorder" xml:space="preserve">
+    <value>Top and Bottom Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_TopAndThickBottomBorder" xml:space="preserve">
+    <value>Top and Thick Bottom Border</value>
+  </data>
+  <data name="Spreadsheet_BorderMenu_TopBorder" xml:space="preserve">
+    <value>Top Border</value>
+  </data>
+  <data name="Spreadsheet_ColorSelector_MoreColors" xml:space="preserve">
+    <value>More Colors...</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_Comment" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_RefersTo" xml:space="preserve">
+    <value>Refers To:</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_Scope" xml:space="preserve">
+    <value>Scope:</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Font_Single" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="Spreadsheet_FunctionsMenu_InsertFunction" xml:space="preserve">
+    <value>Insert Function...</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_ConfirmMessage" xml:space="preserve">
+    <value>Do you want to save the changes you made to the name reference?</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Header" xml:space="preserve">
+    <value>Name Manager</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_RefersTo" xml:space="preserve">
+    <value>Refers To</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Spreadsheet_NumberFormatComboBox_MoreFormats" xml:space="preserve">
+    <value>More Numbering Formats...</value>
+  </data>
+  <data name="Spreadsheet_SheetSelector_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Spreadsheet_SheetSelector_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Spreadsheet_SheetSelector_Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Spreadsheet_SheetSelector_TabColor" xml:space="preserve">
+    <value>Tab Color</value>
+  </data>
+  <data name="Spreadsheet_StatusBar_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Spreadsheet_StatusBar_ReadyCapital" xml:space="preserve">
+    <value>READY</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_Delete" xml:space="preserve">
+    <value>Delete...</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_Duplicate" xml:space="preserve">
+    <value>Duplicate...</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_Modify" xml:space="preserve">
+    <value>Modify...</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Spreadsheet_StyleGallery_ToolTipInfo" xml:space="preserve">
+    <value>Quickly format a cell by choosing from pre-defined styles.
+
+You can also define your own cell styles.</value>
+  </data>
+  <data name="Spreadsheet_Themes_CreateNewThemeColors" xml:space="preserve">
+    <value>Create New Theme Colors...</value>
+  </data>
+  <data name="Spreadsheet_Themes_CreateNewThemeFonts" xml:space="preserve">
+    <value>Create New Theme Fonts...</value>
+  </data>
+  <data name="Spreadsheet_Workbook" xml:space="preserve">
+    <value>Workbook</value>
+  </data>
+  <data name="Spreadsheet_ColorSelector_Colors" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="Spreadsheet_ColorSelector_OfficeColors" xml:space="preserve">
+    <value>Office Colors</value>
+  </data>
+  <data name="Spreadsheet_InsertFunctionDialog_Engineering" xml:space="preserve">
+    <value>Engineering</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_HeaderNew" xml:space="preserve">
+    <value>New Name</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidCellIndex" xml:space="preserve">
+    <value>The cell index that you provided is not valid</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_InvalidValue" xml:space="preserve">
+    <value>The value that you entered is not valid.</value>
+  </data>
+  <data name="Spreadsheet_CreateUpdateSpreadsheetNameDialog_HeaderEdit" xml:space="preserve">
+    <value>Edit Name</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_DeleteConfirm_Header" xml:space="preserve">
+    <value>Delete Name</value>
+  </data>
+  <data name="Spreadsheet_NameManagerDialog_DeleteConfirm_Message" xml:space="preserve">
+    <value>Are you sure you want to delete the name {0}?</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Number_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+</root>

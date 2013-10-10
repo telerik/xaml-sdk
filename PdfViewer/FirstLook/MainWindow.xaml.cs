@@ -3,7 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Telerik.Windows.Controls.FixedDocumentViewersUI.Dialogs;
 using Telerik.Windows.Documents.Fixed;
+using Telerik.Windows.Documents.Fixed.UI.Extensibility;
 
 namespace FirstLook
 {
@@ -14,6 +16,9 @@ namespace FirstLook
     {
         public MainWindow()
         {
+            FindDialog findDialog = new FindDialog();
+            findDialog.Owner = this;
+            ExtensibilityManager.RegisterFindDialog(findDialog);
             InitializeComponent();
         }
 
@@ -27,17 +32,7 @@ namespace FirstLook
                     textBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
                 }
             }
-        }
-
-        private void tbFind_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == System.Windows.Input.Key.Enter)
-            {
-                this.pdfViewer.Commands.FindCommand.Execute(this.tbFind.Text);
-                this.btnPrev.Visibility = System.Windows.Visibility.Visible;
-                this.btnNext.Visibility = System.Windows.Visibility.Visible;
-            }
-        }
+        } 
 
         private void LoadFromStream(object sender, System.Windows.RoutedEventArgs e)
         {

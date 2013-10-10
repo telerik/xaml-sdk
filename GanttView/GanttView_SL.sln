@@ -35,6 +35,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummaryTaskConsistency_SL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragReorderBehavior_SL", "CustomDragReorderBehavior\CustomDragReorderBehavior_SL.csproj", "{33A48A6C-E2D2-41FB-A438-DA8F74F49261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LockingDragDependenciesBehavior_SL", "LockingDragDependenciesBehavior\LockingDragDependenciesBehavior_SL.csproj", "{5B51E1A3-4CAB-449B-B8BB-D1C04DC19E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummariesVisibilityToggle_SL", "SummariesVisibilityToggle\SummariesVisibilityToggle_SL.csproj", "{3AFD214E-1942-4C2F-BC4C-0CC13461EE3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTemplateBasedOnType_SL", "CellTemplateBasedOnType\CellTemplateBasedOnType_SL.csproj", "{68C727E9-3011-4B06-BB9D-F97FE08177C5}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +116,18 @@ Global
 		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A48A6C-E2D2-41FB-A438-DA8F74F49261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B51E1A3-4CAB-449B-B8BB-D1C04DC19E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B51E1A3-4CAB-449B-B8BB-D1C04DC19E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B51E1A3-4CAB-449B-B8BB-D1C04DC19E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B51E1A3-4CAB-449B-B8BB-D1C04DC19E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFD214E-1942-4C2F-BC4C-0CC13461EE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFD214E-1942-4C2F-BC4C-0CC13461EE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFD214E-1942-4C2F-BC4C-0CC13461EE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFD214E-1942-4C2F-BC4C-0CC13461EE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

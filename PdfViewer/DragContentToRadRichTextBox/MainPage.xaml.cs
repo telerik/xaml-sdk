@@ -50,8 +50,8 @@ namespace DragContentToRadRichTextBox
 
         private void OnDrop(object sender, Telerik.Windows.DragDrop.DragEventArgs args)
         {
-            var data = ((IDataObject)args.Data).GetData("DragData");
-            (sender as RadRichTextBox).Document.Insert(data.ToString(),new StyleDefinition());
+            var data = ((IDataObject)args.Data).GetData("DragData");   
+            (sender as RadRichTextBox).Insert(data.ToString());
         }
     }
 }

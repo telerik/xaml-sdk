@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingPopupProperties_WPF"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customization_MVVM_WPF", "Customization_MVVM\Customization_MVVM_WPF.csproj", "{D5A63070-2BCE-492E-99AB-63708B89B511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldMenuAndItemStyle_WPF", "OldMenuAndItemStyle\OldMenuAndItemStyle_WPF.csproj", "{DECE970F-5959-481E-9158-D6F66D21FD45}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{D5A63070-2BCE-492E-99AB-63708B89B511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A63070-2BCE-492E-99AB-63708B89B511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A63070-2BCE-492E-99AB-63708B89B511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

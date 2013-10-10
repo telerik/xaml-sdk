@@ -64,7 +64,7 @@
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.RibbonView">
-      <HintPath>..\..\..\..\..\Work\Development\Binaries\WPF\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>

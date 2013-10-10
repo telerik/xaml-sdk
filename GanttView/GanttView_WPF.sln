@@ -35,6 +35,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummaryTaskConsistency_WPF"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragReorderBehavior_WPF", "CustomDragReorderBehavior\CustomDragReorderBehavior_WPF.csproj", "{BED7D785-F37E-471C-8F81-6FF1E192D915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LockingDragDependenciesBehavior_WPF", "LockingDragDependenciesBehavior\LockingDragDependenciesBehavior_WPF.csproj", "{956A6FF4-2C8B-4633-855A-783B0DA36B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummariesVisibilityToggle_WPF", "SummariesVisibilityToggle\SummariesVisibilityToggle_WPF.csproj", "{A9812049-B034-4EC3-8675-3F7FB49A194F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTemplateBasedOnType_WPF", "CellTemplateBasedOnType\CellTemplateBasedOnType_WPF.csproj", "{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -216,6 +222,36 @@ Global
 		{BED7D785-F37E-471C-8F81-6FF1E192D915}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BED7D785-F37E-471C-8F81-6FF1E192D915}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BED7D785-F37E-471C-8F81-6FF1E192D915}.Release|x86.ActiveCfg = Release|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{956A6FF4-2C8B-4633-855A-783B0DA36B05}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A9812049-B034-4EC3-8675-3F7FB49A194F}.Release|x86.ActiveCfg = Release|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
