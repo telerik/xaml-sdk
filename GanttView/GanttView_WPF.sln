@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummariesVisibilityToggle_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTemplateBasedOnType_WPF", "CellTemplateBasedOnType\CellTemplateBasedOnType_WPF.csproj", "{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifiedTasks_WPF", "ModifiedTasks\ModifiedTasks_WPF.csproj", "{F950DA9A-02F9-4564-884E-CBCB82479889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelsToPixelLengthConversion_WPF", "PixelsToPixelLengthConversion\PixelsToPixelLengthConversion_WPF.csproj", "{B813A2DE-3775-4146-8613-6D8029EA26C3}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -252,6 +256,26 @@ Global
 		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{534E30A5-B799-477D-B7FA-0D5C3D8D7EC5}.Release|x86.ActiveCfg = Release|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F950DA9A-02F9-4564-884E-CBCB82479889}.Release|x86.ActiveCfg = Release|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

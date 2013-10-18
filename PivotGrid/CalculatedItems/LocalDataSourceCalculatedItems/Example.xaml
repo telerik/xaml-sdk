@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="LocalDataSourceCalculatedItems.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+             xmlns:data="clr-namespace:LocalDataSourceCalculatedItems.Data"
+             xmlns:local="clr-namespace:LocalDataSourceCalculatedItems"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <pivot:LocalDataSourceProvider x:Key="DataProvider" PrepareDescriptionForField="LocalDataSourceProvider_PrepareDescriptionForField">
+            <pivot:LocalDataSourceProvider.ItemsSource>
+                <data:Invoices/>
+            </pivot:LocalDataSourceProvider.ItemsSource>
+            <pivot:LocalDataSourceProvider.RowGroupDescriptions>
+                <pivot:PropertyGroupDescription PropertyName="Country">
+                    <pivot:PropertyGroupDescription.CalculatedItems>
+                        <local:CA GroupName="CA" SolveOrder="2" />
+                    </pivot:PropertyGroupDescription.CalculatedItems>
+                </pivot:PropertyGroupDescription>
+            </pivot:LocalDataSourceProvider.RowGroupDescriptions>
+
+            <pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+                <pivot:PropertyGroupDescription PropertyName="Salesperson">
+                    <pivot:PropertyGroupDescription.CalculatedItems>
+                        <local:MenAverageSales GroupName="Average Sales (Men)" SolveOrder="3" />
+                        <local:WomenAverageSales GroupName="Average Sales (Women)" SolveOrder="1" />
+                    </pivot:PropertyGroupDescription.CalculatedItems>
+                </pivot:PropertyGroupDescription>
+            </pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+
+            <pivot:LocalDataSourceProvider.AggregateDescriptions>
+                <pivot:PropertyAggregateDescription PropertyName="ExtendedPrice" AggregateFunction="Sum" StringFormat="N"/>
+            </pivot:LocalDataSourceProvider.AggregateDescriptions>
+        </pivot:LocalDataSourceProvider>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <pivot:RadPivotGrid x:Name="PivotGrid" DataProvider="{StaticResource DataProvider}"/>
+        <pivot:RadPivotFieldList x:Name="FieldList" Grid.Column="1"
+                                 DataProvider="{StaticResource DataProvider}"/>
+    </Grid>
+</UserControl>

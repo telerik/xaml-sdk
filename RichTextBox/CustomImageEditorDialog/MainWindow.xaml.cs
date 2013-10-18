@@ -25,10 +25,10 @@ namespace CustomImageEditorDialogDemoWPF
         void radRichTextBox_Loaded(object sender, RoutedEventArgs e)
         {
             LoadDocument();
-            ShowDialog();
+            ShowImageEditorDialog();
         }
 
-        private void ShowDialog()
+        private void ShowImageEditorDialog()
         {
             ImageInline imageInline = this.radRichTextBox.Document.EnumerateChildrenOfType<ImageInline>().FirstOrDefault();
             if (imageInline != null)

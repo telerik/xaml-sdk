@@ -1,24 +1,12 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Telerik.Windows.Controls;
 using Telerik.Windows.Documents;
 using Telerik.Windows.Documents.Model;
-using Telerik.Windows.Controls.DragDrop;
-using Telerik.Windows.Controls;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Telerik.Windows.Documents.Model.Styles;
-using System.Linq;
-using System.IO;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Telerik.Windows.Documents.Lists;
-using Telerik.Windows.Documents.RichTextBoxCommands;
-using System;
-using Telerik.Windows.Documents.UI;
-using Telerik.Windows.Controls.TreeView;
 using Telerik.Windows.DragDrop;
-using System.Windows.Input;
-using System.Collections;
 
 namespace DragAndDrop
 {
@@ -34,7 +22,9 @@ namespace DragAndDrop
         {
             RadDocument document = new RadDocument();
             string randomText = @"On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look";
-            document.Insert(randomText, document.StyleRepository[RadDocumentDefaultStyles.NormalStyleName]);
+
+            RadDocumentEditor documentEditor = new RadDocumentEditor(document);
+            documentEditor.Insert(randomText);
 
             this.radRichTextBox.Document = (RadDocument)document.CreateDeepCopy();
             this.radRichTextBox.Document.Sections.First.Headers.Default.Body = document;
@@ -83,7 +73,7 @@ namespace DragAndDrop
                 return;
             }
             RadRichTextBox mainEditor = sender as RadRichTextBox;
-           
+
             RadRichTextBox richTextBox = mainEditor.ActiveDocumentEditor as RadRichTextBox;
             richTextBox.CurrentEditingStyle.SpanProperties.ForeColor = Colors.Red;
             Dispatcher.BeginInvoke(new Action(delegate()

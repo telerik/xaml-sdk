@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLocalization_SL", "Cu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandBehavior_SL", "ExpandBehavior\ExpandBehavior_SL.csproj", "{015D2A66-C501-4171-911D-D74957D01C79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedFields_SL", "CalculatedFields\LocalDataSourceCalculatedFields\LocalDataSourceCalculatedFields_SL.csproj", "{0CD572CD-9B96-4A76-9C9E-20455167522F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedItems_SL", "CalculatedItems\LocalDataSourceCalculatedItems\LocalDataSourceCalculatedItems_SL.csproj", "{6422C1C3-28CA-4560-85E8-DE77B5A2301C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +84,14 @@ Global
 		{015D2A66-C501-4171-911D-D74957D01C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{015D2A66-C501-4171-911D-D74957D01C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{015D2A66-C501-4171-911D-D74957D01C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD572CD-9B96-4A76-9C9E-20455167522F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD572CD-9B96-4A76-9C9E-20455167522F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD572CD-9B96-4A76-9C9E-20455167522F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD572CD-9B96-4A76-9C9E-20455167522F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

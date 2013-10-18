@@ -6,13 +6,8 @@ namespace PlainTextEditor
 {
     public class CustomMenuBuilder : ContextMenuContentBuilder
     {
-        private RadRichTextBox radRichTextBox;
-
-        public CustomMenuBuilder(RadRichTextBox radRichTextBox)
-            : base(radRichTextBox)
-        {
-            this.radRichTextBox = radRichTextBox;
-        }
+        public CustomMenuBuilder()
+            : base() { }
 
         protected override ContextMenuGroup CreateTextEditCommands()
         {

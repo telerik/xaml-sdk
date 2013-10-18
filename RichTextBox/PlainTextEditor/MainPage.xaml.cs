@@ -13,7 +13,7 @@ namespace PlainTextEditor
             editor.PreviewEditorKeyDown += new Telerik.Windows.Documents.PreviewEditorKeyEventHandler(editor_PreviewEditorKeyDown);
 
             Telerik.Windows.Controls.RichTextBoxUI.ContextMenu contextMenu = (Telerik.Windows.Controls.RichTextBoxUI.ContextMenu)this.editor.ContextMenu;
-            contextMenu.ContentBuilder = new CustomMenuBuilder(this.editor);
+            contextMenu.ContentBuilder = new CustomMenuBuilder();
         }
 
         void editor_PreviewEditorKeyDown(object sender, Telerik.Windows.Documents.PreviewEditorKeyEventArgs e)

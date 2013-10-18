@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummariesVisibilityToggle_S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTemplateBasedOnType_SL", "CellTemplateBasedOnType\CellTemplateBasedOnType_SL.csproj", "{68C727E9-3011-4B06-BB9D-F97FE08177C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifiedTasks_SL", "ModifiedTasks\ModifiedTasks_SL.csproj", "{670950C0-3B8B-4F10-89DB-A3453777C5B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelsToPixelLengthConversion_SL", "PixelsToPixelLengthConversion\PixelsToPixelLengthConversion_SL.csproj", "{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +132,14 @@ Global
 		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C727E9-3011-4B06-BB9D-F97FE08177C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670950C0-3B8B-4F10-89DB-A3453777C5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670950C0-3B8B-4F10-89DB-A3453777C5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670950C0-3B8B-4F10-89DB-A3453777C5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670950C0-3B8B-4F10-89DB-A3453777C5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

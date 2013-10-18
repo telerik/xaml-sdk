@@ -108,7 +108,7 @@ namespace RestrictedToParent
         {
             Screen[] screensArray = Screen.AllScreens;
             List<Screen> screensList = screensArray.OfType<Screen>().ToList();
-            if (screensList.Count > 0)
+            if (screensList.Count > 1)
             {
                 return true;
             }
@@ -118,10 +118,9 @@ namespace RestrictedToParent
 
         private void Window_LocationChanged_1(object sender, EventArgs e)
         {
-            Screen[] screensArray = Screen.AllScreens;
-            List<Screen> screensList = screensArray.OfType<Screen>().ToList();
             var primaryScreenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-            if (screensList.Count > 0)
+
+            if (this.HasMultipleMonitors())
             {
                 primaryScreenWidth = System.Windows.SystemParameters.PrimaryScreenWidth * 2;
             }
