@@ -4,7 +4,7 @@
         xmlns:fixed="clr-namespace:Telerik.Windows.Documents.Fixed;assembly=Telerik.Windows.Controls.FixedDocumentViewers"             
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="1000">
 
         <Window.Resources>
             <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />

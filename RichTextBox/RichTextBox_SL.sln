@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageEditorDialog_SL"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFloatingBlockPropertiesDialogDemo_SL", "CustomFloatingBlockPropertiesDialogDemo\CustomFloatingBlockPropertiesDialogDemo_SL.csproj", "{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localization\Localization_SL.csproj", "{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +94,10 @@ Global
 		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD1E9E2-66D5-497C-B10D-A80C35C9B8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

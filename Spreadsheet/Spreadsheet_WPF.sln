@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLook_WPF", "FirstLook\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localization\Localization_WPF.csproj", "{9058B748-C3F4-4F65-9FD0-7F9D8C7EF01C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFunctions_WPF", "CustomFunctions\CustomFunctions_WPF.csproj", "{410725AF-7A5E-408B-AE7A-BFC56FEDD19E}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{9058B748-C3F4-4F65-9FD0-7F9D8C7EF01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9058B748-C3F4-4F65-9FD0-7F9D8C7EF01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9058B748-C3F4-4F65-9FD0-7F9D8C7EF01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410725AF-7A5E-408B-AE7A-BFC56FEDD19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410725AF-7A5E-408B-AE7A-BFC56FEDD19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410725AF-7A5E-408B-AE7A-BFC56FEDD19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410725AF-7A5E-408B-AE7A-BFC56FEDD19E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

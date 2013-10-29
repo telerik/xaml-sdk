@@ -1,0 +1,9 @@
+﻿<Window x:Class="CustomFunctions.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomFunctions"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <local:MainPage />
+    </Grid>
+</Window>

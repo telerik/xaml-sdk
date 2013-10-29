@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:RadImageEditorUIFirstLook"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-        Title="MainWindow">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <local:MainPage />
     </Grid>

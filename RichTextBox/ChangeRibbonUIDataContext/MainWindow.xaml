@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -831,9 +831,9 @@
                         <CheckBox Content="Banded Columns" telerik:ScreenTip.Description="Display banded columns, in which even columns are formatted differently from odd columns.&amp;#10;&amp;#10;This banding can make tables easier to read." Margin="2" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableLookColumnBandingOptionCommand}" telerik:ScreenTip.Title="Banded Columns"/>
                     </telerik:RadCollapsiblePanel>
                 </telerik:RadRibbonGroup>
-                <telerik:RadRibbonGroup Header="Table Styles">
+                <!--<telerik:RadRibbonGroup Header="Table Styles">
                     <telerik:TableStylesGallery AssociatedRichTextBox="{Binding AssociatedRichTextBox, Mode=OneWay}"/>
-                </telerik:RadRibbonGroup>
+                </telerik:RadRibbonGroup>-->
             </telerik:RadRibbonTab>
             <telerik:RadRibbonTab ContextualGroupName="TableTools" Header="Layout">
                 <telerik:RadRibbonGroup Header="Table">

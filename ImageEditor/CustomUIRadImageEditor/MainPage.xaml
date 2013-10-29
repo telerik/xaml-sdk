@@ -19,7 +19,7 @@
             </Storyboard>
         </Grid.Resources>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" >
-            <telerik:RadImageEditor x:Name="imageEditor" ScaleFactor="0" Background="Blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="250" Width="500"/>
+            <telerik:RadImageEditor x:Name="imageEditor" ScaleFactor="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="250" Width="500"/>
 
             <Grid x:Name="fadeoutPanel" Opacity="0.3">
                 <local:CustomSettingsContainer x:Name="settingsContainer" />
