@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifiedTasks_WPF", "Modifi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelsToPixelLengthConversion_WPF", "PixelsToPixelLengthConversion\PixelsToPixelLengthConversion_WPF.csproj", "{B813A2DE-3775-4146-8613-6D8029EA26C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayEvents_WPF", "HolidayEvents\HolidayEvents_WPF.csproj", "{9B37CB0B-7874-49B9-8113-D36ED694C298}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -276,6 +278,16 @@ Global
 		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B813A2DE-3775-4146-8613-6D8029EA26C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
