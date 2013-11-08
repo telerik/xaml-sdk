@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidOverlappingAppointment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingAndFilteringWithTreeView_SL", "GroupingAndFilteringWithTreeView\GroupingAndFilteringWithTreeView_SL.csproj", "{007F448C-2148-4D17-A083-6EB19E0F865B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDeleteButton_SL", "RemoveDeleteButton\RemoveDeleteButton_SL.csproj", "{21AA65AF-F304-4C33-B47A-C4288A90A8A7}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{007F448C-2148-4D17-A083-6EB19E0F865B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{007F448C-2148-4D17-A083-6EB19E0F865B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{007F448C-2148-4D17-A083-6EB19E0F865B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

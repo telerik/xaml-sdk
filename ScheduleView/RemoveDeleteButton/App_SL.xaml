@@ -1,0 +1,489 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:dragDrop="clr-namespace:Telerik.Windows.DragDrop;assembly=Telerik.Windows.Controls"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             x:Class="RemoveDeleteButton.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.ScheduleView.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <ControlTemplate x:Key="AppointmentItemVerticalControlTemplate" TargetType="telerik:AppointmentItem">
+                <Grid x:Name="Root">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Disabled"/>
+                            <VisualState x:Name="Normal">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.200" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.200">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation BeginTime="0:0:0.0" Duration="0:0:0.200" To="0" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Opacity"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.400" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation BeginTime="0:0:0.200" Duration="0:0:0.200" To="1" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Opacity"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="ReadOnly">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.0" Storyboard.TargetName="ReadOnlyVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="InlineEditing"/>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected"/>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemBackground_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemOuterBorder_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisualInnerBorder" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemInnerBorder_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="DurationMarkerVisual" Visibility="{TemplateBinding DurationMarkerVisibility}" Margin="{TemplateBinding DurationMarkerMargin}">
+                        <Border Background="{StaticResource AppointmentItemOuterBorder}" Margin="0 0 -1 0" CornerRadius="1 0 0 1" Width="4"/>
+                    </Border>
+                    <Grid Grid.Column="1">
+                        <telerik:CommandManager.InputBindings>
+                            <telerik:InputBindingCollection>
+                                <telerik:MouseBinding Gesture="LeftDoubleClick" Command="local:RadScheduleViewCommands.EditAppointment"/>
+                            </telerik:InputBindingCollection>
+                        </telerik:CommandManager.InputBindings>
+                        <Border CornerRadius="2" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border CornerRadius="1" BorderBrush="{StaticResource AppointmentItemInnerBorder}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                        </Border>
+                        <Border x:Name="CommonStatesVisual"
+                                Visibility="Collapsed"
+                                CornerRadius="2"
+                                Background="{StaticResource AppointmentItemBackground_MouseOver}"
+                                BorderBrush="{StaticResource AppointmentItemOuterBorder_MouseOver}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border x:Name="CommonStatesVisualInnerBorder"
+                                    CornerRadius="1"
+                                    BorderBrush="{StaticResource AppointmentItemInnerBorder_MouseOver}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"/>
+                        </Border>
+                        <Border x:Name="PART_Category" Margin="2" Background="{Binding Path=Category.CategoryBrush}"/>
+                        <Rectangle x:Name="ReadOnlyVisual" Margin="2" Visibility="Collapsed" Fill="{StaticResource AppoinmtentItemBackground_ReadOnly}"/>
+                        <Grid Margin="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="PART_TimeMarker"
+                                    Grid.Column="0"
+                                    Grid.RowSpan="3"
+                                    Width="5"
+                                    HorizontalAlignment="Left"
+                                    Background="{Binding Path=TimeMarker.TimeMarkerBrush}"
+                                    Visibility="{Binding Path=TimeMarker, Converter={StaticResource NullToVisibilityConverter}}"/>
+                            <Path
+                                Grid.ColumnSpan="3"
+                                Grid.Row="0"
+                                Data="M3.5,0 L7,4 L0,4 z"
+                                Fill="{StaticResource AppointmentItemIndicatorFill}"
+                                Margin="2 4 2 2"
+                                Height="4"
+                                Width="7"
+                                VerticalAlignment="Top"
+                                Stretch="Fill"
+                                HorizontalAlignment="Center"
+                                Visibility="{TemplateBinding StartIndicatorVisibility}"/>
+                            <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Margin="0 3 0 0">
+                                <Image x:Name="RecurrenceMark"
+                                       Grid.Column="0"
+                                       Margin="2 1 1 0"
+                                       Width="10"
+                                       Height="10"
+                                       Visibility="{Binding Path=RecurrenceState, Converter={StaticResource RecurrenceStateIsExeptionToVisibilityConverter}}"
+                                       HorizontalAlignment="Left"
+                                       Source="{StaticResource AppointmentItem_Recurrence}"/>
+                                <Image x:Name="ExceptionMark"
+                                       Grid.Column="0"
+                                       Margin="2 1 1 0"
+                                       Width="10"
+                                       Height="10"
+                                       Visibility="{Binding Path=RecurrenceState, Converter={StaticResource RecurrenceStateIsOccurenceToVisibilityConverter}}"
+                                       HorizontalAlignment="Left"
+                                       Source="{StaticResource AppointmentItem_Exception}"/>
+                            </StackPanel>
+                            <ContentPresenter
+                                Grid.Column="2"
+                                Grid.Row="1"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Path
+                                Grid.ColumnSpan="3"
+                                Grid.Row="2"
+                                Data="M7,0 L3.5,4 L0,0 z"
+                                Height="4"
+                                Width="7"
+                                Stretch="Fill"
+                                Fill="{StaticResource AppointmentItemIndicatorFill}"
+                                Margin="2 2 2 4"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Center"
+                                Visibility="{TemplateBinding EndIndicatorVisibility}"/>
+                        </Grid>
+                        <Grid x:Name="MouseOverOverlay" Visibility="Collapsed" Opacity="0">
+                            <Border x:Name="PART_StartResizeGrip"
+                                    Background="Transparent"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Top"
+                                    Cursor="SizeNS"
+                                    dragDrop:DragDropManager.AllowDrag="True"
+                                    Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                <StackPanel x:Name="StartResizeGrip" Margin="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="PART_EndResizeGrip"
+                                    Background="Transparent"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Bottom"
+                                    Cursor="SizeNS"
+                                    dragDrop:DragDropManager.AllowDrag="True"
+                                    Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                <StackPanel x:Name="EndResizeGrip" Margin="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- NOTE: The Delete button should be removed from below -->
+                            <!--<telerik:RadButton x:Name="DeleteButton" Width="11" Height="11" Margin="5 5 6 5" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                               Command="local:RadScheduleViewCommands.DeleteAppointment" ClickMode="Press" CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                                               Visibility="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                               IsTabStop="False">
+                                <Path Stroke="{StaticResource AppointmentItemDeleteIconStroke}" Data="M0,0 L5,5 M5,0 L0,5"/>
+                            </telerik:RadButton>-->
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="AppointmentItemHorizontalControlTemplate" TargetType="telerik:AppointmentItem">
+                <Grid x:Name="Root">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Disabled"/>
+                            <VisualState x:Name="Normal">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.200" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.200">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation BeginTime="0:0:0.0" Duration="0:0:0.200" To="0" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Opacity"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.400" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation BeginTime="0:0:0.200" Duration="0:0:0.200" To="1" Storyboard.TargetName="MouseOverOverlay" Storyboard.TargetProperty="Opacity"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="ReadOnly">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0.0" Storyboard.TargetName="ReadOnlyVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="InlineEditing"/>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected"/>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemBackground_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemOuterBorder_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisualInnerBorder" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource AppointmentItemInnerBorder_Selected}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border x:Name="DurationMarkerVisual" Visibility="{TemplateBinding DurationMarkerVisibility}" Margin="{TemplateBinding DurationMarkerMargin}">
+                        <Border Background="{StaticResource AppointmentItemOuterBorder}" Margin="0 0 0 -1" CornerRadius="1 1 0 0" Height="4"/>
+                    </Border>
+                    <Grid Grid.Row="1">
+                        <telerik:CommandManager.InputBindings>
+                            <telerik:InputBindingCollection>
+                                <telerik:MouseBinding Gesture="LeftDoubleClick" Command="local:RadScheduleViewCommands.EditAppointment"/>
+                            </telerik:InputBindingCollection>
+                        </telerik:CommandManager.InputBindings>
+                        <Border CornerRadius="2" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border CornerRadius="1" BorderBrush="{StaticResource AppointmentItemInnerBorder}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                        </Border>
+                        <Border x:Name="CommonStatesVisual"
+                                Visibility="Collapsed"
+                                CornerRadius="2"
+                                Background="{StaticResource AppointmentItemBackground_MouseOver}"
+                                BorderBrush="{StaticResource AppointmentItemOuterBorder_MouseOver}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border x:Name="CommonStatesVisualInnerBorder"
+                                    CornerRadius="1"
+                                    BorderBrush="{StaticResource AppointmentItemInnerBorder_MouseOver}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"/>
+                        </Border>
+                        <Border x:Name="PART_Category" Margin="2" Background="{Binding Path=Category.CategoryBrush}"/>
+                        <Rectangle x:Name="ReadOnlyVisual" Margin="2" Visibility="Collapsed" Fill="{StaticResource AppoinmtentItemBackground_ReadOnly}"/>
+                        <Grid Margin="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="PART_TimeMarker"
+                                    Grid.Column="0"
+                                    Width="5"
+                                    HorizontalAlignment="Left"
+                                    Background="{Binding Path=TimeMarker.TimeMarkerBrush}"
+                                    Visibility="{Binding Path=TimeMarker, Converter={StaticResource NullToVisibilityConverter}}"/>
+                            <Path
+                                Grid.Column="1"
+                                Data="M-919.69031,2003.9496 L-919.69031,2010.7375 L-923.7619,2007.4564 z"
+                                Fill="{StaticResource AppointmentItemIndicatorFill}"
+                                Margin="4 0 2 0"
+                                HorizontalAlignment="Left"
+                                Height="7"
+                                Stretch="Fill"
+                                VerticalAlignment="Center"
+                                Width="4"
+                                Visibility="{TemplateBinding StartIndicatorVisibility}"/>
+                            <StackPanel Grid.Column="2" VerticalAlignment="Top" Margin="0 3 0 0">
+                                <Image x:Name="RecurrenceMark"
+                                       Grid.Column="0"
+                                       Margin="2 1 1 0"
+                                       Width="10"
+                                       Height="10"
+                                       Visibility="{Binding Path=RecurrenceState, Converter={StaticResource RecurrenceStateIsExeptionToVisibilityConverter}}"
+                                       HorizontalAlignment="Left"
+                                       Source="{StaticResource AppointmentItem_Recurrence}"/>
+                                <Image x:Name="ExceptionMark"
+                                       Grid.Column="0"
+                                       Margin="2 1 1 0"
+                                       Width="10"
+                                       Height="10"
+                                       Visibility="{Binding Path=RecurrenceState, Converter={StaticResource RecurrenceStateIsOccurenceToVisibilityConverter}}"
+                                       HorizontalAlignment="Left"
+                                       Source="{StaticResource AppointmentItem_Exception}"/>
+                            </StackPanel>
+                            <ContentPresenter
+                                Grid.Column="3"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Path
+                                Grid.Column="4"
+                                Data="M1109.0469,332.70313 L1113.0469,336.29663 L1109.0469,339.68823 z"
+                                Margin="2 0 4 0"
+                                Fill="{StaticResource AppointmentItemIndicatorFill}"
+                                HorizontalAlignment="Right"
+                                Height="6.984"
+                                Stretch="Fill"
+                                VerticalAlignment="Center"
+                                Width="4"
+                                Visibility="{TemplateBinding EndIndicatorVisibility}"/>
+                        </Grid>
+                        <Grid x:Name="MouseOverOverlay" Visibility="Collapsed" Opacity="0">
+                            <Border x:Name="PART_StartResizeGrip"
+                                    Background="Transparent"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Stretch"
+                                    Cursor="SizeWE"
+                                    dragDrop:DragDropManager.AllowDrag="True"
+                                    Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                <StackPanel x:Name="StartResizeGrip" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="PART_EndResizeGrip"
+                                    Background="Transparent"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Stretch"
+                                    Cursor="SizeWE"
+                                    dragDrop:DragDropManager.AllowDrag="True"
+                                    Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                <StackPanel x:Name="EndResizeGrip" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                    <Border
+                                        Width="3"
+                                        Height="3"
+                                        Margin="1"
+                                        BorderThickness="0 0 1 1"
+                                        Background="{StaticResource AppointmentItemResizeGripBackground}"
+                                        BorderBrush="{StaticResource AppointmentItemResizeGripStroke}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- NOTE: The Delete button should be removed from below -->
+                            <!--<telerik:RadButton x:Name="DeleteButton" Width="11" Height="11" Margin="5 5 6 5" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                               Command="local:RadScheduleViewCommands.DeleteAppointment" ClickMode="Press"
+                                               CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                                               Visibility="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                               IsTabStop="False">
+                                <Path Stroke="{StaticResource AppointmentItemDeleteIconStroke}" Data="M0,0 L5,5 M5,0 L0,5"/>
+                            </telerik:RadButton>-->
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

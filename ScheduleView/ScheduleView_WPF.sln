@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvoidOverlappingAppointment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingAndFilteringWithTreeView_WPF", "GroupingAndFilteringWithTreeView\GroupingAndFilteringWithTreeView_WPF.csproj", "{E0CF7674-47FF-4A12-90B4-827B80DC3E15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDeleteButton_WPF", "RemoveDeleteButton\RemoveDeleteButton_WPF.csproj", "{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +134,16 @@ Global
 		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E0CF7674-47FF-4A12-90B4-827B80DC3E15}.Release|x86.ActiveCfg = Release|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

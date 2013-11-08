@@ -1,1 +1,2 @@
-﻿This example demonstrates how to create a custom DateTimeGroupDescription.
+﻿#Custom DateTimeGroupDescription#
+This example demonstrates how to create a custom DateTimeGroupDescription.
