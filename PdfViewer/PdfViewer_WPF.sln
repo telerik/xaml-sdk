@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragContentToRadRichTextBox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPrinting_WPF", "CustomPrinting\CustomPrinting_WPF.csproj", "{2D8F5AF6-374B-43A0-8669-554A1F22DA67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localization\Localization_WPF.csproj", "{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{2D8F5AF6-374B-43A0-8669-554A1F22DA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D8F5AF6-374B-43A0-8669-554A1F22DA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D8F5AF6-374B-43A0-8669-554A1F22DA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

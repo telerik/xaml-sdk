@@ -20,15 +20,16 @@
         <telerik:RadImageEditorUI x:Name="imageEditor">
             <telerik:RadImageEditorUI.ImageToolsSections>
                 <telerik:ImageToolsSection Header="Transform">
-                    <telerik:ImageToolItem ImageKey="Crop" Text="Crop"  Command="commands:ImageEditorRoutedCommands.ExecuteTool"
+                    <telerik:ImageToolItem ImageKey="Crop" telerik:LocalizationManager.ResourceKey="ImageEditor_Crop"  Command="commands:ImageEditorRoutedCommands.ExecuteTool"
                                            CommandParameter="{StaticResource CropTool}"/>
-                    <telerik:ImageToolItem ImageKey="Rotate90CW" Text="Rotate 90"  Command="commands:ImageEditorRoutedCommands.Rotate90Clockwise" />
-                    <telerik:ImageToolItem ImageKey="Rotate90CCW" Text="Rotate 270"  Command="commands:ImageEditorRoutedCommands.Rotate90Counterclockwise" />
-                    <telerik:ImageToolItem ImageKey="FlipHorizontal" Text="Flip Horizontal"  Command="commands:ImageEditorRoutedCommands.FlipHorizontal" />
-                    <telerik:ImageToolItem ImageKey="FlipVertical" Text="Flip Vertical"  Command="commands:ImageEditorRoutedCommands.FlipVertical" />
-                    <telerik:ImageToolItem ImageKey="RoundCorners" Text="Round Corners"  Command="commands:ImageEditorRoutedCommands.ExecuteTool"
+                    <telerik:ImageToolItem ImageKey="Rotate90CW" telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate90"  Command="commands:ImageEditorRoutedCommands.Rotate90Clockwise" />
+                    <telerik:ImageToolItem ImageKey="Rotate90CCW" telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate180" Command="commands:ImageEditorRoutedCommands.Rotate90Counterclockwise" />
+                    <telerik:ImageToolItem ImageKey="Rotate90CCW" telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate270"  Command="commands:ImageEditorRoutedCommands.Rotate90Counterclockwise" />
+                    <telerik:ImageToolItem ImageKey="FlipHorizontal" telerik:LocalizationManager.ResourceKey="ImageEditor_FlipHorizontal" Command="commands:ImageEditorRoutedCommands.FlipHorizontal" />
+                    <telerik:ImageToolItem ImageKey="FlipVertical" telerik:LocalizationManager.ResourceKey="ImageEditor_FlipVertical" Command="commands:ImageEditorRoutedCommands.FlipVertical" />
+                    <telerik:ImageToolItem ImageKey="RoundCorners" telerik:LocalizationManager.ResourceKey="ImageEditor_RoundCorners" Command="commands:ImageEditorRoutedCommands.ExecuteTool"
                                            CommandParameter="{StaticResource RoundCornersTool}"/>
-                    <telerik:ImageToolItem ImageKey="DrawText" Text="Draw Text" Command="commands:ImageEditorRoutedCommands.ExecuteTool" 
+                    <telerik:ImageToolItem ImageKey="DrawText" telerik:LocalizationManager.ResourceKey="ImageEditor_DrawText" Command="commands:ImageEditorRoutedCommands.ExecuteTool" 
                                            CommandParameter="{StaticResource DrawText}"/>
                 </telerik:ImageToolsSection>
                 <telerik:ImageToolsSection Header="Custom Tools">

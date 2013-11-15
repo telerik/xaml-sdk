@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFindDialog_SL", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragContentToRadRichTextBox_SL", "DragContentToRadRichTextBox\DragContentToRadRichTextBox_SL.csproj", "{9501CB8D-3F58-448F-946E-F7E2E3AF0317}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localization\Localization_SL.csproj", "{F2687490-736F-4EF0-8322-A32C0C3FC031}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{9501CB8D-3F58-448F-946E-F7E2E3AF0317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9501CB8D-3F58-448F-946E-F7E2E3AF0317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9501CB8D-3F58-448F-946E-F7E2E3AF0317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2687490-736F-4EF0-8322-A32C0C3FC031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2687490-736F-4EF0-8322-A32C0C3FC031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2687490-736F-4EF0-8322-A32C0C3FC031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2687490-736F-4EF0-8322-A32C0C3FC031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
