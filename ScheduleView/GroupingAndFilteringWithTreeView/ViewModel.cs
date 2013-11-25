@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.ScheduleView;
 
@@ -118,27 +120,41 @@ namespace GroupingAndFilteringWithTreeView
 
         private void OnExpandedExecute(object param)
         {
-            this.UpdateGroupFilter();
-            if (this.Airlines.Any(a => a.IsExpanded == true))
+#if SILVERLIGHT
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
-                this.AddGroupDescription("Segregations");
-            }
+#endif
+                this.UpdateGroupFilter();
+                if (this.Airlines.Any(a => a.IsExpanded == true))
+                {
+                    this.AddGroupDescription("Segregations");
+                }
 
-            if (this.segregations.Any(s => s.IsExpanded == true))
-            {
-                this.AddGroupDescription("Processes");
-            }
+                if (this.segregations.Any(s => s.IsExpanded == true))
+                {
+                    this.AddGroupDescription("Processes");
+                }
+#if SILVERLIGHT
+            });
+#endif
         }
 
         private void OnCollapsedExecute(object param)
         {
-            this.UpdateGroupFilter();
-
-            if (this.Airlines.All(a => a.IsExpanded != true))
+#if SILVERLIGHT
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
-                this.RemoveGroupDescription("Processes");
-                this.RemoveGroupDescription("Segregations");
-            }
+#endif
+                this.UpdateGroupFilter();
+
+                if (this.Airlines.All(a => a.IsExpanded != true))
+                {
+                    this.RemoveGroupDescription("Processes");
+                    this.RemoveGroupDescription("Segregations");
+                }
+#if SILVERLIGHT
+            });       
+#endif
         }
 
         private void RemoveGroupDescription(string groupName)

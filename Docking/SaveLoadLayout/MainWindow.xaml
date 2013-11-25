@@ -42,7 +42,7 @@
 			</StackPanel>
 		</Grid>
 
-		<telerik:RadDocking x:Name="Docking"  BorderThickness="0" Padding="0" Grid.Row="1" PreviewClose="Docking_PreviewClose">
+		<telerik:RadDocking x:Name="Docking"  BorderThickness="0" Padding="0" Grid.Row="1">
 			<telerik:RadDocking.DocumentHost>
 				<telerik:RadSplitContainer>
 					<telerik:RadPaneGroup x:Name="DocumentGroup">

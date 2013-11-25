@@ -141,16 +141,5 @@ namespace SaveLoadLayout
 				this.LayoutXml.IsHidden = true;
 			}
 		}
-
-		private void Docking_PreviewClose(object sender, StateChangeEventArgs e)
-		{
-			foreach (var pane in e.Panes)
-			{
-				if (!pane.IsHidden)
-				{
-
-				}
-			}
-		}
 	}
 }

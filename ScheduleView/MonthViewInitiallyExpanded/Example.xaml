@@ -9,7 +9,6 @@
 	<UserControl.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Telerik.Windows.Controls.ScheduleView;component/Themes/Office/Black/ScheduleView.xaml" />
 				<ResourceDictionary>
 					<telerik:OrientedGroupHeaderStyleSelector x:Key="GroupHeaderStyleSelector"
 						HorizontalStyle="{StaticResource HorizontalGroupHeaderStyle}"
