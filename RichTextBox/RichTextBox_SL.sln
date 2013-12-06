@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFloatingBlockProperti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localization\Localization_SL.csproj", "{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeRibbonUIDataContext_SL", "ChangeRibbonUIDataContext\ChangeRibbonUIDataContext_SL.csproj", "{B5653D59-C73F-4824-A218-D1C1E3EC80F6}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,10 @@ Global
 		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46EC19F2-8093-4EBD-8BD3-B73E8E6405FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

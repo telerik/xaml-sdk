@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCompleteStringFilterEdi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlPanel_SL", "ControlPanel\ControlPanel_SL.csproj", "{DA73E1EE-D68A-4DDD-8C65-CE099F618109}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollTwoGridsSimultaneously_SL", "ScrollTwoGridsSimultaneously\ScrollTwoGridsSimultaneously_SL.csproj", "{90579ED6-BA28-4974-9A79-93FF534BE420}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,10 @@ Global
 		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA73E1EE-D68A-4DDD-8C65-CE099F618109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90579ED6-BA28-4974-9A79-93FF534BE420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90579ED6-BA28-4974-9A79-93FF534BE420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90579ED6-BA28-4974-9A79-93FF534BE420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90579ED6-BA28-4974-9A79-93FF534BE420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1201,6 +1201,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="Financial"
                                                      telerik:ScreenTip.Title="Financial"
+                                                     telerik:ScreenTip.Description="Add a financial function to your sheet."
                                                      Text="Financial"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1215,6 +1216,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="Logical"
                                                      telerik:ScreenTip.Title="Logical"
+                                                     telerik:ScreenTip.Description="Add a logical function to your sheet."
                                                      Text="Logical"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1229,6 +1231,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="Text"
                                                      telerik:ScreenTip.Title="Text"
+                                                     telerik:ScreenTip.Description="Add a text function to your sheet."
                                                      Text="Text"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1243,6 +1246,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="DateAndTime"
                                                      telerik:ScreenTip.Title="Date &amp; Time"
+                                                     telerik:ScreenTip.Description="Add a time function to your sheet."
                                                      Text="Date &amp; Time"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1257,6 +1261,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="LookupAndReference"
                                                      telerik:ScreenTip.Title="Lookup &amp; Reference"
+                                                     telerik:ScreenTip.Description="Add a lookup or reference function to your sheet."
                                                      Text="Lookup &amp; Reference"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1271,6 +1276,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="MathAndTrig"
                                                      telerik:ScreenTip.Title="Math &amp; Trig"
+                                                     telerik:ScreenTip.Description="Add a math or trigonometry function to your sheet."
                                                      Text="Math &amp; Trig"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"
@@ -1285,6 +1291,7 @@
 
                     <telerik:RadRibbonDropDownButton x:Name="MoreFunctionsButton"
                                                      telerik:ScreenTip.Title="More Functions"
+                                                     telerik:ScreenTip.Description="Browse more functions from categories like Statistical, Engineering or Information."
                                                      Text="More Functions"
                                                      Size="Large"
                                                      telerik:IconManager.IconPropertyName="LargeImage"

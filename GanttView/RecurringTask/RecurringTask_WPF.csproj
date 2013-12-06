@@ -66,10 +66,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomDragDropBehavior.cs" />
     <Compile Include="Example.xaml.cs">
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RecurrenceRule.cs" />
+    <Compile Include="RecurrenceTask.cs" />
     <Compile Include="TimeLineRecurrenceBehavior.cs" />
     <Compile Include="TimeLineRecurrenceContainer.cs" />
     <Compile Include="TimeLineRecurrenceContainerSelector.cs" />
@@ -87,7 +88,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CustomRecurrenceTask.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -1,2 +1,2 @@
-#Close Filtering Popup on Pressing the Filter Button#
+#Close filtering popup on pressing the filter button#
 This example demonstrates how to override the OnApplyFilter method of our FilteringControl in order to close Filtering Popup on pressing the Filter button.

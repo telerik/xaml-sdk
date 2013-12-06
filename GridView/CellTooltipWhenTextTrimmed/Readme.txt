@@ -1,0 +1,1 @@
+This example demonstrates how you can conditionally show a Tooltip only when the text displayed in GridViewCell has been trimmed. The example is only for WPF.

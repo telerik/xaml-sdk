@@ -109,7 +109,7 @@
                 <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/document-fit-page.png" Stretch="None" />
             </telerik:RadToggleButton>
             <telerik:RadToolBarSeparator />
-
+            
             <telerik:RadToggleButton IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=Pan}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                 <ToolTipService.ToolTip>
                     <TextBlock Text="Pan" />
@@ -122,7 +122,7 @@
                     <TextBlock Text="Text Selection" />
                 </ToolTipService.ToolTip>
                 <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/text-selection.png" Stretch="None" />
-            </telerik:RadToggleButton>
+            </telerik:RadToggleButton> 
         </telerik:RadToolBar>
 
         <telerik:RadPdfViewer Grid.Row="1" Name="pdfViewer" DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}">

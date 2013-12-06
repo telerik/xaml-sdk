@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_WPF", "TodayButton\TodayButton_WPF.csproj", "{E58BBA9F-7452-4C8E-9B41-BF0941F9949C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadonlyInputField_WPF", "ReadonlyInputField\ReadonlyInputField_WPF.csproj", "{A7FC9615-0610-4CD1-BAE4-66AF0E91CFB3}"
@@ -10,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringFormatMVVM_WPF", "StringFormatMVVM\StringFormatMVVM_WPF.csproj", "{F1830C9E-CFAC-429B-BC19-CBE7D0795CD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearButton_WPF", "ClearButton\ClearButton_WPF.csproj", "{BA73E7C2-BF20-4515-8008-AF4BF8889A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrictTheEnteredDate_WPF", "RestrictTheEnteredDate\RestrictTheEnteredDate_WPF.csproj", "{B3508838-143A-4BC5-BB4C-77E9A06D1404}"
 EndProject
 Global
 	 
@@ -38,6 +42,10 @@ Global
 		{BA73E7C2-BF20-4515-8008-AF4BF8889A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA73E7C2-BF20-4515-8008-AF4BF8889A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA73E7C2-BF20-4515-8008-AF4BF8889A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3508838-143A-4BC5-BB4C-77E9A06D1404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3508838-143A-4BC5-BB4C-77E9A06D1404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3508838-143A-4BC5-BB4C-77E9A06D1404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3508838-143A-4BC5-BB4C-77E9A06D1404}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

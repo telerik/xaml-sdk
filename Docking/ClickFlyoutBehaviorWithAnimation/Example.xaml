@@ -72,7 +72,7 @@
                 </telerik:RadPaneGroup>
             </telerik:RadSplitContainer>
             <telerik:RadDocking.FlyoutBehavior>
-                <local:CustomFlyoutBehavior/>
+                <local:AnimatedFlyoutBehavior/>
             </telerik:RadDocking.FlyoutBehavior>
         </telerik:RadDocking>
     </Grid>

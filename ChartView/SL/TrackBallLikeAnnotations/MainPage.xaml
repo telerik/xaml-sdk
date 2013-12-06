@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="TrackBallLikeAnnotations.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TrackBallLikeAnnotations"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <FrameworkElement.Resources>
+        <DataTemplate x:Key="IntersectionPointTemplate">
+            <Ellipse Width="11" Height="11" Stroke="Black" Margin="-6 -6 0 0" />
+        </DataTemplate>
+        <DataTemplate x:Key="BarDataPointTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Bar series - " />
+                <TextBlock Text="{Binding Category}" />
+                <TextBlock Text="{Binding Value}" Margin="20 0 0 0" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="LineDataPointTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="line series- " />
+                <TextBlock Text="{Binding Category}" />
+                <TextBlock Text="{Binding Value}" Margin="20 0 0 0" />
+            </StackPanel>
+        </DataTemplate>
+    </FrameworkElement.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Border Background="White" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <CheckBox Margin="10" Content="Hide annotations when mouse leaves chart" FontSize="18" Click="CheckBox_Click" />
+        </Border>
+
+        <Border Background="White" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel>
+                <CheckBox x:Name="cbNavigate" Margin="10" Content="Navigate with left/right arrows" FontSize="18" IsChecked="True" />
+                <Button Content="Change annotations from code behind" Click="Button_Click" />
+            </StackPanel>
+        </Border>
+
+        <telerik:RadCartesianChart Grid.Row="1" local:ChartUtilities.AnnotationsGroup="g1">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeCategoricalAxis LabelFormat="MMMdd" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries CategoryBinding="Date" 
+                                   ValueBinding="YVal" 
+                                   ItemsSource="{Binding Data1}" 
+                                   local:ChartUtilities.DataPointTemplate="{StaticResource BarDataPointTemplate}" 
+                                   local:ChartUtilities.IntersectionPointTemplate="{StaticResource IntersectionPointTemplate}" />
+                <telerik:LineSeries CategoryBinding="Date" 
+                                   ValueBinding="YVal" 
+                                   ItemsSource="{Binding Data2}" 
+                                   local:ChartUtilities.DataPointTemplate="{StaticResource LineDataPointTemplate}"
+                                   local:ChartUtilities.IntersectionPointTemplate="{StaticResource IntersectionPointTemplate}" />
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+
+        <telerik:RadCartesianChart Grid.Row="2"
+                                   local:ChartUtilities.AnnotationsGroup="g1">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeCategoricalAxis LabelFormat="MMMdd" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:LineSeries CategoryBinding="Date" 
+                                    ValueBinding="YVal" 
+                                    ItemsSource="{Binding Data2}" 
+                                    Stroke="Blue"
+                                    local:ChartUtilities.DataPointTemplate="{StaticResource LineDataPointTemplate}" 
+                                    local:ChartUtilities.IntersectionPointTemplate="{StaticResource IntersectionPointTemplate}" />
+            </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Indicators>
+                <telerik:BollingerBandsIndicator CategoryBinding="Date" 
+                                                 ValueBinding="YVal" 
+                                                 ItemsSource="{Binding Data1}" 
+                                                 StandardDeviations="8" 
+                                                 Period="2" 
+                                                 Stroke="Red" 
+                                                 LowerBandStroke="Green"
+                                                 local:ChartUtilities.IntersectionPointTemplate="{StaticResource IntersectionPointTemplate}" />
+            </telerik:RadCartesianChart.Indicators>
+        </telerik:RadCartesianChart>
+
+        <Border Grid.Row="2" Background="White" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="line series" Foreground="Blue" />
+                <TextBlock Text="bollinger band indicator" Foreground="Red" />
+                <TextBlock Text="bollinger lower band indicator" Foreground="Green" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

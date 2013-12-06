@@ -5,14 +5,16 @@ namespace RecurringTask
 {
 	public class TimeLineRecurrenceContainerSelector : DefaultTimeLineContainerSelector
 	{
-		public override ContainerTypeIdentifier GetContainerType(object item)
-		{
-			if (item is TimeLineRecurrenceEventInfo)
-			{
-				return ContainerTypeIdentifier.FromType<TimeLineRecurrenceContainer>();
-			}
+        protected static readonly ContainerTypeIdentifier RecurrenceContainerType = ContainerTypeIdentifier.FromType<TimeLineRecurrenceContainer>();
 
-			return base.GetContainerType(item);
-		}
+        public override ContainerTypeIdentifier GetContainerType(object item)
+        {
+            if (item is TimeLineRecurrenceEventInfo)
+            {
+                return RecurrenceContainerType;
+            }
+
+            return base.GetContainerType(item);
+        }
 	}
 }

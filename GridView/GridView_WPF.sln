@@ -50,6 +50,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlPanel_WPF", "Control
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCompleteStringFilterEditor_WPF", "AutoCompleteStringFilterEditor\AutoCompleteStringFilterEditor_WPF.csproj", "{CF097301-53E0-4C08-817B-82D39899D3C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollTwoGridsSimultaneously_WPF", "ScrollTwoGridsSimultaneously\ScrollTwoGridsSimultaneously_WPF.csproj", "{41D43E75-A5FB-400C-BFDC-44341401BFF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTooltipWhenTextTrimmed_WPF", "CellTooltipWhenTextTrimmed\CellTooltipWhenTextTrimmed_WPF.csproj", "{2C9F27F2-8D54-49F2-A59B-D90BB6334496}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -315,6 +319,28 @@ Global
 		{CF097301-53E0-4C08-817B-82D39899D3C9}.Release|Mixed Platforms.Build.0 = Release|x86
 		{CF097301-53E0-4C08-817B-82D39899D3C9}.Release|x86.ActiveCfg = Release|x86
 		{CF097301-53E0-4C08-817B-82D39899D3C9}.Release|x86.Build.0 = Release|x86
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|x86.ActiveCfg = Debug|x86
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Debug|x86.Build.0 = Debug|x86
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|x86.ActiveCfg = Release|x86
+		{41D43E75-A5FB-400C-BFDC-44341401BFF7}.Release|x86.Build.0 = Release|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|x86.ActiveCfg = Debug|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|x86.Build.0 = Debug|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|Any CPU.ActiveCfg = Release|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|x86.ActiveCfg = Release|x86
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

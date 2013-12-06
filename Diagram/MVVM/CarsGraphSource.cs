@@ -70,10 +70,7 @@ namespace MVVM
 			if (info[this.NodeUniqueIdKey] != null)
 			{
 				var nodeUniquekey = info[this.NodeUniqueIdKey].ToString();
-				if (!this.CachedNodes.ContainsKey(nodeUniquekey))
-				{
-					this.CachedNodes.Add(nodeUniquekey, node);
-				}
+                this.CachedNodes[nodeUniquekey] = node;
 			}
 
 			return node;

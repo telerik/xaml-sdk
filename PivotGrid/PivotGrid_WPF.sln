@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourcePersistence_WPF", "Persistence\LocalDataSourceProvider\LocalDataSourcePersistence_WPF.csproj", "{F370C170-4B92-40C5-BAB2-233FC0EBA1E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdomdPersistence_WPF", "Persistence\AdomdProvider\AdomdPersistence_WPF.csproj", "{FA194FB2-7355-428C-8346-816402C42097}"
@@ -32,6 +34,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedFields_WPF", "CalculatedFields\LocalDataSourceCalculatedFields\LocalDataSourceCalculatedFields_WPF.csproj", "{00215A91-10B2-42E5-AD2E-F5F626B31F39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedItems_WPF", "CalculatedItems\LocalDataSourceCalculatedItems\LocalDataSourceCalculatedItems_WPF.csproj", "{20A4A188-CF3E-4C30-937F-697089388095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryableCalculatedFields_WPF", "CalculatedFields\QueryableCalculatedFields\QueryableCalculatedFields_WPF.csproj", "{6CFCB58E-40A4-4E70-9B82-99BEB4A091A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryableCalculatedItems_WPF", "CalculatedItems\QueryableCalculatedItems\QueryableCalculatedItems_WPF.csproj", "{F2FFB684-83F5-4591-9082-920DC64FEA0B}"
 EndProject
 Global
 	 
@@ -104,6 +110,14 @@ Global
 		{20A4A188-CF3E-4C30-937F-697089388095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20A4A188-CF3E-4C30-937F-697089388095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20A4A188-CF3E-4C30-937F-697089388095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CFCB58E-40A4-4E70-9B82-99BEB4A091A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CFCB58E-40A4-4E70-9B82-99BEB4A091A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CFCB58E-40A4-4E70-9B82-99BEB4A091A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CFCB58E-40A4-4E70-9B82-99BEB4A091A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

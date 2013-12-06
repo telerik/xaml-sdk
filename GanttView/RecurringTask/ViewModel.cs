@@ -11,7 +11,7 @@ namespace RecurringTask
 {
 	public class ViewModel : ViewModelBase
 	{
-		private ObservableCollection<GanttTask> tasks;
+        private ObservableCollection<IGanttTask> tasks;
 
 		private VisibleRange visibleRange;
 
@@ -19,12 +19,12 @@ namespace RecurringTask
 
 		public ViewModel()
 		{
-			this.visibleRange = new VisibleRange() { Start = DateTime.Today, End = DateTime.Today.AddDays(1) };
+			this.visibleRange = new VisibleRange() { Start = DateTime.Today, End = DateTime.Today.AddDays(3) };
 			this.tasks = this.GetTasks();
 			this.timeLineRecurrenceBehavior = new TimeLineRecurrenceBehavior();
 		}
 
-		public ObservableCollection<GanttTask> Tasks
+        public ObservableCollection<IGanttTask> Tasks
 		{
 			get
 			{
@@ -68,21 +68,27 @@ namespace RecurringTask
 			}
 		}
 
-		private ObservableCollection<GanttTask> GetTasks()
+        private ObservableCollection<IGanttTask> GetTasks()
 		{
-			var collection = new ObservableCollection<GanttTask>();
-			var today = DateTime.Today.AddHours(8);
-			var interval = new TimeSpan(8, 0, 0);
-			var recurringTask = new CustomRecurrenceTask(today.AddHours(-5), today.AddHours(-1), "Task with 3 recurrences")
-			{
-				RecurrenceRule = new RecurrenceRule(today.AddHours(-5), interval, 3)
-			};
-			collection.Add(recurringTask);
-			var normalTask = new GanttTask(today.AddHours(8), today.AddHours(13), "Task Without Recurrence");
-			normalTask.Children.Add(new GanttTask(today.AddHours(9), today.AddHours(12), "Child Task"));
-			collection.Add(normalTask);
+            var collection = new ObservableCollection<IGanttTask>();
+            var today = DateTime.Today.AddHours(8);
 
-			return collection;
+            var child1 = new GanttTask(today, today.AddHours(4), "reccurence1");
+            var child2 = new GanttTask(today.AddHours(8), today.AddHours(12), "reccurence2");
+            var child3 = new GanttTask(today.AddHours(16), today.AddHours(20), "reccurence3");
+
+            var task1 = new RecurrenceTask(today, today.AddHours(20), "recurrence")
+            {
+                Children = { child1, child2, child3 }
+            };
+
+            collection.Add(task1);
+
+            var taskWithoutRecurrence = new GanttTask(today.AddHours(8), today.AddHours(13), "Task Without Recurrence");
+            taskWithoutRecurrence.Children.Add(new GanttTask(today.AddHours(9), today.AddHours(12), "Child Task"));
+            collection.Add(taskWithoutRecurrence);
+
+            return collection;
 		}
 	}
 }

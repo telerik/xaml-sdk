@@ -87,7 +87,7 @@
     <Compile Include="App_SL.xaml.cs">
       <DependentUpon>App_SL.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomFlyoutBehavior.cs" />
+    <Compile Include="AnimatedFlyoutBehavior.cs" />
     <Compile Include="Example.xaml.cs">
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
