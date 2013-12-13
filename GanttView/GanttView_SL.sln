@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_SL", "TaskDeadline\TaskDeadline_SL.csproj", "{8CA25908-7486-4F16-84C5-5727C7491BCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDeadline_SL", "ProjectDeadline\ProjectDeadline_SL.csproj", "{9B3CE01E-1B85-475C-8C4C-2C3B3AE23D50}"
@@ -46,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelsToPixelLengthConversion_SL", "PixelsToPixelLengthConversion\PixelsToPixelLengthConversion_SL.csproj", "{3F16D81E-8D64-4EA6-8B15-EB69EE7B2549}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayEvents_SL", "HolidayEvents\HolidayEvents_SL.csproj", "{0D44926E-1519-41BD-ACD2-E1268380036F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldParentTasks_SL", "BoldParentTasks\BoldParentTasks_SL.csproj", "{5895DE0C-5F57-4CCD-89AB-2025CC36E323}"
 EndProject
 Global
 	 
@@ -146,6 +150,10 @@ Global
 		{0D44926E-1519-41BD-ACD2-E1268380036F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D44926E-1519-41BD-ACD2-E1268380036F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D44926E-1519-41BD-ACD2-E1268380036F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

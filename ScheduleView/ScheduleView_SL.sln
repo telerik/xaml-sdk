@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentColorBasedOnResource_SL", "AppointmentColorBasedOnResource\AppointmentColorBasedOnResource_SL.csproj", "{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}"
@@ -22,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingAndFilteringWithTreeView_SL", "GroupingAndFilteringWithTreeView\GroupingAndFilteringWithTreeView_SL.csproj", "{007F448C-2148-4D17-A083-6EB19E0F865B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDeleteButton_SL", "RemoveDeleteButton\RemoveDeleteButton_SL.csproj", "{21AA65AF-F304-4C33-B47A-C4288A90A8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragDropBehavior_SL", "CustomDragDropBehavior\CustomDragDropBehavior_SL.csproj", "{BCF6A668-C2DD-41EB-AAAE-92F31771548C}"
 EndProject
 Global
 	 
@@ -74,6 +78,10 @@ Global
 		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AA65AF-F304-4C33-B47A-C4288A90A8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF6A668-C2DD-41EB-AAAE-92F31771548C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF6A668-C2DD-41EB-AAAE-92F31771548C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF6A668-C2DD-41EB-AAAE-92F31771548C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF6A668-C2DD-41EB-AAAE-92F31771548C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

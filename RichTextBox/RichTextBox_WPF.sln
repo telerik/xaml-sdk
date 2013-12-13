@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafeDocumentConversion", "ThreadSafeDocumentConversion\ThreadSafeDocumentConversion.csproj", "{2B5581A5-0260-44DA-B5D1-F26E0D75CF2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_WPF", "DataBinding\DataBinding_WPF.csproj", "{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,6 +242,16 @@ Global
 		{2B5581A5-0260-44DA-B5D1-F26E0D75CF2A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2B5581A5-0260-44DA-B5D1-F26E0D75CF2A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2B5581A5-0260-44DA-B5D1-F26E0D75CF2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

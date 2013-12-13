@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localiza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeRibbonUIDataContext_SL", "ChangeRibbonUIDataContext\ChangeRibbonUIDataContext_SL.csproj", "{B5653D59-C73F-4824-A218-D1C1E3EC80F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_SL", "DataBinding\DataBinding_SL.csproj", "{CF815898-F41C-4AEC-BE07-C6124A0B867A}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +106,10 @@ Global
 		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5653D59-C73F-4824-A218-D1C1E3EC80F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF815898-F41C-4AEC-BE07-C6124A0B867A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF815898-F41C-4AEC-BE07-C6124A0B867A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF815898-F41C-4AEC-BE07-C6124A0B867A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF815898-F41C-4AEC-BE07-C6124A0B867A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

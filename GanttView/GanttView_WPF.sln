@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_WPF", "TaskDeadline\TaskDeadline_WPF.csproj", "{356BD052-E473-498A-ABC8-1F79FE24F281}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDeadline_WPF", "ProjectDeadline\ProjectDeadline_WPF.csproj", "{2CE59379-1EF7-4B5D-B151-B378D3067839}"
@@ -46,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelsToPixelLengthConversion_WPF", "PixelsToPixelLengthConversion\PixelsToPixelLengthConversion_WPF.csproj", "{B813A2DE-3775-4146-8613-6D8029EA26C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayEvents_WPF", "HolidayEvents\HolidayEvents_WPF.csproj", "{9B37CB0B-7874-49B9-8113-D36ED694C298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldParentTasks_WPF", "BoldParentTasks\BoldParentTasks_WPF.csproj", "{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}"
 EndProject
 Global
 	 
@@ -288,6 +292,16 @@ Global
 		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9B37CB0B-7874-49B9-8113-D36ED694C298}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
