@@ -25,11 +25,15 @@
         <local:ViewModel />
     </UserControl.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <telerik:RadListBox x:Name="ListBox" Grid.Column="0" ItemsSource="{Binding Meetings}" 
+        <telerik:RadListBox x:Name="ListBox" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Meetings}" 
                             DisplayMemberPath="Name" ItemContainerStyle="{StaticResource DraggableListBoxItem}">
             <telerik:RadListBox.DragVisualProvider>
                 <telerik:ScreenshotDragVisualProvider />
@@ -41,7 +45,7 @@
                 <telerik:ListBoxDragDropBehavior />
             </telerik:RadListBox.DragDropBehavior>
         </telerik:RadListBox>
-        <telerik:RadScheduleView Grid.Column="1" 
+        <telerik:RadScheduleView Grid.Column="1" Grid.Row="0"
                                  AppointmentsSource="{Binding Appointments}" 
                                  AppointmentItemContentTemplate="{StaticResource AppointmentItemContentTemplate}"
                                  ResourceTypesSource="{Binding ResourceTypeSource}"
@@ -53,5 +57,6 @@
                 <local:CustomScheduleViewDragDropBehavior />
             </telerik:RadScheduleView.DragDropBehavior>
         </telerik:RadScheduleView>
+        <TextBlock Text="{Binding Readme}" Grid.Row="1" Grid.ColumnSpan="2" Padding="10" FontStyle="Italic" />
     </Grid>
 </UserControl>

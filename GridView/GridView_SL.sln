@@ -52,6 +52,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlPanel_SL", "ControlP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollTwoGridsSimultaneously_SL", "ScrollTwoGridsSimultaneously\ScrollTwoGridsSimultaneously_SL.csproj", "{90579ED6-BA28-4974-9A79-93FF534BE420}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomKeyboardCommandProvider_SL", "CustomKeyboardCommandProvider\CustomKeyboardCommandProvider_SL.csproj", "{5BAA1BE1-4D7B-450E-AEC2-A4FA90F2B1B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistinctValuesFilteringCaseSensitivity_SL", "DistinctValuesFilteringCaseSensitivity\DistinctValuesFilteringCaseSensitivity_SL.csproj", "{B672A04C-7D32-446B-B68A-241AF64F6375}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +155,14 @@ Global
 		{90579ED6-BA28-4974-9A79-93FF534BE420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90579ED6-BA28-4974-9A79-93FF534BE420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90579ED6-BA28-4974-9A79-93FF534BE420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAA1BE1-4D7B-450E-AEC2-A4FA90F2B1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAA1BE1-4D7B-450E-AEC2-A4FA90F2B1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAA1BE1-4D7B-450E-AEC2-A4FA90F2B1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAA1BE1-4D7B-450E-AEC2-A4FA90F2B1B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B672A04C-7D32-446B-B68A-241AF64F6375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B672A04C-7D32-446B-B68A-241AF64F6375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B672A04C-7D32-446B-B68A-241AF64F6375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B672A04C-7D32-446B-B68A-241AF64F6375}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

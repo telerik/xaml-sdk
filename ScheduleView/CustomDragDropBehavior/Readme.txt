@@ -5,4 +5,4 @@ This example shows how to implement and use a custom ScheduleViewDragDropBehavio
 -	The Appointments cannot be resized to a duration below 30 minutes and above 2 hours
 -	All of the non ReadOnly Appointments in with same Resource should move together when single Appointment is dragged
 -	Appointments cannot be moved from one Resource to another
--	Copping Appointments when dragging with Control key pressed to be disabled
+-	Dragging Appointment with Control key pressed doesn't copy the Appointment

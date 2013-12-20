@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayEvents_SL", "Holiday
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldParentTasks_SL", "BoldParentTasks\BoldParentTasks_SL.csproj", "{5895DE0C-5F57-4CCD-89AB-2025CC36E323}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandCollapseViaHeader_SL", "ExpandCollapseViaHeader\ExpandCollapseViaHeader_SL.csproj", "{63F7148D-C56B-4581-9602-2F6AEDA62A08}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -154,6 +156,10 @@ Global
 		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5895DE0C-5F57-4CCD-89AB-2025CC36E323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

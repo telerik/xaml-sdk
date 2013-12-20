@@ -1,0 +1,9 @@
+﻿<Window x:Class="ExpandCollapseViaHeader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ExpandCollapseViaHeader"
+        Title="Expand/Collapse CheckBox inside the Tree Column's Header" Height="470" Width="1250">
+    <Grid>
+        <local:Example/>
+    </Grid>
+</Window>
