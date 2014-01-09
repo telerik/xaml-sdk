@@ -74,19 +74,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Black">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Office_Black.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

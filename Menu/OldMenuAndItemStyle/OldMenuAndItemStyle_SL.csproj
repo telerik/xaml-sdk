@@ -74,13 +74,13 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows8">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Windows8.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows8.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

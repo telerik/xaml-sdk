@@ -73,46 +73,46 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Black">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Office_Black.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Blue">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Office_Blue.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office_Blue.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Silver">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Office_Silver.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office_Silver.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Expression_Dark">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Expression_Dark.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Expression_Dark.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Transparent">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Transparent.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Transparent.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Summer">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Summer.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Summer.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Vista">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Vista.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Vista.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows7">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Windows7.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows7.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows8">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Windows8.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows8.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows8Touch">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight.NoXaml\Telerik.Windows.Themes.Windows8Touch.dll</HintPath>
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows8Touch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
