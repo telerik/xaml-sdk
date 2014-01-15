@@ -47,7 +47,7 @@ namespace PdfViewerCustomSaveCommand.Commands
                 str.Flush();
                 str.Seek(0, SeekOrigin.Begin);
                 stream.Flush();
-                PdfDocumentSource source = new PdfDocumentSource(str, FormatProviderSettings.ReadAllAtOnce);
+                PdfDocumentSource source = new PdfDocumentSource(str, FormatProviderSettings.ReadOnDemand);
                 source.Loaded += (s, e) =>
                 {
                     str.Close();
