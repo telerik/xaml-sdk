@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryableCalculatedFields_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryableCalculatedItems_WPF", "CalculatedItems\QueryableCalculatedItems\QueryableCalculatedItems_WPF.csproj", "{F2FFB684-83F5-4591-9082-920DC64FEA0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContextMenuBehavior_WPF", "CustomContextMenuBehavior\CustomContextMenuBehavior_WPF.csproj", "{08485209-7167-4FC5-AA2B-1B5826D7745C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,6 +120,10 @@ Global
 		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2FFB684-83F5-4591-9082-920DC64FEA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08485209-7167-4FC5-AA2B-1B5826D7745C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08485209-7167-4FC5-AA2B-1B5826D7745C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08485209-7167-4FC5-AA2B-1B5826D7745C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08485209-7167-4FC5-AA2B-1B5826D7745C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafeDocumentConversio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_WPF", "DataBinding\DataBinding_WPF.csproj", "{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulateWatermark_WPF", "SimulateWatermark\SimulateWatermark_WPF.csproj", "{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -252,6 +254,16 @@ Global
 		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F3A661C5-6BFC-497A-BFA2-ECA2ECDEAB1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A2CE792-9EA5-4CC8-930D-2A7B87315FBA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

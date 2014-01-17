@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_WPF", "MonthTickProvider\MonthTickProvider_WPF.csproj", "{428E7461-E755-42A5-9728-F2F448EAE181}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentColorBasedOnResource_WPF", "AppointmentColorBasedOnResource\AppointmentColorBasedOnResource_WPF.csproj", "{94FF10A8-07CD-4A1B-BA19-55CEA285C555}"
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDeleteButton_WPF", "RemoveDeleteButton\RemoveDeleteButton_WPF.csproj", "{B35BEA83-3D02-48DC-8ED3-F830D823E6A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragDropBehavior_WPF", "CustomDragDropBehavior\CustomDragDropBehavior_WPF.csproj", "{635A284E-6436-4B35-A6D5-B2F6CF80F335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesPaging_WPF", "ResourcesPaging\ResourcesPaging_WPF.csproj", "{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}"
 EndProject
 Global
 	 
@@ -158,6 +158,16 @@ Global
 		{635A284E-6436-4B35-A6D5-B2F6CF80F335}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{635A284E-6436-4B35-A6D5-B2F6CF80F335}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{635A284E-6436-4B35-A6D5-B2F6CF80F335}.Release|x86.ActiveCfg = Release|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

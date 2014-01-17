@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourcePersistence_SL", "Persistence\LocalDataSourceProvider\LocalDataSourcePersistence_SL.csproj", "{1D330BF9-D365-4CC0-9A10-98874BB98404}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlaPersistence_SL", "Persistence\XmlaPersistence\XmlaPersistence_SL.csproj", "{0A3C6B7E-63FA-443C-B530-97606E31878A}"
@@ -28,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedFields_SL", "CalculatedFields\LocalDataSourceCalculatedFields\LocalDataSourceCalculatedFields_SL.csproj", "{0CD572CD-9B96-4A76-9C9E-20455167522F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourceCalculatedItems_SL", "CalculatedItems\LocalDataSourceCalculatedItems\LocalDataSourceCalculatedItems_SL.csproj", "{6422C1C3-28CA-4560-85E8-DE77B5A2301C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContextMenuBehavior_SL", "CustomContextMenuBehavior\CustomContextMenuBehavior_SL.csproj", "{3971312C-623A-49D8-AF47-4073BA32507E}"
 EndProject
 Global
 	 
@@ -92,6 +96,10 @@ Global
 		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6422C1C3-28CA-4560-85E8-DE77B5A2301C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3971312C-623A-49D8-AF47-4073BA32507E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3971312C-623A-49D8-AF47-4073BA32507E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3971312C-623A-49D8-AF47-4073BA32507E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3971312C-623A-49D8-AF47-4073BA32507E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
