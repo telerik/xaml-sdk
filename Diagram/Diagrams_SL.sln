@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDesignToolBox_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomToolboxDragDrop_SL", "CustomToolboxDragDrop\CustomToolboxDragDrop_SL.csproj", "{CA98B167-2D2E-435C-A48E-636CE302822E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTools_SL", "CustomTools\CustomTools_SL.csproj", "{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -192,6 +194,16 @@ Global
 		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CA98B167-2D2E-435C-A48E-636CE302822E}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B5AF576C-83A5-4331-A6F3-B10B00D7EEF9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

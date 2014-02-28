@@ -1,0 +1,1 @@
+This example demonstrates how use GridViewComboBoxColumn and allow the user to edit it and add new items for its ItemsSource. The example is available for Silverlight and WPF.

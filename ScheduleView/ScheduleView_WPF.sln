@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragDropBehavior_WPF"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesPaging_WPF", "ResourcesPaging\ResourcesPaging_WPF.csproj", "{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{E41C2B1C-1399-4FAE-A367-84019E33108A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB", "Database\WPF_CS\WithDB.csproj", "{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,8 +172,21 @@ Global
 		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{73FD6AA9-B1C4-4B80-94C4-E11BA309314D}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C} = {E41C2B1C-1399-4FAE-A367-84019E33108A}
 	EndGlobalSection
 EndGlobal

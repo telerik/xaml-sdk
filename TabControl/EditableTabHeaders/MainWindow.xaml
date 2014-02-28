@@ -1,0 +1,50 @@
+﻿<Window x:Class="EditableTabHeaders.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:EditableTabHeaders"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="{x:Type local:EditableTabHeader_WPF}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type local:EditableTabHeader_WPF}">
+                        <Grid>
+                            <TextBox x:Name="PART_EditArea"
+                            Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Mode=TwoWay}"
+                            Visibility="Collapsed" />
+                            <ContentPresenter x:Name="ContentPresenter"
+                            Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content, Mode=TwoWay}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsInEditMode" Value="True">
+                                <Trigger.Setters>
+                                    <Setter TargetName="PART_EditArea" Property="Visibility" Value="Visible" />
+                                    <Setter TargetName="ContentPresenter" Property="Visibility" Value="Collapsed" />
+                                </Trigger.Setters>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <telerik:RadTabControl x:Name="radTabControl">
+            <telerik:RadTabControl.ContentTemplate>
+                <!--The Content Template:-->
+                <DataTemplate>
+                    <Grid Background="WhiteSmoke">
+                        <TextBlock Text="{Binding Content}" />
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadTabControl.ContentTemplate>
+            <telerik:RadTabControl.ItemTemplate>
+                <!--The Header Template:-->
+                <DataTemplate>
+                    <local:EditableTabHeader_WPF Content="{Binding Name, Mode=TwoWay}" />
+                </DataTemplate>
+            </telerik:RadTabControl.ItemTemplate>
+        </telerik:RadTabControl>
+    </Grid>
+</Window>

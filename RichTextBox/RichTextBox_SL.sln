@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_SL", "DataBindi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulateWatermark_SL", "SimulateWatermark\SimulateWatermark_SL.csproj", "{BE866F9D-1763-460D-B3F8-56652B9308BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMerge_SL", "MailMerge\MailMerge_SL.csproj", "{CC0C1F1A-10CD-4E09-8CB5-9FDBBCCCD520}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,10 @@ Global
 		{BE866F9D-1763-460D-B3F8-56652B9308BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE866F9D-1763-460D-B3F8-56652B9308BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE866F9D-1763-460D-B3F8-56652B9308BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC0C1F1A-10CD-4E09-8CB5-9FDBBCCCD520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0C1F1A-10CD-4E09-8CB5-9FDBBCCCD520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0C1F1A-10CD-4E09-8CB5-9FDBBCCCD520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0C1F1A-10CD-4E09-8CB5-9FDBBCCCD520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

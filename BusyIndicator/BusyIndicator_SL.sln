@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimateOnFrozenUI", "AnimateOnFrozenUI\AnimateOnFrozenUI\AnimateOnFrozenUI.csproj", "{740961D8-FD3C-4620-90BC-1FD94CE305B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimateOnFrozenUI.Web", "AnimateOnFrozenUI\AnimateOnFrozenUI.Web\AnimateOnFrozenUI.Web.csproj", "{CBD4B650-C0BD-4AA3-B98D-09625A78164D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AnimatedOnFrozenUI", "AnimatedOnFrozenUI", "{0F3B37C7-235A-4A46-9351-3255B0CBB009}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestoreFocus_SL", "RestoreFocus\RestoreFocus_SL.csproj", "{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}"
 EndProject
 Global
@@ -16,14 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{740961D8-FD3C-4620-90BC-1FD94CE305B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{740961D8-FD3C-4620-90BC-1FD94CE305B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{740961D8-FD3C-4620-90BC-1FD94CE305B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{740961D8-FD3C-4620-90BC-1FD94CE305B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBD4B650-C0BD-4AA3-B98D-09625A78164D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A81F51C1-B3B7-40F3-ABF5-D9DD8D42EFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,9 +19,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{CBD4B650-C0BD-4AA3-B98D-09625A78164D} = {0F3B37C7-235A-4A46-9351-3255B0CBB009}
-		{740961D8-FD3C-4620-90BC-1FD94CE305B8} = {0F3B37C7-235A-4A46-9351-3255B0CBB009}
 	EndGlobalSection
 EndGlobal

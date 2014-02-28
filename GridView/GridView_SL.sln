@@ -56,6 +56,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomKeyboardCommandProvid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistinctValuesFilteringCaseSensitivity_SL", "DistinctValuesFilteringCaseSensitivity\DistinctValuesFilteringCaseSensitivity_SL.csproj", "{B672A04C-7D32-446B-B68A-241AF64F6375}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboboxColumnEditable_SL", "ComboboxColumnEditable\ComboboxColumnEditable_SL.csproj", "{CF3CD947-4ED5-4320-A95C-9E4D59114043}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,6 +165,10 @@ Global
 		{B672A04C-7D32-446B-B68A-241AF64F6375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B672A04C-7D32-446B-B68A-241AF64F6375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B672A04C-7D32-446B-B68A-241AF64F6375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3CD947-4ED5-4320-A95C-9E4D59114043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3CD947-4ED5-4320-A95C-9E4D59114043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3CD947-4ED5-4320-A95C-9E4D59114043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3CD947-4ED5-4320-A95C-9E4D59114043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

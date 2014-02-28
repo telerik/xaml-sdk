@@ -23,7 +23,6 @@ namespace CopyPasteFunctionality_WPF
 	{
 		public MainWindow()
 		{
-			StyleManager.ApplicationTheme = new Windows8Theme();
 			InitializeComponent();
 		}
 	}

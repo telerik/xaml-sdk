@@ -1,4 +1,5 @@
-﻿The ToolBar MVVM sample demonstrates the following features and custommization techniques in the RadToolBar:
+﻿#ToolBar MVVM#
+The ToolBar MVVM sample demonstrates the following features and custommization techniques in the RadToolBar:
 	
 	1) DataBinding the RadToolBar to collection of ViewModels.
 	2) DataTemplaceSelector which decides what type of control to add in the toolbar depending on the ViewModel's type.

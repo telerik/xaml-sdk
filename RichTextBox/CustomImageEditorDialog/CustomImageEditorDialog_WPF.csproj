@@ -120,8 +120,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Resource Include="SampleData\RadRichTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>

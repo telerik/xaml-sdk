@@ -17,7 +17,6 @@ namespace CopyPasteFunctionality_SL
 	{
 		public MainPage()
 		{
-			StyleManager.ApplicationTheme = new Windows8Theme();
 			InitializeComponent();
 		}
 	}

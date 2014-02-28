@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="CustomContextMenu.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:spreadsheetControls="clr-namespace:Telerik.Windows.Controls.Spreadsheet.Controls;assembly=Telerik.Windows.Controls.Spreadsheet"
+    mc:Ignorable="d"
+    x:Name="MainPageControl"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadSpreadsheet Grid.Row="1" x:Name="radSpreadsheet" DataContext="{Binding Path=CommandDescriptors, ElementName=radSpreadsheet}" >
+            <telerik:RadSpreadsheet.WorksheetEditorContextMenu>
+                <telerik:RadContextMenu>
+
+                    <telerik:RadMenuItem Header="Copy" Command="{Binding Path=Copy.Command}"
+                                         Visibility="{Binding Path=Copy.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image telerik:IconManager.IconPropertyName="Source"
+                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/copy.png" Width="16"/>
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Header="Paste" Command="{Binding Path=Paste.Command}"
+                                         Visibility="{Binding Path=Paste.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image telerik:IconManager.IconPropertyName="Source"
+                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/pasteNormal.png" Width="16"/>
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                </telerik:RadContextMenu>
+            </telerik:RadSpreadsheet.WorksheetEditorContextMenu>
+        </telerik:RadSpreadsheet>
+    </Grid>
+</UserControl>

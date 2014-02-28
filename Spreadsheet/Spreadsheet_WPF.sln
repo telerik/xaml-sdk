@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafeFormatProvider_WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorksheetEditorContextMenu_WPF", "WorksheetEditorContextMenu\WorksheetEditorContextMenu_WPF.csproj", "{FE4E4E8D-CE22-4148-B007-CE53313BDAF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContextMenu_WPF", "CustomContextMenu\CustomContextMenu_WPF.csproj", "{5CD42356-4198-42FC-8717-EC8276928A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadToolBarUI_WPF", "RadToolBarUI\RadToolBarUI_WPF.csproj", "{2E965B55-6A07-422A-A1AD-06FC1EE50317}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +42,14 @@ Global
 		{FE4E4E8D-CE22-4148-B007-CE53313BDAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4E4E8D-CE22-4148-B007-CE53313BDAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4E4E8D-CE22-4148-B007-CE53313BDAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD42356-4198-42FC-8717-EC8276928A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD42356-4198-42FC-8717-EC8276928A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD42356-4198-42FC-8717-EC8276928A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD42356-4198-42FC-8717-EC8276928A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E965B55-6A07-422A-A1AD-06FC1EE50317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E965B55-6A07-422A-A1AD-06FC1EE50317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E965B55-6A07-422A-A1AD-06FC1EE50317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E965B55-6A07-422A-A1AD-06FC1EE50317}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

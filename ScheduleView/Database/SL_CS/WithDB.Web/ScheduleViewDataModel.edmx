@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScheduleViewDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ScheduleViewDBModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="ScheduleViewDBModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlAppointmentResources" EntityType="ScheduleViewDBModel.Store.SqlAppointmentResources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlAppointments" EntityType="ScheduleViewDBModel.Store.SqlAppointments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlExceptionAppointments" EntityType="ScheduleViewDBModel.Store.SqlExceptionAppointments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlExceptionOccurrences" EntityType="ScheduleViewDBModel.Store.SqlExceptionOccurrences" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlExceptionResources" EntityType="ScheduleViewDBModel.Store.SqlExceptionResources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlResources" EntityType="ScheduleViewDBModel.Store.SqlResources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SqlResourceTypes" EntityType="ScheduleViewDBModel.Store.SqlResourceTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TimeMarkers" EntityType="ScheduleViewDBModel.Store.TimeMarkers" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_SqlAppointmentResources_SqlAppointment" Association="ScheduleViewDBModel.Store.FK_SqlAppointmentResources_SqlAppointment">
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+            <End Role="SqlAppointmentResources" EntitySet="SqlAppointmentResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointmentResources_SqlResource" Association="ScheduleViewDBModel.Store.FK_SqlAppointmentResources_SqlResource">
+            <End Role="SqlResources" EntitySet="SqlResources" />
+            <End Role="SqlAppointmentResources" EntitySet="SqlAppointmentResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointments_Categories" Association="ScheduleViewDBModel.Store.FK_SqlAppointments_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointments_TimeMarkers" Association="ScheduleViewDBModel.Store.FK_SqlAppointments_TimeMarkers">
+            <End Role="TimeMarkers" EntitySet="TimeMarkers" />
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_Categories" Association="ScheduleViewDBModel.Store.FK_SqlExceptionAppointments_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_SqlExceptionOccurrences" Association="ScheduleViewDBModel.Store.FK_SqlExceptionAppointments_SqlExceptionOccurrences">
+            <End Role="SqlExceptionOccurrences" EntitySet="SqlExceptionOccurrences" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_TimeMarkers" Association="ScheduleViewDBModel.Store.FK_SqlExceptionAppointments_TimeMarkers">
+            <End Role="TimeMarkers" EntitySet="TimeMarkers" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionOccurrences_SqlAppointments" Association="ScheduleViewDBModel.Store.FK_SqlExceptionOccurrences_SqlAppointments">
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+            <End Role="SqlExceptionOccurrences" EntitySet="SqlExceptionOccurrences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionResources_SqlExceptionAppointment" Association="ScheduleViewDBModel.Store.FK_SqlExceptionResources_SqlExceptionAppointment">
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+            <End Role="SqlExceptionResources" EntitySet="SqlExceptionResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionResources_SqlResource" Association="ScheduleViewDBModel.Store.FK_SqlExceptionResources_SqlResource">
+            <End Role="SqlResources" EntitySet="SqlResources" />
+            <End Role="SqlExceptionResources" EntitySet="SqlExceptionResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlResources_SqlResourceTypes" Association="ScheduleViewDBModel.Store.FK_SqlResources_SqlResourceTypes">
+            <End Role="SqlResourceTypes" EntitySet="SqlResourceTypes" />
+            <End Role="SqlResources" EntitySet="SqlResources" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="100" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+          <Property Name="CategoryBrushName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SqlAppointmentResources">
+          <Key>
+            <PropertyRef Name="SqlAppointments_SqlAppointmentId" />
+            <PropertyRef Name="SqlResources_SqlResourceId" />
+          </Key>
+          <Property Name="SqlAppointments_SqlAppointmentId" Type="int" Nullable="false" />
+          <Property Name="SqlResources_SqlResourceId" Type="int" Nullable="false" />
+          <Property Name="ManyToManyWorkaround" Type="bit" />
+        </EntityType>
+        <EntityType Name="SqlAppointments">
+          <Key>
+            <PropertyRef Name="SqlAppointmentId" />
+          </Key>
+          <Property Name="SqlAppointmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+          <Property Name="Body" Type="nvarchar" MaxLength="500" />
+          <Property Name="Start" Type="datetime" Nullable="false" />
+          <Property Name="End" Type="datetime" Nullable="false" />
+          <Property Name="IsAllDayEvent" Type="bit" Nullable="false" />
+          <Property Name="RecurrencePattern" Type="varchar" MaxLength="100" />
+          <Property Name="TimeZoneString" Type="varchar" MaxLength="100" />
+          <Property Name="Importance" Type="int" Nullable="false" />
+          <Property Name="TimeMarkerID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="SqlExceptionAppointments">
+          <Key>
+            <PropertyRef Name="ExceptionId" />
+          </Key>
+          <Property Name="ExceptionId" Type="int" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+          <Property Name="Body" Type="nvarchar" MaxLength="500" />
+          <Property Name="Start" Type="datetime" Nullable="false" />
+          <Property Name="End" Type="datetime" Nullable="false" />
+          <Property Name="IsAllDayEvent" Type="bit" Nullable="false" />
+          <Property Name="TimeZoneString" Type="varchar" MaxLength="100" />
+          <Property Name="Importance" Type="int" Nullable="false" />
+          <Property Name="TimeMarkerID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="SqlExceptionOccurrences">
+          <Key>
+            <PropertyRef Name="ExceptionId" />
+          </Key>
+          <Property Name="ExceptionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MasterSqlAppointmentId" Type="int" Nullable="false" />
+          <Property Name="ExceptionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SqlExceptionResources">
+          <Key>
+            <PropertyRef Name="SqlExceptionAppointments_ExceptionId" />
+            <PropertyRef Name="SqlResources_SqlResourceId" />
+          </Key>
+          <Property Name="SqlExceptionAppointments_ExceptionId" Type="int" Nullable="false" />
+          <Property Name="SqlResources_SqlResourceId" Type="int" Nullable="false" />
+          <Property Name="ManyToManyWorkaround" Type="bit" />
+        </EntityType>
+        <EntityType Name="SqlResources">
+          <Key>
+            <PropertyRef Name="SqlResourceId" />
+          </Key>
+          <Property Name="SqlResourceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SqlResourceTypeId" Type="int" />
+          <Property Name="ResourceName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SqlResourceTypes">
+          <Key>
+            <PropertyRef Name="SqlResourceTypeId" />
+          </Key>
+          <Property Name="SqlResourceTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AllowMultipleSelection" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TimeMarkers">
+          <Key>
+            <PropertyRef Name="TimeMarkersId" />
+          </Key>
+          <Property Name="TimeMarkersId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TimeMarkerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeMarkerBrushName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_SqlAppointmentResources_SqlAppointment">
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.Store.SqlAppointments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlAppointmentResources" Type="ScheduleViewDBModel.Store.SqlAppointmentResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlAppointments">
+              <PropertyRef Name="SqlAppointmentId" />
+            </Principal>
+            <Dependent Role="SqlAppointmentResources">
+              <PropertyRef Name="SqlAppointments_SqlAppointmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointmentResources_SqlResource">
+          <End Role="SqlResources" Type="ScheduleViewDBModel.Store.SqlResources" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlAppointmentResources" Type="ScheduleViewDBModel.Store.SqlAppointmentResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResources">
+              <PropertyRef Name="SqlResourceId" />
+            </Principal>
+            <Dependent Role="SqlAppointmentResources">
+              <PropertyRef Name="SqlResources_SqlResourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointments_Categories">
+          <End Role="Categories" Type="ScheduleViewDBModel.Store.Categories" Multiplicity="0..1" />
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.Store.SqlAppointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="SqlAppointments">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointments_TimeMarkers">
+          <End Role="TimeMarkers" Type="ScheduleViewDBModel.Store.TimeMarkers" Multiplicity="0..1" />
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.Store.SqlAppointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeMarkers">
+              <PropertyRef Name="TimeMarkersId" />
+            </Principal>
+            <Dependent Role="SqlAppointments">
+              <PropertyRef Name="TimeMarkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_Categories">
+          <End Role="Categories" Type="ScheduleViewDBModel.Store.Categories" Multiplicity="0..1" />
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.Store.SqlExceptionAppointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_SqlExceptionOccurrences">
+          <End Role="SqlExceptionOccurrences" Type="ScheduleViewDBModel.Store.SqlExceptionOccurrences" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.Store.SqlExceptionAppointments" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SqlExceptionOccurrences">
+              <PropertyRef Name="ExceptionId" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="ExceptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_TimeMarkers">
+          <End Role="TimeMarkers" Type="ScheduleViewDBModel.Store.TimeMarkers" Multiplicity="0..1" />
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.Store.SqlExceptionAppointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeMarkers">
+              <PropertyRef Name="TimeMarkersId" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="TimeMarkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionOccurrences_SqlAppointments">
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.Store.SqlAppointments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionOccurrences" Type="ScheduleViewDBModel.Store.SqlExceptionOccurrences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlAppointments">
+              <PropertyRef Name="SqlAppointmentId" />
+            </Principal>
+            <Dependent Role="SqlExceptionOccurrences">
+              <PropertyRef Name="MasterSqlAppointmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionResources_SqlExceptionAppointment">
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.Store.SqlExceptionAppointments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionResources" Type="ScheduleViewDBModel.Store.SqlExceptionResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlExceptionAppointments">
+              <PropertyRef Name="ExceptionId" />
+            </Principal>
+            <Dependent Role="SqlExceptionResources">
+              <PropertyRef Name="SqlExceptionAppointments_ExceptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionResources_SqlResource">
+          <End Role="SqlResources" Type="ScheduleViewDBModel.Store.SqlResources" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionResources" Type="ScheduleViewDBModel.Store.SqlExceptionResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResources">
+              <PropertyRef Name="SqlResourceId" />
+            </Principal>
+            <Dependent Role="SqlExceptionResources">
+              <PropertyRef Name="SqlResources_SqlResourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlResources_SqlResourceTypes">
+          <End Role="SqlResourceTypes" Type="ScheduleViewDBModel.Store.SqlResourceTypes" Multiplicity="0..1" />
+          <End Role="SqlResources" Type="ScheduleViewDBModel.Store.SqlResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResourceTypes">
+              <PropertyRef Name="SqlResourceTypeId" />
+            </Principal>
+            <Dependent Role="SqlResources">
+              <PropertyRef Name="SqlResourceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScheduleViewDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ScheduleViewDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="ScheduleViewDBModel.Category" />
+          <EntitySet Name="SqlAppointmentResources" EntityType="ScheduleViewDBModel.SqlAppointmentResource" />
+          <EntitySet Name="SqlAppointments" EntityType="ScheduleViewDBModel.SqlAppointment" />
+          <EntitySet Name="SqlExceptionAppointments" EntityType="ScheduleViewDBModel.SqlExceptionAppointment" />
+          <EntitySet Name="SqlExceptionOccurrences" EntityType="ScheduleViewDBModel.SqlExceptionOccurrence" />
+          <EntitySet Name="SqlExceptionResources" EntityType="ScheduleViewDBModel.SqlExceptionResource" />
+          <EntitySet Name="SqlResources" EntityType="ScheduleViewDBModel.SqlResource" />
+          <EntitySet Name="SqlResourceTypes" EntityType="ScheduleViewDBModel.SqlResourceType" />
+          <EntitySet Name="TimeMarkers" EntityType="ScheduleViewDBModel.TimeMarker" />
+          <AssociationSet Name="FK_SqlAppointments_Categories" Association="ScheduleViewDBModel.FK_SqlAppointments_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_Categories" Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointmentResources_SqlAppointment" Association="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlAppointment">
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+            <End Role="SqlAppointmentResources" EntitySet="SqlAppointmentResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointmentResources_SqlResource" Association="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlResource">
+            <End Role="SqlResources" EntitySet="SqlResources" />
+            <End Role="SqlAppointmentResources" EntitySet="SqlAppointmentResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlAppointments_TimeMarkers" Association="ScheduleViewDBModel.FK_SqlAppointments_TimeMarkers">
+            <End Role="TimeMarkers" EntitySet="TimeMarkers" />
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionOccurrences_SqlAppointments" Association="ScheduleViewDBModel.FK_SqlExceptionOccurrences_SqlAppointments">
+            <End Role="SqlAppointments" EntitySet="SqlAppointments" />
+            <End Role="SqlExceptionOccurrences" EntitySet="SqlExceptionOccurrences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_SqlExceptionOccurrences" Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_SqlExceptionOccurrences">
+            <End Role="SqlExceptionOccurrences" EntitySet="SqlExceptionOccurrences" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionAppointments_TimeMarkers" Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_TimeMarkers">
+            <End Role="TimeMarkers" EntitySet="TimeMarkers" />
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionResources_SqlExceptionAppointment" Association="ScheduleViewDBModel.FK_SqlExceptionResources_SqlExceptionAppointment">
+            <End Role="SqlExceptionAppointments" EntitySet="SqlExceptionAppointments" />
+            <End Role="SqlExceptionResources" EntitySet="SqlExceptionResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlExceptionResources_SqlResource" Association="ScheduleViewDBModel.FK_SqlExceptionResources_SqlResource">
+            <End Role="SqlResources" EntitySet="SqlResources" />
+            <End Role="SqlExceptionResources" EntitySet="SqlExceptionResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SqlResources_SqlResourceTypes" Association="ScheduleViewDBModel.FK_SqlResources_SqlResourceTypes">
+            <End Role="SqlResourceTypes" EntitySet="SqlResourceTypes" />
+            <End Role="SqlResources" EntitySet="SqlResources" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CategoryBrushName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="SqlAppointments" Relationship="ScheduleViewDBModel.FK_SqlAppointments_Categories" FromRole="Categories" ToRole="SqlAppointments" />
+          <NavigationProperty Name="SqlExceptionAppointments" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_Categories" FromRole="Categories" ToRole="SqlExceptionAppointments" />
+        </EntityType>
+        <EntityType Name="SqlAppointmentResource">
+          <Key>
+            <PropertyRef Name="SqlAppointments_SqlAppointmentId" />
+            <PropertyRef Name="SqlResources_SqlResourceId" />
+          </Key>
+          <Property Name="SqlAppointments_SqlAppointmentId" Type="Int32" Nullable="false" />
+          <Property Name="SqlResources_SqlResourceId" Type="Int32" Nullable="false" />
+          <Property Name="ManyToManyWorkaround" Type="Boolean" />
+          <NavigationProperty Name="SqlAppointment" Relationship="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlAppointment" FromRole="SqlAppointmentResources" ToRole="SqlAppointments" />
+          <NavigationProperty Name="SqlResource" Relationship="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlResource" FromRole="SqlAppointmentResources" ToRole="SqlResources" />
+        </EntityType>
+        <EntityType Name="SqlAppointment">
+          <Key>
+            <PropertyRef Name="SqlAppointmentId" />
+          </Key>
+          <Property Name="SqlAppointmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Body" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Start" Type="DateTime" Nullable="false" />
+          <Property Name="End" Type="DateTime" Nullable="false" />
+          <Property Name="IsAllDayEvent" Type="Boolean" Nullable="false" />
+          <Property Name="RecurrencePattern" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TimeZoneString" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Importance" Type="Int32" Nullable="false" />
+          <Property Name="TimeMarkerID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="ScheduleViewDBModel.FK_SqlAppointments_Categories" FromRole="SqlAppointments" ToRole="Categories" />
+          <NavigationProperty Name="SqlAppointmentResources" Relationship="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlAppointment" FromRole="SqlAppointments" ToRole="SqlAppointmentResources" />
+          <NavigationProperty Name="TimeMarker" Relationship="ScheduleViewDBModel.FK_SqlAppointments_TimeMarkers" FromRole="SqlAppointments" ToRole="TimeMarkers" />
+          <NavigationProperty Name="SqlExceptionOccurrences" Relationship="ScheduleViewDBModel.FK_SqlExceptionOccurrences_SqlAppointments" FromRole="SqlAppointments" ToRole="SqlExceptionOccurrences" />
+        </EntityType>
+        <EntityType Name="SqlExceptionAppointment">
+          <Key>
+            <PropertyRef Name="ExceptionId" />
+          </Key>
+          <Property Name="ExceptionId" Type="Int32" Nullable="false" />
+          <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Body" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Start" Type="DateTime" Nullable="false" />
+          <Property Name="End" Type="DateTime" Nullable="false" />
+          <Property Name="IsAllDayEvent" Type="Boolean" Nullable="false" />
+          <Property Name="TimeZoneString" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Importance" Type="Int32" Nullable="false" />
+          <Property Name="TimeMarkerID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_Categories" FromRole="SqlExceptionAppointments" ToRole="Categories" />
+          <NavigationProperty Name="SqlExceptionOccurrence" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_SqlExceptionOccurrences" FromRole="SqlExceptionAppointments" ToRole="SqlExceptionOccurrences" />
+          <NavigationProperty Name="TimeMarker" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_TimeMarkers" FromRole="SqlExceptionAppointments" ToRole="TimeMarkers" />
+          <NavigationProperty Name="SqlExceptionResources" Relationship="ScheduleViewDBModel.FK_SqlExceptionResources_SqlExceptionAppointment" FromRole="SqlExceptionAppointments" ToRole="SqlExceptionResources" />
+        </EntityType>
+        <EntityType Name="SqlExceptionOccurrence">
+          <Key>
+            <PropertyRef Name="ExceptionId" />
+          </Key>
+          <Property Name="ExceptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MasterSqlAppointmentId" Type="Int32" Nullable="false" />
+          <Property Name="ExceptionDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="SqlAppointment" Relationship="ScheduleViewDBModel.FK_SqlExceptionOccurrences_SqlAppointments" FromRole="SqlExceptionOccurrences" ToRole="SqlAppointments" />
+          <NavigationProperty Name="SqlExceptionAppointment" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_SqlExceptionOccurrences" FromRole="SqlExceptionOccurrences" ToRole="SqlExceptionAppointments" />
+        </EntityType>
+        <EntityType Name="SqlExceptionResource">
+          <Key>
+            <PropertyRef Name="SqlExceptionAppointments_ExceptionId" />
+            <PropertyRef Name="SqlResources_SqlResourceId" />
+          </Key>
+          <Property Name="SqlExceptionAppointments_ExceptionId" Type="Int32" Nullable="false" />
+          <Property Name="SqlResources_SqlResourceId" Type="Int32" Nullable="false" />
+          <Property Name="ManyToManyWorkaround" Type="Boolean" />
+          <NavigationProperty Name="SqlExceptionAppointment" Relationship="ScheduleViewDBModel.FK_SqlExceptionResources_SqlExceptionAppointment" FromRole="SqlExceptionResources" ToRole="SqlExceptionAppointments" />
+          <NavigationProperty Name="SqlResource" Relationship="ScheduleViewDBModel.FK_SqlExceptionResources_SqlResource" FromRole="SqlExceptionResources" ToRole="SqlResources" />
+        </EntityType>
+        <EntityType Name="SqlResource">
+          <Key>
+            <PropertyRef Name="SqlResourceId" />
+          </Key>
+          <Property Name="SqlResourceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SqlResourceTypeId" Type="Int32" />
+          <Property Name="ResourceName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SqlAppointmentResources" Relationship="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlResource" FromRole="SqlResources" ToRole="SqlAppointmentResources" />
+          <NavigationProperty Name="SqlExceptionResources" Relationship="ScheduleViewDBModel.FK_SqlExceptionResources_SqlResource" FromRole="SqlResources" ToRole="SqlExceptionResources" />
+          <NavigationProperty Name="SqlResourceType" Relationship="ScheduleViewDBModel.FK_SqlResources_SqlResourceTypes" FromRole="SqlResources" ToRole="SqlResourceTypes" />
+        </EntityType>
+        <EntityType Name="SqlResourceType">
+          <Key>
+            <PropertyRef Name="SqlResourceTypeId" />
+          </Key>
+          <Property Name="SqlResourceTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AllowMultipleSelection" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SqlResources" Relationship="ScheduleViewDBModel.FK_SqlResources_SqlResourceTypes" FromRole="SqlResourceTypes" ToRole="SqlResources" />
+        </EntityType>
+        <EntityType Name="TimeMarker">
+          <Key>
+            <PropertyRef Name="TimeMarkersId" />
+          </Key>
+          <Property Name="TimeMarkersId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeMarkerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TimeMarkerBrushName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SqlAppointments" Relationship="ScheduleViewDBModel.FK_SqlAppointments_TimeMarkers" FromRole="TimeMarkers" ToRole="SqlAppointments" />
+          <NavigationProperty Name="SqlExceptionAppointments" Relationship="ScheduleViewDBModel.FK_SqlExceptionAppointments_TimeMarkers" FromRole="TimeMarkers" ToRole="SqlExceptionAppointments" />
+        </EntityType>
+        <Association Name="FK_SqlAppointments_Categories">
+          <End Role="Categories" Type="ScheduleViewDBModel.Category" Multiplicity="0..1" />
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.SqlAppointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="SqlAppointments">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_Categories">
+          <End Role="Categories" Type="ScheduleViewDBModel.Category" Multiplicity="0..1" />
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.SqlExceptionAppointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointmentResources_SqlAppointment">
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.SqlAppointment" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlAppointmentResources" Type="ScheduleViewDBModel.SqlAppointmentResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlAppointments">
+              <PropertyRef Name="SqlAppointmentId" />
+            </Principal>
+            <Dependent Role="SqlAppointmentResources">
+              <PropertyRef Name="SqlAppointments_SqlAppointmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointmentResources_SqlResource">
+          <End Role="SqlResources" Type="ScheduleViewDBModel.SqlResource" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlAppointmentResources" Type="ScheduleViewDBModel.SqlAppointmentResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResources">
+              <PropertyRef Name="SqlResourceId" />
+            </Principal>
+            <Dependent Role="SqlAppointmentResources">
+              <PropertyRef Name="SqlResources_SqlResourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlAppointments_TimeMarkers">
+          <End Role="TimeMarkers" Type="ScheduleViewDBModel.TimeMarker" Multiplicity="0..1" />
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.SqlAppointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeMarkers">
+              <PropertyRef Name="TimeMarkersId" />
+            </Principal>
+            <Dependent Role="SqlAppointments">
+              <PropertyRef Name="TimeMarkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionOccurrences_SqlAppointments">
+          <End Role="SqlAppointments" Type="ScheduleViewDBModel.SqlAppointment" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionOccurrences" Type="ScheduleViewDBModel.SqlExceptionOccurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlAppointments">
+              <PropertyRef Name="SqlAppointmentId" />
+            </Principal>
+            <Dependent Role="SqlExceptionOccurrences">
+              <PropertyRef Name="MasterSqlAppointmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_SqlExceptionOccurrences">
+          <End Role="SqlExceptionOccurrences" Type="ScheduleViewDBModel.SqlExceptionOccurrence" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.SqlExceptionAppointment" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SqlExceptionOccurrences">
+              <PropertyRef Name="ExceptionId" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="ExceptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionAppointments_TimeMarkers">
+          <End Role="TimeMarkers" Type="ScheduleViewDBModel.TimeMarker" Multiplicity="0..1" />
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.SqlExceptionAppointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeMarkers">
+              <PropertyRef Name="TimeMarkersId" />
+            </Principal>
+            <Dependent Role="SqlExceptionAppointments">
+              <PropertyRef Name="TimeMarkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionResources_SqlExceptionAppointment">
+          <End Role="SqlExceptionAppointments" Type="ScheduleViewDBModel.SqlExceptionAppointment" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionResources" Type="ScheduleViewDBModel.SqlExceptionResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlExceptionAppointments">
+              <PropertyRef Name="ExceptionId" />
+            </Principal>
+            <Dependent Role="SqlExceptionResources">
+              <PropertyRef Name="SqlExceptionAppointments_ExceptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlExceptionResources_SqlResource">
+          <End Role="SqlResources" Type="ScheduleViewDBModel.SqlResource" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SqlExceptionResources" Type="ScheduleViewDBModel.SqlExceptionResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResources">
+              <PropertyRef Name="SqlResourceId" />
+            </Principal>
+            <Dependent Role="SqlExceptionResources">
+              <PropertyRef Name="SqlResources_SqlResourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SqlResources_SqlResourceTypes">
+          <End Role="SqlResourceTypes" Type="ScheduleViewDBModel.SqlResourceType" Multiplicity="0..1" />
+          <End Role="SqlResources" Type="ScheduleViewDBModel.SqlResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlResourceTypes">
+              <PropertyRef Name="SqlResourceTypeId" />
+            </Principal>
+            <Dependent Role="SqlResources">
+              <PropertyRef Name="SqlResourceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ScheduleViewDBModelStoreContainer" CdmEntityContainer="ScheduleViewDBEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CategoryBrushName" ColumnName="CategoryBrushName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlAppointmentResources">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlAppointmentResource">
+              <MappingFragment StoreEntitySet="SqlAppointmentResources">
+                <ScalarProperty Name="SqlAppointments_SqlAppointmentId" ColumnName="SqlAppointments_SqlAppointmentId" />
+                <ScalarProperty Name="SqlResources_SqlResourceId" ColumnName="SqlResources_SqlResourceId" />
+                <ScalarProperty Name="ManyToManyWorkaround" ColumnName="ManyToManyWorkaround" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlAppointments">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlAppointment">
+              <MappingFragment StoreEntitySet="SqlAppointments">
+                <ScalarProperty Name="SqlAppointmentId" ColumnName="SqlAppointmentId" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsAllDayEvent" ColumnName="IsAllDayEvent" />
+                <ScalarProperty Name="RecurrencePattern" ColumnName="RecurrencePattern" />
+                <ScalarProperty Name="TimeZoneString" ColumnName="TimeZoneString" />
+                <ScalarProperty Name="Importance" ColumnName="Importance" />
+                <ScalarProperty Name="TimeMarkerID" ColumnName="TimeMarkerID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlExceptionAppointments">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlExceptionAppointment">
+              <MappingFragment StoreEntitySet="SqlExceptionAppointments">
+                <ScalarProperty Name="ExceptionId" ColumnName="ExceptionId" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsAllDayEvent" ColumnName="IsAllDayEvent" />
+                <ScalarProperty Name="TimeZoneString" ColumnName="TimeZoneString" />
+                <ScalarProperty Name="Importance" ColumnName="Importance" />
+                <ScalarProperty Name="TimeMarkerID" ColumnName="TimeMarkerID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlExceptionOccurrences">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlExceptionOccurrence">
+              <MappingFragment StoreEntitySet="SqlExceptionOccurrences">
+                <ScalarProperty Name="ExceptionId" ColumnName="ExceptionId" />
+                <ScalarProperty Name="MasterSqlAppointmentId" ColumnName="MasterSqlAppointmentId" />
+                <ScalarProperty Name="ExceptionDate" ColumnName="ExceptionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlExceptionResources">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlExceptionResource">
+              <MappingFragment StoreEntitySet="SqlExceptionResources">
+                <ScalarProperty Name="SqlExceptionAppointments_ExceptionId" ColumnName="SqlExceptionAppointments_ExceptionId" />
+                <ScalarProperty Name="SqlResources_SqlResourceId" ColumnName="SqlResources_SqlResourceId" />
+                <ScalarProperty Name="ManyToManyWorkaround" ColumnName="ManyToManyWorkaround" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlResources">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlResource">
+              <MappingFragment StoreEntitySet="SqlResources">
+                <ScalarProperty Name="SqlResourceId" ColumnName="SqlResourceId" />
+                <ScalarProperty Name="SqlResourceTypeId" ColumnName="SqlResourceTypeId" />
+                <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlResourceTypes">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.SqlResourceType">
+              <MappingFragment StoreEntitySet="SqlResourceTypes">
+                <ScalarProperty Name="SqlResourceTypeId" ColumnName="SqlResourceTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="AllowMultipleSelection" ColumnName="AllowMultipleSelection" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeMarkers">
+            <EntityTypeMapping TypeName="ScheduleViewDBModel.TimeMarker">
+              <MappingFragment StoreEntitySet="TimeMarkers">
+                <ScalarProperty Name="TimeMarkersId" ColumnName="TimeMarkersId" />
+                <ScalarProperty Name="TimeMarkerName" ColumnName="TimeMarkerName" />
+                <ScalarProperty Name="TimeMarkerBrushName" ColumnName="TimeMarkerBrushName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ScheduleViewDataModel" ZoomLevel="86">
+        <EntityTypeShape EntityType="ScheduleViewDBModel.Category" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlAppointmentResource" Width="1.5" PointX="5.25" PointY="3.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlAppointment" Width="1.5" PointX="3" PointY="2.875" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlExceptionAppointment" Width="1.5" PointX="7.5" PointY="4.375" Height="3.7109993489583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlExceptionOccurrence" Width="1.5" PointX="5.25" PointY="6.625" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlExceptionResource" Width="1.5" PointX="9.75" PointY="5.25" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlResource" Width="1.5" PointX="3" PointY="7.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.SqlResourceType" Width="1.5" PointX="0.75" PointY="7.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScheduleViewDBModel.TimeMarker" Width="1.5" PointX="0.75" PointY="3.875" Height="1.9802864583333317" IsExpanded="true" />
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlAppointments_Categories" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.8124995" />
+          <ConnectorPoint PointX="3.75" PointY="1.8124995" />
+          <ConnectorPoint PointX="3.75" PointY="2.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_Categories" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.24999725" />
+          <ConnectorPoint PointX="8.25" PointY="1.24999725" />
+          <ConnectorPoint PointX="8.25" PointY="4.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlAppointment" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.8651432291666667" />
+          <ConnectorPoint PointX="5.25" PointY="4.8651432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlAppointmentResources_SqlResource" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.625" />
+          <ConnectorPoint PointX="4.875" PointY="7.25" />
+          <ConnectorPoint PointX="4.875" PointY="5.39146684375" />
+          <ConnectorPoint PointX="5.25" PointY="5.39146684375" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlAppointments_TimeMarkers" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.8651432291666659" />
+          <ConnectorPoint PointX="3" PointY="4.8651432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionOccurrences_SqlAppointments" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.7159920889423068" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="7.0320665238434277" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="7.149917654041186" />
+          <ConnectorPoint PointX="5.0625" PointY="7.2784920889423068" />
+          <ConnectorPoint PointX="5.0625" PointY="6.4375" />
+          <ConnectorPoint PointX="5.25" PointY="6.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_SqlExceptionOccurrences" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="7.3554996744791659" />
+          <ConnectorPoint PointX="7.5" PointY="7.3554996744791659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionAppointments_TimeMarkers" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="5.8552864583333317" />
+          <ConnectorPoint PointX="1.5" PointY="7.02830078125" />
+          <ConnectorPoint PointX="4.75" PointY="7.02830078125" />
+          <ConnectorPoint PointX="4.75" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="6.2401432291666659" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="7.5" PointY="6.2401432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionResources_SqlExceptionAppointment" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="9.75" PointY="6.2401432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlExceptionResources_SqlResource" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.328837890625" />
+          <ConnectorPoint PointX="10.5" PointY="9.328837890625" />
+          <ConnectorPoint PointX="10.5" PointY="7.2302864583333335" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScheduleViewDBModel.FK_SqlResources_SqlResourceTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.8651432291666659" />
+          <ConnectorPoint PointX="3" PointY="8.8651432291666659" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_WPF", "TaskDeadline\TaskDeadline_WPF.csproj", "{356BD052-E473-498A-ABC8-1F79FE24F281}"
 EndProject
@@ -52,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldParentTasks_WPF", "BoldParentTasks\BoldParentTasks_WPF.csproj", "{E6E5BA5A-CA31-4F44-B9B5-F383D2647F86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandCollapseViaHeader_WPF", "ExpandCollapseViaHeader\ExpandCollapseViaHeader_WPF.csproj", "{9E071532-587C-491A-8DBC-C28DE77FC6EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineIntervalMarkers_WPF", "TimelineIntervalMarkers\TimelineIntervalMarkers_WPF.csproj", "{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}"
 EndProject
 Global
 	 
@@ -314,6 +316,16 @@ Global
 		{9E071532-587C-491A-8DBC-C28DE77FC6EB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9E071532-587C-491A-8DBC-C28DE77FC6EB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9E071532-587C-491A-8DBC-C28DE77FC6EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DD6FE7F5-1D2F-4553-A1E7-9A501FE05CD2}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,88 @@
+<t:RadDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:t="clr-namespace:Telerik.Windows.Documents.Model;assembly=Telerik.Windows.Documents" xmlns:s="clr-namespace:Telerik.Windows.Documents.Model.Styles;assembly=Telerik.Windows.Documents" xmlns:r="clr-namespace:Telerik.Windows.Documents.Model.Revisions;assembly=Telerik.Windows.Documents" xmlns:n="clr-namespace:Telerik.Windows.Documents.Model.Notes;assembly=Telerik.Windows.Documents" xmlns:th="clr-namespace:Telerik.Windows.Documents.Model.Themes;assembly=Telerik.Windows.Documents" version="1.2" LayoutMode="Paged" LineSpacing="1.15" LineSpacingType="Auto" ParagraphDefaultSpacingAfter="12" ParagraphDefaultSpacingBefore="0" SelectedBibliographicStyleName="\APA.XSL" StyleName="defaultDocumentStyle">
+  <t:RadDocument.Captions>
+    <t:CaptionDefinition IsDefault="True" IsLinkedToHeading="False" Label="Figure" LinkedHeadingLevel="0" NumberingFormat="Arabic" SeparatorType="Hyphen" />
+    <t:CaptionDefinition IsDefault="True" IsLinkedToHeading="False" Label="Table" LinkedHeadingLevel="0" NumberingFormat="Arabic" SeparatorType="Hyphen" />
+  </t:RadDocument.Captions>
+  <t:RadDocument.ProtectionSettings>
+    <t:DocumentProtectionSettings EnableDocumentProtection="False" Enforce="False" HashingAlgorithm="None" HashingSpinCount="0" ProtectionMode="ReadOnly" />
+  </t:RadDocument.ProtectionSettings>
+  <t:RadDocument.Styles>
+    <s:StyleDefinition DisplayName="Default" IsCustom="True" IsDefault="False" IsPrimary="False" Name="Default" NextStyleName="Default" Type="Paragraph" UIPriority="0">
+      <s:StyleDefinition.ParagraphStyle>
+        <s:ParagraphProperties FirstLineIndent="0" LineSpacing="1" LineSpacingType="Auto" RightIndent="0" SpacingAfter="0" SpacingBefore="0" TextAlignment="Left" />
+      </s:StyleDefinition.ParagraphStyle>
+      <s:StyleDefinition.SpanStyle>
+        <s:SpanProperties FontFamily="Arial" FontSize="16" FontStyle="Normal" FontWeight="Normal" ForeColor="#FF000000" />
+      </s:StyleDefinition.SpanStyle>
+    </s:StyleDefinition>
+    <s:StyleDefinition DisplayName="Document Default Style" IsCustom="False" IsDefault="False" IsPrimary="True" Name="defaultDocumentStyle" Type="Default">
+      <s:StyleDefinition.ParagraphStyle>
+        <s:ParagraphProperties LineSpacing="1.15" SpacingAfter="12" />
+      </s:StyleDefinition.ParagraphStyle>
+      <s:StyleDefinition.SpanStyle>
+        <s:SpanProperties FontFamily="Verdana" FontSize="16" FontStyle="Normal" FontWeight="Normal" />
+      </s:StyleDefinition.SpanStyle>
+    </s:StyleDefinition>
+    <s:StyleDefinition DisplayName="Default Paragraph Font" IsCustom="True" IsDefault="False" IsPrimary="False" Name="DefaultParagraphFont" Type="Character" UIPriority="1">
+      <s:StyleDefinition.SpanStyle>
+        <s:SpanProperties FontFamily="Times New Roman" FontSize="16" FontStyle="Normal" FontWeight="Normal" />
+      </s:StyleDefinition.SpanStyle>
+    </s:StyleDefinition>
+    <s:StyleDefinition DisplayName="Normal" IsCustom="False" IsDefault="True" IsPrimary="True" Name="Normal" Type="Paragraph" UIPriority="0" />
+    <s:StyleDefinition DisplayName="Table Normal" IsCustom="False" IsDefault="True" IsPrimary="False" Name="TableNormal" Type="Table" UIPriority="59">
+      <s:StyleDefinition.TableStyle>
+        <s:TableProperties CellPadding="5,0,5,0">
+          <s:TableProperties.TableLook>
+            <t:TableLook />
+          </s:TableProperties.TableLook>
+        </s:TableProperties>
+      </s:StyleDefinition.TableStyle>
+    </s:StyleDefinition>
+  </t:RadDocument.Styles>
+  <t:Section>
+    <t:Paragraph>
+      <t:Span Text="Dear Maria Anders," />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="I was very excited to see your vacancy for a " />
+      <t:FieldRangeStart AnnotationID="1">
+        <t:MergeField DateTimeFormatting="" DisplayMode="Code" GeneralFormatting="" NumericFormatting="" PropertyPath="JobTitle" />
+      </t:FieldRangeStart>
+      <t:Span Text="{}{MERGEFIELD JobTitle}" />
+      <t:FieldRangeEnd AnnotationID="1" />
+      <t:Span Text="." />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="&apos;Sunny Dream Corporation&apos; has been deservedly recognized as one of the best places to work in the country for IT professionals. " />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="I am writing to you because I believe that my IT knowledge, certifications, and experience allow me to significantly contribute to the prosperity of yours organization." />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="If you are looking for an IT professional who is multi-task oriented, has excellent problem solving skills and passion for XAML and C#, then you would consider what I have to offer." />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="Please refer to the attached CV for more information on my experience and education." />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="I am looking forward to your reply and would like to thank you in advance for considering my application." />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:Span Text="Yours sincerely," />
+    </t:Paragraph>
+    <t:Paragraph>
+      <t:FieldRangeStart AnnotationID="2">
+        <t:MergeField DateTimeFormatting="" DisplayMode="Code" GeneralFormatting="" NumericFormatting="" PropertyPath="FirstName" />
+      </t:FieldRangeStart>
+      <t:Span Text="{}{MERGEFIELD FirstName}" />
+      <t:FieldRangeEnd AnnotationID="2" />
+      <t:Span Text=" " />
+      <t:FieldRangeStart AnnotationID="3">
+        <t:MergeField DateTimeFormatting="" DisplayMode="Code" GeneralFormatting="" NumericFormatting="" PropertyPath="LastName" />
+      </t:FieldRangeStart>
+      <t:Span Text="{}{MERGEFIELD LastName}" />
+      <t:FieldRangeEnd AnnotationID="3" />
+      <t:Span Text=" " />
+    </t:Paragraph>
+  </t:Section>
+</t:RadDocument>

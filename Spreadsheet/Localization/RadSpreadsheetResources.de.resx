@@ -3513,6 +3513,362 @@ You can also define your own cell styles.~</value>
   <data name="Spreadsheet_FormatCellsDialog_Number_None" xml:space="preserve">
     <value>~None~</value>
   </data>
+  <data name="Spreadsheet_Functions_Args_AreaNum" xml:space="preserve">
+    <value>~Area_num~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_ColumnNum" xml:space="preserve">
+    <value>~Column_num~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Criteria" xml:space="preserve">
+    <value>~Criteria~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LookupValue" xml:space="preserve">
+    <value>~Lookup_value~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_LookupVector" xml:space="preserve">
+    <value>~Lookup_vector~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Range" xml:space="preserve">
+    <value>~Range~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_ResultVector" xml:space="preserve">
+    <value>~Result_vector~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_RowNum" xml:space="preserve">
+    <value>~Row_num~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_SumRange" xml:space="preserve">
+    <value>~Sum_range~</value>
+  </data>
+  <data name="Spreadsheet_Functions_CountIf_Criteria" xml:space="preserve">
+    <value>~A number, expression, cell reference, or text string that defines which cells will be counted. For example, criteria can be expressed as 32, "&gt;32", B4, "apples", or "32"~</value>
+  </data>
+  <data name="Spreadsheet_Functions_CountIf_Info" xml:space="preserve">
+    <value>~The COUNTIF function counts the number of cells within a range that meet a single criteria that you specify. For example, you can count all the cells that start with a certain letter, or you can count all the cells that contain a number that is larger or smaller than a number you specify. For example, suppose you have a worksheet that contains a list of tasks in column A, and the first name of the person assigned to each task in column B. You can use the COUNTIF function to count how many times a person's name appears in column B and, in that way, determine how many tasks are assigned to that person. For example: =COUNTIF(B2:B25,"Nancy")~</value>
+  </data>
+  <data name="Spreadsheet_Functions_CountIf_Range" xml:space="preserve">
+    <value>~One or more cells to count, passed as reference argument.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Index_AreaNum" xml:space="preserve">
+    <value>~Selects a range in reference from which to return the intersection of Row_num and Column_num. The first area selected or entered is numbered 1, the second is 2, and so on. If Area_num is omitted, INDEX uses area 1.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Index_ColumnNum" xml:space="preserve">
+    <value>~The number of the column in reference from which to return a reference.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Index_Info" xml:space="preserve">
+    <value>~Returns the reference of the cell at the intersection of a particular row and column. If the reference is made up of nonadjacent selections, you can pick the selection to look in.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Index_Reference" xml:space="preserve">
+    <value>~A reference to one or more cell ranges. If you are entering a nonadjacent range for the reference, enclose reference in parentheses. If each area in reference contains only one row or column, the Row_num or Column_num argument, respectively, is optional. For example, for a single row reference, use INDEX(reference,,column_num).~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Index_RowNum" xml:space="preserve">
+    <value>~The number of the row in reference from which to return a reference.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lookup_Info" xml:space="preserve">
+    <value>~The LOOKUP function returns a value either from a one-row or one-column range or from an array. The LOOKUP function has two syntax forms: the vector form and the array form.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lookup_LookupValue" xml:space="preserve">
+    <value>~A value that LOOKUP searches for in the first vector. Lookup_value can be a number, text, a logical value, or a name or reference that refers to a value.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lookup_LookupVector" xml:space="preserve">
+    <value>~A range that contains only one row or one column. The values in lookup_vector can be text, numbers, or logical values.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_Lookup_ResultVector" xml:space="preserve">
+    <value>~A range that contains only one row or column. The result_vector argument must be the same size as lookup_vector.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumIf_Criteria" xml:space="preserve">
+    <value>~The criteria in the form of a number, expression, a cell reference, text, or a function that defines which cells will be added. For example, criteria can be expressed as 32, \"&gt;32\", B5, 32, \"32\", \"apples\", or TODAY().~</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumIf_Info" xml:space="preserve">
+    <value>~You use the SUMIF function to sum the values in a range that meet criteria that you specify. For example, suppose that in a column that contains numbers, you want to sum only the values that are larger than 5. You can use the following formula: =SUMIF(B2:B25,"&gt;5"). In this example, the criteria is applied the same values that are being summed. If you want, you can apply the criteria to one range and sum the corresponding values in a different range. For example, the formula =SUMIF(B2:B5, "John", C2:C5) sums only the values in the range C2:C5, where the corresponding cells in the range B2:B5 equal "John."~</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumIf_Range" xml:space="preserve">
+    <value>~The range of cells that you want evaluated by criteria. Cells in each range must be numbers or names, arrays, or references that contain numbers. Blank and text values are ignored.~</value>
+  </data>
+  <data name="Spreadsheet_Functions_SumIf_SumRange" xml:space="preserve">
+    <value>~The actual cells to add, if you want to add cells other than those specified in the range argument. If the sum_range argument is omitted, RadSpreadsheet adds the cells that are specified in the range argument (the same cells to which the criteria is applied).~</value>
+  </data>
+  <data name="Spreadsheet_ProtectedWorksheet_Error" xml:space="preserve">
+    <value>~The cell you are trying to change is on a protected sheet. To make changes, unprotect the sheet.~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ConfirmationPassword_Error" xml:space="preserve">
+    <value>~Confirmation password is not identical.~</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Protection_Header" xml:space="preserve">
+    <value>~Protection~</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Protection_Info" xml:space="preserve">
+    <value>~Locking cells has no effect until you protect the sheet.~</value>
+  </data>
+  <data name="Spreadsheet_FormatCellsDialog_Protection_Locked" xml:space="preserve">
+    <value>~Locked~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_AllowUsersTo" xml:space="preserve">
+    <value>~Allow all users of this sheet to:~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_DeleteColumns" xml:space="preserve">
+    <value>~Delete Columns~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_DeleteRows" xml:space="preserve">
+    <value>~Delete Rows~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_HeaderSheet" xml:space="preserve">
+    <value>~Protect Sheet~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_HeaderWorkbook" xml:space="preserve">
+    <value>~Protect Workbook~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_InsertColumns" xml:space="preserve">
+    <value>~Insert Columns~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_InsertRows" xml:space="preserve">
+    <value>~Insert Rows~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_Password" xml:space="preserve">
+    <value>~Password:~</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_RepeatPassword" xml:space="preserve">
+    <value>~Repeat Password:~</value>
+  </data>
+  <data name="Spreadsheet_UnprotectDialog_HeaderSheet" xml:space="preserve">
+    <value>~Unprotect Sheet~</value>
+  </data>
+  <data name="Spreadsheet_UnprotectDialog_HeaderWorkbook" xml:space="preserve">
+    <value>~Unprotect Workbook~</value>
+  </data>
+  <data name="Spreadsheet_UnprotectDialog_WrongPassword" xml:space="preserve">
+    <value>~The password you supplied is not correct. Verify that the CAPS LOCK key is off and be sure to use the correct capitalization.~</value>
+  </data>
+  <data name="Spreadsheet_UnprotectDialog_Password" xml:space="preserve">
+    <value>~Password:~</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_Locked" xml:space="preserve">
+    <value>~Locked~</value>
+  </data>
+  <data name="Spreadsheet_StyleDialog_NoProtection" xml:space="preserve">
+    <value>~No Protection~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ProtectAProtectedSheet_Error" xml:space="preserve">
+    <value>~Cannot protect a sheet that is already protected.~</value>
+  </data>
+  <data name="Spreadsheet_Protection_UnprotectAnUnprotectedSheet_Error" xml:space="preserve">
+    <value>~Cannot unprotect a sheet that is not protected.~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ToggleSheetProtection_Protect" xml:space="preserve">
+    <value>~Protect Sheet~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ToggleSheetProtection_Unprotect" xml:space="preserve">
+    <value>~Unprotect Sheet~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ToggleWorkbookProtection_Protect" xml:space="preserve">
+    <value>~Protect Workbook~</value>
+  </data>
+  <data name="Spreadsheet_Protection_ToggleWorkbookProtection_Unprotect" xml:space="preserve">
+    <value>~Unprotect Workbook~</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_ShapeWorksheet" xml:space="preserve">
+    <value>~The worksheet of the shape and of the collection it belongs to should be the same.~</value>
+  </data>
+  <data name="Spreadsheet_Printing_PageSetup" xml:space="preserve">
+    <value>~Page Setup~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_MarginsTabHeader" xml:space="preserve">
+    <value>~Margins~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_PageTabHeader" xml:space="preserve">
+    <value>~Page~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_SheetTabHeader" xml:space="preserve">
+    <value>~Sheet~</value>
+  </data>
+  <data name="Spreadsheet_Printing_Print" xml:space="preserve">
+    <value>~Print~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Copies" xml:space="preserve">
+    <value>~Copies:~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_CustomMargins" xml:space="preserve">
+    <value>~Custom Margins...~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_CustomScalingOptions" xml:space="preserve">
+    <value>~Custom Scaling Options...~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_IgnorePrintArea" xml:space="preserve">
+    <value>~Ignore print area~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_MorePaperSizes" xml:space="preserve">
+    <value>~More Paper Sizes...~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Of" xml:space="preserve">
+    <value>~of~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_OnlyPrintTheActiveSheet" xml:space="preserve">
+    <value>~Only print the active sheet~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_OnlyPrintTheCurrentSelection" xml:space="preserve">
+    <value>~Only print the current selection~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Pages" xml:space="preserve">
+    <value>~Pages:~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PrintActiveSheet" xml:space="preserve">
+    <value>~Print Active Sheet~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PrintEntireWorkbook" xml:space="preserve">
+    <value>~Print Entire Workbook~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PrintSelection" xml:space="preserve">
+    <value>~Print Selection~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PrintTheEntireWorkbook" xml:space="preserve">
+    <value>~Print the entire workbook~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Settings" xml:space="preserve">
+    <value>~Settings~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_To" xml:space="preserve">
+    <value>~to~</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_MarginsDoNotFitPageSize" xml:space="preserve">
+    <value>~Margins do not fit page size.~</value>
+  </data>
+  <data name="Spreadsheet_ErrorExpressions_WeDidntFindAnythingToPrint" xml:space="preserve">
+    <value>~We didn't find anything to print.~</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_SingleCellSelectedForPrintArea" xml:space="preserve">
+    <value>~You have selected a single cell for the print area.
+- If this is correct, click OK.
+- If you selected a single cell by mistake, click Cancel, select the cells you want to include, and then click Set Print Area again.~</value>
+  </data>
+  <data name="Spreadsheet_MessageBox_Warning" xml:space="preserve">
+    <value>~Warning~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_AdjustTo" xml:space="preserve">
+    <value>~Adjust to:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_BlackAndWhite" xml:space="preserve">
+    <value>~Black and white~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Bottom" xml:space="preserve">
+    <value>~Bottom:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_CenterOnPage" xml:space="preserve">
+    <value>~Center on page~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_DownThenOver" xml:space="preserve">
+    <value>~Down, then over~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_DraftQuality" xml:space="preserve">
+    <value>~Draft quality~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_FirstPageNumber" xml:space="preserve">
+    <value>~First Page Number:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_FitTo" xml:space="preserve">
+    <value>~Fit to:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Footer" xml:space="preserve">
+    <value>~Footer:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Gridlines" xml:space="preserve">
+    <value>~Gridlines~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Header" xml:space="preserve">
+    <value>~Header:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Horizontally" xml:space="preserve">
+    <value>~Horizontally~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_IntegerIsNotValid" xml:space="preserve">
+    <value>~Integer is not valid~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Landscape" xml:space="preserve">
+    <value>~Landscape~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Left" xml:space="preserve">
+    <value>~Left:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_MarginValuesMustBePositive" xml:space="preserve">
+    <value>~Margin values must be positive integer or decimal numbers!~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Orientation" xml:space="preserve">
+    <value>~Orientation~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_OverThenDown" xml:space="preserve">
+    <value>~Over, then down~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_PageOrder" xml:space="preserve">
+    <value>~Page order~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_PagesWideBy" xml:space="preserve">
+    <value>~page(s) wide by~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_PaperSize" xml:space="preserve">
+    <value>~Paper size:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_PercentNormalSize" xml:space="preserve">
+    <value>~% normal size~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Portrait" xml:space="preserve">
+    <value>~Portrait~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Right" xml:space="preserve">
+    <value>~Right:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_RowAndColumnHeadings" xml:space="preserve">
+    <value>~Row and column headings~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Scaling" xml:space="preserve">
+    <value>~Scaling~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_tall" xml:space="preserve">
+    <value>~tall~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Top" xml:space="preserve">
+    <value>~Top:~</value>
+  </data>
+  <data name="Spreadsheet_PageSetupDialog_Vertically" xml:space="preserve">
+    <value>~Vertically~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_111222333" xml:space="preserve">
+    <value>~1,1,1  2,2,2  3,3,3~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_123123123" xml:space="preserve">
+    <value>~1,2,3  1,2,3  1,2,3~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Collated" xml:space="preserve">
+    <value>~Collated~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_CustomScaling" xml:space="preserve">
+    <value>~Custom Scaling~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_LandscapeOrientation" xml:space="preserve">
+    <value>~Landscape Orientation~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_LastCustomSettings" xml:space="preserve">
+    <value>~Last Custom Settings~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_NarrowMargins" xml:space="preserve">
+    <value>~Narrow Margins~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_NormalMargins" xml:space="preserve">
+    <value>~Normal Margins~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_NoScaling" xml:space="preserve">
+    <value>~No Scaling~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PortraitOrientation" xml:space="preserve">
+    <value>~Portrait Orientation~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_PrintSheetAtTheirActualSize" xml:space="preserve">
+    <value>~Print sheet at their actual size~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_Uncollated" xml:space="preserve">
+    <value>~Uncollated~</value>
+  </data>
+  <data name="Spreadsheet_PrintPreview_WideMargins" xml:space="preserve">
+    <value>~Wide Margins~</value>
+  </data>
   <data name="Ok" xml:space="preserve">
     <value>~OK~</value>
   </data>

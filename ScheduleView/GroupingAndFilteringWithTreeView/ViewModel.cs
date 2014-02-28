@@ -124,16 +124,16 @@ namespace GroupingAndFilteringWithTreeView
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
 #endif
-                this.UpdateGroupFilter();
-                if (this.Airlines.Any(a => a.IsExpanded == true))
-                {
-                    this.AddGroupDescription("Segregations");
-                }
+            this.UpdateGroupFilter();
+            if (this.Airlines.Any(a => a.IsExpanded == true))
+            {
+                this.AddGroupDescription("Segregations");
+            }
 
-                if (this.segregations.Any(s => s.IsExpanded == true))
-                {
-                    this.AddGroupDescription("Processes");
-                }
+            if (this.segregations.Any(s => s.IsExpanded == true))
+            {
+                this.AddGroupDescription("Processes");
+            }
 #if SILVERLIGHT
             });
 #endif
@@ -145,13 +145,13 @@ namespace GroupingAndFilteringWithTreeView
             Deployment.Current.Dispatcher.BeginInvoke(() =>
             {
 #endif
-                this.UpdateGroupFilter();
+            this.UpdateGroupFilter();
 
-                if (this.Airlines.All(a => a.IsExpanded != true))
-                {
-                    this.RemoveGroupDescription("Processes");
-                    this.RemoveGroupDescription("Segregations");
-                }
+            if (this.Airlines.All(a => a.IsExpanded != true))
+            {
+                this.RemoveGroupDescription("Processes");
+                this.RemoveGroupDescription("Segregations");
+            }
 #if SILVERLIGHT
             });       
 #endif

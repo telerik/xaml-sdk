@@ -64,34 +64,28 @@
 		<StackPanel Margin="3" Grid.Column="2">
 			<CheckBox x:Name="CanUserSelectCheckBox"
                       IsChecked="True"
-					  telerik:StyleManager.Theme="Windows8"
                       Content="Can user select items"
                       Margin="0,2" />
 			<CheckBox x:Name="IsUnitPriceReadOnlyCheckBox"
                       IsChecked="False"
                       Content="Is UnitPrice ReadOnly"
-					  telerik:StyleManager.Theme="Windows8"
                       Margin="0,2" />
 			<CheckBox x:Name="ShouldCopySelectColumnCheckBox"
                       IsChecked="{Binding ShouldCopySelectColumn, Mode=TwoWay}"
 					  IsThreeState="False"
-					  telerik:StyleManager.Theme="Windows8"
                       Content="Should Copy GridViewSelectColumn"
                       Margin="0,2" />
 			<CheckBox x:Name="IsDiscontinuedColumnVisibleCheckBox"
                       IsChecked="False"
-					  telerik:StyleManager.Theme="Windows8"
 					  IsThreeState="False"
                       Content="Is Discontinued column visible"
                       Margin="0,2" />
 			<CheckBox x:Name="IsColumnWithCustomHeaderVisibleCheckBox"
                       IsChecked="False"
-					  telerik:StyleManager.Theme="Windows8"
 					  IsThreeState="False"
                       Content="Is column with custom header visible"
                       Margin="0,2" />
 			<TextBlock Text="Selection unit:"
-					   telerik:StyleManager.Theme="Windows8"
                        Margin="0,10,0,0" />
 			<telerik:RadComboBox x:Name="selectionUnitCombo"
                                  SelectedValuePath="Value"

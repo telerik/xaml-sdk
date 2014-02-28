@@ -25,12 +25,6 @@
             <SolidColorBrush x:Key="LabelBrush" Color="#767676" />
             <SolidColorBrush x:Key="ToolbarForegroundBrush" Color="#FF434647" />
 
-            <Style TargetType="TextBlock">
-                <Setter Property="FontSize" Value="12" />
-                <Setter Property="FontFamily" Value="Segoe UI" />
-                <Setter Property="VerticalAlignment" Value="Top" />
-            </Style>
-
             <Style x:Key="ContentTextBlockStyle" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontFamily" Value="Segoe UI Light" />

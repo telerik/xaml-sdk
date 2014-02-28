@@ -14,9 +14,9 @@ namespace CustomDropCueWithWrapPanel
 {
     public class CustomLinearDropVisualProvider : LinearDropVisualProvider
 	{
-		public override Point GetLocation(Telerik.Windows.Controls.RadListBoxItem container, Panel panel)
-		{
-			return container.TransformToVisual(panel).Transform(new Point());
-		}
+        public override Point GetLocation(Telerik.Windows.Controls.RadListBoxItem container, Panel panel, Telerik.Windows.Controls.ItemDropPosition dropPosition)
+        {
+            return container.TransformToVisual(panel).Transform(new Point());
+        }
 	}
 }

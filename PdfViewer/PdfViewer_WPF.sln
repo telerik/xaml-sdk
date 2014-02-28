@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPrinting_WPF", "Custo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localization\Localization_WPF.csproj", "{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPresenter_WPF", "CustomPresenter\CustomPresenter_WPF.csproj", "{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0F8EE8-A678-48AC-84BE-BAC4D912A028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

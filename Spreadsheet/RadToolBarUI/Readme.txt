@@ -1,0 +1,2 @@
+#RadToolBar UI#
+This example shows how to bind RadSpreadsheet to RadToolBar. The ToolBar contains buttons that allow the user to open, save and create files and to cut, copy and paste the contents of the worksheet. 

@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragDropBehavior_SL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesPaging_SL", "ResourcesPaging\ResourcesPaging_SL.csproj", "{7C78A993-A823-4115-A47D-CF83A6E9612A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{541E4356-27B6-4EFC-94E6-E79776268342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB", "Database\SL_CS\WithDB\WithDB.csproj", "{5B6F1024-E90D-4E87-9CD6-534885013125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB.Web", "Database\SL_CS\WithDB.Web\WithDB.Web.csproj", "{99D6D733-DB24-4D38-843B-2FDCBF6CE516}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,8 +92,20 @@ Global
 		{7C78A993-A823-4115-A47D-CF83A6E9612A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C78A993-A823-4115-A47D-CF83A6E9612A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C78A993-A823-4115-A47D-CF83A6E9612A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6F1024-E90D-4E87-9CD6-534885013125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6F1024-E90D-4E87-9CD6-534885013125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6F1024-E90D-4E87-9CD6-534885013125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6F1024-E90D-4E87-9CD6-534885013125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D6D733-DB24-4D38-843B-2FDCBF6CE516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D6D733-DB24-4D38-843B-2FDCBF6CE516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D6D733-DB24-4D38-843B-2FDCBF6CE516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D6D733-DB24-4D38-843B-2FDCBF6CE516}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B6F1024-E90D-4E87-9CD6-534885013125} = {541E4356-27B6-4EFC-94E6-E79776268342}
+		{99D6D733-DB24-4D38-843B-2FDCBF6CE516} = {541E4356-27B6-4EFC-94E6-E79776268342}
 	EndGlobalSection
 EndGlobal

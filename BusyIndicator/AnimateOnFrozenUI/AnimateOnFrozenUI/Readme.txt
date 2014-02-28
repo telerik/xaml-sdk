@@ -1,1 +1,0 @@
-This example demonstrates how to enable the RadBusyIndicator's animation while the UI thread is frozen in Silverlight with the use of the GPU.

@@ -1,1 +1,2 @@
-﻿This help topic will demonstrate how to export RadChart and RadGridView controls to PDF document simultaneously. For the purpose you should build the export-to-image functionality and export the image to PDF using our Documents Format Providers (also part of the RadControls suite).
+﻿#Export to PDF#
+This help topic will demonstrate how to export RadChart and RadGridView controls to PDF document simultaneously. For the purpose you should build the export-to-image functionality and export the image to PDF using our Documents Format Providers (also part of the RadControls suite).

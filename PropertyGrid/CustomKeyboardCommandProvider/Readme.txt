@@ -1,0 +1,2 @@
+#Custom Keyboard Command Provider #
+RadPropertyGrid provides an easy MVVM-friendly approach for customization of its default commands' logic. This example demonstrates how to extend the way RadPropertyGrid handles a particular key.

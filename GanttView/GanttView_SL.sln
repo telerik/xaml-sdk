@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_SL", "TaskDeadline\TaskDeadline_SL.csproj", "{8CA25908-7486-4F16-84C5-5727C7491BCB}"
 EndProject
@@ -52,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldParentTasks_SL", "BoldParentTasks\BoldParentTasks_SL.csproj", "{5895DE0C-5F57-4CCD-89AB-2025CC36E323}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandCollapseViaHeader_SL", "ExpandCollapseViaHeader\ExpandCollapseViaHeader_SL.csproj", "{63F7148D-C56B-4581-9602-2F6AEDA62A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineIntervalMarkers_SL", "TimelineIntervalMarkers\TimelineIntervalMarkers_SL.csproj", "{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}"
 EndProject
 Global
 	 
@@ -160,6 +162,10 @@ Global
 		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63F7148D-C56B-4581-9602-2F6AEDA62A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

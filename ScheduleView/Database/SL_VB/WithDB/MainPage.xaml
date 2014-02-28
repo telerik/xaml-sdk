@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ScheduleViewDB.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:ScheduleViewDB"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+	<UserControl.DataContext>
+		<local:ScheduleViewViewModel />
+    </UserControl.DataContext>
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+        <telerik:RadScheduleView Grid.Row="0" x:Name="scheduleView" AppointmentsSource="{Binding Appointments}" 												
+												 ResourceTypesSource="{Binding ResourceTypes}"
+												 TimeMarkersSource="{Binding TimeMarkers}"
+												 CategoriesSource="{Binding Categories}"
+												 VisibleRangeChangedCommand="{Binding VisibleRangeChanged}"
+												 VisibleRangeChangedCommandParameter="{Binding VisibleRange, RelativeSource={RelativeSource Self}}"
+                                                 CurrentDate="2013/12/16">
+            <telerik:RadScheduleView.ViewDefinitions>
+                <telerik:DayViewDefinition DayStartTime="8:00:00" DayEndTime="19:00:00" />
+            </telerik:RadScheduleView.ViewDefinitions>
+            <telerik:RadScheduleView.GroupDescriptionsSource>
+                <telerik:GroupDescriptionCollection>
+                    <telerik:DateGroupDescription />
+                    <telerik:ResourceGroupDescription ResourceType="Building"  />
+                    <telerik:ResourceGroupDescription ResourceType="Room"  />
+                </telerik:GroupDescriptionCollection>
+            </telerik:RadScheduleView.GroupDescriptionsSource>
+        </telerik:RadScheduleView>
+        <Button Grid.Row="1" Content="Save data" HorizontalAlignment="Center" Command="{Binding SaveCommand}" VerticalAlignment="Center"/>
+	</Grid>
+</UserControl>

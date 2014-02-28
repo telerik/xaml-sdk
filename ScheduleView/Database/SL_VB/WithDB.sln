@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WithDB", "WithDB\WithDB.vbproj", "{87B28D40-EEE3-4BF1-A764-C3172EB3E5D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F28F3065-9790-437A-A7DE-E03990ED26E1} = {F28F3065-9790-437A-A7DE-E03990ED26E1}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WithDB.Web", "WithDB.Web\WithDB.Web.vbproj", "{F28F3065-9790-437A-A7DE-E03990ED26E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87B28D40-EEE3-4BF1-A764-C3172EB3E5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B28D40-EEE3-4BF1-A764-C3172EB3E5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B28D40-EEE3-4BF1-A764-C3172EB3E5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B28D40-EEE3-4BF1-A764-C3172EB3E5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28F3065-9790-437A-A7DE-E03990ED26E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28F3065-9790-437A-A7DE-E03990ED26E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28F3065-9790-437A-A7DE-E03990ED26E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28F3065-9790-437A-A7DE-E03990ED26E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

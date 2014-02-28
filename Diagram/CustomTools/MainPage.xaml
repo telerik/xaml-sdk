@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="CustomTools_SL.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadDiagram x:Name="diagram" />
+        <StackPanel Margin="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="15"
+                           FontWeight="Bold"
+                           Text="ShapeTool: " />
+                <TextBlock FontSize="15" Text="Use Shift + rectangle selection to create a shape." />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10">
+                <TextBlock FontSize="15"
+                           FontWeight="Bold"
+                           Text="ConnectShapesTool: " />
+                <TextBlock FontSize="15" Text="Select multiple shapes and press Ctrl + Space to connect them." />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="15"
+                           FontWeight="Bold"
+                           Text="ForbidNWSEResizing: " />
+                <TextBlock FontSize="15"
+                           Text="You won't be able to resize the shapes using the top left resize handle." />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
