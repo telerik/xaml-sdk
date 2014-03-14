@@ -18,7 +18,6 @@
 			<Button Content="Reset Panes" Click="ButtonReset_Click" Margin="5"/>
 			<Button Content="Add" Click="ButtonAdd_Click" Margin="5"/>
 			<Button Content="Insert" Click="ButtonInsert_Click" Margin="5"/>
-			<Button Content="Add floating" Click="ButtonFloating_Click" Margin="5"/>
 			<Button Content="Delete First" Click="ButtonDelFirst_Click" Margin="5"/>
 			<Button Content="Delete Last" Click="ButtonDelLast_Click" Margin="5"/>
 		</StackPanel>

@@ -75,17 +75,5 @@ namespace PaneGroupItemsSource
 				this.panes.Remove(this.panes.Last());
 			}
 		}
-
-		private void ButtonFloating_Click(object sender, RoutedEventArgs e)
-		{
-			var splitContainer = new RadSplitContainer();
-			var paneGroup = new RadPaneGroup();
-			var pane = new RadPane { Header = "Floating pane" };
-			RadDocking.SetFloatingLocation(pane, new Point(100, 100));
-			paneGroup.Items.Add(pane);
-			splitContainer.Items.Add(paneGroup);
-			dock.Items.Add(splitContainer);
-			pane.MakeFloatingDockable();
-		}
 	}
 }

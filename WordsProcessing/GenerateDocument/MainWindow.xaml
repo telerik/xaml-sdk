@@ -1,0 +1,27 @@
+﻿<Window x:Class="GenerateDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:GenerateDocument"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:ExampleViewModel x:Key="context" />
+    </Window.Resources>
+    <StackPanel Margin="3" DataContext="{Binding Source={StaticResource context}}">
+        <TextBlock Text="Format:" />
+        <telerik:RadComboBox Margin="0 2"
+                                 ItemsSource="{Binding ExportFormats}"
+                                 SelectedItem="{Binding SelectedExportFormat, Mode=TwoWay}"
+                                 SelectedIndex="0" />
+        <CheckBox x:Name="IncludeHeader" Margin="0 10 0 10" IsThreeState="False"
+                      Content="Include Header"
+                      IsChecked="{Binding IncludeHeader, Mode=TwoWay}" />
+
+        <CheckBox x:Name="IncludeFooter" Margin="0 2 0 10" IsThreeState="False"
+                      Content="Include Footer"
+                      IsChecked="{Binding IncludeFooter, Mode=TwoWay}" />
+        <telerik:RadButton Content="Generate"
+                               Command="{Binding GenerateCommand}"
+                               Margin="0,10,0,0" />
+    </StackPanel>
+</Window>

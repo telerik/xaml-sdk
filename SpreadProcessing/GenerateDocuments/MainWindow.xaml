@@ -1,0 +1,24 @@
+﻿<Window x:Class="GenerateDocuments.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:GenerateDocuments"
+        Title="Generate Documents" Height="350" Width="525">
+    <Window.Resources>
+        <local:ExampleViewModel x:Key="viewModel" />
+    </Window.Resources>
+
+    <StackPanel Margin="3" DataContext="{StaticResource viewModel}">
+        <TextBlock Text="Format:" />
+        <telerik:RadComboBox Margin="0 2"
+                             ItemsSource="{Binding ExportFormats}"
+							 SelectedItem="{Binding SelectedExportFormat, Mode=TwoWay}"
+                             Width="100" HorizontalAlignment="Left"/>
+
+        <telerik:RadButton Content="Export"
+                           Command="{Binding ExportCommand}"
+                           CommandParameter="{Binding SelectedExportFormat}"
+                           Margin="0 10 0 0"
+                           HorizontalAlignment="Left" Width="75"/>
+    </StackPanel>
+</Window>

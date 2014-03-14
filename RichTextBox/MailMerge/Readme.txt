@@ -1,0 +1,1 @@
+This example illustrates Mail Merge functionality. You could select different authors from the ribbon and different job positions. You can also save the merged document to any of the supported formats.
