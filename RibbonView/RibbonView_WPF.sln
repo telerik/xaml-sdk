@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualGroups-DataBinding_WPF", "ContextualGroups-DataBinding\ContextualGroups-DataBinding_WPF.csproj", "{32E71AFB-040B-488F-84C0-B1D8D1C0289C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleAccessKeys-KeyTips_WPF", "MultipleAccessKeys-KeyTips\MultipleAccessKeys-KeyTips_WPF.csproj", "{ADBDCA39-E85B-4A10-BD3E-A472AF178741}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

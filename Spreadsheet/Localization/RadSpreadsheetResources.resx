@@ -3875,4 +3875,46 @@ You can also define your own cell styles.</value>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
   </data>
+    <data name="Spreadsheet_ProtectDialog_FormatCells" xml:space="preserve">
+    <value>Format Cells</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_FormatColumns" xml:space="preserve">
+    <value>Format Columns</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_FormatRows" xml:space="preserve">
+    <value>Format Rows</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Header" xml:space="preserve">
+    <value>Format Shapes</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Height" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_LockAspectRatio" xml:space="preserve">
+    <value>Lock aspect ratio</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_OriginalHeight" xml:space="preserve">
+    <value>Original height:</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_OriginalSize" xml:space="preserve">
+    <value>Original size</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_OriginalWidth" xml:space="preserve">
+    <value>Original width:</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Relative" xml:space="preserve">
+    <value>Relative to original picture size</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Rotation" xml:space="preserve">
+    <value>Rotation:</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_SizeAndRotate" xml:space="preserve">
+    <value>Size and Rotate</value>
+  </data>
+  <data name="Spreadsheet_FormatShapesDialog_Width" xml:space="preserve">
+    <value>Width:</value>
+  </data>
 </root>

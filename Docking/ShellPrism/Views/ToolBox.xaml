@@ -13,14 +13,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Border Background="{telerik:Windows8Resource ResourceKey=MainBrush}" BorderThickness="0"/>
-        <telerik:RadMaskedTextBox EmptyContent="Search Toolbox" MaskType="None" Padding="4" />
+        <telerik:RadWatermarkTextBox WatermarkContent="Search Toolbox" Margin="5"/>
 
-        <telerik:RadTreeView Margin="0 -2 0 0" Grid.Row="1"
-											 VerticalAlignment="Stretch"
-											 Background="{StaticResource LightGrayBackgroundBrush}"
-											 IsLineEnabled="False"
-											 SelectionMode="Multiple" IsEditable="True" IsDragDropEnabled="True">
+        <telerik:RadTreeView Grid.Row="1" Margin="5"
+							VerticalAlignment="Stretch"
+							Background="{StaticResource LightGrayBackgroundBrush}"
+							IsLineEnabled="False"
+							SelectionMode="Multiple" IsEditable="True" IsDragDropEnabled="True">
             <telerik:RadTreeViewItem Header="Telerik Input 2012 Q2" IsExpanded="true">
                 <telerik:RadTreeViewItem Header="RadPdfViewer" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/pdfviewer.png" />
                 <telerik:RadTreeViewItem Header="RadImageEditor" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/imageeditor.png" />

@@ -17,16 +17,13 @@
             <telerik:RadDocking.DockingPanesFactory>
                 <local:MyDockingPanesFactory />
             </telerik:RadDocking.DockingPanesFactory>
-            <telerik:RadDocking.DocumentHost>
-                <telerik:RadSplitContainer>
-                    <telerik:RadPaneGroup x:Name="DocumentHostPaneGroup"/>
-                </telerik:RadSplitContainer>
-            </telerik:RadDocking.DocumentHost>
             <telerik:RadSplitContainer InitialPosition="DockedLeft">
-                <telerik:RadPaneGroup  x:Name="LeftPaneGroup"/>
+                <telerik:RadPaneGroup  x:Name="LeftPaneGroup">
+                </telerik:RadPaneGroup>
             </telerik:RadSplitContainer>
             <telerik:RadSplitContainer InitialPosition="DockedBottom">
-                <telerik:RadPaneGroup x:Name="BottomPaneGroup"/>
+                <telerik:RadPaneGroup x:Name="BottomPaneGroup">
+                </telerik:RadPaneGroup>
             </telerik:RadSplitContainer>
         </telerik:RadDocking>
     </Grid>

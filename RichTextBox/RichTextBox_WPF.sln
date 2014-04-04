@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulateWatermark_WPF", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMerge_WPF", "MailMerge\MailMerge_WPF.csproj", "{31D15006-8500-4F86-90C9-FE122C9F14D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomField_WPF", "CustomField\CustomField_WPF.csproj", "{5A4BC76D-EF25-4414-928B-3E7CDFC62964}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -276,6 +278,16 @@ Global
 		{31D15006-8500-4F86-90C9-FE122C9F14D4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{31D15006-8500-4F86-90C9-FE122C9F14D4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{31D15006-8500-4F86-90C9-FE122C9F14D4}.Release|x86.ActiveCfg = Release|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5A4BC76D-EF25-4414-928B-3E7CDFC62964}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

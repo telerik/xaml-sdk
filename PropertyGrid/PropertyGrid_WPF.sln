@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomKeyboardCommandProvider_WPF", "CustomKeyboardCommandProvider\CustomKeyboardCommandProvider_WPF.csproj", "{7A46CAC0-06ED-4B3A-9A2F-6E196098848E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation_WPF", "Validation\Validation_WPF.csproj", "{347C1A1E-B650-4906-99AD-3C985FBB8B24}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,12 @@ Global
 		{7A46CAC0-06ED-4B3A-9A2F-6E196098848E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A46CAC0-06ED-4B3A-9A2F-6E196098848E}.Release|x86.ActiveCfg = Release|x86
 		{7A46CAC0-06ED-4B3A-9A2F-6E196098848E}.Release|x86.Build.0 = Release|x86
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

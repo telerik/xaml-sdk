@@ -18,8 +18,7 @@ namespace CustomPresenter
         private readonly SinglePageLayoutManager pagesLayoutManager; 
 
         private SinglePageInfo visiblePage; 
-        private SinglePageInfo currentPageLayoutInfo;
-        private Size viewportSize;
+        private SinglePageInfo currentPageLayoutInfo; 
         private double lastViewportHeight = 0;
         private double lastVerticalScrollOffset = 0; 
         private bool scaleFactorChanged = false; 
@@ -78,7 +77,7 @@ namespace CustomPresenter
            
         public override bool GetLocationFromViewPoint(Point positionInView, out RadFixedPage page, out Point location)
         {
-            return this.pagesLayoutManager.GetLocationFromViewPoint(positionInView, this.viewportSize, out page, out location);
+            return this.pagesLayoutManager.GetLocationFromViewPoint(positionInView, this.ViewportSize, out page, out location);
         }  
 
         protected override void UpdateScrollOffsetFromPosition(TextPosition position)
@@ -110,10 +109,10 @@ namespace CustomPresenter
         {
             this.UpdateScrollBars(arrangeBounds);
 
-            this.viewportSize = arrangeBounds;
+            this.ViewportSize = arrangeBounds;
 
             double verticalScrollDirection = this.Owner.VerticalScrollOffset - lastVerticalScrollOffset; 
-            bool viewportResized = (this.viewportSize.Height - lastViewportHeight) != 0;
+            bool viewportResized = (this.ViewportSize.Height - lastViewportHeight) != 0;
             bool useCurrentPageInfo = this.scaleFactorChanged || viewportResized;
 
             Point scrollOffset = new Point(this.Owner.HorizontalScrollOffset, this.Owner.VerticalScrollOffset);
@@ -131,9 +130,9 @@ namespace CustomPresenter
                 { 
                     if (this.visiblePage.IntersectsWithViewport)
                     {
-                        if (this.visiblePage.BottomPositionInView + this.visiblePage.VerticalOffset < this.Owner.VerticalScrollOffset + viewportSize.Height) 
+                        if (this.visiblePage.BottomPositionInView + this.visiblePage.VerticalOffset < this.Owner.VerticalScrollOffset + ViewportSize.Height) 
                         {
-                            this.Owner.ScrollToVerticalOffset(this.visiblePage.BottomPositionInView + this.visiblePage.VerticalOffset - this.viewportSize.Height);
+                            this.Owner.ScrollToVerticalOffset(this.visiblePage.BottomPositionInView + this.visiblePage.VerticalOffset - this.ViewportSize.Height);
                         }
                         else if (this.visiblePage.TopPositionInView - this.visiblePage.VerticalOffset > this.Owner.VerticalScrollOffset) 
                         {
@@ -147,7 +146,7 @@ namespace CustomPresenter
                 }
             } 
 
-            this.lastViewportHeight = viewportSize.Height;
+            this.lastViewportHeight = ViewportSize.Height;
             this.lastVerticalScrollOffset = this.Owner.VerticalScrollOffset;
              
             this.UpdateVisiblePage(this.visiblePage);
@@ -202,7 +201,7 @@ namespace CustomPresenter
 
             if (visiblePage.IntersectsWithViewport)
             {
-                double y = Math.Min(scrollOffset.Y, visiblePage.BottomPositionInView - viewportSize.Height);
+                double y = Math.Min(scrollOffset.Y, visiblePage.BottomPositionInView - ViewportSize.Height);
                 y = Math.Max(y, visiblePage.TopPositionInView); 
 
                 topLeft = new Point(scrollOffset.X, y);
@@ -212,7 +211,7 @@ namespace CustomPresenter
                 topLeft = new Point(visiblePage.PositionInView.Left, visiblePage.PositionInView.Top);
             }
 
-            Rect viewport = new Rect(topLeft, this.viewportSize);
+            Rect viewport = new Rect(topLeft, this.ViewportSize);
             Rect viewportIntersectionRect = pageInfo.GetViewportIntersectionRect(viewport);
             presenter.UpdateLayers(new UILayerUpdateContext(viewportIntersectionRect)
             {

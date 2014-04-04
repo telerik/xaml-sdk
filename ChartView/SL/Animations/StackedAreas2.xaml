@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Animations.StackedAreas2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:Animations"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Border BorderBrush="LightGray" BorderThickness="1">
+        <Grid x:Name="LayoutRoot" Background="White">
+            <telerik:RadCartesianChart x:Name="chart" Grid.Row="1" Palette="Flower">
+                <telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:CategoricalAxis />
+                </telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:LinearAxis />
+                </telerik:RadCartesianChart.VerticalAxis>
+                <telerik:RadCartesianChart.Series>
+                    <telerik:AreaSeries ZIndex="8" CombineMode="Stack" CategoryBinding="XCat" ValueBinding="YVal1" ItemsSource="{Binding}" local:ChartAnimationUtilities.CartesianAnimation="RiseWithDelay" />
+                    <telerik:AreaSeries ZIndex="6" CombineMode="Stack" CategoryBinding="XCat" ValueBinding="YVal2" ItemsSource="{Binding}" local:ChartAnimationUtilities.CartesianAnimation="RiseWithDelay" />
+                    <telerik:AreaSeries ZIndex="4" CombineMode="Stack" CategoryBinding="XCat" ValueBinding="YVal3" ItemsSource="{Binding}" local:ChartAnimationUtilities.CartesianAnimation="RiseWithDelay" />
+                    <telerik:AreaSeries ZIndex="2" CombineMode="Stack" CategoryBinding="XCat" ValueBinding="YVal4" ItemsSource="{Binding}" local:ChartAnimationUtilities.CartesianAnimation="RiseWithDelay" />
+                    <telerik:AreaSeries ZIndex="0" CombineMode="Stack"  CategoryBinding="XCat" ValueBinding="YVal2" ItemsSource="{Binding}" local:ChartAnimationUtilities.CartesianAnimation="RiseWithDelay" />
+                </telerik:RadCartesianChart.Series>
+            </telerik:RadCartesianChart>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="run" Click="Button_Click" />
+        </Grid>
+    </Border>
+
+</UserControl>

@@ -9,6 +9,8 @@
     d:DesignHeight="300" d:DesignWidth="400">
 
     <UserControl.Resources>
+        <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/"
+                             DarkBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Dark/" />
         <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
     </UserControl.Resources>
 
@@ -20,8 +22,7 @@
                                          Command="{Binding Path=Cut.Command}"
                                          Visibility="{Binding Path=Cut.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/cut.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/cut.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
@@ -29,8 +30,7 @@
                                          Command="{Binding Path=Copy.Command}"
                                          Visibility="{Binding Path=Copy.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/copy.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/copy.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
@@ -38,8 +38,7 @@
                                          Command="{Binding Path=Paste.Command}"
                                          Visibility="{Binding Path=Paste.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/pasteNormal.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/pasteNormal.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
@@ -65,8 +64,7 @@
                                          Visibility="{Binding Path=ShowFormatCellsDialog.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
 
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/formatCells.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/formatCells.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
@@ -74,8 +72,7 @@
                                          Header="Hyperlink..."
                                          Visibility="{Binding Path=ShowHyperlinkDialog.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/insertHyperlink.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/insertHyperlink.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
@@ -83,10 +80,50 @@
                                          Header="Remove Hyperlink"
                                          Visibility="{Binding Path=RemoveHyperlink.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/removeHyperlink.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/removeHyperlink.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=BringForward.Command}"
+                                         Header="Bring Forward"
+                                         Visibility="{Binding Path=BringForward.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/bringForward.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=BringToFront.Command}"
+                                         Header="Bring To Front"
+                                         Visibility="{Binding Path=BringToFront.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/bringToFront.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=SendBackward.Command}"
+                                         Header="Send Backward"
+                                         Visibility="{Binding Path=SendBackward.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/sendBackwards.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=SendToBack.Command}"
+                                         Header="Send To Back"
+                                         Visibility="{Binding Path=SendToBack.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/sendToBack.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=ShowFormatShapesDialog.Command}"
+                                         Header="Format Picture..."
+                                         Visibility="{Binding Path=ShowFormatShapesDialog.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/formatShapes.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
                 </telerik:RadContextMenu>
             </telerik:RadSpreadsheet.WorksheetEditorContextMenu>
         </telerik:RadSpreadsheet>

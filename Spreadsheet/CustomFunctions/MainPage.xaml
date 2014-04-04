@@ -1557,9 +1557,54 @@
                                 </telerik:RadContextMenu>
                             </telerik:RadRibbonDropDownButton.DropDownContent>
                         </telerik:RadRibbonDropDownButton>
-
                     </telerik:RadCollapsiblePanel>
                 </telerik:RadRibbonGroup>
+
+                <telerik:RadRibbonGroup Header="Size"
+                                        DialogLauncherVisibility="{Binding Path=ShowFormatShapesDialog.IsEnabled, Converter={StaticResource BoolToVisibilityValueConverter}}"
+                                        DialogLauncherCommand="{Binding Path=ShowFormatShapesDialog.Command}">
+                    <telerik:RadCollapsiblePanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{telerik:IconResource IconRelativePath=16/width.png, IconSources={StaticResource IconPaths}}" 
+                                   Stretch="None" UseLayoutRounding="True" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="Width:" Margin="4 0"/>
+                            <telerik:RadNumericUpDown MaxWidth="150"
+                                                      Grid.Column="2"
+                                                      VerticalAlignment="Center"
+                                                      Value="{Binding Path=SetShapeWidth.SelectedValue, TargetNullValue=''}"
+                                                      Minimum="0.1"
+                                                      SmallChange="0.1"
+								                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommand="{Binding Path=SetShapeWidth.Command}"
+                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+
+                            <Image Grid.Row="1" Source="{telerik:IconResource IconRelativePath=16/height.png, IconSources={StaticResource IconPaths}}"
+                                   Stretch="None" Margin="0 2 0 0" UseLayoutRounding="True" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="Height:" Margin="4 2 4 0" VerticalAlignment="Center"/>
+                            <telerik:RadNumericUpDown MaxWidth="150"
+                                                      Grid.Column="2"
+                                                      Margin="0 2 0 0" 
+                                                      VerticalAlignment="Center"
+                                                      Grid.Row="1"
+                                                      Value="{Binding Path=SetShapeHeight.SelectedValue, TargetNullValue=''}"
+                                                      Minimum="0.1"
+                                                      SmallChange="0.1"
+								                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommand="{Binding Path=SetShapeHeight.Command}"
+                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+                        </Grid>
+
+                    </telerik:RadCollapsiblePanel >
+                </telerik:RadRibbonGroup>
+
             </telerik:RadRibbonTab>
 
             <telerik:RadRibbonView.ContextualGroups>
@@ -1647,6 +1692,47 @@
                                    telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/removeHyperlink.png" Width="16"/>
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=BringForward.Command}"
+                                         Header="Bring Forward"
+                                         Visibility="{Binding Path=BringForward.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/bringForward.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=BringToFront.Command}"
+                                         Header="Bring To Front"
+                                         Visibility="{Binding Path=BringToFront.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/bringToFront.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=SendBackward.Command}"
+                                         Header="Send Backward"
+                                         Visibility="{Binding Path=SendBackward.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/sendBackwards.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=SendToBack.Command}"
+                                         Header="Send To Back"
+                                         Visibility="{Binding Path=SendToBack.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/sendToBack.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
+                    <telerik:RadMenuItem Command="{Binding Path=ShowFormatShapesDialog.Command}"
+                                         Header="Format Picture..."
+                                         Visibility="{Binding Path=ShowFormatShapesDialog.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                        <telerik:RadMenuItem.Icon>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/formatShapes.png, IconSources={StaticResource IconPaths}}" Width="16" Stretch="None" />
+                        </telerik:RadMenuItem.Icon>
+                    </telerik:RadMenuItem>
+
                 </telerik:RadContextMenu>
             </telerik:RadSpreadsheet.WorksheetEditorContextMenu>
         </telerik:RadSpreadsheet>

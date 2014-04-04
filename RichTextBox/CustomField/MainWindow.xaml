@@ -1,0 +1,35 @@
+﻿<Window x:Class="CustomField.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:CustomField"
+        Title="Custom Field" Height="350" Width="525">
+    <Window.Resources>
+        <local:ExampleViewModel x:Key="viewModel" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar DataContext="{StaticResource viewModel}" local:ExampleViewModel.RadRichTextBox="{Binding ElementName=radRichTextBox}">
+            <telerik:RadButton Content="Insert In Header" Margin="5 2" Padding="4"
+                               Command="{Binding InsertCustomFieldCommand}" CommandParameter="Header" 
+                               ToolTip="Insert Custom Field in the headers of the document." />
+            
+            <telerik:RadButton Content="Insert In Footer" Margin="5 2" Padding="4"
+                               Command="{Binding InsertCustomFieldCommand}" CommandParameter="Footer" 
+                               ToolTip="Insert Custom Field in the footers of the document." />
+            
+            <telerik:RadButton Content="Insert In Document" Margin="5 2" Padding="4"
+                               Command="{Binding InsertCustomFieldCommand}" CommandParameter="Document"
+                               ToolTip="Insert Custom Field in the body of the document." />
+        </telerik:RadToolBar>
+
+        <telerik:DocumentRuler Grid.Row="1">
+            <telerik:RadRichTextBox x:Name="radRichTextBox" LayoutMode="Paged"/>
+        </telerik:DocumentRuler>
+    </Grid>
+</Window>
