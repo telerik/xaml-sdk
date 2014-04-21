@@ -114,6 +114,9 @@
     <Reference Include="Telerik.Windows.Themes.Windows8Touch">
       <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows8Touch.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office2013">
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office2013.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_SL.xaml.cs">

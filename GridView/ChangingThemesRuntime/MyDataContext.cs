@@ -42,6 +42,7 @@ namespace ChangingThemesRuntime
                         "Windows7",
                         "Windows8",
                         "Windows8Touch",
+                        "Office2013",
                     });
 
                     SelectedTheme = themes.FirstOrDefault();

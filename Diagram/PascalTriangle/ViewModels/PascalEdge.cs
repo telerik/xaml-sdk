@@ -1,23 +1,53 @@
 ﻿using System;
 using System.Linq;
+using Telerik.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
 
 namespace Diagrams.PascalTriangle
 {
-    public class PascalEdge : ILink<PascalNode>
+
+    public class PascalEdge : ViewModelBase, ILink<PascalNode>
     {
+        private PascalNode target;
+        private PascalNode source;
+
+        /// <summary>
+        /// Gets or sets the source of the connection.
+        /// </summary>
         public PascalNode Source
         {
-            get;
-            set;
+            get
+            {
+                return this.source;
+            }
+            set
+            {
+                if (this.source != value)
+                {
+                    this.source = value;
+                    this.OnPropertyChanged("Source");
+                }
+            }
         }
 
+        /// <summary>
+        /// Gets or sets the target of this connection.
+        /// </summary>
         public PascalNode Target
         {
-            get;
-            set;
+            get
+            {
+                return this.target;
+            }
+            set
+            {
+                if (this.target != value)
+                {
+                    this.target = value;
+                    this.OnPropertyChanged("Target");
+                }
+            }
         }
-
         object ILink.Source
         {
             get
@@ -26,6 +56,7 @@ namespace Diagrams.PascalTriangle
             }
             set
             {
+                this.Source = value as PascalNode;
             }
         }
 
@@ -37,7 +68,9 @@ namespace Diagrams.PascalTriangle
             }
             set
             {
+                this.Target = value as PascalNode;
             }
         }
     }
 }
+

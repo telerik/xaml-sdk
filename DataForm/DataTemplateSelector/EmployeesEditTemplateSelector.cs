@@ -5,12 +5,11 @@ using System.Windows;
 
 namespace DataTemplateSelector
 {
-     
-#if WPF
+ #if !SILVERLIGHT
  public class EmployeesEditTemplateSelector : System.Windows.Controls.DataTemplateSelector
 #else
-    public class EmployeesEditTemplateSelector : Telerik.Windows.Controls.DataTemplateSelector
-#endif 
+      public class EmployeesEditTemplateSelector : Telerik.Windows.Controls.DataTemplateSelector
+#endif   
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
