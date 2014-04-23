@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingColumnsFromViewModel_WPF", "BindingColumnsFromViewModel\BindingColumnsFromViewModel_WPF.csproj", "{BC8A8E52-FB31-494C-BE4A-0CF75C2CC604}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingSelectedItemsFromViewModel_WPF", "BindingSelectedItemsFromViewModel\BindingSelectedItemsFromViewModel_WPF.csproj", "{399D448B-7278-438B-AE04-F06423674DB2}"
@@ -69,6 +69,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterAsYouTypeWithFilterRow_WPF", "FilterAsYouTypeWithFilterRow\FilterAsYouTypeWithFilterRow_WPF.csproj", "{333C6C8E-1E15-4CAB-A84A-16B47E4F9D20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandAllRowDetails_WPF", "ExpandAllRowDetails\ExpandAllRowDetails_WPF.csproj", "{4FE835A7-CD5F-475E-BC5A-BC5835107A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationINotifyDataErrorInfo_WPF", "ValidationINotifyDataErrorInfo\ValidationINotifyDataErrorInfo_WPF.csproj", "{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumnSettings_WPF", "ColumnSettings\ColumnSettings_WPF.csproj", "{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}"
 EndProject
 Global
 	 
@@ -449,6 +453,30 @@ Global
 		{4FE835A7-CD5F-475E-BC5A-BC5835107A31}.Release|Mixed Platforms.Build.0 = Release|x86
 		{4FE835A7-CD5F-475E-BC5A-BC5835107A31}.Release|x86.ActiveCfg = Release|x86
 		{4FE835A7-CD5F-475E-BC5A-BC5835107A31}.Release|x86.Build.0 = Release|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|x86.ActiveCfg = Debug|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Debug|x86.Build.0 = Debug|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|x86.ActiveCfg = Release|x86
+		{2DA5576D-9AC6-4CA8-91A5-4B3FA2AA0902}.Release|x86.Build.0 = Release|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|x86.ActiveCfg = Debug|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Debug|x86.Build.0 = Debug|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|x86.ActiveCfg = Release|x86
+		{3286BC59-2BA7-4AC4-8AB2-D6795EC3BA8B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

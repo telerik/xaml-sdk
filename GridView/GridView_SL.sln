@@ -66,6 +66,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterAsYouTypeWithFilterRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandAllRowDetails_SL", "ExpandAllRowDetails\ExpandAllRowDetails_SL.csproj", "{A167C282-B0A5-4D05-9C7E-6FC59E49A148}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationINotifyDataErrorInfo_SL", "ValidationINotifyDataErrorInfo\ValidationINotifyDataErrorInfo_SL.csproj", "{F30EF8F4-EA14-4337-96F0-455998EB33C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumnSettings_SL", "ColumnSettings\ColumnSettings_SL.csproj", "{57736036-1772-4D48-80F2-FD4CE0581C98}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +197,14 @@ Global
 		{A167C282-B0A5-4D05-9C7E-6FC59E49A148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A167C282-B0A5-4D05-9C7E-6FC59E49A148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A167C282-B0A5-4D05-9C7E-6FC59E49A148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30EF8F4-EA14-4337-96F0-455998EB33C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30EF8F4-EA14-4337-96F0-455998EB33C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30EF8F4-EA14-4337-96F0-455998EB33C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30EF8F4-EA14-4337-96F0-455998EB33C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57736036-1772-4D48-80F2-FD4CE0581C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57736036-1772-4D48-80F2-FD4CE0581C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57736036-1772-4D48-80F2-FD4CE0581C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57736036-1772-4D48-80F2-FD4CE0581C98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

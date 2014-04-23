@@ -1,0 +1,1 @@
+This example demonstrates different column's properties.

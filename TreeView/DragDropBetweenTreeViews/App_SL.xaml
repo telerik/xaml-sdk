@@ -1,0 +1,40 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             x:Class="DragDropBetweenTreeViews_SL.App">
+    <Application.Resources>
+        <DataTemplate x:Key="mediaFilesTemplate">
+            <StackPanel Orientation="Horizontal" >
+                <Image Width="16"
+					       Height="16"
+					       Source="Images/DefaultIcons/photos.png"
+					       Stretch="Fill" />
+                <TextBlock Text="{Binding ImageFilePath}" />
+            </StackPanel>
+        </DataTemplate>
+
+        <telerik:HierarchicalDataTemplate x:Key="localMachineTemplate"
+			                          ItemTemplate="{StaticResource mediaFilesTemplate}"
+			                          ItemsSource="{Binding MediaFiles}">
+            <TextBlock Text="{Binding Name}" />
+        </telerik:HierarchicalDataTemplate>
+
+
+        <DataTemplate x:Key="resourceTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16"
+					       Height="16"
+					       Source="{Binding ImageFilePath}"
+					       Stretch="Fill" />
+                <TextBlock Text="{Binding Title}" />
+            </StackPanel>
+        </DataTemplate>
+
+
+        <telerik:HierarchicalDataTemplate x:Key="applicationTemplate"
+			                          ItemTemplate="{StaticResource resourceTemplate}"
+			                          ItemsSource="{Binding Resources}">
+            <TextBlock Text="{Binding Name}"/>
+        </telerik:HierarchicalDataTemplate>
+    </Application.Resources>
+</Application>
