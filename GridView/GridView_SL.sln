@@ -70,6 +70,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationINotifyDataErrorI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumnSettings_SL", "ColumnSettings\ColumnSettings_SL.csproj", "{57736036-1772-4D48-80F2-FD4CE0581C98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForegroundColorSelectedHoveredRow_SL", "ForegroundColorSelectedHoveredRow\ForegroundColorSelectedHoveredRow_SL.csproj", "{182FA8EB-97CE-4611-A393-58FE8BFCECAE}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,6 +207,10 @@ Global
 		{57736036-1772-4D48-80F2-FD4CE0581C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57736036-1772-4D48-80F2-FD4CE0581C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57736036-1772-4D48-80F2-FD4CE0581C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{182FA8EB-97CE-4611-A393-58FE8BFCECAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{182FA8EB-97CE-4611-A393-58FE8BFCECAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{182FA8EB-97CE-4611-A393-58FE8BFCECAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{182FA8EB-97CE-4611-A393-58FE8BFCECAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

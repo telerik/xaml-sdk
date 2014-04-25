@@ -17,14 +17,17 @@ namespace NoMatchFilteringBehavior
 		private void SearchControl_GotFocus_1(object sender, RoutedEventArgs e)
 		{
 			var autoCompleteBox = sender as RadAutoCompleteBox;
-			if (string.IsNullOrEmpty(autoCompleteBox.SearchText))
-			{
-				autoCompleteBox.Populate("");
-			}
-			else
-			{
-				autoCompleteBox.Populate(autoCompleteBox.SearchText);
-			}
+            if (!autoCompleteBox.IsDropDownOpen)
+            {
+                if (string.IsNullOrEmpty(autoCompleteBox.SearchText))
+                {
+                    autoCompleteBox.Populate("");
+                }
+                else
+                {
+                    autoCompleteBox.Populate(autoCompleteBox.SearchText);
+                }
+            }
 		}
 	}
 }
