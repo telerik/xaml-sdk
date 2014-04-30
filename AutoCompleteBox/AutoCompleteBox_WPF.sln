@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_WPF", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_WPF.csproj", "{B7A1BFA7-9E77-4C68-872F-3334816071E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehavior_WPF", "TwoPropertiesFilteringBehavior\TwoPropertiesFilteringBehavior_WPF.csproj", "{474FFE7C-983F-487A-81A7-460CE0CA996F}"
@@ -16,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightMatchingItemsText_WPF", "HighlightMatchingItemsText_WPF\HighlightMatchingItemsText_WPF.csproj", "{AEFA23DE-1248-463B-92A9-0B5936A8369D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddNewItemsWithButton_WPF", "AddNewItemsWithButton\AddNewItemsWithButton_WPF.csproj", "{052E1B45-DF3A-4D11-8F9F-54E828CFCB00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumPopulateDelay_WPF", "MinimumPopulateDelay\MinimumPopulateDelay_WPF.csproj", "{265C4222-5F79-4F4F-8428-1842FC0B487D}"
 EndProject
 Global
 	 
@@ -56,6 +60,10 @@ Global
 		{052E1B45-DF3A-4D11-8F9F-54E828CFCB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052E1B45-DF3A-4D11-8F9F-54E828CFCB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{052E1B45-DF3A-4D11-8F9F-54E828CFCB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265C4222-5F79-4F4F-8428-1842FC0B487D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265C4222-5F79-4F4F-8428-1842FC0B487D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265C4222-5F79-4F4F-8428-1842FC0B487D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265C4222-5F79-4F4F-8428-1842FC0B487D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+#MinimumPopulateDelay example#
+This example demonstrates how to implement minimum delay before the built-in filtering of the control is triggered. For better user experience a RadBusyIndicator is added in order to give feedback that the delay is triggered and is running.
+When deleting the inputted text by pressing the 'Backspace' keyboard key the DropDown of the control is immediately closed and the populating (filtering) is terminated. In those scenarios if a populate (filtering) with the current SearchText should be triggered all that is needed is for the 'Enter' keyboard key to be pressed.
