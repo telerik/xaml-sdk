@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneGroupItemsSource_SL", "PaneGroupItemsSource\PaneGroupItemsSource_SL.csproj", "{BCAB4476-5EBC-4490-BBA6-BEBE0FB28FC6}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitContainerDockState_SL", "SplitContainerDockState\SplitContainerDockState_SL.csproj", "{4D44B90D-3FD1-4A21-B6B5-3EB2361E9C13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDockingSaveLoadLayout_SL", "NestedDockingSaveLoadLayout\NestedDockingSaveLoadLayout_SL.csproj", "{744F7A9A-F346-459E-9058-19E3F6110FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDockingWithPanesSource_SL", "NestedDockingWithPanesSource\NestedDockingWithPanesSource_SL.csproj", "{C6AFBB77-F83C-4877-89C9-C603C6236798}"
 EndProject
 Global
 	 
@@ -194,6 +196,20 @@ Global
 		{744F7A9A-F346-459E-9058-19E3F6110FF2}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{744F7A9A-F346-459E-9058-19E3F6110FF2}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{744F7A9A-F346-459E-9058-19E3F6110FF2}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

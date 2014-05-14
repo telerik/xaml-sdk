@@ -158,9 +158,12 @@ Public Class ScheduleViewViewModel
 		Me.IsLoading = False
 	End Sub
 
-	Private Sub LoadData()
-		Me.ResourceTypes.AddRange(ScheduleViewRepository.Context.SqlResourceTypes)
-		Me.TimeMarkers.AddRange(ScheduleViewRepository.Context.TimeMarkers)
-		Me.Categories.AddRange(ScheduleViewRepository.Context.Categories)
-	End Sub
+    Private Sub LoadData()
+        For Each resType As SqlResourceType In ScheduleViewRepository.Context.SqlResourceTypes
+            Dim a = TryCast(resType.Resources, IEnumerable(Of SqlResource))
+        Next
+        Me.ResourceTypes.AddRange(ScheduleViewRepository.Context.SqlResourceTypes)
+        Me.TimeMarkers.AddRange(ScheduleViewRepository.Context.TimeMarkers)
+        Me.Categories.AddRange(ScheduleViewRepository.Context.Categories)
+    End Sub
 End Class
