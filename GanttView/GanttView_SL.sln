@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_SL", "TaskDeadline\TaskDeadline_SL.csproj", "{8CA25908-7486-4F16-84C5-5727C7491BCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDeadline_SL", "ProjectDeadline\ProjectDeadline_SL.csproj", "{9B3CE01E-1B85-475C-8C4C-2C3B3AE23D50}"
@@ -54,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandCollapseViaHeader_SL", "ExpandCollapseViaHeader\ExpandCollapseViaHeader_SL.csproj", "{63F7148D-C56B-4581-9602-2F6AEDA62A08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineIntervalMarkers_SL", "TimelineIntervalMarkers\TimelineIntervalMarkers_SL.csproj", "{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadlineProperty_SL", "TaskDeadlineProperty\TaskDeadlineProperty_SL.csproj", "{15ED83CD-051E-4D61-B06C-1B3E326FC147}"
 EndProject
 Global
 	 
@@ -166,6 +166,10 @@ Global
 		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5080FB-21B2-455B-9ABA-3922EDAB1EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15ED83CD-051E-4D61-B06C-1B3E326FC147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15ED83CD-051E-4D61-B06C-1B3E326FC147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15ED83CD-051E-4D61-B06C-1B3E326FC147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15ED83CD-051E-4D61-B06C-1B3E326FC147}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

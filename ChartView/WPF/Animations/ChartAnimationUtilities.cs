@@ -56,6 +56,18 @@ namespace Animations
             typeof(ChartAnimationUtilities),
             new PropertyMetadata(double.NaN, SeriesScaleTransformYChanged));
 
+        private static readonly DependencyProperty BarScaleTransformXProperty = DependencyProperty.RegisterAttached(
+            "BarScaleTransformX",
+            typeof(double),
+            typeof(ChartAnimationUtilities),
+            new PropertyMetadata(double.NaN, BarScaleTransformXChanged));
+
+        private static readonly DependencyProperty BarScaleTransformYProperty = DependencyProperty.RegisterAttached(
+            "BarScaleTransformY",
+            typeof(double),
+            typeof(ChartAnimationUtilities),
+            new PropertyMetadata(double.NaN, BarScaleTransformYChanged));
+
         private static readonly DependencyProperty SliceScaleTransformXYProperty = DependencyProperty.RegisterAttached(
             "SliceScaleTransformXY",
             typeof(double),
@@ -70,8 +82,10 @@ namespace Animations
 
         private const int DelayInMilliseconds = 1000;
         private const int PieDelayInMilliseconds = 300;
+        private const int BarDelayInMilliseconds = 200;
         private static Duration AnimationDuration = new Duration(TimeSpan.FromMilliseconds(1500));
         private static Duration PieSliceAnimationDuration = new Duration(TimeSpan.FromMilliseconds(500));
+        private static Duration BarAnimationDuration = new Duration(TimeSpan.FromMilliseconds(500));
         private static object locker = new object();
 
         public static CartesianAnimation GetCartesianAnimation(DependencyObject obj)
@@ -203,6 +217,30 @@ namespace Animations
             }
         }
 
+        private static void BarScaleTransformXChanged(DependencyObject target, DependencyPropertyChangedEventArgs args)
+        {
+            FrameworkElement bar = (FrameworkElement)target;
+            double scaleX = (double)args.NewValue;
+
+            if (!double.IsNaN(scaleX))
+            {
+                ScaleTransform transform = (ScaleTransform)bar.RenderTransform;
+                transform.ScaleX = scaleX;
+            }
+        }
+
+        private static void BarScaleTransformYChanged(DependencyObject target, DependencyPropertyChangedEventArgs args)
+        {
+            FrameworkElement bar = (FrameworkElement)target;
+            double scaleY = (double)args.NewValue;
+
+            if (!double.IsNaN(scaleY))
+            {
+                ScaleTransform transform = (ScaleTransform)bar.RenderTransform;
+                transform.ScaleY = (double)args.NewValue;
+            }
+        }
+
         private static void SliceScaleTransformXYChanged(DependencyObject target, DependencyPropertyChangedEventArgs args)
         {
             Path slice = (Path)target;
@@ -299,6 +337,10 @@ namespace Animations
                 if (animation == CartesianAnimation.Stretch)
                 {
                     started |= TryRunStretchAnimtation(cartesianSeries);
+                }
+                if (animation == CartesianAnimation.StackedBars)
+                {
+                    started |= TryRunStackedBarsAnimtation(cartesianSeries);
                 }
             }
 
@@ -580,6 +622,35 @@ namespace Animations
             return started;
         }
 
+        private static bool TryRunStackedBarsAnimtation(CartesianSeries series)
+        {
+            Canvas renderSurface = Telerik.Windows.Controls.ChildrenOfTypeExtensions.FindChildByType<Canvas>(series);
+            List<FrameworkElement> bars = new List<FrameworkElement>();
+            foreach (FrameworkElement uiElement in renderSurface.Children)
+            {
+                Border bar = uiElement as Border;
+                ContentPresenter cp = uiElement as ContentPresenter;
+                if ((bar != null && (bar.DataContext is CategoricalDataPoint)) ||
+                    (cp != null && cp.Content is CategoricalDataPoint))
+                {
+                    bars.Add(uiElement);
+                }
+            }
+
+            Storyboard storyboard = new Storyboard();
+            RadCartesianChart chart = (RadCartesianChart)series.Chart;
+            int initialDelay = (int)(BarAnimationDuration.TimeSpan.Milliseconds * chart.Series.IndexOf(series));
+            TimeSpan? beginTime = TimeSpan.FromMilliseconds(initialDelay);
+            for (int i = 0; i < bars.Count; i++)
+            {
+                var animation = BuildStackedBarAnimation(bars[i], beginTime, BarAnimationDuration, series);
+                storyboard.Children.Add(animation);
+                beginTime = new TimeSpan(0, 0, 0, 0, initialDelay + (BarDelayInMilliseconds * (i + 1)));
+            }
+
+            return Run(storyboard, series);
+        }
+
         private static bool Run(Storyboard storyboard, ChartSeries series, Action completed = null)
         {
             if (storyboard.Children.Count == 0)
@@ -637,6 +708,58 @@ namespace Animations
 
             Storyboard.SetTarget(animation, path);
             Storyboard.SetTargetProperty(animation, new PropertyPath(ChartAnimationUtilities.SliceScaleTransformXYProperty));
+            return animation;
+        }
+
+        private static DoubleAnimation BuildStackedBarAnimation(FrameworkElement bar, TimeSpan? beginTime, Duration duration, CartesianSeries series)
+        {
+            bool isHorizontalBar = !IsSeriesHorizontal(series);
+            bool isInverse = IsNumericalAxisInverse(series);
+            
+            double centerX = 0;
+            double centerY = 0;
+            DataPoint dp = bar.DataContext as DataPoint;
+            if (dp == null)
+            {
+                dp = (DataPoint)((bar as ContentPresenter).Content);
+            }
+
+            if (isHorizontalBar)
+            {
+                centerX = isInverse ? dp.LayoutSlot.Width : 0;
+            }
+            else
+            {
+                centerY = isInverse ? 0 : dp.LayoutSlot.Height;
+            }
+
+            var scaleTransform = new ScaleTransform();
+            scaleTransform.ScaleX = isHorizontalBar ? 0 : 1;
+            scaleTransform.ScaleY = isHorizontalBar ? 1 : 0;
+            scaleTransform.CenterX = centerX;
+            scaleTransform.CenterY = centerY;
+
+            bar.RenderTransform = scaleTransform;
+
+            DoubleAnimation animation = new DoubleAnimation();
+            animation.From = 0;
+            animation.To = 1;
+            animation.Duration = duration;
+            if (beginTime != null)
+            {
+                animation.BeginTime = beginTime;
+            }
+
+            Storyboard.SetTarget(animation, bar);
+            if (isHorizontalBar)
+            {
+                Storyboard.SetTargetProperty(animation, new PropertyPath(ChartAnimationUtilities.BarScaleTransformXProperty));
+            }
+            else
+            {
+                Storyboard.SetTargetProperty(animation, new PropertyPath(ChartAnimationUtilities.BarScaleTransformYProperty));
+            }
+
             return animation;
         }
 

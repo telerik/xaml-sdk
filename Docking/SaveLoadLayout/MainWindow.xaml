@@ -32,7 +32,12 @@
 					<telerik:RadButton x:Name="LoadLayoutFromStrButton" Content="Load Layout from string" IsEnabled="False" 
 									   Click="LoadLayoutFromStrButtonClick" Margin="5"/>
 				</StackPanel>
-				<StackPanel>
+                <StackPanel>
+                    <telerik:RadButton Content="Save Layout to XElement" Click="SaveLayoutToXElementButtonClick" Margin="5"/>
+                    <telerik:RadButton x:Name="LoadLayoutFromXElementButton" Content="Load Layout from XElement" IsEnabled="False" 
+									   Click="LoadLayoutFromXElementButtonClick" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
 					<TextBlock Text="Layout Xml header:" Margin="5" Width="110"/>
 					<TextBox Text="{Binding ElementName=LayoutXml, Path=Header, Mode=TwoWay}" Width="110"/>
 				</StackPanel>

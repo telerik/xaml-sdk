@@ -1,0 +1,1 @@
+﻿The example demonstrates how to use and customize the built-in Deadline property of the GanttTask.

@@ -8,15 +8,25 @@ using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
 using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
 
 namespace GenerateDocuments
 {
     public static class FileHelper
     {
+        public const string XlsxFormat = "Xlsx";
+        public const string CsvFormat = "Csv";
+        public const string TxtFormat = "Txt";
+        public const string PdfFormat = "Pdf";
+
+        public static readonly string[] ExportFormats;
         private static readonly string SampleDataFolder = "SampleData/";
 
         static FileHelper()
         {
+            ExportFormats = new string[] { XlsxFormat, CsvFormat, TxtFormat, PdfFormat };
+
+            WorkbookFormatProvidersManager.RegisterFormatProvider(new PdfFormatProvider());
             WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
         }
 
@@ -47,15 +57,18 @@ namespace GenerateDocuments
             IWorkbookFormatProvider formatProvider;
             switch (extension)
             {
-                case "Xlsx":
+                case XlsxFormat:
                     formatProvider = WorkbookFormatProvidersManager.GetProviderByName("XlsxFormatProvider");
                     break;
-                case "Csv":
+                case CsvFormat:
                     formatProvider = WorkbookFormatProvidersManager.GetProviderByName("CsvFormatProvider");
                     (formatProvider as CsvFormatProvider).Settings.HasHeaderRow = true;
                     break;
-                case "Txt":
+                case TxtFormat:
                     formatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
+                    break;
+                case PdfFormat:
+                    formatProvider = WorkbookFormatProvidersManager.GetProviderByName("PdfFormatProvider");
                     break;
                 default:
                     formatProvider = null;

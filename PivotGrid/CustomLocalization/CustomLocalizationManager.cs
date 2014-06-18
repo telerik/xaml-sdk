@@ -145,6 +145,11 @@ namespace CustomLocalization
             this.dictionary["PivotFieldList_Top10FilterP0"] = "Top10 Filter ({0})";
             this.dictionary["PivotFieldList_ShowValuesAsP0"] = "Show Values As ({0})";
             this.dictionary["PivotFieldList_ValueFilterP0"] = "Value Filter ({0})";
+
+            this.dictionary["Pivot_CalculatedFields"] = "Calculated Fields";
+            this.dictionary["PivotFieldList_ItemFilterConditionCaption"] = "Show items with value that";
+            this.dictionary["PivotFieldList_None"] = "Data source order";
+            this.dictionary["PivotFieldList_Sort_BySortKeys"] = "by Sort Keys";
         }
 
         public override string GetStringOverride(string key)

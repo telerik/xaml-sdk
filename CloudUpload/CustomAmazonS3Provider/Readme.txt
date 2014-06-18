@@ -1,0 +1,1 @@
+This code sample demonstrates one possible approach to implementing a custom AmazonS3 upload provider and using it with the RadCloudUpload.

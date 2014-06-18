@@ -24,7 +24,6 @@ namespace GenerateDocuments
         private readonly Products data;
 
         private List<Product> products;
-        private IEnumerable<string> exportFormats;
         private ICommand exportCommand = null;
         private string selectedExportFormat;
 
@@ -69,12 +68,7 @@ namespace GenerateDocuments
         {
             get
             {
-                if (this.exportFormats == null)
-                {
-                    this.exportFormats = new string[] { "Xlsx", "Csv", "Txt" };
-                }
-
-                return this.exportFormats;
+                return FileHelper.ExportFormats;
             }
         }
 

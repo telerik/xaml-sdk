@@ -10,6 +10,62 @@
 			 MinHeight="350"
 			 MinWidth="525">
 	<Grid>
+        <Grid.Resources>
+            <Style x:Key="SelectionRangeStyle" BasedOn="{StaticResource SelectionRangeStyle}" TargetType="Thumb">
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Thumb">
+                            <Grid>
+                                <telerik:CommandManager.InputBindings>
+                                    <telerik:InputBindingCollection>
+                                        <telerik:MouseBinding Gesture="LeftDoubleClick" Command="telerik:RadTimeBarCommands.SelectGroupInterval"/>
+                                    </telerik:InputBindingCollection>
+                                </telerik:CommandManager.InputBindings>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal"/>
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Background" Duration="0.00:00:00.05">
+                                                    <DiscreteObjectKeyFrame KeyTime="0.00:00:00.0" Value="{StaticResource TimeBar_SelectionThumb_Range_Background_MouseOver}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border x:Name="BackgroundAnimation"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    Style="{StaticResource BorderWithActualWidth}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="SelectionThumbHandleStyle" BasedOn="{StaticResource SelectionThumbHandleStyle}" TargetType="Thumb" />
+            <Style x:Key="SelectionThumbHandleStyle_Flipped" BasedOn="{StaticResource SelectionThumbHandleStyle_Flipped}" TargetType="Thumb" />
+
+            <Style x:Key="SelectionThumbStyle" TargetType="telerik:SelectionThumb">
+                <Setter Property="Margin" Value="{StaticResource TimeBar_SelectionThumb_Margin}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="telerik:SelectionThumb">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid>
+                                    <Thumb Name="PART_CenterHandle" Style="{StaticResource SelectionRangeStyle}"/>
+                                    <Thumb Name="PART_LeftHandle" HorizontalAlignment="Left" Style="{StaticResource SelectionThumbHandleStyle_Flipped}"/>
+                                    <Thumb Name="PART_RightHandle" HorizontalAlignment="Right" Style="{StaticResource SelectionThumbHandleStyle}"/>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        
 		<telerik:RadTimeBar Width="950"
 							Height="250"
 							Margin="0,30,0,0" 
@@ -18,9 +74,9 @@
 							VisiblePeriodStart="01/01/2012"
 							VisiblePeriodEnd="06/01/2012"
 							SelectionStart="02/01/2012"
-							SelectionEnd="03/01/2012"                          
+							SelectionEnd="03/01/2012" 
 							IsSnapToIntervalEnabled="True"
-							telerik:StyleManager.Theme="Windows8">
+                            SelectionThumbStyle="{StaticResource SelectionThumbStyle}">
 			<telerik:RadTimeBar.Intervals>
 				<telerik:YearInterval />
 				<telerik:MonthInterval />

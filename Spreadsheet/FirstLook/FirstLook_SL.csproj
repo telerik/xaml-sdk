@@ -110,6 +110,9 @@
     <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Zip">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Zip.dll</HintPath>

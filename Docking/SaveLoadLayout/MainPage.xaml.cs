@@ -3,6 +3,7 @@ using System.IO.IsolatedStorage;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Linq;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Docking;
 
@@ -11,6 +12,7 @@ namespace SaveLoadLayout
 	public partial class MainPage : UserControl
 	{
 		private LayoutDataViewModel data;
+        private XElement dockingLayout;
 
 		public MainPage()
 		{
@@ -138,5 +140,22 @@ namespace SaveLoadLayout
 				this.LayoutXml.IsHidden = true;
 			}
 		}
+
+        private void SaveLayoutToXElementButtonClick(object sender, RoutedEventArgs e)
+        {
+            var destinationStream = new MemoryStream();
+            this.Docking.SaveLayout(destinationStream);
+            destinationStream.Seek(0, SeekOrigin.Begin);
+            this.dockingLayout = XElement.Load(destinationStream);
+            this.LoadLayoutFromXElementButton.IsEnabled = true;
+        }
+
+        private void LoadLayoutFromXElementButtonClick(object sender, RoutedEventArgs e)
+        {
+            MemoryStream sourceAsStream = new MemoryStream();
+            this.dockingLayout.Save(sourceAsStream);
+            sourceAsStream.Seek(0, SeekOrigin.Begin);
+            this.Docking.LoadLayout(sourceAsStream);
+        }
 	}
 }

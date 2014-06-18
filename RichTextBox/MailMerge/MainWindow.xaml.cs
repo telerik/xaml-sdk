@@ -16,13 +16,12 @@ namespace MailMerge
         {
             InitializeComponent();
 
-            Stream stream = Application.GetResourceStream(new Uri("MailMerge;component/SampleData/SampleData.xaml", UriKind.Relative)).Stream;
-
-            XamlFormatProvider provider = new XamlFormatProvider();
-
-            RadDocument document = provider.Import(stream);
-
-            this.editor.Document = document;
+            using (Stream stream = Application.GetResourceStream(new Uri("MailMerge;component/SampleData/SampleData.xaml", UriKind.Relative)).Stream)
+            {
+                XamlFormatProvider provider = new XamlFormatProvider();
+                RadDocument document = provider.Import(stream);
+                this.editor.Document = document;
+            }
 
             this.editor.Document.MailMergeDataSource.ItemsSource = new ExamplesDataContext().Employees;
         }

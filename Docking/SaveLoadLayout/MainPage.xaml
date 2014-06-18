@@ -12,40 +12,45 @@
 			<RowDefinition Height="Auto"/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
-		<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="*" MinWidth="800"/>
-			</Grid.ColumnDefinitions>
-			<TextBlock Text="This example demonstrates how the Save/Load layout functionality work in the RadDocking control. If a Panes content/properties needs to be persisted when the layout is saved setting the SerializationTag is required. In order to exclude a Pane from the Save layout functionality setting the ExcludedFromLayoutSave is required."
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" MinWidth="800"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="This example demonstrates how the Save/Load layout functionality work in the RadDocking control. If a Panes content/properties needs to be persisted when the layout is saved setting the SerializationTag is required. In order to exclude a Pane from the Save layout functionality setting the ExcludedFromLayoutSave is required."
 					   Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" FontWeight="Black" TextWrapping="Wrap"/>
-			<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20" HorizontalAlignment="Center" Grid.Column="1">
-				<StackPanel>
-					<telerik:RadButton Content="Add Pane" Click="AddPaneButtonClick"  Margin="5" />
-					<telerik:RadButton Content="Add Pane with SerializationTag" Click="AddPaneWithSerializationTagButtonClick" Margin="5" />
-					<telerik:RadButton Content="Remove FlaotingOnlyPane" Click="RemovePaneButtonClick"  Margin="5"/>
-				</StackPanel>
-				<StackPanel>
-					<telerik:RadButton Content="Save Layout to File" Click="SaveLayoutToFileButtonClick" Margin="5" />
-					<telerik:RadButton x:Name="LoadLayoutFromFileButton" IsEnabled="False" Content="Load Layout" 
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20" HorizontalAlignment="Center" Grid.Column="1">
+                <StackPanel>
+                    <telerik:RadButton Content="Add Pane" Click="AddPaneButtonClick"  Margin="5" />
+                    <telerik:RadButton Content="Add Pane with SerializationTag" Click="AddPaneWithSerializationTagButtonClick" Margin="5" />
+                    <telerik:RadButton Content="Remove FlaotingOnlyPane" Click="RemovePaneButtonClick"  Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <telerik:RadButton Content="Save Layout to File" Click="SaveLayoutToFileButtonClick" Margin="5" />
+                    <telerik:RadButton x:Name="LoadLayoutFromFileButton" IsEnabled="False" Content="Load Layout" 
 									   Click="LoadLayoutFromFileButtonClick" Margin="5" />
-				</StackPanel>
-				<StackPanel>
-					<telerik:RadButton Content="Save Layout to string" Click="SaveLayoutToStrButtonClick" Margin="5"/>
-					<telerik:RadButton x:Name="LoadLayoutFromStrButton" Content="Load Layout from string" IsEnabled="False" 
+                </StackPanel>
+                <StackPanel>
+                    <telerik:RadButton Content="Save Layout to string" Click="SaveLayoutToStrButtonClick" Margin="5"/>
+                    <telerik:RadButton x:Name="LoadLayoutFromStrButton" Content="Load Layout from string" IsEnabled="False" 
 									   Click="LoadLayoutFromStrButtonClick" Margin="5"/>
-				</StackPanel>
-				<StackPanel>
-					<TextBlock Text="Layout Xml header:" Margin="5" Width="110"/>
-					<TextBox Text="{Binding ElementName=LayoutXml, Path=Header, Mode=TwoWay}" Width="110"/>
-				</StackPanel>
-				<StackPanel>
-					<telerik:RadButton Content="Toggle LayoutXml.IsHidden " Margin="5" Click="ToggleButtonClick"/>
-				</StackPanel>
-			</StackPanel>
-		</Grid>
+                </StackPanel>
+                <StackPanel>
+                    <telerik:RadButton Content="Save Layout to XElement" Click="SaveLayoutToXElementButtonClick" Margin="5"/>
+                    <telerik:RadButton x:Name="LoadLayoutFromXElementButton" Content="Load Layout from XElement" IsEnabled="False" 
+									   Click="LoadLayoutFromXElementButtonClick" Margin="5"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Layout Xml header:" Margin="5" Width="110"/>
+                    <TextBox Text="{Binding ElementName=LayoutXml, Path=Header, Mode=TwoWay}" Width="110"/>
+                </StackPanel>
+                <StackPanel>
+                    <telerik:RadButton Content="Toggle LayoutXml.IsHidden " Margin="5" Click="ToggleButtonClick"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
 
-		<telerik:RadDocking x:Name="Docking"  BorderThickness="0" Padding="0" Grid.Row="1">
+        <telerik:RadDocking x:Name="Docking"  BorderThickness="0" Padding="0" Grid.Row="1">
 			<telerik:RadDocking.DocumentHost>
 				<telerik:RadSplitContainer>
 					<telerik:RadPaneGroup x:Name="DocumentGroup">

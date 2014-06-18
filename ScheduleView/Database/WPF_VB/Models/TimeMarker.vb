@@ -9,6 +9,22 @@ Public Class TimeMarker
 		Return Me.TimeMarkerName <> other.TimeMarkerName
 	End Function
 
+    Private m_timeMarkerBrush As Brush
+
+    Public Property TimeMarkerBrush() As Brush
+        Get
+            If Me.m_timeMarkerBrush Is Nothing Then
+                Me.m_timeMarkerBrush = SolidColorBrushHelper.FromNameString(Me.TimeMarkerBrushName)
+            End If
+
+            Return Me.m_timeMarkerBrush
+        End Get
+        Set(value As Brush)
+            Me.TimeMarkerBrushName = TryCast(Me.m_timeMarkerBrush, SolidColorBrush).Color.ToString().Substring(1)
+            Me.m_timeMarkerBrush = value
+        End Set
+    End Property
+
 	Public Property TimeMarkerName_ As String Implements Telerik.Windows.Controls.ITimeMarker.TimeMarkerName
 		Get
 			Return Me.TimeMarkerName

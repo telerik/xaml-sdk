@@ -82,29 +82,35 @@ namespace MergeDocuments
         {
             CopyHeaderAndFooter(fromDocument, toDocument);
 
-            toDocument.Sections.Last.PageOrientation = fromDocument.Sections.Last.PageOrientation;
-            toDocument.Sections.Last.PageSize = fromDocument.Sections.Last.PageSize;
-            toDocument.Sections.Last.PageMargin = fromDocument.Sections.Last.PageMargin;
+            RadDocumentEditor documentEditor = new RadDocumentEditor(toDocument);
+            documentEditor.Document.CaretPosition.MoveToLastPositionInDocument();
+
+            documentEditor.ChangeSectionPageOrientation(fromDocument.Sections.Last.PageOrientation);
+            documentEditor.ChangeSectionPageSize(fromDocument.Sections.Last.PageSize);
+            documentEditor.ChangeSectionPageMargin(fromDocument.Sections.Last.PageMargin);
+            documentEditor.ChangeSectionFooterBottomMargin(fromDocument.Sections.Last.FooterBottomMargin);
+            documentEditor.ChangeSectionHeaderTopMargin(fromDocument.Sections.Last.HeaderTopMargin);
         }
 
         private static void CopyHeaderAndFooter(RadDocument fromDocument, RadDocument toDocument)
         {
+            RadDocumentEditor documentEditor = new RadDocumentEditor(toDocument);
             if (!fromDocument.Sections.First.Headers.Default.IsEmpty)
             {
-                toDocument.Sections.Last.Headers.Default = fromDocument.Sections.Last.Headers.Default;
+                documentEditor.ChangeSectionHeader(documentEditor.Document.Sections.First, HeaderFooterType.Default, fromDocument.Sections.Last.Headers.Default);
             }
             else
             {
-                toDocument.Sections.Last.Headers.Default.IsLinkedToPrevious = false;
+                documentEditor.ChangeSectionHeaderLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
             }
 
             if (!fromDocument.Sections.First.Footers.Default.IsEmpty)
             {
-                toDocument.Sections.Last.Footers.Default = fromDocument.Sections.Last.Footers.Default;
+                documentEditor.ChangeSectionFooter(documentEditor.Document.Sections.Last, HeaderFooterType.Default, fromDocument.Sections.Last.Footers.Default);
             }
             else
             {
-                toDocument.Sections.Last.Footers.Default.IsLinkedToPrevious = false;
+                documentEditor.ChangeSectionFooterLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
             }
         }
     }

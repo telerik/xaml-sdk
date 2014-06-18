@@ -8,5 +8,6 @@
         Rise,
         RiseWithDelay,
         Stretch,
+        StackedBars,
     }
 }

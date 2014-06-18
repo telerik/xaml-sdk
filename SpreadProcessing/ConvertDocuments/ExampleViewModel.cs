@@ -124,17 +124,11 @@ namespace ConvertDocuments
             }
         }
 
-        private IEnumerable<string> exportFormats;
         public IEnumerable<string> ExportFormats
         {
             get
             {
-                if (exportFormats == null)
-                {
-                    exportFormats = new string[] { "Xlsx", "Csv", "Txt" };
-                }
-
-                return exportFormats;
+                return FileHelper.ExportFormats;
             }
         }
 

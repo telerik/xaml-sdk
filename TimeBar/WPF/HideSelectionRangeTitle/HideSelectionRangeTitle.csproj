@@ -59,6 +59,9 @@
     <Reference Include="Telerik.Windows.Data">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows8">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Windows8.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -80,10 +83,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Telerik.Windows.Controls.DataVisualization.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

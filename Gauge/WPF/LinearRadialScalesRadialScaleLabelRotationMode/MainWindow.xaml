@@ -6,13 +6,16 @@
 		Height="350"
 		Width="525">
     <Grid>
-		<telerik:RadRadialGauge OuterBackground="#EEEEEE"
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <telerik:RadRadialGauge OuterBackground="#EEEEEE" Height="350" Width="525"
 								telerik:StyleManager.Theme="Windows8">
-			<telerik:RadialScale Min="0"
-								 Max="12"
-								 Center="0.3,0.3"
-								 LabelRotationMode="SurroundOut">
-			</telerik:RadialScale>
-		</telerik:RadRadialGauge>
-	</Grid>
+                <telerik:RadialScale Min="0" Foreground="Black" LabelRotationMode="{Binding ElementName=labelRotationMode, Path=SelectedItem}"
+								 Max="12" Center="0.3,0.3">
+                </telerik:RadialScale>
+            </telerik:RadRadialGauge>
+
+            <ComboBox Name="labelRotationMode" Margin="0 10 0 0" Width="525"
+				   SelectedIndex="3" />
+        </StackPanel>
+    </Grid>
 </Window>

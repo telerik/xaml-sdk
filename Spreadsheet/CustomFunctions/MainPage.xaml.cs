@@ -7,6 +7,7 @@ using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using CustomFunctions.Functions;
 using CustomFunctions.Resources;
+using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
 
 namespace CustomFunctions
 {
@@ -16,6 +17,7 @@ namespace CustomFunctions
         {
             InitializeComponent();
 
+            WorkbookFormatProvidersManager.RegisterFormatProvider(new PdfFormatProvider());
             WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
 
             this.RegisterCustomFunctions();

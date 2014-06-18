@@ -29,7 +29,7 @@
         </telerik:RadToolBar>
 
         <telerik:DocumentRuler Grid.Row="1">
-            <telerik:RadRichTextBox x:Name="radRichTextBox" LayoutMode="Paged"/>
+            <telerik:RadRichTextBox x:Name="radRichTextBox" LayoutMode="Paged" IsSpellCheckingEnabled="False"/>
         </telerik:DocumentRuler>
     </Grid>
 </Window>

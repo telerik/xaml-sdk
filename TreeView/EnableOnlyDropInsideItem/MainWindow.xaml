@@ -29,7 +29,6 @@
                              IsDragDropEnabled="True"
                              ItemTemplate="{StaticResource League}"
                              ItemsSource="{Binding Source={StaticResource DataSource},
-                                                   Path=LeaguesDataSource}"
-                             telerik:TreeViewSettings.DragDropExecutionMode="New" />
+                                                   Path=LeaguesDataSource}" />
     </Grid>
 </Window>

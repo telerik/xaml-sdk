@@ -1,0 +1,1 @@
+﻿This example demonstrates how you could customize the template of the Alert and change the Alert Icon.

@@ -13,9 +13,9 @@
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.xaml"/>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
                 <ResourceDictionary>
-
+                    
                     <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
-
+                    
                     <Style x:Key="ComboBoxTextBoxStyle" TargetType="TextBox">
                         <Setter Property="BorderThickness" Value="0"/>
                         <Setter Property="BorderBrush" Value="Transparent"/>
@@ -100,7 +100,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Border x:Name="Background" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{telerik:Windows8Resource ResourceKey=MainBrush}" />
-                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" />
+                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" /> 
                             <TextBox x:Name="PART_EditableTextBox" Grid.Column="0" Margin="1 1 0 1" VerticalAlignment="Stretch"
                     FontSize="{TemplateBinding FontSize}"
                     FontFamily="{TemplateBinding FontFamily}"

@@ -1,5 +1,4 @@
-﻿
-namespace Animations
+﻿namespace Animations
 {
     public enum CartesianAnimation
     {
@@ -9,5 +8,6 @@ namespace Animations
         Rise,
         RiseWithDelay,
         Stretch,
+        StackedBars,
     }
 }

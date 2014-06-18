@@ -14,14 +14,17 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <ToggleButton Content="B"
-            x:Name="BoldButton"
-            Click="BoldButton_Click" />
+                Margin="2" Padding="5 2"
+                x:Name="BoldButton"
+                Click="BoldButton_Click" />
             <ToggleButton Content="I"
-            x:Name="ItalicButton"
-            Click="ItalicButton_Click" />
+                Margin="2" Padding="5 2"
+                x:Name="ItalicButton"
+                Click="ItalicButton_Click" />
             <ToggleButton Content="U"
-            x:Name="UnderlineButton"
-            Click="UnderlineButton_Click" />
+                Margin="2" Padding="5 2"
+                x:Name="UnderlineButton"
+                Click="UnderlineButton_Click" />
         </StackPanel>
         <telerik:RadRichTextBox x:Name="radRichTextBox" Grid.Row="1"/>
     </Grid>

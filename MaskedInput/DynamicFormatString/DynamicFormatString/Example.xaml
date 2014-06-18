@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DynamicFormatString.Example"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      xmlns:local="clr-namespace:DynamicFormatString"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:extensions ="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Changing the FormatString property dynamically to achieve non-fixed number of input digits" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" Margin="30" />
+            <TextBlock Width="500" Text="Random number of digits on left and on right of the decimal point. Please keep in mind that this is unsafe. Double loses precision after 15 digits and this might lead to unpredicted results. So it is better to limit at least the left side. In this approach you can lose precision both on the left and on the right of the decimal point." FontWeight="Bold" TextWrapping="Wrap"/>
+            <local:CustomNumericInput Mask="" x:Name="customInput" UpdateValueEvent="PropertyChanged" HorizontalAlignment="Center" Width="300" Margin="10"/>
+
+            <TextBlock Width="500" TextWrapping="Wrap" Text="Set MaskedInputExtensions.Maximum to Limit the digits on left of the decimal point! Here the maximum is set to 999999. When 6 digits are used on the left, on the right you will be able to use up to 9 digits until you start losing a precision." FontWeight="Bold" Margin="0 20 0 0"/>
+            <local:CustomNumericInput extensions:MaskedInputExtensions.Maximum="999999" Mask="" HorizontalAlignment="Center" Width="300" Margin="10" />
+
+            <TextBlock Width="500" TextWrapping="Wrap" Text="Here we add additional property MaxDigitsOnRight to set the max possible number of digits on right of the decimal point" FontWeight="Bold" Margin="0 20 0 0"/>
+            <local:CustomNumericInput extensions:MaskedInputExtensions.Maximum="999999" Mask="" HorizontalAlignment="Center" Width="300" Margin="10" MaxDigitsOnRight="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

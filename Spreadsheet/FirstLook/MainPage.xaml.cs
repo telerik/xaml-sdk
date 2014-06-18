@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Controls;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
 
 namespace FirstLook
 {
@@ -10,6 +11,7 @@ namespace FirstLook
     {
         public MainPage()
         {
+            WorkbookFormatProvidersManager.RegisterFormatProvider(new PdfFormatProvider());
             WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
             InitializeComponent();
             this.radSpreadsheet.Loaded += radSpreadsheet_Loaded;

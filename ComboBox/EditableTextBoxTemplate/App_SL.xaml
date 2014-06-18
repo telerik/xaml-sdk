@@ -2,9 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              x:Class="EditableTextBoxTemplate.App"
              xmlns:local="clr-namespace:EditableTextBoxTemplate"
-              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:telerikChromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls" 
-              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -12,7 +12,7 @@
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.xaml"/>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
                 <ResourceDictionary>
-
+                    
                     <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
 
                     <Style x:Key="ComboBoxTextBoxStyle" TargetType="TextBox">

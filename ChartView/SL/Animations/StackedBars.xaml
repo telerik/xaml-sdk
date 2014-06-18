@@ -24,7 +24,10 @@
                     <telerik:BarSeries CategoryBinding="XCat" ValueBinding="YVal4" ItemsSource="{Binding}" CombineMode="Stack" local:ChartAnimationUtilities.CartesianAnimation="DropWithDelay" />
                 </telerik:RadCartesianChart.Series>
             </telerik:RadCartesianChart>
-            <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="run" Click="Button_Click" />
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Button Content="run DropWithDelay" Click="Button_Click" />
+                <Button Content="run StackedBars" Click="Button2_Click" />
+            </StackPanel>
         </Grid>
     </Border>
     

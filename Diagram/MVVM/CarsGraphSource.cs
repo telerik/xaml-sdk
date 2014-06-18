@@ -59,7 +59,6 @@ namespace MVVM
 			if (shape is IContainerShape)
 			{
 				node = new Brand();
-
 			}
 			else
 			{
@@ -75,6 +74,12 @@ namespace MVVM
 
 			return node;
 		}
+
+        public override void SerializeLink(Link link, SerializationInfo info)
+        {
+            this.ClearCache();
+            base.SerializeLink(link, info);
+        }
 
 		public override string GetNodeUniqueId(NodeViewModelBase node)
 		{

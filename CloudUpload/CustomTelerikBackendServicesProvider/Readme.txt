@@ -1,0 +1,1 @@
+This code sample demonstrates one possible approach to implementing a custom Telerik Backend Services upload provider and using it with the RadCloudUpload.

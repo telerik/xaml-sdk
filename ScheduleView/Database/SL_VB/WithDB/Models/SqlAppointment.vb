@@ -29,7 +29,7 @@ Namespace Web
 				Return Me.Importance
 			End Get
 			Set(value As Importance)
-				Me.Importance = Importance
+                Me.Importance = value
 			End Set
 		End Property
 

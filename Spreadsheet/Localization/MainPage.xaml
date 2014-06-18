@@ -249,7 +249,9 @@
                                                        ItemsSource="{Binding ElementName=radSpreadsheet, Path=FontsProvider.FontSizes}"
                                                        telerik:RadComboBoxExtensions.UIInteractionCommand="{Binding Path=SetFontSize.Command}"
                                                        telerik:RadComboBoxExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem, Converter={StaticResource unitToDipConverter}, ConverterParameter=Point}"
-                                                       SelectedValue="{Binding Path=SetFontSize.SelectedValue, Mode=TwoWay, Converter={StaticResource dipToUnitConverter}, ConverterParameter=Point}" />
+                                                       SelectedValue="{Binding Path=SetFontSize.SelectedValue, Mode=TwoWay, Converter={StaticResource dipToUnitConverter}, ConverterParameter=Point}"
+                                                       telerik:ScreenTip.Title="Font Size"
+                                                       telerik:ScreenTip.Description="Change the size of your text."/>
                         </StackPanel>
 
                         <telerik:RadButtonGroup>
@@ -300,7 +302,7 @@
                                                            Size="Small"
                                                            SmallImage="{telerik:IconResource IconRelativePath=16/underline.png, IconSources={StaticResource IconPaths}}"
                                                            telerik:ScreenTip.Description="Underline the selected text."
-                                                           telerik:ScreenTip.Title="Underline" />
+                                                           telerik:ScreenTip.Title="Underline (Ctrl+U)" />
                         </telerik:RadButtonGroup>
 
                         <telerik:RadButtonGroup>
@@ -741,7 +743,8 @@
                                 <telerik:RadMenuItem Header="Insert Sheet"
                                                      Command="{Binding Path=InsertSheet.Command}"
                                                      CommandParameter="Worksheet"
-                                                     IsEnabled="{Binding Path=InsertSheet.IsEnabled, Mode=TwoWay}">
+                                                     IsEnabled="{Binding Path=InsertSheet.IsEnabled, Mode=TwoWay}"
+                                                     ToolTipService.ToolTip="Insert Worksheet (F11)">
                                     <telerik:RadMenuItem.Icon>
                                         <Image Source="{telerik:IconResource IconRelativePath=16/sheetInsert.png, IconSources={StaticResource IconPaths}}" Width="16"/>
                                     </telerik:RadMenuItem.Icon>
@@ -981,19 +984,99 @@
                         </telerik:RadRibbonDropDownButton>
                     </telerik:RadOrderedWrapPanel>
 
+                    <telerik:RadRibbonDropDownButton IsEnabled="{Binding Path=SortAndFilterGroup.IsEnabled, Mode=TwoWay}"
+                                                     LargeImage="{telerik:IconResource IconRelativePath=32/sortAndFilter.png, IconSources={StaticResource IconPaths}}"
+                                                     Size="Large"
+                                                     Text="Sort &amp; Filter"
+                                                     telerik:ScreenTip.Description="Organize your data so it's easier to analize. You can sort the selected data from smallest to largest, largest to smallest or filter out specific values."
+                                                     telerik:ScreenTip.Title="Sort &amp; Filter">
+                        <telerik:RadRibbonDropDownButton.DropDownContent>
+                            <telerik:RadContextMenu BorderThickness="0" Padding="0">
+                                <telerik:RadMenuGroupItem BorderThickness="0" Background="Transparent" Margin="-1">
+
+                                    <telerik:RadMenuItem Command="{Binding Path=Sort.Command}"
+                                                         CommandParameter="Ascending"
+                                                         Header="Sort A to Z" 
+                                                         IsEnabled="{Binding Path=Sort.IsEnabled, Mode=TwoWay}"
+                                                         telerik:ScreenTip.Description="Lowest to highest."
+                                                         telerik:ScreenTip.Title="Sort A to Z">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/sortAscending.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                    <telerik:RadMenuItem Command="{Binding Path=Sort.Command}"
+                                                         CommandParameter="Descending"
+                                                         Header="Sort Z to A" 
+                                                         IsEnabled="{Binding Path=Sort.IsEnabled, Mode=TwoWay}"
+                                                         telerik:ScreenTip.Description="Highest to lowest."
+                                                         telerik:ScreenTip.Title="Sort Z to A">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/sortDescending.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                    <telerik:RadMenuItem Command="{Binding Path=ShowSortingDialog.Command}"
+                                                         CommandParameter="Descending"
+                                                         Header="Custom sort..." 
+                                                         IsEnabled="{Binding Path=ShowSortingDialog.IsEnabled, Mode=TwoWay}"
+                                                         telerik:ScreenTip.Title="Sort"
+                                                         telerik:ScreenTip.Description="Shows the Sort dialog box to sort data based on several criteria at once.">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/customSort.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                    <telerik:RadMenuSeparatorItem />
+
+                                    <telerik:RadMenuItem Command="{Binding Path=SetFilterRange.Command}"
+                                                         IsEnabled="{Binding Path=SetFilterRange.IsEnabled, Mode=TwoWay}"
+                                                         Header="Filter"
+                                                         telerik:ScreenTip.Title="Filter"
+                                                         telerik:ScreenTip.Description="Turn on filtering for the selected cells. Then, click the arrow in the column header to narrow down the data.">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/filter.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                    <telerik:RadMenuItem Command="{Binding Path=ClearFilters.Command}"
+                                                         IsEnabled="{Binding Path=ClearFilters.IsEnabled, Mode=TwoWay}"
+                                                         Header="Clear"
+                                                         telerik:ScreenTip.Title="Clear"
+                                                         telerik:ScreenTip.Description="Clear the filter for the current range of data.">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/filterClear.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                    <telerik:RadMenuItem Command="{Binding Path=ReapplyFilters.Command}"
+                                                         IsEnabled="{Binding Path=ReapplyFilters.IsEnabled, Mode=TwoWay}"
+                                                         Header="Reapply"
+                                                         telerik:ScreenTip.Title="Reapply"
+                                                         telerik:ScreenTip.Description="Reapply the filter on the current range so that changes you've made are included.">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/filterReapply.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+
+                                </telerik:RadMenuGroupItem>
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonDropDownButton.DropDownContent>
+                    </telerik:RadRibbonDropDownButton>
+
                     <telerik:RadRibbonButton Command="{Binding Path=ShowFindAndReplaceDialog.Command}" 
                                              CommandParameter="Find"
                                              Content="Find"
                                              Size="Large"
-                                             LargeImage="{telerik:IconResource IconRelativePath=32/findAndSelect.png, IconSources={StaticResource IconPaths}}"/>
+                                             LargeImage="{telerik:IconResource IconRelativePath=32/findAndSelect.png, IconSources={StaticResource IconPaths}}"
+                                             telerik:ScreenTip.Title="Find"
+                                             telerik:ScreenTip.Description="Use advanced search options to replace text or pick other ways to narrow your search."/>
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
 
             <telerik:RadRibbonTab Header="Insert">
                 <telerik:RadRibbonGroup Header="Links"
-                                        IsEnabled="{Binding Path=LinksGroup.IsEnabled}"
-                                        telerik:ScreenTip.Title="Add a Hyperlink"
-                                        telerik:ScreenTip.Description="Create a link in your document for quick access to webpages and files.&#13;&#13;Hyperlinks can also take you to places in your document.">
+                                        IsEnabled="{Binding Path=LinksGroup.IsEnabled}">
                     <telerik:RadRibbonGroup.Variants>
                         <telerik:GroupVariant Priority="0" Variant="Large" />
                     </telerik:RadRibbonGroup.Variants>
@@ -1001,14 +1084,18 @@
                                              IsEnabled="{Binding Path=ShowHyperlinkDialog.IsEnabled}"
                                              Content="Hyperlink"
                                              Size="Large"
-                                             LargeImage="{telerik:IconResource IconRelativePath=32/insertHyperlink.png, IconSources={StaticResource IconPaths}}"/>
+                                             LargeImage="{telerik:IconResource IconRelativePath=32/insertHyperlink.png, IconSources={StaticResource IconPaths}}"
+                                             telerik:ScreenTip.Title="Add a Hyperlink"
+                                             telerik:ScreenTip.Description="Create a link in your document for quick access to webpages and files.&#13;&#13;Hyperlinks can also take you to places in your document."/>
                 </telerik:RadRibbonGroup>
                 <telerik:RadRibbonGroup Header="Illustrations">
                     <telerik:RadRibbonButton Command="{Binding Path=InsertPicture.Command}"
                                              IsEnabled="{Binding Path=InsertPicture.IsEnabled}"
                                              Content="Pictures"
                                              Size="Large"
-                                             LargeImage="{telerik:IconResource IconRelativePath=32/picturesIcon.png, IconSources={StaticResource IconPaths}}"/>
+                                             LargeImage="{telerik:IconResource IconRelativePath=32/picturesIcon.png, IconSources={StaticResource IconPaths}}"
+                                             telerik:ScreenTip.Title="From File"
+                                             telerik:ScreenTip.Description="Insert pictures from your computer or from other computers that you're connected to."/>
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
 
@@ -1019,7 +1106,7 @@
                     <telerik:RadRibbonDropDownButton Size="Large"
                                                      Text="Themes"                  
                                                      telerik:ScreenTip.Title="Themes"
-                                                     telerik:ScreenTip.Description=""
+                                                     telerik:ScreenTip.Description="Pick a new theme to give your document instant style and just the right personality. &#13;&#13;Each theme uses a unique set of colors, fonts and effects to create a consistent look and feel."
                                                      IsOpen="{Binding ElementName=ThemeGallery, Path=IsParentDropDownOpened, Mode=TwoWay}" >
                         <telerik:RadRibbonDropDownButton.Content>
                             <spreadsheetControls:SmallThemePreviewControl RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}" />
@@ -1033,7 +1120,7 @@
                         <telerik:RadRibbonDropDownButton Size="Medium"
                                                          Text="Colors"
                                                          telerik:ScreenTip.Title="Theme Colors"
-                                                         telerik:ScreenTip.Description=""
+                                                         telerik:ScreenTip.Description="Quickly change all the colors used in your document by picking a different color palette. &#13;&#13;This will update the colors available to you in the color picker along with any theme colors in your document. No matter what palette you choose, your document will look perfectly coordinated."
                                                          IsOpen="{Binding ElementName=ColorGallery, Path=IsParentDropDownOpened, Mode=TwoWay}" >
                             <telerik:RadRibbonDropDownButton.Content>
                                 <spreadsheetControls:SmallThemeColorPreviewControl RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}" />
@@ -1046,7 +1133,7 @@
                         <telerik:RadRibbonDropDownButton Size="Medium"
                                                          Text="Fonts"                  
                                                          telerik:ScreenTip.Title="Theme Fonts"
-                                                         telerik:ScreenTip.Description=""
+                                                         telerik:ScreenTip.Description="Quickly change the text in your document by picking a new font set. &#13;&#13;This is an easy way to change all of your text at once. For this to work, your text must be formatted using the 'body' and 'heading' fonts."
                                                          IsOpen="{Binding ElementName=FontGallery, Path=IsParentDropDownOpened, Mode=TwoWay}" >
                             <telerik:RadRibbonDropDownButton.Content>
                                 <spreadsheetControls:SmallThemeFontPreviewControl RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}" />
@@ -1063,9 +1150,11 @@
                                         DialogLauncherCommand="{Binding Path=ShowPageSetupDialog.Command}"
                                         DialogLauncherCommandParameter="Page">
                     <telerik:RadRibbonDropDownButton Size="Large" 
-                                                     Text="PrintArea"
+                                                     Text="Print Area"
                                                      LargeImage="{telerik:IconResource IconRelativePath=32/printArea.png, IconSources={StaticResource IconPaths}}"
-                                                     x:Name="PrintAreaButton">
+                                                     x:Name="PrintAreaButton"
+                                                     telerik:ScreenTip.Title="Print Area"
+                                                     telerik:ScreenTip.Description="Select an area of the sheet you'd like to print.">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <telerik:RadContextMenu BorderThickness="0" Padding="0">
                                 <telerik:RadMenuItem Header="Set Print Area"
@@ -1086,7 +1175,9 @@
                     <telerik:RadRibbonDropDownButton Size="Large" 
                                                      Text="Breaks"
                                                      LargeImage="{telerik:IconResource IconRelativePath=32/breaks.png, IconSources={StaticResource IconPaths}}"
-                                                     x:Name="BreaksButton">
+                                                     x:Name="BreaksButton"
+                                                     telerik:ScreenTip.Title="Breaks"
+                                                     telerik:ScreenTip.Description="Add a break where you want the next page to begin in the printed copy. &#13;&#13;Your page break will be inserted above and to the left of your selection.">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <telerik:RadContextMenu BorderThickness="0" Padding="0">
                                 <telerik:RadMenuItem Header="Insert Page Break"
@@ -1310,8 +1401,7 @@
                 </telerik:RadRibbonGroup>
 
                 <telerik:RadRibbonGroup Header="Defined Names"
-                                        IsEnabled="{Binding Path=FunctionLibraryGroup.IsEnabled}"
-                                        telerik:ScreenTip.Title="Defined Names">
+                                        IsEnabled="{Binding Path=FunctionLibraryGroup.IsEnabled}">
 
                     <telerik:RadRibbonButton CollapseToSmall="WhenGroupIsSmall"
                                              Command="{Binding Path=ShowNameManagerDialog.Command}"
@@ -1320,14 +1410,16 @@
                                              Size="Large"
                                              Text="Name Manager"
                                              telerik:ScreenTip.Title="Name Manager"
-                                             telerik:ScreenTip.Description="Create, edit delete and find all the names used in the workbook.\nNames can be used in formulas as substitutes for cell references.\nFor example:=SUM(Sales) instead of =SUM(C20:D30)." />
+                                             telerik:ScreenTip.Description="Create, edit delete and find all the names used in the workbook.&#13;&#13;Names can be used in formulas as substitutes for cell references.&#13;&#13;For example:=SUM(Sales) instead of =SUM(C20:D30)." />
 
                     <telerik:RadOrderedWrapPanel VerticalAlignment="Top">
                         <telerik:RadRibbonSplitButton Command="{Binding Path=ShowCreateDefinedNameDialog.Command}"
                                                       IsEnabled="{Binding Path=ShowCreateDefinedNameDialog.IsEnabled}"
                                                       Text="Define Name"
                                                       Size="Medium"
-                                                      SmallImage="{telerik:IconResource IconRelativePath=16/defineName.png, IconSources={StaticResource IconPaths}}">
+                                                      SmallImage="{telerik:IconResource IconRelativePath=16/defineName.png, IconSources={StaticResource IconPaths}}"
+                                                      telerik:ScreenTip.Title="Define Name"
+                                                      telerik:ScreenTip.Description="Define and apply names.">
                             <telerik:RadRibbonSplitButton.DropDownContent>
                                 <telerik:RadContextMenu BorderThickness="0" Padding="0">
                                     <telerik:RadMenuItem Command="{Binding Path=ShowCreateDefinedNameDialog.Command}"
@@ -1346,6 +1438,65 @@
 
             </telerik:RadRibbonTab>
 
+            <telerik:RadRibbonTab Header="Data">
+                <telerik:RadRibbonGroup Header="Sort &amp; Filter"
+                                        IsEnabled="{Binding Path=SortAndFilterGroup.IsEnabled}">
+
+                    <telerik:RadOrderedWrapPanel>
+                        <telerik:RadRibbonButton Command="{Binding Path=Sort.Command}"
+                                                 CommandParameter="Ascending"
+                                                 IsEnabled="{Binding Path=Sort.IsEnabled}"
+                                                 Size="Medium"
+                                                 SmallImage="{telerik:IconResource IconRelativePath=16/sortAscending.png, IconSources={StaticResource IconPaths}}"
+                                                 telerik:ScreenTip.Description="Lowest to highest."
+                                                 telerik:ScreenTip.Title="Sort A to Z" />
+
+                        <telerik:RadRibbonButton Command="{Binding Path=Sort.Command}"
+                                                 CommandParameter="Descending"
+                                                 IsEnabled="{Binding Path=Sort.IsEnabled}"
+                                                 Size="Medium"
+                                                 SmallImage="{telerik:IconResource IconRelativePath=16/sortDescending.png, IconSources={StaticResource IconPaths}}"
+                                                 telerik:ScreenTip.Description="Highest to lowest."
+                                                 telerik:ScreenTip.Title="Sort Z to A" />
+                    </telerik:RadOrderedWrapPanel>
+
+                    <telerik:RadRibbonButton Command="{Binding Path=ShowSortingDialog.Command}"
+                                             IsEnabled="{Binding Path=ShowSortingDialog.IsEnabled}"
+                                             LargeImage="{telerik:IconResource IconRelativePath=32/sort.png, IconSources={StaticResource IconPaths}}"
+                                             Size="Large"
+                                             Text="Sort"
+                                             telerik:ScreenTip.Title="Sort"
+                                             telerik:ScreenTip.Description="Shows the Sort dialog box to sort data based on several criteria at once." />
+
+                    <telerik:Separator />
+
+                    <telerik:RadRibbonToggleButton Command="{Binding Path=SetFilterRange.Command}"
+                                                   IsEnabled="{Binding Path=SetFilterRange.IsEnabled}"
+                                                   IsChecked="{Binding Path=SetFilterRange.SelectedValue, Mode=TwoWay}"
+                                                   Size="Large"
+                                                   Text="Filter"
+                                                   LargeImage="{telerik:IconResource IconRelativePath=32/filter.png, IconSources={StaticResource IconPaths}}"
+                                                   telerik:ScreenTip.Title="Filter"
+                                                   telerik:ScreenTip.Description="Turn on filtering for the selected cells. Then, click the arrow in the column header to narrow down the data." />
+                    <telerik:RadOrderedWrapPanel>
+                        <telerik:RadRibbonButton Command="{Binding Path=ClearFilters.Command}"
+                                              IsEnabled="{Binding Path=ClearFilters.IsEnabled}"
+                                              Size="Medium"
+                                              Text="Clear"
+                                              SmallImage="{telerik:IconResource IconRelativePath=16/filterClear.png, IconSources={StaticResource IconPaths}}"
+                                              telerik:ScreenTip.Description="Clear"
+                                              telerik:ScreenTip.Title="Clear the filter for the current range of data." />
+                        <telerik:RadRibbonButton Command="{Binding Path=ReapplyFilters.Command}"
+                                              IsEnabled="{Binding Path=ReapplyFilters.IsEnabled}"
+                                              Size="Medium"
+                                              Text="Reapply"
+                                              SmallImage="{telerik:IconResource IconRelativePath=16/filterReapply.png, IconSources={StaticResource IconPaths}}"
+                                              telerik:ScreenTip.Description="Reapply"
+                                              telerik:ScreenTip.Title="Reapply the filter on the current range so that changes you've made are included." />
+                    </telerik:RadOrderedWrapPanel>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+
             <telerik:RadRibbonTab Header="View">
                 <telerik:RadRibbonGroup Header="Window"
                                         IsEnabled="{Binding Path=WindowGroup.IsEnabled}"
@@ -1361,9 +1512,7 @@
                                                     IconColumnWidth="55">
 
                                 <telerik:RadMenuItem Command="{Binding Path=FreezePanes.Command}" 
-                                                     Visibility="{Binding Path=FreezePanes.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"
-                                                     telerik:ScreenTip.Title=" "
-                                                     telerik:ScreenTip.Description="Freeze Sheet Panes">
+                                                     Visibility="{Binding Path=FreezePanes.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                                     <telerik:RadMenuItem.Icon>
                                         <Image Source="{telerik:IconResource IconRelativePath=32/freezePanes.png, IconSources={StaticResource IconPaths}}" Width="32" />
                                     </telerik:RadMenuItem.Icon>
@@ -1378,9 +1527,7 @@
                                 </telerik:RadMenuItem>
 
                                 <telerik:RadMenuItem Command="{Binding Path=UnfreezePanes.Command}" 
-                                                     Visibility="{Binding Path=UnfreezePanes.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"
-                                                     telerik:ScreenTip.Title=" "
-                                                     telerik:ScreenTip.Description="Unfreeze Sheet Panes">
+                                                     Visibility="{Binding Path=UnfreezePanes.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                                     <telerik:RadMenuItem.Icon>
                                         <Image Source="{telerik:IconResource IconRelativePath=32/freezePanes.png, IconSources={StaticResource IconPaths}}" Width="32" />
                                     </telerik:RadMenuItem.Icon>
@@ -1437,13 +1584,17 @@
                                                           CustomCommand="{Binding Path=ToggleSheetProtection.Command}"
                                                           SelectedValue="{Binding Path=ToggleSheetProtection.SelectedValue}"
                                                           IsCommandEnabled="{Binding Path=ToggleSheetProtection.IsEnabled}"
-                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorksheet.png, IconSources={StaticResource IconPaths}}" />
+                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorksheet.png, IconSources={StaticResource IconPaths}}"
+                                                          telerik:ScreenTip.Title="Protect Sheet"
+                                                          telerik:ScreenTip.Description="Prevent unwanted changes from others by limiting their ability to edit."/>
 
                     <spreadsheetControls:ProtectionButton DataContext="{Binding Path=CommandDescriptors, ElementName=radSpreadsheet}"
                                                           CustomCommand="{Binding Path=ToggleWorkbookProtection.Command}"
                                                           SelectedValue="{Binding Path=ToggleWorkbookProtection.SelectedValue}"
                                                           IsCommandEnabled="{Binding Path=ToggleWorkbookProtection.IsEnabled}"
-                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorkbook.png, IconSources={StaticResource IconPaths}}"/>
+                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorkbook.png, IconSources={StaticResource IconPaths}}"
+                                                          telerik:ScreenTip.Title="Protect Workbook"
+                                                          telerik:ScreenTip.Description="Keep others from making structural changes to your workbook, such as moving, deleting or adding sheets."/>
 
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
@@ -1563,7 +1714,9 @@
 
                 <telerik:RadRibbonGroup Header="Size"
                                         DialogLauncherVisibility="{Binding Path=ShowFormatShapesDialog.IsEnabled, Converter={StaticResource BoolToVisibilityValueConverter}}"
-                                        DialogLauncherCommand="{Binding Path=ShowFormatShapesDialog.Command}">
+                                        DialogLauncherCommand="{Binding Path=ShowFormatShapesDialog.Command}"
+                                        telerik:ScreenTip.Title="Format Shapes"
+                                        telerik:ScreenTip.Description="Show the Format Shapes dialog box in which you can specify the size and positioning fo the object.">
                     <telerik:RadCollapsiblePanel>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -1577,30 +1730,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Image Source="{telerik:IconResource IconRelativePath=16/width.png, IconSources={StaticResource IconPaths}}" 
-                                   Stretch="None" UseLayoutRounding="True" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="Width:" Margin="4 0"/>
+                                   Stretch="None" UseLayoutRounding="True" VerticalAlignment="Center"
+                                   telerik:ScreenTip.Title="Shape Width"
+                                   telerik:ScreenTip.Description="Change the width of the shape or picture."/>
+                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="Width:" Margin="4 0"
+                                       telerik:ScreenTip.Title="Shape Width"
+                                       telerik:ScreenTip.Description="Change the width of the shape or picture."/>
                             <telerik:RadNumericUpDown MaxWidth="150"
                                                       Grid.Column="2"
                                                       VerticalAlignment="Center"
-                                                      Value="{Binding Path=SetShapeWidth.SelectedValue, TargetNullValue=''}"
+                                                      Value="{Binding Path=SetShapeWidth.SelectedValue, TargetNullValue='', Mode=TwoWay}"
                                                       Minimum="0.1"
+                                                      Maximum="2348"
                                                       SmallChange="0.1"
 								                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommand="{Binding Path=SetShapeWidth.Command}"
-                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"
+                                                      telerik:ScreenTip.Title="Shape Width"
+                                                      telerik:ScreenTip.Description="Change the width of the shape or picture."/>
 
                             <Image Grid.Row="1" Source="{telerik:IconResource IconRelativePath=16/height.png, IconSources={StaticResource IconPaths}}"
-                                   Stretch="None" Margin="0 2 0 0" UseLayoutRounding="True" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Row="1" Grid.Column="1" Text="Height:" Margin="4 2 4 0" VerticalAlignment="Center"/>
+                                   Stretch="None" Margin="0 2 0 0" UseLayoutRounding="True" VerticalAlignment="Center"
+                                   telerik:ScreenTip.Title="Shape Height"
+                                   telerik:ScreenTip.Description="Change the height of the shape or picture."/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="Height:" Margin="4 2 4 0" VerticalAlignment="Center"
+                                       telerik:ScreenTip.Title="Shape Height"
+                                       telerik:ScreenTip.Description="Change the height of the shape or picture."/>
                             <telerik:RadNumericUpDown MaxWidth="150"
                                                       Grid.Column="2"
                                                       Margin="0 2 0 0" 
                                                       VerticalAlignment="Center"
                                                       Grid.Row="1"
-                                                      Value="{Binding Path=SetShapeHeight.SelectedValue, TargetNullValue=''}"
+                                                      Value="{Binding Path=SetShapeHeight.SelectedValue, TargetNullValue='', Mode=TwoWay}"
                                                       Minimum="0.1"
+                                                      Maximum="2348"
                                                       SmallChange="0.1"
 								                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommand="{Binding Path=SetShapeHeight.Command}"
-                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"/>
+                                                      spreadsheetControls:RadNumericUpDownExtensions.UIInteractionCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Value}"
+                                                      telerik:ScreenTip.Title="Shape Height"
+                                                      telerik:ScreenTip.Description="Change the height of the shape or picture."/>
                         </Grid>
 
                     </telerik:RadCollapsiblePanel >

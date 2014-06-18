@@ -21,21 +21,32 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="This example demonstrates how to save and load the layout in nested RadDocking scenarios. The approved mechanism is to save/load each controls layout separately but simultaneously." 
                                FontWeight="Bold" 
                                TextWrapping="Wrap"
                                Grid.RowSpan="2"
                                Width="400" Margin="20"/>
-                <telerik:RadButton Content="Save both Docking Layout" 
+                <telerik:RadButton Content="Save both Docking Layout to File" 
                                        Click="SaveLayoutToFileButtonClick"
                                        Margin="10"
                                        Grid.Row="0" Grid.Column="1"/>
                 <telerik:RadButton x:Name="LoadLayoutFromStrButton" 
                                        Grid.Row="1" Grid.Column="1"
-                                       Content="Load both Docking Layout" 
+                                       Content="Load both Docking Layout from File" 
                                        IsEnabled="False"
                                        Click="LoadLayoutFromFileButtonClick" 
+                                       Margin="10 0 10 10"/>
+                <telerik:RadButton Content="Save both Docking Layout to XElement" 
+                                       Click="SaveLayoutToXElementButtonClick"
+                                       Margin="10"
+                                       Grid.Row="0" Grid.Column="2"/>
+                <telerik:RadButton x:Name="LoadLayoutFromXElementButton" 
+                                       Grid.Row="1" Grid.Column="2" 
+                                       Content="Load both Docking Layout from XElement" 
+                                       IsEnabled="False"
+                                       Click="LoadLayoutFromXElementButtonClick" 
                                        Margin="10 0 10 10"/>
             </Grid>
         </StackPanel>
