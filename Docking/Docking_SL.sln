@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDockingSaveLoadLayout
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDockingWithPanesSource_SL", "NestedDockingWithPanesSource\NestedDockingWithPanesSource_SL.csproj", "{C6AFBB77-F83C-4877-89C9-C603C6236798}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedUnpinnedPanes_SL", "OrderedUnpinnedPanes\OrderedUnpinnedPanes_SL.csproj", "{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -210,6 +212,20 @@ Global
 		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{C6AFBB77-F83C-4877-89C9-C603C6236798}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{21B3DAAE-ADB2-41DA-844C-439B2AD734A8}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

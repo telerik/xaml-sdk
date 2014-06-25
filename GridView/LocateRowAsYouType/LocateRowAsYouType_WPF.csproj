@@ -68,18 +68,18 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-	  <Reference Include="Telerik.Windows.Controls">
-		  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Telerik.Windows.Controls.GridView">
-		  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Telerik.Windows.Controls.Input">
-		  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Telerik.Windows.Data">
-		  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
-	  </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -112,9 +112,7 @@
     <Resource Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="books.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="books.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

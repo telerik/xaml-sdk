@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="OrderedUnpinnedPanes.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="TextAlignment" Value="Justify" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Background="AliceBlue">
+            <TextBlock Text="This example demonstrates how to keep the unpinned RadPanes ordered the way they were defined in XAML." />
+            <TextBlock Text="The Docking on the left side below shows the default behavior and one on the right shows the modified behavior." />
+            <TextBlock Text="To see the difference simply unpin 'Pane 2' in both RadDocking controls below:" />
+        </StackPanel>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <telerik:RadDocking>
+                <telerik:RadSplitContainer InitialPosition="DockedBottom">
+                    <telerik:RadPaneGroup>
+                        <telerik:RadPane Header="Pane 1" IsPinned="False" />
+                        <telerik:RadPane Header="Pane 2" IsPinned="True" />
+                        <telerik:RadPane Header="Pane 3" IsPinned="False" />
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <telerik:RadDocking Unpin="Docking_Unpin">
+                <telerik:RadSplitContainer InitialPosition="DockedBottom">
+                    <telerik:RadPaneGroup x:Name="PaneGroup">
+                        <telerik:RadPane Header="Pane 1" IsPinned="False" />
+                        <telerik:RadPane Header="Pane 2" IsPinned="True" />
+                        <telerik:RadPane Header="Pane 3" IsPinned="False" />
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking>
+        </Grid>
+    </Grid>
+</UserControl>

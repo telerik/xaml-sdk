@@ -25,7 +25,11 @@ namespace WpfApplication1
 
         private void LoadData()
         {
-            XDocument xdoc = XDocument.Load("books.xml");
+            Uri uri = new Uri("books.xml", UriKind.Relative);
+            System.Windows.Resources.StreamResourceInfo info = Application.GetResourceStream(uri);
+
+            XDocument xdoc = XDocument.Load(info.Stream);
+
             Books = from book in xdoc.Descendants("book")
                     select new Book
                     {
