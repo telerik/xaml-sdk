@@ -64,10 +64,10 @@ namespace DataBinding.Data
 
             this.MenuItems.Add(mailMenuItem);
 
-            var calendarMenuItem = new CalendarMenuItem() { Content = "Calendar content", Header = "Calendar", IconSource = "images/calendarBig.png" };
+            var calendarMenuItem = new CalendarMenuItem() { Content = "Calendar content", Header = "Calendar", IconSource = "images/calendarBig.png", IconSourceSmall = "images/calendarSmall.png" };
             this.MenuItems.Add(calendarMenuItem);
 
-            var contactsMenuItem = new ContactsMenuItem() { Content = "Contacts content", Header = "Contacts", IconSource = "images/contactsBig.png" };
+            var contactsMenuItem = new ContactsMenuItem() { Content = "Contacts content", Header = "Contacts", IconSource = "images/contactsBig.png", IconSourceSmall = "images/contactsSmall.png" };
             contactsMenuItem.ContactsList = new ObservableCollection<Person>()
             {
                 new Person() { Name = "John Smith", IconSource = "images/contact.png"},

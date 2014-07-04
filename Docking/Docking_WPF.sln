@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneGroupItemsSource_WPF", "PaneGroupItemsSource\PaneGroupItemsSource_WPF.csproj", "{4A422851-AFB2-4A58-A669-9DD14865A075}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosedPanesWithContextMenu_WPF", "OpenClosedPanesWithContextMenu\OpenClosedPanesWithContextMenu_WPF.csproj", "{FF6C017F-531F-4944-B698-691FB0CE2D2E}"
@@ -40,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDockingWithPanesSource_WPF", "NestedDockingWithPanesSource\NestedDockingWithPanesSource_WPF.csproj", "{06FE9959-2EC7-4DEB-BA22-F3C94A8F4AD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedUnpinnedPanes_WPF", "OrderedUnpinnedPanes\OrderedUnpinnedPanes_WPF.csproj", "{013E1009-2B65-4A72-AAD9-745632310A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneSourceWithLayout_WPF", "PaneSourceWithLayout\PaneSourceWithLayout_WPF.csproj", "{E0C171E0-6060-491A-81BA-F8020D4504DD}"
 EndProject
 Global
 	 
@@ -583,6 +583,44 @@ Global
 		{013E1009-2B65-4A72-AAD9-745632310A85}.ReleaseTrial451.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{013E1009-2B65-4A72-AAD9-745632310A85}.ReleaseTrial451|Any CPU.ActiveCfg = Release|Any CPU
 		{013E1009-2B65-4A72-AAD9-745632310A85}.ReleaseTrial451|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug45.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug45.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug45|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug45|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug451.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug451.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug451|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug451|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release45.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release45.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release45|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release45|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release451.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release451.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release451|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release451|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial45.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial45.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial45|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial45|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial451.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial451.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial451|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.ReleaseTrial451|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

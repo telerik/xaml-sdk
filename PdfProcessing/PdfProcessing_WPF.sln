@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration_WPF", "PdfViewerIntegration\PdfViewerIntegration_WPF.csproj", "{467F6224-4594-40A9-B5D1-54CB67EFD668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocument_WPF", "GenerateDocument\GenerateDocument_WPF.csproj", "{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467F6224-4594-40A9-B5D1-54CB67EFD668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467F6224-4594-40A9-B5D1-54CB67EFD668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467F6224-4594-40A9-B5D1-54CB67EFD668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467F6224-4594-40A9-B5D1-54CB67EFD668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
