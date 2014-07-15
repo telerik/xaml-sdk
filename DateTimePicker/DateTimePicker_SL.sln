@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_SL", "TodayButton\TodayButton_SL.csproj", "{BFF97BF5-22F3-48D1-9585-7711FDC66AF0}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearButton_SL", "ClearButton\ClearButton_SL.csproj", "{1BCF3446-013B-44A0-8E9A-DD7F155A6FB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrictTheEnteredDate_SL", "RestrictTheEnteredDate\RestrictTheEnteredDate_SL.csproj", "{C26DE907-5894-47C4-9AAC-9B79B36C4C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHeaderTemplate_SL", "CustomHeaderTemplate\CustomHeaderTemplate_SL.csproj", "{1AE78FF4-EAB4-48F5-A3E2-EB8E90070FEA}"
 EndProject
 Global
 	 
@@ -46,6 +48,10 @@ Global
 		{C26DE907-5894-47C4-9AAC-9B79B36C4C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C26DE907-5894-47C4-9AAC-9B79B36C4C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C26DE907-5894-47C4-9AAC-9B79B36C4C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE78FF4-EAB4-48F5-A3E2-EB8E90070FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE78FF4-EAB4-48F5-A3E2-EB8E90070FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE78FF4-EAB4-48F5-A3E2-EB8E90070FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE78FF4-EAB4-48F5-A3E2-EB8E90070FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

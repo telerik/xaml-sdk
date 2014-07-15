@@ -30,7 +30,10 @@ namespace WpfApplication1
             {
                 e.DefaultOperator = FilterOperator.Contains;
             }
-          
+            else if (e.AvailableOperators.Contains(FilterOperator.IsLessThanOrEqualTo))
+            {
+                e.DefaultOperator = FilterOperator.IsLessThanOrEqualTo;
+            }
         }
 
         private void RadGridView_FieldFilterEditorCreated(object sender, EditorCreatedEventArgs e)
@@ -39,6 +42,7 @@ namespace WpfApplication1
 
             if (stringFilterEditor != null)
             {
+                // filtering with StringFilterEditor (when filtering string values)
                 e.Editor.Loaded += (s1, e1) =>
                 {
                     var textBox = e.Editor.ChildrenOfType<TextBox>().Single();
@@ -47,6 +51,18 @@ namespace WpfApplication1
                         textBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
                     };
                 };
+            }
+            else
+            {
+                // Filtering with TextBox editor (when filtering numeric values)
+                var textBox = e.Editor as TextBox;
+                if (textBox != null)
+                {
+                    textBox.TextChanged += (s2, e2) =>
+                    {
+                        textBox.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+                    };
+                }
             }
         }
     }

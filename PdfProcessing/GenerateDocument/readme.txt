@@ -1,1 +1,1 @@
-This project demonstrates how to use RadWordsProcessing to create a PDF document
+This project demonstrates how to use RadPdfProcessing to create a PDF document

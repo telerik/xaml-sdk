@@ -8,7 +8,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <ComboBox ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" />
+        <telerik:RadComboBox ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" />
         <telerik:RadGridView ItemsSource="{Binding View}" Grid.Row="1" />
     </Grid>
 </Window>
