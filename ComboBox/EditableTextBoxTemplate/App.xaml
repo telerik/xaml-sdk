@@ -13,16 +13,13 @@
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.xaml"/>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
                 <ResourceDictionary>
-                    
                     <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
-                    
                     <Style x:Key="ComboBoxTextBoxStyle" TargetType="TextBox">
                         <Setter Property="BorderThickness" Value="0"/>
                         <Setter Property="BorderBrush" Value="Transparent"/>
                         <Setter Property="Background" Value="#66FDCF02"/>
                         <Setter Property="FontStyle" Value="Italic"/>
                     </Style>
-
                     <ControlTemplate x:Key="EditableComboBox" TargetType="telerik:RadComboBox">
                         <Grid x:Name="VisualRoot">
                             <VisualStateManager.VisualStateGroups>
@@ -100,16 +97,15 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Border x:Name="Background" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{telerik:Windows8Resource ResourceKey=MainBrush}" />
-                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" /> 
                             <TextBox x:Name="PART_EditableTextBox" Grid.Column="0" Margin="1 1 0 1" VerticalAlignment="Stretch"
-                    FontSize="{TemplateBinding FontSize}"
-                    FontFamily="{TemplateBinding FontFamily}"
-                    Foreground="{TemplateBinding Foreground}"
-                    Padding="{TemplateBinding Padding}"
-                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    IsReadOnly="{TemplateBinding IsReadOnly}"
-                    VerticalContentAlignment="Center"
-                    Style="{StaticResource ComboBoxTextBoxStyle}">
+                                    FontSize="{TemplateBinding FontSize}"
+                                    FontFamily="{TemplateBinding FontFamily}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Padding="{TemplateBinding Padding}"
+                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    IsReadOnly="{TemplateBinding IsReadOnly}"
+                                    VerticalContentAlignment="Center"
+                                    Style="{StaticResource ComboBoxTextBoxStyle}">
                                 <TextBox.Template>
                                     <ControlTemplate TargetType="TextBox">
                                         <Grid>
@@ -139,61 +135,63 @@
                                 </TextBox.Template>
                             </TextBox>
                             <telerik:RadToggleButton x:Name="PART_DropDownButton"
-                    Grid.Column="1"
-                    IsTabStop="False"
-                    ClickMode="Press"
-                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    Style="{StaticResource EditableComboToggleButtonStyle}"/>
+                                    Grid.Column="1"
+                                    IsTabStop="False"
+                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    Style="{StaticResource EditableComboToggleButtonStyle}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    ClickMode="Press" />
+                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" />
                             <Border x:Name="DropDownOpenBorder"
-                    Visibility="Collapsed"
-                    Grid.ColumnSpan="2"
-                    IsHitTestVisible="False"
-                    BorderBrush="{telerik:Windows8Resource ResourceKey=AccentBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"/>
+                                    Visibility="Collapsed"
+                                    Grid.ColumnSpan="2"
+                                    IsHitTestVisible="False"
+                                    BorderBrush="{telerik:Windows8Resource ResourceKey=AccentBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}" />
                             <Border x:Name="FocusBorder"
-                    Visibility="Collapsed"
-                    Grid.ColumnSpan="2"
-                    IsHitTestVisible="False"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    BorderBrush="{telerik:Windows8Resource ResourceKey=MarkerBrush}"
-                    Opacity="0.2"/>
+                                    Visibility="Collapsed"
+                                    Grid.ColumnSpan="2"
+                                    IsHitTestVisible="False"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{telerik:Windows8Resource ResourceKey=MarkerBrush}"
+                                    Opacity="0.2" />
                             <TextBlock x:Name="Watermark"
-                    Text="{TemplateBinding EmptyText}"
-                    Opacity=".5"
-                    IsHitTestVisible="False"
-                    Padding="{TemplateBinding Padding}"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Left"
-                    Margin="5 0 0 0"
-                    Visibility="Collapsed"/>
+                                    Text="{TemplateBinding EmptyText}"
+                                    Opacity=".5"
+                                    IsHitTestVisible="False"
+                                    Padding="{TemplateBinding Padding}"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Margin="5 0 0 0"
+                                    Visibility="Collapsed" />
                             <Popup x:Name="PART_Popup" VerticalOffset="1" Margin="0 1">
                                 <Grid x:Name="PopupRoot">
-                                    <Border
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            MinWidth="{TemplateBinding MinDropDownWidth}"
-                            MaxHeight="{TemplateBinding MaxDropDownHeight}"
-                            Background="{telerik:Windows8Resource ResourceKey=MainBrush}"
-                            x:Name="PART_ResizeBorder">
+                                    <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            MinWidth="{TemplateBinding MinDropDownWidth}"
+                                            MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                                            Background="{telerik:Windows8Resource ResourceKey=MainBrush}"
+                                            x:Name="PART_ResizeBorder">
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
                                             <telerik:RadButton x:Name="PART_ClearButton"
-                                    Grid.Row="0"
-                                    Margin="-1 -1 -1 0"
-                                    Visibility="{TemplateBinding ClearSelectionButtonVisibility}"
-                                    Content="{TemplateBinding ClearSelectionButtonContent}"/>
+                                                Grid.Row="0"
+                                                Margin="-1 -1 -1 0"
+                                                Visibility="{TemplateBinding ClearSelectionButtonVisibility}"
+                                                Content="{TemplateBinding ClearSelectionButtonContent}"/>
                                             <ScrollViewer x:Name="PART_ScrollViewer"
-                                    Grid.Row="1"
-                                    BorderThickness="0"
-                                    VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
-                                    Foreground="{TemplateBinding Foreground}"
-                                    HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                                    CanContentScroll="True"
-                                    Padding="0 1 0 0">
+                                                    Grid.Row="1"
+                                                    BorderThickness="0"
+                                                    VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                                    Foreground="{TemplateBinding Foreground}"
+                                                    HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                                    CanContentScroll="True"
+                                                    Padding="0 1 0 0">
                                                 <ItemsPresenter/>
                                             </ScrollViewer>
                                         </Grid>

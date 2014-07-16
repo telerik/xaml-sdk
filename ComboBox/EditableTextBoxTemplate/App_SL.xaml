@@ -130,10 +130,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Border x:Name="Background" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{telerik:Windows8Resource ResourceKey=MainBrush}"/>
-                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
-
-                            <TextBox x:Name="PART_EditableTextBox"
+                            <Border x:Name="Background" Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}"/>
+                          <TextBox x:Name="PART_EditableTextBox"
                                         Grid.Column="0"
                                         Margin="1 1 0 1"
                                         VerticalAlignment="Stretch"
@@ -176,10 +174,13 @@
                             <telerik:RadToggleButton x:Name="PART_DropDownButton"
                                 Grid.Column="1"
                                 IsTabStop="False"
-                                ClickMode="Press"
                                 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Style="{StaticResource EditableComboToggleButtonStyle}"/>
+                                Style="{StaticResource EditableComboToggleButtonStyle}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                ClickMode="Press"/>
+                            <Border x:Name="Border" Grid.ColumnSpan="2" IsHitTestVisible="False" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
                             <Border x:Name="DropDownOpenBorder"
                                 Visibility="Collapsed"
                                 Grid.ColumnSpan="2"
