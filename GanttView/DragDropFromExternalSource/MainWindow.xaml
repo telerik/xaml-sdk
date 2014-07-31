@@ -4,9 +4,7 @@
 		xmlns:local="clr-namespace:DragDropFromExternalSource"
 		WindowState="Maximized"
         Title="MainWindow" Height="800" Width="1300">
-	<Window.DataContext>
-		<local:ViewModel/>
-	</Window.DataContext>
+	
     <Grid>
 		<local:Example/>
 	</Grid>

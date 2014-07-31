@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
@@ -10,21 +11,60 @@ namespace EventDoubleClick
 {
 	public class ViewModel : ViewModelBase
 	{
-		private ObservableCollection<IGanttTask> tasks;
+        private ObservableCollection<GanttTask> tasks;
 		private DateRange visibleRange;
 		private DelegateCommand doubleClickCommand;
 
 		public ViewModel()
 		{
-			this.tasks = new SoftwarePlanning();
-			var start = this.tasks.Min(t => t.Start).Date;
-			var end = this.tasks.Max(t => t.End).Date;
+            var date = DateTime.Now;
+            var ganttAPI = new GanttTask()
+            {
+                Start = date,
+                End = date.AddDays(2),
+                Title = "Design public API",
+                Description = "Description: Design public API"
+            };
+            var ganttRendering = new GanttTask()
+            {
+                Start = date.AddDays(2).AddHours(8),
+                End = date.AddDays(4),
+                Title = "Gantt Rendering",
+                Description = "Description: Gantt Rendering"
+            };
+            var ganttDemos = new GanttTask()
+            {
+                Start = date.AddDays(4.5),
+                End = date.AddDays(7),
+                Title = "Gantt Demos",
+                Description = "Description: Gantt Demos"
+            };
+            var milestone = new GanttTask()
+            {
+                Start = date.AddDays(7),
+                End = date.AddDays(7).AddHours(1),
+                Title = "Review",
+                Description = "Description: Review",
+                IsMilestone = true
+            };
 
-			this.visibleRange = new DateRange(start.AddHours(-12), end.AddDays(3));
+            ganttRendering.Dependencies.Add(new Dependency() { FromTask = ganttAPI });
+            ganttDemos.Dependencies.Add(new Dependency() { FromTask = ganttRendering });
+
+            var iterationTask = new GanttTask()
+            {
+                Start = date,
+                End = date.AddDays(7),
+                Title = "Iteration 1",
+                Children = { ganttAPI, ganttRendering, ganttDemos, milestone }
+            };
+
+            this.tasks = new ObservableCollection<GanttTask>() { iterationTask };
+            this.visibleRange = new DateRange(date.AddDays(-1), date.AddDays(11));
 			this.doubleClickCommand = new DelegateCommand(OnDoubleClickCommandExecuted);
 		}
 
-		public ObservableCollection<IGanttTask> GanttTasks
+        public ObservableCollection<GanttTask> GanttTasks
 		{
 			get
 			{

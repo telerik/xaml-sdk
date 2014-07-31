@@ -53,7 +53,7 @@ namespace GenerateDocument
             editor.Position.Translate(defaultLeftIndent, 50);
             using (Stream stream = FileHelper.GetSampleResourceStream("pdfProcessingSilverlight.jpg"))
             {
-                editor.DrawImage(stream, ImageFormat.Jpeg);
+                editor.DrawImage(stream);
             }
             double currentTopOffset = 110;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
@@ -77,7 +77,7 @@ namespace GenerateDocument
             editor.Position.Translate(defaultLeftIndent * 4, page.Size.Height - 100);
             using (Stream stream = FileHelper.GetSampleResourceStream("telerik.jpg"))
             {
-                editor.DrawImage(stream, ImageFormat.Jpeg);
+                editor.DrawImage(stream);
             }
 
             this.DrawText(editor);

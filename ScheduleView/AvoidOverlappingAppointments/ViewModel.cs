@@ -5,13 +5,37 @@ using Telerik.Windows.Controls.ScheduleView;
 
 namespace AvoidOverlappingAppointments
 {
-	public class ViewModel
+	public class ViewModel : ViewModelBase
 	{
+        private Appointment _selectedAppointment;
+
+        public Appointment SelectedAppointment
+        {
+            get { return this._selectedAppointment; }
+            set
+            {
+                if (this._selectedAppointment != value)
+                {
+                    this._selectedAppointment = value;
+                    this.OnPropertyChanged("SelectedAppointment");
+                }
+            }
+        }
+
 		public ObservableCollection<Appointment> Appointments { get; set; }
 
 		public ViewModel()
 		{
             var date = CalendarHelper.GetFirstDayOfWeek(DateTime.Today, DayOfWeek.Monday);
+
+            var meetingApp = new Appointment()
+            {
+                Subject = "Meeting with John",
+                Start = date.AddHours(7),
+                End = date.AddHours(8)
+            };
+            meetingApp.Resources.Add(new Resource("Room 1", "Room"));
+
             var scrumApp = new Appointment()
             {
                 Subject = "Morning Scrum",
@@ -25,17 +49,9 @@ namespace AvoidOverlappingAppointments
                     Frequency = RecurrenceFrequency.Daily,
                     MaxOccurrences=5
                 }
-            );
-
-            var meetingApp = new Appointment()
-            {
-                Subject = "Meeting with John",
-                Start = date.AddHours(11),
-                End = date.AddHours(12)
-            };
-            meetingApp.Resources.Add(new Resource("Room 1", "Room"));
-
+            );             
 			Appointments = new ObservableCollection<Appointment>() { scrumApp, meetingApp };
+            this.SelectedAppointment = meetingApp;
 		}
 	}
 }

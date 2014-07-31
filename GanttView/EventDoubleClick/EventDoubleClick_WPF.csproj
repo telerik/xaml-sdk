@@ -73,7 +73,6 @@
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
     <Compile Include="GanttDoubleClickExtension.cs" />
-    <Compile Include="SoftwarePlanning.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="Example.xaml">
       <SubType>Designer</SubType>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colorizers_CategoricalDefin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colorizers_VerticalDefinition", "Colorizers_VerticalDefinition\Colorizers_VerticalDefinition.csproj", "{71A5D5BF-4037-4DE5-B2B0-406BF2411D6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragToSelect", "DragToSelect\DragToSelect.csproj", "{59BA77CA-9CF6-4577-8FAE-EF7DF25E4A5B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{71A5D5BF-4037-4DE5-B2B0-406BF2411D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A5D5BF-4037-4DE5-B2B0-406BF2411D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A5D5BF-4037-4DE5-B2B0-406BF2411D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BA77CA-9CF6-4577-8FAE-EF7DF25E4A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BA77CA-9CF6-4577-8FAE-EF7DF25E4A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BA77CA-9CF6-4577-8FAE-EF7DF25E4A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BA77CA-9CF6-4577-8FAE-EF7DF25E4A5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

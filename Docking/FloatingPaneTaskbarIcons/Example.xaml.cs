@@ -30,13 +30,13 @@ namespace FloatingPaneTaskbarIcons
                     switch (this.GetPaneType(pane))
                     {
                         case PaneType.Green:
-                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("..\\..\\Images\\icon-green.png", UriKind.RelativeOrAbsolute)));
+                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("pack://application:,,,/FloatingPaneTaskbarIcons;component/Images/icon-green.png", UriKind.Absolute)));
                             break;
                         case PaneType.Blue:
-                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("..\\..\\Images\\icon-blue.png", UriKind.RelativeOrAbsolute)));
+                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("pack://application:,,,/FloatingPaneTaskbarIcons;component/Images/icon-blue.png", UriKind.Absolute)));
                             break;
                         default:
-                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("..\\..\\Images\\icon-default.png", UriKind.RelativeOrAbsolute)));
+                            RadWindowInteropHelper.SetIcon(toolWindow, new BitmapImage(new Uri("pack://application:,,,/FloatingPaneTaskbarIcons;component/Images/icon-default.png", UriKind.Absolute)));
                             break;
                     }
                 }

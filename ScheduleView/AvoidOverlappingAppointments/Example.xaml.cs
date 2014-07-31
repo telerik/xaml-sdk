@@ -23,7 +23,7 @@ namespace AvoidOverlappingAppointments
             var viewModel = e.DialogViewModel as RecurrenceChoiceDialogViewModel;
             if (viewModel != null)
             {                
-                if (viewModel.RecurrenceChoiceDialogMode == RecurrenceChoiceDialogMode.Dragging)
+                if (viewModel.RecurrenceChoiceDialogMode == RecurrenceChoiceDialogMode.Dragging || viewModel.RecurrenceChoiceDialogMode == RecurrenceChoiceDialogMode.Resizing)
                 {
                     var scheduleView = sender as RadScheduleView;
                     destinationSlot = scheduleView.HighlightedSlots[0] as Slot;

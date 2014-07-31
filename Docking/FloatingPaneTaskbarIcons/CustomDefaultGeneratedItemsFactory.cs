@@ -11,7 +11,7 @@ namespace FloatingPaneTaskbarIcons
         {
             var window = base.CreateToolWindow();
             RadWindowInteropHelper.SetShowInTaskbar(window, true);
-            RadWindowInteropHelper.SetIcon(window, new BitmapImage(new Uri("..\\..\\Images\\icon-default.png", UriKind.RelativeOrAbsolute)));
+            RadWindowInteropHelper.SetIcon(window, new BitmapImage(new Uri("pack://application:,,,/FloatingPaneTaskbarIcons;component/Images/icon-default.png", UriKind.Absolute)));
 
             return window;
         }

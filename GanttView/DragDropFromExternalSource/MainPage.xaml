@@ -6,9 +6,7 @@
     xmlns:local="clr-namespace:DragDropFromExternalSource"
     mc:Ignorable="d"
     d:DesignHeight="650" d:DesignWidth="1000">
-	<UserControl.DataContext>
-		<local:ViewModel/>
-	</UserControl.DataContext>
+	
 	<Grid x:Name="LayoutRoot" Background="White">
 		<local:Example/>
 	</Grid>

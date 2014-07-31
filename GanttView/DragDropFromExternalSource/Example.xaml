@@ -6,7 +6,10 @@
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:local="clr-namespace:DragDropFromExternalSource"
     mc:Ignorable="d" d:DesignHeight="650" d:DesignWidth="1000">
-    
+    <UserControl.DataContext>
+        <local:ViewModel />
+    </UserControl.DataContext>
+
     <UserControl.Resources>
         <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem">
             <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />

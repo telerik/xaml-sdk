@@ -14,6 +14,7 @@
                                                DarkBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Dark/"/>
 
         <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
+        <spreadsheetControls:InversedBoolToVisibilityValueConverter x:Key="InversedBoolToVisibilityValueConverter"/>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
@@ -1824,6 +1825,14 @@
                     <telerik:RadMenuItem Header="Delete..."
                                          Command="{Binding Path=RemoveCells.Command}"
                                          Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Insert Rows"
+                                         Command="{Binding Path=InsertRows.Command}"
+                                         Visibility="{Binding Path=InsertCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Delete Rows"
+                                         Command="{Binding Path=RemoveRows.Command}"
+                                         Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
 
                     <telerik:RadMenuItem Header="Clear Contents" 
                                          Command="{Binding Path=Clear.Command}"

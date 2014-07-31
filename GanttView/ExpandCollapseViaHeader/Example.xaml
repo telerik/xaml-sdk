@@ -21,8 +21,8 @@
                                       Margin="0 0 10 0" 
                                       IsChecked="True"
                                       VerticalAlignment="Center"
-                                      Checked="CheckBox_Checked"
-                                      Unchecked="CheckBox_Unchecked"
+                                      Checked="OnCheckBoxChecked"
+                                      Unchecked="OnCheckBoxUnchecked"
                                       Foreground="Orange"
                                       Visibility="{Binding Header, Converter={StaticResource SpecialConverter}}"/>
                             <Border VerticalAlignment="Stretch" BorderBrush="Gray" BorderThickness="1" Margin="0 0 5 0"

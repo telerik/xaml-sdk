@@ -25,7 +25,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Margin="5" Text="The background color of the StadiumCapacity cells is Red if the Threshold(a proeprty from ViewModel) is greater than 10"/>
+        <TextBlock Margin="5" Text="The background color of the StadiumCapacity cells is Red if the Threshold(a property from ViewModel) is greater than 10"/>
         <telerik:RadGridView Grid.Row="1" 
                              Name="clubsGrid" 
                              ItemsSource="{Binding Clubs}"

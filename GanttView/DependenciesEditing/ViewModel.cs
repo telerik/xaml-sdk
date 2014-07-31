@@ -41,7 +41,7 @@ namespace DependenciesEditing
 			this.Tasks[3].AddDependency(this.Tasks[0], DependencyType.FinishStart);
 			this.Tasks[5].AddDependency(this.Tasks[4], DependencyType.FinishStart);
 
-			this.VisibleRange = new VisibleRange(DateTime.Today, DateTime.Today.AddDays(3));
+            this.VisibleRange = new VisibleRange(DateTime.Today.AddHours(-1), DateTime.Today.AddHours(14));
 		}
 
 		public VisibleRange VisibleRange
