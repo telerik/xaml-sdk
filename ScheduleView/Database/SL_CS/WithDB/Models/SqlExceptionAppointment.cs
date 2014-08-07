@@ -109,7 +109,9 @@ namespace ScheduleViewDB.Web
 
 		public IAppointment Copy()
 		{
-			throw new InvalidOperationException();
+            IAppointment appointment = new SqlExceptionAppointment();
+            appointment.CopyFrom(this);
+            return appointment;
 		}
 
 		public void BeginEdit()
@@ -188,10 +190,10 @@ namespace ScheduleViewDB.Web
 					}
 					break;
 				case NotifyCollectionChangedAction.Remove:
-					foreach (var sqlres in e.OldItems)
-					{
-						var itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(x => x.SqlResources_SqlResourceId == ((SqlResource)sqlres).SqlResourceId && x.SqlExceptionAppointments_ExceptionId == this.ExceptionId).ToList();
-						foreach (var item in itemsToRemove)
+                    foreach (var sqlres in e.OldItems.OfType<SqlResource>())
+                    {
+                        var itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(x => x.SqlResources_SqlResourceId == sqlres.SqlResourceId && x.SqlExceptionAppointments_ExceptionId == this.ExceptionId).ToList();
+                        foreach (var item in itemsToRemove)
 						{
 							ScheduleViewRepository.Context.SqlExceptionResources.Remove(item);
 						}

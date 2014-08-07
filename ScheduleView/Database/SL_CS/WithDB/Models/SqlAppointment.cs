@@ -145,7 +145,7 @@ namespace ScheduleViewDB.Web
 		void IEditableObject.CancelEdit()
 		{
 			base.CancelEdit();
-			var exceptionOccurenceToRemove = this.SqlExceptionOccurrences.Except(this.exceptionOccurrences);
+			var exceptionOccurenceToRemove = this.SqlExceptionOccurrences.Except(this.exceptionOccurrences).ToList();
 			foreach (var ex in exceptionOccurenceToRemove)
 			{
 				ScheduleViewRepository.Context.SqlExceptionOccurrences.Remove(ex);

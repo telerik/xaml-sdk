@@ -84,12 +84,13 @@ namespace ScheduleViewDB
 				this.MasterAppointment = (other as SqlRecurrenceRule).MasterAppointment;
 			}
 
-			this.Pattern = other.Pattern.Copy();
-			this.Exceptions.Clear();
-			foreach (var exception in other.Exceptions)
-			{
-				this.Exceptions.Add(exception.Copy() as SqlExceptionOccurrence);
-			}
+            this.Pattern = other.Pattern.Copy();
+            this.Exceptions.Clear();
+
+            var exceptions = other.Exceptions.ToList();
+            other.Exceptions.Clear();
+
+            this.Exceptions = exceptions;
 		}
 
 		public IAppointment CreateExceptionAppointment(IAppointment master)

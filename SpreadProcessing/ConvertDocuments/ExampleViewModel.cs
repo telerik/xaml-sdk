@@ -11,6 +11,7 @@ using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
 using Telerik.Windows.Documents.Spreadsheet.Model;
+using System.Windows.Controls;
 
 namespace ConvertDocuments
 {
@@ -172,19 +173,28 @@ namespace ConvertDocuments
             dialog.FilterIndex = 1;
             if (dialog.ShowDialog() == true)
             {
-                string extension = Path.GetExtension(dialog.FileName);
+#if SILVERLIGHT
+                string fileName = dialog.File.Name;
+#else
+                string fileName = dialog.FileName;
+#endif
+                string extension = Path.GetExtension(fileName);
                 IWorkbookFormatProvider provider = this.providers
                     .FirstOrDefault(p => p.SupportedExtensions
                         .Any(e => string.Compare(extension, e, StringComparison.InvariantCultureIgnoreCase) == 0));
 
                 if (provider != null)
                 {
+#if SILVERLIGHT
+                    using (Stream stream = dialog.File.OpenRead())
+#else
                     using (Stream stream = dialog.OpenFile())
+#endif
                     {
                         try
                         {
                             this.Workbook = provider.Import(stream);
-                            this.FileName = Path.GetFileName(dialog.FileName);
+                            this.FileName = Path.GetFileName(fileName);
                         }
                         catch (Exception)
                         {

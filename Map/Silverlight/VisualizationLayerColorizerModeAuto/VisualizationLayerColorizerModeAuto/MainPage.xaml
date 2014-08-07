@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="VisualizationLayerColorizerModeAuto.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadMap x:Name="radMap">
+            <telerik:RadMap.Provider>
+                <telerik:EmptyProvider />
+            </telerik:RadMap.Provider>
+            <telerik:VisualizationLayer x:Name="visualizationLayer">
+                <telerik:VisualizationLayer.Reader>
+                    <telerik:AsyncShapeFileReader DataSource="/VisualizationLayerColorizerModeAuto;component/Resources/world.dbf"
+                                            Source="/VisualizationLayerColorizerModeAuto;component/Resources/world.shp" />
+                </telerik:VisualizationLayer.Reader>
+                <telerik:VisualizationLayer.Colorizer>
+                    <telerik:ColorMeasureScale ExtendedPropertyName="SQKM" Mode="Auto">
+                        <telerik:ColorMeasureScale.ShapeFillCollection>
+                            <telerik:MapShapeFill Fill="#FFFAB935" Stroke="White" StrokeThickness="2" />
+                            <telerik:MapShapeFill Fill="#FFC9441C" Stroke="White" StrokeThickness="2" />
+                        </telerik:ColorMeasureScale.ShapeFillCollection>
+                    </telerik:ColorMeasureScale>
+                </telerik:VisualizationLayer.Colorizer>
+            </telerik:VisualizationLayer>
+        </telerik:RadMap>
+    </Grid>
+</UserControl>

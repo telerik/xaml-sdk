@@ -131,12 +131,13 @@ Public Class ScheduleViewViewModel
 					Next
 				End If
 
-				Dim tempAppList = app.SqlAppointmentResources.ToList()
-				For Each resource In tempAppList
-					ScheduleViewRepository.Context.SqlAppointmentResources.DeleteObject(resource)
-				Next
-				ScheduleViewRepository.Context.SqlAppointments.DeleteObject(app)
-			End If
+                Dim tempAppList = ScheduleViewRepository.Context.SqlAppointmentResources.Where(Function(i) i.SqlAppointments_SqlAppointmentId = app.SqlAppointmentId).ToList()
+
+                For Each resource In tempAppList
+                    ScheduleViewRepository.Context.SqlAppointmentResources.DeleteObject(resource)
+                Next
+                ScheduleViewRepository.Context.SqlAppointments.DeleteObject(app)
+            End If
 		End If
 	End Sub
 

@@ -57,11 +57,13 @@ Public Class SqlRecurrenceRule
 			Me.MasterAppointment = TryCast(other, SqlRecurrenceRule).MasterAppointment
 		End If
 
-		Me.Pattern = other.Pattern.Copy()
-		Me.Exceptions.Clear()
-		For Each exception In other.Exceptions
-			Me.Exceptions.Add(TryCast(exception.Copy(), SqlExceptionOccurrence))
-		Next
+        Me.Pattern = other.Pattern.Copy()
+        Me.Exceptions.Clear()
+
+        Dim exceptions = other.Exceptions.ToList()
+        other.Exceptions.Clear()
+
+        Me.Exceptions = exceptions
 	End Sub
 
 	Public Function CreateNew() As Telerik.Windows.Controls.ScheduleView.IExceptionOccurrence Implements Telerik.Windows.Controls.IObjectGenerator(Of Telerik.Windows.Controls.ScheduleView.IExceptionOccurrence).CreateNew

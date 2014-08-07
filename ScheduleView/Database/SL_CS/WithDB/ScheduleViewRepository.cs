@@ -25,24 +25,31 @@ namespace ScheduleViewDB
 
 		public static bool SaveData(Action action)
 		{
-			if (ScheduleViewRepository.Context.HasChanges && !ScheduleViewRepository.Context.IsSubmitting)
-			{
-				try
-				{
-					ScheduleViewRepository.Context.SubmitChanges(OnSubmitChangesCompleted, action);
-					return true;
-				}
-				catch (System.Exception)
-				{
-					return false;
-				}
-			}
-			return false;
+            if (ScheduleViewRepository.Context.HasChanges && !ScheduleViewRepository.Context.IsSubmitting)
+            {
+                try
+                {
+                    ScheduleViewRepository.Context.SubmitChanges(OnSubmitChangesCompleted, action);
+                    return true;
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
+
+            if (action != null)
+            {
+                action();
+            }
+
+            return false;
 		}
 
 		private static void OnSubmitChangesCompleted(SubmitOperation submitOperation)
 		{
 			var action = submitOperation.UserState as Action;
+
 			if (action != null)
 			{
 				action();

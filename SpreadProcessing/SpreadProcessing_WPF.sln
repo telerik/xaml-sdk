@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocuments_WPF", "GenerateDocuments\GenerateDocuments_WPF.csproj", "{A3DFAAF2-0C75-4927-B808-59F5C245218E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertDocuments_WPF", "ConvertDocuments\ConvertDocuments_WPF.csproj", "{58AE3747-77F9-4C84-91CA-7FA3956AC34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateModifyExport_WPF", "CreateModifyExport\CreateModifyExport_WPF.csproj", "{1D4D30E9-D11C-487F-A102-E52D5E1C867E}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3DFAAF2-0C75-4927-B808-59F5C245218E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DFAAF2-0C75-4927-B808-59F5C245218E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DFAAF2-0C75-4927-B808-59F5C245218E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DFAAF2-0C75-4927-B808-59F5C245218E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AE3747-77F9-4C84-91CA-7FA3956AC34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AE3747-77F9-4C84-91CA-7FA3956AC34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AE3747-77F9-4C84-91CA-7FA3956AC34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AE3747-77F9-4C84-91CA-7FA3956AC34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4D30E9-D11C-487F-A102-E52D5E1C867E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4D30E9-D11C-487F-A102-E52D5E1C867E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4D30E9-D11C-487F-A102-E52D5E1C867E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4D30E9-D11C-487F-A102-E52D5E1C867E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

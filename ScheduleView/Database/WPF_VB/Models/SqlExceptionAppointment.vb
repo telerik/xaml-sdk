@@ -67,7 +67,9 @@ Public Class SqlExceptionAppointment
 	End Function
 
 	Public Function Copy() As Telerik.Windows.Controls.ScheduleView.IAppointment Implements Telerik.Windows.Controls.ICopyable(Of Telerik.Windows.Controls.ScheduleView.IAppointment).Copy
-		Throw New InvalidOperationException()
+        Dim appointment As IAppointment = New SqlExceptionAppointment()
+        appointment.CopyFrom(Me)
+        Return appointment
 	End Function
 
 	Public Sub CopyFrom(other As Telerik.Windows.Controls.ScheduleView.IAppointment) Implements Telerik.Windows.Controls.ICopyable(Of Telerik.Windows.Controls.ScheduleView.IAppointment).CopyFrom
@@ -191,33 +193,27 @@ Public Class SqlExceptionAppointment
 
 	Sub resource_CollectionChanged(ByVal s As System.Object, ByVal e As NotifyCollectionChangedEventArgs)
 		Select Case e.Action
-			Case NotifyCollectionChangedAction.Add
-				For Each resource In e.NewItems.OfType(Of SqlResource)()
-					Me.SqlExceptionResources.Add(New SqlExceptionResource() With { _
-					 .SqlExceptionAppointments_ExceptionId = Me.ExceptionId, _
-					 .SqlResources_SqlResourceId = resource.SqlResourceId _
-					})
-				Next
-				Exit Select
-			Case NotifyCollectionChangedAction.Remove
-				For Each sqlres In e.OldItems
-					Dim itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(Function(x) x.SqlResources_SqlResourceId = DirectCast(sqlres, SqlResource).SqlResourceId AndAlso x.SqlExceptionAppointments_ExceptionId = Me.ExceptionId).ToList()
-					For Each item In itemsToRemove
-						If item IsNot Nothing Then
-							ScheduleViewRepository.Context.SqlExceptionResources.DeleteObject(item)
-						End If
-
-					Next
-				Next
-
-
-				Exit Select
-			Case NotifyCollectionChangedAction.Replace
-				Exit Select
-			Case NotifyCollectionChangedAction.Reset
-				Exit Select
-			Case Else
-				Exit Select
-		End Select
+            Case NotifyCollectionChangedAction.Add
+                For Each resource In e.NewItems.OfType(Of SqlResource)()
+                    ScheduleViewRepository.Context.AddToSqlExceptionResources(New SqlExceptionResource With {.SqlExceptionAppointments_ExceptionId = Me.ExceptionId, .SqlResources_SqlResourceId = resource.SqlResourceId})
+                Next resource
+            Case NotifyCollectionChangedAction.Remove
+                For Each sqlres In e.OldItems.OfType(Of SqlResource)()
+                    Dim itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(Function(x) x.SqlResources_SqlResourceId = sqlres.SqlResourceId AndAlso x.SqlExceptionAppointments_ExceptionId = Me.ExceptionId).ToList()
+                    If itemsToRemove.Any() Then
+                        For Each item In itemsToRemove
+                            ScheduleViewRepository.Context.SqlExceptionResources.DeleteObject(item)
+                        Next item
+                    Else
+                        itemsToRemove = sqlres.SqlExceptionResources.Where(Function(x) x.SqlResources_SqlResourceId = sqlres.SqlResourceId AndAlso x.SqlExceptionAppointments_ExceptionId = Me.ExceptionId).ToList()
+                        For Each item In itemsToRemove
+                            ScheduleViewRepository.Context.ObjectStateManager.ChangeObjectState(item, System.Data.EntityState.Detached)
+                        Next item
+                    End If
+                Next sqlres
+            Case NotifyCollectionChangedAction.Replace
+            Case NotifyCollectionChangedAction.Reset
+            Case Else
+        End Select
 	End Sub
 End Class

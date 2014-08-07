@@ -171,7 +171,7 @@ Namespace Web
 
 		Private Sub CancelEdit_() Implements System.ComponentModel.IEditableObject.CancelEdit
 			MyBase.CancelEdit()
-			Dim exceptionOccurenceToRemove = Me.SqlExceptionOccurrences.Except(Me._ExceptionOccurrences)
+            Dim exceptionOccurenceToRemove = Me.SqlExceptionOccurrences.Except(Me._ExceptionOccurrences).ToList
 			For Each ex In exceptionOccurenceToRemove
 				ScheduleViewRepository.Context.SqlExceptionOccurrences.Remove(ex)
 				If ex.Appointment IsNot Nothing Then

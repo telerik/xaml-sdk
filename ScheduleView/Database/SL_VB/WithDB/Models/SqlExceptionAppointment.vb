@@ -72,7 +72,9 @@ Namespace Web
 		End Function
 
 		Public Function Copy() As Telerik.Windows.Controls.ScheduleView.IAppointment Implements Telerik.Windows.Controls.ICopyable(Of Telerik.Windows.Controls.ScheduleView.IAppointment).Copy
-			Throw New InvalidOperationException()
+            Dim appointment As IAppointment = New SqlExceptionAppointment()
+            appointment.CopyFrom(Me)
+            Return appointment
 		End Function
 
 		Public Sub CopyFrom(other As Telerik.Windows.Controls.ScheduleView.IAppointment) Implements Telerik.Windows.Controls.ICopyable(Of Telerik.Windows.Controls.ScheduleView.IAppointment).CopyFrom
@@ -205,18 +207,14 @@ Namespace Web
 					Next
 					Exit Select
 				Case NotifyCollectionChangedAction.Remove
-					For Each sqlres In e.OldItems
-						Dim itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(Function(x) x.SqlResources_SqlResourceId = DirectCast(sqlres, SqlResource).SqlResourceId AndAlso x.SqlExceptionAppointments_ExceptionId = Me.ExceptionId).ToList()
-						For Each item In itemsToRemove
-							If item IsNot Nothing Then
-								ScheduleViewRepository.Context.SqlExceptionResources.Remove(item)
-							End If
+                    For Each sqlres In e.OldItems.OfType(Of SqlResource)()
+                        Dim itemsToRemove = ScheduleViewRepository.Context.SqlExceptionResources.Where(Function(x) x.SqlResources_SqlResourceId = sqlres.SqlResourceId AndAlso x.SqlExceptionAppointments_ExceptionId = Me.ExceptionId).ToList()
+                        For Each item In itemsToRemove
+                            ScheduleViewRepository.Context.SqlExceptionResources.Remove(item)
+                        Next item
+                    Next sqlres
 
-						Next
-					Next
-
-
-					Exit Select
+                    Exit Select
 				Case NotifyCollectionChangedAction.Replace
 					Exit Select
 				Case NotifyCollectionChangedAction.Reset

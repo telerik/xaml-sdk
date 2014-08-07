@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="EditorAttribute.PhoneEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Transparent" />
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Horizontal" Height="20">
+        <TextBlock Text="+" />
+        <TextBox Text="{Binding CountryCode, Mode=TwoWay}" />
+        <TextBlock Text=" (" />
+        <TextBox Text="{Binding RegionCode, Mode=TwoWay}" />
+        <TextBlock Text=") " />
+        <TextBox Text="{Binding Number, Mode=TwoWay}" />
+    </StackPanel>
+</UserControl>

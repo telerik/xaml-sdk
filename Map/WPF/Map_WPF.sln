@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapTrafficProvider", "ProvidersBingMapTrafficProvider\ProvidersBingMapTrafficProvider.csproj", "{A26B9D88-5600-424C-9020-F034A157DCC6}"
@@ -138,6 +140,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerModeRangesPredefinedColors", "InformationLayerColorizerModeRangesPredefinedColors\InformationLayerColorizerModeRangesPredefinedColors.csproj", "{4CCC57E6-BCB0-4684-A4AE-2B6AABBBEFB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationLayerColorizerColors", "InformationLayerColorizerColors\InformationLayerColorizerColors.csproj", "{5C81ED4A-5F49-466D-A105-A6E249CE8202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerColors", "VisualizationLayerColorizerColors\VisualizationLayerColorizerColors.csproj", "{A222498D-44F1-46D9-9EF9-2EDD1EB6EEBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerModeAuto", "VisualizationLayerColorizerModeAuto\VisualizationLayerColorizerModeAuto.csproj", "{6C92284F-41F2-4921-B6DC-9E2285C26065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerModeCount", "VisualizationLayerColorizerModeCount\VisualizationLayerColorizerModeCount.csproj", "{DA91B737-A13F-4F1B-BD16-44785A310BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerModeRanges", "VisualizationLayerColorizerModeRanges\VisualizationLayerColorizerModeRanges.csproj", "{B309F4C2-62DC-4F91-A993-F7E0A9E5B0AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerModeRangesPredefinedColors", "VisualizationLayerColorizerModeRangesPredefinedColors\VisualizationLayerColorizerModeRangesPredefinedColors.csproj", "{78A5CCC6-6E0E-4B94-A242-124D124AACF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerColorizerModeStep", "VisualizationLayerColorizerModeStep\VisualizationLayerColorizerModeStep.csproj", "{E537FDDE-F2F4-4B35-BD2B-D2E6E112FC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerGraphColorizer", "VisualizationLayerGraphColorizer\VisualizationLayerGraphColorizer.csproj", "{C497C017-1BBD-4B51-B74D-EBA6C02A88FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerClustering", "VisualizationLayerClustering\VisualizationLayerClustering.csproj", "{5B41EC2F-67F4-4BB0-8305-0EF947E26473}"
 EndProject
 Global
 	 
@@ -422,6 +440,38 @@ Global
 		{5C81ED4A-5F49-466D-A105-A6E249CE8202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C81ED4A-5F49-466D-A105-A6E249CE8202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C81ED4A-5F49-466D-A105-A6E249CE8202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A222498D-44F1-46D9-9EF9-2EDD1EB6EEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A222498D-44F1-46D9-9EF9-2EDD1EB6EEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A222498D-44F1-46D9-9EF9-2EDD1EB6EEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A222498D-44F1-46D9-9EF9-2EDD1EB6EEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C92284F-41F2-4921-B6DC-9E2285C26065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C92284F-41F2-4921-B6DC-9E2285C26065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C92284F-41F2-4921-B6DC-9E2285C26065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C92284F-41F2-4921-B6DC-9E2285C26065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA91B737-A13F-4F1B-BD16-44785A310BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA91B737-A13F-4F1B-BD16-44785A310BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA91B737-A13F-4F1B-BD16-44785A310BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA91B737-A13F-4F1B-BD16-44785A310BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B309F4C2-62DC-4F91-A993-F7E0A9E5B0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B309F4C2-62DC-4F91-A993-F7E0A9E5B0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B309F4C2-62DC-4F91-A993-F7E0A9E5B0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B309F4C2-62DC-4F91-A993-F7E0A9E5B0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A5CCC6-6E0E-4B94-A242-124D124AACF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A5CCC6-6E0E-4B94-A242-124D124AACF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A5CCC6-6E0E-4B94-A242-124D124AACF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A5CCC6-6E0E-4B94-A242-124D124AACF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E537FDDE-F2F4-4B35-BD2B-D2E6E112FC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E537FDDE-F2F4-4B35-BD2B-D2E6E112FC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E537FDDE-F2F4-4B35-BD2B-D2E6E112FC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E537FDDE-F2F4-4B35-BD2B-D2E6E112FC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C497C017-1BBD-4B51-B74D-EBA6C02A88FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C497C017-1BBD-4B51-B74D-EBA6C02A88FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C497C017-1BBD-4B51-B74D-EBA6C02A88FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C497C017-1BBD-4B51-B74D-EBA6C02A88FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

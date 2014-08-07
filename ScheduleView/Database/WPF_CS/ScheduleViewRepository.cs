@@ -21,7 +21,7 @@ namespace ScheduleViewDB
 
 		public static bool SaveData(Action action)
 		{
-			var isSubmited = ScheduleViewRepository.Context.SaveChanges() > 0;
+			var isSubmited = ScheduleViewRepository.Context.SaveChanges() >= 0;
 			if (action != null && isSubmited)
 			{
 				action();

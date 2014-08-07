@@ -1,0 +1,2 @@
+#FlagEnumEditor#
+RadPropertyGrid supports editing bit flag enum by exposing a new editor – FlagEnumEditor. It enables the user to store any combination of the values that are defined in the enumerator list

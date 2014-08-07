@@ -80,9 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientBin\ScheduleViewDB.xap" />
-    <Content Include="App_Data\ScheduleViewDB.mdf" />
+    <Content Include="App_Data\ScheduleViewDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\ScheduleViewDB_log.ldf">
       <DependentUpon>ScheduleViewDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WithDBTestPage.aspx" />
     <Content Include="Silverlight.js" />

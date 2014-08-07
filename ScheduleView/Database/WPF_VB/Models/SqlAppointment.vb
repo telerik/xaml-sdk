@@ -168,7 +168,7 @@ Public Class SqlAppointment
 	End Sub
 
 	Private Sub CancelEdit_() Implements System.ComponentModel.IEditableObject.CancelEdit
-		Dim exceptionOccurenceToRemove As IEnumerable(Of SqlExceptionOccurrence) = Me.SqlExceptionOccurrences.Except(Me._ExceptionOccurrences)
+        Dim exceptionOccurenceToRemove As IEnumerable(Of SqlExceptionOccurrence) = Me.SqlExceptionOccurrences.Except(Me._ExceptionOccurrences).ToList
 		For Each ex As SqlExceptionOccurrence In exceptionOccurenceToRemove
 			ScheduleViewRepository.Context.SqlExceptionOccurrences.DeleteObject(ex)
 			If ex.Appointment IsNot Nothing Then

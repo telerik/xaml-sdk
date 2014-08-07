@@ -124,7 +124,7 @@ namespace ScheduleViewDB.ViewModels
                         }
                     }
 
-                    var tempAppList = ScheduleViewRepository.Context.SqlAppointmentResources.ToList();
+                    var tempAppList = ScheduleViewRepository.Context.SqlAppointmentResources.Where(i => i.SqlAppointments_SqlAppointmentId == app.SqlAppointmentId).ToList();
 
                     foreach (var item in tempAppList)
                     {

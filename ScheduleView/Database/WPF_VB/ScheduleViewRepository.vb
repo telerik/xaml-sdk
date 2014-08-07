@@ -14,7 +14,7 @@
 	End Sub
 
 	Public Shared Function SaveData(action As Action) As Boolean
-		Dim _IsSubmited = ScheduleViewRepository.Context.SaveChanges() > 0
+        Dim _IsSubmited = ScheduleViewRepository.Context.SaveChanges() >= 0
 		If Not action Is Nothing AndAlso _IsSubmited Then
 			action()
 		End If
