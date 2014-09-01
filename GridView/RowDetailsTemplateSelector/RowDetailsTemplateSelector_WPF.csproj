@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1EE4F3EA-760C-4E62-B021-BD11FE96CD8E}</ProjectGuid>
+    <ProjectGuid>{FD36B95B-5EAE-4988-837E-975C0637B114}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WpfApplication1</RootNamespace>
@@ -116,7 +116,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Club.cs" />
-    <Compile Include="ComboBoxSelectedItemToRowDetailsVisibilityModeConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -183,27 +183,29 @@ Namespace Web
 			Next
 		End Sub
 
-		Private Sub EndEdit() Implements IEditableObject.EndEdit
-			For Each resource In Me.SqlAppointmentResources
-				ScheduleViewRepository.Context.SqlAppointmentResources.Remove(resource)
-			Next
+        Private Sub EndEdit() Implements IEditableObject.EndEdit
+            Dim resources = Me.Resources.OfType(Of SqlResource).ToList()
 
-			For Each sqlResource In Me.Resources.OfType(Of SqlResource)()
-				Me.SqlAppointmentResources.Add(New SqlAppointmentResource() With { _
-				 .SqlAppointment = Me, _
-				 .SqlResources_SqlResourceId = sqlResource.SqlResourceId _
-				})
-			Next
+            For Each resource In Me.SqlAppointmentResources
+                ScheduleViewRepository.Context.SqlAppointmentResources.Remove(resource)
+            Next
 
-			Dim removedExceptionAppointments = Me._ExceptionAppointments.Except(Me.SqlExceptionOccurrences.[Select](Function(o) o.Appointment).OfType(Of SqlExceptionAppointment)())
-			For Each exceptionAppointment In removedExceptionAppointments
-				For Each item In exceptionAppointment.SqlExceptionResources
-					ScheduleViewRepository.Context.SqlExceptionResources.Remove(item)
-				Next
-			Next
+            For Each sqlResource In resources
+                Me.SqlAppointmentResources.Add(New SqlAppointmentResource() With { _
+                 .SqlAppointment = Me, _
+                 .SqlResources_SqlResourceId = sqlResource.SqlResourceId _
+                })
+            Next
 
-			MyBase.EndEdit()
-		End Sub
+            Dim removedExceptionAppointments = Me._ExceptionAppointments.Except(Me.SqlExceptionOccurrences.[Select](Function(o) o.Appointment).OfType(Of SqlExceptionAppointment)())
+            For Each exceptionAppointment In removedExceptionAppointments
+                For Each item In exceptionAppointment.SqlExceptionResources
+                    ScheduleViewRepository.Context.SqlExceptionResources.Remove(item)
+                Next
+            Next
+
+            MyBase.EndEdit()
+        End Sub
 
 		Public Function Equals_(other As Telerik.Windows.Controls.ScheduleView.IAppointment) As Boolean Implements System.IEquatable(Of Telerik.Windows.Controls.ScheduleView.IAppointment).Equals
 			Dim otherAppointment = TryCast(other, SqlAppointment)

@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+            
     d:DesignHeight="300" d:DesignWidth="400">
 
     <UserControl.Resources>
@@ -44,7 +45,9 @@
         <DataTemplate x:Key="ClusterTemplate">
             <Border Background="#af3f3f3f"
                     CornerRadius="3"
-                    telerik:MapLayer.HotSpot="0.5,0.5">
+                    telerik:MapLayer.HotSpot="0.5,0.5"
+                    MouseLeftButtonDown="ExpandClusterToPolygon"
+                    MouseRightButtonDown="ExpandCluster">
                 <StackPanel x:Name="Text" Margin="3">
                     <TextBlock HorizontalAlignment="Center"
                                Foreground="Yellow"
@@ -55,7 +58,8 @@
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot">
-        <telerik:RadMap x:Name="RadMap1"
+        <telerik:RadMap x:Name="RadMap1"  Width="1280"
+             Height="720"
                         Center="40, -100"
                         ZoomLevel="3">
             <telerik:RadMap.Provider>

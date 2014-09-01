@@ -371,7 +371,7 @@ namespace ScheduleViewDB.Web
 
 		private int[] GetSqlAppointmentsIdsByRange(DateTime start, DateTime end)
 		{
-			var result = this.ObjectContext.SqlAppointments.Where(a => (a.Start >= start && a.End <= end)).ToList<SqlAppointment>();
+            var result = this.ObjectContext.SqlAppointments.Where(a => ((a.Start >= start && a.End <= end) || (a.Start <= start && a.End <= end) || (a.Start >= start && a.End >= end) || (a.Start <= start && a.End >= end))).ToList<SqlAppointment>();
 
 			return result.OfType<SqlAppointment>().Select(e => e.SqlAppointmentId).ToArray();
 		}

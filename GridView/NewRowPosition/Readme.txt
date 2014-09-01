@@ -1,0 +1,1 @@
+This example demonstrates how you can configure NewRowPosition property of RadGridView

@@ -181,17 +181,19 @@ Public Class SqlAppointment
 	End Sub
 
 	Private Sub EndEdit() Implements IEditableObject.EndEdit
-		Dim resourceList = Me.SqlAppointmentResources.ToList()
+        Dim resourceList = Me.SqlAppointmentResources.ToList()
+        Dim resources = Me.Resources.OfType(Of SqlResource).ToList()
+
 		For Each resource In resourceList
 			ScheduleViewRepository.Context.SqlAppointmentResources.DeleteObject(resource)
 		Next
 
-		For Each sqlResource In Me.Resources.OfType(Of SqlResource)()
-			Me.SqlAppointmentResources.Add(New SqlAppointmentResource() With { _
-			 .SqlAppointment = Me, _
-			 .SqlResources_SqlResourceId = sqlResource.SqlResourceId _
-			})
-		Next
+        For Each sqlResource In resources
+            Me.SqlAppointmentResources.Add(New SqlAppointmentResource() With { _
+             .SqlAppointment = Me, _
+             .SqlResources_SqlResourceId = sqlResource.SqlResourceId _
+            })
+        Next
 
 		Dim removedExceptionAppointments = Me._ExceptionAppointments.Except(Me.SqlExceptionOccurrences.[Select](Function(o) o.Appointment).OfType(Of SqlExceptionAppointment)())
 		For Each exceptionAppointment In removedExceptionAppointments

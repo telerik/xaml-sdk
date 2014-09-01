@@ -44,8 +44,7 @@
 	End Function
 
 	Private Shared Function GetSqlAppointmentsIdsByRange(start As DateTime, [end] As DateTime) As Integer()
-		Dim result = Context.SqlAppointments.Where(Function(a) (a.Start >= start AndAlso a.[End] <= [end])).ToList()
-
+        Dim result = Context.SqlAppointments.Where(Function(a) ((a.Start >= start AndAlso a.[End] <= [end]) OrElse (a.Start <= start AndAlso a.[End] <= [end]) OrElse (a.Start >= start AndAlso a.[End] >= [end]) OrElse (a.Start <= start AndAlso a.[End] >= [end]))).ToList()
 		Return result.OfType(Of SqlAppointment)().[Select](Function(e) e.SqlAppointmentId).ToArray()
 	End Function
 End Class

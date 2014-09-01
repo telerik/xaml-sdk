@@ -162,12 +162,14 @@ namespace ScheduleViewDB
 		void IEditableObject.EndEdit()
 		{
 			var temp = this.SqlAppointmentResources.ToList();
+            var resources = this.Resources.OfType<SqlResource>().ToList();
+
 			foreach (var item in temp)
 			{
 				ScheduleViewRepository.Context.SqlAppointmentResources.DeleteObject(item);
 			}
 
-			foreach (var sqlResource in this.Resources.OfType<SqlResource>())
+            foreach (var sqlResource in resources)
 			{
 				ScheduleViewRepository.Context.AddToSqlAppointmentResources(new SqlAppointmentResource { SqlAppointment = this, SqlResources_SqlResourceId = sqlResource.SqlResourceId });
 			}

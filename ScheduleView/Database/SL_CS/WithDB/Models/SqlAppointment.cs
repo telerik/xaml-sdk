@@ -9,259 +9,261 @@ using Telerik.Windows.Controls.ScheduleView.ICalendar;
 
 namespace ScheduleViewDB.Web
 {
-	public partial class SqlAppointment : IAppointment, IExtendedAppointment, IObjectGenerator<IRecurrenceRule>
-	{
-		public event EventHandler RecurrenceRuleChanged;
-		private List<SqlExceptionOccurrence> exceptionOccurrences;
-		private List<SqlExceptionAppointment> exceptionAppointments;
-		private IList resources;
-		private TimeZoneInfo timeZone;
-		private IRecurrenceRule recurrenceRule;
+    public partial class SqlAppointment : IAppointment, IExtendedAppointment, IObjectGenerator<IRecurrenceRule>
+    {
+        public event EventHandler RecurrenceRuleChanged;
+        private List<SqlExceptionOccurrence> exceptionOccurrences;
+        private List<SqlExceptionAppointment> exceptionAppointments;
+        private IList resources;
+        private TimeZoneInfo timeZone;
+        private IRecurrenceRule recurrenceRule;
 
-		ITimeMarker IExtendedAppointment.TimeMarker
-		{
-			get
-			{
-				return this.TimeMarker as ITimeMarker;
-			}
-			set
-			{
-				this.TimeMarker = value as TimeMarker;
-			}
-		}
+        ITimeMarker IExtendedAppointment.TimeMarker
+        {
+            get
+            {
+                return this.TimeMarker as ITimeMarker;
+            }
+            set
+            {
+                this.TimeMarker = value as TimeMarker;
+            }
+        }
 
-		ICategory IExtendedAppointment.Category
-		{
-			get
-			{
-				return this.Category as ICategory;
-			}
-			set
-			{
-				this.Category = value as Category;
-			}
-		}
+        ICategory IExtendedAppointment.Category
+        {
+            get
+            {
+                return this.Category as ICategory;
+            }
+            set
+            {
+                this.Category = value as Category;
+            }
+        }
 
-		Importance IExtendedAppointment.Importance
-		{
-			get
-			{
-				return (Importance)this.Importance;
-			}
-			set
-			{
-				this.Importance = (int)value;
-			}
-		}
+        Importance IExtendedAppointment.Importance
+        {
+            get
+            {
+                return (Importance)this.Importance;
+            }
+            set
+            {
+                this.Importance = (int)value;
+            }
+        }
 
-		public TimeZoneInfo TimeZone
-		{
-			get
-			{
-				if (this.timeZone == null)
-				{
-					return TimeZoneInfo.Local;
-				}
+        public TimeZoneInfo TimeZone
+        {
+            get
+            {
+                if (this.timeZone == null)
+                {
+                    return TimeZoneInfo.Local;
+                }
 
-				return this.timeZone;
-			}
+                return this.timeZone;
+            }
 
-			set
-			{
-				if (this.timeZone != value)
-				{
-					this.timeZone = value;
-					this.OnPropertyChanged(new PropertyChangedEventArgs("TimeZone"));
-				}
-			}
-		}
+            set
+            {
+                if (this.timeZone != value)
+                {
+                    this.timeZone = value;
+                    this.OnPropertyChanged(new PropertyChangedEventArgs("TimeZone"));
+                }
+            }
+        }
 
-		public IList Resources
-		{
-			get
-			{
-				if (this.resources == null)
-				{
-					this.resources = this.SqlAppointmentResources.Select(ar => ar.SqlResource).ToList();
-				}
+        public IList Resources
+        {
+            get
+            {
+                if (this.resources == null)
+                {
+                    this.resources = this.SqlAppointmentResources.Select(ar => ar.SqlResource).ToList();
+                }
 
-				return this.resources;
-			}
-		}
+                return this.resources;
+            }
+        }
 
-		public IRecurrenceRule RecurrenceRule
-		{
-			get
-			{
-				if (this.recurrenceRule == null && this.EntityState == System.ServiceModel.DomainServices.Client.EntityState.Unmodified)
-				{
-					this.recurrenceRule = this.GetRecurrenceRule(this.RecurrencePattern);
-				}
+        public IRecurrenceRule RecurrenceRule
+        {
+            get
+            {
+                if (this.recurrenceRule == null && this.EntityState == System.ServiceModel.DomainServices.Client.EntityState.Unmodified)
+                {
+                    this.recurrenceRule = this.GetRecurrenceRule(this.RecurrencePattern);
+                }
 
-				return this.recurrenceRule;
-			}
+                return this.recurrenceRule;
+            }
 
-			set
-			{
-				if (this.recurrenceRule != value)
-				{
-					if (value == null)
-					{
-						this.RecurrencePattern = null;
-					}
-					this.recurrenceRule = value;
-					this.OnPropertyChanged(new PropertyChangedEventArgs("RecurrenceRule"));
-				}
-			}
-		}
+            set
+            {
+                if (this.recurrenceRule != value)
+                {
+                    if (value == null)
+                    {
+                        this.RecurrencePattern = null;
+                    }
+                    this.recurrenceRule = value;
+                    this.OnPropertyChanged(new PropertyChangedEventArgs("RecurrenceRule"));
+                }
+            }
+        }
 
-		public IAppointment Copy()
-		{
-			IAppointment appointment = new SqlAppointment();
-			appointment.CopyFrom(this);
-			return appointment;
-		}
+        public IAppointment Copy()
+        {
+            IAppointment appointment = new SqlAppointment();
+            appointment.CopyFrom(this);
+            return appointment;
+        }
 
-		void IEditableObject.BeginEdit()
-		{
-			base.BeginEdit();
-			if (this.exceptionOccurrences == null)
-			{
-				this.exceptionOccurrences = new List<SqlExceptionOccurrence>();
-			}
+        void IEditableObject.BeginEdit()
+        {
+            base.BeginEdit();
+            if (this.exceptionOccurrences == null)
+            {
+                this.exceptionOccurrences = new List<SqlExceptionOccurrence>();
+            }
 
-			if (this.exceptionAppointments == null)
-			{
-				this.exceptionAppointments = new List<SqlExceptionAppointment>();
-			}
+            if (this.exceptionAppointments == null)
+            {
+                this.exceptionAppointments = new List<SqlExceptionAppointment>();
+            }
 
-			this.exceptionOccurrences.Clear();
-			this.exceptionOccurrences.AddRange(this.SqlExceptionOccurrences.ToList());
+            this.exceptionOccurrences.Clear();
+            this.exceptionOccurrences.AddRange(this.SqlExceptionOccurrences.ToList());
 
-			this.exceptionAppointments.Clear();
-			this.exceptionAppointments.AddRange(this.SqlExceptionOccurrences.Select(o => o.Appointment).Where(a => a != null).ToList());
-		}
+            this.exceptionAppointments.Clear();
+            this.exceptionAppointments.AddRange(this.SqlExceptionOccurrences.Select(o => o.Appointment).Where(a => a != null).ToList());
+        }
 
-		void IEditableObject.CancelEdit()
-		{
-			base.CancelEdit();
-			var exceptionOccurenceToRemove = this.SqlExceptionOccurrences.Except(this.exceptionOccurrences).ToList();
-			foreach (var ex in exceptionOccurenceToRemove)
-			{
-				ScheduleViewRepository.Context.SqlExceptionOccurrences.Remove(ex);
-				if (ex.Appointment != null)
-				{
-					ScheduleViewRepository.Context.SqlExceptionAppointments.Remove((SqlExceptionAppointment)ex.Appointment);
-					foreach (var resource in (ex.Appointment as SqlExceptionAppointment).SqlExceptionResources)
-					{
-						ScheduleViewRepository.Context.SqlExceptionResources.Remove(resource);
-					}
-				}
-			}
-		}
+        void IEditableObject.CancelEdit()
+        {
+            base.CancelEdit();
+            var exceptionOccurenceToRemove = this.SqlExceptionOccurrences.Except(this.exceptionOccurrences).ToList();
+            foreach (var ex in exceptionOccurenceToRemove)
+            {
+                ScheduleViewRepository.Context.SqlExceptionOccurrences.Remove(ex);
+                if (ex.Appointment != null)
+                {
+                    ScheduleViewRepository.Context.SqlExceptionAppointments.Remove((SqlExceptionAppointment)ex.Appointment);
+                    foreach (var resource in (ex.Appointment as SqlExceptionAppointment).SqlExceptionResources)
+                    {
+                        ScheduleViewRepository.Context.SqlExceptionResources.Remove(resource);
+                    }
+                }
+            }
+        }
 
-		void IEditableObject.EndEdit()
-		{
-			foreach (var resource in this.SqlAppointmentResources)
-			{
-				ScheduleViewRepository.Context.SqlAppointmentResources.Remove(resource);
-			}
+        void IEditableObject.EndEdit()
+        {
+            var resources = this.Resources.OfType<SqlResource>().ToList();
 
-			foreach (var sqlResource in this.Resources.OfType<SqlResource>())
-			{
-				this.SqlAppointmentResources.Add(new SqlAppointmentResource { SqlAppointment = this, SqlResources_SqlResourceId = sqlResource.SqlResourceId });
-			}
+            foreach (var resource in this.SqlAppointmentResources)
+            {
+                ScheduleViewRepository.Context.SqlAppointmentResources.Remove(resource);
+            }
 
-			var removedExceptionAppointments = this.exceptionAppointments.Except(this.SqlExceptionOccurrences.Select(o => o.Appointment).OfType<SqlExceptionAppointment>());
-			foreach (var exceptionAppointment in removedExceptionAppointments)
-			{
-				foreach (var item in exceptionAppointment.SqlExceptionResources)
-				{
-					ScheduleViewRepository.Context.SqlExceptionResources.Remove(item);
-				}
-			}
+            foreach (var sqlResource in resources)
+            {
+                this.SqlAppointmentResources.Add(new SqlAppointmentResource { SqlAppointment = this, SqlResources_SqlResourceId = sqlResource.SqlResourceId });
+            }
 
-			base.EndEdit();
-		}
+            var removedExceptionAppointments = this.exceptionAppointments.Except(this.SqlExceptionOccurrences.Select(o => o.Appointment).OfType<SqlExceptionAppointment>());
+            foreach (var exceptionAppointment in removedExceptionAppointments)
+            {
+                foreach (var item in exceptionAppointment.SqlExceptionResources)
+                {
+                    ScheduleViewRepository.Context.SqlExceptionResources.Remove(item);
+                }
+            }
 
-		public bool Equals(IAppointment other)
-		{
-			var otherAppointment = other as SqlAppointment;
-			return otherAppointment != null &&
-				other.Start == this.Start &&
-				other.End == this.End &&
-				other.Subject == this.Subject &&
-				this.CategoryID == otherAppointment.CategoryID &&
-				this.TimeMarker == otherAppointment.TimeMarker &&
-				this.TimeZone == otherAppointment.TimeZone &&
-				this.IsAllDayEvent == other.IsAllDayEvent &&
-				this.RecurrenceRule == other.RecurrenceRule;
-		}
+            base.EndEdit();
+        }
 
-		public IRecurrenceRule CreateNew()
-		{
-			return this.CreateDefaultRecurrenceRule();
-		}
+        public bool Equals(IAppointment other)
+        {
+            var otherAppointment = other as SqlAppointment;
+            return otherAppointment != null &&
+                other.Start == this.Start &&
+                other.End == this.End &&
+                other.Subject == this.Subject &&
+                this.CategoryID == otherAppointment.CategoryID &&
+                this.TimeMarker == otherAppointment.TimeMarker &&
+                this.TimeZone == otherAppointment.TimeZone &&
+                this.IsAllDayEvent == other.IsAllDayEvent &&
+                this.RecurrenceRule == other.RecurrenceRule;
+        }
 
-		public IRecurrenceRule CreateNew(IRecurrenceRule item)
-		{
-			var sqlRecurrenceRule = this.CreateNew();
-			sqlRecurrenceRule.CopyFrom(item);
-			return sqlRecurrenceRule;
-		}
+        public IRecurrenceRule CreateNew()
+        {
+            return this.CreateDefaultRecurrenceRule();
+        }
 
-		public IAppointment ShallowCopy()
-		{
-			var appointment = new SqlExceptionAppointment();
-			appointment.CopyFrom(this);
-			return appointment;
-		}
+        public IRecurrenceRule CreateNew(IRecurrenceRule item)
+        {
+            var sqlRecurrenceRule = this.CreateNew();
+            sqlRecurrenceRule.CopyFrom(item);
+            return sqlRecurrenceRule;
+        }
 
-		void ICopyable<IAppointment>.CopyFrom(IAppointment other)
-		{
-			this.IsAllDayEvent = other.IsAllDayEvent;
-			this.Start = other.Start;
-			this.End = other.End;
-			this.Subject = other.Subject;
+        public IAppointment ShallowCopy()
+        {
+            var appointment = new SqlExceptionAppointment();
+            appointment.CopyFrom(this);
+            return appointment;
+        }
 
-			var otherAppointment = other as SqlAppointment;
-			if (otherAppointment == null)
-				return;
+        void ICopyable<IAppointment>.CopyFrom(IAppointment other)
+        {
+            this.IsAllDayEvent = other.IsAllDayEvent;
+            this.Start = other.Start;
+            this.End = other.End;
+            this.Subject = other.Subject;
 
-			this.CategoryID = otherAppointment.CategoryID;
-			this.TimeMarker = otherAppointment.TimeMarker;
-			this.RecurrenceRule = other.RecurrenceRule == null ? null : other.RecurrenceRule.Copy() as SqlRecurrenceRule;
-			this.RecurrencePattern = otherAppointment.RecurrencePattern;
+            var otherAppointment = other as SqlAppointment;
+            if (otherAppointment == null)
+                return;
 
-			this.Resources.Clear();
-			this.Resources.AddRange(otherAppointment.Resources);
+            this.CategoryID = otherAppointment.CategoryID;
+            this.TimeMarker = otherAppointment.TimeMarker;
+            this.RecurrenceRule = other.RecurrenceRule == null ? null : other.RecurrenceRule.Copy() as SqlRecurrenceRule;
+            this.RecurrencePattern = otherAppointment.RecurrencePattern;
 
-			this.Body = otherAppointment.Body;
-		}
+            this.Resources.Clear();
+            this.Resources.AddRange(otherAppointment.Resources);
 
-		private IRecurrenceRule GetRecurrenceRule(string pattern)
-		{
-			if (string.IsNullOrEmpty(pattern))
-			{
-				return null;
-			}
+            this.Body = otherAppointment.Body;
+        }
 
-			var recurrenceRuleGenerator = this as IObjectGenerator<IRecurrenceRule>;
-			var recurrenceRule = recurrenceRuleGenerator != null ? recurrenceRuleGenerator.CreateNew() : this.CreateDefaultRecurrenceRule();
-			var recurrencePattern = new RecurrencePattern();
-			RecurrencePatternHelper.TryParseRecurrencePattern(pattern, out recurrencePattern);
-			recurrenceRule.Pattern = recurrencePattern;
-			foreach (SqlExceptionOccurrence exception in this.SqlExceptionOccurrences)
-			{
-				recurrenceRule.Exceptions.Add(exception);
-			}
+        private IRecurrenceRule GetRecurrenceRule(string pattern)
+        {
+            if (string.IsNullOrEmpty(pattern))
+            {
+                return null;
+            }
 
-			return recurrenceRule;
-		}
+            var recurrenceRuleGenerator = this as IObjectGenerator<IRecurrenceRule>;
+            var recurrenceRule = recurrenceRuleGenerator != null ? recurrenceRuleGenerator.CreateNew() : this.CreateDefaultRecurrenceRule();
+            var recurrencePattern = new RecurrencePattern();
+            RecurrencePatternHelper.TryParseRecurrencePattern(pattern, out recurrencePattern);
+            recurrenceRule.Pattern = recurrencePattern;
+            foreach (SqlExceptionOccurrence exception in this.SqlExceptionOccurrences)
+            {
+                recurrenceRule.Exceptions.Add(exception);
+            }
 
-		private IRecurrenceRule CreateDefaultRecurrenceRule()
-		{
-			return new SqlRecurrenceRule(this);
-		}
-	}
+            return recurrenceRule;
+        }
+
+        private IRecurrenceRule CreateDefaultRecurrenceRule()
+        {
+            return new SqlRecurrenceRule(this);
+        }
+    }
 }

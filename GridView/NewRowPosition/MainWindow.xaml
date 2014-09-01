@@ -1,0 +1,34 @@
+﻿<Window x:Class="ControlPanel_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:my="clr-namespace:NewRowPosition"
+        Title="MainWindow" Height="350" Width="600">
+	<Window.Resources>
+		<my:MyViewModel x:Key="MyViewModel"/>
+	</Window.Resources>
+	<Grid x:Name="LayoutRoot" 
+          Background="White" 
+          DataContext="{StaticResource MyViewModel}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<telerik:RadGridView Name="clubsGrid" 
+							 Grid.Column="1"
+                             ItemsSource="{Binding Clubs}"
+							 GroupRenderMode="Flat"
+							 NewRowPosition="{Binding SelectedValue, ElementName=myCombo}"/>
+		<StackPanel Orientation="Vertical"  Grid.Column="0" Margin="10,80,0,0" >
+			<TextBlock Text="RadGridView's NewRowPosition"/>
+			<telerik:RadComboBox Margin="0,0,30,0"							
+							 Height="20"
+						 	 ItemsSource="{Binding NewRowPositions, Source={StaticResource MyViewModel}}"
+						     SelectedValuePath="Value"
+						   	 DisplayMemberPath="DisplayName"
+							 SelectedIndex="1"
+							 x:Name="myCombo"/>
+		</StackPanel>
+
+	</Grid>
+</Window>

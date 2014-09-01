@@ -157,6 +157,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerGraphColo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerClustering", "VisualizationLayerClustering\VisualizationLayerClustering.csproj", "{5B41EC2F-67F4-4BB0-8305-0EF947E26473}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerItemsSelection", "VisualizationLayerItemsSelection\VisualizationLayerItemsSelection.csproj", "{5B089555-9F0B-40AC-9581-4D89820DB910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerShapeSelection", "VisualizationLayerShapeSelection\VisualizationLayerShapeSelection.csproj", "{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -472,6 +476,14 @@ Global
 		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B41EC2F-67F4-4BB0-8305-0EF947E26473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B089555-9F0B-40AC-9581-4D89820DB910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B089555-9F0B-40AC-9581-4D89820DB910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B089555-9F0B-40AC-9581-4D89820DB910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B089555-9F0B-40AC-9581-4D89820DB910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

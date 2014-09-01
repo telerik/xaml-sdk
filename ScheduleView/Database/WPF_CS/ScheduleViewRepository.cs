@@ -47,10 +47,7 @@ namespace ScheduleViewDB
 			// Load the exceptions
 			foreach (var item in context.SqlAppointments.Where(a => a.Start < end && a.SqlExceptionOccurrences.Count != 0))
 			{
-				if (item.SqlExceptionOccurrences.Any(e => e.SqlExceptionAppointment != null && 
-															e.SqlExceptionAppointment.Start >= start &&
-															e.SqlExceptionAppointment.End <= end) &&
-															!result.Contains(item))
+				if (item.SqlExceptionOccurrences.Any(e => e.SqlExceptionAppointment != null && e.SqlExceptionAppointment.Start >= start && e.SqlExceptionAppointment.End <= end) && !result.Contains(item))
 				{
 					result.Add(item);
 				}
@@ -61,7 +58,7 @@ namespace ScheduleViewDB
 
 		private static int[] GetSqlAppointmentsIdsByRange(DateTime start, DateTime end)
 		{
-			var result = context.SqlAppointments.Where(a => (a.Start >= start && a.End <= end)).ToList<SqlAppointment>();
+            var result = context.SqlAppointments.Where(a => ((a.Start >= start && a.End <= end) || (a.Start <= start && a.End <= end) || (a.Start >= start && a.End >= end) || (a.Start <= start && a.End >= end))).ToList<SqlAppointment>();
 
 			return result.OfType<SqlAppointment>().Select(e => e.SqlAppointmentId).ToArray();
 		}
