@@ -8,8 +8,13 @@ namespace HelpFunctionality_WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : RadRibbonWindow
     {
+        static MainWindow()
+        {
+            IsWindowsThemeEnabled = false;
+        }
+
         public MainWindow()
         {
             InitializeComponent();

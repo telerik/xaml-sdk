@@ -12,70 +12,60 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-            <TextBlock Text="Please set a valid Bing Maps Key:" Foreground="Red" FontSize="18" />
-            <TextBox x:Name="BingMapsKey" Width="500" Margin="10, 0" BorderBrush="Red" />
-            <Button Click="Button_Click_1" Content="Set Bing Maps Key" />
+        <StackPanel Margin="3" 
+                    Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="Enter Search String:" />
+            <telerik:RadComboBox Name="SearchCondition" 
+                                 IsEditable="True" 
+                                 Margin="0,2" 
+                                 Foreground="Black">
+                <telerik:RadComboBoxItem Content="Restaurants in Honolulu" />
+                <telerik:RadComboBoxItem Content="Chinese restaurants in San Francisco" />
+                <telerik:RadComboBoxItem Content="San Francisco" />
+                <telerik:RadComboBoxItem Content="Eiffel Tower, Paris" />
+                <telerik:RadComboBoxItem Content="Kremlin, Moscow" />
+            </telerik:RadComboBox>
+            <Button Content="Search" 
+                    Click="SearchHandler" 
+                    Margin="0,2" />
         </StackPanel>
 
-        <StackPanel Width="600" Grid.Row="1">
-            <TextBox x:Name="SearchBox"
-                     Text="hotels in Paris"
-                     Margin="0,0,0,10"
-                     Width="200"
-                     HorizontalAlignment="Left" />
-            <Button x:Name="SearchButton"
-                    Content="Search"
-                    Click="SearchButton_Click"
-                    Margin="0,0,0,10"
-                    HorizontalAlignment="Left"
-                    IsEnabled="False" />
-            <telerik:RadMap x:Name="radMap"
-                            ZoomLevel="9"
-                            Center="48.85, 2.35"
-                            Width="600"
-                            Height="480">
-                <telerik:InformationLayer x:Name="informationLayer">
-                    <telerik:InformationLayer.DataMappings>
-                        <telerik:DataMapping FieldName="Location"
-                                             ValueMember="Location" />
-                        <telerik:DataMapping FieldName="BaseZoomLevel"
-                                             ValueMember="ZoomLevel" />
-                        <telerik:DataMapping FieldName="ZoomRange"
-                                             ValueMember="ZoomRange" />
-                    </telerik:InformationLayer.DataMappings>
-                    <telerik:InformationLayer.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <telerik:MapLayer.HotSpot>
-                                    <telerik:HotSpot X="0.5"
-                                                     Y="0.5"
-                                                     ElementName="PART_Ellipse" />
-                                </telerik:MapLayer.HotSpot>
-                                <Ellipse x:Name="PART_Ellipse"
-                                         Width="20"
-                                         Height="20"
-                                         Stroke="Red"
-                                         StrokeThickness="3"
-                                         Fill="Transparent">
-                                    <ToolTipService.ToolTip>
-                                        <ToolTip Content="{Binding Caption}" />
-                                    </ToolTipService.ToolTip>
-                                </Ellipse>
-                            </Grid>
-                        </DataTemplate>
-                    </telerik:InformationLayer.ItemTemplate>
-                </telerik:InformationLayer>
-            </telerik:RadMap>
-            <TextBlock Text="Did you mean ..."></TextBlock>
-            <ListBox x:Name="SuggestionsListBox">
-                <ListBox.ItemTemplate>
+        <telerik:RadMap x:Name="radMap"
+						Grid.Row="1" Grid.Column="1"
+						ZoomLevel="7"
+                        Center="42.358431,-71.059773">
+            <telerik:RadMap.Provider>
+                <telerik:OpenStreetMapProvider />
+            </telerik:RadMap.Provider>
+            <telerik:VisualizationLayer Name="itemsLayer">
+                <telerik:VisualizationLayer.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Caption}" />
+                        <Grid telerik:MapLayer.Location="{Binding Location}">
+                            <telerik:MapLayer.HotSpot>
+                                <telerik:HotSpot X="0.5"
+                                     Y="0.5"
+                                     ElementName="PART_Ellipse" />
+                            </telerik:MapLayer.HotSpot>
+                            <Ellipse x:Name="PART_Ellipse"
+                         Width="20"
+                         Height="20"
+                         Stroke="Red"
+                         StrokeThickness="3"
+                         Fill="Transparent">
+                                <ToolTipService.ToolTip>
+                                    <ToolTip Content="{Binding Title}" />
+                                </ToolTipService.ToolTip>
+                            </Ellipse>
+                        </Grid>
                     </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </StackPanel>
+                </telerik:VisualizationLayer.ItemTemplate>
+            </telerik:VisualizationLayer>
+            <telerik:VisualizationLayer Name="regionLayer"/>
+        </telerik:RadMap>
     </Grid>
 </UserControl>

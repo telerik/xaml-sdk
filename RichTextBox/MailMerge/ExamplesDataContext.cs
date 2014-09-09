@@ -16,24 +16,28 @@ namespace MailMerge
                             FirstName = "Andrew",
                             LastName = "Fuller", 
                             JobTitle = "Junior Support Officer",
+                            RecipientPhoto = @"/MailMerge;component\Images\male1.png",
                         }, 
                         new Employee()
                         {
                             FirstName = "Nancy",
                             LastName = "Davolio", 
                             JobTitle = "Front End Developer",
+                            RecipientPhoto = @"/MailMerge;component/Images/female1.png",
                         },
                         new Employee()
                         {
                             FirstName = "Robert",
                             LastName = "King", 
                             JobTitle = "Senior .NET Developer",
+                            RecipientPhoto = @"/MailMerge;component/Images/male2.png",
                         },
                         new Employee()
                         {
                             FirstName = "Margaret",
                             LastName = "Peacock", 
                             JobTitle = "C#/XAML Developer",
+                            RecipientPhoto = @"/MailMerge;component/Images/female2.png",
                         }
                     };
 

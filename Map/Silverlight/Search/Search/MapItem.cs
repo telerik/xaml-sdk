@@ -1,35 +1,54 @@
-﻿using Telerik.Windows.Controls.Map;
+﻿using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.Map;
 
 namespace Search
 {
-    public class MapItem
+    public class MapItem : ViewModelBase
     {
-        public MapItem()
-        {
-        }
-
-        public string Caption
-        {
-            get;
-            set;
-        }
+        private Location location = Location.Empty;
+        private string title = null;
+        private string description = null;
 
         public Location Location
         {
-            get;
-            set;
+            get
+            {
+                return this.location;
+            }
+
+            set
+            {
+                this.location = value;
+                this.OnPropertyChanged("Location");
+            }
         }
 
-        public double BaseZoomLevel
+        public string Title
         {
-            get;
-            set;
+            get
+            {
+                return this.title;
+            }
+
+            set
+            {
+                this.title = value;
+                this.OnPropertyChanged("Title");
+            }
         }
 
-        public ZoomRange ZoomRange
+        public string Description
         {
-            get;
-            set;
+            get
+            {
+                return this.description;
+            }
+
+            set
+            {
+                this.description = value;
+                this.OnPropertyChanged("Description");
+            }
         }
     }
 }

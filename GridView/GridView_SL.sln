@@ -98,6 +98,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewRowPosition_SL", "NewRow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDirectionTooltip_SL", "SortDirectionTooltip\SortDirectionTooltip_SL.csproj", "{4AC09AFC-9E15-49BA-9200-C20EBD180927}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomDateTimePickerColumn_SL", "CreateCustomDateTimePickerColumn\CreateCustomDateTimePickerColumn_SL.csproj", "{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -289,6 +291,10 @@ Global
 		{4AC09AFC-9E15-49BA-9200-C20EBD180927}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AC09AFC-9E15-49BA-9200-C20EBD180927}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AC09AFC-9E15-49BA-9200-C20EBD180927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

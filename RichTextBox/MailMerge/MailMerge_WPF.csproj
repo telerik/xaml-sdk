@@ -136,7 +136,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Resource Include="SampleData\SampleData.xaml">
+    <Resource Include="SampleData\SampleDocument.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
@@ -149,6 +149,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\female1.png" />
+    <Resource Include="Images\male1.png" />
+    <Resource Include="Images\male2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\female2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

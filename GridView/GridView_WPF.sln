@@ -102,6 +102,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewRowPosition_WPF", "NewRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDirectionTooltip_WPF", "SortDirectionTooltip\SortDirectionTooltip_WPF.csproj", "{1A0D4C68-928E-4236-8131-D1DA1986995A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomDateTimePickerColumn_WPF", "CreateCustomDateTimePickerColumn\CreateCustomDateTimePickerColumn_WPF.csproj", "{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -593,6 +595,16 @@ Global
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

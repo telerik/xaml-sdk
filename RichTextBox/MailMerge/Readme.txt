@@ -1,1 +1,1 @@
-This example illustrates Mail Merge functionality. You could select different authors from the ribbon and different job positions. You can also save the merged document to any of the supported formats.
+This example illustrates the Mail Merge functionality of the control. The item source of the document contains information for the person sending the document, along with its picture.

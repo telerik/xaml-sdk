@@ -13,5 +13,7 @@ namespace MailMerge
         public string LastName { get; set; }
 
         public string JobTitle { get; set; }
+
+        public string RecipientPhoto { get; set; }
     }
 }

@@ -7,54 +7,78 @@ namespace Routing
 {
     public partial class MainPage : UserControl
     {
-        BingRouteProvider routeProvider;
+        private BingRouteProvider routeProvider;
+        private LocationCollection wayPoints = new LocationCollection();
 
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            string bingMapsKey = this.BingMapsKey.Text;
-
-            this.radMap.Provider = new BingMapProvider(MapMode.Aerial, true, bingMapsKey);
 
             this.routeProvider = new BingRouteProvider();
-            this.routeProvider.ApplicationId = (this.radMap.Provider as BingMapProvider).ApplicationId;
+            this.routeProvider.ApplicationId = "AqaPuZWytKRUA8Nm5nqvXHWGL8BDCXvK8onCl2PkC581Zp3T_fYAQBiwIphJbRAK";
             this.routeProvider.MapControl = this.radMap;
-            this.routeProvider.RoutingCompleted += this.routeProvider_RoutingCompleted;
+            this.routeProvider.RoutingCompleted += this.RouteProvider_RoutingCompleted;
 
-            this.ExecuteRouting();
+            this.wayPointsLayer.ItemsSource = this.wayPoints;
         }
 
-        private void routeProvider_RoutingCompleted(object sender, RoutingCompletedEventArgs e)
+        private void MapMouseClick(object sender, MapMouseRoutedEventArgs eventArgs)
         {
-            RouteResponse response = e.Response as RouteResponse;
-            if (response != null)
+            this.wayPoints.Add(eventArgs.Location);
+        }
+
+        private void ClearRouteClicked(object sender, RoutedEventArgs e)
+        {
+            this.findRouteButton.IsEnabled = true;
+
+            this.wayPoints.Clear();
+            this.routeLayer.Items.Clear();
+        }
+
+        private void FindRouteClicked(object sender, RoutedEventArgs e)
+        {
+            this.routeLayer.Items.Clear();
+
+            RouteRequest routeRequest = new RouteRequest();
+            routeRequest.Culture = new System.Globalization.CultureInfo("en-US");
+            routeRequest.Options.RoutePathType = RoutePathType.Points;
+
+            if (this.wayPoints.Count > 1)
             {
-                if (response.Result.RoutePath != null)
+                this.findRouteButton.IsEnabled = false;
+
+                foreach (Location location in this.wayPoints)
                 {
-                    MapPolyline route = new MapPolyline();
-                    route.Points = response.Result.RoutePath.Points;
-                    route.Stroke = new SolidColorBrush(Colors.Red);
-                    route.StrokeThickness = 3;
-                    this.informationLayer.Items.Add(route);
+                    routeRequest.Waypoints.Add(location);
                 }
+                this.routeProvider.CalculateRouteAsync(routeRequest);
             }
         }
 
-        private void ExecuteRouting()
+        private void RouteProvider_RoutingCompleted(object sender, RoutingCompletedEventArgs e)
         {
-            RouteRequest request = new RouteRequest();
-            request.Options.RoutePathType = RoutePathType.Points;
-            Location sofia = new Location(42.7072638273239, 23.3318710327148);
-            Location munich = new Location(48.1364169716835, 11.577525883913);
-            Location amsterdam = new Location(52.3712052404881, 4.8920676112175);
-            request.Waypoints.Add(sofia);
-            request.Waypoints.Add(munich);
-            request.Waypoints.Add(amsterdam);
-            this.routeProvider.CalculateRouteAsync(request);
+            this.findRouteButton.IsEnabled = true;
+
+            RouteResponse routeResponse = e.Response as RouteResponse;
+            if (routeResponse != null
+                && routeResponse.Error == null)
+            {
+                if (routeResponse.Result != null
+                    && routeResponse.Result.RoutePath != null)
+                {
+                    PolylineData routeLine = new PolylineData()
+                    {
+                        Points = routeResponse.Result.RoutePath.Points,
+                        ShapeFill = new MapShapeFill()
+                        {
+                            Stroke = new SolidColorBrush(Colors.Red),
+                            StrokeThickness = 2
+                        }
+                    };
+
+                    this.routeLayer.Items.Add(routeLine);
+                }
+            }
         }
     }
 }

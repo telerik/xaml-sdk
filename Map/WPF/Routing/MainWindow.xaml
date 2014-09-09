@@ -4,23 +4,33 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         Title="MainWindow" Height="800" Width="1200">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-            <TextBlock Text="Please set a valid Bing Maps Key:" Foreground="Red" FontSize="18" />
-            <TextBox x:Name="BingMapsKey" Width="500" Margin="10, 0" BorderBrush="Red" />
-            <Button Click="Button_Click_1" Content="Set Bing Maps Key" />
-        </StackPanel>
-
-        <telerik:RadMap x:Name="radMap"
-                        ZoomLevel="5"
-                        Center="48, 16"
-                        Grid.Row="1">
-            <telerik:InformationLayer x:Name="informationLayer">
-            </telerik:InformationLayer>
+        <telerik:RadMap Name="radMap"
+                        Center="47,15"
+                        ZoomLevel="5" 
+                        MapMouseClick="MapMouseClick">
+            <telerik:RadMap.Provider>
+                <telerik:OpenStreetMapProvider />
+            </telerik:RadMap.Provider>
+            <telerik:VisualizationLayer Name="wayPointsLayer" />
+            <telerik:VisualizationLayer Name="routeLayer"
+                                        UseBitmapCache="False"/>
         </telerik:RadMap>
+
+        <StackPanel Grid.Column="1">
+            <telerik:RadButton Name="findRouteButton" 
+                               Content="Find Route" 
+                               Click="FindRouteClicked" 
+                               Margin="0,2" />
+
+            <telerik:RadButton Name="clearButton" 
+                               Content="Clear Route" 
+                               Click="ClearRouteClicked" 
+                               Margin="0,2" />
+        </StackPanel>
     </Grid>
 </Window>

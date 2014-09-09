@@ -43,8 +43,7 @@
             </telerik:RadToolBar>
         </telerik:RadToolBarTray>
 
-        <telerik:RadRichTextBox Name="editor" LayoutMode="Paged" Grid.Row="1">
-        </telerik:RadRichTextBox>
+        <telerik:RadRichTextBox Name="editor" LayoutMode="Paged" Grid.Row="1" IsSpellCheckingEnabled="False" />
         <telerik:DocumentRuler Grid.Row="1" AssociatedRichTextBox="{Binding ElementName=editor, Mode=OneTime}" Margin="0,0,0,266" />
     </Grid>
 </Window>

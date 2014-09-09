@@ -1,101 +1,156 @@
 ﻿using System.Linq;
 using System.Windows;
+using System.Windows.Browser;
 using System.Windows.Controls;
+using System.Windows.Media;
 using Telerik.Windows.Controls.Map;
 
 namespace Search
 {
     public partial class MainPage : UserControl
     {
-        BingSearchProvider searchProvider;
+        private BingSearchProvider searchProvider;
+        private MapItemsCollection itemCollection = new MapItemsCollection();
 
         public MainPage()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            string bingMapsKey = this.BingMapsKey.Text;
-
-            this.radMap.Provider = new BingMapProvider(MapMode.Aerial, true, bingMapsKey);
 
             this.searchProvider = new BingSearchProvider();
-            searchProvider.ApplicationId = (this.radMap.Provider as BingMapProvider).ApplicationId;
-            searchProvider.MapControl = this.radMap;
-            searchProvider.SearchCompleted += this.searchProvider_SearchCompleted;
+            this.searchProvider.ApplicationId = "AqaPuZWytKRUA8Nm5nqvXHWGL8BDCXvK8onCl2PkC581Zp3T_fYAQBiwIphJbRAK";
+            this.searchProvider.MapControl = this.radMap;
+            this.searchProvider.SearchCompleted += new System.EventHandler<SearchCompletedEventArgs>(Provider_SearchCompleted);
 
-            this.SearchButton.IsEnabled = true;
+            this.itemsLayer.ItemsSource = this.itemCollection;
         }
 
-        private void searchProvider_SearchCompleted(object sender, SearchCompletedEventArgs e)
+        private void SearchHandler(object sender, RoutedEventArgs e)
         {
-            this.informationLayer.Items.Clear();
+            string query = this.SearchCondition.Text;
 
-            SearchResultCollection results = e.Response.ResultSets.First().Results;
+            if (!string.IsNullOrEmpty(query))
+            {
+                SearchRequest request = new SearchRequest();
+                request.Culture = new System.Globalization.CultureInfo("en-US");
+                request.Query = query;
 
+                this.searchProvider.SearchAsync(request);
+            }
+        }
+
+        private void Provider_SearchCompleted(object sender, SearchCompletedEventArgs args)
+        {
+            this.itemCollection.Clear();
+            SearchResultCollection results = args.Response.ResultSets.First().Results;
             if (results.Count > 0)
             {
                 foreach (SearchResultBase result in results)
                 {
-                    MapItem item = new MapItem();
-                    item.Caption = result.Name;
-                    item.Location = result.LocationData.Locations.First();
-                    item.BaseZoomLevel = 9;
-                    item.ZoomRange = new ZoomRange(5, 12);
-                    this.informationLayer.Items.Add(item);
-                }
-            }
-            else
-            {
-                SearchRegion region = e.Response.ResultSets.First().SearchRegion;
-
-                if (region != null)
-                {
-                    this.radMap.SetView(region.GeocodeLocation.BestView);
-
-                    if (region.GeocodeLocation.Address != null && region.GeocodeLocation.Locations.Count > 0)
+                    MapItem item = new MapItem()
                     {
-                        foreach (Location location in region.GeocodeLocation.Locations)
+                        Title = result.Name,
+                        Location = result.LocationData.Locations[0]
+                    };
+                    this.itemCollection.Add(item);
+                }
+                this.radMap.SetView(args.Response.ResultSets[0].SearchRegion.GeocodeLocation.BestView);
+            }
+
+            this.itemCollection.Clear();
+
+            SearchResponse response = args.Response;
+            if (response != null)
+            {
+                if (response.Error == null)
+                {
+                    if (response.ResultSets.Count > 0)
+                    {
+                        this.AddResultsToItemsCollection(response);
+
+                        if (response.ResultSets[0].SearchRegion != null)
                         {
-                            MapItem item = new MapItem();
-                            item.Caption = region.GeocodeLocation.Address.FormattedAddress;
-                            item.Location = location;
-                            item.BaseZoomLevel = 5;
-                            item.ZoomRange = new ZoomRange(5, 12);
-                            this.informationLayer.Items.Add(item);
+                            // Set map viewport to the best view returned in the search result.
+                            this.SetBestView(response);
+
+                            // Show map shape around bounding area
+                            this.ShowBoundingArea(response);
+
+                            this.SearchRegionToItemsCollection(response);
                         }
                     }
                 }
-            }
-
-            SearchRegionCollection alternateRegions = e.Response.ResultSets.First().AlternateSearchRegions;
-
-            if (alternateRegions.Count > 0)
-            {
-                foreach (SearchRegion region in alternateRegions)
+                else
                 {
-                    if (region.GeocodeLocation.Address != null && region.GeocodeLocation.Locations.Count > 0)
-                    {
-                        foreach (Location location in region.GeocodeLocation.Locations)
-                        {
-                            MapItem item = new MapItem();
-                            item.Caption = region.GeocodeLocation.Address.FormattedAddress;
-                            item.Location = location;
-                            item.BaseZoomLevel = 5;
-                            item.ZoomRange = new ZoomRange(5, 12);
-                            this.SuggestionsListBox.Items.Add(item);
-                        }
-                    }
+                    // Show error info.
+                    MessageBox.Show(
+                        response.Error.ToString(),
+                        "Error",
+                        MessageBoxButton.OK);
                 }
             }
         }
 
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private void AddResultsToItemsCollection(SearchResponse response)
         {
-            SearchRequest request = new SearchRequest();
-            request.Query = this.SearchBox.Text;
-            this.searchProvider.SearchAsync(request);
+            if (response.ResultSets[0].Results.Count > 0)
+            {
+                foreach (SearchResultBase result in response.ResultSets[0].Results)
+                {
+                    MapItem item = new MapItem()
+                    {
+                        Title = result.Name,
+                        Location = result.LocationData.Locations[0]
+                    };
+                    this.itemCollection.Add(item);
+                }
+            }
+        }
+
+
+        private void SearchRegionToItemsCollection(SearchResponse response)
+        {
+            if (response.ResultSets[0].SearchRegion.GeocodeLocation != null
+                && response.ResultSets[0].SearchRegion.GeocodeLocation.Address != null
+                && response.ResultSets[0].SearchRegion.GeocodeLocation.Locations.Count > 0)
+            {
+                foreach (Location location in response.ResultSets[0].SearchRegion.GeocodeLocation.Locations)
+                {
+                    MapItem item = new MapItem()
+                    {
+                        Title = response.ResultSets[0].SearchRegion.GeocodeLocation.Address.FormattedAddress,
+                        Location = location
+                    };
+                    this.itemCollection.Add(item);
+                }
+            }
+        }
+
+
+        private void SetBestView(SearchResponse response)
+        {
+            if (response.ResultSets[0].SearchRegion.GeocodeLocation != null)
+            {
+                this.radMap.SetView(response.ResultSets[0].SearchRegion.GeocodeLocation.BestView);
+            }
+            else if (response.ResultSets[0].SearchRegion.BoundingArea != null)
+            {
+                this.radMap.SetView(response.ResultSets[0].SearchRegion.BoundingArea.GeographicalBounds);
+            }
+        }
+
+        private void ShowBoundingArea(SearchResponse response)
+        {
+            if (response.ResultSets[0].SearchRegion.BoundingArea != null)
+            {
+                MapShapeData boundingArea = response.ResultSets[0].SearchRegion.BoundingAreaData;
+                boundingArea.ShapeFill = new MapShapeFill()
+                {
+                    Stroke = new SolidColorBrush(Colors.Red),
+                    StrokeThickness = 1
+                };
+                this.regionLayer.Items.Add(boundingArea);
+            }
         }
     }
 }

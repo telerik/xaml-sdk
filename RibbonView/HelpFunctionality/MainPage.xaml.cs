@@ -14,7 +14,7 @@ using Telerik.Windows.Controls;
 
 namespace HelpFunctionality_SL
 {
-    public partial class MainPage : UserControl
+    public partial class MainPage : RadRibbonWindow
     {
         public MainPage()
         {

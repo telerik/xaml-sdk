@@ -95,22 +95,17 @@ namespace MergeDocuments
         private static void CopyHeaderAndFooter(RadDocument fromDocument, RadDocument toDocument)
         {
             RadDocumentEditor documentEditor = new RadDocumentEditor(toDocument);
+
+            documentEditor.ChangeSectionHeaderLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
             if (!fromDocument.Sections.First.Headers.Default.IsEmpty)
             {
-                documentEditor.ChangeSectionHeader(documentEditor.Document.Sections.First, HeaderFooterType.Default, fromDocument.Sections.Last.Headers.Default);
-            }
-            else
-            {
-                documentEditor.ChangeSectionHeaderLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
+                documentEditor.ChangeSectionHeader(documentEditor.Document.Sections.Last, HeaderFooterType.Default, fromDocument.Sections.Last.Headers.Default);
             }
 
+            documentEditor.ChangeSectionFooterLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
             if (!fromDocument.Sections.First.Footers.Default.IsEmpty)
             {
                 documentEditor.ChangeSectionFooter(documentEditor.Document.Sections.Last, HeaderFooterType.Default, fromDocument.Sections.Last.Footers.Default);
-            }
-            else
-            {
-                documentEditor.ChangeSectionFooterLinkToPrevious(documentEditor.Document.Sections.Last, HeaderFooterType.Default, false);
             }
         }
     }

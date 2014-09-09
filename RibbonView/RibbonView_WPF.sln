@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualGroups-DataBinding_WPF", "ContextualGroups-DataBinding\ContextualGroups-DataBinding_WPF.csproj", "{32E71AFB-040B-488F-84C0-B1D8D1C0289C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleAccessKeys-KeyTips_WPF", "MultipleAccessKeys-KeyTips\MultipleAccessKeys-KeyTips_WPF.csproj", "{ADBDCA39-E85B-4A10-BD3E-A472AF178741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFunctionality_WPF", "HelpFunctionality\HelpFunctionality_WPF.csproj", "{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}"
 EndProject
 Global
 	 
@@ -20,6 +24,10 @@ Global
 		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
