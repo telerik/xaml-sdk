@@ -1,0 +1,1 @@
+This SDK example demonstrates how you can create a CustomRegionAdaptor for the RadTabControl.

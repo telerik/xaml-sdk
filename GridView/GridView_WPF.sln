@@ -104,6 +104,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDirectionTooltip_WPF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomDateTimePickerColumn_WPF", "CreateCustomDateTimePickerColumn\CreateCustomDateTimePickerColumn_WPF.csproj", "{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFilterControl_WPF", "CustomFilterControl\CustomFilterControl_WPF.csproj", "{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringButtonsStates_WPF", "FilteringButtonsStates\FilteringButtonsStates_WPF.csproj", "{57EF56BA-E325-4E1F-AF96-15A88729FBEB}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -605,6 +609,26 @@ Global
 		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Release|x86.ActiveCfg = Release|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{57EF56BA-E325-4E1F-AF96-15A88729FBEB}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

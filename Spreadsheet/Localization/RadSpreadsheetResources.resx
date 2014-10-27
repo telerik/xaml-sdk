@@ -2732,26 +2732,8 @@ Not trying to type a formula? When the first character is an equal (=) or minus 
 • Add the missing operand to the formula, or delete the extra operator.
 • If you are not trying to enter a formula, avoid using an equal sign (=) or a minus sign (-).</value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_NameErrorMessage" xml:space="preserve">
-    <value>Invalid Name Error</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_NotAvailableErrorMessage" xml:space="preserve">
-    <value>Value Not Available Error</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_NotUniqueSheetNameErrorMessage" xml:space="preserve">
     <value>Cannot rename a sheet to the same name as another sheet.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_NullErrorMessage" xml:space="preserve">
-    <value>Null Error</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_NumberErrorMessage" xml:space="preserve">
-    <value>Number Error</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ReferenceErrorMessage" xml:space="preserve">
-    <value>Invalid Cell Reference Error</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ValueErrorMessage" xml:space="preserve">
-    <value>Error in Value</value>
   </data>
   <data name="Spreadsheet_FindAndReplaceDialog_CannotFindData" xml:space="preserve">
     <value>Cannot find the data you're searching for.</value>
@@ -3162,11 +3144,8 @@ or type a valid name for the selection.</value>
   <data name="Spreadsheet_ErrorExpressions_SheetTypeUnsupportedError" xml:space="preserve">
     <value>The sheet type {0} is not supported</value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_TokenNotContained" xml:space="preserve">
-    <value>Token not contained in the InputStringCollection</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_TokenNotFound" xml:space="preserve">
-    <value>Expected token not found: </value>
+    <value>Expected token not found: {0}</value>
   </data>
   <data name="Spreadsheet_ScaleFactorDialog_RangeError" xml:space="preserve">
     <value>The number must be between {0} and {1}. 
@@ -3186,19 +3165,10 @@ the paste area are not the same size and shape.</value>
     <value>The information cannot be pasted.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_CantMergeSingle" xml:space="preserve">
-    <value>Cannot merge single cell.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_CantRedoInBeginUndo" xml:space="preserve">
-    <value>Cannot Redo while in begin undo group.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_CantUndoInBeginUndo" xml:space="preserve">
-    <value>Cannot Undo while in begin undo group.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ClearUndo" xml:space="preserve">
-    <value>Clear Undo while in begin undo group</value>
+    <value>Cannot merge a single cell.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_ExistingSheetName" xml:space="preserve">
-    <value>Sheet with Name={0} already exist.</value>
+    <value>Sheet with Name={0} already exists.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_FormatStringInvalid" xml:space="preserve">
     <value>Invalid Formatting String.</value>
@@ -3206,20 +3176,8 @@ the paste area are not the same size and shape.</value>
   <data name="Spreadsheet_ErrorExpressions_FormulaValueRequired" xml:space="preserve">
     <value>Name requires formula cell value</value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_GreaterOrEqual" xml:space="preserve">
-    <value>{0} should be greater or equal than {1}.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_HistoryDepth" xml:space="preserve">
-    <value>History depth should be a positive number</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_InvalidFormatStringType" xml:space="preserve">
     <value>Invalid format string type.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_InvalidModificator" xml:space="preserve">
-    <value>Invalid modificator.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_InvalidMonth" xml:space="preserve">
-    <value>Invalid month.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_InvalidName" xml:space="preserve">
     <value>The name that you entered is not valid.
@@ -3235,20 +3193,8 @@ Reasons for this can include:
   <data name="Spreadsheet_ErrorExpressions_ItemAlreadyAdded" xml:space="preserve">
     <value>The item has already been added to another worksheet.</value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_LessOrEqual" xml:space="preserve">
-    <value>{0} should be less or equal than {1}.</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_Missing" xml:space="preserve">
     <value> is missing!</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_MustBeFalse" xml:space="preserve">
-    <value>{0} must be false.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_MustBeTrue" xml:space="preserve">
-    <value>{0} must be true.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_MustBeValidDouble" xml:space="preserve">
-    <value>{0} must be a valid double.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_NameExists" xml:space="preserve">
     <value>The name entered already exists. Enter a unique name.</value>
@@ -3262,53 +3208,17 @@ Reasons for this can include:
   <data name="Spreadsheet_ErrorExpressions_NoActiveUpdate" xml:space="preserve">
     <value>There is no active update to end.</value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_NotSupportedInStyles" xml:space="preserve">
-    <value>The {0} property is not supported in styles.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_OnDetachAction" xml:space="preserve">
-    <value>OnDetachAction method must be static otherwise the event WeakEventListener cannot guarantee to unregister the handler.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_OnEventAction" xml:space="preserve">
-    <value>OnEventAction method must be static otherwise the event WeakEventListener class does not prevent memory leaks.</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_OwnerType" xml:space="preserve">
     <value>owner must be of type </value>
   </data>
-  <data name="Spreadsheet_ErrorExpressions_PositiveHeight" xml:space="preserve">
-    <value>Height must be greater or equal to 0</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_PositiveWidth" xml:space="preserve">
-    <value>Width must be greater or equal to 0</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_PositiveWidthAndHeight" xml:space="preserve">
-    <value>Width and height must be greater or equal to 0</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_SameWorkbook" xml:space="preserve">
-    <value>Worksheets should be in the same workbook.</value>
-  </data>
   <data name="Spreadsheet_ErrorExpressions_SheetAlreadyAdded" xml:space="preserve">
     <value>The sheet has already been added to another workbook.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ShouldBeEqual" xml:space="preserve">
-    <value>{0} should be equal to {1}.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ShouldBeNull" xml:space="preserve">
-    <value> should be null</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_StyleExists" xml:space="preserve">
-    <value>Style with name '{0}' already exists.</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_UnknownUnitType" xml:space="preserve">
     <value>Unknown UnitType</value>
   </data>
   <data name="Spreadsheet_ErrorExpressions_UpdateContextType" xml:space="preserve">
     <value>updateContext must be of type </value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_ValueError" xml:space="preserve">
-    <value>The value must belong to the same workbook.</value>
-  </data>
-  <data name="Spreadsheet_ErrorExpressions_WithinRange" xml:space="preserve">
-    <value>{0} should be greater or equal than {1} and less or equal than {2}.</value>
   </data>
   <data name="Spreadsheet_InsertFunctionDialog_Recommended" xml:space="preserve">
     <value>Recommended</value>
@@ -3916,5 +3826,362 @@ You can also define your own cell styles.</value>
   </data>
   <data name="Spreadsheet_FormatShapesDialog_Width" xml:space="preserve">
     <value>Width:</value>
+  </data>
+   <data name="Spreadsheet_NameCollection_EmptyWorkbookError" xml:space="preserve">
+    <value>Workbook should contain at least one worksheet.</value>
+  </data>
+  <data name="Spreadsheet_Protection_ProtectAProtectedWorkbook_Error" xml:space="preserve">
+    <value>Cannot protect workbook that is already protected.</value>
+  </data>
+  <data name="Spreadsheet_Protection_UnprotectAnUnprotectedWorkbook_Error" xml:space="preserve">
+    <value>Cannot unprotect workbook that is not protected.</value>
+  </data>
+  <data name="Spreadsheet_Functions_Args_Base" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_CellColorSortType" xml:space="preserve">
+    <value>Cell Color</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_Column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_FontColorSortType" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_Header" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="Spreadsheet_Command_NoData" xml:space="preserve">
+    <value>The command could not be completed by using the range specified. Select a range containing data and try again.</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_ValuesSortType" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="Spreadsheet_Command_WrongSelection" xml:space="preserve">
+    <value>The command you chose cannot be performed with multiple selections. Select a single range and click the command again.</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_CustomListsHeader" xml:space="preserve">
+    <value>Custom Lists</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_CustomListsLabel" xml:space="preserve">
+    <value>Custom lists:</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_Header" xml:space="preserve">
+    <value>Custom Lists</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_ListEntriesLabel" xml:space="preserve">
+    <value>List entries:</value>
+  </data>
+  <data name="Spreadsheet_CustomSortListsDialog_NewList" xml:space="preserve">
+    <value>NEW LIST</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_AddLevel" xml:space="preserve">
+    <value>Add Level</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_CopyLevel" xml:space="preserve">
+    <value>Copy Level</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_DeleteLevel" xml:space="preserve">
+    <value>Delete Level</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_LargestToSmallest" xml:space="preserve">
+    <value>Largest to Smallest</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_OnBottom" xml:space="preserve">
+    <value>On Bottom</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_OnTop" xml:space="preserve">
+    <value>On Top</value>
+  </data>
+  <data name="Spreadsheet_SortingDialog_SmallestToLargest" xml:space="preserve">
+    <value>Smallest to Largest</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_DoesNotEqual" xml:space="preserve">
+    <value>does not equal</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_Equals" xml:space="preserve">
+    <value>equals</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_GreaterThan" xml:space="preserve">
+    <value>is greater than</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_GreaterThanOrEqualTo" xml:space="preserve">
+    <value>is greater than or equal to</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_Header" xml:space="preserve">
+    <value>Custom Filter</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_LessThan" xml:space="preserve">
+    <value>is less than</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_LessThanOrEqualTo" xml:space="preserve">
+    <value>is less than or equal to</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="Spreadsheet_CustomFilterDialog_ShowRowsWhere" xml:space="preserve">
+    <value>Show rows where:</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Header" xml:space="preserve">
+    <value>Top Filter</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Percent" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Spreadsheet_TopFilterDialog_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Spreadsheet_Sorting_DuplicatedSortConditions" xml:space="preserve">
+    <value>Duplicated sort conditions.</value>
+  </data>
+  <data name="Spreadsheet_Command_MergedCells" xml:space="preserve">
+    <value>Cannot sort a range containing merged cells.</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Spreadsheet_ProtectDialog_Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_CustomSort" xml:space="preserve">
+    <value>Custom sort...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_SortByColor" xml:space="preserve">
+    <value>Sort by Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_SortLargestToSmallest" xml:space="preserve">
+    <value>Sort Z to A</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_SortSmallestToLargest" xml:space="preserve">
+    <value>Sort A to Z</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_AboveAverage" xml:space="preserve">
+    <value>Above Average</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_AllDatesInThePeriod" xml:space="preserve">
+    <value>All Dates in the Period</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_BelowAverage" xml:space="preserve">
+    <value>Below Average</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Between" xml:space="preserve">
+    <value>Between...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ClearFilter" xml:space="preserve">
+    <value>Clear Filter</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_CustomFilter" xml:space="preserve">
+    <value>Custom Filter...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_DateFilters" xml:space="preserve">
+    <value>Date Filters</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_December" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_DoesNotEqual" xml:space="preserve">
+    <value>Does Not Equal...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Equals" xml:space="preserve">
+    <value>Equals...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_FilterByCellColor" xml:space="preserve">
+    <value>Filter by Cell Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_FilterByColor" xml:space="preserve">
+    <value>Filter by Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_FilterByFontColor" xml:space="preserve">
+    <value>Filter by Font Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_GreaterThan" xml:space="preserve">
+    <value>Greater Than...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_GreaterThanOrEqualTo" xml:space="preserve">
+    <value>Greater Than Or Equal To...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LastMonth" xml:space="preserve">
+    <value>Last Month</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LastQuarter" xml:space="preserve">
+    <value>Last Quarter</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LastWeek" xml:space="preserve">
+    <value>Last Week</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LastYear" xml:space="preserve">
+    <value>Last Year</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LessThan" xml:space="preserve">
+    <value>Less Than...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_LessThanOrEqualTo" xml:space="preserve">
+    <value>Less Than Or Equal To...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_NextMonth" xml:space="preserve">
+    <value>Next Month</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_NextQuarter" xml:space="preserve">
+    <value>Next Quarter</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_NextWeek" xml:space="preserve">
+    <value>Next Week</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_NextYear" xml:space="preserve">
+    <value>Next Year</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_NumberFilters" xml:space="preserve">
+    <value>Number Filters</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Quarter1" xml:space="preserve">
+    <value>Quarter 1</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Quarter2" xml:space="preserve">
+    <value>Quarter 2</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Quarter3" xml:space="preserve">
+    <value>Quarter 3</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Quarter4" xml:space="preserve">
+    <value>Quarter 4</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_SortByCellColor" xml:space="preserve">
+    <value>Sort by Cell Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_SortByFontColor" xml:space="preserve">
+    <value>Sort by Font Color</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_TextFilters" xml:space="preserve">
+    <value>Text Filters</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ThisMonth" xml:space="preserve">
+    <value>This Month</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ThisQuarter" xml:space="preserve">
+    <value>This Quarter</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ThisWeek" xml:space="preserve">
+    <value>This Week</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ThisYear" xml:space="preserve">
+    <value>This Year</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Top10" xml:space="preserve">
+    <value>Top 10...</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_YearToDate" xml:space="preserve">
+    <value>Year to Date</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="Spreadsheet_Filtering_ColumnFiltered" xml:space="preserve">
+    <value>This column is already filtered. Remove the filter before applying a new one.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_InvalidDynamicFilter" xml:space="preserve">
+    <value>Invalid dynamic filter type.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_MergedException" xml:space="preserve">
+    <value>Cannot merge part of a filtered range.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_MergedException2" xml:space="preserve">
+    <value>The filter range cannot contain merged cells.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_NoFilterFound" xml:space="preserve">
+    <value>No filter was found to reapply.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_RangeFilterNotAssigned" xml:space="preserve">
+    <value>This filter is not yet assigned to a column.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_RangeMustBeAssigned" xml:space="preserve">
+    <value>The filter range must be assigned before a filter is applied.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_UnfilteredColumn" xml:space="preserve">
+    <value>This column is not filtered.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_UnknownCompareOperator" xml:space="preserve">
+    <value>Unknown compare operator.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_HyperlinkException" xml:space="preserve">
+    <value>Cannot insert a hyperlink on a filtered range.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_HyperlinkException2" xml:space="preserve">
+    <value>The filter range cannot contain hyperlinks.</value>
+  </data>
+  <data name="Spreadsheet_Filtering_ChangeFilteredRange" xml:space="preserve">
+    <value>This operation is attempting to change a filtered range on your worksheet and cannot be completed. To complete this operation, AutoFilters in the sheet need to be removed.</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ColorSelectorAutomatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_ColorSelectorNoFill" xml:space="preserve">
+    <value>No Fill</value>
+  </data>
+  <data name="Spreadsheet_Sorting_InvalidSortCondition" xml:space="preserve">
+    <value>Invalid sort condition.</value>
+  </data>
+  <data name="Spreadsheet_FilteringPopup_Oversize" xml:space="preserve">
+    <value>Only the first 10000 unique items are displayed.</value>
   </data>
 </root>

@@ -9,7 +9,6 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
-        <spreadsheetControls:InversedBoolToVisibilityValueConverter x:Key="InversedBoolToVisibilityValueConverter"/>
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot">
@@ -85,12 +84,12 @@
                                              Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                         <telerik:RadMenuItem Header="Insert Rows"
-                                         Command="{Binding Path=InsertRows.Command}"
-                                         Visibility="{Binding Path=InsertCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
+                                         Command="{Binding Path=ContextMenuInsertRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuInsertRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                         <telerik:RadMenuItem Header="Delete Rows"
-                                         Command="{Binding Path=RemoveRows.Command}"
-                                         Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
+                                         Command="{Binding Path=ContextMenuRemoveRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuRemoveRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                         <telerik:RadMenuItem Header="Clear Contents" 
                                              Command="{Binding Path=Clear.Command}"

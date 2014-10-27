@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentColorBasedOnResource_SL", "AppointmentColorBasedOnResource\AppointmentColorBasedOnResource_SL.csproj", "{8DEDF061-6376-4999-8D9D-3FF43AB2CE0C}"
@@ -36,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB.Web", "Database\SL_CS\WithDB.Web\WithDB.Web.csproj", "{99D6D733-DB24-4D38-843B-2FDCBF6CE516}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchicalGroupingAndFilteringWithTreeView_SL", "HierarchicalGroupingAndFilteringWithTreeView\HierarchicalGroupingAndFilteringWithTreeView_SL.csproj", "{59960608-9665-4664-BE62-D08B1A70919C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exporting_SL", "Exporting\Exporting_SL.csproj", "{9B7694FA-5E43-4356-9E52-2720CA03D5ED}"
 EndProject
 Global
 	 
@@ -108,6 +108,10 @@ Global
 		{59960608-9665-4664-BE62-D08B1A70919C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59960608-9665-4664-BE62-D08B1A70919C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59960608-9665-4664-BE62-D08B1A70919C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7694FA-5E43-4356-9E52-2720CA03D5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7694FA-5E43-4356-9E52-2720CA03D5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7694FA-5E43-4356-9E52-2720CA03D5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7694FA-5E43-4356-9E52-2720CA03D5ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

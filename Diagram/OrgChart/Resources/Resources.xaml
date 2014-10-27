@@ -92,7 +92,8 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <Grid Visibility="{TemplateBinding GeometryVisibility}" Width="12" Height="12">
+							<Grid Visibility="{Binding Path=(extensions:GeometryButtons.GeometryVisibility), RelativeSource={RelativeSource TemplatedParent}}"
+								  Width="12" Height="12">
                                 <Ellipse x:Name="Ellipse" Fill="Transparent" Stroke="{StaticResource PathFill}"
 										StrokeThickness="2"
 										Visibility="{Binding Path=(extensions:GeometryButtons.EllipseVisibility), RelativeSource={RelativeSource TemplatedParent}}" />
@@ -223,7 +224,8 @@
                         <StackPanel Orientation="Horizontal" Margin="6"
 								VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
 								HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
-                            <Grid Visibility="{TemplateBinding GeometryVisibility}" Width="20" Height="20">
+							<Grid Visibility="{Binding Path=(extensions:GeometryButtons.GeometryVisibility), RelativeSource={RelativeSource TemplatedParent}}"
+								  Width="20" Height="20">
                                 <Viewbox Stretch="Uniform">
                                     <Path x:Name="Path" Stretch="None" HorizontalAlignment="Center"
 											VerticalAlignment="Center" Data="{TemplateBinding Geometry}"

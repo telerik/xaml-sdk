@@ -1,0 +1,50 @@
+﻿<Window x:Class="TimeBarOverChartView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <telerik:RadVerticalDataAxis x:Name="verticalAxis" 
+                                         Minimum="{Binding VerticalAxis.ActualRange.Minimum, ElementName=chart1}" 
+                                         Maximum="{Binding VerticalAxis.ActualRange.Maximum, ElementName=chart1}"
+                                         Step="{Binding VerticalAxis.ActualMajorStep, ElementName=chart1}"/>
+            <telerik:RadCartesianChart x:Name="chart1" Grid.Column="1" MinHeight="1">
+                <telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:DateTimeContinuousAxis Visibility="Collapsed" />
+                </telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:LinearAxis Visibility="Collapsed" />
+                </telerik:RadCartesianChart.VerticalAxis>
+                <telerik:RadCartesianChart.Series>
+                    <telerik:LineSeries CategoryBinding="Date" ValueBinding="Val" ItemsSource="{Binding}" />
+                </telerik:RadCartesianChart.Series>
+            </telerik:RadCartesianChart>
+            <telerik:RadTimeBar x:Name="timeBar1" 
+                                Grid.Column="1"
+                                PeriodStart="{Binding HorizontalAxis.ActualRange.Minimum, ElementName=chart1}"
+                                PeriodEnd="{Binding HorizontalAxis.ActualRange.Maximum, ElementName=chart1}"
+                                Background="Transparent">
+                <telerik:RadTimeBar.SliderStyle>
+                    <Style TargetType="telerik:RadSlider" BasedOn="{StaticResource TimeBar_SliderStyle}">
+                        <EventSetter Event="SelectionChanged" Handler="slider_SelectionChanged" />
+                        <EventSetter Event="SizeChanged" Handler="slider_SizeChanged" />
+                    </Style>
+                </telerik:RadTimeBar.SliderStyle>
+                <telerik:RadTimeBar.Intervals>
+                    <telerik:MonthInterval />
+                    <telerik:WeekInterval />
+                    <telerik:MonthInterval />
+                    <telerik:DayInterval />
+                </telerik:RadTimeBar.Intervals>
+                <telerik:RadTimeBar.Content>
+                    <FrameworkElement x:Name="timeBarContent1" SizeChanged="timeBarContent_SizeChanged" />
+                </telerik:RadTimeBar.Content>
+            </telerik:RadTimeBar>
+        </Grid>
+    </Grid>
+</Window>

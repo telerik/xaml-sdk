@@ -1,0 +1,12 @@
+﻿<Window x:Class="CustomTooltip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomTooltip"
+        Title="Custom Tooltip"
+        WindowStartupLocation="CenterScreen"
+        Height="880"
+        Width="520">
+    <Grid>
+        <local:Example />
+    </Grid>
+</Window>

@@ -49,7 +49,8 @@
                         <StackPanel Orientation="Horizontal" Margin="6"
 								VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
 								HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
-                            <Grid Visibility="{TemplateBinding GeometryVisibility}" Width="20" Height="20">
+							<Grid Visibility="{Binding Path=(extensions:GeometryButtons.GeometryVisibility), RelativeSource={RelativeSource TemplatedParent}}"
+								  Width="20" Height="20">
                                 <Viewbox Stretch="Uniform">
                                     <Path x:Name="Path" Stretch="None" HorizontalAlignment="Center"
 											VerticalAlignment="Center" Data="{TemplateBinding Geometry}"

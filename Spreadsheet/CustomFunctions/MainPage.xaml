@@ -14,7 +14,6 @@
                                                DarkBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Dark/"/>
 
         <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
-        <spreadsheetControls:InversedBoolToVisibilityValueConverter x:Key="InversedBoolToVisibilityValueConverter"/>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
@@ -1739,7 +1738,7 @@
                             <telerik:RadNumericUpDown MaxWidth="150"
                                                       Grid.Column="2"
                                                       VerticalAlignment="Center"
-                                                      Value="{Binding Path=SetShapeWidth.SelectedValue, TargetNullValue='', Mode=TwoWay}"
+                                                      Value="{Binding Path=SetShapeWidth.SelectedValue, Mode=TwoWay}"
                                                       Minimum="0.1"
                                                       Maximum="2348"
                                                       SmallChange="0.1"
@@ -1760,7 +1759,7 @@
                                                       Margin="0 2 0 0" 
                                                       VerticalAlignment="Center"
                                                       Grid.Row="1"
-                                                      Value="{Binding Path=SetShapeHeight.SelectedValue, TargetNullValue='', Mode=TwoWay}"
+                                                      Value="{Binding Path=SetShapeHeight.SelectedValue, Mode=TwoWay}"
                                                       Minimum="0.1"
                                                       Maximum="2348"
                                                       SmallChange="0.1"
@@ -1827,12 +1826,12 @@
                                          Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                     <telerik:RadMenuItem Header="Insert Rows"
-                                         Command="{Binding Path=InsertRows.Command}"
-                                         Visibility="{Binding Path=InsertCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
+                                         Command="{Binding Path=ContextMenuInsertRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuInsertRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                     <telerik:RadMenuItem Header="Delete Rows"
-                                         Command="{Binding Path=RemoveRows.Command}"
-                                         Visibility="{Binding Path=RemoveCells.IsEnabled, Mode=TwoWay, Converter={StaticResource InversedBoolToVisibilityValueConverter}}"/>
+                                         Command="{Binding Path=ContextMenuRemoveRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuRemoveRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
                     <telerik:RadMenuItem Header="Clear Contents" 
                                          Command="{Binding Path=Clear.Command}"

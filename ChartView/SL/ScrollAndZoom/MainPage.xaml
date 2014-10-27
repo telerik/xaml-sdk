@@ -18,7 +18,7 @@
 			</telerik:RadCartesianChart.VerticalAxis>
 
 			<telerik:RadCartesianChart.Behaviors>
-				<telerik:ChartPanAndZoomBehavior ZoomMode="Both">
+				<telerik:ChartPanAndZoomBehavior x:Name="panZoomBehavior" ZoomMode="Both" DragToZoomThreshold="10">
 				</telerik:ChartPanAndZoomBehavior>
 			</telerik:RadCartesianChart.Behaviors>
 

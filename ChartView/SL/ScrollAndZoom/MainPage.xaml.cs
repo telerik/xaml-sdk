@@ -17,6 +17,16 @@ namespace ScrollAndZoom
 		public MainPage()
 		{
 			InitializeComponent();
+
+            this.KeyDown += this.MainPage_KeyDown;
 		}
+
+        private void MainPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            { 
+                panZoomBehavior.CancelDragToZoom(); 
+            }
+        }
 	}
 }

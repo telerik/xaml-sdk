@@ -1,0 +1,1 @@
+This example demonstrates how to create and apply a custom filtering control for RadGridView.

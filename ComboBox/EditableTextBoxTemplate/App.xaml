@@ -137,6 +137,7 @@
                             <telerik:RadToggleButton x:Name="PART_DropDownButton"
                                     Grid.Column="1"
                                     IsTabStop="False"
+                                    Background="Transparent"
                                     VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     Style="{StaticResource EditableComboToggleButtonStyle}"

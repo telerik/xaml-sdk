@@ -1,0 +1,11 @@
+﻿<Window x:Class="CustomTabControlRegionAdapter.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:prism="http://www.codeplex.com/prism"
+		xmlns:inf="clr-namespace:CustomTabControlRegionAdapter.Infrastructure"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="Shell_WPF" >
+	<Grid>
+		<telerik:RadTabControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.TabControlRegion}" />
+	</Grid>
+</Window>

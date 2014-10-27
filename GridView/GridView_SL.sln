@@ -100,6 +100,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDirectionTooltip_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomDateTimePickerColumn_SL", "CreateCustomDateTimePickerColumn\CreateCustomDateTimePickerColumn_SL.csproj", "{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFilterControl_SL", "CustomFilterControl\CustomFilterControl_SL.csproj", "{8B4E1A54-61DE-48D3-A961-E6A3096FF6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringButtonsStates_SL", "FilteringButtonsStates\FilteringButtonsStates_SL.csproj", "{785C14DD-D531-457E-A569-BDBAC4EC30B5}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -295,6 +299,14 @@ Global
 		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EAB03FF-9DC1-4BE6-9E00-4CEC4225D765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4E1A54-61DE-48D3-A961-E6A3096FF6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4E1A54-61DE-48D3-A961-E6A3096FF6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4E1A54-61DE-48D3-A961-E6A3096FF6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4E1A54-61DE-48D3-A961-E6A3096FF6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

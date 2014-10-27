@@ -1,17 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Windows;
 using System.Windows.Input;
 using Microsoft.Win32;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
 using Telerik.Windows.Documents.Fixed.Model;
 using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Data;
 using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Windows.Documents.Fixed.Model.Editing.Flow;
 using Telerik.Windows.Documents.Fixed.Model.Graphics;
 using FontFamily = System.Windows.Media.FontFamily;
+using FontStyles = System.Windows.FontStyles;
+using FontWeights = System.Windows.FontWeights;
+using Point = System.Windows.Point;
+using Size = System.Windows.Size;
 
 namespace GenerateDocument
 {
@@ -27,6 +30,18 @@ namespace GenerateDocument
 
         public ICommand Save { get; private set; }
 
+        private static void CenterText(FixedContentEditor editor, string text)
+        {
+            Block block = new Block();
+            block.TextProperties.TrySetFont(new FontFamily("Calibri"));
+            block.HorizontalAlignment = HorizontalAlignment.Center;
+            block.VerticalAlignment = VerticalAlignment.Center;
+            block.GraphicProperties.FillColor = RgbColors.White;
+            block.InsertText(text);
+
+            editor.DrawBlock(block, new Size(96, 96));
+        }
+
         private void Export(object param)
         {
             PdfFormatProvider formatProvider = new PdfFormatProvider();
@@ -41,8 +56,7 @@ namespace GenerateDocument
                 {
                     RadFixedDocument document = this.CreateDocument();
                     formatProvider.Export(document, stream);
-                    MessageBox.Show("Saved.");
-
+                    System.Windows.MessageBox.Show("Saved.");
                 }
             }
         }
@@ -58,6 +72,7 @@ namespace GenerateDocument
             {
                 editor.DrawImage(stream);
             }
+
             double currentTopOffset = 110;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
             double maxWidth = page.Size.Width - defaultLeftIndent * 2;
@@ -67,12 +82,9 @@ namespace GenerateDocument
             currentTopOffset += defaultLineHeight * 4;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
 
-            using (editor.SaveGraphicProperties())
+            using (editor.SaveProperties())
             {
-                using (editor.SaveTextProperties())
-                {
-                    this.DrawFunnelFigure(editor);
-                }
+                this.DrawFunnelFigure(editor);
             }
 
             editor.Position.Translate(defaultLeftIndent * 4, page.Size.Height - 100);
@@ -88,17 +100,16 @@ namespace GenerateDocument
 
         private void DrawDescription(FixedContentEditor editor, double maxWidth)
         {
-            editor.GraphicProperties.FillColor = RgbColors.Black;
-            editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Left;
-            editor.TextProperties.TextBlockWidth = maxWidth;
-            using (editor.BeginText())
-            {
-                editor.TextProperties.FontSize = 14;
-                editor.TextProperties.TrySetFont(new FontFamily("Calibri"), FontStyles.Italic, FontWeights.Bold);
-                editor.DrawText("RadPdfProcessing");
-                editor.TextProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
-                editor.DrawText(" is a document processing library that enables your application to import and export files to and from PDF format. The document model is entirely independent from UI and allows you to generate sleek documents with differently formatted text, images, shapes and more.");
-            }
+            Block block = new Block();
+            block.GraphicProperties.FillColor = RgbColors.Black;
+            block.HorizontalAlignment = HorizontalAlignment.Left;
+            block.TextProperties.FontSize = 14;
+            block.TextProperties.TrySetFont(new FontFamily("Calibri"), FontStyles.Italic, FontWeights.Bold);
+            block.InsertText("RadPdfProcessing");
+            block.TextProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
+            block.InsertText(" is a document processing library that enables your application to import and export files to and from PDF format. The document model is entirely independent from UI and allows you to generate sleek documents with differently formatted text, images, shapes and more.");
+
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
         }
 
         private void DrawText(FixedContentEditor editor, double maxWidth)
@@ -107,99 +118,92 @@ namespace GenerateDocument
             currentTopOffset += defaultLineHeight * 2;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
             editor.TextProperties.FontSize = 11;
-            using (editor.BeginText())
+
+            Block block = new Block();
+            block.TextProperties.FontSize = 11;
+            block.TextProperties.TrySetFont(new FontFamily("Arial"));
+            block.InsertText("A wizard's job is to vex ");
+            using (block.GraphicProperties.Save())
             {
-                editor.TextProperties.TrySetFont(new FontFamily("Arial"));
-                editor.DrawText("A wizard's job is to vex ");
-                using (editor.SaveGraphicProperties())
-                {
-                    editor.GraphicProperties.FillColor = new RgbColor(255, 146, 208, 80);
-                    editor.DrawText("chumps");
-                }
-                editor.DrawText(" quickly in fog.");
+                block.GraphicProperties.FillColor = new RgbColor(255, 146, 208, 80);
+                block.InsertText("chumps");
             }
+
+            block.InsertText(" quickly in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+
+            block = new Block();
+            block.TextProperties.FontSize = 11;
+            block.TextProperties.TrySetFont(new FontFamily("Trebuchet MS"));
+            block.InsertText("A wizard's job is to vex chumps ");
+            using (block.TextProperties.Save())
             {
-                editor.TextProperties.TrySetFont(new FontFamily("Trebuchet MS"));
-                editor.DrawText("A wizard's job is to vex chumps ");
-                using (editor.SaveTextProperties())
-                {
-                    editor.TextProperties.TextDecoration = Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations.Underline;
-                    editor.DrawText("quickly");
-                }
-                editor.DrawText(" in fog.");
+                block.TextProperties.UnderlinePattern = UnderlinePattern.Single;
+                block.TextProperties.UnderlineColor = editor.GraphicProperties.FillColor;
+                block.InsertText("quickly");
             }
+
+            block.InsertText(" in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+            block = new Block();
+            block.TextProperties.FontSize = 11;
+            block.TextProperties.TrySetFont(new FontFamily("Algerian"));
+            block.InsertText("A ");
+            using (block.TextProperties.Save())
             {
-                editor.TextProperties.TrySetFont(new FontFamily("Algerian"));
-                editor.DrawText("A ");
-                using (editor.SaveTextProperties())
-                {
-                    editor.TextProperties.TextDecoration = Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations.Underline;
-                    editor.DrawText("wizard's");
-                }
-                editor.DrawText(" job is to vex chumps quickly in fog.");
+                block.TextProperties.UnderlinePattern = UnderlinePattern.Single;
+                block.TextProperties.UnderlineColor = editor.GraphicProperties.FillColor;
+                block.InsertText("wizard's");
             }
+
+            block.InsertText(" job is to vex chumps quickly in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
-            {
-                editor.TextProperties.TrySetFont(new FontFamily("Lucida Calligraphy"));
-                editor.DrawText("A wizard's job is to vex chumps quickly in fog.");
-            }
+
+            editor.TextProperties.TrySetFont(new FontFamily("Lucida Calligraphy"));
+            editor.DrawText("A wizard's job is to vex chumps quickly in fog.", new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight + 2;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+            block = new Block();
+            block.TextProperties.FontSize = 11;
+            block.TextProperties.TrySetFont(new FontFamily("Consolas"));
+            block.InsertText("A wizard's job is to vex chumps ");
+            using (block.TextProperties.Save())
             {
-                editor.TextProperties.TrySetFont(new FontFamily("Consolas"));
-                editor.DrawText("A wizard's job is to vex chumps ");
-                using (editor.SaveTextProperties())
-                {
-                    editor.TextProperties.TrySetFont(new FontFamily("Consolas"), FontStyles.Normal, FontWeights.Bold);
-                    editor.DrawText("quickly");
-                }
-                editor.DrawText(" in fog.");
+                block.TextProperties.TrySetFont(new FontFamily("Consolas"), FontStyles.Normal, FontWeights.Bold);
+                block.InsertText("quickly");
             }
+
+            block.InsertText(" in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
-            {
-                editor.TextProperties.TrySetFont(new FontFamily("Arial"));
-                editor.DrawText("Ταχίστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός.");
-            }
+            editor.TextProperties.TrySetFont(new FontFamily("Arial"));
+            editor.DrawText("Ταχίστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός.", new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
-            {
-                editor.DrawText("В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!");
-            }
+            editor.DrawText("В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!", new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            editor.TextProperties.TextBlockWidth = maxWidth;
-            using (editor.BeginText())
-            {
-                editor.DrawText("El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío; añoraba a su querido cachorro.");
-            }
+            editor.DrawText("El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío; añoraba a su querido cachorro.", new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
 
-            using (editor.BeginText())
-            {
-                editor.TextProperties.TrySetFont(new FontFamily("Malgun Gothic"));
-                editor.DrawText("키스의 고유조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다.");
-            }
+            editor.TextProperties.TrySetFont(new FontFamily("Malgun Gothic"));
+            editor.DrawText("키스의 고유조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다.", new Size(maxWidth, double.PositiveInfinity));
         }
 
         private void DrawFunnelFigure(FixedContentEditor editor)
@@ -213,35 +217,19 @@ namespace GenerateDocument
             editor.GraphicProperties.StrokeThickness = 1;
             editor.GraphicProperties.FillColor = new RgbColor(91, 155, 223);
             editor.DrawEllipse(new Point(289, 77), 48, 48);
-            editor.TextProperties.TrySetFont(new FontFamily("Calibri"));
-            editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Center;
-            editor.TextProperties.VerticalAlignment = VerticalTextAlignment.Center;
-            editor.TextProperties.TextBlockWidth = 96;
-            editor.TextProperties.TextBlockHeight = 96;
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(291, 204);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Fonts");
-            }
+
+            editor.Position.Translate(291, 204);
+            CenterText(editor, "Fonts");
 
             editor.Position.Translate(0, 0);
             editor.DrawEllipse(new Point(238, 274), 48, 48);
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(190, 226);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Images");
-            }
+            editor.Position.Translate(190, 226);
+            CenterText(editor, "Images");
 
             editor.Position.Translate(0, 0);
             editor.DrawEllipse(new Point(307, 347), 48, 48);
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(259, 299);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Shapes");
-            }
+            editor.Position.Translate(259, 299);
+            CenterText(editor, "Shapes");
 
             editor.Position.Translate(0, 0);
             PathGeometry arrow = new PathGeometry();
@@ -274,24 +262,19 @@ namespace GenerateDocument
             figure.IsClosed = true;
             figure.StartPoint = new Point(151, 245);
             figure.Segments.AddArcSegment(new Point(449, 245), 149, 61);
-            figure.Segments.AddLineSegment(new Point(332, 415));
-            figure.Segments.AddArcSegment(new Point(268, 415), 16, 4);
+            figure.Segments.AddLineSegment(new Point(332, 415)); figure.Segments.AddArcSegment(new Point(268, 415), 16, 4);
 
             editor.DrawPath(funnel);
 
-            using (editor.SaveGraphicProperties())
-            {
-                using (editor.SaveTextProperties())
-                {
-                    editor.Position.Translate(164, 455);
-                    editor.GraphicProperties.FillColor = RgbColors.Black;
-                    editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Center;
-                    editor.TextProperties.VerticalAlignment = VerticalTextAlignment.Top;
-                    editor.TextProperties.TextBlockWidth = 272;
-                    editor.TextProperties.FontSize = 18;
-                    editor.DrawText("PDF");
-                }
-            }
+            editor.Position.Translate(164, 455);
+            Block block = new Block();
+            block.TextProperties.Font = editor.TextProperties.Font;
+            block.GraphicProperties.FillColor = RgbColors.Black;
+            block.HorizontalAlignment = HorizontalAlignment.Center;
+            block.VerticalAlignment = VerticalAlignment.Top;
+            block.TextProperties.FontSize = 18;
+            block.InsertText("PDF");
+            editor.DrawBlock(block, new Size(272, double.PositiveInfinity));
         }
     }
 }

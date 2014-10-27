@@ -13,6 +13,9 @@ namespace CustomConnectors
 	{
 		public Example()
 		{
+            // Note: If your connectors are far outside the shape you'd better turn of the segmentation optimization:
+            // DiagramConstants.SegmentStep = -1
+
 			InitializeComponent();
 			this.diagram.Loaded += new RoutedEventHandler(DiagramLoaded);
 		}
@@ -25,11 +28,15 @@ namespace CustomConnectors
 				var connectorDownRight = new RadDiagramConnector() { Offset = new Point(1, 0.75), Name = x.Name + "Connector2Right" };
 				var connectorLeftUp = new RadDiagramConnector() { Offset = new Point(0, 0.25), Name = x.Name + "Connector3Left" };
 				var connectorLeftDown = new RadDiagramConnector() { Offset = new Point(0, 0.75), Name = x.Name + "Connector4Left" };
+                var connectorOutsideLeftUp = new AbsoluteConnector() { Offset = new Point(-15, -15), Name = x.Name + "Connector5Left" };
+                var connectorInsideLeftUp = new AbsoluteConnector() { Offset = new Point(15, 15), Name = x.Name + "Connector6Right" };
 
 				x.Connectors.Add(connectorUpRight);
 				x.Connectors.Add(connectorDownRight);
 				x.Connectors.Add(connectorLeftUp);
 				x.Connectors.Add(connectorLeftDown);
+                x.Connectors.Add(connectorOutsideLeftUp);
+                x.Connectors.Add(connectorInsideLeftUp);
 			});
 
 			var shape = new RadDiagramShape();
@@ -68,18 +75,7 @@ namespace CustomConnectors
 			connection8.Attach(this.diagram.Shapes[4].Connectors[6], this.diagram.Shapes[2].Connectors[7]);
 			this.diagram.Items.Add(connection8);
 
-			SetConnectorsCenterPoints();
 			(sender as RadButton).Visibility = Visibility.Collapsed;
-		}
-
-		private void SetConnectorsCenterPoints()
-		{
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[0] as DependencyObject, new Point(0.5, 0.25));
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[1] as DependencyObject, new Point(0.5, 0.25));
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[2] as DependencyObject, new Point(0.5, 0.25));
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[3] as DependencyObject, new Point(0.5, 0.25));
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[4] as DependencyObject, new Point(0.5, 0.25));
-			RadDiagramConnection.SetConnectorCenterPoint(this.diagram.Shapes[5] as DependencyObject, new Point(0.5, 0.25));
 		}
 	}
 }

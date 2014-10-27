@@ -71,26 +71,27 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-      <Reference Include="Telerik.Windows.Controls">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
-      </Reference>
-      <Reference Include="Telerik.Windows.Controls.Diagrams">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Diagrams.dll</HintPath>
-      </Reference>
-      <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
-      </Reference>
-      <Reference Include="Telerik.Windows.Controls.Input">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
-      </Reference>
-      <Reference Include="Telerik.Windows.Controls.Navigation">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
-      </Reference>
-      <Reference Include="Telerik.Windows.Diagrams.Core">
-          <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Diagrams.Core.dll</HintPath>
-      </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsoluteConnector.cs" />
     <Compile Include="AppSL.xaml.cs">
       <DependentUpon>AppSL.xaml</DependentUpon>
     </Compile>

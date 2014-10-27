@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialSlots", "SpecialSlot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineInsideTimeBar", "TimelineInsideTimeBar\TimelineInsideTimeBar.csproj", "{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomIntervalTypes", "CustomIntervalTypes\CustomIntervalTypes.csproj", "{0797A5C2-B3BC-40F1-AF49-4C087E4323E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeBarOverChartView", "TimeBarOverChartView\TimeBarOverChartView.csproj", "{7FD02C14-AAB4-4AE9-9A8E-3745F75FDC2B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +78,14 @@ Global
 		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0B460FD-E744-42D7-AD72-2A3FBB5170C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0797A5C2-B3BC-40F1-AF49-4C087E4323E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0797A5C2-B3BC-40F1-AF49-4C087E4323E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0797A5C2-B3BC-40F1-AF49-4C087E4323E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0797A5C2-B3BC-40F1-AF49-4C087E4323E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD02C14-AAB4-4AE9-9A8E-3745F75FDC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD02C14-AAB4-4AE9-9A8E-3745F75FDC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD02C14-AAB4-4AE9-9A8E-3745F75FDC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD02C14-AAB4-4AE9-9A8E-3745F75FDC2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

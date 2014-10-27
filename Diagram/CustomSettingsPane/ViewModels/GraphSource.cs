@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Telerik.Windows.Controls.Diagrams;
+using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Diagrams.Extensions.ViewModels;
 using Telerik.Windows.Diagrams.Core;
 

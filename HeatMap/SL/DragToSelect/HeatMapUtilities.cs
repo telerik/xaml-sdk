@@ -13,6 +13,7 @@ namespace DragToSelect
 {
     public static class HeatMapUtilities
     {
+        private static RadHeatMap currentHeatmap;
         private static Canvas selectionRectangleHost;
         private static Rectangle selectionRectangle;
         private static HeatMapCellDataPoint clickedDataPoint;
@@ -67,47 +68,51 @@ namespace DragToSelect
 
         private static void Heatmap_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var heatmap = (RadHeatMap)sender;
-            if (heatmap.HoveredCellDataPoint == null)
+            currentHeatmap = (RadHeatMap)sender;
+            if (currentHeatmap.HoveredCellDataPoint == null)
             {
                 return;
             }
 
-            EnsureSelectionRectangleVisualParent(heatmap);
+            EnsureSelectionRectangleVisualParent();
             selectionRectangle.Visibility = Visibility.Visible;
             selectionRectangle.Width = 0;
             selectionRectangle.Height = 0;
 
-            var pos = e.GetPosition(heatmap);
+            var pos = e.GetPosition(currentHeatmap);
             clickedX = pos.X;
             clickedY = pos.Y;
-            clickedDataPoint = heatmap.HoveredCellDataPoint;
+            clickedDataPoint = currentHeatmap.HoveredCellDataPoint;
             lastHoveredDataPoint = clickedDataPoint;
         }
 
         private static void Heatmap_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            var heatmap = (RadHeatMap)sender;
-            if (clickedDataPoint == null || heatmap.HoveredCellDataPoint == null)
+            if (currentHeatmap != sender)
             {
                 return;
             }
 
-            lastHoveredDataPoint = heatmap.HoveredCellDataPoint;
-            var pos = e.GetPosition(heatmap);
+            if (clickedDataPoint == null || currentHeatmap.HoveredCellDataPoint == null)
+            {
+                return;
+            }
+
+            lastHoveredDataPoint = currentHeatmap.HoveredCellDataPoint;
+            var pos = e.GetPosition(currentHeatmap);
 
             Rect r;
-            if (heatmap.Definition is CategoricalDefinition)
+            if (currentHeatmap.Definition is CategoricalDefinition)
             {
                 r = new Rect(new Point(clickedX, clickedY), pos);
             }
-            else if (heatmap.Definition is HorizontalDefinition)
+            else if (currentHeatmap.Definition is HorizontalDefinition)
             {
-                r = new Rect(new Point(0, clickedY), new Point(heatmap.ActualWidth, pos.Y));
+                r = new Rect(new Point(0, clickedY), new Point(currentHeatmap.ActualWidth, pos.Y));
             }
             else
             {
-                r = new Rect(new Point(clickedX, 0), new Point(pos.X, heatmap.ActualHeight));
+                r = new Rect(new Point(clickedX, 0), new Point(pos.X, currentHeatmap.ActualHeight));
             }
 
             Canvas.SetLeft(selectionRectangle, r.Left);
@@ -118,16 +123,16 @@ namespace DragToSelect
 
         private static void Heatmap_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var heatmap = (RadHeatMap)sender;
-            DoSelection(heatmap, lastHoveredDataPoint);
+            DoSelection(lastHoveredDataPoint);
             selectionRectangle.Visibility = Visibility.Collapsed;
             clickedDataPoint = null;
             lastHoveredDataPoint = null;
+            currentHeatmap = null;
         }
 
-        private static void EnsureSelectionRectangleVisualParent(RadHeatMap heatmap)
+        private static void EnsureSelectionRectangleVisualParent()
         {
-            var newParentGrid = Telerik.Windows.Controls.ChildrenOfTypeExtensions.ChildrenOfType<Grid>(heatmap).First();
+            var newParentGrid = Telerik.Windows.Controls.ChildrenOfTypeExtensions.ChildrenOfType<Grid>(currentHeatmap).First();
             var oldParentGrid = selectionRectangleHost.Parent as Grid;
             if (oldParentGrid != newParentGrid && oldParentGrid != null)
             {
@@ -139,7 +144,7 @@ namespace DragToSelect
             }
         }
 
-        private static void DoSelection(RadHeatMap heatMap, HeatMapCellDataPoint hoveredDataPoint)
+        private static void DoSelection(HeatMapCellDataPoint hoveredDataPoint)
         {
             if (clickedDataPoint == null || hoveredDataPoint == null)
             {
@@ -151,17 +156,17 @@ namespace DragToSelect
             int startColumnIndex = Math.Min(clickedDataPoint.ColumnIndex, hoveredDataPoint.ColumnIndex);
             int endColumnIndex = Math.Max(clickedDataPoint.ColumnIndex, hoveredDataPoint.ColumnIndex);
 
-            var cDefinition = heatMap.Definition as CategoricalDefinition;
+            var cDefinition = currentHeatmap.Definition as CategoricalDefinition;
             if (cDefinition != null)
             {
                 DoSelection(cDefinition, startRowIndex, endRowIndex, startColumnIndex, endColumnIndex);
             }
-            var hDefinition = heatMap.Definition as HorizontalDefinition;
+            var hDefinition = currentHeatmap.Definition as HorizontalDefinition;
             if (hDefinition != null)
             {
                 DoSelection(hDefinition, startRowIndex, endRowIndex);
             }
-            var vDefinition = heatMap.Definition as VerticalDefinition;
+            var vDefinition = currentHeatmap.Definition as VerticalDefinition;
             if (vDefinition != null)
             {
                 DoSelection(vDefinition, startColumnIndex, endColumnIndex);

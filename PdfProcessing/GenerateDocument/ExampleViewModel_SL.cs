@@ -1,23 +1,24 @@
 ﻿using System;
 using System.IO;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
 using Telerik.Windows.Documents.Fixed.Model;
 using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Data;
 using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Windows.Documents.Fixed.Model.Editing.Flow;
 using Telerik.Windows.Documents.Fixed.Model.Fonts;
 using Telerik.Windows.Documents.Fixed.Model.Graphics;
+using Point = System.Windows.Point;
+using Size = System.Windows.Size;
 
 namespace GenerateDocument
 {
     public class ExampleViewModel
     {
         private static readonly double defaultLeftIndent = 50;
-        private static readonly double defaultLineHeight = 18;
+        private static readonly double defaultLineHeight = 16;
 
         public ExampleViewModel()
         {
@@ -25,6 +26,17 @@ namespace GenerateDocument
         }
 
         public ICommand Save { get; private set; }
+
+        private static void CenterText(FixedContentEditor editor, string text)
+        {
+            Block block = new Block();
+            block.HorizontalAlignment = HorizontalAlignment.Center;
+            block.VerticalAlignment = VerticalAlignment.Center;
+            block.GraphicProperties.FillColor = RgbColors.White;
+            block.InsertText(text);
+
+            editor.DrawBlock(block, new Size(96, 96));
+        }
 
         private void Export(object param)
         {
@@ -58,20 +70,15 @@ namespace GenerateDocument
             double currentTopOffset = 110;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
             editor.TextProperties.FontSize = 14;
-            editor.TextProperties.LineHeight = defaultLineHeight;
             double maxWidth = page.Size.Width - defaultLeftIndent * 2;
 
             this.DrawDescription(editor, maxWidth);
 
-            currentTopOffset += defaultLineHeight * 5;
+            currentTopOffset += defaultLineHeight * 4;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-
-            using (editor.SaveGraphicProperties())
+            using (editor.SaveProperties())
             {
-                using (editor.SaveTextProperties())
-                {
-                    this.DrawFunnelFigure(editor);
-                }
+                this.DrawFunnelFigure(editor);
             }
 
             editor.Position.Translate(defaultLeftIndent * 4, page.Size.Height - 100);
@@ -80,70 +87,71 @@ namespace GenerateDocument
                 editor.DrawImage(stream);
             }
 
-            this.DrawText(editor);
+            this.DrawText(editor, maxWidth);
 
             return document;
         }
 
         private void DrawDescription(FixedContentEditor editor, double maxWidth)
         {
-            editor.GraphicProperties.FillColor = RgbColors.Black;
-            editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Left;
-            editor.TextProperties.TextBlockWidth = maxWidth;
-            using (editor.BeginText())
-            {
-                editor.TextProperties.Font = FontsRepository.HelveticaBoldOblique;
-                editor.DrawText("RadPdfProcessing");
-                editor.TextProperties.Font = FontsRepository.Helvetica;
-                editor.DrawText(" is a document processing library that enables your application to import and export files to and from PDF format. The document model is entirely independent from UI and allows you to generate sleek documents with differently formatted text, images, shapes and more.");
-            }
+            Block block = new Block();
+            block.GraphicProperties.FillColor = RgbColors.Black;
+            block.HorizontalAlignment = HorizontalAlignment.Left;
+            block.TextProperties.Font = FontsRepository.HelveticaBoldOblique;
+            block.InsertText("RadPdfProcessing");
+            block.TextProperties.Font = FontsRepository.Helvetica;
+            block.InsertText(" is a document processing library that enables your application to import and export files to and from PDF format. The document model is entirely independent from UI and allows you to generate sleek documents with differently formatted text, images, shapes and more.");
+
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
         }
 
-        private void DrawText(FixedContentEditor editor)
+        private void DrawText(FixedContentEditor editor, double maxWidth)
         {
             double currentTopOffset = 500;
             currentTopOffset += defaultLineHeight * 2;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+            Block block = new Block();
+            block.TextProperties.Font = FontsRepository.Helvetica;
+            block.InsertText("A wizard's job is to vex ");
+            using (block.GraphicProperties.Save())
             {
-                editor.TextProperties.Font = FontsRepository.Helvetica;
-                editor.DrawText("A wizard's job is to vex ");
-                using (editor.SaveGraphicProperties())
-                {
-                    editor.GraphicProperties.FillColor = new RgbColor(255, 146, 208, 80);
-                    editor.DrawText("chumps");
-                }
-                editor.DrawText(" quickly in fog.");
+                block.GraphicProperties.FillColor = new RgbColor(255, 146, 208, 80);
+                block.InsertText("chumps");
             }
+
+            block.InsertText(" quickly in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+            block = new Block();
+            block.TextProperties.Font = FontsRepository.TimesRoman;
+            block.InsertText("A wizard's job is to vex chumps ");
+            using (block.TextProperties.Save())
             {
-                editor.TextProperties.Font = FontsRepository.TimesRoman;
-                editor.DrawText("A wizard's job is to vex chumps ");
-                using (editor.SaveTextProperties())
-                {
-                    editor.TextProperties.TextDecoration = Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations.Underline;
-                    editor.DrawText("quickly");
-                }
-                editor.DrawText(" in fog.");
+                block.TextProperties.UnderlinePattern = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.Single;
+                block.TextProperties.UnderlineColor = editor.GraphicProperties.FillColor;
+                block.InsertText("quickly");
             }
+
+            block.InsertText(" in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
 
             currentTopOffset += defaultLineHeight;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
-            using (editor.BeginText())
+            block = new Block();
+            block.TextProperties.Font = FontsRepository.Courier;
+            block.InsertText("A ");
+            using (block.TextProperties.Save())
             {
-                editor.TextProperties.Font = FontsRepository.Courier;
-                editor.DrawText("A ");
-                using (editor.SaveTextProperties())
-                {
-                    editor.TextProperties.Font = FontsRepository.CourierBoldOblique;
-                    editor.TextProperties.TextDecoration = Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations.Underline;
-                    editor.DrawText("wizard's");
-                }
-                editor.DrawText(" job is to vex chumps quickly in fog.");
+                block.TextProperties.Font = FontsRepository.CourierBoldOblique;
+                block.TextProperties.UnderlinePattern = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.Single;
+                block.TextProperties.UnderlineColor = editor.GraphicProperties.FillColor;
+                block.InsertText("wizard's");
             }
+
+            block.InsertText(" job is to vex chumps quickly in fog.");
+            editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
         }
 
         private void DrawFunnelFigure(FixedContentEditor editor)
@@ -157,47 +165,31 @@ namespace GenerateDocument
             editor.GraphicProperties.StrokeThickness = 1;
             editor.GraphicProperties.FillColor = new RgbColor(91, 155, 223);
             editor.DrawEllipse(new Point(289, 77), 48, 48);
-            editor.TextProperties.Font = FontsRepository.Helvetica;
-            editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Center;
-            editor.TextProperties.VerticalAlignment = VerticalTextAlignment.Center;
-            editor.TextProperties.TextBlockWidth = 96;
-            editor.TextProperties.TextBlockHeight = 96;
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(291, 229);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Fonts");
-            }
+
+            editor.Position.Translate(291, 204);
+            CenterText(editor, "Fonts");
 
             editor.Position.Translate(0, 0);
-            editor.DrawEllipse(new Point(238, 299), 48, 48);
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(190, 251);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Images");
-            }
+            editor.DrawEllipse(new Point(238, 274), 48, 48);
+            editor.Position.Translate(190, 226);
+            CenterText(editor, "Images");
 
             editor.Position.Translate(0, 0);
-            editor.DrawEllipse(new Point(307, 372), 48, 48);
-            using (editor.SaveGraphicProperties())
-            {
-                editor.Position.Translate(259, 324);
-                editor.GraphicProperties.FillColor = RgbColors.White;
-                editor.DrawText("Shapes");
-            }
+            editor.DrawEllipse(new Point(307, 347), 48, 48);
+            editor.Position.Translate(259, 299);
+            CenterText(editor, "Shapes");
 
             editor.Position.Translate(0, 0);
             PathGeometry arrow = new PathGeometry();
             PathFigure figure = arrow.Figures.AddPathFigure();
-            figure.StartPoint = new Point(287, 447);
+            figure.StartPoint = new Point(287, 422);
             figure.IsClosed = true;
-            figure.Segments.AddLineSegment(new Point(287, 463));
-            figure.Segments.AddLineSegment(new Point(278, 463));
-            figure.Segments.AddLineSegment(new Point(300, 479));
-            figure.Segments.AddLineSegment(new Point(322, 463));
-            figure.Segments.AddLineSegment(new Point(313, 463));
-            figure.Segments.AddLineSegment(new Point(313, 447));
+            figure.Segments.AddLineSegment(new Point(287, 438));
+            figure.Segments.AddLineSegment(new Point(278, 438));
+            figure.Segments.AddLineSegment(new Point(300, 454));
+            figure.Segments.AddLineSegment(new Point(322, 438));
+            figure.Segments.AddLineSegment(new Point(313, 438));
+            figure.Segments.AddLineSegment(new Point(313, 422));
 
             editor.DrawPath(arrow);
 
@@ -210,32 +202,27 @@ namespace GenerateDocument
             funnel.FillRule = FillRule.EvenOdd;
             figure = funnel.Figures.AddPathFigure();
             figure.IsClosed = true;
-            figure.StartPoint = new Point(164, 270);
-            figure.Segments.AddArcSegment(new Point(436, 270), 136, 48);
-            figure.Segments.AddArcSegment(new Point(164, 270), 136, 48);
+            figure.StartPoint = new Point(164, 245);
+            figure.Segments.AddArcSegment(new Point(436, 245), 136, 48);
+            figure.Segments.AddArcSegment(new Point(164, 245), 136, 48);
 
             figure = funnel.Figures.AddPathFigure();
             figure.IsClosed = true;
-            figure.StartPoint = new Point(151, 270);
-            figure.Segments.AddArcSegment(new Point(449, 270), 149, 61);
-            figure.Segments.AddLineSegment(new Point(332, 440));
-            figure.Segments.AddArcSegment(new Point(268, 440), 16, 4);
+            figure.StartPoint = new Point(151, 245);
+            figure.Segments.AddArcSegment(new Point(449, 245), 149, 61);
+            figure.Segments.AddLineSegment(new Point(332, 415)); figure.Segments.AddArcSegment(new Point(268, 415), 16, 4);
 
             editor.DrawPath(funnel);
 
-            using (editor.SaveGraphicProperties())
-            {
-                using (editor.SaveTextProperties())
-                {
-                    editor.Position.Translate(164, 484);
-                    editor.GraphicProperties.FillColor = RgbColors.Black;
-                    editor.TextProperties.HorizontalAlignment = HorizontalTextAlignment.Center;
-                    editor.TextProperties.VerticalAlignment = VerticalTextAlignment.Top;
-                    editor.TextProperties.TextBlockWidth = 272;
-                    editor.TextProperties.FontSize = 18;
-                    editor.DrawText("PDF");
-                }
-            }
+            editor.Position.Translate(164, 455);
+            Block block = new Block();
+            block.TextProperties.Font = editor.TextProperties.Font;
+            block.GraphicProperties.FillColor = RgbColors.Black;
+            block.HorizontalAlignment = HorizontalAlignment.Center;
+            block.VerticalAlignment = VerticalAlignment.Top;
+            block.TextProperties.FontSize = 18;
+            block.InsertText("PDF");
+            editor.DrawBlock(block, new Size(272, double.PositiveInfinity));
         }
     }
 }
