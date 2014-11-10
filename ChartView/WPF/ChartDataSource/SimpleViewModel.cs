@@ -5,29 +5,11 @@ using Telerik.Windows.Data;
 
 namespace ChartDataSource
 {
-	public class SimpleViewModel : DependencyObject
+	public class SimpleViewModel
 	{
-		/// <summary>
-		/// Identifies the <see cref="Data"/> dependency property.
-		/// </summary>
-		public static readonly DependencyProperty DataProperty = DependencyProperty.Register("Data",
-			typeof(ObservableCollection<SalesInfo>),
-			typeof(SimpleViewModel),
-			new PropertyMetadata(null));
+	public RadObservableCollection<SalesInfo> Data { get; set; }
 
-		public RadObservableCollection<SalesInfo> Data
-		{
-			get
-			{
-				return (RadObservableCollection<SalesInfo>)this.GetValue(DataProperty);
-			}
-			set
-			{
-				this.SetValue(DataProperty, value);
-			}
-		}
-
-		public SimpleViewModel()
+        public SimpleViewModel()
 		{
 			var data = new RadObservableCollection<SalesInfo>();
 			DateTime startDate = new DateTime(2012, 12, 15);
