@@ -121,8 +121,11 @@ namespace DragToSelect
             Point fromPosition = e.GetPosition(chart);
             SetFromPosition(chart, fromPosition);
             SetToPosition(chart, fromPosition);
+            var plotAreaClip = chart.PlotAreaClip;
+            plotAreaClip.X += chart.PanOffset.X;
+            plotAreaClip.Y += chart.PanOffset.Y;
 
-            if (!chart.PlotAreaClip.Contains(fromPosition.X, fromPosition.Y))
+            if (!plotAreaClip.Contains(fromPosition.X, fromPosition.Y))
             {
                 return;
             }
@@ -162,6 +165,8 @@ namespace DragToSelect
             }
 
             var plotAreaClip = chart.PlotAreaClip;
+            plotAreaClip.X += chart.PanOffset.X;
+            plotAreaClip.Y += chart.PanOffset.Y;
 
             Point toPosition = e.GetPosition(chart);
             toPosition.X = Math.Max(plotAreaClip.X, toPosition.X);
@@ -171,6 +176,8 @@ namespace DragToSelect
             SetToPosition(chart, toPosition);
 
             UpdateSelectionRectanglePositionAndSize(chart);
+            
+            // Instant selection - select items while dragging.
             //UpdateDataPointsInSelectionRectangle(chart);
         }
 
@@ -190,7 +197,11 @@ namespace DragToSelect
         private static void UpdateDataPointsInSelectionRectangle(RadCartesianChart chart)
         {
             Point fromPosition = GetFromPosition(chart);
+            fromPosition.X -= chart.PanOffset.X;
+            fromPosition.Y -= chart.PanOffset.Y;
             Point toPosition = GetToPosition(chart);
+            toPosition.X -= chart.PanOffset.X;
+            toPosition.Y -= chart.PanOffset.Y;
             Rect rect = new Rect(fromPosition, toPosition);
 
             foreach (CategoricalSeries series in chart.Series)

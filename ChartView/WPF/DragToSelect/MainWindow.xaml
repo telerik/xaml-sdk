@@ -32,6 +32,15 @@
             <telerik:RadCartesianChart.Series>
                 <telerik:PointSeries CategoryBinding="XCat" ValueBinding="YVal" ItemsSource="{Binding}" />
             </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior x:Name="panZoomBehavior" />
+            </telerik:RadCartesianChart.Behaviors>
         </telerik:RadCartesianChart>
+        <Border Background="White" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <StackPanel>
+                <RadioButton Content="drag-to-zoom" Checked="RadioButtonDragToZoom_Checked" />
+                <RadioButton Content="drag-to-select" Checked="RadioButtonDragToSelect_Checked" IsChecked="True" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

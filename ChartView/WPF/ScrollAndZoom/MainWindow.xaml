@@ -6,7 +6,8 @@
 		Height="350"
 		Width="525">
     <Grid>
-		<telerik:RadCartesianChart x:Name="telerik"
+		<telerik:RadCartesianChart MouseDown="RadCartesianChart_MouseDown"
+                                   MouseUp="RadCartesianChart_MouseUp"
 								   Zoom="10,1">
 			<telerik:RadCartesianChart.HorizontalAxis>
 				<telerik:CategoricalAxis/>

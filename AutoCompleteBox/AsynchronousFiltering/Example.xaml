@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="TestApplication.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:viewModels="clr-namespace:TestApplication.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <UserControl.DataContext>
+        <viewModels:MainViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="50*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="This example demonstrates how to enable the RadAutoCompleteBox control's asynchronous FilteringBehavior. For demonstration the left RadAutoCompleteBox uses the normal FilteringBehavior and the right RadAutoCompleteBox uses the AsyncFilteringBehavior. Notice the delayed filtering of the asynchronous behavior. Both controls are bound to a collection of 100000 similar items. This behavior is designed to work with a big source set to the ItemsSource of the control."
+                   FontWeight="Bold"
+                   TextWrapping="Wrap"
+                   Width="500"
+                   Margin="20"
+                   Grid.ColumnSpan="2" />
+        <TextBlock Text="FilteringBehavior (Default)"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Grid.Row="1"
+                   Margin="10" />
+        <TextBlock Text="AsyncFilteringBehavior"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="10" />
+        <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
+                                    DisplayMemberPath="Name"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    WatermarkContent="Enter 'item 1'"
+                                    Grid.Row="2"
+                                    Width="200">
+        </telerik:RadAutoCompleteBox>
+        <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
+                                    DisplayMemberPath="Name"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    WatermarkContent="Enter 'item 1'"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Width="200">
+            <telerik:RadAutoCompleteBox.FilteringBehavior>
+                <telerik:AsyncFilteringBehavior />
+            </telerik:RadAutoCompleteBox.FilteringBehavior>
+        </telerik:RadAutoCompleteBox>
+    </Grid>
+</UserControl>

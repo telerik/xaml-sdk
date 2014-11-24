@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_PdfFontsService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="../PdfFontsService.svc" binding="customBinding"
+                bindingConfiguration="CustomBinding_PdfFontsService" contract="PdfFontsServiceReference.PdfFontsService"
+                name="CustomBinding_PdfFontsService" />
+        </client>
+    </system.serviceModel>
+</configuration>

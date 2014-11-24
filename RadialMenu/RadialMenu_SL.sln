@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTooltip_SL", "CustomT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowHideAsContextMenu_SL", "ShowHideAsContextMenu\ShowHideAsContextMenu_SL.csproj", "{D68A4C43-465F-420E-867B-3EFE485F0DBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuQuickMode_SL", "MenuQuickMode\MenuQuickMode_SL.csproj", "{3B24D315-7F1A-4F41-A0F9-84D11CDE3CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMenuOnShow_SL", "OpenMenuOnShow\OpenMenuOnShow_SL.csproj", "{91A9F8FD-5841-4044-B39B-674DE6225A01}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,14 @@ Global
 		{D68A4C43-465F-420E-867B-3EFE485F0DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D68A4C43-465F-420E-867B-3EFE485F0DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D68A4C43-465F-420E-867B-3EFE485F0DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B24D315-7F1A-4F41-A0F9-84D11CDE3CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B24D315-7F1A-4F41-A0F9-84D11CDE3CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B24D315-7F1A-4F41-A0F9-84D11CDE3CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B24D315-7F1A-4F41-A0F9-84D11CDE3CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A9F8FD-5841-4044-B39B-674DE6225A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A9F8FD-5841-4044-B39B-674DE6225A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A9F8FD-5841-4044-B39B-674DE6225A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A9F8FD-5841-4044-B39B-674DE6225A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

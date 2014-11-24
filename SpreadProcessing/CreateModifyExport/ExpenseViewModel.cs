@@ -3,6 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
+#if !SILVERLIGHT
+using System.Windows.Controls;
+#endif
 using System.Windows.Media;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Model;
@@ -20,14 +23,7 @@ namespace CreateModifyExport
     {
         private Worksheet worksheet;
         private Workbook workbook;
-
-        public Workbook Workbook
-        {
-            get
-            {
-                return this.workbook;
-            }
-        }
+        private ToolBarViewModel toolBarViewModel;
 
         public ExpenseViewModel()
         {
@@ -47,10 +43,31 @@ namespace CreateModifyExport
 
             this.worksheet.WorksheetPageSetup.PaperType = PaperTypes.A4;
             this.worksheet.WorksheetPageSetup.CenterHorizontally = true;
+        }
 
-            // The code below cannot be executed in Silverlight because of a SecurityException.
-            // Instead, the file streams should be created using SaveFileDialog in Silverlight.
-#if !SILVERLIGHT
+        public Workbook Workbook
+        {
+            get
+            {
+                return this.workbook;
+            }
+        }
+
+        public ToolBarViewModel ToolBarViewModel
+        {
+            get
+            {
+                if (this.toolBarViewModel == null)
+                {
+                    this.toolBarViewModel = new ToolBarViewModel(this);
+                }
+
+                return this.toolBarViewModel;
+            }
+        }
+
+        public void ExportReports()
+        {
             this.FilterByDepartment("Sales");
             this.ExportToPdf("SalesExpenses.pdf");
 
@@ -61,7 +78,13 @@ namespace CreateModifyExport
             this.ExportToPdf("EngineeringExpenses.pdf");
 
             this.worksheet.Filter.FilterRange = null;
-#endif
+        }
+
+        public void ExportReport(string departmentName, Stream stream)
+        {
+            this.FilterByDepartment(departmentName);
+            this.ExportToPdf(stream);
+            this.worksheet.Filter.FilterRange = null;
         }
 
         private void CreateWorkbook()
@@ -100,7 +123,7 @@ namespace CreateModifyExport
             this.worksheet.Cells[30, 1].SetValue("Engineering Expenses");
             this.worksheet.Cells[31, 1].SetValue("Total Expenses");
 
-            string listSeparator = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ListSeparator;
+            string listSeparator = SpreadsheetCultureInfo.ListSeparator;
             this.worksheet.Cells[28, 4].SetValue(string.Format("=SumIf(B7:B28{0}\"Sales\"{0}E7:E28)", listSeparator));
             this.worksheet.Cells[29, 4].SetValue(string.Format("=SumIf(B7:B28{0}\"Marketing\"{0}E7:E28)", listSeparator));
             this.worksheet.Cells[30, 4].SetValue(string.Format("=SumIf(B7:B28{0}\"Engineering\"{0}E7:E28)", listSeparator));
@@ -220,7 +243,7 @@ namespace CreateModifyExport
             worksheet.Shapes.Add(image);
         }
 
-        public static Stream GetResourceStream(string resource)
+        private static Stream GetResourceStream(string resource)
         {
             AssemblyName assemblyName = new AssemblyName(typeof(ExpenseViewModel).Assembly.FullName);
             string resourcePath = "/" + assemblyName.Name + ";component/" + resource;
@@ -229,7 +252,7 @@ namespace CreateModifyExport
             return Application.GetResourceStream(resourceUri).Stream;
         }
 
-        public void FilterByDepartment(string departmentName)
+        private void FilterByDepartment(string departmentName)
         {
             worksheet.Filter.FilterRange = new CellRange(5, 1, 31, 4);
 
@@ -245,13 +268,33 @@ namespace CreateModifyExport
             worksheet.Filter.SetFilter(departmentFilter);
         }
 
-        public void ExportToPdf(string fileName)
+        private void ExportToPdf(string fileName)
         {
-            using (Stream fileStream = new FileStream(fileName, FileMode.OpenOrCreate))
+            using (Stream fileStream = this.GetFileStream(fileName))
             {
                 PdfFormatProvider provider = new PdfFormatProvider();
                 provider.Export(workbook, fileStream);
             }
+        }
+        
+        private void ExportToPdf(Stream fileStream)
+        {
+            using (fileStream)
+            {
+                PdfFormatProvider provider = new PdfFormatProvider();
+                provider.Export(workbook, fileStream);
+            }            
+        }
+
+        private Stream GetFileStream(string fileName)
+        {
+#if !SILVERLIGHT
+            string filePath = string.Format("{0}\\{1}", this.ToolBarViewModel.ExportDirectory, fileName);
+
+            return new FileStream(filePath, FileMode.OpenOrCreate);
+#endif
+            throw new NotSupportedException("Opening file stream without SaveFileDialog cannot be done in Silverlight!");
+      
         }
     }
 }

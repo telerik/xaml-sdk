@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTooltip_WPF", "Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowHideAsContextMenu_WPF", "ShowHideAsContextMenu\ShowHideAsContextMenu_WPF.csproj", "{003CC3E5-E69C-426B-82F9-C422E371CC34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuQuickMode_WPF", "MenuQuickMode\MenuQuickMode_WPF.csproj", "{FCBA8C4F-7456-492D-A58E-1EC493728B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMenuOnShow_WPF", "OpenMenuOnShow\OpenMenuOnShow_WPF.csproj", "{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,14 @@ Global
 		{003CC3E5-E69C-426B-82F9-C422E371CC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003CC3E5-E69C-426B-82F9-C422E371CC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003CC3E5-E69C-426B-82F9-C422E371CC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBA8C4F-7456-492D-A58E-1EC493728B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBA8C4F-7456-492D-A58E-1EC493728B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBA8C4F-7456-492D-A58E-1EC493728B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBA8C4F-7456-492D-A58E-1EC493728B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

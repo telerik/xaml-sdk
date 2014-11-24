@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_SL", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_SL.csproj", "{69EFE70C-B794-4151-9027-8599C9857D09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehavior_SL", "TwoPropertiesFilteringBehavior\TwoPropertiesFilteringBehavior_SL.csproj", "{84AAC77F-C201-4FCA-A339-279CA3DE8E96}"
@@ -22,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumPopulateDelay_SL", "MinimumPopulateDelay\MinimumPopulateDelay_SL.csproj", "{4760DC3C-1F4D-498E-A8FF-9A7733853275}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHighlightBehavior_SL", "CustomHighlightBehavior\CustomHighlightBehavior_SL.csproj", "{5B155B38-FDF7-464B-8247-961E9A4911B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousFiltering_SL", "AsynchronousFiltering\AsynchronousFiltering_SL.csproj", "{2964BDE0-C699-4533-A88C-560AD77F6781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColorBoxesItems_SL", "MultiColorBoxesItems\MultiColorBoxesItems_SL.csproj", "{D879A3B7-FA84-4878-9F4A-7182D5998330}"
 EndProject
 Global
 	 
@@ -130,6 +132,34 @@ Global
 		{5B155B38-FDF7-464B-8247-961E9A4911B3}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{5B155B38-FDF7-464B-8247-961E9A4911B3}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{5B155B38-FDF7-464B-8247-961E9A4911B3}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{2964BDE0-C699-4533-A88C-560AD77F6781}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

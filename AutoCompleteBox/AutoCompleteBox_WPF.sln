@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_WPF", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_WPF.csproj", "{B7A1BFA7-9E77-4C68-872F-3334816071E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehavior_WPF", "TwoPropertiesFilteringBehavior\TwoPropertiesFilteringBehavior_WPF.csproj", "{474FFE7C-983F-487A-81A7-460CE0CA996F}"
@@ -22,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumPopulateDelay_WPF", "MinimumPopulateDelay\MinimumPopulateDelay_WPF.csproj", "{265C4222-5F79-4F4F-8428-1842FC0B487D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHighlightBehavior_WPF", "CustomHighlightBehavior\CustomHighlightBehavior_WPF.csproj", "{57A5654E-E7C3-4596-8EBA-D8EDE3F4D2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousFiltering_WPF", "AsynchronousFiltering\AsynchronousFiltering_WPF.csproj", "{885922CC-C114-4195-9D31-03AECD27408E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColorBoxesItems_WPF", "MultiColorBoxesItems\MultiColorBoxesItems_WPF.csproj", "{AE048560-E20D-4699-9646-FC89623A39D2}"
 EndProject
 Global
 	 
@@ -70,6 +72,14 @@ Global
 		{57A5654E-E7C3-4596-8EBA-D8EDE3F4D2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57A5654E-E7C3-4596-8EBA-D8EDE3F4D2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57A5654E-E7C3-4596-8EBA-D8EDE3F4D2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885922CC-C114-4195-9D31-03AECD27408E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885922CC-C114-4195-9D31-03AECD27408E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885922CC-C114-4195-9D31-03AECD27408E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885922CC-C114-4195-9D31-03AECD27408E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE048560-E20D-4699-9646-FC89623A39D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE048560-E20D-4699-9646-FC89623A39D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE048560-E20D-4699-9646-FC89623A39D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE048560-E20D-4699-9646-FC89623A39D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

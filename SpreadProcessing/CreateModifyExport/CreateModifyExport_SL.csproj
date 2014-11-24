@@ -139,6 +139,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolBarControl_SL.xaml.cs">
+      <DependentUpon>ToolBarControl_SL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToolBarViewModel_SL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App_SL.xaml">
@@ -146,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToolBarControl_SL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,9 +7,17 @@ namespace ScrollAndZoom
 		public MainWindow()
 		{
 			InitializeComponent();
-
-            this.KeyDown += this.MainWindow_KeyDown;
 		}
+
+        private void RadCartesianChart_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Application.Current.MainWindow.KeyDown += this.MainWindow_KeyDown;
+        }
+
+        private void RadCartesianChart_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Application.Current.MainWindow.KeyDown -= this.MainWindow_KeyDown;
+        }
 
         private void MainWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {

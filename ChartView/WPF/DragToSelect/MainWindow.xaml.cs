@@ -1,16 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Telerik.Windows.Controls.ChartView;
 
 namespace DragToSelect
 {
@@ -36,6 +27,18 @@ namespace DragToSelect
                 new PlotInfo { XCat = new DateTime(2014, 2, 11), YVal = 10, },
                 new PlotInfo { XCat = new DateTime(2014, 2, 12), YVal = 5, },
             };
+        }
+
+        private void RadioButtonDragToZoom_Checked(object sender, RoutedEventArgs e)
+        {
+            this.panZoomBehavior.DragMode = ChartDragMode.Zoom;
+            ChartUtilities.SetIsDragToSelectEnabled(this.chart1, false);
+        }
+
+        private void RadioButtonDragToSelect_Checked(object sender, RoutedEventArgs e)
+        {
+            this.panZoomBehavior.DragMode = ChartDragMode.None;
+            ChartUtilities.SetIsDragToSelectEnabled(this.chart1, true);
         }
     }
 }

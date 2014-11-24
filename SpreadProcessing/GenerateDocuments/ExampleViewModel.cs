@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -17,7 +18,7 @@ namespace GenerateDocuments
         private static readonly int IndexColumnSubTotal = 7;
         private static readonly int IndexRowItemStart = 1;
 
-        private static readonly string EnUSCultureAccountFormatString = "_($* #,##0.00_);_($* (#,##0.00);_($* \"-\"??_);_(@_)";
+        private static readonly string AccountFormatString = GenerateCultureDependentFormatString();
         private static readonly ThemableColor InvoiceBackground = new ThemableColor(Color.FromArgb(255, 44, 62, 80));
         private static readonly ThemableColor InvoiceHeaderForeground = new ThemableColor(Color.FromArgb(255, 255, 255, 255));
 
@@ -171,10 +172,10 @@ namespace GenerateDocuments
                 (new GradientFill(GradientType.Horizontal, InvoiceBackground, InvoiceBackground));
             worksheet.Cells[IndexRowItemStart, 0, IndexRowItemStart, IndexColumnSubTotal].SetForeColor(InvoiceHeaderForeground);
             worksheet.Cells[IndexRowItemStart, IndexColumnUnitPrice, lastItemIndexRow, IndexColumnSubTotal].SetFormat(
-                new CellValueFormat(EnUSCultureAccountFormatString));
+                new CellValueFormat(AccountFormatString));
 
             worksheet.Cells[lastItemIndexRow + 1, 6].SetValue("TOTAL: ");
-            worksheet.Cells[lastItemIndexRow + 1, 7].SetFormat(new CellValueFormat(EnUSCultureAccountFormatString));
+            worksheet.Cells[lastItemIndexRow + 1, 7].SetFormat(new CellValueFormat(AccountFormatString));
 
             string subTotalColumnCellRange = NameConverter.ConvertCellRangeToName(
                 new CellIndex(IndexRowItemStart + 1, IndexColumnSubTotal),
@@ -183,6 +184,14 @@ namespace GenerateDocuments
             worksheet.Cells[lastItemIndexRow + 1, IndexColumnSubTotal].SetValue(string.Format("=SUM({0})", subTotalColumnCellRange));
 
             worksheet.Cells[lastItemIndexRow + 1, IndexColumnUnitPrice, lastItemIndexRow + 1, IndexColumnSubTotal].SetFontSize(20);
+        }
+
+        private static string GenerateCultureDependentFormatString()
+        {
+            string gS = CultureInfo.CurrentCulture.NumberFormat.NumberGroupSeparator;
+            string dS = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+            return "_($* #" + gS + "##0" + dS + "00_);_($* (#" + gS + "##0" + dS + "00);_($* \"-\"??_);_(@_)";
         }
     }
 }
