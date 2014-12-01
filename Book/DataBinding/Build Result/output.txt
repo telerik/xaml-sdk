@@ -1,0 +1,57 @@
+Microsoft (R) Build Engine version 4.0.30319.33440
+[Microsoft .NET Framework, version 4.0.30319.34014]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 12/1/2014 11:39:45 AM.
+Project "C:\xaml-sdk\Book\DataBinding\Edited_WPF.csproj" on node 1 (Clean;Rebuild target(s)).
+CoreClean:
+  Creating directory "obj\Release\".
+PrepareForBuild:
+  Creating directory "bin\Release\".
+Project "C:\xaml-sdk\Book\DataBinding\Edited_WPF.csproj" (1) is building "C:\xaml-sdk\Book\DataBinding\lwqn4nbv.tmp_proj" (2) on node 1 (_CompileTemporaryAssembly target(s)).
+CoreCompile:
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationCore.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationFramework.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xaml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.dll /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Data.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsBase.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\DataBinding_WPF.exe /subsystemversion:6.00 /target:winexe /utf8output App.xaml.cs MainWindow.xaml.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs C:\xaml-sdk\Book\DataBinding\obj\Release\MainWindow.g.cs C:\xaml-sdk\Book\DataBinding\obj\Release\App.g.cs C:\xaml-sdk\Book\DataBinding\obj\Release\GeneratedInternalTypeHelper.g.cs
+Done Building Project "C:\xaml-sdk\Book\DataBinding\lwqn4nbv.tmp_proj" (_CompileTemporaryAssembly target(s)).
+MarkupCompilePass2:
+  MarkupCompilePass2 successfully generated BAML or source code files.
+CleanupTemporaryTargetAssembly:
+  Deleting file "obj\Release\DataBinding_WPF.exe".
+CoreResGen:
+  "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationCore.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationFramework.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xaml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /r:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.dll /r:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll /r:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Data.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsBase.dll" /compile Properties\Resources.resx,obj\Release\DataBinding_WPF.Properties.Resources.resources
+  Processing resource file "Properties\Resources.resx" into "obj\Release\DataBinding_WPF.Properties.Resources.resources".
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationCore.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationFramework.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xaml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.dll /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll /reference:D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Data.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsBase.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\DataBinding_WPF.exe /subsystemversion:6.00 /resource:obj\Release\DataBinding_WPF.g.resources /resource:obj\Release\DataBinding_WPF.Properties.Resources.resources /target:winexe /utf8output App.xaml.cs MainWindow.xaml.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs C:\xaml-sdk\Book\DataBinding\obj\Release\MainWindow.g.cs C:\xaml-sdk\Book\DataBinding\obj\Release\App.g.cs C:\xaml-sdk\Book\DataBinding\obj\Release\GeneratedInternalTypeHelper.g.cs "C:\Users\prpavlov\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cs"
+_CopyFilesMarkedCopyLocal:
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.dll" to "bin\Release\Telerik.Windows.Controls.dll".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll" to "bin\Release\Telerik.Windows.Controls.Navigation.dll".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Data.dll" to "bin\Release\Telerik.Windows.Data.dll".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.xml" to "bin\Release\Telerik.Windows.Controls.xml".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Controls.Navigation.xml" to "bin\Release\Telerik.Windows.Controls.Navigation.xml".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\Telerik.Windows.Data.xml" to "bin\Release\Telerik.Windows.Data.xml".
+  Creating directory "bin\Release\de".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\de\Telerik.Windows.Controls.resources.dll" to "bin\Release\de\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\es".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\es\Telerik.Windows.Controls.resources.dll" to "bin\Release\es\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\fr".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\fr\Telerik.Windows.Controls.resources.dll" to "bin\Release\fr\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\it".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\it\Telerik.Windows.Controls.resources.dll" to "bin\Release\it\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\nl".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\nl\Telerik.Windows.Controls.resources.dll" to "bin\Release\nl\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\tr".
+  Copying file from "D:\Binaries\WPF_Q2_2014-0617\Binaries\WPF40\tr\Telerik.Windows.Controls.resources.dll" to "bin\Release\tr\Telerik.Windows.Controls.resources.dll".
+_CopyAppConfigFile:
+  Copying file from "App.config" to "bin\Release\DataBinding_WPF.exe.config".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\DataBinding_WPF.exe" to "bin\Release\DataBinding_WPF.exe".
+  Edited_WPF -> C:\xaml-sdk\Book\DataBinding\bin\Release\DataBinding_WPF.exe
+  Copying file from "obj\Release\DataBinding_WPF.pdb" to "bin\Release\DataBinding_WPF.pdb".
+Done Building Project "C:\xaml-sdk\Book\DataBinding\Edited_WPF.csproj" (Clean;Rebuild target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.40
