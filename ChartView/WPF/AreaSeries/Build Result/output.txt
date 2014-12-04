@@ -1,0 +1,46 @@
+Microsoft (R) Build Engine version 4.0.30319.33440
+[Microsoft .NET Framework, version 4.0.30319.34014]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 11/26/2014 11:23:10 AM.
+Project "C:\Users\psotirova\Documents\xaml-sdk\ChartView\WPF\AreaSeries\Edited_WPF.csproj" on node 1 (Clean;Rebuild target(s)).
+CoreClean:
+  Creating directory "obj\Release\".
+PrepareForBuild:
+  Creating directory "bin\Release\".
+ResolveAssemblyReferences:
+  A TargetFramework profile exclusion list will be generated.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:AnyCPU /errorreport:prompt /warn:4 /define:TRACE /highentropyva- /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\PresentationCore.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\PresentationFramework.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Xaml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Xml.Linq.dll" /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Chart.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Data.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\WindowsBase.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\AreaSeries.exe /resource:obj\Release\AreaSeries.g.resources /target:winexe /utf8output App.xaml.cs MainWindow.xaml.cs Properties\AssemblyInfo.cs C:\Users\psotirova\Documents\xaml-sdk\ChartView\WPF\AreaSeries\obj\Release\MainWindow.g.cs C:\Users\psotirova\Documents\xaml-sdk\ChartView\WPF\AreaSeries\obj\Release\App.g.cs "C:\Users\psotirova\AppData\Local\Temp\1\.NETFramework,Version=v4.0,Profile=Client.AssemblyAttributes.cs"
+_CopyFilesMarkedCopyLocal:
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Chart.dll" to "bin\Release\Telerik.Windows.Controls.Chart.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.dll" to "bin\Release\Telerik.Windows.Controls.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Data.dll" to "bin\Release\Telerik.Windows.Data.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.xml" to "bin\Release\Telerik.Windows.Controls.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Chart.xml" to "bin\Release\Telerik.Windows.Controls.Chart.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Data.xml" to "bin\Release\Telerik.Windows.Data.xml".
+  Creating directory "bin\Release\de".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\de\Telerik.Windows.Controls.resources.dll" to "bin\Release\de\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\es".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\es\Telerik.Windows.Controls.resources.dll" to "bin\Release\es\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\fr".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\fr\Telerik.Windows.Controls.resources.dll" to "bin\Release\fr\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\it".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\it\Telerik.Windows.Controls.resources.dll" to "bin\Release\it\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\nl".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\nl\Telerik.Windows.Controls.resources.dll" to "bin\Release\nl\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\tr".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\tr\Telerik.Windows.Controls.resources.dll" to "bin\Release\tr\Telerik.Windows.Controls.resources.dll".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\AreaSeries.exe" to "bin\Release\AreaSeries.exe".
+  Edited_WPF -> C:\Users\psotirova\Documents\xaml-sdk\ChartView\WPF\AreaSeries\bin\Release\AreaSeries.exe
+  Copying file from "obj\Release\AreaSeries.pdb" to "bin\Release\AreaSeries.pdb".
+Done Building Project "C:\Users\psotirova\Documents\xaml-sdk\ChartView\WPF\AreaSeries\Edited_WPF.csproj" (Clean;Rebuild target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.39

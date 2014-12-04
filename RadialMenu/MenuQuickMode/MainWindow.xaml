@@ -12,14 +12,13 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Text="This example demonstrates the expected behavior when the RadRadialMenu.EnableQuickMode is set to True. The default value of that static Boolean property is False. By design when the RadRadialMenu is being shown or closed its animation will be triggered. While that animation is being animated if a different animation is triggered it will not be executed and the initial animation will complete fully. When the EnableQuickMode is set to True that initial animation will be interrupted and the new one will be executed."
                    TextWrapping="Wrap"
                    Margin="20 20 20 20"
                    HorizontalAlignment="Center"
                    Width="400" />
-        <TextBlock Text="In order to trigger two animation and simulate the described behavior: press the left mouse button on the green Grid and before the opening animation is completed press the right mouse button. Keep pressing them one after another and notice that the menus animations are being interrupted by the new one."
+        <TextBlock Text="In order to trigger two animation and simulate the described behavior: press the left mouse button on the green Grid and before the opening animation is completed press the right mouse button. Keep pressing them one after another and notice that the menu's animations are being interrupted by the animation."
                    TextWrapping="Wrap"
                    Margin="20 0 20 5"
                    HorizontalAlignment="Center"
@@ -32,16 +31,10 @@
                    HorizontalAlignment="Center"
                    Grid.Row="2"
                    Width="400" />
-        <TextBlock Text="Keep pressing those buttons one after another and notice that the RadRadialMenu's opening animation is being interrupted by the hiding of the menu."
-                   TextWrapping="Wrap"
-                   Margin="20 0 20 20"
-                   HorizontalAlignment="Center"
-                   Grid.Row="3"
-                   Width="400" />
         <Grid Width="400"
               Background="LightGreen"
               Height="265"
-              Grid.Row="4"
+              Grid.Row="3"
               Margin="20">
             <telerik:RadRadialMenu.RadialContextMenu>
                 <telerik:RadRadialMenu ShowEventName="MouseLeftButtonDown"

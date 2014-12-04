@@ -1193,6 +1193,42 @@
                         </telerik:RadRibbonDropDownButton.DropDownContent>
                     </telerik:RadRibbonDropDownButton>
                 </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Sheet Options"
+                                        DialogLauncherVisibility="{Binding Path=ShowPageSetupDialog.IsEnabled, Converter={StaticResource BoolToVisibilityValueConverter}}"
+                                        DialogLauncherCommand="{Binding Path=ShowPageSetupDialog.Command}"
+                                        DialogLauncherCommandParameter="Page">
+
+                    <StackPanel Margin="2">
+                        <TextBlock Text="Gridlines" Margin="0 0 0 2" />
+                        <telerik:RadWrapPanel Orientation="Vertical" Height="68">
+                            <CheckBox Content="View" Margin="2" 
+                                  Command="{Binding Path=ShowGridlines.Command}"
+                                  IsChecked="{Binding Path=ShowGridlines.SelectedValue, Mode=TwoWay}"
+                                  IsEnabled="{Binding Path=ShowGridlines.IsEnabled}"/>
+                            <CheckBox Content="Print" Margin="2" 
+                                  Command="{Binding Path=PrintGridlines.Command}"
+                                  IsChecked="{Binding Path=PrintGridlines.SelectedValue, Mode=TwoWay}"
+                                  IsEnabled="{Binding Path=PrintGridlines.IsEnabled}"/>
+                        </telerik:RadWrapPanel>
+                    </StackPanel>
+
+                    <telerik:Separator />
+
+                    <StackPanel Margin="2">
+                        <TextBlock Text="Headings" Margin="0 0 0 2"/>
+                        <telerik:RadWrapPanel Orientation="Vertical" Height="68">
+                            <CheckBox Content="View" Margin="2" 
+                                  Command="{Binding Path=ShowRowColumnHeadings.Command}"
+                                  IsChecked="{Binding Path=ShowRowColumnHeadings.SelectedValue, Mode=TwoWay}"
+                                  IsEnabled="{Binding Path=ShowRowColumnHeadings.IsEnabled}"/>
+                            <CheckBox Content="Print" Margin="2" 
+                                  Command="{Binding Path=PrintRowColumnHeadings.Command}"
+                                  IsChecked="{Binding Path=PrintRowColumnHeadings.SelectedValue, Mode=TwoWay}"
+                                  IsEnabled="{Binding Path=PrintRowColumnHeadings.IsEnabled}"/>
+                        </telerik:RadWrapPanel>
+                    </StackPanel>
+
+                </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
 
             <telerik:RadRibbonTab Header="Formulas">

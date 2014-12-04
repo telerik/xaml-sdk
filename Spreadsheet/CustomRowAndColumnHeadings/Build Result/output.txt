@@ -1,0 +1,70 @@
+Microsoft (R) Build Engine version 4.0.30319.33440
+[Microsoft .NET Framework, version 4.0.30319.34014]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 11/24/2014 6:49:33 PM.
+Project "C:\Users\psotirova\Documents\xaml-sdk\Spreadsheet\CustomRowAndColumnHeadings\Edited_WPF.csproj" on node 1 (Clean;Rebuild target(s)).
+Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+CoreClean:
+  Creating directory "obj\Release\".
+PrepareForBuild:
+  Creating directory "bin\Release\".
+CoreResGen:
+  "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationCore.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xaml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Input.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Spreadsheet.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Core.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Maths.dll /r:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Zip.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll" /compile Properties\Resources.resx,obj\Release\CustomRowAndColumnHeadings_WPF.Properties.Resources.resources
+  Processing resource file "Properties\Resources.resx" into "obj\Release\CustomRowAndColumnHeadings_WPF.Properties.Resources.resources".
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:AnyCPU /errorreport:prompt /warn:4 /define:TRACE /highentropyva- /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationCore.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xaml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Input.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Spreadsheet.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Core.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Maths.dll /reference:D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Zip.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\CustomRowAndColumnHeadings_WPF.exe /resource:obj\Release\CustomRowAndColumnHeadings_WPF.g.resources /resource:obj\Release\CustomRowAndColumnHeadings_WPF.Properties.Resources.resources /target:winexe /utf8output Resources\ResourceHelper.cs App_WPF.xaml.cs HeaderConverters\DynamicHeaderNameRenderincConverter.cs HeaderConverters\NumberedColumnsHeaderNameRenderingConverter.cs MainWindow.xaml.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs C:\Users\psotirova\Documents\xaml-sdk\Spreadsheet\CustomRowAndColumnHeadings\obj\Release\MainWindow.g.cs C:\Users\psotirova\Documents\xaml-sdk\Spreadsheet\CustomRowAndColumnHeadings\obj\Release\App_WPF.g.cs "C:\Users\psotirova\AppData\Local\Temp\1\.NETFramework,Version=v4.0.AssemblyAttributes.cs"
+_CopyFilesMarkedCopyLocal:
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.dll" to "bin\Release\Telerik.Windows.Controls.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll" to "bin\Release\Telerik.Windows.Controls.GridView.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Input.dll" to "bin\Release\Telerik.Windows.Controls.Input.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll" to "bin\Release\Telerik.Windows.Controls.Navigation.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Spreadsheet.dll" to "bin\Release\Telerik.Windows.Controls.Spreadsheet.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Core.dll" to "bin\Release\Telerik.Windows.Documents.Core.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.dll" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Maths.dll" to "bin\Release\Telerik.Windows.Maths.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Zip.dll" to "bin\Release\Telerik.Windows.Zip.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Data.dll" to "bin\Release\Telerik.Windows.Data.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll" to "bin\Release\Telerik.Windows.Documents.Fixed.dll".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.xml" to "bin\Release\Telerik.Windows.Controls.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.GridView.xml" to "bin\Release\Telerik.Windows.Controls.GridView.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Input.xml" to "bin\Release\Telerik.Windows.Controls.Input.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Navigation.xml" to "bin\Release\Telerik.Windows.Controls.Navigation.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Controls.Spreadsheet.xml" to "bin\Release\Telerik.Windows.Controls.Spreadsheet.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Core.xml" to "bin\Release\Telerik.Windows.Documents.Core.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.xml" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml" to "bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Maths.xml" to "bin\Release\Telerik.Windows.Maths.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Zip.xml" to "bin\Release\Telerik.Windows.Zip.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Data.xml" to "bin\Release\Telerik.Windows.Data.xml".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\Telerik.Windows.Documents.Fixed.xml" to "bin\Release\Telerik.Windows.Documents.Fixed.xml".
+  Creating directory "bin\Release\de".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\de\Telerik.Windows.Controls.resources.dll" to "bin\Release\de\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\es".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\es\Telerik.Windows.Controls.resources.dll" to "bin\Release\es\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\fr".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\fr\Telerik.Windows.Controls.resources.dll" to "bin\Release\fr\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\it".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\it\Telerik.Windows.Controls.resources.dll" to "bin\Release\it\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\nl".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\nl\Telerik.Windows.Controls.resources.dll" to "bin\Release\nl\Telerik.Windows.Controls.resources.dll".
+  Creating directory "bin\Release\tr".
+  Copying file from "D:\Binaries\2014.Q3\WPF\Binaries\WPF40\tr\Telerik.Windows.Controls.resources.dll" to "bin\Release\tr\Telerik.Windows.Controls.resources.dll".
+_CopyAppConfigFile:
+  Copying file from "App.config" to "bin\Release\CustomRowAndColumnHeadings_WPF.exe.config".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\CustomRowAndColumnHeadings_WPF.exe" to "bin\Release\CustomRowAndColumnHeadings_WPF.exe".
+  Edited_WPF -> C:\Users\psotirova\Documents\xaml-sdk\Spreadsheet\CustomRowAndColumnHeadings\bin\Release\CustomRowAndColumnHeadings_WPF.exe
+  Copying file from "obj\Release\CustomRowAndColumnHeadings_WPF.pdb" to "bin\Release\CustomRowAndColumnHeadings_WPF.pdb".
+Done Building Project "C:\Users\psotirova\Documents\xaml-sdk\Spreadsheet\CustomRowAndColumnHeadings\Edited_WPF.csproj" (Clean;Rebuild target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.66

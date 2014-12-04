@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomField_WPF", "CustomFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCaret_WPF", "CustomCaret\CustomCaret_WPF.csproj", "{90F4985A-FCCB-481E-9CF6-5FBE8C77B6A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsMetafileFormatImageDecoder", "WindowsMetafileFormatImageDecoder\WindowsMetafileFormatImageDecoder.csproj", "{1C904DCF-B2C2-4BA0-9690-41C8AF252845}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -300,6 +302,16 @@ Global
 		{90F4985A-FCCB-481E-9CF6-5FBE8C77B6A0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{90F4985A-FCCB-481E-9CF6-5FBE8C77B6A0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90F4985A-FCCB-481E-9CF6-5FBE8C77B6A0}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -718,7 +718,7 @@
                         <telerik:GroupVariant Priority="2" Variant="Medium" />
                         <telerik:GroupVariant Priority="8" Variant="Collapsed" />
                     </telerik:RadRibbonGroup.Variants>
-                    <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/Watermark.png" telerik:ScreenTip.Description="Insert ghosted text behind the content on the page." telerik:ScreenTip.Title="Watermark" Size="Large" Text="Watermark">
+                    <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding ChangeIntegratedWatermarkTypeCommand}" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/Watermark.png" telerik:ScreenTip.Description="Insert ghosted text behind the content on the page." telerik:ScreenTip.Title="Watermark" Size="Large" Text="Watermark">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <StackPanel Orientation="Vertical">
                                 <telerik:RadGroupHeader Content="Predefined" />
@@ -861,7 +861,7 @@
                         <telerik:GroupVariant Priority="2" Variant="Medium" />
                         <telerik:GroupVariant Priority="8" Variant="Collapsed" />
                     </telerik:RadRibbonGroup.Variants>
-                    <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding Path=SelectTableEmptyCommand}" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/AutoFit.png" telerik:ScreenTip.Description="Automatically resize the column widths based on the size of the text in them or keep the widths with fixed size." telerik:ScreenTip.Title="AutoFit/Fixed" Size="Large" Text="AutoFit">
+                    <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding Path=ChangeTableColumnsLayoutModeCommand}" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/AutoFit.png" telerik:ScreenTip.Description="Automatically resize the column widths based on the size of the text in them or keep the widths with fixed size." telerik:ScreenTip.Title="AutoFit/Fixed" Size="Large" Text="AutoFit">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <StackPanel>
                                 <telerik:RadRibbonButton CommandParameter="AutoFit" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeTableColumnsLayoutModeCommand}" Size="Medium" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/AutoFItToWindow.png" Text="AutoFit to Window" />
@@ -943,12 +943,12 @@
                             <RowDefinition Height="24" />
                             <RowDefinition Height="24" />
                         </Grid.RowDefinitions>
-                        <Image Grid.Column="0" Grid.Row="0" Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/HeaderFromTop.png" Stretch="None" VerticalAlignment="Center" />
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text=" Header from Top: " VerticalAlignment="Center" />
-                        <telerik:RadNumericUpDown Grid.Column="2" Grid.Row="0" IsInteger="true" Minimum="0" NullValue="48" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeSectionHeaderTopMarginCommand}" telerik:ScreenTip.Description="Specify the height of the header area." telerik:ScreenTip.Title="Header Position from Top" />
-                        <Image Grid.Column="0" Grid.Row="1" Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/FooterFromBottom.png" Stretch="None" VerticalAlignment="Center" />
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text=" Footer from Bottom: " VerticalAlignment="Center" />
-                        <telerik:RadNumericUpDown Grid.Column="2" Grid.Row="1" IsInteger="true" Minimum="0" NullValue="48" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeSectionFooterBottomMarginCommand}" telerik:ScreenTip.Description="Specify the height of the footer area." telerik:ScreenTip.Title="Footer Position from Bottom" />
+                        <Image Grid.Column="0" Grid.Row="0" Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/HeaderFromTop.png" Stretch="None" VerticalAlignment="Center"/>
+                        <telerik:Label Padding="0" IsEnabled="{Binding ElementName=HeaderAreaMarginNumericUpDown, Path=IsEnabled}" Grid.Column="1" Grid.Row="0" Content=" Header from Top: " VerticalAlignment="Center"/>
+                        <telerik:RadNumericUpDown x:Name="HeaderAreaMarginNumericUpDown" Grid.Column="2" telerik:ScreenTip.Description="Specify the height of the header area." IsInteger="true" Minimum="0" NullValue="48" Grid.Row="0" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionHeaderTopMarginCommand}" telerik:ScreenTip.Title="Header Position from Top"/>
+                        <Image Grid.Column="0" Margin="0 1 0 0" Grid.Row="1" Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/FooterFromBottom.png" Stretch="None" VerticalAlignment="Center"/>
+                        <telerik:Label Padding="0" IsEnabled="{Binding ElementName=FooterAreaMarginNumericUpDown, Path=IsEnabled}" Grid.Column="1" Margin="0 1 0 0" Grid.Row="1" Content=" Footer from Bottom: " VerticalAlignment="Center"/>
+                        <telerik:RadNumericUpDown x:Name="FooterAreaMarginNumericUpDown" Grid.Column="2" telerik:ScreenTip.Description="Specify the height of the footer area." IsInteger="true" Margin="0 1 0 0" Minimum="0" NullValue="48" Grid.Row="1" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionFooterBottomMarginCommand}" telerik:ScreenTip.Title="Footer Position from Bottom"/>
                     </Grid>
                 </telerik:RadRibbonGroup>
                 <telerik:RadRibbonGroup Header="Close">
