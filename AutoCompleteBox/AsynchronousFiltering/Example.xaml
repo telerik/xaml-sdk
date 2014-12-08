@@ -15,7 +15,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*" />
@@ -27,36 +26,42 @@
                    Width="500"
                    Margin="20"
                    Grid.ColumnSpan="2" />
-        <TextBlock Text="FilteringBehavior (Default)"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Grid.Row="1"
-                   Margin="10" />
-        <TextBlock Text="AsyncFilteringBehavior"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Grid.Row="1"
-                   Grid.Column="1"
-                   Margin="10" />
-        <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
-                                    DisplayMemberPath="Name"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    WatermarkContent="Enter 'item 1'"
-                                    Grid.Row="2"
-                                    Width="200">
-        </telerik:RadAutoCompleteBox>
-        <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
-                                    DisplayMemberPath="Name"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    WatermarkContent="Enter 'item 1'"
-                                    Grid.Row="2"
-                                    Grid.Column="1"
-                                    Width="200">
-            <telerik:RadAutoCompleteBox.FilteringBehavior>
-                <telerik:AsyncFilteringBehavior />
-            </telerik:RadAutoCompleteBox.FilteringBehavior>
-        </telerik:RadAutoCompleteBox>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Grid.Row="1"
+                    Margin="20">
+            <TextBlock Text="FilteringBehavior (Default)"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center" />
+            <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
+                                        DisplayMemberPath="Name"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        WatermarkContent="Enter 'item 1'"
+                                        Width="200"
+                                        Margin="20">
+            </telerik:RadAutoCompleteBox>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="20">
+            <TextBlock Text="AsyncFilteringBehavior"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center" />
+            <telerik:RadAutoCompleteBox ItemsSource="{Binding Items}"
+                                        DisplayMemberPath="Name"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        WatermarkContent="Enter 'item 1'"
+                                        Width="200"
+                                        Margin="20">
+                <telerik:RadAutoCompleteBox.FilteringBehavior>
+                    <telerik:AsyncFilteringBehavior />
+                </telerik:RadAutoCompleteBox.FilteringBehavior>
+            </telerik:RadAutoCompleteBox>
+        </StackPanel>
     </Grid>
 </UserControl>

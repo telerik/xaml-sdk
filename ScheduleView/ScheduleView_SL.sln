@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exporting_SL", "Exporting\E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTimeRulerLinesTimelineView_SL", "CustomTimeRulerLinesTimelineView\CustomTimeRulerLinesTimelineView_SL.csproj", "{D25A4A5C-90A8-4034-8308-331CDC05AB84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutCopyPasteAppointments_SL", "CutCopyPasteAppointments\CutCopyPasteAppointments_SL.csproj", "{AD766870-1491-41F7-BB30-2F4F3AF31F34}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,6 +120,10 @@ Global
 		{D25A4A5C-90A8-4034-8308-331CDC05AB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D25A4A5C-90A8-4034-8308-331CDC05AB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D25A4A5C-90A8-4034-8308-331CDC05AB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD766870-1491-41F7-BB30-2F4F3AF31F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD766870-1491-41F7-BB30-2F4F3AF31F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD766870-1491-41F7-BB30-2F4F3AF31F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD766870-1491-41F7-BB30-2F4F3AF31F34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

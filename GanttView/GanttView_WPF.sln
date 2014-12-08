@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineIntervalMarkers_WPF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadlineProperty_WPF", "TaskDeadlineProperty\TaskDeadlineProperty_WPF.csproj", "{D3B72FF3-2923-4273-98B6-3113166F98FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartEndEventContainers_WPF", "StartEndEventContainers\StartEndEventContainers_WPF.csproj", "{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -336,6 +338,16 @@ Global
 		{D3B72FF3-2923-4273-98B6-3113166F98FB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D3B72FF3-2923-4273-98B6-3113166F98FB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D3B72FF3-2923-4273-98B6-3113166F98FB}.Release|x86.ActiveCfg = Release|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{80E4EF4B-F9E4-4E3E-8C33-258BA0B83FC8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

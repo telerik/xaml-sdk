@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="StartEndEventContainers.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:StartEndEventContainers"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:MyViewModel x:Key="MyViewModel" />
+        <Style TargetType="local:StartLabelContainer">
+            <Setter Property="Canvas.ZIndex"
+                    Value="30" />
+            <Setter Property="BorderBrush"
+                    Value="Red" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Margin"
+                    Value="0 0 -3 0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid Background="Red">
+                            <TextBlock Text="{Binding Start, StringFormat='{}{0:MM/dd/yyyy}'}"
+                                       Foreground="White"
+                                       FontSize="8"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="2" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="local:EndLabelContainer">
+            <Setter Property="Canvas.ZIndex"
+                    Value="30" />
+            <Setter Property="BorderBrush"
+                    Value="Red" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Margin"
+                    Value="0 0 -3 0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid Background="Green">
+                            <TextBlock Text="{Binding End, StringFormat='{}{0:MM/dd/yyyy}'}"
+                                       Foreground="White"
+                                       FontSize="8"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="2" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to use custom EventContainer instances in order to display labels for the Start and End time of each GanttTask except the milestone task."
+                   TextWrapping="Wrap"
+                   Width="500"
+                   Margin="20 50 20 20"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+        <telerik:RadGanttView TasksSource="{Binding Tasks}"
+                              x:Name="GanttView"
+                              Grid.Row="1"
+                              Margin="20"
+                              TimeLineVisualizationBehavior="{Binding LabelVisualizationBehavior}"
+                              VisibleRange="{Binding VisibleTime}"
+                              Height="200"
+                              VerticalAlignment="Top">
+            <telerik:RadGanttView.TimelineContainerSelector>
+                <local:LabelContainerSelector />
+            </telerik:RadGanttView.TimelineContainerSelector>
+            <telerik:RadGanttView.Columns>
+                <telerik:TreeColumnDefinition Header="Title"
+                                              MemberBinding="{Binding Title}"
+                                              ColumnWidth="140" />
+                <telerik:ColumnDefinition MemberBinding="{Binding Start}"
+                                          Header="Start"
+                                          ColumnWidth="140" />
+                <telerik:ColumnDefinition MemberBinding="{Binding End}"
+                                          Header="End"
+                                          ColumnWidth="140" />
+            </telerik:RadGanttView.Columns>
+        </telerik:RadGanttView>
+    </Grid>
+</UserControl>

@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exporting_WPF", "Exporting\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTimeRulerLinesTimelineView_WPF", "CustomTimeRulerLinesTimelineView\CustomTimeRulerLinesTimelineView_WPF.csproj", "{5CC8611B-E5FA-4053-84A2-3FEDA19F73EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutCopyPasteAppointments_WPF", "CutCopyPasteAppointments\CutCopyPasteAppointments_WPF.csproj", "{2AF542B4-E8BA-4F01-888C-C3FF1064D713}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -218,6 +220,16 @@ Global
 		{5CC8611B-E5FA-4053-84A2-3FEDA19F73EF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5CC8611B-E5FA-4053-84A2-3FEDA19F73EF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5CC8611B-E5FA-4053-84A2-3FEDA19F73EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2AF542B4-E8BA-4F01-888C-C3FF1064D713}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
