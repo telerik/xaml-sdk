@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Media;
 using Telerik.Windows.Controls;
 
-namespace MultiColorBoxesItems
+namespace DifferentlyColoredSelectedBoxes
 {
 	public class ViewModel : ViewModelBase
 	{

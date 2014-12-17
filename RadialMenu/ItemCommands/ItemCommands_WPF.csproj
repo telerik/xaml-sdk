@@ -107,13 +107,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="peak.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SDK icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

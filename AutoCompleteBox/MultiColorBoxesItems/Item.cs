@@ -9,7 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace MultiColorBoxesItems
+namespace DifferentlyColoredSelectedBoxes
 {
 	public class Item
 	{

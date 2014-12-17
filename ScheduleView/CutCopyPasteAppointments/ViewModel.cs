@@ -98,28 +98,32 @@ namespace CutCopyPasteAppointments
 		private void pasteCommandExecuted(object parameter)
 		{
 			var slot = parameter as Slot;
-			foreach (Appointment app in cutAppointments)
-			{
-				if (isCopied)
-				{
-					var newApp = new Appointment(){
-					Start = slot.Start,
-					End = slot.Start.Add(app.End-app.Start),
-					Subject = app.Subject
-					};
-					this.Appointments.Add(newApp);
-					
-				}
-				else
-				{
-                    var appDuration = app.End - app.Start;
-					this.Appointments.Remove(app);
-					app.Start = slot.Start;
-                    app.End = slot.Start.Add(appDuration);
-					this.Appointments.Add(app);
-				}				
-			}
-			this.cutAppointments.RemoveAll();
+            if (slot != null)
+            {
+                foreach (Appointment app in cutAppointments)
+                {
+                    if (isCopied)
+                    {
+                        var newApp = new Appointment()
+                        {
+                            Start = slot.Start,
+                            End = slot.Start.Add(app.End - app.Start),
+                            Subject = app.Subject
+                        };
+                        this.Appointments.Add(newApp);
+
+                    }
+                    else
+                    {
+                        var appDuration = app.End - app.Start;
+                        this.Appointments.Remove(app);
+                        app.Start = slot.Start;
+                        app.End = slot.Start.Add(appDuration);
+                        this.Appointments.Add(app);
+                    }
+                }
+                this.cutAppointments.RemoveAll();
+            }
 		}
 	}
 }

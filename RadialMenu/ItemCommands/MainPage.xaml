@@ -67,7 +67,7 @@
                     Grid.Column="1">
             <TextBlock Text="RadRadialContextMenu (click the image in order to open the ContextMenu):"
                        Margin="10" />
-            <Image Source="peak.jpg"
+            <Image Source="image.jpg"
                    x:Name="Image"
                    Width="200"
                    RenderTransform="{Binding RenderTransform}"
