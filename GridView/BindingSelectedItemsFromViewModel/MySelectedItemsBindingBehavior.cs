@@ -11,6 +11,9 @@ namespace BindingSelectedItemsFromViewModel
     {
         private readonly RadGridView grid = null;
         private readonly INotifyCollectionChanged selectedItems = null;
+        private Boolean isSubscribedToEvents = false;
+        private static Boolean isAttached = false;
+
 
         public static readonly DependencyProperty SelectedItemsProperty
             = DependencyProperty.RegisterAttached("SelectedItems", typeof(INotifyCollectionChanged), typeof(MySelectedItemsBindingBehavior),
@@ -31,10 +34,11 @@ namespace BindingSelectedItemsFromViewModel
             RadGridView grid = dependencyObject as RadGridView;
             INotifyCollectionChanged selectedItems = e.NewValue as INotifyCollectionChanged;
 
-            if (grid != null && selectedItems != null)
+            if (grid != null && selectedItems != null && !isAttached)
             {
                 MySelectedItemsBindingBehavior behavior = new MySelectedItemsBindingBehavior(grid, selectedItems);
                 behavior.Attach();
+                isAttached = true;
             }
         }
 
@@ -78,21 +82,27 @@ namespace BindingSelectedItemsFromViewModel
 
         private void SubscribeToEvents()
         {
-            grid.SelectedItems.CollectionChanged += GridSelectedItems_CollectionChanged;
-
-            if (GetSelectedItems(grid) != null)
+            if (!isSubscribedToEvents)
             {
-                GetSelectedItems(grid).CollectionChanged += ContextSelectedItems_CollectionChanged;
+                grid.SelectedItems.CollectionChanged += GridSelectedItems_CollectionChanged;
+
+                if (GetSelectedItems(grid) != null)
+                {
+                    GetSelectedItems(grid).CollectionChanged += ContextSelectedItems_CollectionChanged;
+                }
             }
         }
 
         private void UnsubscribeFromEvents()
         {
-            grid.SelectedItems.CollectionChanged -= GridSelectedItems_CollectionChanged;
-
-            if (GetSelectedItems(grid) != null)
+            if (isSubscribedToEvents)
             {
-                GetSelectedItems(grid).CollectionChanged -= ContextSelectedItems_CollectionChanged;
+                grid.SelectedItems.CollectionChanged -= GridSelectedItems_CollectionChanged;
+
+                if (GetSelectedItems(grid) != null)
+                {
+                    GetSelectedItems(grid).CollectionChanged -= ContextSelectedItems_CollectionChanged;
+                }
             }
         }
 
