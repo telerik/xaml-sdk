@@ -47,12 +47,7 @@ namespace BindingSelectedItemsFromViewModel
             if (grid != null && selectedItems != null)
             {
                 Transfer(GetSelectedItems(grid) as IList, grid.SelectedItems);
-
-                selectedItems.CollectionChanged -= ContextSelectedItems_CollectionChanged;
-                selectedItems.CollectionChanged += ContextSelectedItems_CollectionChanged;
-
-                grid.SelectedItems.CollectionChanged -= GridSelectedItems_CollectionChanged;
-                grid.SelectedItems.CollectionChanged += GridSelectedItems_CollectionChanged;
+                SubscribeToEvents();
             }
         }
 
@@ -90,6 +85,7 @@ namespace BindingSelectedItemsFromViewModel
                 {
                     GetSelectedItems(grid).CollectionChanged += ContextSelectedItems_CollectionChanged;
                 }
+                isSubscribedToEvents = true;
             }
         }
 
@@ -103,6 +99,7 @@ namespace BindingSelectedItemsFromViewModel
                 {
                     GetSelectedItems(grid).CollectionChanged -= ContextSelectedItems_CollectionChanged;
                 }
+                isSubscribedToEvents = false;
             }
         }
 
