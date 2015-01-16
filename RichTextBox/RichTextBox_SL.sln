@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMerge_SL", "MailMerge\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomField_SL", "CustomField\CustomField_SL.csproj", "{788F9CAF-1F74-4C6C-A5F8-60BC7C337CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithRadDocumentEditor_SL", "WorkingWithRadDocumentEditor\WorkingWithRadDocumentEditor_SL.csproj", "{D31E9ED2-18D0-402F-8924-A74B0FBA69B9}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +130,10 @@ Global
 		{788F9CAF-1F74-4C6C-A5F8-60BC7C337CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{788F9CAF-1F74-4C6C-A5F8-60BC7C337CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{788F9CAF-1F74-4C6C-A5F8-60BC7C337CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31E9ED2-18D0-402F-8924-A74B0FBA69B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31E9ED2-18D0-402F-8924-A74B0FBA69B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31E9ED2-18D0-402F-8924-A74B0FBA69B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31E9ED2-18D0-402F-8924-A74B0FBA69B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCaret_WPF", "CustomCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsMetafileFormatImageDecoder", "WindowsMetafileFormatImageDecoder\WindowsMetafileFormatImageDecoder.csproj", "{1C904DCF-B2C2-4BA0-9690-41C8AF252845}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithRadDocumentEditor_WPF", "WorkingWithRadDocumentEditor\WorkingWithRadDocumentEditor_WPF.csproj", "{D2A13004-D54D-4572-B828-9ED077B6E3A0}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -312,6 +314,16 @@ Global
 		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1C904DCF-B2C2-4BA0-9690-41C8AF252845}.Release|x86.ActiveCfg = Release|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D2A13004-D54D-4572-B828-9ED077B6E3A0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
