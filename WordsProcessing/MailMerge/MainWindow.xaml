@@ -1,0 +1,20 @@
+﻿<Window x:Class="MailMerge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:MailMerge"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:ExampleViewModel x:Key="context" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="3" DataContext="{Binding Source={StaticResource context}}">
+            <telerik:RadButton Content="Save mail-merged document with dynamic data object"
+                               Command="{Binding MailMergeWithDynamicDataObjectCommand}"
+                               Margin="0,10,0,0" />
+            <telerik:RadButton Content="Save mail-merged document with concreate data object"
+                               Command="{Binding MailMergeWithConcreateDataObjectCommand}"
+                               Margin="0,10,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>
