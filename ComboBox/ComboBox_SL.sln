@@ -1,27 +1,68 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditableTextBoxTemplate_SL", "EditableTextBoxTemplate\EditableTextBoxTemplate_SL.csproj", "{58DBDFC5-35D7-474D-8D91-1835F968D799}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownWithHeaders_SL", "DropDownWithHeaders\DropDownWithHeaders_SL.csproj", "{EB0F9C39-8342-4485-9663-05CD1ED733AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFiltering_SL", "CustomFiltering\CustomFiltering_SL.csproj", "{F4F9BD12-8502-4900-8382-CC1805028D42}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug.NoXaml|Any CPU = Debug.NoXaml|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		Release.NoXaml|Any CPU = Release.NoXaml|Any CPU
 		Release|Any CPU = Release|Any CPU
+		ReleaseNoCA|Any CPU = ReleaseNoCA|Any CPU
+		ReleaseTrial.NoXaml|Any CPU = ReleaseTrial.NoXaml|Any CPU
+		ReleaseTrial|Any CPU = ReleaseTrial|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
 		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58DBDFC5-35D7-474D-8D91-1835F968D799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{58DBDFC5-35D7-474D-8D91-1835F968D799}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
 		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F9C39-8342-4485-9663-05CD1ED733AD}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9BD12-8502-4900-8382-CC1805028D42}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

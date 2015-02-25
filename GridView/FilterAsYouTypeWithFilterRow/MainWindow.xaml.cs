@@ -28,11 +28,11 @@ namespace WpfApplication1
 
             if (e.AvailableOperators.Contains(FilterOperator.Contains))
             {
-                e.DefaultOperator = FilterOperator.Contains;
+                e.DefaultOperator1 = FilterOperator.Contains;
             }
             else if (e.AvailableOperators.Contains(FilterOperator.IsLessThanOrEqualTo))
             {
-                e.DefaultOperator = FilterOperator.IsLessThanOrEqualTo;
+                e.DefaultOperator1 = FilterOperator.IsLessThanOrEqualTo;
             }
         }
 

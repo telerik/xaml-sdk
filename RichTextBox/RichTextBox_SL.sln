@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithRadDocumentEdito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLayerAndCustomAnnotation_SL", "CustomLayerAndCustomAnnotation\CustomLayerAndCustomAnnotation_SL.csproj", "{9325BC14-4001-4951-B965-4C1D88D756B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInsertTableDialog_SL", "CustomInsertTableDialog\CustomInsertTableDialog_SL.csproj", "{DE181CD5-FF93-492D-BE2C-59A23D8B1D24}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +142,10 @@ Global
 		{9325BC14-4001-4951-B965-4C1D88D756B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9325BC14-4001-4951-B965-4C1D88D756B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9325BC14-4001-4951-B965-4C1D88D756B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE181CD5-FF93-492D-BE2C-59A23D8B1D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE181CD5-FF93-492D-BE2C-59A23D8B1D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE181CD5-FF93-492D-BE2C-59A23D8B1D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE181CD5-FF93-492D-BE2C-59A23D8B1D24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

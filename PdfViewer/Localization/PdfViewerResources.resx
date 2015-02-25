@@ -138,6 +138,9 @@
   <data name="FixedDocumentViewers_FindPrevious" xml:space="preserve">
     <value>Find Previous</value>
   </data>
+  <data name="FixedDocumentViewers_FitWidth" xml:space="preserve">
+    <value>Fit Width</value>
+  </data>
   <data name="FixedDocumentViewers_Options" xml:space="preserve">
     <value>Options</value>
   </data>
@@ -149,5 +152,8 @@
   </data>
   <data name="FixedDocumentViewers_WholeWordsOnly" xml:space="preserve">
     <value>Whole Words Only</value>
+  </data>
+  <data name="FixedDocumentViewers_ZoomToPageLevel" xml:space="preserve">
+    <value>Zoom to Page Level</value>
   </data>
 </root>

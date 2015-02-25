@@ -21,7 +21,7 @@ namespace SilverlightApplication1
         {
             if (e.AvailableOperators.Contains(FilterOperator.Contains))
             {
-                e.DefaultOperator = FilterOperator.Contains;
+                e.DefaultOperator1 = FilterOperator.Contains;
             }
         }
 

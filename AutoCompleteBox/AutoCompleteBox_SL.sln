@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHighlightBehavior_SL"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousFiltering_SL", "AsynchronousFiltering\AsynchronousFiltering_SL.csproj", "{2964BDE0-C699-4533-A88C-560AD77F6781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColorBoxesItems_SL", "MultiColorBoxesItems\MultiColorBoxesItems_SL.csproj", "{D879A3B7-FA84-4878-9F4A-7182D5998330}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredSelectedBoxes_SL", "MultiColorBoxesItems\DifferentlyColoredSelectedBoxes_SL.csproj", "{D879A3B7-FA84-4878-9F4A-7182D5998330}"
 EndProject
 Global
 	 

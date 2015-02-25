@@ -13,7 +13,7 @@ using Telerik.Windows.Media.Imaging.Tools;
 
 namespace CustomWatermarkTool
 {
-    public class WatermarkTool : ITool
+    public class WatermarkTool : ToolBase
     {
         #region Fields
         public static readonly double DefaultOpacity = 0.5;
@@ -38,7 +38,7 @@ namespace CustomWatermarkTool
 
         #region Properties
 
-        public bool IsPreviewOverlay
+        public override bool IsPreviewOverlay
         {
             get
             {
@@ -46,7 +46,7 @@ namespace CustomWatermarkTool
             }
         }
 
-        public bool IsDirty
+        public override bool IsDirty
         {
             get
             {
@@ -54,7 +54,7 @@ namespace CustomWatermarkTool
             }
         }
 
-        public bool AffectsLayout
+        public override bool AffectsLayout
         {
             get
             {
@@ -156,18 +156,18 @@ namespace CustomWatermarkTool
 
         #region Methods
 
-        public IImageCommand GetCommand()
+        public override IImageCommand GetCommand()
         {
             return this.watermarkCommand;
         }
 
-        public object GetContext()
+        public override object GetContext()
         {
             return new WatermarkCommandContext(this.settings.opacity.Value, this.settings.rotation.Value,
                 this.settings.scale.Value, this.watermarkBitmap);
         }
 
-        public void ResetSettings()
+        public override void ResetSettings()
         {
             this.isDirty = false;
             this.settings.opacity.Value = DefaultOpacity;
@@ -175,7 +175,7 @@ namespace CustomWatermarkTool
             this.settings.scale.Value = DefaultScale;
         }
 
-        public void AttachUI(ToolInitInfo previewInitInfo)
+        public override void AttachUI(ToolInitInfo previewInitInfo)
         {
             this.currnetEditor = previewInitInfo.ImageEditor;
             this.previewPanel = previewInitInfo.PreviewPanel;
@@ -198,7 +198,7 @@ namespace CustomWatermarkTool
             }
         }
 
-        public void DetachUI()
+        public override void DetachUI()
         {
             //TODO: Uncomment this 
             this.currnetEditor.ScaleFactorChanged -= currnetEditor_ScaleFactorChanged;
@@ -209,7 +209,7 @@ namespace CustomWatermarkTool
             this.previewPanel = null;
         }
 
-        public UIElement GetSettingsUI()
+        public override UIElement GetSettingsUI()
         {
             this.ResetSettings();
             return this.settings;

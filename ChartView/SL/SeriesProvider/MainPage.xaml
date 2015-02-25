@@ -23,14 +23,19 @@
             <telerik:RadCartesianChart.SeriesProvider>
                 <telerik:ChartSeriesProvider Source="{Binding Data}">
                     <telerik:ChartSeriesProvider.SeriesDescriptors>
-                        <telerik:CategoricalSeriesDescriptor ItemsSourcePath="Items" ValuePath="Value" CategoryPath="Category" >
+                        <telerik:CategoricalSeriesDescriptor CategoryPath="Category"
+                                                             ValuePath="Value"
+                                                             ItemsSourcePath="Items">
                             <telerik:CategoricalSeriesDescriptor.Style>
                                 <Style TargetType="telerik:BarSeries">
                                     <Setter Property="CombineMode" Value="Cluster" />
                                 </Style>
                             </telerik:CategoricalSeriesDescriptor.Style>
                         </telerik:CategoricalSeriesDescriptor>
-                        <telerik:CategoricalSeriesDescriptor ItemsSourcePath="Items" ValuePath="Value" CategoryPath="Category" CollectionIndex="2">
+                        <telerik:CategoricalSeriesDescriptor CategoryPath="Category" 
+                                                             ValuePath="Value" 
+                                                             ItemsSourcePath="Items" 
+                                                             CollectionIndex="2">
                             <telerik:CategoricalSeriesDescriptor.Style>
                                 <Style TargetType="telerik:LineSeries">
                                     <Setter Property="StrokeThickness" Value="4"/>

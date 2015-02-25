@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB", "WithDB\WithDB.csproj", "{5B6F1024-E90D-4E87-9CD6-534885013125}"
 	ProjectSection(ProjectDependencies) = postProject
 		{99D6D733-DB24-4D38-843B-2FDCBF6CE516} = {99D6D733-DB24-4D38-843B-2FDCBF6CE516}
@@ -9,6 +11,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithDB.Web", "WithDB.Web\WithDB.Web.csproj", "{99D6D733-DB24-4D38-843B-2FDCBF6CE516}"
 EndProject
 Global
+	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

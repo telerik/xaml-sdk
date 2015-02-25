@@ -31,8 +31,7 @@ namespace FilteringCollectionProperties
 						e.AvailableOperators.Remove(op);
 					}
 				}
-
-				e.DefaultOperator = FilterOperator.Contains;
+				e.DefaultOperator1 = FilterOperator.Contains;
 			}
 		}
 

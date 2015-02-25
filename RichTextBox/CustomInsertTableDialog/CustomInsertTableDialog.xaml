@@ -1,0 +1,57 @@
+﻿<local:RadRichTextBoxWindow x:Class="CustomInsertTableDialogDemo.CustomInsertTableDialog"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    mc:Ignorable="d"
+    WindowStartupLocation="CenterOwner"   
+    ResizeMode="NoResize"                  
+    telerik:LocalizationManager.ResourceKey="Documents_InsertTableDialog_Header"
+    x:Name="TableInsert">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="LayoutRoot" Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.ColumnSpan="2" Margin="0 0 0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <local:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_InsertTableDialog_TableSize" Margin="4 0 6 0"  HorizontalAlignment="Left" VerticalAlignment="Center" />
+            </Grid>
+
+            <local:DialogLabel Grid.Row="1" telerik:LocalizationManager.ResourceKey="Documents_InsertTableDialog_NumberOfColumns"  />
+            <telerik:RadNumericUpDown Minimum="1" Maximum="8" Grid.Row="1" Grid.Column="1"  x:Name="radNumColumns" NumberDecimalDigits="0" Margin="0 3" Value="5" IsInteger="True" VerticalAlignment="Center"/>
+
+
+            <local:DialogLabel Grid.Row="2" telerik:LocalizationManager.ResourceKey="Documents_InsertTableDialog_NumberOfRows" Margin="0 4 4 6" VerticalAlignment="Center" />
+            <telerik:RadNumericUpDown Minimum="1" Maximum="40" Grid.Row="2" Grid.Column="1" x:Name="radNumRows" NumberDecimalDigits="0" Margin="0 3" Value="2" IsInteger="True" VerticalAlignment="Center"/>
+
+        </Grid>
+
+        <local:DialogFooter Grid.Row="2" Grid.ColumnSpan="2" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <telerik:RadButton Grid.Row="3" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="Ok"  MinWidth="75" Margin="4" Click="buttonOK_Click" />
+                <telerik:RadButton Grid.Row="3" VerticalAlignment="Center" Grid.Column="1" telerik:LocalizationManager.ResourceKey="Cancel"  MinWidth="75" Margin="4" Click="buttonCancel_Click"/>
+            </StackPanel>
+        </local:DialogFooter>
+
+    </Grid>
+</local:RadRichTextBoxWindow>

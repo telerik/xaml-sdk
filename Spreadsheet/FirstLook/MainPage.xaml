@@ -1529,6 +1529,45 @@
                                               telerik:ScreenTip.Title="Reapply the filter on the current range so that changes you've made are included." />
                     </telerik:RadOrderedWrapPanel>
                 </telerik:RadRibbonGroup>
+
+                <telerik:RadRibbonGroup Header="Data tools"
+                                        IsEnabled="{Binding Path=DataToolsGroup.IsEnabled}">
+
+                    <telerik:RadRibbonSplitButton Command="{Binding Path=ShowDataValidationDialog.Command}"
+                                                  IsEnabled="{Binding Path=ShowDataValidationDialog.IsEnabled}"
+                                                  Size="Large"
+                                                  Text="Data Validation"
+                                                  LargeImage="{telerik:IconResource IconRelativePath=32/dataValidation.png, IconSources={StaticResource IconPaths}}"
+                                                  telerik:ScreenTip.Description="Pick from a list of rules to limit the type of data that can be entered in a cell. &#x0a;&#x0a;For example, you can provide a list of values, like 1, 2, and 3, or only allow numbers greater than 1000 as valid entries"
+                                                  telerik:ScreenTip.Title="Data Validation">
+                        <telerik:RadRibbonSplitButton.DropDownContent>
+                            <telerik:RadContextMenu BorderThickness="0" Padding="0" >
+                                <telerik:RadMenuItem Header="Data Validation..." 
+                                                         Command="{Binding Path=ShowDataValidationDialog.Command}"
+                                                         IsEnabled="{Binding Path=ShowDataValidationDialog.IsEnabled, Mode=TwoWay}">
+                                    <telerik:RadMenuItem.Icon>
+                                        <Image Source="{telerik:IconResource IconRelativePath=16/dataValidation.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                    </telerik:RadMenuItem.Icon>
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem Header="Circle Invalid Data" 
+                                                         Command="{Binding Path=CircleInvalidData.Command}"
+                                                         IsEnabled="{Binding Path=CircleInvalidData.IsEnabled, Mode=TwoWay}">
+                                    <telerik:RadMenuItem.Icon>
+                                        <Image Source="{telerik:IconResource IconRelativePath=16/circleInvalidData.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                    </telerik:RadMenuItem.Icon>
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem Header="Clear Validation Circles" 
+                                                         Command="{Binding Path=ClearValidationCircles.Command}"
+                                                         IsEnabled="{Binding Path=ClearValidationCircles.IsEnabled, Mode=TwoWay}">
+                                    <telerik:RadMenuItem.Icon>
+                                        <Image Source="{telerik:IconResource IconRelativePath=16/clearValidationCircles.png, IconSources={StaticResource IconPaths}}" Width="16"/>
+                                    </telerik:RadMenuItem.Icon>
+                                </telerik:RadMenuItem>
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonSplitButton.DropDownContent>
+
+                    </telerik:RadRibbonSplitButton>
+                </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
 
             <telerik:RadRibbonTab Header="View">

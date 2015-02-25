@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemCommands_WPF", "ItemCommands\ItemCommands_WPF.csproj", "{4E59C087-3E4F-4D1E-85F2-F711FD371E59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomRadialButtonContent_WPF", "CustomRadialButtonContent\CustomRadialButtonContent_WPF.csproj", "{43C32AB0-7356-4384-BE81-D6DE89A94BF3}"
@@ -18,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuQuickMode_WPF", "MenuQuickMode\MenuQuickMode_WPF.csproj", "{FCBA8C4F-7456-492D-A58E-1EC493728B30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMenuOnShow_WPF", "OpenMenuOnShow\OpenMenuOnShow_WPF.csproj", "{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingItemsSource_WPF", "BindingItemsSource\BindingItemsSource_WPF.csproj", "{BB49E94D-7C8F-4BC9-A8DD-B459F4106A88}"
 EndProject
 Global
 	 
@@ -62,6 +66,10 @@ Global
 		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1B4B78A-C87B-4C79-BF6C-CD08F56E2FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB49E94D-7C8F-4BC9-A8DD-B459F4106A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB49E94D-7C8F-4BC9-A8DD-B459F4106A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB49E94D-7C8F-4BC9-A8DD-B459F4106A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB49E94D-7C8F-4BC9-A8DD-B459F4106A88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

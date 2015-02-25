@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="SelectedItemsSource.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:SelectedItemsSource"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="This example demonstrates how to use the built-in ListBoxSelectedItemsBehavior of the RadListBox control in order to bind a collection of objects which will be two way synced with the control's SelectedItems collection." 
+                   Grid.ColumnSpan="3"
+                   TextWrapping="Wrap" Width="400" Margin="20 50 20 20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="3">
+            <Button Content="Add Item 1" Margin="10"
+                    Command="{Binding AddItemCommand}"/>
+            <Button Content="Remove Item 1" Margin="10"
+                    Command="{Binding RemoveItemCommand}"/>
+            <Button Content="Clear the SelectedItemsSource collection" Margin="10"
+                    Command="{Binding ClearItemCommand}"/>
+        </StackPanel>
+
+        <TextBlock Text="RadListBox" Grid.Row="3" Grid.Column="0" Margin="10"/>
+        <TextBlock Text="ItemsControl bound to SelectedItemsSource:" Grid.Row="3" Grid.Column="1" Margin="10"/>
+        <TextBlock Text="ItemsControl bound to RadListBox's SelectedItems:" Grid.Row="3" Grid.Column="2" Margin="10"/>
+        
+        <telerik:RadListBox ItemsSource="{Binding Items}"
+                            DisplayMemberPath="Name"
+                            SelectionMode="Multiple"
+                            x:Name="radListBox"
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Width="200"
+                            Margin="10 0 10 10"
+                            telerik:ListBoxSelectedItemsBehavior.SelectedItemsSource="{Binding SelectedItemsSource}"/>
+        <ItemsControl ItemsSource="{Binding SelectedItemsSource}"
+                      Grid.Row="4"
+                      Grid.Column="1"
+                      Margin="20 10 0 0"
+                      DisplayMemberPath="Name"/>
+        <ItemsControl ItemsSource="{Binding ElementName=radListBox, Path=SelectedItems}"
+                      Grid.Row="4"
+                      Grid.Column="2"
+                      Margin="20 10 0 0"
+                      DisplayMemberPath="Name"/>
+    </Grid>
+</UserControl>

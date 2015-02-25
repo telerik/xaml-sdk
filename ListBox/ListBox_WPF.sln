@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyListBoxDragVisualStyl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredUnfocusedSelectedItems_WPF", "DifferentlyColoredUnfocusedSelectedItems\DifferentlyColoredUnfocusedSelectedItems_WPF.csproj", "{3209856E-773C-4C5D-9881-B4A7AEA9C19D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItemsSource_WPF", "SelectedItemsSource\SelectedItemsSource_WPF.csproj", "{E0C171E0-6060-491A-81BA-F8020D4504DD}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

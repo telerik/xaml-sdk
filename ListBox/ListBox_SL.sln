@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListBoxDragDropBehavior_SL", "CustomListBoxDragDropBehavior\CustomListBoxDragDropBehavior_SL.csproj", "{CC0EE5F3-EF41-4D6F-9C83-60B60FC4CBCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropCueWithWrapPanel_SL", "CustomDropCueWithWrapPanel\CustomDropCueWithWrapPanel_SL.csproj", "{53AAABDE-BDBE-4D47-AEC7-A7A17BBFB128}"
@@ -16,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyListBoxDragVisualStyle_SL", "ModifyListBoxDragVisualStyle\ModifyListBoxDragVisualStyle_SL.csproj", "{29CDE71A-6657-4744-BC30-1D5EDB02DF67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredUnfocusedSelectedItems_SL", "DifferentlyColoredUnfocusedSelectedItems\DifferentlyColoredUnfocusedSelectedItems_SL.csproj", "{2E1BF3C5-77A6-4E9B-A070-194B82406327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItemsSource_SL", "SelectedItemsSource\SelectedItemsSource_SL.csproj", "{8F439F16-3942-4F6E-938D-9AE874FBE2F2}"
 EndProject
 Global
 	 
@@ -56,6 +60,10 @@ Global
 		{2E1BF3C5-77A6-4E9B-A070-194B82406327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E1BF3C5-77A6-4E9B-A070-194B82406327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E1BF3C5-77A6-4E9B-A070-194B82406327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

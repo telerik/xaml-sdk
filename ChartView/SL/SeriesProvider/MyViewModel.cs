@@ -12,26 +12,12 @@ using System.Windows.Shapes;
 
 namespace SeriesProvider
 {
-    public class MyViewModel : DependencyObject
+    public class MyViewModel
     {
-        /// <summary>
-        /// Identifies the <see cref="Data"/> dependency property.
-        /// </summary>
-        public static readonly DependencyProperty DataProperty = DependencyProperty.Register("Data",
-            typeof(ObservableCollection<SeriesProviderDataItem>),
-            typeof(MyViewModel),
-            new PropertyMetadata(null));
-
         public ObservableCollection<SeriesProviderDataItem> Data
         {
-            get
-            {
-                return (ObservableCollection<SeriesProviderDataItem>)this.GetValue(DataProperty);
-            }
-            set
-            {
-                this.SetValue(DataProperty, value);
-            }
+            get;
+            set;
         }
 
         public MyViewModel()

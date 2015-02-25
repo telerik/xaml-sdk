@@ -1,0 +1,8 @@
+﻿<Window x:Class="CustomInsertTableDialogDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:local="clr-namespace:CustomInsertTableDialogDemo"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <local:MainPage />
+    </Grid>
+</Window>

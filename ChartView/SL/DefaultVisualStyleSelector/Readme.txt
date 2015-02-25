@@ -1,0 +1,2 @@
+﻿Take advantage of the DefaultVisualStyleSelector in scenarios where you need only a few points to have a different appearance. 
+Use the DefaultVisualStyle and the DefaultVisualStyleSelector instead of PointTemplate and PointTemplateSelector when possible, this will result in a more lightweight chart.

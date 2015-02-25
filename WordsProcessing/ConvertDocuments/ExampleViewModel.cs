@@ -181,7 +181,7 @@ namespace ConvertDocuments
         private void Open(object obj)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Docx files|*.docx|Rtf files|*.rtf|Text files|*.txt|All files (*.*)|*.*";
+            dialog.Filter = "Docx files|*.docx|Rtf files|*.rtf|Html files|*.html|Text files|*.txt|All files (*.*)|*.*";
             dialog.FilterIndex = 1;
             if (dialog.ShowDialog() == true)
             {

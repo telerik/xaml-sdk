@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHighlightBehavior_WPF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousFiltering_WPF", "AsynchronousFiltering\AsynchronousFiltering_WPF.csproj", "{885922CC-C114-4195-9D31-03AECD27408E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColorBoxesItems_WPF", "MultiColorBoxesItems\MultiColorBoxesItems_WPF.csproj", "{AE048560-E20D-4699-9646-FC89623A39D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredSelectedBoxes_WPF", "MultiColorBoxesItems\DifferentlyColoredSelectedBoxes_WPF.csproj", "{AE048560-E20D-4699-9646-FC89623A39D2}"
 EndProject
 Global
 	 

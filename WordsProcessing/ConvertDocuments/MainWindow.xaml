@@ -37,7 +37,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="6">
-            <TextBlock Text="Extension: " VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Export to: " VerticalAlignment="Center" FontWeight="Bold"/>
 
             <telerik:RadComboBox Margin="2"
 								 ItemsSource="{Binding ExportFormats}"
