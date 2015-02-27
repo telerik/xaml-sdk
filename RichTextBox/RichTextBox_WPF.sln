@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLayerAndCustomAnnotat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInsertTableDialog_WPF", "CustomInsertTableDialog\CustomInsertTableDialog_WPF.csproj", "{2146B227-E891-49AE-9186-903BF5AF7511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewUsingRichTextBox_WPF", "PrintPreview\PrintPreviewUsingRichTextBox_WPF.csproj", "{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -348,6 +350,16 @@ Global
 		{2146B227-E891-49AE-9186-903BF5AF7511}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2146B227-E891-49AE-9186-903BF5AF7511}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2146B227-E891-49AE-9186-903BF5AF7511}.Release|x86.ActiveCfg = Release|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{253B5B0F-CEDF-4834-B14C-E5AB0A2CBC70}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
