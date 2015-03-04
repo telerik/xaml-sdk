@@ -18,5 +18,21 @@ namespace CustomTabControlRegionAdapter_SL
 		{
 			InitializeComponent();
 		}
+
+		private void ActivateFirstTab(object sender, RoutedEventArgs e)
+		{
+			Microsoft.Practices.Prism.Regions.IRegionManager rm = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<Microsoft.Practices.Prism.Regions.IRegionManager>();
+			Microsoft.Practices.Prism.Regions.IRegion clr = rm.Regions["TabControlRegion"];
+			var itemToSelect = clr.Views.OfType<Module1.TabItemHomeView>().FirstOrDefault();
+			clr.Activate(itemToSelect);
+		}
+
+		private void ActivateSecondTab(object sender, RoutedEventArgs e)
+		{
+			Microsoft.Practices.Prism.Regions.IRegionManager rm = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<Microsoft.Practices.Prism.Regions.IRegionManager>();
+			Microsoft.Practices.Prism.Regions.IRegion regions = rm.Regions["TabControlRegion"];
+			var itemToSelect = regions.Views.OfType<Module2.TabItemButtonsView>().FirstOrDefault();
+			regions.Activate(itemToSelect);
+		}
 	}
 }

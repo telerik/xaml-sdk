@@ -6,6 +6,15 @@
 		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
 		Title="Shell_WPF" >
 	<Grid>
-		<telerik:RadTabControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.TabControlRegion}" />
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+			<telerik:RadButton Content="Activate FirstTab" Click="ActivateFirstTab" Margin="0 0 30 0" />
+			<telerik:RadButton Content="Activate SecondTab" Click="ActivateSecondTab" />
+		</StackPanel>
+		<telerik:RadTabControl Grid.Row="1" prism:RegionManager.RegionName="{x:Static inf:RegionNames.TabControlRegion}" />
+		
 	</Grid>
 </Window>
