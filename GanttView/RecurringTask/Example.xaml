@@ -27,6 +27,9 @@
 			<telerik:RadGanttView.TimelineContainerSelector>
 				<local:TimeLineRecurrenceContainerSelector/>
 			</telerik:RadGanttView.TimelineContainerSelector>
+            <telerik:RadGanttView.DragDropBehavior>
+                <local:CustomDragDropBehavior/>
+            </telerik:RadGanttView.DragDropBehavior>
 			<telerik:RadGanttView.Columns>
 				<telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="200"/>
 				<telerik:ColumnDefinition Header="Start" MemberBinding="{Binding Start}" ColumnWidth="120"/>

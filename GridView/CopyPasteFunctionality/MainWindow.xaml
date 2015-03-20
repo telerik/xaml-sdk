@@ -92,7 +92,7 @@
 								 SelectedIndex="1"
                                  ItemsSource="{Binding Units}"
                                  DisplayMemberPath="DisplayName"
-                                 SelectedValue="{Binding SelectionUnit, Mode=TwoWay}"
+                                 SelectedValue="{Binding SelectionUnit, ElementName=productsGrid, Mode=TwoWay}"
                                  Margin="0,2" />
 			<TextBlock Text="Selection mode:"
                        Margin="0,10,0,0" />
@@ -101,7 +101,7 @@
                                  SelectedValuePath="Value"
                                  ItemsSource="{Binding Modes}"
                                  DisplayMemberPath="DisplayName"
-                                 SelectedValue="{Binding SelectionMode, Mode=TwoWay}"
+                                 SelectedValue="{Binding SelectionMode, ElementName=productsGrid, Mode=TwoWay}"
                                  Margin="0,2" />
 		</StackPanel>
 	</Grid>

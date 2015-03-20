@@ -73,9 +73,9 @@ namespace RecurringTask
             var collection = new ObservableCollection<IGanttTask>();
             var today = DateTime.Today.AddHours(8);
 
-            var child1 = new GanttTask(today, today.AddHours(4), "reccurence1");
-            var child2 = new GanttTask(today.AddHours(8), today.AddHours(12), "reccurence2");
-            var child3 = new GanttTask(today.AddHours(16), today.AddHours(20), "reccurence3");
+            var child1 = new RecurrenceTask(today, today.AddHours(4), "reccurence1");
+            var child2 = new RecurrenceTask(today.AddHours(8), today.AddHours(12), "reccurence2");
+            var child3 = new RecurrenceTask(today.AddHours(16), today.AddHours(20), "reccurence3");
 
             var task1 = new RecurrenceTask(today, today.AddHours(20), "recurrence")
             {

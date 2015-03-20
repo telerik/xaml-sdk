@@ -1,0 +1,168 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+			 xmlns:local="clr-namespace:SameRowRecurringTask"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			 xmlns:scheduling="clr-namespace:Telerik.Windows.Controls.Scheduling;assembly=Telerik.Windows.Scheduling.Core"
+             xmlns:gantt="clr-namespace:Telerik.Windows.Controls.GanttView;assembly=Telerik.Windows.Controls.GanttView"
+             x:Class="SameRowRecurringTask.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.GanttView.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <ControlTemplate x:Key="EventContainerTemplate" TargetType="local:TimeLineRecurrenceContainer">
+                <Grid>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOverHighlighted">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource EventBackground_MouseOverHighlighted}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource Event_OuterBorderBrush_MouseOverHighlighted}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="BackgroundInnerBorder" Storyboard.TargetProperty="Stroke">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource Event_InnerBorderBrush_MouseOverHighlighted}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Disabled"/>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected"/>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="CommonStatesVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="FocusStates">
+                            <VisualState x:Name="Focused"/>
+                            <VisualState x:Name="Unfocused"/>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="HighlightStates">
+                            <VisualState x:Name="NotHighlighted"/>
+                            <VisualState x:Name="Highlighted">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0:0:0" Storyboard.TargetName="HighlightVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <!--<telerik:ToolTipManager.ToolTip>
+                    <ToolTip ContentTemplate="{TemplateBinding ToolTipTemplate}" Content="{Binding OriginalEvent}"/>
+                </telerik:ToolTipManager.ToolTip>-->
+                    <Border x:Name="BackgroundBorder"
+                    CornerRadius="{StaticResource Event_OuterCornerRadius}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{TemplateBinding Background}">
+                        <Rectangle x:Name="BackgroundInnerBorder"
+                        Stroke="{StaticResource Event_InnerBorderBrush_Normal}"
+                        StrokeThickness="1"
+                        Fill="Transparent"
+                        RadiusX="{StaticResource Event_RadiusX}"
+                        RadiusY="{StaticResource Event_RadiusY}"/>
+                    </Border>
+                    <Border x:Name="CommonStatesVisual"
+                    Visibility="Collapsed"
+                    CornerRadius="{StaticResource Event_OuterCornerRadius}"
+                    BorderBrush="{StaticResource Event_OuterBorderBrush_Selected}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{StaticResource EventBackground_Selected}">
+                        <Rectangle
+                        Stroke="{StaticResource Event_InnerBorderBrush_Normal}"
+                        StrokeThickness="1"
+                        Fill="Transparent"
+                        RadiusX="{StaticResource Event_RadiusX}"
+                        RadiusY="{StaticResource Event_RadiusY}"/>
+                    </Border>
+                    <Border x:Name="HighlightVisual"
+                    Visibility="Collapsed"
+                    Background="{StaticResource EventBackground_Highlighted}"
+                    CornerRadius="{StaticResource Event_OuterCornerRadius}"
+                    BorderBrush="{StaticResource Event_OuterBorderBrush_Highlighted}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                        <Rectangle
+                        Stroke="{StaticResource Event_InnerBorderBrush_Normal}"
+                        StrokeThickness="1"
+                        Fill="Transparent"
+                        RadiusX="{StaticResource Event_RadiusX}"
+                        RadiusY="{StaticResource Event_RadiusY}"/>
+                    </Border>
+                    <Border x:Name="MouseOverVisual"
+                    Visibility="Collapsed"
+                    CornerRadius="{StaticResource Event_OuterCornerRadius}"
+                    BorderBrush="{StaticResource Event_OuterBorderBrush_MouseOver}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{StaticResource EventBackground_MouseOver}">
+                        <Rectangle
+                        Stroke="{StaticResource Event_InnerBorderBrush_MouseOver}"
+                        StrokeThickness="1"
+                        Fill="Transparent"
+                        RadiusX="{StaticResource Event_RadiusX}"
+                        RadiusY="{StaticResource Event_RadiusY}"/>
+                    </Border>
+                    <Grid Grid.Column="1" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="txtBlock" Text="{Binding Title}" FontSize="{TemplateBinding FontSize}"/>
+                        <telerik:ProgressPresenter Grid.Row="1" VerticalAlignment="Bottom" Height="2" Margin="0 0 0 2" HorizontalAlignment="Stretch" Progress="{Binding Progress}" Orientation="Horizontal">
+                            <Rectangle Fill="{StaticResource ProgressFill}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                        </telerik:ProgressPresenter>
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+
+            <Style TargetType="local:TimeLineRecurrenceContainer">
+                <Setter Property="scheduling:DragDropElement.Type" Value="Drag"/>
+                <Setter Property="telerik:DragDropManager.TouchDragTrigger" Value="TapAndHold"/>
+                <Setter Property="Background" Value="{StaticResource EventBackground_Normal}"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="telerik:ZIndexManager.ZIndex" Value="40"/>
+                <Setter Property="Foreground" Value="{StaticResource EventForeground_Normal}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource Event_OuterBorderBrush_Normal}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="2 0"/>
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="MinHeight" Value="17"/>
+                <Setter Property="Template" Value="{StaticResource EventContainerTemplate}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

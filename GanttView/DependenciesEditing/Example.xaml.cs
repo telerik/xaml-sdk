@@ -22,9 +22,11 @@ namespace DependenciesEditing
 
         private void RadAutoCompleteBox_GotFocus_1(object sender, RoutedEventArgs e)
         {
-            var RadAutoCompleteBox = sender as RadAutoCompleteBox;
-            RadAutoCompleteBox.IsDropDownOpen = true;
-            RadAutoCompleteBox.Populate(RadAutoCompleteBox.SearchText);
+            var radAutoCompleteBox = sender as RadAutoCompleteBox;
+            if (!radAutoCompleteBox.IsDropDownOpen)
+            {
+                radAutoCompleteBox.Populate(radAutoCompleteBox.SearchText);
+            }
         }
     }
 }

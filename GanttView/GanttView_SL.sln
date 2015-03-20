@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_SL", "TaskDeadline\TaskDeadline_SL.csproj", "{8CA25908-7486-4F16-84C5-5727C7491BCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDeadline_SL", "ProjectDeadline\ProjectDeadline_SL.csproj", "{9B3CE01E-1B85-475C-8C4C-2C3B3AE23D50}"
@@ -56,6 +58,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadlineProperty_SL", "TaskDeadlineProperty\TaskDeadlineProperty_SL.csproj", "{15ED83CD-051E-4D61-B06C-1B3E326FC147}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartEndEventContainers_SL", "StartEndEventContainers\StartEndEventContainers_SL.csproj", "{6C577BD8-78F0-4596-B3C0-6BA3563D83B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SameRowRecurringTask_SL", "SameRowRecurringTask\SameRowRecurringTask_SL.csproj", "{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}"
 EndProject
 Global
 	 
@@ -331,6 +335,20 @@ Global
 		{6C577BD8-78F0-4596-B3C0-6BA3563D83B2}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{6C577BD8-78F0-4596-B3C0-6BA3563D83B2}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{6C577BD8-78F0-4596-B3C0-6BA3563D83B2}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4F3FD6-1EDA-445C-B613-3DBB97B5D136}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
