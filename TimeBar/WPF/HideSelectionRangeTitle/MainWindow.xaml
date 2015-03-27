@@ -32,7 +32,7 @@
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     Background="{TemplateBinding Background}"
-                                    Style="{StaticResource BorderWithActualWidth}"/>
+                                    Style="{StaticResource BorderWithActualSize}"/>
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>

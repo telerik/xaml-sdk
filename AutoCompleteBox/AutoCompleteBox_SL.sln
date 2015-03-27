@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_SL", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_SL.csproj", "{69EFE70C-B794-4151-9027-8599C9857D09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoPropertiesFilteringBehavior_SL", "TwoPropertiesFilteringBehavior\TwoPropertiesFilteringBehavior_SL.csproj", "{84AAC77F-C201-4FCA-A339-279CA3DE8E96}"
@@ -24,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousFiltering_SL", "AsynchronousFiltering\AsynchronousFiltering_SL.csproj", "{2964BDE0-C699-4533-A88C-560AD77F6781}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredSelectedBoxes_SL", "MultiColorBoxesItems\DifferentlyColoredSelectedBoxes_SL.csproj", "{D879A3B7-FA84-4878-9F4A-7182D5998330}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleSelectionModeWithClearButton_SL", "SingleSelectionModeWithClearButton\SingleSelectionModeWithClearButton_SL.csproj", "{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}"
 EndProject
 Global
 	 
@@ -160,6 +164,20 @@ Global
 		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{D879A3B7-FA84-4878-9F4A-7182D5998330}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{986B56B4-A81C-45C7-9AA7-1F1C72A1E41C}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

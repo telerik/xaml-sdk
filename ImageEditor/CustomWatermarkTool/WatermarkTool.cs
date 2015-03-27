@@ -180,7 +180,6 @@ namespace CustomWatermarkTool
             this.currnetEditor = previewInitInfo.ImageEditor;
             this.previewPanel = previewInitInfo.PreviewPanel;
 
-            //TODO: Uncomment this 
             this.currnetEditor.ScaleFactorChanged += currnetEditor_ScaleFactorChanged;
             this.previewPanel.SizeChanged += currnetEditor_ScaleFactorChanged;
             this.previewPanel.Children.Add(this.watermarkImage);
@@ -200,7 +199,6 @@ namespace CustomWatermarkTool
 
         public override void DetachUI()
         {
-            //TODO: Uncomment this 
             this.currnetEditor.ScaleFactorChanged -= currnetEditor_ScaleFactorChanged;
             this.previewPanel.SizeChanged -= currnetEditor_ScaleFactorChanged;
 
@@ -216,5 +214,5 @@ namespace CustomWatermarkTool
         }
         #endregion
     }
-  
+
 }

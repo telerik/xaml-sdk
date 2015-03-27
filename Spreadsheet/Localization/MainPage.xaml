@@ -1909,6 +1909,14 @@
                                          Command="{Binding Path=ContextMenuRemoveRows.Command}"
                                          Visibility="{Binding Path=ContextMenuRemoveRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
 
+                    <telerik:RadMenuItem Header="Insert Columns"
+                                         Command="{Binding Path=ContextMenuInsertColumns.Command}"
+                                         Visibility="{Binding Path=ContextMenuInsertColumns.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Delete Columns"
+                                         Command="{Binding Path=ContextMenuRemoveColumns.Command}"
+                                         Visibility="{Binding Path=ContextMenuRemoveColumns.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
                     <telerik:RadMenuItem Header="Clear Contents" 
                                          Command="{Binding Path=Clear.Command}"
                                          CommandParameter="Contents"
