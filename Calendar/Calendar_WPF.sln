@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayButton_WPF", "TodayButton\TodayButton_WPF.csproj", "{D233533D-782F-4E1D-ACD4-FF010A2565BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekdaysButtonStyleSelector_WPF", "WeekdaysButtonStyleSelector\WeekdaysButtonStyleSelector_WPF.csproj", "{D5AB8D01-7E8A-4E09-BBF5-DC3A8BAE96CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingDayTemplateSelector_WPF", "UsingDayTemplateSelector\UsingDayTemplateSelector_WPF.csproj", "{AE3EA4E2-EF42-4FEE-9334-6544FC0890A9}"
 EndProject
 Global
 	 
@@ -20,6 +24,10 @@ Global
 		{D5AB8D01-7E8A-4E09-BBF5-DC3A8BAE96CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5AB8D01-7E8A-4E09-BBF5-DC3A8BAE96CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5AB8D01-7E8A-4E09-BBF5-DC3A8BAE96CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3EA4E2-EF42-4FEE-9334-6544FC0890A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3EA4E2-EF42-4FEE-9334-6544FC0890A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3EA4E2-EF42-4FEE-9334-6544FC0890A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3EA4E2-EF42-4FEE-9334-6544FC0890A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

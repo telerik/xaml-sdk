@@ -29,18 +29,24 @@ namespace KeyboardCommandProvider
             {
                 actionsToExecute.Clear();
                 actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.MoveToNext, this.PropertyGrid));
-                if (!this.PropertyGrid.SelectedPropertyDefinition.IsExpanded)
+                if (this.PropertyGrid.SelectedPropertyDefinition != null)
                 {
-                    actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.ExpandCurrentField, this.PropertyGrid));
+                    if (!this.PropertyGrid.SelectedPropertyDefinition.IsExpanded)
+                    {
+                        actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.ExpandCurrentField, this.PropertyGrid));
+                    }
                 }
             }
             if (args.Key == Key.Tab && Keyboard.Modifiers == ModifierKeys.Shift)
             {
                 actionsToExecute.Clear();
                 actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.MoveToPrevious, this.PropertyGrid));
-                if (!this.PropertyGrid.SelectedPropertyDefinition.IsExpanded)
+                if (this.PropertyGrid.SelectedPropertyDefinitions != null)
                 {
-                    actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.ExpandCurrentField, this.PropertyGrid));
+                    if (!this.PropertyGrid.SelectedPropertyDefinition.IsExpanded)
+                    {
+                        actionsToExecute.Add(new PropertyGridDelegateCommandWrapper(RadPropertyGridCommands.ExpandCurrentField, this.PropertyGrid));
+                    }
                 }
             }
 

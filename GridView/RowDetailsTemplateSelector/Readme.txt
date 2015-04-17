@@ -1,4 +1,4 @@
-#RowDetails TemplateSelector#
+#Row Details Template Selector#
 This example demonstrates how you can use the RowDetailsTemplateSelector property of RadGridView to apply different templates based on some value.
 
 Additional information about TemplateSelectors can be found in the following articles: 

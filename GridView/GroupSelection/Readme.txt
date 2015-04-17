@@ -1,1 +1,1 @@
-This example demonstrates how to implement group selection.
+This example demonstrates how to implement an item selection on grouprow level when using GridViewSelectColumn.

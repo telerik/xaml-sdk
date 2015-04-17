@@ -101,7 +101,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyViewModel.cs" />
-    <Compile Include="Properties\AssemblyInfo_SL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App_SL.xaml">

@@ -1,1 +1,1 @@
-This example demonstrates how to implement custom attached behavior in order to bind columns from your view-model for Silverlight and WPF
+This example demonstrates how to implement custom attached behavior in order to bind columns from your view-model. You can check the code in MyColumnsBindingBehavior.cs file.

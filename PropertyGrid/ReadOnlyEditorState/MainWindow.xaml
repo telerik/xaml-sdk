@@ -16,7 +16,7 @@
                       Content="Change PropertyGrid's ReadOnlyEditorState"/>        
         <telerik:RadPropertyGrid x:Name="propertyGrid1"
                                  Grid.Row="1"
-                                 IsReadOnly="True">       
+                                 ReadOnlyEditorState="ReadOnly">       
         </telerik:RadPropertyGrid>
     </Grid>
 </Window>

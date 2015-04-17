@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Documents.FormatProviders.Xaml;
 using Telerik.Windows.Documents.UI;
 
 namespace PrintPreviewUsingRichTextBox
@@ -30,9 +31,12 @@ namespace PrintPreviewUsingRichTextBox
             InsertButton("Close", btnClose_Click, panel);
 
             grid.Children.Add(panel);
+            
+            XamlFormatProvider provider = new XamlFormatProvider();
+            string documentContent = provider.Export(this.radRichTextBox.Document);
 
             RadRichTextBox rtb = new RadRichTextBox();
-            rtb.Document = this.radRichTextBox.Document;
+            rtb.Document = provider.Import(documentContent);
             rtb.IsReadOnly = true;
             rtb.IsFocusable = false;
             rtb.IsSelectionEnabled = false;
@@ -42,6 +46,8 @@ namespace PrintPreviewUsingRichTextBox
 
             grid.Children.Add(rtb);
 
+            window.Height = 100;
+            window.Width = 100;
             this.window.WindowState = WindowState.Maximized;
             this.window.Content = grid;
             this.window.Show();

@@ -1,1 +1,2 @@
-This example demonstrates how you can extend a string column, so that its field filter editors have the auto-complete functionality
+This example demonstrates how you can extend a string column, so that its field filter editors have the auto-complete functionality. A custom AutoCompleteFilterStringColumn is defined.
+In order to observe it, you need to open the FilteringControl of that column and start typing in any of the editors.

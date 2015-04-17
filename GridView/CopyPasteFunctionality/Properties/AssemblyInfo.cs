@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CopyPasteFunctionality_SL")]
+[assembly: AssemblyTitle("CopyPasteFunctionality")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CopyPasteFunctionality_SL")]
+[assembly: AssemblyCompany("Telerik")]
+[assembly: AssemblyProduct("CopyPasteFunctionality")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

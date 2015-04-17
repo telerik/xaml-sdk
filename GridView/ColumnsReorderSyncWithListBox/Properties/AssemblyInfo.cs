@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ColumnsReorderSyncWithListBox_WPF")]
+[assembly: AssemblyTitle("ColumnsReorderSyncWithListBox")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ColumnsReorderSyncWithListBox_WPF")]
+[assembly: AssemblyCompany("Telerik")]
+[assembly: AssemblyProduct("ColumnsReorderSyncWithListBox")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

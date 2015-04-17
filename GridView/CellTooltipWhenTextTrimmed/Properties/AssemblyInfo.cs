@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RadGridView_WPF_AR_8")]
+[assembly: AssemblyTitle("CellTooltipWhenTextTrimmed_WPF")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("RadGridView_WPF_AR_8")]
+[assembly: AssemblyCompany("Telerik")]
+[assembly: AssemblyProduct("CellTooltipWhenTextTrimmed_WPF")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
