@@ -1,0 +1,39 @@
+﻿<Window x:Class="SortGroupByAggregate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:SortGroupByAggregate"
+        Title="MainWindow" Height="300" Width="500">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.GridView.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="telerik:GridViewRow" BasedOn="{StaticResource GridViewRowCoreValidationStyle}"/>
+            <Style TargetType="telerik:GridViewCell" BasedOn="{StaticResource GridViewCellCoreValidationStyle}"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <telerik:RadGridView x:Name="grid" GroupRenderMode="Flat" Grouping="RadGridView_Grouping" ItemsSource="{Binding}">
+            <telerik:RadGridView.GroupDescriptors>
+                <local:SortingGroupDescriptor Member="StadiumCapacity" SortDirection="Ascending">
+                    <local:SortingGroupDescriptor.AggregateFunctions>
+                        <telerik:SumFunction Caption="Sum: "  SourceField="StadiumCapacity"/>
+                        <telerik:CountFunction Caption="Count" />
+                    </local:SortingGroupDescriptor.AggregateFunctions>
+                </local:SortingGroupDescriptor>
+            </telerik:RadGridView.GroupDescriptors>
+        </telerik:RadGridView>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Content="Sort by first aggregate" Click="Button_Click"/>
+            <Button Content="Sort by second aggregate" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>

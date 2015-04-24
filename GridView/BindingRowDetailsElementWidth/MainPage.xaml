@@ -4,7 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-	xmlns:local="clr-namespace:BindingRowDetailsElementWidth">
+	xmlns:local="clr-namespace:BindingRowDetailsElementWidth" Width="400" Height="300">
 	
 	<UserControl.Resources>
 		<local:MyViewModel x:Key="MyViewModel"/>
@@ -35,7 +35,7 @@
 			</telerik:RadGridView.RowDetailsTemplate>
 
 			<telerik:RadGridView.Columns>
-				<telerik:GridViewToggleRowDetailsColumn/>
+				<telerik:GridViewToggleRowDetailsColumn Width="20"/>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
 											Header="Est." DataFormatString="{}{0:yyyy}"/>

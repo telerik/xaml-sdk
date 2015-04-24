@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
 	    xmlns:local="clr-namespace:BindingRowDetailsElementWidth"
-        Title="MainWindow" >
+        Title="MainWindow" Width="400" Height="300">
 	<Window.Resources>
 		<local:MyViewModel x:Key="MyViewModel"/>
 	</Window.Resources>
@@ -32,7 +32,7 @@
 			</telerik:RadGridView.RowDetailsTemplate>
 
 			<telerik:RadGridView.Columns>
-				<telerik:GridViewToggleRowDetailsColumn/>
+				<telerik:GridViewToggleRowDetailsColumn Width="20"/>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
 											Header="Est." DataFormatString="{}{0:yyyy}"/>
