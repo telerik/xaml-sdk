@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewUsingRichTextBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveAndSaveAs_WPF", "SaveAndSaveAs\SaveAndSaveAs_WPF.csproj", "{342936D1-6D2C-4982-8C77-AAD3FDAA3504}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFontPropertiesDialog_WPF", "CustomFontPropertiesDialog\CustomFontPropertiesDialog_WPF.csproj", "{0A98DE06-0E41-4CAE-B383-17F1958088AA}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -372,6 +374,16 @@ Global
 		{342936D1-6D2C-4982-8C77-AAD3FDAA3504}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{342936D1-6D2C-4982-8C77-AAD3FDAA3504}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{342936D1-6D2C-4982-8C77-AAD3FDAA3504}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A98DE06-0E41-4CAE-B383-17F1958088AA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

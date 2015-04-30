@@ -1,0 +1,128 @@
+﻿<telerikUI:RadRichTextBoxWindow x:Class="CustomFontPropertiesDialog.FontPropertiesDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:telerikUI="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    xmlns:colorPickers="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.ColorPickers;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    xmlns:richTextBoxUI="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    ResizeMode="NoResize" 
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <telerik:RadWindow.Resources>
+        <richTextBoxUI:FontFamiliesProvider x:Key="FontFamiliesProvider"/>
+    </telerik:RadWindow.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid Margin="6 0" Height="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="138" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="175" Width="*" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition MinWidth="110" Width="*" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition MinWidth="45" Width="*" />
+                </Grid.ColumnDefinitions>
+                <telerikUI:HeadingLabel Grid.Column="0" Grid.Row="0" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Font"  VerticalAlignment="Bottom" />
+                <telerikUI:HeadingLabel Grid.Column="2" Grid.Row="0" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_FontStyle" VerticalAlignment="Bottom" />
+                <telerikUI:HeadingLabel Grid.Column="4" Grid.Row="0" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Size" VerticalAlignment="Bottom" />
+                <TextBox Name="fontFamilyTextBox" Grid.Column="0" Grid.Row="1" IsReadOnly="True" Width="175" HorizontalAlignment="Left" />
+                <TextBox Grid.Column="2" Grid.Row="1" IsReadOnly="True" 
+                             Text="{Binding ElementName=fontStyleListBox, Path=SelectedItem.Item1, Mode=OneWay}" />
+
+                <TextBox Name="fontSizeTextBox" Grid.Column="4" Grid.Row="1" IsReadOnly="True"/>
+
+                <ListBox Name="fontFamilyListBox" Grid.Column="0" Grid.Row="2"
+                             ItemsSource="{Binding Source={StaticResource FontFamiliesProvider}, Path=RegisteredFonts}"
+                             SelectionChanged="fontFamilyListBox_SelectionChanged"
+                             Width="175"
+                             DisplayMemberPath="DisplayName"
+                             ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            HorizontalAlignment="Left"/>
+                <ListBox Name="fontStyleListBox" Grid.Column="2" Grid.Row="2" DisplayMemberPath="Item1" SelectedValuePath="Item2" />
+                <ListBox Name="fontSizeListBox" Grid.Column="4" Grid.Row="2" SelectionChanged="fontSizeListBox_SelectionChanged"  />
+
+                <telerikUI:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_FontColor" Grid.Row="3" Grid.Column="0" />
+                <colorPickers:DropDownColorPicker x:Name="foreColorSelector" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" Width="175"  SelectedColorChanged="foreColorSelector_SelectedColorChanged" />
+
+
+                <telerikUI:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_HighlightColor" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"/>
+                <colorPickers:DropDownColorPicker x:Name="highlightColorSelector" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Width="175" HorizontalAlignment="Left" SelectedColorChanged="highlightColorSelector_SelectedColorChanged"/>
+
+                <Grid Grid.Row="5" Grid.ColumnSpan="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <telerikUI:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Effects" />
+                </Grid>
+
+                <CheckBox Name="strikeThrough" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Effects_Strikethrough" Grid.Row="6" Grid.Column="0" />
+                <CheckBox Name="subscript" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Effects_Subscript" Grid.Row="6" Grid.Column="2" Checked="Baseline_Checked"/>
+                <CheckBox Name="superscript" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_Effects_Superscript" Grid.Row="7" Grid.Column="2" Checked="Baseline_Checked"/>
+
+                <Grid Grid.Row="8" Grid.ColumnSpan="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <telerikUI:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles" />
+                </Grid>
+
+                <Grid Grid.Row="9" Grid.ColumnSpan="5" x:Name="underlinesGrid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="195" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Name="Line" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_Line" Grid.Row="0" Grid.Column="0" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="DoubleLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_DoubleLine" Grid.Row="1" Grid.Column="0" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="ThickLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_ThickLine" Grid.Row="2" Grid.Column="0" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="Wave" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_Wave" Grid.Row="3" Grid.Column="0" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="DottedLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_DottedLine" Grid.Row="0" Grid.Column="1" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="DashedLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_DashedLine" Grid.Row="1" Grid.Column="1" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="DotDashedLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_DotDashedLine" Grid.Row="2" Grid.Column="1" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                    <CheckBox Name="DotDotDashedLine" telerik:LocalizationManager.ResourceKey="Documents_FontPropertiesDialog_UnderlineStyles_DotDotDashedLine" Grid.Row="3" Grid.Column="1" Checked="Underlines_Checked" Unchecked="Underlines_Unchecked" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <telerikUI:DialogFooter Grid.Row="1" x:Name="Footer" Margin="0 5 0 0">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <telerik:RadButton Grid.Column="0" x:Name="DefaultButton" telerik:LocalizationManager.ResourceKey="ResetAll" Click="DefaultButton_Click" Margin="4" VerticalAlignment="Center" MinWidth="75" />
+                <telerik:RadButton Grid.Column="2" x:Name="OKButton" telerik:LocalizationManager.ResourceKey="Ok" Click="OKButton_Click"  Margin="4" VerticalAlignment="Center" MinWidth="75" />
+                <telerik:RadButton Grid.Column="3" x:Name="CancelButton" telerik:LocalizationManager.ResourceKey="Cancel" Click="CancelButton_Click" Margin="4" VerticalAlignment="Center" MinWidth="75" />
+            </Grid>
+        </telerikUI:DialogFooter>
+    </Grid>
+</telerikUI:RadRichTextBoxWindow>

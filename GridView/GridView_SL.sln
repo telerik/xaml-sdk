@@ -110,6 +110,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortGroupByAggregate_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortGroupByDifferentProperty_SL", "SortGroupByDifferentProperty\SortGroupByDifferentProperty_SL.csproj", "{003C4850-D058-460C-9D92-4ACE24D789B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithLines_SL", "DragDropWithLines\DragDropWithLines_SL.csproj", "{4D2838EF-5EB2-449D-8D22-93980881A897}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -325,6 +327,10 @@ Global
 		{003C4850-D058-460C-9D92-4ACE24D789B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003C4850-D058-460C-9D92-4ACE24D789B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003C4850-D058-460C-9D92-4ACE24D789B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2838EF-5EB2-449D-8D22-93980881A897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2838EF-5EB2-449D-8D22-93980881A897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2838EF-5EB2-449D-8D22-93980881A897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2838EF-5EB2-449D-8D22-93980881A897}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
