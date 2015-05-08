@@ -1,0 +1,12 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="ToolBarDragAndDrop_SL.App_SL"
+               xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             >
+    <Application.Resources>
+        <Style x:Key="DraggableToolBarStyle" TargetType="telerik:RadToolBar">
+            <Setter Property="telerik:DragDropManager.AllowDrag" Value="True" />
+        </Style>
+        <Style TargetType="telerik:RadToolBar" BasedOn="{StaticResource DraggableToolBarStyle}" />
+    </Application.Resources>
+</Application>

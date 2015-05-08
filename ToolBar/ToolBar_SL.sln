@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarCustomStyledElements
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolbarRightAlignedItems_SL", "ToolBarRightAlignedItems\ToolbarRightAlignedItems_SL.csproj", "{69ED03D6-CA1E-49B1-A861-2C3DE2C6FC4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarDragAndDrop_SL", "ToolBarDragAndDrop\ToolBarDragAndDrop_SL.csproj", "{628FC0FE-5B35-4582-9DB9-623465EC7814}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{69ED03D6-CA1E-49B1-A861-2C3DE2C6FC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69ED03D6-CA1E-49B1-A861-2C3DE2C6FC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69ED03D6-CA1E-49B1-A861-2C3DE2C6FC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628FC0FE-5B35-4582-9DB9-623465EC7814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628FC0FE-5B35-4582-9DB9-623465EC7814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628FC0FE-5B35-4582-9DB9-623465EC7814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628FC0FE-5B35-4582-9DB9-623465EC7814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
