@@ -12,6 +12,7 @@
 				<telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
 				                            DataMemberBinding="{Binding StadiumCapacity}"
 				                            Header="Stadium" />
+                <local:GenericDateTimePickerColumn DataMemberBinding="{Binding Established}"/>
 			</telerik:RadGridView.Columns>
 		</telerik:RadGridView>
 	</Grid>

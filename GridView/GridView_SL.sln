@@ -112,6 +112,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortGroupByDifferentPropert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithLines_SL", "DragDropWithLines\DragDropWithLines_SL.csproj", "{4D2838EF-5EB2-449D-8D22-93980881A897}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyBinding_SL", "ReadOnlyBinding\ReadOnlyBinding_SL.csproj", "{90B4E234-53C2-4AA9-8D07-4A86D84051DB}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -331,6 +333,10 @@ Global
 		{4D2838EF-5EB2-449D-8D22-93980881A897}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D2838EF-5EB2-449D-8D22-93980881A897}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D2838EF-5EB2-449D-8D22-93980881A897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
