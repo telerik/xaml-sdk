@@ -12,8 +12,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="This example demonstrates how to use a custom DockingPanesFactory in order to add the RadPanes from the PanesSource collection to a predefined empty RadPaneGroups in the control." TextWrapping="Wrap" Width="400" Margin="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <telerik:RadDocking PanesSource="{Binding Panes}" Grid.Row="1">
+        <TextBlock Text="This example demonstrates how to use a custom DockingPanesFactory in order to add the RadPanes from the PanesSource collection to a predefined empty RadPaneGroups in the control. The example also demonstrates how to permanently remove a RadPane instance when its 'X' close button is pressed." 
+                   TextWrapping="Wrap" Width="600" Margin="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <telerik:RadDocking PanesSource="{Binding Panes}" Grid.Row="1"
+                            Close="OnRadDockingClose">
             <telerik:RadDocking.DockingPanesFactory>
                 <local:MyDockingPanesFactory />
             </telerik:RadDocking.DockingPanesFactory>

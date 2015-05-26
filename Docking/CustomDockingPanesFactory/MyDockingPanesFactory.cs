@@ -20,5 +20,10 @@ namespace CustomDockingPanesFactory
                 base.AddPane(radDocking, pane);
             }
         }
+
+        protected override void RemovePane(RadPane pane)
+        {
+            base.RemovePane(pane);
+        }
     }
 }
