@@ -114,6 +114,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithLines_SL", "Dra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyBinding_SL", "ReadOnlyBinding\ReadOnlyBinding_SL.csproj", "{90B4E234-53C2-4AA9-8D07-4A86D84051DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportPagedDataExcel_SL", "ExportPagedDataExcel\ExportPagedDataExcel_SL.csproj", "{FC2B35CF-9C09-44E4-82A1-20A67D1AD868}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -337,6 +339,10 @@ Global
 		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90B4E234-53C2-4AA9-8D07-4A86D84051DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2B35CF-9C09-44E4-82A1-20A67D1AD868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2B35CF-9C09-44E4-82A1-20A67D1AD868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2B35CF-9C09-44E4-82A1-20A67D1AD868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2B35CF-9C09-44E4-82A1-20A67D1AD868}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

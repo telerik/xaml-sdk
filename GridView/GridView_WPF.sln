@@ -120,6 +120,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithLines_WPF", "Dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyBinding_WPF", "ReadOnlyBinding\ReadOnlyBinding_WPF.csproj", "{30A7604D-F935-4A70-B160-91D080633FB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportPagedDataExcel_WPF", "ExportPagedDataExcel\ExportPagedDataExcel_WPF.csproj", "{5174443B-2CF1-4B83-A9C4-E548621CE76B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -701,6 +703,16 @@ Global
 		{30A7604D-F935-4A70-B160-91D080633FB8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{30A7604D-F935-4A70-B160-91D080633FB8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{30A7604D-F935-4A70-B160-91D080633FB8}.Release|x86.ActiveCfg = Release|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
