@@ -9,7 +9,7 @@ The examples for each of the components in the suite are listed in [the document
 
 # License
 
-The  __XAML SDK__ is licensed under an MIT license. This license applies to the markdown (.md) and demo files only in this site **ONLY**, and does not convey, override or modify any existing licenses covering the runtime source and components of Telerik UI for WPF/Silverlight. For information about available licenses for the Telerik UI for WPF click [here](http://www.telerik.com/purchase/license-agreement/wpf-dlw-s) and for Telerik UI for Silverlight click [here](http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s).
+The  __XAML SDK__ is licensed under an MIT license. This license applies to the source code files in this site **ONLY**, and does not convey, override or modify any existing licenses covering the runtime source and components of Telerik UI for WPF/Silverlight. For information about available licenses for the Telerik UI for WPF click [here](http://www.telerik.com/purchase/license-agreement/wpf-dlw-s) and for Telerik UI for Silverlight click [here](http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s).
 
 ### MIT License
 
