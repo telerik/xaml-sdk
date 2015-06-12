@@ -1,0 +1,24 @@
+﻿<Window x:Class="IconSourceDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" UseLayoutRounding="True"
+        Title="Icon Sources Demo" Height="350" Width="525">
+    <Window.Resources>
+        <telerik:IconSources x:Key="IconPaths" LightBasePath="/IconSourceDemo;component/Icons/Light/"
+                                               DarkBasePath="/IconSourceDemo;component/Icons/Dark/" />
+        <telerik:IconSources x:Key="PdfViewerIconPaths" LightBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/"
+                                               DarkBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/" />
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="{telerik:IconResource IconRelativePath=background.png, IconSources={StaticResource IconPaths}}" Stretch="None" Margin="5" />
+            <Image Source="{telerik:IconResource IconRelativePath=open.png,IconSources={StaticResource PdfViewerIconPaths}}" Stretch="None" Margin="5" />
+        </StackPanel>
+        <telerik:RadButton Content="Switch Theme" Click="switchThemeBtn_Click" Name="switchThemeBtn" Grid.Row="1" Width="100"/>
+    </Grid>
+</Window>
