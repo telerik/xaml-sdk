@@ -7,6 +7,7 @@
     xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"  
     xmlns:commands="clr-namespace:Telerik.Windows.Media.Imaging.ImageEditorCommands.RoutedCommands;assembly=Telerik.Windows.Controls.ImageEditor"
     xmlns:watermark="clr-namespace:CustomWatermarkTool"
+    xmlns:shapes="clr-namespace:Telerik.Windows.Media.Imaging.Shapes;assembly=Telerik.Windows.Controls.ImageEditor"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
@@ -31,6 +32,24 @@
                                            CommandParameter="{StaticResource RoundCornersTool}"/>
                     <telerik:ImageToolItem ImageKey="DrawText" telerik:LocalizationManager.ResourceKey="ImageEditor_DrawText" Command="commands:ImageEditorRoutedCommands.ExecuteTool" 
                                            CommandParameter="{StaticResource DrawText}"/>
+
+                    <telerik:ImageToolItem ImageKey="Draw" telerik:LocalizationManager.ResourceKey="ImageEditor_Draw" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:DrawTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Shape" telerik:LocalizationManager.ResourceKey="ImageEditor_Shape" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:ShapeTool>
+                                <tools:ShapeTool.Shapes>
+                                    <shapes:RectangleShape />
+                                    <shapes:EllipseShape />
+                                    <shapes:LineShape />
+                                </tools:ShapeTool.Shapes>
+                            </tools:ShapeTool>
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    
                 </telerik:ImageToolsSection>
                 <telerik:ImageToolsSection Header="Custom Tools">
                     <telerik:ImageToolItem Text="Watermark"  Command="commands:ImageEditorRoutedCommands.ExecuteTool" 

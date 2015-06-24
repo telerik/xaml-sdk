@@ -16,7 +16,6 @@
             </ResourceDictionary.MergedDictionaries>
             <Style TargetType="telerik:GridViewRow" BasedOn="{StaticResource GridViewRowCoreValidationStyle}"/>
             <Style TargetType="telerik:GridViewCell" BasedOn="{StaticResource GridViewCellCoreValidationStyle}"/>
-            <Style TargetType="telerik:TreeListViewRow" BasedOn="{StaticResource TreeListViewRowCoreValidationStyle}"/>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>

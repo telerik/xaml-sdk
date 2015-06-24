@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrictTheEnteredDate_WPF"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHeaderTemplate_WPF", "CustomHeaderTemplate\CustomHeaderTemplate_WPF.csproj", "{C31F00E8-6972-4542-BE63-BE46DB4B1B41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllowedDates_WPF", "AllowedDates\AllowedDates_WPF.csproj", "{D824AD45-7208-408B-9A5E-B33626C8AFE7}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{C31F00E8-6972-4542-BE63-BE46DB4B1B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C31F00E8-6972-4542-BE63-BE46DB4B1B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C31F00E8-6972-4542-BE63-BE46DB4B1B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D824AD45-7208-408B-9A5E-B33626C8AFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D824AD45-7208-408B-9A5E-B33626C8AFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D824AD45-7208-408B-9A5E-B33626C8AFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D824AD45-7208-408B-9A5E-B33626C8AFE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

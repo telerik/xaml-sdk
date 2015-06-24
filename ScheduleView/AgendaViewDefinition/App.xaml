@@ -261,11 +261,14 @@
                                         <TextBlock telerik:LocalizationManager.ResourceKey="AppointmentSourceWarning" FontSize="32" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Grid>
                                     <Grid x:Name="ListBoxAppointments"  Visibility="{Binding ActiveViewDefinition, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ViewDefinitionToVisibilityConverter}}">
-                                        <telerik:RadListBox ItemsSource="{Binding AppointmentsSource, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                                            SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                        <telerik:RadListBox x:Name="radListBox1"
+                                                            ItemsSource="{Binding ListBoxAppointments}" 
+                                                            SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"
                                                             ItemTemplate="{StaticResource ListBoxItemTemplate}">
                                             <telerik:EventToCommandBehavior.EventBindings>
-                                                <telerik:EventBinding EventName="MouseDoubleClick" Command="{x:Static telerik:RadScheduleViewCommands.EditAppointment}"/>
+                                                <telerik:EventBinding EventName="MouseDoubleClick" 
+                                                                      Command="{x:Static telerikScheduleView:RadScheduleViewCommands.EditAppointment}" 
+                                                                      RaiseOnHandledEvents="True"/>
                                             </telerik:EventToCommandBehavior.EventBindings>
                                         </telerik:RadListBox>
                                     </Grid>

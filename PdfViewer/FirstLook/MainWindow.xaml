@@ -6,12 +6,12 @@
         xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
         Title="MainWindow" Height="600" Width="1000">
     <Window.Resources>
-        <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/"
+        <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/"
+                                               DarkBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/"
                                                ModernBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/" />
 
         <converters:FixedDocumentViewerModeConverter x:Key="ModeConverter" />
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
-        <converters:ScaleModeConverter x:Key="ScaleModeConverter" />
         <telerik:InvertedBooleanConverter x:Key="InvertedBooleanConverter"/>
     </Window.Resources>
 
@@ -75,7 +75,7 @@
 
             <TextBox Width="45" Margin="2" Text="{Binding FixedDocumentViewer.CurrentPageNumber, Mode=TwoWay}" HorizontalContentAlignment="Center" x:Name="tbCurrentPage" KeyDown="tbCurrentPage_KeyDown"/>
             <TextBlock VerticalAlignment="Center" Margin="2" Text="/" />
-            <TextBlock VerticalAlignment="Center" Margin="2" Text="{Binding ElementName=pdfViewer, Path=Document.Pages.Count}" />
+            <TextBlock VerticalAlignment="Center" Margin="2" Text="{Binding FixedDocumentViewer.PagesCount}" />
             <telerik:RadToolBarSeparator/>
 
             <telerik:RadButton Command="{Binding ZoomInCommandDescriptor.Command}" Visibility="{Binding ZoomInCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">

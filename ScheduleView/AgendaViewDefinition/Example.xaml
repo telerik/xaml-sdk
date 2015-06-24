@@ -17,11 +17,13 @@
         </Grid.RowDefinitions>
         <TextBlock Text="This example demonstrates how to implement an Agenda ViewDefinition for RadScheduleView using RadListBox."
 				   TextWrapping="Wrap" FontWeight="Bold" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <telerik:RadScheduleView AppointmentsSource="{Binding SortedAppointments.View}" Grid.Row="1">
+        <telerik:RadScheduleView x:Name="radScheduleView" AppointmentsSource="{Binding Appointments}" Grid.Row="1" SelectedAppointment="{Binding SelectedAppointment, Mode=TwoWay}" 
+                                 VisibleRangeChangedCommand="{Binding ChangeRangeCommand}"
+                                 VisibleRangeChangedCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=ActiveViewDefinition}">
             <telerik:RadScheduleView.ViewDefinitions>
                 <telerik:DayViewDefinition/>
                 <telerik:WeekViewDefinition/>
-                <local:CustomAgendaViewDefinition Title="Agenda"/>
+                <local:CustomAgendaViewDefinition Title="Agenda" />
             </telerik:RadScheduleView.ViewDefinitions>
         </telerik:RadScheduleView>
     </Grid>

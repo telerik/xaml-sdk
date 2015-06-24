@@ -884,6 +884,7 @@
                 </telerik:RadRibbonGroup>
                 <telerik:RadRibbonGroup Header="Merge">
                     <telerik:RadRibbonButton telerik:ScreenTip.Description="Merge the selected cells into one cell." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/MergeTableCells.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding MergeTableCellsCommand}" Size="Large" Text="Merge Cells" telerik:ScreenTip.Title="Merge Cells"/>
+                    <telerik:RadRibbonButton telerik:ScreenTip.Description="Unmerge the current merged cell." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/SplitTableCell.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding UnmergeTableCellsCommand}" Size="Large" Text="Unmerge Cell" telerik:ScreenTip.Title="Unmerge Cell."/>
                 </telerik:RadRibbonGroup>
                 <telerik:RadRibbonGroup Header="Cell Size">
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding ChangeTableColumnsLayoutModeCommand}" telerik:ScreenTip.Description="Automatically resize the column widths based on the size of the text in them or keep the widths with fixed size." LargeImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/AutoFit.png" Size="Large" Text="AutoFit" telerik:ScreenTip.Title="AutoFit/Fixed">

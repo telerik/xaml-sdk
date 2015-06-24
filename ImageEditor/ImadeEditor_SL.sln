@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_SL", "Localiza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleToolCommit_SL", "HandleToolCommit\HandleToolCommit_SL.csproj", "{C882FAB4-007D-4809-9A51-5498BAD00CFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing_SL", "Drawing\Drawing_SL.csproj", "{3920399B-0162-4D01-996F-AF8999253B72}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,8 +52,13 @@ Global
 		{C882FAB4-007D-4809-9A51-5498BAD00CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C882FAB4-007D-4809-9A51-5498BAD00CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C882FAB4-007D-4809-9A51-5498BAD00CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3920399B-0162-4D01-996F-AF8999253B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3920399B-0162-4D01-996F-AF8999253B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3920399B-0162-4D01-996F-AF8999253B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3920399B-0162-4D01-996F-AF8999253B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

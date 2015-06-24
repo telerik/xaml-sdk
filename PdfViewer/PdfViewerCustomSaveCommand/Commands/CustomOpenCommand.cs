@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+#if SILVERLIGHT
+using System.Windows.Controls;
+#endif
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands;
-using System.Windows.Controls;
-using System.IO;
 using Telerik.Windows.Documents.Fixed;
 using Telerik.Windows.Documents.Fixed.FormatProviders;
 #if WPF
@@ -13,7 +16,7 @@ namespace PdfViewerCustomSaveCommand.Commands
 {
     public class CustomOpenCommand : OpenPdfDocumentCommand
     {
-        private System.IO.Stream stream;
+        private readonly Stream stream;
 
         public CustomOpenCommand(FixedDocumentViewerBase viewer)
             : base(viewer)
@@ -39,8 +42,7 @@ namespace PdfViewerCustomSaveCommand.Commands
             {
 #if SILVERLIGHT
                 FileStream str = dialog.File.OpenRead();
-#endif
-#if WPF
+#elif WPF
                 Stream str = dialog.OpenFile();
 #endif              
                 str.CopyTo(stream);

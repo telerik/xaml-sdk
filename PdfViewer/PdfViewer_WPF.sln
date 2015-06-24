@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPresenter_WPF", "CustomPresenter\CustomPresenter_WPF.csproj", "{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDecoder_WPF", "CustomDecoder\CustomDecoder_WPF.csproj", "{DAC3E4B0-F32A-4713-8EE6-2BF3F3ED6096}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCC07DC7-8E24-415F-8FFF-28C45E4970A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC3E4B0-F32A-4713-8EE6-2BF3F3ED6096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC3E4B0-F32A-4713-8EE6-2BF3F3ED6096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC3E4B0-F32A-4713-8EE6-2BF3F3ED6096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC3E4B0-F32A-4713-8EE6-2BF3F3ED6096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

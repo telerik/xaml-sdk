@@ -14,7 +14,6 @@ namespace PdfViewerCustomSaveCommand
             set { SetValue(CommandsProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Commands.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CommandsProperty =
             DependencyProperty.Register("Commands", typeof(CustomCommands), typeof(MainPage), new PropertyMetadata(null));
 
@@ -40,7 +39,7 @@ namespace PdfViewerCustomSaveCommand
         {
             if (e.Key == System.Windows.Input.Key.Enter)
             {
-                this.pdfViewer.Commands.FindCommand.Execute(this.tbFind.Text);
+                this.pdfViewer.CommandDescriptors.FindCommandDescriptor.Command.Execute(this.tbFind.Text);
                 this.btnPrev.Visibility = System.Windows.Visibility.Visible;
                 this.btnNext.Visibility = System.Windows.Visibility.Visible;
             }

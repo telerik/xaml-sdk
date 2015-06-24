@@ -1,0 +1,1 @@
+This example demonstrates how to insert JPEG and JPEG2000 images in a PDF document without the need of decoding the images on import. This way the exported images will not be re-encoded and their image quality will be preserved.

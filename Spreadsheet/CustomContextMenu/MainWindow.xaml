@@ -8,6 +8,9 @@
     Title="MainWindow" Height="350" Width="525" UseLayoutRounding="True">
     
     <Window.Resources>
+        <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/"
+                                               DarkBasePath="/Telerik.Windows.Controls.Spreadsheet;component/Images/Dark/"/>
+        
         <spreadsheetControls:BoolToVisibilityValueConverter x:Key="BoolToVisibilityValueConverter"/>
     </Window.Resources>
     
@@ -18,16 +21,14 @@
                     <telerik:RadMenuItem Header="Copy" Command="{Binding Path=Copy.Command}"
                                          Visibility="{Binding Path=Copy.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/copy.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/copy.png, IconSources={StaticResource IconPaths}}" Width="16"/>
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
                     <telerik:RadMenuItem Header="Paste" Command="{Binding Path=Paste.Command}"
                                          Visibility="{Binding Path=Paste.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
                         <telerik:RadMenuItem.Icon>
-                            <Image telerik:IconManager.IconPropertyName="Source"
-                                   telerik:IconManager.IconSource="/Telerik.Windows.Controls.Spreadsheet;component/Images/Light/16/pasteNormal.png" Width="16"/>
+                            <Image Source="{telerik:IconResource IconRelativePath=16/pasteNormal.png, IconSources={StaticResource IconPaths}}" Width="16"/>
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
                 </telerik:RadContextMenu>

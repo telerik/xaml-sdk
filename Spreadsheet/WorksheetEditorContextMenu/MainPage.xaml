@@ -84,6 +84,22 @@
                         </telerik:RadMenuItem.Icon>
                     </telerik:RadMenuItem>
 
+                    <telerik:RadMenuItem Header="Hide"
+                                         Command="{Binding Path=ContextMenuHideColumns.Command}"
+                                         Visibility="{Binding Path=ContextMenuHideColumns.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Unhide"
+                                         Command="{Binding Path=ContextMenuUnhideColumns.Command}"
+                                         Visibility="{Binding Path=ContextMenuUnhideColumns.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Hide"
+                                         Command="{Binding Path=ContextMenuHideRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuHideRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
+                    <telerik:RadMenuItem Header="Unhide"
+                                         Command="{Binding Path=ContextMenuUnhideRows.Command}"
+                                         Visibility="{Binding Path=ContextMenuUnhideRows.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}"/>
+
                     <telerik:RadMenuItem Command="{Binding Path=ShowHyperlinkDialog.Command}"
                                          Header="Hyperlink..."
                                          Visibility="{Binding Path=ShowHyperlinkDialog.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">

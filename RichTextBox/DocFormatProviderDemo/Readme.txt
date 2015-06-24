@@ -1,0 +1,1 @@
+This example demonstrates how to import .doc files in RadRichTextBox. Please note that this format is currently not supported in the control and this example is using third-party library, which has limited capabilities and some documents may not be imported correctly.

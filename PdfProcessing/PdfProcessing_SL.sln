@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocument_SL", "GenerateDocument\GenerateDocument_SL.csproj", "{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUIElement_SL", "ExportUIElement\ExportUIElement_SL.csproj", "{57034B21-1805-447E-8B71-1F64567C0060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDocumentWithImages_SL", "CreateDocumentWithImages\CreateDocumentWithImages_SL.csproj", "{45DD2C52-9F10-4515-971E-DE21B259A8BE}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DD2C52-9F10-4515-971E-DE21B259A8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DD2C52-9F10-4515-971E-DE21B259A8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DD2C52-9F10-4515-971E-DE21B259A8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DD2C52-9F10-4515-971E-DE21B259A8BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,2 +1,2 @@
 #Restore focus to floating Pane content#
-This example demonstrates how to restore the keyboard focus to the last focused element in the RadPane when it is made floating. Click in one of the TextBox controls and then make that RadPane floating by drag it by its header.
+This example demonstrates how to restore the keyboard focus to the last focused element in the RadPane when it is made floating. Click in one of the TextBox controls and then make that RadPane floating by dragging it by its header.

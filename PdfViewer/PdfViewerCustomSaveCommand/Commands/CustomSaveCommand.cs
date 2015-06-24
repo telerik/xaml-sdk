@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+#if SILVERLIGHT
+using System.Windows.Controls;
+#endif
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands;
-using System.Windows.Input;
-using System.IO;
-using System.Windows.Controls;
 #if WPF
 using Microsoft.Win32;
 #endif
@@ -15,7 +14,7 @@ namespace PdfViewerCustomSaveCommand.Commands
 {
     public class CustomSaveCommand : FixedDocumentViewerCommandBase
     {
-        private Stream documentStream;
+        private readonly Stream documentStream;
 
         public CustomSaveCommand(RadPdfViewer viewer)
             : base(viewer)

@@ -6,7 +6,4 @@ Additional information about creating a custom DateTimePickerColumn can be found
 WPF: http://docs.telerik.com/devtools/wpf/controls/radgridview/columns/how-to/create-date-time-picker-column.html
 SL: http://docs.telerik.com/devtools/silverlight/controls/radgridview/columns/how-to/create-date-time-picker-column.html
 
-WPF: http://localhost/devtools/wpf/controls/radgridview/columns/how-to/create-generic-date-time-picker-column
-SL: http://docs.telerik.com/devtools/silverlight/controls/radgridview/columns/how-to/create-generic-date-time-picker-column
-
 	

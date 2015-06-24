@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration_WPF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocument_WPF", "GenerateDocument\GenerateDocument_WPF.csproj", "{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUIElement_WPF", "ExportUIElement\ExportUIElement_WPF.csproj", "{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDocumentWithImages_WPF", "CreateDocumentWithImages\CreateDocumentWithImages_WPF.csproj", "{1D23F89C-9021-4388-AAAB-538F79F6537D}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D23F89C-9021-4388-AAAB-538F79F6537D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D23F89C-9021-4388-AAAB-538F79F6537D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D23F89C-9021-4388-AAAB-538F79F6537D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D23F89C-9021-4388-AAAB-538F79F6537D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

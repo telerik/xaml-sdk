@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramCustomPaste", "Paste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportToPDF_WPF", "ExportToPDF\ExportToPDF_WPF.csproj", "{D04CEABA-E0C7-44E0-A824-A97DD7049A4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectionCaps_WPF", "CustomConnectionCaps\CustomConnectionCaps_WPF.csproj", "{9DD0B1A5-5642-48B5-9F51-076CD822267B}"
+EndProject
 Global
 	 
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -243,6 +245,16 @@ Global
 		{D04CEABA-E0C7-44E0-A824-A97DD7049A4F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D04CEABA-E0C7-44E0-A824-A97DD7049A4F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D04CEABA-E0C7-44E0-A824-A97DD7049A4F}.Release|x86.ActiveCfg = Release|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9DD0B1A5-5642-48B5-9F51-076CD822267B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ namespace PdfViewerCustomSaveCommand.Commands
 {
     public class CustomCommands
     {
-        private Stream stream;
+        private readonly Stream stream;
 
         public CustomCommands(RadPdfViewer viewer)
         {

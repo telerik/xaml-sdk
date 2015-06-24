@@ -20,7 +20,7 @@ namespace CreateCustomDateTimePickerColumn
     public partial class GenericDateTimePicker : UserControl
     {
         public static readonly DependencyProperty SelectedDateProperty =
-           DependencyProperty.Register("SelectedDateTime", typeof(DateTime?), typeof(DateTimePicker), new PropertyMetadata(null));
+           DependencyProperty.Register("SelectedDateTime", typeof(DateTime?), typeof(GenericDateTimePicker), new PropertyMetadata(null));
 
         public GenericDateTimePicker()
         {
