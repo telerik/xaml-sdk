@@ -11,7 +11,6 @@ namespace CustomDockingPanesFactory
         public Example()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel();
         }
 
         private void OnRadDockingClose(object sender, Telerik.Windows.Controls.Docking.StateChangeEventArgs e)

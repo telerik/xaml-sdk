@@ -7,6 +7,9 @@
              xmlns:local="clr-namespace:CustomDockingPanesFactory"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -16,9 +19,6 @@
                    TextWrapping="Wrap" Width="600" Margin="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <telerik:RadDocking PanesSource="{Binding Panes}" Grid.Row="1"
                             Close="OnRadDockingClose">
-            <telerik:RadDocking.DockingPanesFactory>
-                <local:MyDockingPanesFactory />
-            </telerik:RadDocking.DockingPanesFactory>
             <telerik:RadDocking.DocumentHost>
                 <telerik:RadSplitContainer>
                     <telerik:RadPaneGroup x:Name="DocumentHostPaneGroup"/>
@@ -30,6 +30,9 @@
             <telerik:RadSplitContainer InitialPosition="DockedBottom">
                 <telerik:RadPaneGroup x:Name="BottomPaneGroup"/>
             </telerik:RadSplitContainer>
+            <telerik:RadDocking.DockingPanesFactory>
+                <local:MyDockingPanesFactory />
+            </telerik:RadDocking.DockingPanesFactory>
         </telerik:RadDocking>
     </Grid>
 </UserControl>
