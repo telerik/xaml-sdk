@@ -10,12 +10,12 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace CreateCustomDateTimePickerColumn
+namespace CustomDragVisual
 {
-    public partial class App : Application
+    public partial class App_SL : Application
     {
 
-        public App()
+        public App_SL()
         {
             this.Startup += this.Application_Startup;
             this.Exit += this.Application_Exit;

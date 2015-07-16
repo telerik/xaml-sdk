@@ -1,0 +1,2 @@
+﻿#DesktopAlert with ScreenPositionOffset#
+This example demonstrates how to set a ScreenPositionOffset to RadDesktopAlert through the DesktopAlertManager's constructor in order to visualize it relatively within the Window of your application.

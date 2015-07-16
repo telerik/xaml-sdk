@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
                    Margin="10" 
-                   Text="This example demonstates how to set a ScreenPositionOffset to RadDesktopAlert throug the DesktopAlertManager's constructor in order to visualize it relatively within the Window of your application."
+                   Text="This example demonstrates how to set a ScreenPositionOffset to RadDesktopAlert through the DesktopAlertManager's constructor in order to visualize it relatively within the Window of your application."
                    TextAlignment="Justify"
                    TextWrapping="Wrap"
                    FontStyle="Italic"

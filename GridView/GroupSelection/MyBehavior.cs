@@ -47,17 +47,25 @@ namespace WpfApplication1
 
 		CheckBox checkBox = null;
 		RadGridView grid = null;
+        DependencyPropertyChangedEventHandler dataContextChangedHandler;
+        RoutedEventHandler clickHandler;
+        GridViewGroupRow groupRow = null;
+
 		public MyBehavior(CheckBox source)
 		{
-			GridViewGroupRow groupRow = null;
+			
 			this.checkBox = source;
+            this.checkBox.Unloaded += checkBox_Unloaded;
 			checkBox.Dispatcher.BeginInvoke(new Action
 				(() =>
 				{
 					grid = checkBox.ParentOfType<RadGridView>();
+                    
 					groupRow = checkBox.ParentOfType<GridViewGroupRow>();
+                    
 					if (grid != null && groupRow != null)
 					{
+                        groupRow.Unloaded += groupRow_Unloaded;
 						this.UpdateIsChecked(groupRow.Group);
 					}
 
@@ -66,23 +74,23 @@ namespace WpfApplication1
 						grid.SelectionMode = System.Windows.Controls.SelectionMode.Extended;
 						grid.SelectionUnit = GridViewSelectionUnit.FullRow;
 
-						checkBox.Click += (s, e) =>
-						{
-							grid.SelectionChanged -= grid_SelectionChanged;
+                        checkBox.Click += clickHandler = (s, e) =>
+                        {
+                            grid.SelectionChanged -= grid_SelectionChanged;
 
-							if (checkBox.IsChecked == true)
-							{
-								grid.Select(this.GetSubGroupItems(((GroupViewModel)checkBox.DataContext).Group));
-							}
-							else
-							{
-								grid.Unselect(this.GetSubGroupItems(((GroupViewModel)checkBox.DataContext).Group));
-							}
+                            if (checkBox.IsChecked == true)
+                            {
+                                grid.Select(this.GetSubGroupItems(((GroupViewModel)checkBox.DataContext).Group));
+                            }
+                            else
+                            {
+                                grid.Unselect(this.GetSubGroupItems(((GroupViewModel)checkBox.DataContext).Group));
+                            }
 
-							grid.SelectionChanged += grid_SelectionChanged;
-						};
+                            grid.SelectionChanged += grid_SelectionChanged;
+                        }; 
 
-						groupRow.DataContextChanged += (s, e) =>
+						groupRow.DataContextChanged += dataContextChangedHandler = (s, e) =>
 						{
 							this.UpdateIsChecked(e.NewValue as IGroup);
 						};
@@ -90,6 +98,22 @@ namespace WpfApplication1
 				}
 				));
 		}
+
+        void groupRow_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if (dataContextChangedHandler != null)
+            {
+                groupRow.DataContextChanged -= dataContextChangedHandler;
+            }
+        }
+
+        void checkBox_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if (clickHandler != null)
+            {
+                checkBox.Click -= clickHandler;
+            }
+        }
 
 		private void UpdateIsChecked(IGroup group)
 		{

@@ -13,12 +13,12 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <telerik:RadDatePicker x:Name="Calendar"
-                           SelectedValue="{Binding SelectedDate,
+                           SelectedValue="{Binding SelectedDateTime,
                                            RelativeSource={RelativeSource AncestorType={x:Type local:GenericDateTimePicker}}}"
                            SelectionChanged="Calendar_SelectionChanged" />
         <telerik:RadTimePicker x:Name="TimePicker"
                            Grid.Column="1"
-                           SelectedValue="{Binding SelectedDate,
+                           SelectedValue="{Binding SelectedDateTime,
                                            RelativeSource={RelativeSource AncestorType={x:Type local:GenericDateTimePicker}}}"
                            SelectionChanged="TimePicker_SelectionChanged" />
     </Grid>

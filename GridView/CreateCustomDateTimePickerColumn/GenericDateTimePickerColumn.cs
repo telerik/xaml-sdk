@@ -13,8 +13,13 @@ namespace CreateCustomDateTimePickerColumn
     {
         public override FrameworkElement CreateCellEditElement(GridViewCell cell, object dataItem)
         {
-            this.BindingTarget = GenericDateTimePicker.SelectedDateProperty;
+            #if SILVERLIGHT
+            this.BindingTarget = GenericDateTimePickerSL.SelectedDateTimeProperty;
+            var picker = new GenericDateTimePickerSL();
+            #else
+            this.BindingTarget = GenericDateTimePicker.SelectedDateTimeProperty;
             var picker = new GenericDateTimePicker();
+            #endif
             picker.SetBinding(this.BindingTarget, this.CreateValueBinding());
             return picker;
         }

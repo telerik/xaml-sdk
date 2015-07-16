@@ -1,0 +1,2 @@
+The CustomDragVisual SDK demonstrates how you can set custom content for the DragVisual of the RadTreeView.
+For detailed description of the approach you can visit the online help article in our DragDrop section.

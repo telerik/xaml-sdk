@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BringIntoView_SL", "BringIntoView\BringIntoView_SL.csproj", "{FF4C18C3-DEAF-4CA1-89C0-06D1064ECDC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterSearchSort_SL", "FilterSearchSort\FilterSearchSort_SL.csproj", "{96F65FD5-9442-40E6-B0DB-546CBA62F155}"
@@ -18,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindToSelfReferencingData_SL", "BindToSelfReferencingData\BindToSelfReferencingData_SL.csproj", "{6AA1CF0D-B102-41C9-9C4B-35479B810BFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropBetweenTreeViews_SL", "DragDropBetweenTreeViews\DragDropBetweenTreeViews_SL.csproj", "{415D4211-B4FE-406D-A2E3-06A55B282128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisual_SL", "CustomDragVisual\CustomDragVisual_SL.csproj", "{4A86CB75-0580-484E-871A-6C3CB2972F31}"
 EndProject
 Global
 	 
@@ -58,6 +58,10 @@ Global
 		{415D4211-B4FE-406D-A2E3-06A55B282128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415D4211-B4FE-406D-A2E3-06A55B282128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415D4211-B4FE-406D-A2E3-06A55B282128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A86CB75-0580-484E-871A-6C3CB2972F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A86CB75-0580-484E-871A-6C3CB2972F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A86CB75-0580-484E-871A-6C3CB2972F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A86CB75-0580-484E-871A-6C3CB2972F31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

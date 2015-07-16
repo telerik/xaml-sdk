@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}</ProjectGuid>
+    <ProjectGuid>{FD36B95B-5EAE-4988-837E-975C0637B114}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CreateCustomDateTimePickerColumn</RootNamespace>

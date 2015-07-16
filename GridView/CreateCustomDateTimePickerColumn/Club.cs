@@ -7,20 +7,57 @@ using System.Collections.ObjectModel;
 
 namespace CreateCustomDateTimePickerColumn
 {
-	public class Club
+	public class Club: INotifyPropertyChanged
 	{
-		public Club(string name, DateTime established, int stadiumCapacity)
+        private string name;
+        private DateTime? established;
+        private int stadiumCapacity;
+
+		public Club(string name, DateTime? established, int stadiumCapacity)
 		{
-			this.Name = name;
-			this.Established = established;
-			this.StadiumCapacity = stadiumCapacity;
+            this.name = name;
+            this.established = established;
+            this.stadiumCapacity = stadiumCapacity;
 		}
 
-		public String Name { get; set; }
+		public String Name 
+        {
+            get { return this.name; }
+            set 
+            {
+                if (this.name != value)
+                {
+                    this.name = value;
+                    this.OnPropertyChanged("Name");
+                }
+            }
+        }
 
-		public DateTime? Established { get; set; }
+		public DateTime? Established 
+        {
+            get { return this.established; }
+            set 
+            {
+                if (this.established != value)
+                {
+                    this.established = value;
+                    this.OnPropertyChanged("Established");
+                }
+            }
+        }
 
-		public int StadiumCapacity { get; set; }
+		public int StadiumCapacity 
+        {
+            get { return this.stadiumCapacity; }
+            set 
+            {
+                if (this.stadiumCapacity != value)
+                {
+                    this.stadiumCapacity = value;
+                    this.OnPropertyChanged("StadiumCapacity");
+                }
+            }
+        }
 
 		public static IEnumerable<Club> GetClubs()
 		{
@@ -31,5 +68,21 @@ namespace CreateCustomDateTimePickerColumn
 			clubs.Add(new Club("Arsenal", new DateTime(1886, 1, 1, 4, 55, 45), 60355));
 			return clubs;
 		}
-	}
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(PropertyChangedEventArgs args)
+        {
+            PropertyChangedEventHandler handler = this.PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, args);
+            }
+        }
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            this.OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
+        }
+    }
 }
