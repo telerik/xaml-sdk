@@ -1,0 +1,71 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="CustomConnectorsTool.App_SL"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+              xmlns:extensions="clr-namespace:Telerik.Windows.Controls.Diagrams.Extensions;assembly=Telerik.Windows.Controls.Diagrams.Extensions"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"        
+              xmlns:local="clr-namespace:CustomConnectorsTool"
+             >
+    <Application.Resources>
+        <telerik:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanConverter" />
+        <DropShadowEffect x:Key="DiagramEffect" ShadowDepth="0" BlurRadius="0" Color="#FD000000" Opacity="0" />
+        <SolidColorBrush x:Key="SettingsPaneBorderBrush" Color="#FFD6D4D4" />
+        <SolidColorBrush x:Key="SettingsPaneViewBackground" Color="White" />
+        <sys:Double x:Key="SettingsPane_ToggleButtonWidth">20</sys:Double>
+        <sys:Double x:Key="SettingsPane_ToggleButtonHeight">20</sys:Double>
+        <Thickness x:Key="SettingsPane_ToggleButtonMargin">3</Thickness>
+        <Style TargetType="telerik:RadTabControl" x:Key="PaneTabStyle">
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="BorderBrush" Value="{StaticResource SettingsPaneBorderBrush}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <telerik:RadUniformGrid Rows="1" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="PaneCloseButtonDataTemplate">
+            <Path
+				Data="F1M12.488,5.1L10.967,3.579L8,6.545L5.034,3.579L3.512,5.1L6.479,8.066L3.512,11.033L5.034,12.555L8,9.588L10.967,12.554L12.488,11.033L9.521,8.066z"
+				Stretch="Fill" UseLayoutRounding="False"
+				Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}" Width="10"
+				Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </DataTemplate>
+        <Style TargetType="extensions:SettingsPaneView">
+            <Setter Property="Background" Value="{StaticResource SettingsPaneViewBackground}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="extensions:SettingsPaneView">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{StaticResource SettingsPaneBorderBrush}">
+                            <telerik:RadTabControl x:Name="TabControl" Effect="{StaticResource DiagramEffect}" 
+                                              Style="{StaticResource PaneTabStyle}"
+                                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" DropDownDisplayMode="Collapsed">
+                                <telerik:RadTabItem Padding="0" Header="Style">
+                                    <extensions:SettingsPaneStyleControl />
+                                </telerik:RadTabItem>
+                                <telerik:RadTabItem Padding="0" Header="Connectors">
+                                     <local:AddConnectorControl Shape="{Binding Diagram.SelectedItem, RelativeSource={RelativeSource AncestorType=extensions:SettingsPaneView}}"/>                                   
+                                </telerik:RadTabItem>
+                                <telerik:RadTabControl.AdditionalContent>
+                                    <telerik:RadToggleButton Width="{StaticResource SettingsPane_ToggleButtonWidth}"
+								        Margin="{StaticResource SettingsPane_ToggleButtonMargin}"
+								        MinHeight="{StaticResource SettingsPane_ToggleButtonHeight}"
+								        ContentTemplate="{StaticResource PaneCloseButtonDataTemplate}"
+								        IsChecked="{Binding IsActive, Mode=TwoWay, Converter={StaticResource InvertedBooleanConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                                </telerik:RadTabControl.AdditionalContent>
+                            </telerik:RadTabControl>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="telerik:RadDiagramConnection">
+            <Setter Property="TargetCapType" Value="Arrow4Filled" />
+            <Setter Property="TargetCapSize" Value="10 10" />
+            <Setter Property="ZIndex" Value="3" />
+        </Style>
+    </Application.Resources>
+</Application>

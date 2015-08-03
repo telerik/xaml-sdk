@@ -6,15 +6,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
 	<Grid>
-		<telerik:RadGridView Name="radGridView" AutoGenerateColumns="False">
-			<telerik:RadGridView.Columns>
-				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" Header="Name" />
-				<local:DateTimePickerColumn DataMemberBinding="{Binding Established}" Header="Est." />
-				<telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
+        <telerik:RadGridView Name="radGridView" AutoGenerateColumns="False">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" Header="Name" />
+                <telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
 				                            DataMemberBinding="{Binding StadiumCapacity}"
 				                            Header="Stadium" />
                 <local:GenericDateTimePickerColumn DataMemberBinding="{Binding Established}"/>
             </telerik:RadGridView.Columns>
-		</telerik:RadGridView>
-	</Grid>
+        </telerik:RadGridView>
+    </Grid>
 </UserControl>

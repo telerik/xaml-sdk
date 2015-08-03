@@ -2,24 +2,25 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CreateCustomDateTimePickerColumn"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:WPF="WPF"
+             mc:Ignorable="WPF">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <telerik:RadDatePicker x:Name="Calendar"
-                           SelectedValue="{Binding SelectedDateTime,
+                                WPF:SelectedValue="{Binding SelectedDateTime,
                                            RelativeSource={RelativeSource AncestorType={x:Type local:GenericDateTimePicker}}}"
-                           SelectionChanged="Calendar_SelectionChanged" />
+                               SelectedValue="{Binding SelectedDateTime,
+                                           RelativeSource={RelativeSource AncestorType=local:GenericDateTimePicker}, Mode=TwoWay}"/>
         <telerik:RadTimePicker x:Name="TimePicker"
                            Grid.Column="1"
-                           SelectedValue="{Binding SelectedDateTime,
+                           WPF:SelectedValue="{Binding SelectedDateTime,
                                            RelativeSource={RelativeSource AncestorType={x:Type local:GenericDateTimePicker}}}"
-                           SelectionChanged="TimePicker_SelectionChanged" />
+                               SelectedValue="{Binding SelectedDateTime,
+                                           RelativeSource={RelativeSource AncestorType=local:GenericDateTimePicker}, Mode=TwoWay}"/>
     </Grid>
 </UserControl>

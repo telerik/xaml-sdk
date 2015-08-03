@@ -38,23 +38,5 @@ namespace CreateCustomDateTimePickerColumn
                 this.SetValue(SelectedDateTimeProperty, value);
             }
         }
-
-        private void HandlePickersSelectionChanged()
-        {
-            if (this.Calendar.SelectedDate != null && this.TimePicker.SelectedTime != null)
-            {
-                this.SelectedDateTime = this.Calendar.SelectedDate + this.TimePicker.SelectedTime;
-            }
-        }
-
-        private void Calendar_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.HandlePickersSelectionChanged();
-        }
-
-        private void TimePicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.HandlePickersSelectionChanged();
-        }
     }
 }

@@ -107,10 +107,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DateTimePicker.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="GenericDateTimePicker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,10 +120,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Club.cs" />
-    <Compile Include="DateTimePickerColumn.cs" />
-    <Compile Include="DateTimePicker.xaml.cs">
-      <DependentUpon>DateTimePicker.xaml</DependentUpon>
-    </Compile>
     <Compile Include="GenericDateTimePicker.xaml.cs">
       <DependentUpon>GenericDateTimePicker.xaml</DependentUpon>
     </Compile>
