@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourcePersistence_SL", "Persistence\LocalDataSourceProvider\LocalDataSourcePersistence_SL.csproj", "{1D330BF9-D365-4CC0-9A10-98874BB98404}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContextMenuBehavior_SL", "CustomContextMenuBehavior\CustomContextMenuBehavior_SL.csproj", "{3971312C-623A-49D8-AF47-4073BA32507E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlaStyleRaggedHierarchies_SL", "StyleRaggedHierarchies\XmlaDataProvider\XmlaStyleRaggedHierarchies_SL.csproj", "{2CF9EC7D-B7AF-4556-B1B3-C9CEA567072B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingLocalDataSourceProviderInMVVM_SL", "BindingLocalDataSourceProviderInMVVM\BindingLocalDataSourceProviderInMVVM_SL.csproj", "{64B3D77A-09D6-44CB-BE4A-5A1DCEE4B8BA}"
 EndProject
 Global
 	 
@@ -106,6 +108,10 @@ Global
 		{2CF9EC7D-B7AF-4556-B1B3-C9CEA567072B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CF9EC7D-B7AF-4556-B1B3-C9CEA567072B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CF9EC7D-B7AF-4556-B1B3-C9CEA567072B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B3D77A-09D6-44CB-BE4A-5A1DCEE4B8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B3D77A-09D6-44CB-BE4A-5A1DCEE4B8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B3D77A-09D6-44CB-BE4A-5A1DCEE4B8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B3D77A-09D6-44CB-BE4A-5A1DCEE4B8BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

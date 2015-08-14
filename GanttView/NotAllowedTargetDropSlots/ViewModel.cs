@@ -13,7 +13,7 @@ namespace NotAllowedTargetDropSlots
 
         public ViewModel()
         {
-            var date = DateTime.Now;
+            var date = Constants.ExampleStartDate;
             var ganttAPI = new GanttTask()
             {
                 Start = date,

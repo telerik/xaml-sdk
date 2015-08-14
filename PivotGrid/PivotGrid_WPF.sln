@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataSourcePersistence_WPF", "Persistence\LocalDataSourceProvider\LocalDataSourcePersistence_WPF.csproj", "{F370C170-4B92-40C5-BAB2-233FC0EBA1E0}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdomdStyleRaggedHierarchies_WPF", "StyleRaggedHierarchies\AdomdDataProvider\AdomdStyleRaggedHierarchies_WPF.csproj", "{AE7E0F15-99F2-46D4-BEC6-0B12BD04D12A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlaStyleRaggedHierarchies_WPF", "StyleRaggedHierarchies\XmlaDataProvider\XmlaStyleRaggedHierarchies_WPF.csproj", "{21026C2C-02FF-4AF9-975D-E3D1F28C525D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingLocalDataSourceProviderInMVVM_WPF", "BindingLocalDataSourceProviderInMVVM\BindingLocalDataSourceProviderInMVVM_WPF.csproj", "{A62868F0-6C47-41E9-A87D-726368596D44}"
 EndProject
 Global
 	 
@@ -136,6 +138,10 @@ Global
 		{21026C2C-02FF-4AF9-975D-E3D1F28C525D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21026C2C-02FF-4AF9-975D-E3D1F28C525D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21026C2C-02FF-4AF9-975D-E3D1F28C525D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A62868F0-6C47-41E9-A87D-726368596D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A62868F0-6C47-41E9-A87D-726368596D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A62868F0-6C47-41E9-A87D-726368596D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A62868F0-6C47-41E9-A87D-726368596D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

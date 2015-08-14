@@ -10,19 +10,12 @@ namespace DataValidation
 {
     public class ViewModel : ViewModelBase, IDataErrorInfo
     {
-        public ObservableCollection<Team> Teams { get; set; }
-        public ObservableCollection<Employee> Employees { get; set; }
         private ObservableCollection<Employee> selectedEmployees;
         private bool isMembersBoxEnabled;
-
-        public ICommand Assign { get; set; }
-        public ICommand SelectionChanged { get; set; }
-
         private Employee selectedEmployee;
         private Team selectedTeam;
         private string itemSearchText;
         private string employeeSearchText;
-        public bool IsSearchTextValidationOn { get; set; }
 
         public ViewModel()
         {
@@ -35,7 +28,10 @@ namespace DataValidation
 
             this.Teams = new ObservableCollection<Team>()
             {
-                new Team() { Name="Team1", Employees = new ObservableCollection<Employee>()
+                new Team() 
+                {
+                    Name="Team1",
+                    Employees = new ObservableCollection<Employee>()
                     {
                          new Employee() { FirstName="Maria", LastName="Anders", JobTitle="Software Engineer"},
                          new Employee() { FirstName="Ana", LastName="Trujillo", JobTitle="Support"},
@@ -44,7 +40,10 @@ namespace DataValidation
                          new Employee() { FirstName="Hanna", LastName="Moos", JobTitle="Software Engineer"},
                     }
                 },
-                new Team() { Name="Team2", Employees = new ObservableCollection<Employee>
+                new Team() 
+                {
+                    Name="Team2",
+                    Employees = new ObservableCollection<Employee>
                     {
                         new Employee() { FirstName="Frederique", LastName="Citeaux", JobTitle="Frond End Developer"},
                         new Employee() { FirstName="Martin", LastName="Sommer", JobTitle="QA"},
@@ -55,6 +54,14 @@ namespace DataValidation
                 },
             };
         }
+
+        public ObservableCollection<Team> Teams { get; set; }
+        public ObservableCollection<Employee> Employees { get; set; }
+
+        public ICommand Assign { get; set; }
+        public ICommand SelectionChanged { get; set; }
+
+        public bool IsSearchTextValidationOn { get; set; }
 
         public bool IsMembersBoxEnabled
         {
@@ -168,6 +175,32 @@ namespace DataValidation
             }
         }
 
+        public string Error
+        {
+            get
+            {
+                return ValidateTeam() ?? ValidateEmployee();
+            }
+        }
+
+        public string this[string columnName]
+        {
+            get
+            {
+                switch (columnName)
+                {
+                    case "SelectedTeam":
+                    case "ItemSearchText":
+                        return this.ValidateTeam();
+                    case "SelectedEmployee":
+                    case "EmployeeSearchText":
+                        return this.ValidateEmployee();
+
+                }
+                return null;
+            }
+        }
+
         private void OnSelectionChangedExecute(object obj)
         {
  #if SILVERLIGHT
@@ -221,32 +254,6 @@ namespace DataValidation
             this.OnPropertyChanged(() => this.EmployeeSearchText);
             this.OnPropertyChanged(() => this.ItemSearchText);
             this.IsSearchTextValidationOn = false;
-        }
-
-        public string Error
-        {
-            get
-            {
-                return ValidateTeam() ?? ValidateEmployee();
-            }
-        }
-
-        public string this[string columnName]
-        {
-            get
-            {
-                switch (columnName)
-                {
-                    case "SelectedTeam":
-                    case "ItemSearchText":
-                        return this.ValidateTeam();
-                    case "SelectedEmployee":
-                    case "EmployeeSearchText":
-                        return this.ValidateEmployee();
-
-                }
-                return null;
-            }
         }
 
         private string ValidateTeam()

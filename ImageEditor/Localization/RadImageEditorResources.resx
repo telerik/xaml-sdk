@@ -270,6 +270,48 @@
   <data name="ImageEditor_Width" xml:space="preserve">
     <value>Width:</value>
   </data>
+  <data name="ImageEditor_DrawTool" xml:space="preserve">
+    <value>Draw</value>
+  </data>
+  <data name="ImageEditor_DrawTool_BrushColor" xml:space="preserve">
+    <value>Brush Color:</value>
+  </data>
+  <data name="ImageEditor_DrawTool_BrushSize" xml:space="preserve">
+    <value>Brush Size:</value>
+  </data>
+  <data name="ImageEditor_Shape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_BorderColor" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_BorderThickness" xml:space="preserve">
+    <value>Border Thickness</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_FillShape" xml:space="preserve">
+    <value>Fill Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_LockRatio" xml:space="preserve">
+    <value>Lock Ratio</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_Shape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_ShapeFill" xml:space="preserve">
+    <value>Shape Fill</value>
+  </data>
+  <data name="ImageEditor_ColorPicker_NoColorText_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="ImageEditor_Shapes_Ellipse" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="ImageEditor_Shapes_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="ImageEditor_Shapes_Rectangle" xml:space="preserve">
+    <value>Rectangle</value>
+  </data>
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>

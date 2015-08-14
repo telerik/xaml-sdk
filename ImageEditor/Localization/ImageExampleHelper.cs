@@ -9,7 +9,7 @@
 
     public class ImageExampleHelper
     {
-        private static string SampleImageFolder = "SampleImages/";
+        private static readonly string SampleImageFolder = "SampleImages/";
 
         public static void LoadSampleImage(RadImageEditorUI imageEditorUI, string image)
         {
