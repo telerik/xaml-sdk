@@ -1,0 +1,1 @@
+﻿This example demonstrates how you can synchronize the chart's selected data points with a collection from the viewmodel.

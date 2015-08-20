@@ -26,9 +26,9 @@
 							 ItemsSource="{Binding Products}"
 							 CanUserFreezeColumns="False" CanUserReorderColumns="False"
 							 HorizontalAlignment="Center"
-							 CanUserSelect="{Binding IsChecked, ElementName=CanUserSelectCheckBox, Mode=TwoWay}"
-							 SelectionUnit="{Binding SelectedValue, ElementName=selectionUnitCombo, Mode=TwoWay}"
-							 SelectionMode="{Binding SelectedValue, ElementName=selectionModeCombo, Mode=TwoWay}"
+							 CanUserSelect="{Binding IsChecked, ElementName=CanUserSelectCheckBox}"
+							 SelectionUnit="{Binding SelectedValue, ElementName=selectionUnitCombo}"
+							 SelectionMode="{Binding SelectedValue, ElementName=selectionModeCombo}"
 							 ShowColumnFooters="True"
 							 AutoGenerateColumns="False"
 							 local:GridViewClipboardContextMenu.IsEnabled="True"
@@ -97,7 +97,7 @@
 								 SelectedIndex="1"
                                  ItemsSource="{Binding Units}"
                                  DisplayMemberPath="DisplayName"
-                                 SelectedValue="{Binding SelectionUnit, Mode=TwoWay}"
+                                 SelectedValue="{Binding SelectionUnit,ElementName=productsGrid, Mode=TwoWay}"
                                  Margin="0,2" />
 			<TextBlock Text="Selection mode:"
                        Margin="0,10,0,0" />
@@ -106,7 +106,7 @@
                                  SelectedValuePath="Value"
                                  ItemsSource="{Binding Modes}"
                                  DisplayMemberPath="DisplayName"
-                                 SelectedValue="{Binding SelectionMode, Mode=TwoWay}"
+                                 SelectedValue="{Binding SelectionMode,ElementName=productsGrid, Mode=TwoWay}"
                                  Margin="0,2" />
 		</StackPanel>
 	</Grid>
