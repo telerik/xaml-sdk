@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
                    Margin="10" 
-                   Text="This example demonstrates how to set to bind the DataProvider of RadPivotGrid and RadPivotFieldList to a property in the ViewModel and thus to fill the control with data."
+                   Text="This example demonstrates how to bind the DataProvider of RadPivotGrid and RadPivotFieldList to a property in the ViewModel and thus to fill the control with data."
                    FontStyle="Italic"
                    TextWrapping="Wrap"
                    FontSize="14"/>

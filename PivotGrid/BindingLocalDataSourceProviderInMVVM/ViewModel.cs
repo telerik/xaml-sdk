@@ -24,8 +24,18 @@ namespace BindingLocalDataSourceProviderInMVVM
 
         public IDataProvider DataProvider
         {
-            get { return dataProvider; }
-            set { dataProvider = value; this.OnPropertyChanged("DataProvider"); }
+            get 
+            { 
+                return this.dataProvider; 
+            }
+            set
+            { 
+                if (this.dataProvider != value)
+                {
+                    this.dataProvider = value;
+                    this.OnPropertyChanged("DataProvider");
+                }
+            }
         }
     }
 }
