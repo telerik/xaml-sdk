@@ -21,14 +21,10 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="RadGridView is grouped by Name property and it is sorted by StadiumCapacity property" TextWrapping="Wrap"/>
+        <TextBlock Text="You can group RadGridView by Name property and it will be sorted by StadiumCapacity property." TextWrapping="Wrap"/>
         <telerik:RadGridView x:Name="grid" Grid.Row="1" 
                              GroupRenderMode="Flat" AutoExpandGroups="True" 
                              Grouping="RadGridView_Grouping" 
-                             ItemsSource="{Binding}">
-            <telerik:RadGridView.GroupDescriptors>
-                <telerik:GroupDescriptor Member="Name" SortDirection="Ascending"/>
-            </telerik:RadGridView.GroupDescriptors>
-        </telerik:RadGridView>
+                             ItemsSource="{Binding}"/>
     </Grid>
 </Window>

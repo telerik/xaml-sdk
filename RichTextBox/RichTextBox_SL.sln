@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewUsingRichTextBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFontPropertiesDialog_SL", "CustomFontPropertiesDialog\CustomFontPropertiesDialog_SL.csproj", "{D4E5EE8A-EEE2-4752-B798-9D96B17F1606}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomParagraphPropertiesDialog_SL", "CustomParagraphPropertiesDialog\CustomParagraphPropertiesDialog_SL.csproj", "{D9EDB015-634F-41D6-8900-750006F3591B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +160,10 @@ Global
 		{D4E5EE8A-EEE2-4752-B798-9D96B17F1606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E5EE8A-EEE2-4752-B798-9D96B17F1606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E5EE8A-EEE2-4752-B798-9D96B17F1606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EDB015-634F-41D6-8900-750006F3591B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EDB015-634F-41D6-8900-750006F3591B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EDB015-634F-41D6-8900-750006F3591B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EDB015-634F-41D6-8900-750006F3591B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
