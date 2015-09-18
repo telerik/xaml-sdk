@@ -73,24 +73,20 @@ namespace ExportUIElement
             context.drawingSurface.GraphicProperties.FillColor = fill;
         }
 
-        internal static void SetStroke(PdfRenderContext context, double thickness, Brush brush, double width, double height)
+        internal static void SetStroke(PdfRenderContext context, double thickness, Brush brush, double width, double height, DoubleCollection dashArray)
         {
-            context.drawingSurface.GraphicProperties.IsStroked = thickness != 0;
-            if (!context.drawingSurface.GraphicProperties.IsStroked)
-            {
-                return;
-            }
-
-            context.drawingSurface.GraphicProperties.StrokeThickness = thickness;
-
             var stroke = PdfColorHelper.ConvertBrush(brush, context.opacity, context.drawingSurface.Position, width, height);
-            if (stroke != null)
+            context.drawingSurface.GraphicProperties.IsStroked = thickness != 0 && stroke != null;
+
+            if (context.drawingSurface.GraphicProperties.IsStroked)
             {
+                context.drawingSurface.GraphicProperties.StrokeThickness = thickness;
                 context.drawingSurface.GraphicProperties.StrokeColor = stroke;
-            }
-            else
-            {
-                context.drawingSurface.GraphicProperties.IsStroked = false;
+
+                if (dashArray != null)
+                {
+                    context.drawingSurface.GraphicProperties.StrokeDashArray = dashArray;
+                }
             }
         }
 

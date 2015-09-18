@@ -15,7 +15,7 @@ namespace ExportUIElement
 
             if (IsSimpleStrokeThickness(border.BorderThickness))
             {
-                RectangleRenderer.DrawRectangle(context, border.Background, border.BorderBrush, border.BorderThickness.Left, border.ActualWidth, border.ActualHeight);
+                RectangleRenderer.DrawRectangle(context, border.Background, border.BorderBrush, border.BorderThickness.Left, border.ActualWidth, border.ActualHeight, null);
             }
             else
             {

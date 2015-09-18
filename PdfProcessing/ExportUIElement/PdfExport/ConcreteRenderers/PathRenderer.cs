@@ -22,7 +22,7 @@ namespace ExportUIElement
             using (context.drawingSurface.SaveGraphicProperties())
             {
                 SetFill(context, path.Fill, path.ActualWidth, path.ActualHeight);
-                SetStroke(context, path.StrokeThickness, path.Stroke, path.ActualWidth, path.ActualHeight);
+                SetStroke(context, path.StrokeThickness, path.Stroke, path.ActualWidth, path.ActualHeight, path.StrokeDashArray);
 
                 if (context.drawingSurface.GraphicProperties.IsFilled || context.drawingSurface.GraphicProperties.IsStroked)
                 {

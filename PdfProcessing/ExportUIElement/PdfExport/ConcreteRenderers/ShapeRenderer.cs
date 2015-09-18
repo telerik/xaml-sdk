@@ -28,7 +28,7 @@ namespace ExportUIElement
             using (context.drawingSurface.SaveGraphicProperties())
             {
                 SetFill(context, shape.Fill, shape.ActualWidth, shape.ActualHeight);
-                SetStroke(context, shape.StrokeThickness, shape.Stroke, shape.ActualWidth, shape.ActualHeight);
+                SetStroke(context, shape.StrokeThickness, shape.Stroke, shape.ActualWidth, shape.ActualHeight, shape.StrokeDashArray);
 
                 if (context.drawingSurface.GraphicProperties.IsFilled || context.drawingSurface.GraphicProperties.IsStroked)
                 {

@@ -35,7 +35,10 @@ namespace CreateCustomDateTimePickerColumn
 
 		public DateTime? Established 
         {
-            get { return this.established; }
+            get 
+            { 
+                return this.established;
+            }
             set 
             {
                 if (this.established != value)

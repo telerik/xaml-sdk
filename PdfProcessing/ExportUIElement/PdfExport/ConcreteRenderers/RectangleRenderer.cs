@@ -39,18 +39,18 @@ namespace ExportUIElement
             }
             else
             {
-                DrawRectangle(context, rectangle.Fill, rectangle.Stroke, rectangle.StrokeThickness, rectangle.ActualWidth, rectangle.ActualHeight);
+                DrawRectangle(context, rectangle.Fill, rectangle.Stroke, rectangle.StrokeThickness, rectangle.ActualWidth, rectangle.ActualHeight, rectangle.StrokeDashArray);
             }
 
             return true;
         }
 
-        internal static void DrawRectangle(PdfRenderContext context, Brush fill, Brush stroke, double strokeThickness, double actualWidth, double actualHeight)
+        internal static void DrawRectangle(PdfRenderContext context, Brush fill, Brush stroke, double strokeThickness, double actualWidth, double actualHeight, DoubleCollection dashArray)
         {
             using (context.drawingSurface.SaveGraphicProperties())
             {
                 SetFill(context, fill, actualWidth, actualHeight);
-                SetStroke(context, strokeThickness, stroke, actualWidth, actualHeight);
+                SetStroke(context, strokeThickness, stroke, actualWidth, actualHeight, dashArray);
 
                 if (context.drawingSurface.GraphicProperties.IsFilled || context.drawingSurface.GraphicProperties.IsStroked)
                 {

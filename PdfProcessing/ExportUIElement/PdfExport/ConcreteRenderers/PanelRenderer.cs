@@ -18,7 +18,7 @@ namespace ExportUIElement
                 return false;
             }
 
-            RectangleRenderer.DrawRectangle(context, panel.Background, null, 0, panel.ActualWidth, panel.ActualHeight);
+            RectangleRenderer.DrawRectangle(context, panel.Background, null, 0, panel.ActualWidth, panel.ActualHeight, null);
 
             return base.Render(panel, context);
         }

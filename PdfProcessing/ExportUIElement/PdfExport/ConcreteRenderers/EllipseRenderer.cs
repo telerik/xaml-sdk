@@ -15,7 +15,7 @@ namespace ExportUIElement
 
             using (context.drawingSurface.SaveGraphicProperties())
             {
-                SetStroke(context, ellipse.StrokeThickness, ellipse.Stroke, ellipse.ActualWidth, ellipse.ActualHeight);
+                SetStroke(context, ellipse.StrokeThickness, ellipse.Stroke, ellipse.ActualWidth, ellipse.ActualHeight, ellipse.StrokeDashArray);
                 SetFill(context, ellipse.Fill, ellipse.ActualWidth, ellipse.ActualHeight);
 
                 if (context.drawingSurface.GraphicProperties.IsFilled || context.drawingSurface.GraphicProperties.IsStroked)

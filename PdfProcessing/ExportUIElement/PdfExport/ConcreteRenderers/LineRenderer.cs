@@ -37,10 +37,9 @@ namespace ExportUIElement
                     y1 += 0.5;
                 }
 
-                SetStroke(context, strokeThickness, stroke, Math.Abs(x2 - x1), Math.Abs(y2 - y1));
+                SetStroke(context, strokeThickness, stroke, Math.Abs(x2 - x1), Math.Abs(y2 - y1), dashArray);
                 if (context.drawingSurface.GraphicProperties.IsStroked)
                 {
-                    context.drawingSurface.GraphicProperties.StrokeDashArray = dashArray;
                     context.drawingSurface.DrawLine(new Point(x1, y1), new Point(x2, y2));
                 }
             }

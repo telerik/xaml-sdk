@@ -9,7 +9,7 @@ using Telerik.Windows.Controls.GridView;
 
 namespace CreateCustomDateTimePickerColumn
 {
-    public class GenericDateTimePickerColumn : GridViewBoundColumnBase
+    public class GenericDateTimePickerColumn: GridViewBoundColumnBase
     {
         public override FrameworkElement CreateCellEditElement(GridViewCell cell, object dataItem)
         {
@@ -22,9 +22,9 @@ namespace CreateCustomDateTimePickerColumn
         private Binding CreateValueBinding()
         {
             var valueBinding = new Binding();
-
+            
             valueBinding.Mode = BindingMode.TwoWay;
-
+           
             valueBinding.NotifyOnValidationError = true;
             valueBinding.ValidatesOnExceptions = true;
             valueBinding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;

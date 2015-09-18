@@ -4,7 +4,7 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:BindingSelectedItemsToViewModel"
         Title="MainWindow">
-    <Window.Resources>
+    <FrameworkElement.Resources>
         <DataTemplate x:Key="listItemTemplate">
             <Border Padding="3"                               
                     Margin="5 1"                               
@@ -23,11 +23,7 @@
             <Setter Property="Padding" Value="3" />
             <Setter Property="Margin" Value="5 5 5 0" />
         </Style>
-
-        <Style TargetType="telerik:GridViewRow">
-            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
-        </Style>
-    </Window.Resources>
+    </FrameworkElement.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -78,7 +74,7 @@
                              Grid.Row="1" 
                              ItemsSource="{Binding CartesianDataItems}" 
                              SelectionMode="Multiple"
-                             SelectionChanged="gridView_SelectionChanged" />
+                             local:GridUtilities.SelectedItems="{Binding SelectedCartesianDataItems}"/>
 
         <StackPanel Grid.Column="2">
             <TextBlock Text="Selected Pie Data Items" Style="{StaticResource listHeaderStyle}" />
