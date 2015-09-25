@@ -103,7 +103,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChartUtilities.cs" />
-    <Compile Include="GridUtilities.cs" />
     <Compile Include="DataItem.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

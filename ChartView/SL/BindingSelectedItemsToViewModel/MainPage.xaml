@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
-    <FrameworkElement.Resources>
+    <UserControl.Resources>
         <DataTemplate x:Key="listItemTemplate">
             <Border Padding="3"                               
                     Margin="5 1"                               
@@ -26,9 +26,9 @@
             <Setter Property="Padding" Value="3" />
             <Setter Property="Margin" Value="5 5 5 0" />
         </Style>
-    </FrameworkElement.Resources>
+    </UserControl.Resources>
 
-    <Grid>
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -77,7 +77,13 @@
                              Grid.Row="1" 
                              ItemsSource="{Binding CartesianDataItems}" 
                              SelectionMode="Multiple"
-                             local:GridUtilities.SelectedItems="{Binding SelectedCartesianDataItems}"/>
+                             SelectionChanged="gridView_SelectionChanged">
+            <telerik:RadGridView.Resources>
+                <Style TargetType="telerik:GridViewRow">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                </Style>
+            </telerik:RadGridView.Resources>
+        </telerik:RadGridView>
 
         <StackPanel Grid.Column="2">
             <TextBlock Text="Selected Pie Data Items" Style="{StaticResource listHeaderStyle}" />

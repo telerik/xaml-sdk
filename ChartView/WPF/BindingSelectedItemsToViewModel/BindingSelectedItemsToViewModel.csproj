@@ -90,7 +90,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ChartUtilities.cs" />
-    <Compile Include="GridUtilities.cs" />
     <Compile Include="DataItem.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">

@@ -43,8 +43,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectionCaps_WPF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectorsTool_WPF", "CustomConnectorsTools\CustomConnectorsTool_WPF.csproj", "{74A23939-F8FC-4F71-8EF4-22FFD7FF0BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRootsInSingleTreeLayout_WPF", "MultipleRootsInSingleTreeLayout\MultipleRootsInSingleTreeLayout_WPF.csproj", "{AEBEA6D4-F492-4754-873E-622581353441}"
-EndProject
 Global
 	 
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -269,16 +267,6 @@ Global
 		{74A23939-F8FC-4F71-8EF4-22FFD7FF0BD0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{74A23939-F8FC-4F71-8EF4-22FFD7FF0BD0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{74A23939-F8FC-4F71-8EF4-22FFD7FF0BD0}.Release|x86.ActiveCfg = Release|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AEBEA6D4-F492-4754-873E-622581353441}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
