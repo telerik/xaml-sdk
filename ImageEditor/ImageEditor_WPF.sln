@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadImageEditorUIFirstLook_WPF", "RadImageEditorUIFirstLook\RadImageEditorUIFirstLook_WPF.csproj", "{420D0D51-6BF7-4B33-8C53-7886844C2FE7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUIRadImageEditor_WPF", "CustomUIRadImageEditor\CustomUIRadImageEditor_WPF.csproj", "{ED273FC2-E517-4B1A-B963-4F2F520C369A}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization_WPF", "Localization\Localization_WPF.csproj", "{C7C7A087-981C-4A63-B957-092EB0A10B70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing_WPF", "Drawing\Drawing_WPF.csproj", "{78A90D14-849F-4AEA-AACE-9E7CA772C8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageFormatProvider_WPF", "CustomImageFormatProvider\CustomImageFormatProvider_WPF.csproj", "{088F7704-0A83-4093-934D-A9B276DAB9D2}"
 EndProject
 Global
 	 
@@ -44,6 +48,10 @@ Global
 		{78A90D14-849F-4AEA-AACE-9E7CA772C8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A90D14-849F-4AEA-AACE-9E7CA772C8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A90D14-849F-4AEA-AACE-9E7CA772C8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

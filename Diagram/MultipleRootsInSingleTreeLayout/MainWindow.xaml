@@ -1,0 +1,9 @@
+﻿<Window x:Class="MultipleRootsInSingleTreeLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"       
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized"
+          xmlns:local="clr-namespace:MultipleRootsInSingleTreeLayout" >   
+    <Grid x:Name="grid">
+        <local:Example />
+    </Grid>
+</Window>

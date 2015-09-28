@@ -2,15 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using Telerik.Charting;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.ChartView;
@@ -164,7 +156,7 @@ namespace BindingSelectedItemsToViewModel
 
         private static IEnumerable GetDataPoints(ChartSeries series)
         {
-            var dataPoints = (IEnumerable)series.GetType().GetProperty("DataPoints").GetValue(series, null);            
+            var dataPoints = (IEnumerable)series.GetType().GetProperty("DataPoints").GetValue(series, null);
             return dataPoints;
         }
 

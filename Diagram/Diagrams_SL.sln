@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectionCaps_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectorsTool_SL", "CustomConnectorsTools\CustomConnectorsTool_SL.csproj", "{C3323E2C-62D2-44D9-8BD7-956634801284}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRootsInSingleTreeLayout_SL", "MultipleRootsInSingleTreeLayout\MultipleRootsInSingleTreeLayout_SL.csproj", "{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -252,6 +254,16 @@ Global
 		{C3323E2C-62D2-44D9-8BD7-956634801284}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C3323E2C-62D2-44D9-8BD7-956634801284}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C3323E2C-62D2-44D9-8BD7-956634801284}.Release|x86.ActiveCfg = Release|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

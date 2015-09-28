@@ -18,6 +18,9 @@
      
      
   </PropertyGroup>
+  <PropertyGroup>
+    <SkipSdkExample>true</SkipSdkExample>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>

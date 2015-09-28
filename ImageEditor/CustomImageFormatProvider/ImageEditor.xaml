@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="CustomImageFormatProvider.ImageEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"
+             xmlns:commands="clr-namespace:Telerik.Windows.Media.Imaging.ImageEditorCommands.RoutedCommands;assembly=Telerik.Windows.Controls.ImageEditor"
+             xmlns:shapes="clr-namespace:Telerik.Windows.Media.Imaging.Shapes;assembly=Telerik.Windows.Controls.ImageEditor"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadImageEditorUI x:Name="ImageEditorUI" telerik:Analytics.Name="uiEditor">
+            <telerik:RadImageEditorUI.ImageToolsSections>
+
+                <telerik:ImageToolsSection telerik:LocalizationManager.ResourceKey="ImageEditor_Transform">
+                    <telerik:ImageToolItem ImageKey="Resize" telerik:LocalizationManager.ResourceKey="ImageEditor_Resize"
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:ResizeTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+
+                    <telerik:ImageToolItem ImageKey="Resize" telerik:LocalizationManager.ResourceKey="ImageEditor_CanvasResize"
+                                                   Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:CanvasResizeTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+
+                    <telerik:ImageToolItem ImageKey="Rotate90CW"  telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate90"  Command="commands:ImageEditorRoutedCommands.Rotate90Clockwise" />
+                    <telerik:ImageToolItem ImageKey="Rotate180CW" telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate180"  Command="commands:ImageEditorRoutedCommands.Rotate180" />
+                    <telerik:ImageToolItem ImageKey="Rotate90CCW" telerik:LocalizationManager.ResourceKey="ImageEditor_Rotate270"  Command="commands:ImageEditorRoutedCommands.Rotate90Counterclockwise" />
+                    <telerik:ImageToolItem ImageKey="RoundCorners" telerik:LocalizationManager.ResourceKey="ImageEditor_RoundCorners"  Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:RoundCornersTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="FlipHorizontal" telerik:LocalizationManager.ResourceKey="ImageEditor_FlipHorizontal" Command="commands:ImageEditorRoutedCommands.FlipHorizontal" />
+                    <telerik:ImageToolItem ImageKey="FlipVertical" telerik:LocalizationManager.ResourceKey="ImageEditor_FlipVertical" Command="commands:ImageEditorRoutedCommands.FlipVertical" />
+                    <telerik:ImageToolItem ImageKey="Crop" telerik:LocalizationManager.ResourceKey="ImageEditor_Crop" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:CropTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="DrawText" telerik:LocalizationManager.ResourceKey="ImageEditor_DrawText" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:DrawTextTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+
+                    <telerik:ImageToolItem ImageKey="Draw" telerik:LocalizationManager.ResourceKey="ImageEditor_Draw" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:DrawTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Shape" telerik:LocalizationManager.ResourceKey="ImageEditor_Shape" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:ShapeTool>
+                                <tools:ShapeTool.Shapes>
+                                    <shapes:RectangleShape />
+                                    <shapes:EllipseShape />
+                                    <shapes:LineShape />
+                                </tools:ShapeTool.Shapes>
+                            </tools:ShapeTool>
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+
+                </telerik:ImageToolsSection>
+
+                <telerik:ImageToolsSection telerik:LocalizationManager.ResourceKey="ImageEditor_Adjust" >
+                    <telerik:ImageToolItem ImageKey="HueShift" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_HueShift"
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:HueShiftTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Saturation" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_Saturation" 
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:SaturationTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Contrast" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_ContrastAdjust" 
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool" >
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:ContrastTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Invert" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_InvertColors" 
+                                           Command="commands:ImageEditorRoutedCommands.InvertColors" />
+                </telerik:ImageToolsSection>
+
+                <telerik:ImageToolsSection telerik:LocalizationManager.ResourceKey="ImageEditor_Effects">
+                    <telerik:ImageToolItem ImageKey="Sharpen" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_Sharpen"
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:SharpenTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                    <telerik:ImageToolItem ImageKey="Blur" telerik:LocalizationManager.ResourceKey="ImageEditor_Effect_Blur"
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:BlurTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
+                </telerik:ImageToolsSection>
+
+            </telerik:RadImageEditorUI.ImageToolsSections>
+        </telerik:RadImageEditorUI>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Load different image formats: " FontSize="20" VerticalAlignment="Center"/>
+
+            <Button Content="Jpeg2000" Click="Jpeg2000Button_Click" Width="100" Margin="5 0"/>
+            <Button Content="Targa" Click="TargaButton_Click" Width="100" Margin="5 0"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Text="For more image formats (Wmf, Emf, Exif and etc.) use the 'Open' button."  VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>
