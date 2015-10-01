@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using Telerik.Windows.Documents.Fixed.Model.Editing;
 
 namespace ExportUIElement
 {
@@ -20,7 +22,19 @@ namespace ExportUIElement
                     SetFill(context, textBlock.Foreground, textBlock.ActualWidth, textBlock.ActualHeight);
                     SetFontFamily(context.drawingSurface, textBlock.FontFamily);
                     context.drawingSurface.TextProperties.FontSize = textBlock.FontSize;
-                    context.drawingSurface.DrawText(textBlock.Text);
+
+                    Block block = new Block();
+                    block.TextProperties.CopyFrom(context.drawingSurface.TextProperties);
+                    block.GraphicProperties.CopyFrom(context.drawingSurface.GraphicProperties);
+                    string[] textLines = textBlock.Text.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+                    foreach (string textLine in textLines)
+                    {
+                        block.InsertText(textLine);
+                        block.InsertLineBreak();
+                    }
+
+                    context.drawingSurface.DrawBlock(block);
                 }
             }
 

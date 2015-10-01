@@ -29,8 +29,8 @@ namespace CreateDocumentWithImages
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Pdf file|*.pdf";
-            
-            if (saveFileDialog1.ShowDialog()==true)
+
+            if (saveFileDialog1.ShowDialog() == true)
             {
                 using (FileStream fs = (FileStream)saveFileDialog1.OpenFile())
                 {
@@ -49,8 +49,15 @@ namespace CreateDocumentWithImages
             this.CreatePageWithImage(document, "JPEG", rgbJpeg);
 
             resourceBytes = ResourceHelper.GetResourceBytes("Resources/grayScale.jpg");
-            EncodedImageData jpeg2000Gray = new EncodedImageData(resourceBytes, 8, 655, 983, ColorSpaceNames.DeviceGray, new string[] { PdfFilterNames.DCTDecode });
-            this.CreatePageWithImage(document, "JPEG", jpeg2000Gray);
+            EncodedImageData grayJpeg = new EncodedImageData(resourceBytes, 8, 655, 983, ColorSpaceNames.DeviceGray, new string[] { PdfFilterNames.DCTDecode });
+            this.CreatePageWithImage(document, "JPEG", grayJpeg);
+
+            // decode is used for inverting the colors of the cmyk image.
+            // More information on the matter can be found here: http://graphicdesign.stackexchange.com/a/15906
+            double[] decode = new double[] { 1, 0, 1, 0, 1, 0, 1, 0 };
+            resourceBytes = ResourceHelper.GetResourceBytes("Resources/cmyk.jpg");
+            EncodedImageData cmykJpeg = new EncodedImageData(resourceBytes, 8, 655, 983, ColorSpaceNames.DeviceCmyk, new string[] { PdfFilterNames.DCTDecode });
+            this.CreatePageWithImage(document, "JPEG", cmykJpeg, decode);
 
             resourceBytes = ResourceHelper.GetResourceBytes("Resources/rgb.jp2");
             EncodedImageData rgbJpc = new EncodedImageData(resourceBytes, 8, 655, 983, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.JPXDecode });
@@ -70,7 +77,7 @@ namespace CreateDocumentWithImages
             return documentBytes;
         }
 
-        private void CreatePageWithImage(RadFixedDocument document, string imageExtension, EncodedImageData imageData)
+        private void CreatePageWithImage(RadFixedDocument document, string imageExtension, EncodedImageData imageData, double[] decode = null)
         {
             RadFixedPage page = document.Pages.AddPage();
             page.Size = PageSize;
@@ -88,7 +95,9 @@ namespace CreateDocumentWithImages
 
             Block imageBlock = new Block();
             imageBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
-            imageBlock.InsertImage(new ImageSource(imageData), new Size(imageData.Width, imageData.Height));
+            ImageSource imageSource = new ImageSource(imageData);
+            imageSource.DecodeArray = decode;
+            imageBlock.InsertImage(imageSource, new Size(imageData.Width, imageData.Height));
             editor.DrawBlock(imageBlock, RemainingPageSize);
         }
     }
