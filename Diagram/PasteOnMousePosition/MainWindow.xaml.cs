@@ -12,6 +12,7 @@ namespace DiagramCustomPaste
         public MainWindow()
         {
             InitializeComponent();
+            this.diagram.GraphSource = new DiagramGraphSource();
         }
 
     }

@@ -117,20 +117,6 @@
 
             <telerik:RadToolBarSeparator />
 
-            <controls:RadButton x:Name="btnPrev" Visibility="Collapsed" Command="{Binding FindPreviousCommand}" CommandParameter="{Binding ElementName=tbFind, Path=Text}">
-                <ToolTipService.ToolTip>
-                    <TextBlock Text="Find Previous" />
-                </ToolTipService.ToolTip>
-                <Image Source="{telerik:IconResource IconRelativePath=find-previous.png,IconSources={StaticResource IconPaths}}" Stretch="None" />
-            </controls:RadButton>
-
-            <controls:RadButton x:Name="btnNext" Visibility="Collapsed" Command="{Binding FindCommand}" CommandParameter="{Binding ElementName=tbFind, Path=Text}">
-                <ToolTipService.ToolTip>
-                    <TextBlock Text="Find Next" />
-                </ToolTipService.ToolTip>
-                <Image Source="{telerik:IconResource IconRelativePath=find-next.png,IconSources={StaticResource IconPaths}}" Stretch="None" />
-            </controls:RadButton>
-
             <controls:RadButton Command="{Binding ElementName=viewer, Path=CommandDescriptors.FitToPageFixedDocumentSinglePageViewPresenterCommandDescriptor.Command}">Single</controls:RadButton>
             <controls:RadButton Command="{Binding ElementName=viewer, Path=CommandDescriptors.FitToWidthFixedDocumentPagesPresenterCommandDescriptor.Command}">Pages</controls:RadButton>
         </telerik:RadToolBar>
@@ -150,7 +136,7 @@
                     <telerik:RadMenuItem IsCheckable="True" IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=TextSelection}" Header="Text Selection" />
 
                     <telerik:RadMenuItem IsSeparator="True"
-                                         Visibility="{Binding ViewSelectionCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                         Visibility="{Binding ViewCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
                     <telerik:RadMenuItem Header="Zoom In" Command="{Binding ZoomInCommandDescriptor.Command}"
                                          Visibility="{Binding ZoomInCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>

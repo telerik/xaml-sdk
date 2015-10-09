@@ -5,14 +5,8 @@
         xmlns:local="clr-namespace:DiagramCustomPaste"
         Title="MainWindow" Height="600" Width="600" WindowState="Maximized">
     <Grid>
-        <local:CustomDiagram x:Name="diagram">
-            <telerik:RadDiagramShape Position="180 200" x:Name="shapeA" Width="80" Height="80" IsSelected="True"/>
-            <telerik:RadDiagramShape Position="500 200" x:Name="shapeB" Geometry="{telerik:CommonShape ShapeType=CloudShape}"/>
-
-            <telerik:RadDiagramConnection StartPoint="280 200" EndPoint="450 200"/>
-            <telerik:RadDiagramConnection StartPoint="280 240" EndPoint="450 240"/>
-            <telerik:RadDiagramConnection StartPoint="280 280" EndPoint="450 280"/>
-        </local:CustomDiagram>
+    
+        <local:CustomDiagram x:Name="diagram" />
         
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 50">
             <TextBlock Text="Paste a Shape or Connection and it will be positioned under Mouse pointer." FontSize="18" FontWeight="bold" HorizontalAlignment="Center"/>

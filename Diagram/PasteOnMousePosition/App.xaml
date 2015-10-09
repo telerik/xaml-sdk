@@ -1,8 +1,40 @@
 ﻿<Application x:Class="DiagramCustomPaste.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+       
+        <Style TargetType="telerik:RadDiagramShape">
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Position" Value="{Binding Position, Mode=TwoWay}" />
+            <Setter Property="Width" Value="{Binding Width}" />
+            <Setter Property="Height" Value="{Binding Height}" />
+        </Style>
+
+        <Style TargetType="telerik:RadDiagramContainerShape">
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Position" Value="{Binding Position, Mode=TwoWay}" />
+            <Setter Property="Width" Value="{Binding Width}" />
+            <Setter Property="Height" Value="{Binding Height}" />
+        </Style>
+        
+        <Style TargetType="telerik:RadDiagramConnection">
+            <Setter Property="StartPoint" Value="{Binding StartPointVM, Mode=TwoWay}" />
+            <Setter Property="EndPoint" Value="{Binding EndPointVM, Mode=TwoWay}" />
+        </Style>
+
     </Application.Resources>
 </Application>

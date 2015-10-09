@@ -9,7 +9,6 @@
 			<telerik:RadWizard.WizardPages>
 				<telerik:WizardPage ButtonsVisibilityMode="All">
 					<telerik:RadComboBox Name="LanguageComboBox" 
-										 EmptyText="Select Language"
 										 Width="150"
 										 Height="30"
 										 HorizontalAlignment="Center"

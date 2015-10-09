@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlShape_WPF", "ControlShape\ControlShape_WPF.csproj", "{0A7B9791-6F96-4DFD-A0CF-2B8A6E5B21E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlidingConnector_WPF", "GlidingConnector\GlidingConnector_WPF.csproj", "{DA8BFA8F-B0EC-4B6A-9592-E06710FAA48F}"
@@ -45,11 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectorsTool_WPF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRootsInSingleTreeLayout_WPF", "MultipleRootsInSingleTreeLayout\MultipleRootsInSingleTreeLayout_WPF.csproj", "{AEBEA6D4-F492-4754-873E-622581353441}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoscrolling_WPF", "Autoscrolling\Autoscrolling_WPF.csproj", "{FDE58178-6E8A-4015-A939-D0B8061C27F5}"
+EndProject
 Global
 	 
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Diagrams_WPF_Work.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -279,8 +280,21 @@ Global
 		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AEBEA6D4-F492-4754-873E-622581353441}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AEBEA6D4-F492-4754-873E-622581353441}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FDE58178-6E8A-4015-A939-D0B8061C27F5}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Diagrams_WPF_Work.vsmdi
 	EndGlobalSection
 EndGlobal

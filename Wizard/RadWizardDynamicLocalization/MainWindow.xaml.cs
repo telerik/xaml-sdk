@@ -15,6 +15,7 @@ namespace RadWizardDynamicLocalization
 		public MainWindow()
 		{
 			InitializeComponent();
+			this.LanguageComboBox.SelectedIndex = 0;
 		}
 
 		private void RadComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

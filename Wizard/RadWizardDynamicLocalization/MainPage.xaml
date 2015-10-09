@@ -8,11 +8,10 @@
 			 mc:Ignorable="d"
 			 d:DesignHeight="300" d:DesignWidth="400">
 	<Grid x:Name="LayoutRoot" Background="White">
-		<telerik:RadWizard>
+		<telerik:RadWizard Height="500" Width="500">
 			<telerik:RadWizard.WizardPages>
 				<telerik:WizardPage ButtonsVisibilityMode="All">
 					<telerik:RadComboBox Name="LanguageComboBox" 
-										 EmptyText="Select Language"
 										 Width="150"
 										 Height="30"
 										 HorizontalAlignment="Center"

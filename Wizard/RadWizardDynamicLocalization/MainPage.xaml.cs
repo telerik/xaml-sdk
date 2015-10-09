@@ -8,8 +8,9 @@ namespace DynamicLocalization_SL
 	public partial class MainPage : UserControl
 	{
 		public MainPage()
-		{		
+		{
 			InitializeComponent();
+			this.LanguageComboBox.SelectedIndex = 0;
 		}
 
 		private void RadComboBox_SelectionChanged(object sender, Telerik.Windows.Controls.SelectionChangedEventArgs e)
