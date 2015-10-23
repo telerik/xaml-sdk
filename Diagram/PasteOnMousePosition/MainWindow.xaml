@@ -6,7 +6,7 @@
         Title="MainWindow" Height="600" Width="600" WindowState="Maximized">
     <Grid>
     
-        <local:CustomDiagram x:Name="diagram" />
+        <local:CustomDiagram x:Name="diagram" IsEditable="False"/>
         
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 50">
             <TextBlock Text="Paste a Shape or Connection and it will be positioned under Mouse pointer." FontSize="18" FontWeight="bold" HorizontalAlignment="Center"/>
