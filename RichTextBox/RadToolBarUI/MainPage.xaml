@@ -58,8 +58,8 @@
                 </telerik:RadButtonGroup>
                 <telerik:RadToolBarSeparator />
                 <telerik:RadButtonGroup>
-                    <telerik:HighlightColorPicker Height="22" Image="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/FontForeColor.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeFontForeColorCommand}" SelectedColor="Red" />
-                    <telerik:HighlightColorPicker AutomaticColor="Transparent" Height="22" Image="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/highlight.png" NoColorText="No color" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeFontHighlightColorCommand}" SelectedColor="Yellow" />
+                    <telerik:FormattingColorPicker Height="22" Image="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/FontForeColor.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeFontForeColorCommand}" ActiveColor="Red" />
+                    <telerik:FormattingColorPicker AutomaticColor="Transparent" Height="22" Image="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/highlight.png" NoColorText="No color" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeFontHighlightColorCommand}" ActiveColor="Yellow" />
                     <telerik:RadRibbonButton telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ClearFormattingCommand}" Size="Small" SmallImage="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/ClearFormatting16.png" />
                 </telerik:RadButtonGroup>
             </telerik:RadToolBar>
