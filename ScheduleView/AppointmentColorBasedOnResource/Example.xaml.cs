@@ -16,8 +16,8 @@ namespace AppointmentColorBasedOnResource
 	{
 		public Example()
 		{
+            this.DataContext = new ViewModel();
 			InitializeComponent();
-			this.DataContext = new ViewModel();
 		}
 	}
 }

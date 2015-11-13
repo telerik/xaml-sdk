@@ -9,8 +9,8 @@ namespace Exporting
     {
         public Example()
         {
-            InitializeComponent();
             this.DataContext = new ViewModel();
+            InitializeComponent();
         }
     }
 }

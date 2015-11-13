@@ -14,8 +14,8 @@ namespace AvoidOverlappingAppointments
 
         public Example()
         {
-            InitializeComponent();
             this.DataContext = new ViewModel();
+            InitializeComponent();
         }
 
         private void RadScheduleView_ShowDialog(object sender, ShowDialogEventArgs e)

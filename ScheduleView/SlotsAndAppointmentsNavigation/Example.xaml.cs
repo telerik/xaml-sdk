@@ -22,9 +22,9 @@ namespace SlotsAndAppointmentsNavigation
 	public partial class Example : UserControl
 	{
 		public Example()
-		{
+        {
+            this.DataContext = new ViewModel();
 			InitializeComponent();
-			this.DataContext = new ViewModel();
 		}
 
 		private void PreviousSlot_Click(object sender, RoutedEventArgs e)

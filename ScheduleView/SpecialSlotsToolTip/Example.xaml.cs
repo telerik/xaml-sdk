@@ -8,9 +8,9 @@ namespace SpecialSlotsToolTip
 	public partial class Example : UserControl
 	{
 		public Example()
-		{
+        {
+            this.DataContext = new ViewModel();
 			InitializeComponent();
-			this.DataContext = new ViewModel();
 		}
 	}
 }
