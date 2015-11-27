@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeHeadersBackground_SL", "ChangeHeadersBackground\ChangeHeadersBackground_SL.csproj", "{68AC9EE9-4777-4F02-AC2B-E25F74B77CB7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddCloseButton_SL", "AddCloseButton\AddCloseButton_SL.csproj", "{0626FF25-0816-4737-A6F6-8D8DB423A15C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_SL", "DataBinding\DataBinding_SL.csproj", "{C1523758-CF64-4C17-81D5-FB5B582EA9A1}"
 EndProject
 Global
 	 
@@ -22,6 +22,10 @@ Global
 		{0626FF25-0816-4737-A6F6-8D8DB423A15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0626FF25-0816-4737-A6F6-8D8DB423A15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0626FF25-0816-4737-A6F6-8D8DB423A15C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1523758-CF64-4C17-81D5-FB5B582EA9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1523758-CF64-4C17-81D5-FB5B582EA9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1523758-CF64-4C17-81D5-FB5B582EA9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1523758-CF64-4C17-81D5-FB5B582EA9A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
