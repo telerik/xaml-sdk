@@ -122,6 +122,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyBinding_WPF", "Read
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportPagedDataExcel_WPF", "ExportPagedDataExcel\ExportPagedDataExcel_WPF.csproj", "{5174443B-2CF1-4B83-A9C4-E548621CE76B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewWithSpreadsheet_WPF", "PrintPreviewWithSpreadsheet\PrintPreviewWithSpreadsheet_WPF.csproj", "{8A8CD456-C108-4C2F-8999-171E319B1856}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -713,6 +715,16 @@ Global
 		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5174443B-2CF1-4B83-A9C4-E548621CE76B}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

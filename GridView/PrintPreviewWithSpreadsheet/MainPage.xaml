@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="PrintPreviewWithSpreadsheet.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:my="clr-namespace:PrintPreviewWithSpreadsheet"
+             mc:Ignorable="d" d:DesignHeight="700" d:DesignWidth="700">
+    <UserControl.Resources>
+        <my:MyViewModel x:Key="MyViewModel"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource MyViewModel}" x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <telerik:RadGridView Grid.Row="0" 
+                             Name="clubsGrid" 
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
+                             Margin="5">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
+                                            Header="Est." 
+                                            DataFormatString="{}{0:yyyy}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
+                                            Header="Stadium" 
+                                            DataFormatString="{}{0:N0}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="5">
+            <telerik:RadButton Content="Print Preview"	
+                               Width="100"
+                               Height="60"
+							   Click="RadButton_Click">
+            </telerik:RadButton>
+        </StackPanel>
+    </Grid>
+</UserControl>
