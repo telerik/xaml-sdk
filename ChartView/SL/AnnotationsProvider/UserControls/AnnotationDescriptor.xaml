@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="AnnotationsProvider.AnnotationDescriptor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid>
+        <telerik:RadCartesianChart>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:CategoricalAxis />
+            </telerik:RadCartesianChart.HorizontalAxis>
+
+            <telerik:RadCartesianChart.AnnotationsProvider>
+                <telerik:ChartAnnotationsProvider Source="{Binding Limitations}">
+                    <telerik:ChartAnnotationDescriptor>
+                        <telerik:ChartAnnotationDescriptor.Style>
+                            <Style TargetType="telerik:CartesianGridLineAnnotation">
+                                <Setter Property="Value" Value="{Binding StartValue}" />
+                                <Setter Property="Axis" Value="{Binding VerticalAxis, RelativeSource={RelativeSource AncestorType=telerik:RadCartesianChart}}" />
+                                <Setter Property="Stroke" Value="Red" />
+                                <Setter Property="StrokeThickness" Value="2" />
+                            </Style>
+                        </telerik:ChartAnnotationDescriptor.Style>
+                    </telerik:ChartAnnotationDescriptor>
+                </telerik:ChartAnnotationsProvider>
+            </telerik:RadCartesianChart.AnnotationsProvider>
+
+            <telerik:RadCartesianChart.Series>
+                <telerik:LineSeries>
+                    <telerik:LineSeries.DataPoints>
+                        <telerik:CategoricalDataPoint Category="January" Value="20" />
+                        <telerik:CategoricalDataPoint Category="Februuary" Value="30" />
+                        <telerik:CategoricalDataPoint Category="March" Value="10" />
+                        <telerik:CategoricalDataPoint Category="April" Value="-5" />
+                        <telerik:CategoricalDataPoint Category="May" Value="3" />
+                        <telerik:CategoricalDataPoint Category="June" Value="16" />
+                    </telerik:LineSeries.DataPoints>
+                </telerik:LineSeries>
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+    </Grid>
+</UserControl>

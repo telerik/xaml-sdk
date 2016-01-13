@@ -91,8 +91,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingSelectedItemsToViewM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncData", "AsyncData\AsyncData.csproj", "{CA10DA5A-7050-4361-A41A-361F20B6F68E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginValue", "OriginValue\OriginValue.csproj", "{F5A13E86-CF85-46A7-AC3C-A79E22319638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsProvider", "AnnotationsProvider\AnnotationsProvider.csproj", "{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}"
+EndProject
 Global
-	 
+	 	
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -274,6 +278,14 @@ Global
 		{CA10DA5A-7050-4361-A41A-361F20B6F68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA10DA5A-7050-4361-A41A-361F20B6F68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA10DA5A-7050-4361-A41A-361F20B6F68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A13E86-CF85-46A7-AC3C-A79E22319638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A13E86-CF85-46A7-AC3C-A79E22319638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A13E86-CF85-46A7-AC3C-A79E22319638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A13E86-CF85-46A7-AC3C-A79E22319638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

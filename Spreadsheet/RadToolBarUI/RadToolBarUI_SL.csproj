@@ -100,9 +100,6 @@
     <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Maths">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Maths.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Windows.Zip">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Zip.dll</HintPath>
     </Reference>

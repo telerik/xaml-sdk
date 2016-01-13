@@ -1,5 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.ScheduleView;
 
@@ -18,8 +20,8 @@ namespace AppointmentColorBasedOnResource
 				Subject = "Test Appointment"
 			};
 
-			app.Resources.Add(new Resource("Room1", "Room"));
-			app.Resources.Add(new Resource("Room2", "Room"));
+            app.Resources.Add(new Resource("Room1", "Room"));
+            app.Resources.Add(new Resource("Room2", "Room"));
 
 			this.Appointments = new ObservableCollection<Appointment>() { app };
 

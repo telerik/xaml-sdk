@@ -49,23 +49,23 @@ namespace IndividualAxisZooming
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            this.UpdateAxis(this.chart1.Series[0] as CategoricalSeries, this.LeftSlider.SelectionStart, this.LeftSlider.SelectionEnd);
-            this.UpdateAxis(this.chart1.Series[1] as CategoricalSeries, this.RightSlider.SelectionStart, this.RightSlider.SelectionEnd);
+            this.UpdateAxis(this.chart1.Series[0] as CategoricalSeries, this.LeftPanZoomBar.SelectionStart, this.LeftPanZoomBar.SelectionEnd);
+            this.UpdateAxis(this.chart1.Series[1] as CategoricalSeries, this.RightPanZoomBar.SelectionStart, this.RightPanZoomBar.SelectionEnd);
             this.Dispatcher.BeginInvoke(((Action)(() => this.UpdateSlidersMargin())));
         }
 
-        private void RadSlider_SelectionChanged(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        private void PanZoomBar_SelectionChanged(object sender, Telerik.Windows.RadRoutedEventArgs e)
         {
             CategoricalSeries series = null;
             RadSlider slider = null;
-            if (sender == this.LeftSlider)
+            if (sender == this.LeftPanZoomBar)
             {
-                slider = this.LeftSlider;
+                slider = this.LeftPanZoomBar;
                 series = this.chart1.Series[0] as CategoricalSeries;
             }
-            if (sender == this.RightSlider)
+            if (sender == this.RightPanZoomBar)
             {
-                slider = this.RightSlider;
+                slider = this.RightPanZoomBar;
                 series = this.chart1.Series[1] as CategoricalSeries;
             }
 
@@ -141,15 +141,15 @@ namespace IndividualAxisZooming
             double marginTop = plotArea.Y;
             double marginBottom = this.chart1.ActualHeight - plotArea.Bottom;
 
-            if (plotArea.Y != this.LeftSlider.Margin.Top ||
-                marginBottom != this.LeftSlider.Margin.Bottom)
+            if (plotArea.Y != this.LeftPanZoomBar.Margin.Top ||
+                marginBottom != this.LeftPanZoomBar.Margin.Bottom)
             {
-                this.LeftSlider.Margin = new Thickness(0, plotArea.Y, 0, marginBottom);
+                this.LeftPanZoomBar.Margin = new Thickness(0, plotArea.Y, 0, marginBottom);
             }
-            if (plotArea.Y != this.RightSlider.Margin.Top ||
-                marginBottom != this.RightSlider.Margin.Bottom)
+            if (plotArea.Y != this.RightPanZoomBar.Margin.Top ||
+                marginBottom != this.RightPanZoomBar.Margin.Bottom)
             {
-                this.RightSlider.Margin = new Thickness(0, plotArea.Y, 0, marginBottom);
+                this.RightPanZoomBar.Margin = new Thickness(0, plotArea.Y, 0, marginBottom);
             }
         }
     }

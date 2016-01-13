@@ -5,16 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
-    
+    d:DesignHeight="300" d:DesignWidth="400">    
     <Grid>
         <telerik:RadCartesianChart x:Name="chart1" Margin="10 0 10 0" Palette="Flower">
             <telerik:RadCartesianChart.HorizontalAxis>
@@ -23,37 +14,35 @@
             <telerik:RadCartesianChart.Series>
                 <telerik:LineSeries CategoryBinding="XCat" ValueBinding="YVal1" ItemsSource="{Binding}">
                     <telerik:LineSeries.VerticalAxis>
-                        <telerik:LinearAxis TickOrigin="0" ElementBrush="Violet" />
+                        <telerik:LinearAxis TickOrigin="0" ElementBrush="Violet" SmartLabelsMode="SmartStep" />
                     </telerik:LineSeries.VerticalAxis>
                 </telerik:LineSeries>
                 <telerik:LineSeries CategoryBinding="XCat" ValueBinding="YVal2" ItemsSource="{Binding}">
                     <telerik:LineSeries.VerticalAxis>
-                        <telerik:LinearAxis TickOrigin="0" HorizontalLocation="Right" ElementBrush="Green" />
+                        <telerik:LinearAxis TickOrigin="0" HorizontalLocation="Right" ElementBrush="Green" SmartLabelsMode="SmartStep" />
                     </telerik:LineSeries.VerticalAxis>
                 </telerik:LineSeries>
             </telerik:RadCartesianChart.Series>
         </telerik:RadCartesianChart>
-        <telerik:RadSlider x:Name="LeftSlider" 
-                           IsSelectionRangeEnabled="True" 
-                           Orientation="Vertical" 
-                           Minimum="0" 
-                           Maximum="1"
-                           SelectionStart="0" 
-                           SelectionEnd="1" 
-                           SelectionChanged="RadSlider_SelectionChanged"
-                           Style="{StaticResource PanZoomBarStyle}"
-                           HorizontalAlignment="Left"
-                           Width="15" />
-        <telerik:RadSlider x:Name="RightSlider" 
-                           IsSelectionRangeEnabled="True" 
-                           Orientation="Vertical" 
-                           Minimum="0" 
-                           Maximum="1"
-                           SelectionStart="0" 
-                           SelectionEnd="1" 
-                           SelectionChanged="RadSlider_SelectionChanged"
-                           Style="{StaticResource PanZoomBarStyle}"
-                           HorizontalAlignment="Right"
-                           Width="15" />
+        <telerik:PanZoomBar x:Name="LeftPanZoomBar" 
+                            IsSelectionRangeEnabled="True" 
+                            Orientation="Vertical" 
+                            Minimum="0" 
+                            Maximum="1"
+                            SelectionStart="0" 
+                            SelectionEnd="1" 
+                            SelectionChanged="PanZoomBar_SelectionChanged"
+                            HorizontalAlignment="Left"
+                            Height="NaN" />
+        <telerik:PanZoomBar x:Name="RightPanZoomBar" 
+                            IsSelectionRangeEnabled="True" 
+                            Orientation="Vertical" 
+                            Minimum="0" 
+                            Maximum="1"
+                            SelectionStart="0" 
+                            SelectionEnd="1" 
+                            SelectionChanged="PanZoomBar_SelectionChanged"
+                            HorizontalAlignment="Right"
+                            Height="NaN" />
     </Grid>
 </UserControl>

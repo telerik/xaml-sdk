@@ -55,9 +55,10 @@ namespace CustomFunctions.Functions
             #endregion
         }
 
-        protected override Telerik.Windows.Documents.Spreadsheet.Expressions.RadExpression EvaluateOverride(double[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<double> context)
         {
             double result = 0;
+            double[] arguments = context.Arguments;
 
             for (int i = 0; i < arguments.Length; i++)
             {

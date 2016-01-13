@@ -19,7 +19,6 @@ namespace CustomContextMenu
     {
         private const string ContextMenuItemHeader = "Highlight";
         private readonly PatternFill highlightFill;
-        private RadWorksheetEditor worksheetEditor;
 
         public MainWindow()
         {

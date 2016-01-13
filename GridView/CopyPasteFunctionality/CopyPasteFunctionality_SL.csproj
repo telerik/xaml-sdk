@@ -101,9 +101,6 @@
     <Reference Include="Telerik.Windows.Documents.Spreadsheet">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Maths">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Maths.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows8">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Themes.Windows8.dll</HintPath>
     </Reference>

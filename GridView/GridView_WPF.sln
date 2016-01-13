@@ -102,8 +102,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewRowPosition_WPF", "NewRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDirectionTooltip_WPF", "SortDirectionTooltip\SortDirectionTooltip_WPF.csproj", "{1A0D4C68-928E-4236-8131-D1DA1986995A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomDateTimePickerColumn_WPF", "CreateCustomDateTimePickerColumn\CreateCustomDateTimePickerColumn_WPF.csproj", "{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFilterControl_WPF", "CustomFilterControl\CustomFilterControl_WPF.csproj", "{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringButtonsStates_WPF", "FilteringButtonsStates\FilteringButtonsStates_WPF.csproj", "{57EF56BA-E325-4E1F-AF96-15A88729FBEB}"
@@ -123,6 +121,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportPagedDataExcel_WPF", "ExportPagedDataExcel\ExportPagedDataExcel_WPF.csproj", "{5174443B-2CF1-4B83-A9C4-E548621CE76B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewWithSpreadsheet_WPF", "PrintPreviewWithSpreadsheet\PrintPreviewWithSpreadsheet_WPF.csproj", "{8A8CD456-C108-4C2F-8999-171E319B1856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportMultipleGridViewsToOneDocument_WPF", "ExportMultipleGridViewsToOneDocument\ExportMultipleGridViewsToOneDocument_WPF.csproj", "{EE87A6DB-4FBE-4C69-9993-4497B59438C4}"
 EndProject
 Global
 	 
@@ -615,16 +615,6 @@ Global
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1A0D4C68-928E-4236-8131-D1DA1986995A}.Release|x86.ActiveCfg = Release|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D6E6F756-D1B2-448C-BCDD-80BE0F46C5CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD61970-9B8E-49C7-A7D6-DBE5F88A7CA0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -725,6 +715,16 @@ Global
 		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8A8CD456-C108-4C2F-8999-171E319B1856}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

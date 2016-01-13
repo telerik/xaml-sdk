@@ -38,10 +38,10 @@ namespace CustomFunctions.Functions
 
             Info = new FunctionInfo(FunctionName, FunctionCategory.Text, description, requiredArguments);
         }
-        
-        protected override RadExpression EvaluateOverride(string[] arguments)
+
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<string> context)
         {
-            string text = arguments[0];
+            string text = context.Arguments[0];
 
             StringBuilder builder = new StringBuilder();
 

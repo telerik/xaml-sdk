@@ -97,9 +97,6 @@
     <Reference Include="Telerik.Windows.Documents.Core">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow">
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
     </Reference>

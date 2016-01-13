@@ -32,7 +32,7 @@ namespace CustomFunctions.Functions
             Info = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description);
         }
 
-        protected override RadExpression EvaluateOverride(RadExpression[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
         {
             return NumberExpression.E;
         }

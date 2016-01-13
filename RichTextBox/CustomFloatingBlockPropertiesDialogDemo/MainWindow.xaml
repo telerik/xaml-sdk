@@ -913,6 +913,9 @@
                         </telerik:RadToggleButton>
                     </Grid>
                 </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Data">
+                    <telerik:RadRibbonToggleButton telerik:ScreenTip.Description="Mark multiple rows as header rows. If your table spans multiple pages the header rows will appear on every page." LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/RepeatTableRow.png" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleTableRowRepeatOnEveryPageCommand}" Size="Large" Text="Repeat Header Rows" telerik:ScreenTip.Title="Repeat Header Rows"/>
+                </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
             <telerik:RadRibbonTab ContextualGroupName="HeaderFooterTools" Header="Design" Width="140">
                 <telerik:RadRibbonGroup Header="Insert">

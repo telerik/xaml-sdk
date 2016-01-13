@@ -79,6 +79,9 @@
     <Reference Include="Telerik.Windows.Controls.Chart">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Chart.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Data">
       <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Data.dll</HintPath>
     </Reference>
@@ -87,13 +90,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SeriesTypeConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyDataObject.cs" />
-    <Compile Include="MyViewModel.cs" />
+    <Compile Include="DataItem.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeriesProviderDataItem.cs" />
+    <Compile Include="SeriesViewModel.cs" />
+    <Compile Include="UserControls\CollectionIndex.xaml.cs">
+      <DependentUpon>CollectionIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SeriesCreated.xaml.cs">
+      <DependentUpon>SeriesCreated.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TypeConverter.xaml.cs">
+      <DependentUpon>TypeConverter.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -103,6 +116,18 @@
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CollectionIndex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SeriesCreated.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TypeConverter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -58,9 +58,10 @@ namespace CustomFunctions.Functions
             info = new FunctionInfo(FunctionName, FunctionCategory.Statistical, description, requiredArguments, optionalArguments, optionalArgumentsRepeatCount:255);
         }
 
-        protected override RadExpression EvaluateOverride(double[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<double> context)
         {
             double product = 1;
+            double[] arguments = context.Arguments;
 
             foreach (double argument in arguments)
             {

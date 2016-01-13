@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutCopyPasteAppointments_SL", "CutCopyPasteAppointments\CutCopyPasteAppointments_SL.csproj", "{AD766870-1491-41F7-BB30-2F4F3AF31F34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaViewDefinition_SL", "AgendaViewDefinition\AgendaViewDefinition_SL.csproj", "{D73AD67E-5B8F-4935-9A8B-9D3B36F74872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeResizeCursorAtRuntime_SL", "ChangeResizeCursorDuringResize\ChangeResizeCursorAtRuntime_SL.csproj", "{1016873C-DD26-4B90-98AE-943295C37E21}"
 EndProject
 Global
 	 
@@ -132,6 +134,10 @@ Global
 		{D73AD67E-5B8F-4935-9A8B-9D3B36F74872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D73AD67E-5B8F-4935-9A8B-9D3B36F74872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D73AD67E-5B8F-4935-9A8B-9D3B36F74872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1016873C-DD26-4B90-98AE-943295C37E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1016873C-DD26-4B90-98AE-943295C37E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1016873C-DD26-4B90-98AE-943295C37E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1016873C-DD26-4B90-98AE-943295C37E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

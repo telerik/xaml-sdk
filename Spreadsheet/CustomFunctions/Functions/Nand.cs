@@ -39,8 +39,9 @@ namespace CustomFunctions.Functions
             Info = new FunctionInfo(FunctionName, FunctionCategory.Text, description, requiredArguments);
         }
 
-        protected override RadExpression EvaluateOverride(bool[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<bool> context)
         {
+            bool[] arguments = context.Arguments;
             bool result = !(arguments[0] & arguments[1]);
 
             return result ? BooleanExpression.True : BooleanExpression.False;

@@ -1,0 +1,2 @@
+#Change ResizeCursor During Resize#
+This example demonstrates how to easily change the resize cursor of RadScheduleView while resizing an appointment. Start resizing an appointment and notice how the cursor changes when resizing is not possible.

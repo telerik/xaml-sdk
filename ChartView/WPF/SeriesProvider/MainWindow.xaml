@@ -2,44 +2,22 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-    xmlns:example="clr-namespace:SeriesProvider"
+        xmlns:example="clr-namespace:SeriesProvider"
         Title="MainWindow" Height="350" Width="525">
-    <Window.DataContext>
-        <example:MyViewModel />
-    </Window.DataContext>
-    <Grid x:Name="LayoutRoot" Background="White">
-        <telerik:RadCartesianChart x:Name="chart" Palette="Flower" Margin="10">
-            <telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:CategoricalAxis></telerik:CategoricalAxis>
-            </telerik:RadCartesianChart.HorizontalAxis>
-            <telerik:RadCartesianChart.VerticalAxis>
-                <telerik:LinearAxis HorizontalAlignment="Right"></telerik:LinearAxis>
-            </telerik:RadCartesianChart.VerticalAxis>
-            <telerik:RadCartesianChart.SeriesProvider>
-                <telerik:ChartSeriesProvider Source="{Binding Data}">
-                    <telerik:ChartSeriesProvider.SeriesDescriptors>
-                        <telerik:CategoricalSeriesDescriptor CategoryPath="Category" 
-                                                             ValuePath="Value" 
-                                                             ItemsSourcePath="Items">
-                            <telerik:CategoricalSeriesDescriptor.Style>
-                                <Style TargetType="telerik:BarSeries">
-                                    <Setter Property="CombineMode" Value="Cluster" />
-                                </Style>
-                            </telerik:CategoricalSeriesDescriptor.Style>
-                        </telerik:CategoricalSeriesDescriptor>
-                        <telerik:CategoricalSeriesDescriptor CategoryPath="Category"
-                                                             ValuePath="Value"
-                                                             ItemsSourcePath="Items" 
-                                                             CollectionIndex="2">
-                            <telerik:CategoricalSeriesDescriptor.Style>
-                                <Style TargetType="telerik:LineSeries">
-                                    <Setter Property="StrokeThickness" Value="4"/>
-                                </Style>
-                            </telerik:CategoricalSeriesDescriptor.Style>
-                        </telerik:CategoricalSeriesDescriptor>
-                    </telerik:ChartSeriesProvider.SeriesDescriptors>
-                </telerik:ChartSeriesProvider>
-            </telerik:RadCartesianChart.SeriesProvider>
-        </telerik:RadCartesianChart>
-    </Grid>
+
+    <FrameworkElement.DataContext>
+        <example:MainViewModel />
+    </FrameworkElement.DataContext>
+
+    <TabControl>
+        <TabItem Header="Collection Index">
+            <example:CollectionIndex />
+        </TabItem>
+        <TabItem Header="Type Converter">
+            <example:TypeConverter />
+        </TabItem>
+        <TabItem Header="Series Created">
+            <example:SeriesCreated />
+        </TabItem>
+    </TabControl>
 </Window>

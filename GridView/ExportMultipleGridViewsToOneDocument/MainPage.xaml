@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ExportMultipleGridViewsToOneDocument.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:ExportMultipleGridViewsToOneDocument"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <FrameworkElement.Resources>
+        <local:MyViewModel x:Key="MyViewModel"/>
+    </FrameworkElement.Resources>
+
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.RowSpan="2" Grid.Column="0">
+            <Button Content="Export to PDF" Click="ExportPdf" />
+            <Button Content="Export to XLSX" Click="ExportXlsx" />
+        </StackPanel>
+
+        <telerik:RadGridView Grid.Row="0" Grid.Column="1" 
+                             Name="playersGrid"
+                             ItemsSource="{Binding Players}"
+							 AutoGenerateColumns="False" 
+							 RowIndicatorVisibility="Collapsed"
+                             Margin="5">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"
+											Width="200" />
+                <telerik:GridViewComboBoxColumn DataMemberBinding="{Binding Position}"
+												Width="*"
+												SelectedValueMemberPath="Value"
+												ItemsSource="{Binding Positions,Source={StaticResource MyViewModel}}"
+												DisplayMemberPath="DisplayName" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+
+        <telerik:RadGridView Grid.Row="1" Grid.Column="1"
+                             Name="clubsGrid" 
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
+                             RowIndicatorVisibility="Collapsed"
+                             Margin="5">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
+                                            Header="Est." 
+                                            DataFormatString="{}{0:yyyy}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
+                                            Header="Stadium" 
+                                            DataFormatString="{}{0:N0}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+
+
+    </Grid>
+</UserControl>

@@ -21,7 +21,8 @@ namespace TrackBallSyncedCharts
             typeof(ChartUtilities),
             new PropertyMetadata(TrackBallStaysOnMouseLeaveChanged));
 
-        private static Dictionary<string, List<WeakReference>> groupToBehaviorsDict = new Dictionary<string, List<WeakReference>>();
+        private static Dictionary<string, List<WeakReference>> trackBallGroupToBehaviorsDict = new Dictionary<string, List<WeakReference>>();
+        private static int moveTrackBallsCallsCount;
 
         public static string GetTrackBallGroup(DependencyObject obj)
         {
@@ -79,21 +80,21 @@ namespace TrackBallSyncedCharts
             if (oldGroup != null)
             {
                 behavior.TrackInfoUpdated -= behavior_TrackInfoUpdated;
-                CleanUp(groupToBehaviorsDict[oldGroup], behavior);
-                if (groupToBehaviorsDict[oldGroup].Count == 0)
+                RemoveReference(trackBallGroupToBehaviorsDict[oldGroup], behavior);
+                if (trackBallGroupToBehaviorsDict[oldGroup].Count == 0)
                 {
-                    groupToBehaviorsDict.Remove(oldGroup);
+                    trackBallGroupToBehaviorsDict.Remove(oldGroup);
                 }
             }
 
             string newGroup = (string)args.NewValue;
             if (newGroup != null)
             {
-                if (!groupToBehaviorsDict.ContainsKey(newGroup))
+                if (!trackBallGroupToBehaviorsDict.ContainsKey(newGroup))
                 {
-                    groupToBehaviorsDict[newGroup] = new List<WeakReference>();
+                    trackBallGroupToBehaviorsDict[newGroup] = new List<WeakReference>();
                 }
-                groupToBehaviorsDict[newGroup].Add(new WeakReference(behavior));
+                trackBallGroupToBehaviorsDict[newGroup].Add(new WeakReference(behavior));
                 behavior.TrackInfoUpdated += behavior_TrackInfoUpdated;
             }
         }
@@ -122,33 +123,33 @@ namespace TrackBallSyncedCharts
                 var dataTuple = chart.ConvertPointToData(new Point(center.X, center.Y));
                 xCategory = dataTuple.FirstValue;
             }
-            MoveTrackBalls(GetTrackBallGroup(behavior), xCategory, behavior);
+            MoveTrackBallsSafe(GetTrackBallGroup(behavior), xCategory, behavior);
+        }
+
+        private static void MoveTrackBallsSafe(string p, object xCategory, ChartTrackBallBehavior behavior)
+        {
+            moveTrackBallsCallsCount++;
+
+            // Avoid a cycle when different categories are found due to precision.
+            if (moveTrackBallsCallsCount < 20)
+            {
+                MoveTrackBalls(GetTrackBallGroup(behavior), xCategory, behavior);
+            }
+
+            moveTrackBallsCallsCount--;
         }
 
         private static void MoveTrackBalls(string group, object xCategory, ChartTrackBallBehavior behaviorOriginator)
         {
-            foreach (var wr in groupToBehaviorsDict[group])
+            foreach (var behav in GetLiveInstances<ChartTrackBallBehavior>(trackBallGroupToBehaviorsDict[group]))
             {
-                var behav = wr.Target as ChartTrackBallBehavior;
-                if (behav != null && behav != behaviorOriginator)
+                if (behav != behaviorOriginator)
                 {
                     var chart = (RadCartesianChart)behav.Chart;
                     var position = chart.ConvertDataToPoint(new DataTuple(xCategory, null));
                     position.Y = chart.ActualHeight / 2;
 
                     behav.Position = position;
-                }
-            }
-            CleanUp(groupToBehaviorsDict[group]);
-        }
-
-        private static void CleanUp(List<WeakReference> list, object elementToRemove = null)
-        {
-            for (int i = list.Count - 1; i >= 0; i--)
-            {
-                if (!list[i].IsAlive || list[i].Target == elementToRemove)
-                {
-                    list.RemoveAt(i);
                 }
             }
         }
@@ -184,6 +185,32 @@ namespace TrackBallSyncedCharts
             double positionX = double.IsNaN(behav.Position.X) ? chart.PlotAreaClip.X : behav.Position.X;
             int coercedX = (int)Math.Max(chart.PlotAreaClip.X, Math.Min(chart.PlotAreaClip.Right, positionX));
             return coercedX;
+        }
+
+        private static IEnumerable<T> GetLiveInstances<T>(List<WeakReference> list)
+        {
+            foreach (var wr in list.ToArray())
+            {
+                var instance = (T)wr.Target;
+                if (instance != null)
+                {
+                    yield return instance;
+                }
+            }
+
+            RemoveReference(list, null);
+        }
+
+        private static void RemoveReference(List<WeakReference> list, object reference)
+        {
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                var wr = list[i];
+                if (reference == wr.Target)
+                {
+                    list.RemoveAt(i);
+                }
+            }
         }
 
         public enum NavigateDirection

@@ -36,6 +36,7 @@ namespace CustomDragDropBehavior
             }
 
             base.Drop(state);
+        
         }
 
         public override bool CanResize(DragDropState state)

@@ -66,9 +66,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MyDataObject.cs" />
-    <Compile Include="MyViewModel.cs" />
-    <Compile Include="SeriesProviderDataItem.cs" />
+    <Compile Include="SeriesTypeConverter.cs" />
+    <Compile Include="DataItem.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="SeriesViewModel.cs" />
+    <Compile Include="UserControls\CollectionIndex.xaml.cs">
+      <DependentUpon>CollectionIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SeriesCreated.xaml.cs">
+      <DependentUpon>SeriesCreated.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TypeConverter.xaml.cs">
+      <DependentUpon>TypeConverter.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,6 +91,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\CollectionIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SeriesCreated.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TypeConverter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

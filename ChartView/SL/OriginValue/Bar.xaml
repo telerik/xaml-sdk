@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="OriginValue.Bar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:OriginValue"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <FrameworkElement.Resources>
+        <local:BarStyleSelector x:Key="barStyleSelector">
+            <local:BarStyleSelector.AboveOriginStyle>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#FF00C37C" />
+                </Style>
+            </local:BarStyleSelector.AboveOriginStyle>
+            <local:BarStyleSelector.BelowOriginStyle>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#FFF3135B" />
+                </Style>
+            </local:BarStyleSelector.BelowOriginStyle>
+        </local:BarStyleSelector>
+    </FrameworkElement.Resources>
+    <Grid x:Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Processed Units per Worker" />
+        </StackPanel>
+        <telerik:RadCartesianChart x:Name="chart1" 
+                                   ClipToBounds="False" 
+                                   Grid.Row="1">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:CategoricalAxis IsInverse="True" />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries x:Name="processedUnitsSeries" 
+                                   OriginValue="13"
+                                   ShowLabels="True"
+                                   DefaultVisualStyleSelector="{StaticResource barStyleSelector}">
+                    <telerik:BarSeries.DataPoints>
+                        <telerik:CategoricalDataPoint Category="Gregory" Value="19" />
+                        <telerik:CategoricalDataPoint Category="Michelle" Value="18" />
+                        <telerik:CategoricalDataPoint Category="Kate" Value="15" />
+                        <telerik:CategoricalDataPoint Category="David" Value="14" />
+                        <telerik:CategoricalDataPoint Category="Bob" Value="12" />
+                        <telerik:CategoricalDataPoint Category="Marry" Value="11" />
+                        <telerik:CategoricalDataPoint Category="Jonh" Value="10" />
+                        <telerik:CategoricalDataPoint Category="Aaron" Value="9" />
+                        <telerik:CategoricalDataPoint Category="Peter" Value="9" />
+                    </telerik:BarSeries.DataPoints>
+                </telerik:BarSeries>
+            </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Annotations>
+                <telerik:CartesianGridLineAnnotation Axis="{Binding HorizontalAxis, ElementName=chart1}" 
+                                                     Value="{Binding OriginValue, ElementName=processedUnitsSeries}"
+                                                     Label="Expected 13"
+                                                     ClipToPlotArea="False">
+                    <telerik:CartesianGridLineAnnotation.LabelDefinition>
+                        <telerik:ChartAnnotationLabelDefinition Location="Top" />
+                    </telerik:CartesianGridLineAnnotation.LabelDefinition>
+                </telerik:CartesianGridLineAnnotation>
+            </telerik:RadCartesianChart.Annotations>
+        </telerik:RadCartesianChart>
+
+    </Grid>
+</UserControl>

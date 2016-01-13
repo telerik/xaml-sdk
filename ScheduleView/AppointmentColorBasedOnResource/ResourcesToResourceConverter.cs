@@ -15,7 +15,7 @@ namespace AppointmentColorBasedOnResource
 			var resources = value as IEnumerable<IResource>;
 			var resource = resources == null ? null : resources.FirstOrDefault(r => r.ResourceType == "Room");
 
-			return dictionary != null && resource != null && dictionary.Contains(resource.ResourceName) ? dictionary[resource.ResourceName] : null;
+            return dictionary != null && resource != null && dictionary.Contains(resource.ResourceName) ? dictionary[resource.ResourceName] : null;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

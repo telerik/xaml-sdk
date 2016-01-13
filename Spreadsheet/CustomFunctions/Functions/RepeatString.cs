@@ -44,8 +44,9 @@ namespace CustomFunctions.Functions
             Info = new FunctionInfo(FunctionName, FunctionCategory.Text, description, requiredArguments, optionalArguments, 1, false);
         }
 
-        protected override RadExpression EvaluateOverride(object[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<object> context)
         {
+            object[] arguments = context.Arguments;
             string text = arguments[0].ToString();
 
             double numberTimes = 1;

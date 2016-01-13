@@ -47,9 +47,9 @@ namespace CustomFunctions.Functions
             Info = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description, requiredArguments, optionalArguments, optionalArgumentsRepeatCount: 3);
         }
 
-        protected override RadExpression EvaluateOverride(RadExpression[] arguments)
+        protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
         {
-            return new NumberExpression(arguments.Length);
+            return new NumberExpression(context.Arguments.Length);
         }
     }
 }
