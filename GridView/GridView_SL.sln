@@ -118,6 +118,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewWithSpreadsheet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportMultipleGridViewsToOneDocument_SL", "ExportMultipleGridViewsToOneDocument\ExportMultipleGridViewsToOneDocument_SL.csproj", "{3B0EE271-B455-4B8B-91E8-92338F5777F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReusingControlPanelItems_SL", "ReusingControlPanelItems\ReusingControlPanelItems_SL.csproj", "{0CE38745-5E67-49D0-B377-CBDD749A1B81}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -689,6 +691,16 @@ Global
 		{3B0EE271-B455-4B8B-91E8-92338F5777F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3B0EE271-B455-4B8B-91E8-92338F5777F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3B0EE271-B455-4B8B-91E8-92338F5777F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

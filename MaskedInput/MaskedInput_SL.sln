@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicFormatString_SL", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueToTextConverterSL", "ValueToTextConverter\ValueToTextConverterSL.csproj", "{21A6694F-123E-439B-8DDD-85441AD52E1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinusKeyCustomizations_SL", "MinusKeyCustomizations\MinusKeyCustomizations_SL.csproj", "{C0F63D57-B45A-4218-B9D2-4068B0A417E6}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{21A6694F-123E-439B-8DDD-85441AD52E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21A6694F-123E-439B-8DDD-85441AD52E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21A6694F-123E-439B-8DDD-85441AD52E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F63D57-B45A-4218-B9D2-4068B0A417E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F63D57-B45A-4218-B9D2-4068B0A417E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F63D57-B45A-4218-B9D2-4068B0A417E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F63D57-B45A-4218-B9D2-4068B0A417E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

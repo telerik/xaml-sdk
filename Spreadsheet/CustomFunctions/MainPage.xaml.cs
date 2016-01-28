@@ -43,6 +43,7 @@ namespace CustomFunctions
             FunctionManager.RegisterFunction(new RepeatString());
             FunctionManager.RegisterFunction(new Nand());
             FunctionManager.RegisterFunction(new CustomFunctions.Functions.Upper());
+            FunctionManager.RegisterFunction(new CustomFunctions.Functions.Indirect());
         }
     }
 }

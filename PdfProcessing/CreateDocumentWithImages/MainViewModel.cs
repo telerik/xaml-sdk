@@ -248,9 +248,10 @@ namespace CreateDocumentWithImages
         {
             using (MemoryStream stream = new MemoryStream())
             {
-                CompressedStream compressedStream = new CompressedStream(stream, StreamOperationMode.Write, new DeflateSettings());
-                compressedStream.Write(data, 0, data.Length);
-                compressedStream.Flush();
+                using (CompressedStream compressedStream = new CompressedStream(stream, StreamOperationMode.Write, new DeflateSettings()))
+                {
+                    compressedStream.Write(data, 0, data.Length);
+                }
 
                 return stream.ToArray();
             }

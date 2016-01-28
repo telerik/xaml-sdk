@@ -118,6 +118,7 @@
     <Compile Include="Functions\Arguments.cs" />
     <Compile Include="Functions\E.cs" />
     <Compile Include="Functions\GeoMean.cs" />
+    <Compile Include="Functions\Indirect.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

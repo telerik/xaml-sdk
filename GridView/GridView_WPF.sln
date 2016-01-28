@@ -124,6 +124,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPreviewWithSpreadsheet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportMultipleGridViewsToOneDocument_WPF", "ExportMultipleGridViewsToOneDocument\ExportMultipleGridViewsToOneDocument_WPF.csproj", "{EE87A6DB-4FBE-4C69-9993-4497B59438C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReusingControlPanelItems_WPF", "ReusingControlPanelItems\ReusingControlPanelItems_WPF.csproj", "{05F53909-80FB-478E-ABE2-F589651BEA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredSearching_WPF", "DeferredSearching\DeferredSearching_WPF.csproj", "{51CC34DB-1000-43EC-8385-14F2104C1C0D}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -725,6 +729,26 @@ Global
 		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EE87A6DB-4FBE-4C69-9993-4497B59438C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{05F53909-80FB-478E-ABE2-F589651BEA5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
