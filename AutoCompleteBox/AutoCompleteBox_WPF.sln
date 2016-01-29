@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMatchFilteringBehavior_WPF", "NoMatchFilteringBehavior\NoMatchFilteringBehavior_WPF.csproj", "{B7A1BFA7-9E77-4C68-872F-3334816071E0}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataValidation_WPF", "DataValidation\DataValidation_WPF.csproj", "{AC50D323-F9AA-4F0E-9AF4-6649707FB42F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrictInputToOnlyExistingItems_WPF", "RestrictInputToOnlyExistingItems\RestrictInputToOnlyExistingItems_WPF.csproj", "{C9977D98-B62B-4955-A93E-D6CD9222D603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumInputPrefixLengthBeforeFiltering_WPF", "MinimumInputPrefixLengthBeforeFiltering\MinimumInputPrefixLengthBeforeFiltering_WPF.csproj", "{3EE7C771-C4C7-4B60-94FE-E7F501FF8D82}"
 EndProject
 Global
 	 
@@ -106,6 +108,10 @@ Global
 		{C9977D98-B62B-4955-A93E-D6CD9222D603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9977D98-B62B-4955-A93E-D6CD9222D603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9977D98-B62B-4955-A93E-D6CD9222D603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE7C771-C4C7-4B60-94FE-E7F501FF8D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE7C771-C4C7-4B60-94FE-E7F501FF8D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE7C771-C4C7-4B60-94FE-E7F501FF8D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE7C771-C4C7-4B60-94FE-E7F501FF8D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
