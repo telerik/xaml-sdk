@@ -16,20 +16,6 @@ namespace SilverlightApplication1
             InitializeComponent();
         }
 
-        private void clubsGrid_RowLoaded(object sender, RowLoadedEventArgs e)
-        {
-            var row = e.Row as GridViewRow;
-
-            if (row == null)
-                return;
-
-            var selectedBinding = new Binding("IsSelected");
-            selectedBinding.Source = row.Item;
-            selectedBinding.Mode = BindingMode.TwoWay;
-
-            row.SetBinding(GridViewRow.IsSelectedProperty, selectedBinding);
-        }
-
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             (this.clubsGrid.Items[3] as Club).IsSelected = true;

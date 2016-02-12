@@ -128,6 +128,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReusingControlPanelItems_WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredSearching_WPF", "DeferredSearching\DeferredSearching_WPF.csproj", "{51CC34DB-1000-43EC-8385-14F2104C1C0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregateFunctionEnumerableProperty_WPF", "CustomAggregateFunctionEnumerableProperty\CustomAggregateFunctionEnumerableProperty_WPF.csproj", "{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -749,6 +751,16 @@ Global
 		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{51CC34DB-1000-43EC-8385-14F2104C1C0D}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

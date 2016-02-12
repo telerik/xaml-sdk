@@ -11,6 +11,8 @@ using Telerik.Windows.Documents.Layout;
 using Telerik.Windows.Documents.Model;
 using Telerik.Windows.Documents.Model.Styles;
 using Telerik.Windows.Documents.UI.Extensibility;
+using Telerik.Windows.Controls.RichTextBoxUI;
+using Telerik.Windows.Controls.RichTextBoxUI.ColorPickers;
 
 #if SILVERLIGHT
 using SelectionChangedEventArgs = Telerik.Windows.Controls.SelectionChangedEventArgs;
@@ -62,11 +64,15 @@ namespace CustomParagraphPropertiesDialogDemo
         private Action<StyleDefinition> applyCallback;
 
         private readonly Dictionary<LineSpacingDialogTypes, string> lineSpacingTypes;
-
         private readonly Dictionary<FirstLineIndentDialogTypes, string> firstLineIndentTypes;
 
         private ParagraphPropertiesDialogContext context;
+        private ParagraphPropertiesDialogInfo initialProperties;
+        private string initialLineSpacingDialogType;
         private string oldFirstLineIndentType;
+        private bool isIndentationChanged;
+        private bool isBackgroundChanged;
+        private bool isUpdatingUI;
 
         #endregion
 
@@ -144,157 +150,440 @@ namespace CustomParagraphPropertiesDialogDemo
         private void ShowDialogInternal(ParagraphPropertiesDialogContext context)
         {
             this.context = context;
-            this.UpdateUI(this.context.StyleInfo);
-#if WPF
+
+            this.SetInitialValues();
+            this.UpdateUI(this.initialProperties);
+
             this.SetOwner(this.context.Owner);
-#else
-            this.SetOwner(null);
-#endif
+
             this.applyCallback = this.context.ApplyPropCallback;
             this.ShowDialog();
         }
 
-        private void UpdateUI(StyleDefinition paragraphStyle)
+        private void SetInitialValues()
         {
-            this.comboAligment.SelectedValue = (RadTextAlignment)paragraphStyle.GetPropertyValue(Paragraph.TextAlignmentProperty);
+            StyleUIHelper helper = new StyleUIHelper(this.context.Owner);
 
-            this.radNumSpacingBefore.Value = Unit.DipToPoint(((double?)paragraphStyle.GetPropertyValue(Paragraph.SpacingBeforeProperty)).Value);
-            this.radNumSpacingAfter.Value = Unit.DipToPoint(((double?)paragraphStyle.GetPropertyValue(Paragraph.SpacingAfterProperty)).Value);
+            this.initialProperties = new ParagraphPropertiesDialogInfo();
+            this.initialProperties.TextAlignment = helper.GetTextAlignmentOfParagraphStyle();
 
-            this.checkBoxAutomaticSpacingBefore.IsChecked = ((bool?)paragraphStyle.GetPropertyValue(Paragraph.AutomaticSpacingBeforeProperty)).Value;
-            this.checkBoxAutomaticSpacingAfter.IsChecked = ((bool?)paragraphStyle.GetPropertyValue(Paragraph.AutomaticSpacingAfterProperty)).Value;
+            this.initialProperties.AutomaticSpacingBefore = helper.GetAutomaticSpacingBeforeOfParagraphStyle();
+            this.initialProperties.AutomaticSpacingAfter = helper.GetAutomaticSpacingAfterOfParagraphStyle();
 
-            double leftIndent = Unit.DipToPoint(((double?)paragraphStyle.GetPropertyValue(Paragraph.LeftIndentProperty)).Value);
-            this.radNumRightIndent.Value = Unit.DipToPoint(((double?)paragraphStyle.GetPropertyValue(Paragraph.RightIndentProperty)).Value);
+            this.initialProperties.LineSpacing = helper.GetLineSpacingOfParagraphStyle();
+            this.initialProperties.LineSpacingType = helper.GetLineSpacingTypeOfParagraphStyle();
+            this.initialLineSpacingDialogType = this.GetLineSpacingDialogType(initialProperties.LineSpacingType, initialProperties.LineSpacing);
+            this.initialProperties.Background = helper.GetBackgroundOfParagraphStyle();
+            this.initialProperties.FlowDirection = helper.GetFlowDirectionOfParagraphStyle();
 
-            LineSpacingType lineSpacingType = ((LineSpacingType?)paragraphStyle.GetPropertyValue(Paragraph.LineSpacingTypeProperty)).Value;
-            double lineSpacingValue = ((double?)paragraphStyle.GetPropertyValue(Paragraph.LineSpacingProperty)).Value;
-
-            this.UpdateLineSpacingUI(lineSpacingType, lineSpacingValue);
-
-            this.paragraphBackgroundColorSelector.SelectedColor = (Color)paragraphStyle.GetPropertyValue(Paragraph.BackgroundProperty);
-
-            this.SetFlowDirection((FlowDirection)paragraphStyle.GetPropertyValue(Paragraph.FlowDirectionProperty));
-
-            double firstIndentValue = Unit.DipToPoint(((double?)paragraphStyle.GetPropertyValue(Paragraph.FirstLineIndentProperty)).Value);
-
-            // < 0 is hanging; 
-            // > 0 is first line; 
-            // 0 is none;
-            if (firstIndentValue > 0)
+            double? spacingBefore = helper.GetSpacingBeforeOfParagraphStyle();
+            if (spacingBefore.HasValue)
             {
-                this.radNumFirstIndent.Value = firstIndentValue;
-                this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.FirstLine];
+                this.initialProperties.SpacingBefore = spacingBefore.Value;
             }
-            else if (firstIndentValue < 0)
+
+            double? spacingAfter = helper.GetSpacingAfterOfParagraphStyle();
+            if (spacingAfter.HasValue)
             {
-                this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.Hanging];
-                leftIndent += firstIndentValue;
-                this.radNumFirstIndent.Value = -firstIndentValue;
+                this.initialProperties.SpacingAfter = spacingAfter.Value;
+            }
+
+            double? rightIndent = helper.GetRightIndentOfParagraphStyle();
+            if (rightIndent.HasValue)
+            {
+                this.initialProperties.RightIndent = rightIndent.Value;
+            }
+
+            double? firstLineIndent = helper.GetFirstLineIndentOfParagraphStyle();
+            if (firstLineIndent.HasValue)
+            {
+                this.initialProperties.FirstLineIndent = firstLineIndent.Value;
+            }
+
+            double? leftIndent = helper.GetLeftIndentOfParagraphStyle();
+            if (leftIndent.HasValue)
+            {
+                this.initialProperties.LeftIndent = leftIndent.Value;
+            }
+        }
+
+        private void UpdateUI(ParagraphPropertiesDialogInfo properties)
+        {
+            this.BeginUpdateUI();
+
+            this.UpdateUICore(properties);
+
+            this.EndUpdateUI();
+        }
+
+        private void UpdateUICore(ParagraphPropertiesDialogInfo properties)
+        {
+            this.comboAligment.SelectedValue = properties.TextAlignment;
+
+            this.UpdateSpacingsUI(properties);
+            this.UpdateLineSpacingUI(properties.LineSpacingType, properties.LineSpacing);
+            this.UpdateBackgroundUI(properties);
+            this.UpdateFlowDirectionUI(properties.FlowDirection);
+            this.UpdateIndentsUI(properties);
+        }
+
+        private void UpdateBackgroundUI(ParagraphPropertiesDialogInfo properties)
+        {
+            if (properties.Background.HasValue)
+            {
+                this.paragraphBackgroundColorSelector.SelectedColor = properties.Background.Value;
             }
             else
             {
-                this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.None];
+                this.paragraphBackgroundColorSelector.ClearValue(DropDownColorPicker.SelectedColorProperty);
             }
-
-            this.radNumLeftIndent.Value = leftIndent;
         }
 
-        private void DefaultButton_Click(object sender, RoutedEventArgs e)
+        private void UpdateSpacingsUI(ParagraphPropertiesDialogInfo properties)
         {
-            this.UpdateUI(new Paragraph().ExtractStyleFromProperties());
+            if (properties.SpacingBefore.HasValue)
+            {
+                this.radNumSpacingBefore.Value = Unit.DipToPoint(properties.SpacingBefore.Value);
+            }
+            else
+            {
+                this.radNumSpacingBefore.Value = null;
+            }
+
+            if (properties.SpacingAfter.HasValue)
+            {
+                this.radNumSpacingAfter.Value = Unit.DipToPoint(properties.SpacingAfter.Value);
+            }
+            else
+            {
+                this.radNumSpacingAfter.Value = null;
+            }
+
+            this.checkBoxAutomaticSpacingBefore.IsChecked = properties.AutomaticSpacingBefore;
+            this.checkBoxAutomaticSpacingAfter.IsChecked = properties.AutomaticSpacingAfter;
         }
 
-        private void UpdateLineSpacingUI(LineSpacingType lineSpacingType, double lineSpacingValue)
+        private void UpdateIndentsUI(ParagraphPropertiesDialogInfo properties)
         {
-            if (lineSpacingType == LineSpacingType.Exact)
+            if (properties.RightIndent.HasValue)
             {
-                this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.Exactly];
-                this.radNumLineSpacing.Value = Unit.DipToPoint(lineSpacingValue);
+                this.radNumRightIndent.Value = Unit.DipToPoint(properties.RightIndent.Value);
             }
-            else if (lineSpacingType == LineSpacingType.AtLeast)
+            else
             {
-                this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.AtLeast];
-                this.radNumLineSpacing.Value = Unit.DipToPoint(lineSpacingValue);
+                this.radNumRightIndent.Value = null;
             }
-            else if (lineSpacingType == LineSpacingType.Auto)
+
+            double? firstIndentValue = null;
+            if (properties.FirstLineIndent.HasValue)
             {
-                if (lineSpacingValue == 1.0)
+                firstIndentValue = Unit.DipToPoint(properties.FirstLineIndent.Value);
+
+                // < 0 is hanging; 
+                // > 0 is first line; 
+                // 0 is none;
+                if (firstIndentValue > 0)
                 {
-                    this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.Single];
+                    this.radNumFirstIndent.Value = firstIndentValue;
+                    this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.FirstLine];
                 }
-                else if (lineSpacingValue == 1.5)
+                else if (firstIndentValue < 0)
                 {
-                    this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.LineAndAHalf];
-                }
-                else if (lineSpacingValue == 2.0)
-                {
-                    this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.Double];
+                    this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.Hanging];
+                    this.radNumFirstIndent.Value = -firstIndentValue;
                 }
                 else
                 {
-                    this.comboLineSpacing.SelectedValue = this.lineSpacingTypes[LineSpacingDialogTypes.Multiple];
-                    this.radNumLineSpacing.Value = lineSpacingValue;
+                    this.comboFirstIndentType.SelectedItem = this.firstLineIndentTypes[FirstLineIndentDialogTypes.None];
                 }
             }
             else
             {
-                Debug.Assert(false, "Unknown LineSpacingType");
+                this.radNumFirstIndent.Value = null;
+            }
+
+            if (properties.LeftIndent.HasValue)
+            {
+                double leftIndent = Unit.DipToPoint(properties.LeftIndent.Value);
+                if (firstIndentValue.HasValue && firstIndentValue.Value < 0)
+                {
+                    leftIndent += firstIndentValue.Value;
+                }
+
+                this.radNumLeftIndent.Value = leftIndent;
+            }
+            else
+            {
+                this.radNumLeftIndent.Value = null;
             }
         }
 
-        public StyleDefinition GetParagraphStyleInfo()
+        private void UpdateLineSpacingUI(LineSpacingType? lineSpacingType, double? lineSpacingValue)
         {
-            StyleDefinition result = new StyleDefinition(StyleType.Paragraph);
-
-            if (comboAligment.SelectedValue != null)
-            {
-                result.SetPropertyValue(Paragraph.TextAlignmentProperty, (RadTextAlignment)comboAligment.SelectedValue);
-            }
-
-            result.SetPropertyValue(Paragraph.FlowDirectionProperty, this.GetFlowDirection());
-
-            result.SetPropertyValue(Paragraph.SpacingBeforeProperty, Unit.PointToDip(this.radNumSpacingBefore.Value ?? this.radNumSpacingBefore.Minimum));
-            result.SetPropertyValue(Paragraph.SpacingAfterProperty, Unit.PointToDip(this.radNumSpacingAfter.Value ?? this.radNumSpacingAfter.Minimum));
-            result.SetPropertyValue(Paragraph.AutomaticSpacingBeforeProperty, this.checkBoxAutomaticSpacingBefore.IsChecked ?? false);
-            result.SetPropertyValue(Paragraph.AutomaticSpacingAfterProperty, this.checkBoxAutomaticSpacingAfter.IsChecked ?? false);
-            result.SetPropertyValue(Paragraph.RightIndentProperty, Unit.PointToDip(this.radNumRightIndent.Value ?? 0));
-
-            this.SetLineSpacingInStyle(result);
-
-            result.SetPropertyValue(Paragraph.BackgroundProperty, paragraphBackgroundColorSelector.SelectedColor);
-
-            double leftIndent = Unit.PointToDip(this.radNumLeftIndent.Value ?? 0);
-            string firstIndentValue = this.comboFirstIndentType.SelectedValue.ToString();
-            if (this.comboFirstIndentType.SelectedValue != null)
-            {
-                if (firstIndentValue == this.firstLineIndentTypes[FirstLineIndentDialogTypes.FirstLine])
-                {
-                    result.SetPropertyValue(Paragraph.FirstLineIndentProperty, Unit.PointToDip(this.radNumFirstIndent.Value ?? this.radNumFirstIndent.Minimum));
-                }
-                else if (firstIndentValue == this.firstLineIndentTypes[FirstLineIndentDialogTypes.Hanging])
-                {
-                    // hanging indent is negative first indent
-                    result.SetPropertyValue(Paragraph.FirstLineIndentProperty, -Unit.PointToDip(this.radNumFirstIndent.Value ?? this.radNumFirstIndent.Minimum));
-                    leftIndent += Unit.PointToDip(this.radNumFirstIndent.Value ?? this.radNumFirstIndent.Minimum);
-                }
-                else
-                {
-                    result.SetPropertyValue(Paragraph.FirstLineIndentProperty, 0);
-                }
-            }
-            result.SetPropertyValue(Paragraph.LeftIndentProperty, leftIndent);
-
-            return result;
+            this.comboLineSpacing.SelectedValue = this.GetLineSpacingDialogType(lineSpacingType, lineSpacingValue);
+            this.radNumLineSpacing.Value = this.GetLineSpacingDialogValue(lineSpacingType, lineSpacingValue);
         }
 
-        private void SetFlowDirection(FlowDirection flowDirection)
+        private void UpdateFlowDirectionUI(FlowDirection? flowDirection)
         {
             this.radioButtonLeftToRight.IsChecked = flowDirection == FlowDirection.LeftToRight;
             this.radioButtonRightToLeft.IsChecked = flowDirection == FlowDirection.RightToLeft;
         }
 
-        private FlowDirection GetFlowDirection()
+        private void BeginUpdateUI()
+        {
+            this.isUpdatingUI = true;
+        }
+
+        private void EndUpdateUI()
+        {
+            this.isUpdatingUI = false;
+        }
+
+        private void DefaultButton_Click(object sender, RoutedEventArgs e)
+        {
+            ParagraphProperties paragraphProperties = new StyleDefinition(StyleType.Paragraph).ParagraphProperties;
+
+            ParagraphPropertiesDialogInfo propertiesInfo = new ParagraphPropertiesDialogInfo()
+            {
+                TextAlignment = paragraphProperties.TextAlignment,
+                SpacingBefore = paragraphProperties.SpacingBefore,
+                SpacingAfter = paragraphProperties.SpacingAfter,
+                AutomaticSpacingBefore = paragraphProperties.AutomaticSpacingBefore,
+                AutomaticSpacingAfter = paragraphProperties.AutomaticSpacingAfter,
+                LineSpacingType = paragraphProperties.LineSpacingType,
+                LineSpacing = paragraphProperties.LineSpacing,
+                Background = paragraphProperties.Background,
+                FlowDirection = paragraphProperties.FlowDirection,
+                RightIndent = paragraphProperties.RightIndent,
+                FirstLineIndent = paragraphProperties.FirstLineIndent,
+                LeftIndent = paragraphProperties.LeftIndent
+            };
+
+            this.UpdateUICore(propertiesInfo);
+            // When multiple paragraphs with different backgrounds are selected, 
+            // the initial value is the default one and this prevents ColorChanged event to be fired. 
+            // Thus, we need to set this flag manually.
+            this.isBackgroundChanged = true;
+        }
+
+        private double? GetLineSpacingDialogValue(LineSpacingType? lineSpacingType, double? lineSpacingValue)
+        {
+            double? lineSpacingDialogValue = null;
+
+            if (lineSpacingValue.HasValue)
+            {
+                if (lineSpacingType == LineSpacingType.Exact || lineSpacingType == LineSpacingType.AtLeast)
+                {
+                    lineSpacingDialogValue = Unit.DipToPoint(lineSpacingValue.Value);
+                }
+                else if (lineSpacingType == LineSpacingType.Auto)
+                {
+                    lineSpacingDialogValue = lineSpacingValue;
+                }
+            }
+
+            return lineSpacingDialogValue;
+        }
+
+        private string GetLineSpacingDialogType(LineSpacingType? lineSpacingType, double? lineSpacingValue)
+        {
+            string lineSpacingDialogType = string.Empty;
+            if (lineSpacingType == LineSpacingType.Exact)
+            {
+                lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.Exactly];
+            }
+            else if (lineSpacingType == LineSpacingType.AtLeast)
+            {
+                lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.AtLeast];
+            }
+            else if (lineSpacingType == LineSpacingType.Auto)
+            {
+                if (lineSpacingValue == 1.0)
+                {
+                    lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.Single];
+                }
+                else if (lineSpacingValue == 1.5)
+                {
+                    lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.LineAndAHalf];
+                }
+                else if (lineSpacingValue == 2.0)
+                {
+                    lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.Double];
+                }
+                else
+                {
+                    lineSpacingDialogType = this.lineSpacingTypes[LineSpacingDialogTypes.Multiple];
+                }
+            }
+
+            return lineSpacingDialogType;
+        }
+        public StyleDefinition GetParagraphStyleInfo()
+        {
+            StyleDefinition result = new StyleDefinition(StyleType.Paragraph);
+
+            this.SetTextAlignment(result);
+            this.SetFlowDirection(result);
+            this.SetParagraphSpacings(result);
+            this.SetLineSpacingInStyle(result);
+            this.SetBackground(result);
+            this.SetIndents(result);
+
+            return result;
+        }
+
+        private void SetTextAlignment(StyleDefinition result)
+        {
+            if (comboAligment.SelectedValue != null && (RadTextAlignment)comboAligment.SelectedValue != this.initialProperties.TextAlignment)
+            {
+                result.SetPropertyValue(Paragraph.TextAlignmentProperty, (RadTextAlignment)comboAligment.SelectedValue);
+            }
+        }
+
+        private void SetBackground(StyleDefinition result)
+        {
+            Color backgroundColor = paragraphBackgroundColorSelector.SelectedColor;
+            if (backgroundColor != this.initialProperties.Background && this.isBackgroundChanged)
+            {
+                result.SetPropertyValue(Paragraph.BackgroundProperty, backgroundColor);
+            }
+        }
+
+        private void SetFlowDirection(StyleDefinition result)
+        {
+            FlowDirection? flowDirection = this.GetFlowDirection();
+            if (flowDirection.HasValue && flowDirection != this.initialProperties.FlowDirection)
+            {
+                result.SetPropertyValue(Paragraph.FlowDirectionProperty, flowDirection);
+            }
+        }
+
+        private void SetIndents(StyleDefinition result)
+        {
+            if (this.radNumRightIndent.Value.HasValue)
+            {
+                double rightIndent = Unit.PointToDip(this.radNumRightIndent.Value.Value);
+                if (rightIndent != this.initialProperties.RightIndent)
+                {
+                    result.SetPropertyValue(Paragraph.RightIndentProperty, rightIndent);
+                }
+            }
+
+            if (this.isIndentationChanged)
+            {
+                double leftIndent = Unit.PointToDip(this.radNumLeftIndent.Value ?? 0);
+                string firstIndentValue = this.comboFirstIndentType.SelectedValue.ToString();
+
+                if (this.comboFirstIndentType.SelectedValue != null)
+                {
+                    double firstIndent = Unit.PointToDip(this.radNumFirstIndent.Value ?? this.radNumFirstIndent.Minimum);
+                    if (firstIndentValue == this.firstLineIndentTypes[FirstLineIndentDialogTypes.FirstLine] && this.initialProperties.FirstLineIndent != firstIndent)
+                    {
+                        result.SetPropertyValue(Paragraph.FirstLineIndentProperty, firstIndent);
+                    }
+                    else if (firstIndentValue == this.firstLineIndentTypes[FirstLineIndentDialogTypes.Hanging])
+                    {
+                        // hanging indent is negative first indent
+                        result.SetPropertyValue(Paragraph.FirstLineIndentProperty, -firstIndent);
+                        leftIndent += firstIndent;
+                    }
+                    else
+                    {
+                        result.SetPropertyValue(Paragraph.FirstLineIndentProperty, 0);
+                    }
+                }
+
+                if (leftIndent != this.initialProperties.LeftIndent)
+                {
+                    result.SetPropertyValue(Paragraph.LeftIndentProperty, leftIndent);
+                }
+            }
+        }
+
+        private void SetParagraphSpacings(StyleDefinition result)
+        {
+            if (this.radNumSpacingBefore.Value.HasValue)
+            {
+                double spacingBefore = Unit.PointToDip(this.radNumSpacingBefore.Value.Value);
+                if (spacingBefore != this.initialProperties.SpacingBefore)
+                {
+                    result.SetPropertyValue(Paragraph.SpacingBeforeProperty, spacingBefore);
+                }
+            }
+
+            if (this.radNumSpacingAfter.Value.HasValue)
+            {
+                double spacingAfter = Unit.PointToDip(this.radNumSpacingAfter.Value.Value);
+                if (spacingAfter != this.initialProperties.SpacingAfter)
+                {
+                    result.SetPropertyValue(Paragraph.SpacingAfterProperty, spacingAfter);
+                }
+            }
+
+            bool? automaticSpacingBefore = this.checkBoxAutomaticSpacingBefore.IsChecked;
+            if (automaticSpacingBefore.HasValue && this.checkBoxAutomaticSpacingBefore.IsChecked != this.initialProperties.AutomaticSpacingBefore)
+            {
+                result.SetPropertyValue(Paragraph.AutomaticSpacingBeforeProperty, automaticSpacingBefore.Value);
+            }
+
+            bool? automaticSpacingAfter = this.checkBoxAutomaticSpacingAfter.IsChecked;
+            if (automaticSpacingAfter.HasValue && automaticSpacingAfter != this.initialProperties.AutomaticSpacingAfter)
+            {
+                result.SetPropertyValue(Paragraph.AutomaticSpacingAfterProperty, automaticSpacingAfter);
+            }
+        }
+
+        private void SetLineSpacingInStyle(StyleDefinition result)
+        {
+            if (this.comboLineSpacing.SelectedValue == null)
+            {
+                return;
+            }
+
+            string value = this.comboLineSpacing.SelectedValue.ToString();
+
+            bool isLineSpacingChanged = this.radNumLineSpacing.Value != this.initialProperties.LineSpacing ||
+                                        value != this.initialLineSpacingDialogType;
+
+            if (isLineSpacingChanged)
+            {
+                double lineSpacing = Unit.PointToDip(this.radNumLineSpacing.Value ?? this.radNumLineSpacing.Minimum);
+
+                if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Single] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, 1.0);
+                }
+                else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.LineAndAHalf] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, 1.5);
+                }
+                else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Double] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, 2.0);
+                }
+                else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Exactly] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Exact);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, lineSpacing);
+                }
+                else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.AtLeast] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.AtLeast);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, lineSpacing);
+                }
+                else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Multiple] && isLineSpacingChanged)
+                {
+                    result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
+                    result.SetPropertyValue(Paragraph.LineSpacingProperty, this.radNumLineSpacing.Value);
+                }
+            }
+        }
+
+        private FlowDirection? GetFlowDirection()
         {
             if (this.radioButtonLeftToRight.IsChecked == true)
             {
@@ -305,48 +594,20 @@ namespace CustomParagraphPropertiesDialogDemo
                 return FlowDirection.RightToLeft;
             }
 
-            Debug.Assert(false, "Unset Table Flow Direction in UI.");
-
-            return FlowDirection.LeftToRight;
+            return null;
         }
 
-        private void SetLineSpacingInStyle(StyleDefinition result)
+        private void ResetInitialValues()
         {
-            string value = comboLineSpacing.SelectedValue.ToString();
+            this.initialProperties = null;
+            this.initialLineSpacingDialogType = null;
+        }
 
-            if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Single])
+        private void RecordIndentationChange()
+        {
+            if (!this.isUpdatingUI)
             {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, 1.0);
-            }
-            else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.LineAndAHalf])
-            {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, 1.5);
-            }
-            else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Double])
-            {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, 2.0);
-            }
-            else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Exactly])
-            {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Exact);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, Unit.PointToDip(this.radNumLineSpacing.Value ?? this.radNumLineSpacing.Minimum));
-            }
-            else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.AtLeast])
-            {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.AtLeast);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, Unit.PointToDip(this.radNumLineSpacing.Value ?? this.radNumLineSpacing.Minimum));
-            }
-            else if (value == this.lineSpacingTypes[LineSpacingDialogTypes.Multiple])
-            {
-                result.SetPropertyValue(Paragraph.LineSpacingTypeProperty, LineSpacingType.Auto);
-                result.SetPropertyValue(Paragraph.LineSpacingProperty, this.radNumLineSpacing.Value);
-            }
-            else
-            {
-                Debug.Assert(false, "Unknown lines spacing type selected");
+                this.isIndentationChanged = true;
             }
         }
 
@@ -354,6 +615,15 @@ namespace CustomParagraphPropertiesDialogDemo
         {
             base.OnClosed(args);
 
+            this.Clear();
+        }
+
+        private void Clear()
+        {
+            this.ResetInitialValues();
+
+            this.isIndentationChanged = false;
+            this.isBackgroundChanged = false;
             this.applyCallback = null;
             this.Owner = null;
         }
@@ -387,7 +657,7 @@ namespace CustomParagraphPropertiesDialogDemo
             this.Close();
         }
 
-        private void comboLineSpacing_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboLineSpacing_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string value = (string)comboLineSpacing.SelectedItem;
 
@@ -434,10 +704,6 @@ namespace CustomParagraphPropertiesDialogDemo
                 this.radNumLineSpacing.CustomUnit = null;
                 this.radNumLineSpacing.IsEnabled = true;
             }
-            else
-            {
-                Debug.Assert(false, "Unknown lines spacing type selected");
-            }
         }
 
         private void TabsButton_Click(object sender, RoutedEventArgs e)
@@ -446,7 +712,12 @@ namespace CustomParagraphPropertiesDialogDemo
             this.context.ShowTabStopsPropertiesDialogCallback();
         }
 
-        private void comboFirstIndent_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void RadNumIndent_ValueChanged(object sender, RadRangeBaseValueChangedEventArgs e)
+        {
+            this.RecordIndentationChange();
+        }
+
+        private void ComboFirstIndent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string value = comboFirstIndentType.SelectedItem.ToString();
 
@@ -468,9 +739,38 @@ namespace CustomParagraphPropertiesDialogDemo
             }
 
             this.oldFirstLineIndentType = value;
+
+            this.RecordIndentationChange();
+        }
+
+        private void CheckBoxAutomaticSpacingBefore_Checked(object sender, RoutedEventArgs e)
+        {
+            this.radNumSpacingBefore.IsEnabled = false;
+        }
+
+        private void CheckBoxAutomaticSpacingBefore_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.radNumSpacingBefore.IsEnabled = true;
+        }
+
+        private void CheckBoxAutomaticSpacingAfter_Checked(object sender, RoutedEventArgs e)
+        {
+            this.radNumSpacingAfter.IsEnabled = false;
+        }
+
+        private void CheckBoxAutomaticSpacingAfter_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.radNumSpacingAfter.IsEnabled = true;
+        }
+
+        private void ParagraphBackgroundColorSelector_SelectedColorChanged(object sender, EventArgs e)
+        {
+            if (!this.isUpdatingUI)
+            {
+                this.isBackgroundChanged = true;
+            }
         }
 
         #endregion
-
     }
 }

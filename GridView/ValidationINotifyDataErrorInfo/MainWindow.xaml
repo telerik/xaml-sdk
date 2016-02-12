@@ -3,11 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:my="clr-namespace:ValidateINotifyDataErrorInfo"
-        Title="MainWindow" Height="300" Width="700">
+        Title="MainWindow" Height="400" Width="700">
     <Window.Resources>
         <my:MyViewModel x:Key="MyViewModel"/>
+        <Style TargetType="TextBox" x:Key="editorStyle">
+            <Setter Property="telerik:TextBoxBehavior.UpdateTextOnTextChanged" Value="True"/>
+        </Style>
     </Window.Resources>
     <Grid DataContext="{StaticResource MyViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <telerik:RadGridView Grid.Row="0" 
                              Name="clubsGrid" 
                              ItemsSource="{Binding Clubs}"
@@ -20,6 +28,20 @@
                                             DataFormatString="{}{0:yyyy}"/>
                 <telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
                                             Header="Stadium" 
+                                            DataFormatString="{}{0:N0}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <TextBlock Text="RadGridView with dynamic validation" Grid.Row="1"/>
+        <telerik:RadGridView Grid.Row="2" 
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
+                             Margin="5">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" 
+                                            EditorStyle="{StaticResource editorStyle}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
+                                            Header="Stadium" 
+                                            EditorStyle="{StaticResource editorStyle}"
                                             DataFormatString="{}{0:N0}"/>
             </telerik:RadGridView.Columns>
         </telerik:RadGridView>

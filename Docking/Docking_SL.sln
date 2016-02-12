@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneGroupItemsSource_SL", "PaneGroupItemsSource\PaneGroupItemsSource_SL.csproj", "{BCAB4476-5EBC-4490-BBA6-BEBE0FB28FC6}"
 EndProject
@@ -39,8 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaneSourceWithLayout_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetainPaneSize_SL", "RetainPaneSize\RetainPaneSize_SL.csproj", "{95204CAB-F434-4275-8107-483792CA3F35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentToolWindowStyles_SL", "DifferentToolWindowStyles\DifferentToolWindowStyles_SL.csproj", "{4428C64B-9316-4273-8599-96CAEFE238E6}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug.NoXaml|Any CPU = Debug.NoXaml|Any CPU
 		Debug|Any CPU = Debug|Any CPU
@@ -258,8 +259,23 @@ Global
 		{95204CAB-F434-4275-8107-483792CA3F35}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
 		{95204CAB-F434-4275-8107-483792CA3F35}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
 		{95204CAB-F434-4275-8107-483792CA3F35}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Debug.NoXaml|Any CPU.ActiveCfg = Debug|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Debug.NoXaml|Any CPU.Build.0 = Debug|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Release.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Release.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseNoCA|Any CPU.ActiveCfg = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseNoCA|Any CPU.Build.0 = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseTrial.NoXaml|Any CPU.ActiveCfg = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseTrial.NoXaml|Any CPU.Build.0 = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseTrial|Any CPU.ActiveCfg = Release|Any CPU
+		{4428C64B-9316-4273-8599-96CAEFE238E6}.ReleaseTrial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

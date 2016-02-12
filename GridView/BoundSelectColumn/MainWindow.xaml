@@ -6,6 +6,9 @@
         Title="MainWindow" Height="300" Width="700">
     <Window.Resources>
         <my:MyViewModel x:Key="MyViewModel"/>
+        <Style TargetType="telerik:GridViewRow">
+            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+        </Style>
     </Window.Resources>
     <Grid DataContext="{StaticResource MyViewModel}">
         <Grid.RowDefinitions>
@@ -17,7 +20,6 @@
                              ItemsSource="{Binding Clubs}"
                              AutoGenerateColumns="False"
                              SelectionMode="Multiple"
-                             RowLoaded="clubsGrid_RowLoaded"
                              Margin="5">
             <telerik:RadGridView.Columns>
                 <telerik:GridViewSelectColumn/>
