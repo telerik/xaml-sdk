@@ -11,7 +11,16 @@
         <Style x:Key="redBarStyle" TargetType="Border">
             <Setter Property="Background" Value="Red" />
         </Style>
-        <local:NegativeStyleSelector x:Key="negativeStyleSelector" NegativeStyle="{StaticResource redBarStyle}" />
+        <Style x:Key="zeroBarStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Opacity" Value="0.5" />
+            <Setter Property="MinHeight" Value="3" />
+            <Setter Property="Margin" Value="0 -2 0 2" />
+        </Style>
+        <local:NegativeStyleSelector x:Key="negativeStyleSelector" 
+                                     ZeroValueStyle="{StaticResource zeroBarStyle}"
+                                     NegativeValueStyle="{StaticResource redBarStyle}" />
     </FrameworkElement.Resources>
     <Grid>
         <telerik:RadCartesianChart>

@@ -15,11 +15,8 @@
     telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_Header" 
     WindowStartupLocation="CenterOwner"
     x:Name="ParagraphProperties">
-    
+
     <StackPanel x:Name="LayoutRoot" >
-        <StackPanel.Resources>
-            <telerik:InvertedBooleanConverter x:Key="InvertedBooleanConverter" />
-        </StackPanel.Resources>
         <Grid Margin="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="120" />
@@ -47,7 +44,7 @@
             <telerik:RadComboBox Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" x:Name="comboAligment" DisplayMemberPath="Item2" SelectedValuePath="Item1" Margin="5" />
 
             <dialogs:DialogLabel Grid.Row="2" HorizontalAlignment="Left"  telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_BackgroundColor" VerticalAlignment="Center" Margin="4"/>
-            <colorPickers:DropDownColorPicker x:Name="paragraphBackgroundColorSelector" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"  Width="100" HorizontalAlignment="Left" Margin="5"/>
+            <colorPickers:DropDownColorPicker x:Name="paragraphBackgroundColorSelector" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"  Width="100" HorizontalAlignment="Left" Margin="5" SelectedColorChanged="ParagraphBackgroundColorSelector_SelectedColorChanged"/>
 
             <dialogs:DialogLabel Grid.Row="3" HorizontalAlignment="Left"  telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_Direction"   Margin="4" />
             <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Center">
@@ -58,17 +55,20 @@
             <dialogs:HeadingLabel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4 0" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_Indentation" Grid.Row="4"  />
 
             <dialogs:DialogLabel Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_LeftIndentation"  Margin="4" />
-            <telerik:RadNumericUpDown x:Name="radNumLeftIndent" Grid.Column="1" Grid.Row="5" Maximum="2000"
-                                          HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="-2000" CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
+            <telerik:RadNumericUpDown x:Name="radNumLeftIndent" Grid.Column="1" Grid.Row="5" Maximum="2000" ValueChanged="RadNumIndent_ValueChanged"
+                                          HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="True" Minimum="-2000" CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
 
             <dialogs:DialogLabel Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_FirstIndentationSpecial" />
             <dialogs:DialogLabel Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_FirstIndentationBy" />
 
             <dialogs:DialogLabel HorizontalAlignment="Left" Margin="4" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_RightIndentation" VerticalAlignment="Center" Grid.Row="6"  />
-            <telerik:RadNumericUpDown x:Name="radNumRightIndent" Grid.Column="1" Grid.Row="6" Maximum="2000" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="-2000"  CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
+            <telerik:RadNumericUpDown x:Name="radNumRightIndent" Grid.Column="1" Grid.Row="6" Maximum="2000" HorizontalAlignment="Left" ValueChanged="RadNumIndent_ValueChanged"
+                                      VerticalAlignment="Center" IsEditable="True" Minimum="-2000"  CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
 
-            <telerik:RadComboBox Grid.Row="6" Grid.Column="2" x:Name="comboFirstIndentType" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" SelectionChanged="comboFirstIndent_SelectionChanged" Margin="5"/>
-            <telerik:RadNumericUpDown Grid.Column="3" Grid.Row="6" x:Name="radNumFirstIndent" Maximum="2000" Minimum="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true"  CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
+            <telerik:RadComboBox Grid.Row="6" Grid.Column="2" x:Name="comboFirstIndentType" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" SelectionChanged="ComboFirstIndent_SelectionChanged" Margin="5"/>
+            <telerik:RadNumericUpDown Grid.Column="3" Grid.Row="6" x:Name="radNumFirstIndent" Maximum="2000" Minimum="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="True"
+                                      CustomUnit="pt" SmallChange="6" Margin="5" ValueChanged="RadNumIndent_ValueChanged"
+                                      Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}"/>
 
 
             <dialogs:HeadingLabel HorizontalAlignment="Left" Margin="4 0" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_Spacing" Grid.Row="7" VerticalAlignment="Center" />
@@ -81,9 +81,10 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <telerik:RadNumericUpDown x:Name="radNumSpacingBefore" Maximum="1000" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="0"  CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}" 
-                                          IsEnabled="{Binding Path=IsChecked, Converter={StaticResource InvertedBooleanConverter}, ElementName=checkBoxAutomaticSpacingBefore}"/>
-                <CheckBox x:Name="checkBoxAutomaticSpacingBefore" Grid.Column="1" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_SpacingBefore_Auto" Margin="2 0" />
+                <telerik:RadNumericUpDown x:Name="radNumSpacingBefore" Maximum="1000" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="0" 
+                                          CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}" />
+                <CheckBox x:Name="checkBoxAutomaticSpacingBefore" Grid.Column="1" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_SpacingBefore_Auto" Margin="2 0" 
+                          Checked="CheckBoxAutomaticSpacingBefore_Checked" Unchecked="CheckBoxAutomaticSpacingBefore_Unchecked" />
 
             </Grid>
 
@@ -94,16 +95,16 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <telerik:RadNumericUpDown x:Name="radNumSpacingAfter" Maximum="1000" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="0"  CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}" 
-                                          IsEnabled="{Binding Path=IsChecked, Converter={StaticResource InvertedBooleanConverter}, ElementName=checkBoxAutomaticSpacingAfter}"/>
-                <CheckBox x:Name="checkBoxAutomaticSpacingAfter" Grid.Column="1" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_SpacingAfter_Auto" Margin="2 0" />
-
+                <telerik:RadNumericUpDown x:Name="radNumSpacingAfter" Maximum="1000" HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" Minimum="0"  
+                                          CustomUnit="pt" SmallChange="6" Margin="5" Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}" />
+                <CheckBox x:Name="checkBoxAutomaticSpacingAfter"  Grid.Column="1" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_SpacingAfter_Auto" Margin="2 0" 
+                          Checked="CheckBoxAutomaticSpacingAfter_Checked" Unchecked="CheckBoxAutomaticSpacingAfter_Unchecked"/>
             </Grid>
 
             <dialogs:DialogLabel HorizontalAlignment="Left" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_LineSpacing" VerticalAlignment="Center" Grid.Column="2" Grid.Row="8"  Margin="4"  />
 
             <dialogs:DialogLabel HorizontalAlignment="Left" telerik:LocalizationManager.ResourceKey="Documents_ParagraphPropertiesDialog_LineSpacingAt" VerticalAlignment="Center" Grid.Column="3" Grid.Row="8"  Margin="4" />
-            <telerik:RadComboBox HorizontalAlignment="Left" x:Name="comboLineSpacing" VerticalAlignment="Center" MinWidth="100" Grid.Column="2" Grid.Row="9" SelectionChanged="comboLineSpacing_SelectionChanged" Margin="5" />
+            <telerik:RadComboBox HorizontalAlignment="Left" x:Name="comboLineSpacing" VerticalAlignment="Center" MinWidth="100" Grid.Column="2" Grid.Row="9" SelectionChanged="ComboLineSpacing_SelectionChanged" Margin="5" />
             <telerik:RadNumericUpDown CustomUnit="pt" HorizontalAlignment="Left" IsEditable="True" Maximum="1000" Minimum="0.1" x:Name="radNumLineSpacing" VerticalAlignment="Center"  Grid.Column="3" Grid.Row="9"  Margin="5"  Width="{Binding ElementName=ParagraphProperties,Path=NumericWidth}" />
         </Grid>
         <dialogs:DialogFooter>

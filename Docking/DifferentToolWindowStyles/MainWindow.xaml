@@ -1,0 +1,52 @@
+﻿<Window x:Class="DifferentToolWindowStyles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DifferentToolWindowStyles"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="350" Width="745">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to set different Style to the auto generated ToolWindow instance when a RadPane or a RadPaneGroup is made floating."
+                   TextWrapping="Wrap" Margin="20" HorizontalAlignment="Center"/>
+        <telerik:RadDocking Grid.Row="1"
+                            ToolWindowCreated="OnToolWindowCreated"
+                            PaneGroupCreated="OnPaneGroupCreated"
+                            SplitContainerCreated="OnSplitContainerCreated">
+            <telerik:RadSplitContainer>
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Red Pane" Tag="Red">
+                        <Canvas Background="MistyRose"/>
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="Blue Pane" Tag="Blue">
+                        <Canvas Background="LightBlue"/>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadSplitContainer>
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Green Pane" Tag="Green" Background="Green">
+                        <Canvas Background="LightGreen"/>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadSplitContainer>
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Normal Pane" />
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadSplitContainer InitialPosition="FloatingDockable" Tag="Orange" telerik:RadDocking.FloatingLocation="200 200">
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Floating Pane" Tag="Orange"/>
+                    <telerik:RadPane Header="Floating Pane" Tag="Orange"/>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+        </telerik:RadDocking>
+    </Grid>
+</Window>

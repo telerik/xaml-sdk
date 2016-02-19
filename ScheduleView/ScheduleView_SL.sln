@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaViewDefinition_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeResizeCursorAtRuntime_SL", "ChangeResizeCursorDuringResize\ChangeResizeCursorAtRuntime_SL.csproj", "{1016873C-DD26-4B90-98AE-943295C37E21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingByTimeMarkers_SL", "GroupingByTimeMarkers\GroupingByTimeMarkers_SL.csproj", "{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -138,6 +140,10 @@ Global
 		{1016873C-DD26-4B90-98AE-943295C37E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1016873C-DD26-4B90-98AE-943295C37E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1016873C-DD26-4B90-98AE-943295C37E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,6 @@ namespace CustomConnectorsTool
     public class CustomConnectionTool : ConnectionTool
     {
         private RadDiagramConnector lastCustomConnector;
-        private RadDiagramConnection lastAddedConnection;
 
         private RadDiagram diagram;
         private RadDiagram Diagram
@@ -55,17 +54,15 @@ namespace CustomConnectorsTool
 
                 lastCustomConnector.Offset = new Point(xRatio, yRatio);
                 shape.Connectors.Add(lastCustomConnector);
-
-                this.diagram.ItemsChanged += DiagramItemsChanged;
             }
 
             // This will create the new connection.
             base.MouseUp(e);
 
             // Repositions the added connection to the custom connector we created.
-            if (this.lastAddedConnection != null && this.lastCustomConnector != null)
+            if (this.ActiveConnection != null && this.lastCustomConnector != null)
             {
-                lastAddedConnection.Attach(lastAddedConnection.SourceConnectorResult, lastCustomConnector);
+                this.ActiveConnection.Attach(this.ActiveConnection.SourceConnectorResult, lastCustomConnector);
             }
             return false;
         }
@@ -81,19 +78,6 @@ namespace CustomConnectorsTool
                 }            
             }
             return false;
-        }
-
-        void DiagramItemsChanged(object sender, DiagramItemsChangedEventArgs e)
-        {
-            if (e.NewItems.Count() > 0)
-            {
-                var connection = e.NewItems.ToList()[0] as RadDiagramConnection;
-                if (connection != null)
-                {
-                    lastAddedConnection = connection;
-                }
-            }
-            this.diagram.ItemsChanged -= this.DiagramItemsChanged;
         }
     }
 }

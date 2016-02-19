@@ -1,0 +1,12 @@
+﻿<telerik:RadWindow x:Class="RadWindowAsMainWindow.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        navigation:RadWindowInteropHelper.ShowInTaskbar="True"
+		navigation:RadWindowInteropHelper.Icon="icon.ico"
+		Header="MainWindow" Height="350" Width="525">
+	<Grid>
+        <TextBlock Text="The application is shown inside RadWindow." />
+    </Grid>
+</telerik:RadWindow>

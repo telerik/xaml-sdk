@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Grouping.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <TextBlock Text="This example demonstrates how to group the items of RadAutoCompleteBox based on a specific property and using CollectionViewSource."
+                   FontSize="16"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <TextBlock Text="For example type 'B' and notice hot the countries are grouped by their continent."
+                   FontSize="14"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <telerik:RadAutoCompleteBox ItemsSource="{Binding Countries}" DisplayMemberPath="Name" Margin="10 0 10 0"/>
+    </StackPanel>
+</UserControl>

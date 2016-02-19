@@ -1,0 +1,335 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:telerikScheduleView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.ScheduleView"
+             xmlns:telerik1="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+             xmlns:local="clr-namespace:GroupingByTimeMarkers"
+             x:Class="GroupingByTimeMarkers.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.ScheduleView.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:ResourceTypeToVisibilityConverter x:Key="ResourceTypeToVisibilityConverter"/>
+            <telerikScheduleView:ResourceTypeTemplateSelector x:Key="CustomResourcesEditorItemTemplateSelector">
+                <telerikScheduleView:ResourceTypeTemplateSelector.SingleSelectionTemplate>
+                    <DataTemplate>
+                        <Grid Visibility="{Binding ResourceType, Converter={StaticResource ResourceTypeToVisibilityConverter}}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding ResourceType.DisplayName}" Margin="6"/>
+                            <telerik:RadComboBox
+                            Grid.Column="1"
+                            Margin="3"
+                            ItemsSource="{Binding ResourceItems}"
+                            ClearSelectionButtonVisibility="Visible"
+                            ClearSelectionButtonContent="{Binding ClearAllButtonContent}"
+                            SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                            DisplayMemberPath="Resource.DisplayName"/>
+                        </Grid>
+                    </DataTemplate>
+                </telerikScheduleView:ResourceTypeTemplateSelector.SingleSelectionTemplate>
+                <telerikScheduleView:ResourceTypeTemplateSelector.MultipleSelectionTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding ResourceType.DisplayName}" Margin="6"/>
+                            <telerik:RadComboBox
+                            Grid.Column="1"
+                            Margin="3"
+                            ItemsSource="{Binding ResourceItems}"
+                            ClearSelectionButtonVisibility="Visible"
+                            ClearSelectionButtonContent="{Binding ClearAllButtonContent}"
+                            SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}">
+                                <telerik:RadComboBox.ItemContainerStyle>
+                                    <Style TargetType="telerik:RadComboBoxItem">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate>
+                                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Resource.DisplayName}"/>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </telerik:RadComboBox.ItemContainerStyle>
+                                <telerik:RadComboBox.SelectionBoxTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Owner.CheckedItems, Converter={StaticResource ResourcesSeparatorConverter}}"/>
+                                    </DataTemplate>
+                                </telerik:RadComboBox.SelectionBoxTemplate>
+                            </telerik:RadComboBox>
+                        </Grid>
+                    </DataTemplate>
+                </telerikScheduleView:ResourceTypeTemplateSelector.MultipleSelectionTemplate>
+            </telerikScheduleView:ResourceTypeTemplateSelector>
+            <ControlTemplate x:Key="EditAppointmentTemplate" TargetType="telerikScheduleView:SchedulerDialog">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <telerik:RadToolBar x:Name="AppointmentToolbar" GripVisibility="Collapsed" Grid.Row="0" Margin="-1 -1 -1 3">
+                        <telerik:RadButton x:Name="EditRecurrenceButton"
+                        AutomationProperties.AutomationId="EditRecurrenceButton"
+                        Command="telerikScheduleView:RadScheduleViewCommands.EditRecurrenceRule"
+                        Visibility="{Binding CanEditParentAppointment, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
+                            <ToolTipService.ToolTip>
+                                <ToolTip telerik:LocalizationManager.ResourceKey="EditRecurrence"/>
+                            </ToolTipService.ToolTip>
+                            <StackPanel Orientation="Horizontal" Margin="2 0">
+                                <Image Margin="2 0" Stretch="None" Source="{StaticResource EditAppointmentTemplate_Recurrence}"/>
+                                <TextBlock Margin="4 0" telerik:LocalizationManager.ResourceKey="EditRecurrence" Foreground="{StaticResource RadScheduleForeground}"/>
+                            </StackPanel>
+                        </telerik:RadButton>
+                        <telerik:RadButton x:Name="EditParentAppointmentButton"
+                        AutomationProperties.AutomationId="EditParentAppointmentButton"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        Command="telerikScheduleView:RadScheduleViewCommands.EditParentAppointment"
+                        Visibility="{Binding CanEditParentAppointment, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <ToolTipService.ToolTip>
+                                <TextBlock telerik:LocalizationManager.ResourceKey="EditParentAppointment"/>
+                            </ToolTipService.ToolTip>
+                            <TextBlock Margin="4 0" telerik:LocalizationManager.ResourceKey="EditParentAppointment" Foreground="{StaticResource RadScheduleForeground}"/>
+                        </telerik:RadButton>
+                        <telerik:RadToolBarSeparator/>
+                        <TextBlock x:Name="ShowAs" telerik:LocalizationManager.ResourceKey="ShowAs" VerticalAlignment="Center" Foreground="{StaticResource RadScheduleForeground}" Margin="1 0 1 1"/>
+                        <telerik:RadComboBox x:Name="PART_TimeMarkers"
+                        AutomationProperties.AutomationId="PART_TimeMarkers"
+                        Margin="2 1"
+                        Width="110"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        EmptyText="{Binding TimeMarkersEmptyText}"
+                        ItemsSource="{Binding TimeMarkers}"
+                        SelectedItem="{Binding Occurrence.Appointment.TimeMarker, Mode=TwoWay}"
+                        ClearSelectionButtonVisibility="Visible"
+                        ClearSelectionButtonContent="{Binding ClearSelectionButtonContent}"
+                        ItemTemplate="{StaticResource TimeMarkerComboBoxItemContentTemplate}"
+                        SelectionBoxTemplate="{StaticResource TimeMarkerComboBoxItemContentTemplate}"/>
+                        <telerik:RadComboBox x:Name="PART_Categories"
+                        AutomationProperties.AutomationId="PART_Categories"
+                        Margin="2 1"
+                        Width="120"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        EmptyText="{Binding CategoriesEmptyText}"
+                        ItemsSource="{Binding Categories}"
+                        SelectedItem="{Binding Occurrence.Appointment.Category, Mode=TwoWay}"
+                        ClearSelectionButtonVisibility="Visible"
+                        ClearSelectionButtonContent="{Binding ClearSelectionButtonContent}"
+                        ItemTemplate="{StaticResource CategoryComboBoxItemContentTemplate}"
+                        SelectionBoxTemplate="{StaticResource CategoryComboBoxItemContentTemplate}"/>
+                        <telerik:RadToggleButton x:Name="HighImportaceButton"
+                        AutomationProperties.AutomationId="HighImportaceButton"
+                        Width="22"
+                        Height="22"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        IsChecked="{Binding IsHighImportance, Mode=TwoWay}">
+                            <ToolTipService.ToolTip>
+                                <ToolTip telerik:LocalizationManager.ResourceKey="HighImportance"/>
+                            </ToolTipService.ToolTip>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Path
+                                Stretch="Fill"
+                                Height="10"
+                                HorizontalAlignment="Center"
+                                Width="5.451"
+                                Data="M200.39647,58.840393 C200.39337,58.336426 201.14566,57.683922 202.56244,57.684292 C204.06589,57.684685 204.73764,58.357765 204.72783,58.992363 C205.04649,61.795574 203.04713,64.181099 202.47388,66.133446 C201.93753,64.154961 199.9471,61.560352 200.39647,58.840393 z">
+                                    <Path.Fill>
+                                        <LinearGradientBrush EndPoint="1.059,0.375" StartPoint="-0.457,0.519">
+                                            <GradientStop Color="#FFFF0606" Offset="0.609"/>
+                                            <GradientStop Color="#FFBF0303" Offset="0.927"/>
+                                        </LinearGradientBrush>
+                                    </Path.Fill>
+                                </Path>
+                                <Ellipse Width="3" Height="3" HorizontalAlignment="Center">
+                                    <Ellipse.Fill>
+                                        <RadialGradientBrush>
+                                            <GradientStop Color="#FFFF0606" Offset="0"/>
+                                            <GradientStop Color="#FFBF0303" Offset="1"/>
+                                        </RadialGradientBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                            </StackPanel>
+                        </telerik:RadToggleButton>
+                        <telerik:RadToggleButton x:Name="LowImportaceButton"
+                        AutomationProperties.AutomationId="LowImportaceButton"
+                        Width="22"
+                        Height="22"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        IsChecked="{Binding IsLowImportance, Mode=TwoWay}">
+                            <ToolTipService.ToolTip>
+                                <ToolTip telerik:LocalizationManager.ResourceKey="LowImportance"/>
+                            </ToolTipService.ToolTip>
+                            <Path
+                            Stretch="Fill"
+                            Height="12"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Width="9"
+                            Stroke="#FF0365A7"
+                            Data="M222.40353,60.139881 L226.65768,60.139843 L226.63687,67.240196 L229.15347,67.240196 L224.37816,71.394943 L219.65274,67.240196 L222.37572,67.219345 z">
+                                <Path.Fill>
+                                    <LinearGradientBrush EndPoint="1.059,0.375" StartPoint="-0.457,0.519">
+                                        <GradientStop Color="#FFBBE4FF"/>
+                                        <GradientStop Color="#FF024572" Offset="0.836"/>
+                                        <GradientStop Color="#FF43ADF4" Offset="0.466"/>
+                                    </LinearGradientBrush>
+                                </Path.Fill>
+                            </Path>
+                        </telerik:RadToggleButton>
+                    </telerik:RadToolBar>
+                    <Border x:Name="AppointmentCategory"
+                    Grid.Row="1"
+                    Height="20"
+                    Margin="6 6"
+                    CornerRadius="3"
+                    Background="{Binding SelectedItem.CategoryBrush, ElementName=PART_Categories}"
+                    Visibility="{Binding SelectedItem, ElementName=PART_Categories,Converter={StaticResource NullToVisibilityConverter}}">
+                        <TextBlock Margin="6 0" Text="{Binding SelectedItem.DisplayName, ElementName=PART_Categories}" VerticalAlignment="Center"/>
+                    </Border>
+                    <Grid x:Name="Details" Grid.Row="2" Margin="6">
+                        <Grid.Resources>
+                            <telerik:InputMode x:Key="RadDateTimePickerInputModeDatePicker">DatePicker</telerik:InputMode>
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="6" telerik:LocalizationManager.ResourceKey="Subject"/>
+                        <TextBox
+                        AutomationProperties.AutomationId="SubjectTextBox"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Margin="3"
+                        IsReadOnly="{Binding IsReadOnly}"
+                        Text="{Binding Occurrence.Appointment.Subject, ValidatesOnDataErrors=True, NotifyOnValidationError=True, Mode=TwoWay}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="6" telerik:LocalizationManager.ResourceKey="Body"/>
+                        <TextBox
+                        AutomationProperties.AutomationId="DescriptionTextBox"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Margin="3"
+                        Height="70"
+                        IsReadOnly="{Binding IsReadOnly}"
+                        VerticalAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        VerticalScrollBarVisibility="Visible"
+                        Text="{Binding Occurrence.Appointment.Body,ValidatesOnDataErrors=True, NotifyOnValidationError=True, Mode=TwoWay}"
+                        TextWrapping="Wrap"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="6" telerik:LocalizationManager.ResourceKey="StartTime"/>
+                        <telerik:RadDateTimePicker
+                        AutomationProperties.AutomationId="StartTimeDateTimePicker"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="3"
+                        IsReadOnly="{Binding IsReadOnly}"
+                        Culture="{Binding DefaultCulture,Source={StaticResource LocalizationManager}}"
+                        SelectedValue="{Binding ActualStart, Mode=TwoWay, ValidatesOnDataErrors=true, NotifyOnValidationError=true}"
+                        IsEnabled="{Binding IsNotRecurrent}">
+                            <telerik:RadDateTimePicker.InputMode>
+                                <Binding Path="IsAllDayEvent" Converter="{StaticResource BoolToInputModeConverter}">
+                                    <Binding.ConverterParameter>
+                                        <telerik:InputMode>DatePicker</telerik:InputMode>
+                                    </Binding.ConverterParameter>
+                                </Binding>
+                            </telerik:RadDateTimePicker.InputMode>
+                        </telerik:RadDateTimePicker>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Margin="6" VerticalAlignment="Center" telerik:LocalizationManager.ResourceKey="EndTime"/>
+                        <telerik:RadDateTimePicker
+                        AutomationProperties.AutomationId="EndTimeDateTimePicker"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Margin="3"
+                        SelectedValue="{Binding ActualEnd, Mode=TwoWay, ValidatesOnDataErrors=true, NotifyOnValidationError=true}"
+                        IsReadOnly="{Binding IsReadOnly}"
+                        Culture="{Binding DefaultCulture, Source={StaticResource LocalizationManager}}"
+                        IsEnabled="{Binding IsNotRecurrent}">
+                            <telerik:RadDateTimePicker.InputMode>
+                                <Binding Path="IsAllDayEvent" Converter="{StaticResource BoolToInputModeConverter}">
+                                    <Binding.ConverterParameter>
+                                        <telerik:InputMode>DatePicker</telerik:InputMode>
+                                    </Binding.ConverterParameter>
+                                </Binding>
+                            </telerik:RadDateTimePicker.InputMode>
+                        </telerik:RadDateTimePicker>
+                        <CheckBox x:Name="AllDayEventCheckbox"
+                        AutomationProperties.AutomationId="AllDayEventCheckbox"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Margin="3"
+                        VerticalAlignment="Center"
+                        IsChecked="{Binding Path=IsAllDayEvent, Mode=TwoWay}"
+                        IsEnabled="{Binding IsNotRecurrent}"
+                        telerik:LocalizationManager.ResourceKey="AllDayEvent"/>
+                    </Grid>
+                    <Grid Grid.Row="3" Margin="3" Visibility="{Binding ResourceTypesVisibility}">
+                        <telerik:ItemsControl x:Name="PART_Resources"
+                        Margin="3"
+                        IsTabStop="false"
+                        BorderBrush="{x:Null}"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        IsEnabled="{Binding IsReadOnly, Converter={StaticResource InvertedBooleanConverter}}"
+                        ItemsSource="{Binding ResourceTypes}"
+                        ItemTemplateSelector="{StaticResource CustomResourcesEditorItemTemplateSelector}"
+                        Visibility="{Binding ResourceTypesVisibility}"/>
+                        <TextBlock
+                        HorizontalAlignment="Center"
+                        Text="You can only change the resources by opening the series"
+                        Margin="3"
+                        Visibility="{Binding ResourceTypesVisibility, Converter={StaticResource InvertedVisibilityConverter}}"/>
+                    </Grid>
+                    <StackPanel Grid.Row="4" Margin="13 6" HorizontalAlignment="Right" Orientation="Horizontal">
+                        <telerik:RadButton
+                        AutomationProperties.AutomationId="OKButton"
+                        Margin="2"
+                        MinWidth="84"
+                        Command="telerik1:WindowCommands.Confirm"
+                        telerik:LocalizationManager.ResourceKey="Ok"
+                        telerik:RadWindow.ResponseButton="Accept">
+                            <ToolTipService.ToolTip>
+                                <TextBlock telerik:LocalizationManager.ResourceKey="SaveAndClose"/>
+                            </ToolTipService.ToolTip>
+                        </telerik:RadButton>
+                        <telerik:RadButton
+                        AutomationProperties.AutomationId="CancelButton"
+                        Margin="2"
+                        MinWidth="84"
+                        Command="telerik1:WindowCommands.Cancel"
+                        telerik:LocalizationManager.ResourceKey="Cancel"
+                        telerik:RadWindow.ResponseButton="Cancel"/>
+                    </StackPanel>
+                </Grid>
+            </ControlTemplate>
+            <Style BasedOn="{StaticResource EditAppointmentDialogStyle}" TargetType="telerikScheduleView:SchedulerDialog" x:Key="CustomEditAppointmentDialogStyle">
+                <Setter Property="Template" Value="{StaticResource EditAppointmentTemplate}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

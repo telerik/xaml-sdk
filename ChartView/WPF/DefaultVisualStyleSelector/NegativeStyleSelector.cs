@@ -6,12 +6,23 @@ namespace DefaultVisualStyleSelector
 {
     public class NegativeStyleSelector : StyleSelector
     {
-        public Style NegativeStyle { get; set; }
+        public Style ZeroValueStyle { get; set; }
+        public Style NegativeValueStyle { get; set; }
 
         public override System.Windows.Style SelectStyle(object item, System.Windows.DependencyObject container)
         {
             var dp = (CategoricalDataPoint)item;
-            return dp.Value < 0 ? this.NegativeStyle : null;
+
+            if (dp.Value < 0)
+            {
+                return this.NegativeValueStyle;
+            }
+            else if (dp.Value == 0)
+            {
+                return this.ZeroValueStyle;
+            }
+
+            return null;
         }
     }
 }

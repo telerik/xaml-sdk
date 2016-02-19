@@ -120,6 +120,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportMultipleGridViewsToOn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReusingControlPanelItems_SL", "ReusingControlPanelItems\ReusingControlPanelItems_SL.csproj", "{0CE38745-5E67-49D0-B377-CBDD749A1B81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregateFunctionEnumerableProperty_SL", "CustomAggregateFunctionEnumerableProperty\CustomAggregateFunctionEnumerableProperty_SL.csproj", "{926C910D-00F6-48F1-A8C9-D63158DDE89C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -701,6 +703,16 @@ Global
 		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0CE38745-5E67-49D0-B377-CBDD749A1B81}.Release|x86.ActiveCfg = Release|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{926C910D-00F6-48F1-A8C9-D63158DDE89C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
