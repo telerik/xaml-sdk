@@ -24,6 +24,7 @@ namespace MinimumPopulateDelay
         {
             InitializeComponent();
             this.timer.Interval = TimeSpan.FromSeconds((this.DataContext as ViewModel).SelectedDelay);
+            this.timer.Tick += OnTimerTick;
             this.AutoCompleteBox.AddHandler(Control.KeyDownEvent, new KeyEventHandler(OnAutoCompleteBoxKeyDown), true);
         }
 
@@ -45,7 +46,6 @@ namespace MinimumPopulateDelay
                     if (this.timer != null)
                     {
                         this.timer.Start();
-                        this.timer.Tick += OnTimerTick;
                     }
                 }
 

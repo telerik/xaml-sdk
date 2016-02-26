@@ -1,1 +1,1 @@
-This example demonstrates how you can utilize RadPdfProcessing and RadSpreadProcessing in order to export several RadGridView instances in a single document.
+This example demonstrates how you can utilize RadPdfProcessing and RadSpreadProcessing in order to export several RadGridView instances in a single document. It also shows how you can export RadGridView to a file on the file system in WPF.
