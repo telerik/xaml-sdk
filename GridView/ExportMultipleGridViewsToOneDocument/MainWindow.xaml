@@ -14,14 +14,16 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="140" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.RowSpan="2" Grid.Column="0">
             <Button Content="Export to PDF" Click="ExportPdf" />
             <Button Content="Export to XLSX" Click="ExportXlsx" />
-            <Button Content="Export to available file" Click="ExportToXlsxOnFileSystem" />
+            <Button Click="ExportToXlsxOnFileSystem" >
+                <TextBlock Text="Export Players Grid to File on the File System" TextWrapping="Wrap" />
+            </Button>
         </StackPanel>
 
         <telerik:RadGridView Grid.Row="0" Grid.Column="1" 

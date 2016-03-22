@@ -42,11 +42,11 @@
                                 </Grid.ColumnDefinitions>
                                 <WrapPanel Grid.Column="0">
                                     <TextBlock Text="1st Half Season: " />
-                                    <TextBlock Text="{Binding Period[0].NumberOfGoals}" ></TextBlock>
+                                    <TextBlock Text="{Binding Period[0].NumberOfGoals, Mode=TwoWay}" ></TextBlock>
                                 </WrapPanel>
                                 <WrapPanel Grid.Column="2">
                                     <TextBlock Text="2nd Half Season: " />
-                                    <TextBlock Text="{Binding Period[1].NumberOfGoals}"></TextBlock>
+                                    <TextBlock Text="{Binding Period[1].NumberOfGoals, Mode=TwoWay}"></TextBlock>
                                 </WrapPanel>
                             </Grid>
                         </DataTemplate>
@@ -63,7 +63,6 @@
                 Unchecked="Button1_Unchecked"
                 Margin="5" Padding="5"
                 HorizontalAlignment="Left"/>
-
         </StackPanel>
     </Grid>
 </Window>

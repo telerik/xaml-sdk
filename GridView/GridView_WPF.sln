@@ -130,6 +130,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredSearching_WPF", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregateFunctionEnumerableProperty_WPF", "CustomAggregateFunctionEnumerableProperty\CustomAggregateFunctionEnumerableProperty_WPF.csproj", "{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyExpandButtonStyleSelector_WPF", "HierarchyExpandButtonStyleSelector\HierarchyExpandButtonStyleSelector_WPF.csproj", "{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -761,6 +763,16 @@ Global
 		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}.Release|x86.ActiveCfg = Release|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

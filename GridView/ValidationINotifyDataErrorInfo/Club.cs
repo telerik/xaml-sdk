@@ -20,7 +20,7 @@ namespace ValidateINotifyDataErrorInfo
             get { return this.name; }
             set
             {
-                if (value != this.name)
+                if (value != this.name || value == null)
                 {
                     this.name = value;
                     this.OnPropertyChanged("Name");

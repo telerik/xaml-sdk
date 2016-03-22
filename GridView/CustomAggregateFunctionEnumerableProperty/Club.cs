@@ -19,7 +19,10 @@ namespace CustomAggregateFunctionEnumerableProperty
 
         public ObservableCollection<Period> Period
         {
-            get { return this.period; }
+            get 
+            {
+                return this.period; 
+            }
             set
             {
                 this.period = value;

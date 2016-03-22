@@ -23,5 +23,6 @@ namespace CustomAggregateFunctionEnumerableProperty
         {
             this.clubsGrid.ShowColumnFooters = true;
         }
+
     }
 }

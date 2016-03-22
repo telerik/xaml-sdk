@@ -31,8 +31,11 @@ namespace CustomAggregateFunctionEnumerableProperty
 
             foreach (var club in clubs)
             {
-                sum0 += club.Period[0].NumberOfGoals;
-                sum1 += club.Period[1].NumberOfGoals;
+                if (club.Period != null )
+                {
+                    sum0 += club.Period[0].NumberOfGoals;
+                    sum1 += club.Period[1].NumberOfGoals;
+                }
             }
 
             sb.Append("1st Half Season Total Goals: ");
