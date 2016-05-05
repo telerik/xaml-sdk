@@ -1,1 +1,0 @@
-The example demonstrates how to wire a context menu to RadPdfViewer.

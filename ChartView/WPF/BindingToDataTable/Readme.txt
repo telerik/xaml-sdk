@@ -1,1 +1,0 @@
-﻿In this example we will demonstrate how to bind a ChartView to a DataTable. 

@@ -120,7 +120,7 @@
     <Resource Include="Images\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

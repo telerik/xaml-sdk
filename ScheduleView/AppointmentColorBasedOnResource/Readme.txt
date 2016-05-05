@@ -1,1 +1,0 @@
-﻿This example demonstrates how you can apply different color for the same appointment according to the assigned resources.

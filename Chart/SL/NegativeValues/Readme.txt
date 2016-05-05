@@ -1,3 +1,0 @@
-﻿The RadChart control supports displaying of negative values on both X and Y Axes. You will see that in this type of scenarios the main X and Y Axes don't get translated. Instead of that, additional axes are drawn, which adjust the coordinate system to the negative data. These additional axes are handled by the PlotArea control and it exposes two style properties - PlotAreaAxisXStyle and PlotAreaAxisYStyle, so you can easily modify the appearance of the additional axes.
-
-In order to control the visibility of the plot area's axes you can use the PlotAreaAxisVisibility property, which is available both for the x- and the y-axis.

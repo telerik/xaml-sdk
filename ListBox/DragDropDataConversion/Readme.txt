@@ -1,2 +1,0 @@
-#Data conversion between two RadListBox controls#
-This example demonstrates how to convert data when using drag and drop between two RadListBox controls. The left RadListBox control is bound to a collection of Customer object and the right one is bound to a collection of Project objects. The conversion is handled by two custom DataConverters.

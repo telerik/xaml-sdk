@@ -1,1 +1,0 @@
-This example shows how to display a self referencing data from a flat collection in a RadTreeView.

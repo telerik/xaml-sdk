@@ -183,7 +183,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
     <Content Include="ScheduleViewDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

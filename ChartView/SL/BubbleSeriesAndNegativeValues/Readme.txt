@@ -1,1 +1,0 @@
-﻿An easy way of getting to display negative values via a bubble series and making use of its style-selector and size-selector capabilities.

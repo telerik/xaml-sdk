@@ -1,0 +1,2 @@
+##Chart Area##
+ChartArea is the place, where the chart graphic is drawn. The ChartArea represents a layout region of the RadChart control that holds certain chart series and axis data. Additionally, the ChartArea exposes events for customizing the tooltips and making the chart more interactive.

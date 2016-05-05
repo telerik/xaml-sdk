@@ -1,1 +1,0 @@
-This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.

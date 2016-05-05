@@ -1,1 +1,0 @@
-﻿The InitializeCompleted event of RadMap fires when the initialization of the map provider completes.

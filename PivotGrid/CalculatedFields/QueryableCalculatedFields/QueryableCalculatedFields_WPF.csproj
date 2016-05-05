@@ -200,7 +200,7 @@
       <DependentUpon>NorthwindDB.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="ReadMe.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

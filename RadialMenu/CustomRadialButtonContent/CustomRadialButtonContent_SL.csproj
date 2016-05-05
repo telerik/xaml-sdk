@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="28-star.png" />
-    <Content Include="Readme.txt" />
+    <Content Include="Readme.md" />
     <Content Include="SDK icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />

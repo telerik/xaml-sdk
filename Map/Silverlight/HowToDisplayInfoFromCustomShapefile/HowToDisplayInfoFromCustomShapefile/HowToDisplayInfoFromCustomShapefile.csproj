@@ -116,7 +116,7 @@
     <Resource Include="Resources\stadium_pol.shp" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\default.jpg" />

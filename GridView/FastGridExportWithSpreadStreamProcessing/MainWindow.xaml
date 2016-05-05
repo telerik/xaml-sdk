@@ -1,0 +1,64 @@
+﻿<Window x:Class="FastGridExportWithSpreadStreamProcessing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:FastGridExportWithSpreadStreamProcessing"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="3" x:Name="configurationPanel">
+            <TextBlock Text="Format:" />
+            <telerik:RadComboBox Margin="0,2"
+								 ItemsSource="{Binding ExportFormats}"
+								 SelectedItem="{Binding SelectedExportFormat, Mode=TwoWay}"
+								 SelectedIndex="0" />
+            <StackPanel Orientation="Horizontal"
+							Margin="0,2">
+                <telerik:RadColorPicker VerticalAlignment="Center"
+											SelectedColor="{Binding HeaderRowColor, Mode=TwoWay}"
+											Margin="0,0,3,0" />
+                <TextBlock VerticalAlignment="Center"
+							   Text="Header background" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+							Margin="0,2">
+                <telerik:RadColorPicker VerticalAlignment="Center"
+											SelectedColor="{Binding GroupHeaderRowColor, Mode=TwoWay}"
+											Margin="0,0,3,0" />
+                <TextBlock VerticalAlignment="Center"
+							   Text="Group header background" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+							Margin="0,2">
+                <telerik:RadColorPicker VerticalAlignment="Center"
+											SelectedColor="{Binding DataRowColor, Mode=TwoWay}"
+											Margin="0,0,3,0" />
+                <TextBlock VerticalAlignment="Center"
+							   Text="Row background" />
+            </StackPanel>
+            <telerik:RadButton Content="Export"
+							   Command="{Binding ExportCommand}"
+							   Margin="0 10 0 0" />
+        </StackPanel>
+
+        <telerik:RadGridView AutoExpandGroups="True" GroupRenderMode="Flat" Grid.Column="1"
+           x:Name="RadGridView"
+           ItemsSource="{Binding Products}"
+           AutoGenerateColumns="False"
+           IsReadOnly="True"
+           CanUserFreezeColumns="False"
+           RowIndicatorVisibility="Collapsed"
+           CanUserResizeColumns="False">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Id}" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"  Width="*" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding UnitPrice, StringFormat=c}" Width="120" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Date, StringFormat=d}" Width="120"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</Window>

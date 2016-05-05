@@ -106,7 +106,7 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
     <Resource Include="Resources\osm_10.png" />
     <Resource Include="Resources\osm_11.png" />
     <Resource Include="Resources\osm_12.png" />

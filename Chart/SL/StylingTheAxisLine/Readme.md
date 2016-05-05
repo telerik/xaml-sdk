@@ -1,0 +1,2 @@
+##Styling The Axis Line##
+The approach here will allow you to more completely change the appearance of the axis lines, but if you want to change only the color of it, you can use the AxisElementBrush property of the RadChart. Note that the value of this property will get applied to all of the axes and all of the tick lines as well.

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1316325F-73A3-4030-ADFB-9442329F887D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Office2016InspiredRibbonView_WPF</RootNamespace>
+    <AssemblyName>Office2016InspiredRibbonView_WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+     
+     
+     
+     
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.VisualStudio2013">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Themes.VisualStudio2013.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Appearance\AppearanceChangedEventArgs.cs" />
+    <Compile Include="Appearance\AppearanceCommandParameter.cs" />
+    <Compile Include="Appearance\AppearanceManager.cs" />
+    <Compile Include="Appearance\ColorToSolidColorBrushConverter.cs" />
+    <Compile Include="Appearance\Office2016ColorVariations.cs" />
+    <Compile Include="Appearance\Office2016Palette.cs" />
+    <Compile Include="Appearance\Office2016RsourceExtension.cs" />
+    <Compile Include="Appearance\Resources.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\BackstageStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ApplicationStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\QuickAccessToolbarStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\RibbonButtonsStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\RibbonViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\RibbonWindowStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MSOffice\16\AcceptChange.png" />
+    <Resource Include="Images\MSOffice\16\AddNewSource.png" />
+    <Resource Include="Images\MSOffice\16\aligncenter.png" />
+    <Resource Include="Images\MSOffice\16\aligndistribute.png" />
+    <Resource Include="Images\MSOffice\16\alignjustify.png" />
+    <Resource Include="Images\MSOffice\16\alignleft.png" />
+    <Resource Include="Images\MSOffice\16\alignright.png" />
+    <Resource Include="Images\MSOffice\16\allBorders.png" />
+    <Resource Include="Images\MSOffice\16\AutoFItToWindow.png" />
+    <Resource Include="Images\MSOffice\16\BibliographyStyle.png" />
+    <Resource Include="Images\MSOffice\16\bold.png" />
+    <Resource Include="Images\MSOffice\16\bottomBorder.png" />
+    <Resource Include="Images\MSOffice\16\Break.png" />
+    <Resource Include="Images\MSOffice\16\CenterBottomCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\CenterMiddleCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\CenterTopCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\ClearFormatting16.png" />
+    <Resource Include="Images\MSOffice\16\CodeBlock.png" />
+    <Resource Include="Images\MSOffice\16\ContinueNumbering.png" />
+    <Resource Include="Images\MSOffice\16\Copy.png" />
+    <Resource Include="Images\MSOffice\16\cut.png" />
+    <Resource Include="Images\MSOffice\16\DeleteComment.png" />
+    <Resource Include="Images\MSOffice\16\DeleteTable.png" />
+    <Resource Include="Images\MSOffice\16\DeleteTableColumn.png" />
+    <Resource Include="Images\MSOffice\16\DeleteTableRow.png" />
+    <Resource Include="Images\MSOffice\16\EditFooter.png" />
+    <Resource Include="Images\MSOffice\16\EditHeader.png" />
+    <Resource Include="Images\MSOffice\16\EnableSpellCheck.png" />
+    <Resource Include="Images\MSOffice\16\find.png" />
+    <Resource Include="Images\MSOffice\16\FindNextSpellingError.png" />
+    <Resource Include="Images\MSOffice\16\FixedColumnWidth.png" />
+    <Resource Include="Images\MSOffice\16\font-decreasesize.png" />
+    <Resource Include="Images\MSOffice\16\font-increasesize.png" />
+    <Resource Include="Images\MSOffice\16\fontcolor.png" />
+    <Resource Include="Images\MSOffice\16\FontForeColor.png" />
+    <Resource Include="Images\MSOffice\16\FontProperties.png" />
+    <Resource Include="Images\MSOffice\16\FooterFromBottom.png" />
+    <Resource Include="Images\MSOffice\16\formatting-symbols.png" />
+    <Resource Include="Images\MSOffice\16\HeaderFromTop.png" />
+    <Resource Include="Images\MSOffice\16\highlight.png" />
+    <Resource Include="Images\MSOffice\16\indent.png" />
+    <Resource Include="Images\MSOffice\16\innerHorizontalBorder.png" />
+    <Resource Include="Images\MSOffice\16\innerVerticalBorder.png" />
+    <Resource Include="Images\MSOffice\16\InsertBibliography.png" />
+    <Resource Include="Images\MSOffice\16\InsertCaption.png" />
+    <Resource Include="Images\MSOffice\16\InsertEndnote.png" />
+    <Resource Include="Images\MSOffice\16\inserthyperlink.png" />
+    <Resource Include="Images\MSOffice\16\InsertTable.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableColumn.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableColumnToTheLeft.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableColumnToTheRight.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableRow.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableRowAbove.png" />
+    <Resource Include="Images\MSOffice\16\InsertTableRowBelow.png" />
+    <Resource Include="Images\MSOffice\16\insideBorders.png" />
+    <Resource Include="Images\MSOffice\16\italic.png" />
+    <Resource Include="Images\MSOffice\16\leftBorder.png" />
+    <Resource Include="Images\MSOffice\16\LeftBottomCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\LeftMiddleCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\LeftTopCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\LeftToRightFlowDirection.png" />
+    <Resource Include="Images\MSOffice\16\lineSpacing_double.png" />
+    <Resource Include="Images\MSOffice\16\lineSpacing_half.png" />
+    <Resource Include="Images\MSOffice\16\lineSpacing_less.png" />
+    <Resource Include="Images\MSOffice\16\lineSpacing_more.png" />
+    <Resource Include="Images\MSOffice\16\lineSpacing_single.png" />
+    <Resource Include="Images\MSOffice\16\LinkToPreviousHeaderFooter.png" />
+    <Resource Include="Images\MSOffice\16\list-bullets.png" />
+    <Resource Include="Images\MSOffice\16\list-numbered.png" />
+    <Resource Include="Images\MSOffice\16\ManageSources.png" />
+    <Resource Include="Images\MSOffice\16\MergeTableCells.png" />
+    <Resource Include="Images\MSOffice\16\MultilevelList.png" />
+    <Resource Include="Images\MSOffice\16\new.png" />
+    <Resource Include="Images\MSOffice\16\NextChange.png" />
+    <Resource Include="Images\MSOffice\16\NextNote.png" />
+    <Resource Include="Images\MSOffice\16\noBorders.png" />
+    <Resource Include="Images\MSOffice\16\open.png" />
+    <Resource Include="Images\MSOffice\16\outdent.png" />
+    <Resource Include="Images\MSOffice\16\outsideBorders.png" />
+    <Resource Include="Images\MSOffice\16\ParagraphBackgroundColor.png" />
+    <Resource Include="Images\MSOffice\16\ParagraphProperties.png" />
+    <Resource Include="Images\MSOffice\16\paste.png" />
+    <Resource Include="Images\MSOffice\16\pasteNormal.png" />
+    <Resource Include="Images\MSOffice\16\picture.png" />
+    <Resource Include="Images\MSOffice\16\PreviousChange.png" />
+    <Resource Include="Images\MSOffice\16\PreviousNote.png" />
+    <Resource Include="Images\MSOffice\16\print.png" />
+    <Resource Include="Images\MSOffice\16\redo.png" />
+    <Resource Include="Images\MSOffice\16\RejectChange.png" />
+    <Resource Include="Images\MSOffice\16\removeHyperlink.png" />
+    <Resource Include="Images\MSOffice\16\RemoveWatermark.png" />
+    <Resource Include="Images\MSOffice\16\RestartNumbering.png" />
+    <Resource Include="Images\MSOffice\16\rightBorder.png" />
+    <Resource Include="Images\MSOffice\16\RightBottomCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\RightMiddleCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\RightToLeftFlowDirection.png" />
+    <Resource Include="Images\MSOffice\16\RightTopCellAlignment.png" />
+    <Resource Include="Images\MSOffice\16\save.png" />
+    <Resource Include="Images\MSOffice\16\saveas.png" />
+    <Resource Include="Images\MSOffice\16\SelectTable.png" />
+    <Resource Include="Images\MSOffice\16\SelectTableCell.png" />
+    <Resource Include="Images\MSOffice\16\SelectTableColumn.png" />
+    <Resource Include="Images\MSOffice\16\SelectTableRow.png" />
+    <Resource Include="Images\MSOffice\16\SetNumberingValue.png" />
+    <Resource Include="Images\MSOffice\16\SplitTableCell.png" />
+    <Resource Include="Images\MSOffice\16\Strikethrough16.png" />
+    <Resource Include="Images\MSOffice\16\subscript.png" />
+    <Resource Include="Images\MSOffice\16\superscript.png" />
+    <Resource Include="Images\MSOffice\16\symbol.png" />
+    <Resource Include="Images\MSOffice\16\TableBorders.png" />
+    <Resource Include="Images\MSOffice\16\TableProperties.png" />
+    <Resource Include="Images\MSOffice\16\topBorder.png" />
+    <Resource Include="Images\MSOffice\16\underline.png" />
+    <Resource Include="Images\MSOffice\16\undo.png" />
+    <Resource Include="Images\MSOffice\16\UpdateField.png" />
+    <Resource Include="Images\MSOffice\16\Watermark.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextBehindText.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextInFrontOfText.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextInLineWithText.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextMoreLayoutOptions.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextSquare.png" />
+    <Resource Include="Images\MSOffice\16\WrappingTextTopAndBottom.png" />
+    <Resource Include="Images\MSOffice\32\AcceptChange.png" />
+    <Resource Include="Images\MSOffice\32\AutoFit.png" />
+    <Resource Include="Images\MSOffice\32\Cell3DBorder.png" />
+    <Resource Include="Images\MSOffice\32\CellBoxBorder.png" />
+    <Resource Include="Images\MSOffice\32\CellCustomBorder.png" />
+    <Resource Include="Images\MSOffice\32\CellNoneBorder.png" />
+    <Resource Include="Images\MSOffice\32\ChangeEditingPermissions.png" />
+    <Resource Include="Images\MSOffice\32\ChangeStyles.png" />
+    <Resource Include="Images\MSOffice\32\CodeBlock.png" />
+    <Resource Include="Images\MSOffice\32\DeleteAllComments.png" />
+    <Resource Include="Images\MSOffice\32\DeleteComment.png" />
+    <Resource Include="Images\MSOffice\32\DeleteTable.png" />
+    <Resource Include="Images\MSOffice\32\DeleteTableColumns.png" />
+    <Resource Include="Images\MSOffice\32\DeleteTableRows.png" />
+    <Resource Include="Images\MSOffice\32\EditFooter.png" />
+    <Resource Include="Images\MSOffice\32\EditHeader.png" />
+    <Resource Include="Images\MSOffice\32\EnableSpellCheck.png" />
+    <Resource Include="Images\MSOffice\32\EvenPageSectionBreak.png" />
+    <Resource Include="Images\MSOffice\32\ExitHeaderFooterEditMode.png" />
+    <Resource Include="Images\MSOffice\32\First.png" />
+    <Resource Include="Images\MSOffice\32\HighlightMergeFields.png" />
+    <Resource Include="Images\MSOffice\32\InsertBookmark.png" />
+    <Resource Include="Images\MSOffice\32\InsertCaption.png" />
+    <Resource Include="Images\MSOffice\32\InsertCitation.png" />
+    <Resource Include="Images\MSOffice\32\InsertCrossReference.png" />
+    <Resource Include="Images\MSOffice\32\InsertDateTime.png" />
+    <Resource Include="Images\MSOffice\32\InsertFootnote.png" />
+    <Resource Include="Images\MSOffice\32\inserthyperlink.png" />
+    <Resource Include="Images\MSOffice\32\InsertMergeField.png" />
+    <Resource Include="Images\MSOffice\32\InsertPageNumber.png" />
+    <Resource Include="Images\MSOffice\32\InsertTable.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableColumn.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableColumnToTheLeft.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableColumnToTheRight.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableOfContents.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableRow.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableRowAbove.png" />
+    <Resource Include="Images\MSOffice\32\InsertTableRowBelow.png" />
+    <Resource Include="Images\MSOffice\32\Last.png" />
+    <Resource Include="Images\MSOffice\32\MailMerge.png" />
+    <Resource Include="Images\MSOffice\32\MergeTableCells.png" />
+    <Resource Include="Images\MSOffice\32\new.png" />
+    <Resource Include="Images\MSOffice\32\NewComment.png" />
+    <Resource Include="Images\MSOffice\32\Next.png" />
+    <Resource Include="Images\MSOffice\32\NextComment.png" />
+    <Resource Include="Images\MSOffice\32\NextPageSectionBreak.png" />
+    <Resource Include="Images\MSOffice\32\OddPageSectionBreak.png" />
+    <Resource Include="Images\MSOffice\32\open.png" />
+    <Resource Include="Images\MSOffice\32\PageBreak.png" />
+    <Resource Include="Images\MSOffice\32\PageMargin.png" />
+    <Resource Include="Images\MSOffice\32\PageOrientation.png" />
+    <Resource Include="Images\MSOffice\32\PageOrientationLandscape.png" />
+    <Resource Include="Images\MSOffice\32\PageOrientationPortrait.png" />
+    <Resource Include="Images\MSOffice\32\PageOrientationRotate180.png" />
+    <Resource Include="Images\MSOffice\32\PageOrientationRotate270.png" />
+    <Resource Include="Images\MSOffice\32\PageSize.png" />
+    <Resource Include="Images\MSOffice\32\pasteActive.png" />
+    <Resource Include="Images\MSOffice\32\Picture.png" />
+    <Resource Include="Images\MSOffice\32\Previous.png" />
+    <Resource Include="Images\MSOffice\32\PreviousComment.png" />
+    <Resource Include="Images\MSOffice\32\Print_Layout.png" />
+    <Resource Include="Images\MSOffice\32\ProtectDocument.png" />
+    <Resource Include="Images\MSOffice\32\RejectChange.png" />
+    <Resource Include="Images\MSOffice\32\RepeatTableRow.png" />
+    <Resource Include="Images\MSOffice\32\save.png" />
+    <Resource Include="Images\MSOffice\32\saveas.png" />
+    <Resource Include="Images\MSOffice\32\SelectTableTools.png" />
+    <Resource Include="Images\MSOffice\32\ShowAllFieldsCodes.png" />
+    <Resource Include="Images\MSOffice\32\ShowAllFieldsDisplayNames.png" />
+    <Resource Include="Images\MSOffice\32\ShowAllFieldsResults.png" />
+    <Resource Include="Images\MSOffice\32\ShowHideComments.png" />
+    <Resource Include="Images\MSOffice\32\SplitTableCell.png" />
+    <Resource Include="Images\MSOffice\32\Symbol.png" />
+    <Resource Include="Images\MSOffice\32\TableAllBorder.png" />
+    <Resource Include="Images\MSOffice\32\TableBoxBorder.png" />
+    <Resource Include="Images\MSOffice\32\TableCustomBorder.png" />
+    <Resource Include="Images\MSOffice\32\TableGridBorder.png" />
+    <Resource Include="Images\MSOffice\32\TableNoneBorder.png" />
+    <Resource Include="Images\MSOffice\32\TableProperties.png" />
+    <Resource Include="Images\MSOffice\32\TrackChanges.png" />
+    <Resource Include="Images\MSOffice\32\Watermark.png" />
+    <Resource Include="Images\MSOffice\32\web-C.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\Html.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\pagesetup.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\Pdf.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\PlainText.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\print.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\print_preview.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\Rtf.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\worddoc.png" />
+    <Resource Include="Images\MSOffice\ApplicationMenu\Xaml.png" />
+    <Resource Include="Images\MSOffice\MultilevelListBulleted.png" />
+    <Resource Include="Images\MSOffice\MultilevelListNone.png" />
+    <Resource Include="Images\MSOffice\MultilevelListNumbered.png" />
+    <Resource Include="Images\MSOffice\MultilevelListNumberedHierarchical.png" />
+    <Resource Include="Images\MSOffice\MultilevelListNumberedParenthesis.png" />
+    <Resource Include="Images\MSOffice\PageMarginModerate.png" />
+    <Resource Include="Images\MSOffice\PageMarginNarrow.png" />
+    <Resource Include="Images\MSOffice\PageMarginNormal.png" />
+    <Resource Include="Images\MSOffice\PageMarginWide.png" />
+    <Resource Include="Images\MSOffice\paragraph.png" />
+    <Resource Include="Images\MSOffice\paragraph1.png" />
+    <Resource Include="Images\MSOffice\paragraph10.png" />
+    <Resource Include="Images\MSOffice\paragraph2.png" />
+    <Resource Include="Images\MSOffice\paragraph3.png" />
+    <Resource Include="Images\MSOffice\paragraph4.png" />
+    <Resource Include="Images\MSOffice\paragraph5.png" />
+    <Resource Include="Images\MSOffice\paragraph6.png" />
+    <Resource Include="Images\MSOffice\paragraph7.png" />
+    <Resource Include="Images\MSOffice\paragraph8.png" />
+    <Resource Include="Images\MSOffice\paragraph9.png" />
+    <Resource Include="Images\MSOffice\underline1.png" />
+    <Resource Include="Images\MSOffice\underline2.png" />
+    <Resource Include="Images\MSOffice\underline3.png" />
+    <Resource Include="Images\MSOffice\underline4.png" />
+    <Resource Include="Images\MSOffice\underline5.png" />
+    <Resource Include="Images\MSOffice\underline6.png" />
+    <Resource Include="Images\MSOffice\underline7.png" />
+    <Resource Include="Images\MSOffice\underline8.png" />
+    <Resource Include="Images\MSOffice\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MSOffice\16\fontscheme.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

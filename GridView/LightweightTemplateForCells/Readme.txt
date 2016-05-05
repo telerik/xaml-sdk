@@ -1,1 +1,0 @@
-This example demonstrates how to implement custom lightweight template for GridViewCell.

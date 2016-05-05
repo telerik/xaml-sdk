@@ -1,0 +1,4 @@
+##Sampling##
+When the chart is populated by thousands of items, the visual representation might not be that clear. It is possible that there are two or more DataPoints shown with a very close Y and X values. This is when sampling comes in handy. The chart combines the items, so that the DataPoints are limited to a certain number (200 by default). The sampling engine does not detect/determine whether the datapoints will be on similar pixel coordinates. Instead, it visualizes a subset of the original data. For example, if you have 1000 points, 95% of which are clustered together, and you choose a sampling threshold of 300 points, 95% of these 300 points will be clustered as well. In such a scenario, one possible option is to use Zooming and Scrolling.
+
+Sampling is available in data binding scenarios only. Sampling is also not applicable when plotting data for properties of non-CLS compliant types, like uint.

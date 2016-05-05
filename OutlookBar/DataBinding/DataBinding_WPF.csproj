@@ -130,7 +130,7 @@
     <Resource Include="images\outbox.png" />
     <Resource Include="images\sent.png" />
     <Resource Include="images\tasksBig.png" />
-    <Resource Include="readme.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\mailSmall.png" />

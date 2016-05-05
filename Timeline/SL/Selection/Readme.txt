@@ -1,1 +1,0 @@
-﻿This example will demonstrate how you can make the timeline more interactive by enabling and configuring the selection feature. 

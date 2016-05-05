@@ -32,7 +32,7 @@ namespace ValidateINotifyDataErrorInfo
         {
             var error = "Name must be at least 5 chars!";
 
-            if (this.Name.Length < 5)
+            if (this.Name == null || this.Name.Length < 5)
             {
                 this.AddError("Name", error);
             }

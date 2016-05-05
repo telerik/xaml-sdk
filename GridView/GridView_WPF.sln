@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingColumnsFromViewModel_WPF", "BindingColumnsFromViewModel\BindingColumnsFromViewModel_WPF.csproj", "{BC8A8E52-FB31-494C-BE4A-0CF75C2CC604}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingSelectedItemsFromViewModel_WPF", "BindingSelectedItemsFromViewModel\BindingSelectedItemsFromViewModel_WPF.csproj", "{399D448B-7278-438B-AE04-F06423674DB2}"
@@ -131,6 +133,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregateFunctionEnumerableProperty_WPF", "CustomAggregateFunctionEnumerableProperty\CustomAggregateFunctionEnumerableProperty_WPF.csproj", "{FC6FAB24-C0B9-4573-89D6-8ACE5B3D0426}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyExpandButtonStyleSelector_WPF", "HierarchyExpandButtonStyleSelector\HierarchyExpandButtonStyleSelector_WPF.csproj", "{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastGridExportWithSpreadStreamProcessing_WPF", "FastGridExportWithSpreadStreamProcessing\FastGridExportWithSpreadStreamProcessing_WPF.csproj", "{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}"
 EndProject
 Global
 	 
@@ -773,6 +777,16 @@ Global
 		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{72A833F7-8C1C-43A4-9F8C-B7881F8EE92A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6A6DC11F-1F57-48C0-8D44-2D89366DBA73}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

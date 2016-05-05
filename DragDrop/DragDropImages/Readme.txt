@@ -1,1 +1,0 @@
-This example demonstrates how to implement repositioning image over a canvas with DragDrop.

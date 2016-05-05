@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetainPaneSize_WPF", "Retai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentToolWindowStyles_WPF", "DifferentToolWindowStyles\DifferentToolWindowStyles_WPF.csproj", "{C61136B5-0A67-4C12-8809-6CC4615CF39D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialSaveLoadLayout_WPF", "PartialSaveLoadLayout\PartialSaveLoadLayout_WPF.csproj", "{FB2C3A5F-04D4-4C63-9504-C8576FAE941E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug.NoXaml|Any CPU = Debug.NoXaml|Any CPU
@@ -705,6 +707,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
+        EndGlobalSection
 	 
 EndGlobal

@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
-    <Content Include="Readme.txt" />
+    <Content Include="Readme.md" />
     <Resource Include="Resources\world.dbf" />
     <Resource Include="Resources\world.shp" />
   </ItemGroup>

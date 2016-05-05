@@ -1,1 +1,0 @@
-This example demonstrates usage of different column's properties. You can use the configuration panel on the left to try different setup. 

@@ -136,7 +136,7 @@
     <Resource Include="Data\PivotTables10.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ReadMe.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

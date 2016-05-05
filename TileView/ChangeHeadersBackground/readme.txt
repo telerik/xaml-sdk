@@ -1,1 +1,0 @@
-This project demonstrates how you can change the background color of the header of each item, corresponding to its current state in MVVM scenario.

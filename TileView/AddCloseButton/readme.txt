@@ -1,1 +1,0 @@
-This example demonstrates how to add custom close button that deletes an tile view item.

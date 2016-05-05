@@ -1,1 +1,0 @@
-This example demonstrates how to implement an item selection on grouprow level when using GridViewSelectColumn.

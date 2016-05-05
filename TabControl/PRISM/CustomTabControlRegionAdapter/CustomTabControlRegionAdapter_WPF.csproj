@@ -160,7 +160,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,1 +1,0 @@
-﻿This example demonstrates the Mini Map feature of RadMap.

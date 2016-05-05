@@ -1,1 +1,0 @@
-﻿This example demonstrates some of the options of the CrosshairBehavior.

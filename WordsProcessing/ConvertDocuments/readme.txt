@@ -1,1 +1,0 @@
-This project demonstrates how to use RadWordsProcessing to convert different document formats.

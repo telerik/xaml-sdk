@@ -125,6 +125,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

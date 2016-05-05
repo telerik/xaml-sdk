@@ -1,1 +1,0 @@
-﻿RadChart supports format expressions, which you can use to format the series items labels, axes labels and tooltip texts. Besides the standard, the custom numeric and the date/time format strings, RadChart supports chart specific format mechanism that allows you to insert context-specific data. 

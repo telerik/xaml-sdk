@@ -1,1 +1,0 @@
-﻿Since Q2 2011 Inverse Axis feature was released. It allows the axes values of RadChart to be inverted. The IsInverse property can be set independently of the Axis range - it works both with automatic range and custom one (AutoRange = false).

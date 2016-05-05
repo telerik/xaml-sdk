@@ -131,7 +131,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Content Include="Readme.txt" />
+    <Content Include="Readme.md" />
     <Content Include="SampleData\ProductsSampleDataSource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

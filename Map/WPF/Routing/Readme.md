@@ -1,0 +1,4 @@
+##Routing##
+The RadMap provides unified route search architecture which uses functionality of the different routing services. This allows you to calculate route between different locations on the map.
+
+<keywords:VisualizationLayer, UseBitmapCache, BingRouteProvider, RoutingCompleted, RouteRequest, RouteResponse, PolylineData, Service>

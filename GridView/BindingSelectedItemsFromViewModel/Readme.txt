@@ -1,1 +1,0 @@
-This example demonstrates how to implement custom attached behavior in order to bind SelectedItems from and to your view-model for Silverlight and WPF

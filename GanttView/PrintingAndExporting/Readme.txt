@@ -1,1 +1,0 @@
-This example demonstrates how to print the RadGanttView control's GridView and Timeline area for Silverlight and WPF.

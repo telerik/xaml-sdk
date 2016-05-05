@@ -1,1 +1,0 @@
-This example demonstrates how to implement DragDrop between TextBox and other controls.

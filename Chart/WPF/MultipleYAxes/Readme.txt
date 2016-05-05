@@ -1,2 +1,0 @@
-﻿#Multiple Y Axes#
-RadChart supports multiple Y axes. It may be required when series of a different scale should be presented on the same graph. The only thing you have to do is to specify which axis to be used for each series definition.

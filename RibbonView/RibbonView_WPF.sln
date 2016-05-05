@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleAccessKeys-KeyTips_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFunctionality_WPF", "HelpFunctionality\HelpFunctionality_WPF.csproj", "{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office2016InspiredRibbonView_WPF", "Office2016InspiredRibbonView_WPF\Office2016InspiredRibbonView_WPF.csproj", "{1316325F-73A3-4030-ADFB-9442329F887D}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

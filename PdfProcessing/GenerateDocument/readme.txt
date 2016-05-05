@@ -1,1 +1,0 @@
-This project demonstrates how to use RadPdfProcessing to create a PDF document

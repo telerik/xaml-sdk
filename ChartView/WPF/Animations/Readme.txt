@@ -1,1 +1,0 @@
-﻿An example that uses a utilities class and demonstrates how you can use animations for the chart series.

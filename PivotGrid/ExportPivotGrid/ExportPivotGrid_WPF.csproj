@@ -160,7 +160,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Readme.txt" />
+    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\ExcelIcon.png" />

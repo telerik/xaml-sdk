@@ -1,1 +1,0 @@
-This project demonstrates how to use RadWordsProcessing to generate document from scratch and export it to a file.

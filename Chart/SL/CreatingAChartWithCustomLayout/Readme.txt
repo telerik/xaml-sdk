@@ -1,4 +1,0 @@
-﻿#Creating a Chart with custom layout#
-If the default layout provided by the RadChart.DefaultView does not fit your scenario, then you can define your own layout where to put all the elements you need. Moreover - you can add as many ChartArea, ChartLegend and ChartTitle as you need.
-
-If, for example, you want to show the monthly sales of cars for the year 2009 on one chart and next to it, as a second chart to display the sales per car manufacturer with a legend, then you have to set UseDefaultLayout to False and to define your own. In this example, you have Grid with two rows and three columns. On the first row two ChartTitle elements are placed in the first and the second columns where the chart areas will be placed. On the second row will be added two ChartArea controls in the first two columns and a ChartLegend in the third column.

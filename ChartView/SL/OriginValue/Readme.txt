@@ -1,1 +1,0 @@
-﻿A sample that demonstrates the use of the OriginValue property.

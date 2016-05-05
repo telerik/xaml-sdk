@@ -1,0 +1,1 @@
+The sample demonstrates how to Style a RadToggleButton to look like a Toggle-Switch button.

@@ -96,7 +96,7 @@
     <Content Include="ClientBin\CustomUploadHandler-AzureToAzure.xap" />
     <Content Include="CustomUploadHandler-AzureToAzureTestPage.aspx" />
     <Content Include="CustomUploadHandler-AzureToAzureTestPage.html" />
-    <Content Include="Readme.txt" />
+    <Content Include="Readme.md" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config" />
   </ItemGroup>

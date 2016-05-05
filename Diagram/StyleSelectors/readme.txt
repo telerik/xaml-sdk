@@ -1,1 +1,0 @@
-This example demonstrates how to use MVVM to create a collection of shapes and connections in the RadDiagram control and take advantage of the ShapeStyleSelector and ConnectionStyleSelector properties to apply different styles on the shapes and the connections based on their type.

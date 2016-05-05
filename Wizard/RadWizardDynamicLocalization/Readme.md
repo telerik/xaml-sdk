@@ -1,0 +1,2 @@
+##Rad Wizard Dynamic Localization##
+This example demonstrates how RadWizard is localized dynamically, without the need of reloading the control. Please note, that the LocalizationManager.UseDynamicLocalization property must be set to True before RadWizard is loaded.

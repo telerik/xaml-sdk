@@ -1,1 +1,0 @@
-This example demonstrates how to enable dropping inside the RadTreeViewItems, but not around them. 

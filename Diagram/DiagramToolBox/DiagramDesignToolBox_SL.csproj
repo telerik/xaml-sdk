@@ -134,7 +134,7 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Readme.txt" />
+    <Content Include="Readme.md" />
     <Resource Include="Common\ExportToHTML\ExportStyles.html" />
     <Resource Include="Common\ExportToHTML\Loader.js" />
     <Resource Include="Common\ExportToHTML\RadDiagram.js" />

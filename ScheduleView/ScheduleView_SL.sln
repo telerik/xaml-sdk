@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeResizeCursorAtRuntime
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingByTimeMarkers_SL", "GroupingByTimeMarkers\GroupingByTimeMarkers_SL.csproj", "{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCurrentTimeIndicatorStyle_SL", "CustomCurrentTimeIndicatorStyle\CustomCurrentTimeIndicatorStyle_SL.csproj", "{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -144,6 +146,10 @@ Global
 		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFE4C8D4-CAC0-4B2B-9401-C497BE4DC8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

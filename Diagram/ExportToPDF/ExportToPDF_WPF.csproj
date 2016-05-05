@@ -127,7 +127,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="readme.txt" />
+    <Content Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

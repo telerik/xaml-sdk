@@ -1,1 +1,0 @@
-﻿The example shows how to customize the TimeRulerItemsSyleSelector of the ScheduleView in order to apply different Styles to the TimeRulerLines. This is used, for example, to distinguish the weeks in TimelineViewDefinition. 

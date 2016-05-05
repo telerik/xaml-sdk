@@ -1,0 +1,3 @@
+##Merge Documents##
+This example demonstrates how multiple documents can be merged into one.
+After inserting each fragment in the merged document, the properties of the last section of the inserted piece are copied. This is done due to the fact that InsertFragment() does not copy the properties of the last section, but works as would copy/pasting do - places the caret after the inserted piece and takes the properties from the "large" document.

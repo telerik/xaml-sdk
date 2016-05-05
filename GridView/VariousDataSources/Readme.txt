@@ -1,1 +1,0 @@
-This example demonstrates how to bind RadGridView to different DataSources.

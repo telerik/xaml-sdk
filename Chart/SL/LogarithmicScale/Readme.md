@@ -1,0 +1,2 @@
+##Logarithmic Scale##
+If you have a very large range of values on the Y-Axis, the points with the smallest values may not be easily visible. This is because the scale for the Y-Axis will be linear. In this case you can scale the Y-Axis logarithmically, so there is enough space for each value. The logarithmic scaling is calculated automatically, you just have to set the IsLogarithmic property of the YAxis to True.

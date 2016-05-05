@@ -1,1 +1,0 @@
-This example illustrates how to create custom field which calculates the total pages of the document and the current page number of a section. Regardless of the place where you have inserted the field at your document(Header, Footer, Body, FootNote, EndNote and etc.), you can obtain an information for the main document through its EvaluationContext property.
