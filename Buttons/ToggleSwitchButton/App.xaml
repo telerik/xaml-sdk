@@ -7,7 +7,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.VisualStudio2013;component/Themes/System.Windows.xaml"/>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.VisualStudio2013;component/Themes/Telerik.Windows.Controls.xaml"/>
-                <ResourceDictionary Source="StylesVS2013.xaml"/>
+                <ResourceDictionary Source="CommonStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

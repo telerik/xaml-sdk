@@ -4,54 +4,103 @@
         xmlns:teleik="http://schemas.telerik.com/2008/xaml/presentation"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10 0">
+            <TextBlock Text="VisualStudio2013" Foreground="{teleik:VisualStudio2013Resource ResourceKey=AccentBrush}" FontWeight="Bold" Margin="0 10 0 4" />
             
             <StackPanel Orientation="Horizontal">
-                <teleik:RadToggleButton x:Name="toggleButton1"  
-                                        VerticalAlignment="Center" HorizontalAlignment="Center" 
-                                        MinWidth="35" Margin="10" Style="{DynamicResource RadToggleButtonStyle_V1}"
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" Margin="10" 
+                                        IsChecked="True"
+                                        Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example1}" />
+
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" 
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example2}" 
+                                        HorizontalContentAlignment="Right">
+                </teleik:RadToggleButton>
+
+                <teleik:RadToggleButton  VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        MinWidth="35" 
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example3}" 
+                                        Checked="RadToggleButton_Checked1" 
+                                        Unchecked="RadToggleButton_Unchecked1" 
+                                        Content="NO" 
+                                        HorizontalContentAlignment="Right" 
                                         IsChecked="True" />
-                <teleik:RadToggleButton x:Name="toggleButton2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_V2}" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked" Content="Off" HorizontalContentAlignment="Right"/>
-                <teleik:RadToggleButton x:Name="toggleButton3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_V3}" Checked="RadToggleButton_Checked1" Unchecked="RadToggleButton_Unchecked1" Content="NO" HorizontalContentAlignment="Right" IsChecked="True"/>
 
-                <teleik:RadToggleButton x:Name="toggleButton4" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10"
-                                        Style="{StaticResource RadToggleButtonStyle_V4}" Checked="RadToggleButton_Checked" 
-                                        Unchecked="RadToggleButton_Unchecked" Content="OFF" HorizontalContentAlignment="Right" />
-                <teleik:RadToggleButton VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_V5}" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked" Content="OFF" HorizontalContentAlignment="Right" />
+                <teleik:RadToggleButton VerticalAlignment="Center"
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" 
+                                        Margin="10"
+                                        Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example4}" 
+                                        Checked="RadToggleButton_Checked" 
+                                        Unchecked="RadToggleButton_Unchecked" 
+                                        Content="OFF" 
+                                        HorizontalContentAlignment="Right" />
                 
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" 
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example5}" 
+                                        Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked"
+                                        Content="OFF" 
+                                        HorizontalContentAlignment="Right" />
             </StackPanel>
 
-          
+            <TextBlock Text="OfficeBlack" Foreground="#FFFE9227" FontWeight="Bold" Margin="0 10 0 4" />
+            
             <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.MergedDictionaries>
-                            <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
-                            <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
-                            <ResourceDictionary Source="StylesOB.xaml"/>
-                        </ResourceDictionary.MergedDictionaries>
-                    </ResourceDictionary>
-                </StackPanel.Resources>
-                <teleik:RadToggleButton x:Name="toggleButton_OB3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB3}" />
-                <teleik:RadToggleButton x:Name="toggleButton_OB1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB1}" Content="OFF" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked" />
-                <teleik:RadToggleButton x:Name="toggleButton_OB2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB2}" Content="OFF" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked" IsChecked="True"/>
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35"
+                                        Margin="10"
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlack_Example3}" />
+                
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center"
+                                        MinWidth="35"
+                                        Margin="10"
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlack_Example1}" />
+                
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" 
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlack_Example2}" 
+                                        Content="OFF"
+                                        Checked="RadToggleButton_Checked" 
+                                        Unchecked="RadToggleButton_Unchecked" 
+                                        IsChecked="True" />
             </StackPanel>
 
-           
+            <TextBlock Text="OfficeBlue" Foreground="#83a5d2" FontWeight="Bold" Margin="0 10 0 4" />
+            
             <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.MergedDictionaries>
-                            <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Blue;component/Themes/System.Windows.xaml"/>
-                            <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Blue;component/Themes/Telerik.Windows.Controls.xaml"/>
-                            <ResourceDictionary Source="StylesOBlue.xaml"/>
-                        </ResourceDictionary.MergedDictionaries>
-                    </ResourceDictionary>
-                </StackPanel.Resources>
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        MinWidth="35" 
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlue_Example3}" />
+                <teleik:RadToggleButton VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        MinWidth="35" 
+                                        Margin="10"
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlue_Example1}" />
                 
-                <teleik:RadToggleButton x:Name="toggleButton_OBl3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB3}" />
-                <teleik:RadToggleButton x:Name="toggleButton_OBl1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB1}" Content="OFF" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked"/>
-                <teleik:RadToggleButton x:Name="toggleButton_OBl2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="35" Margin="10" Style="{StaticResource RadToggleButtonStyle_OB2}" Content="OFF" Checked="RadToggleButton_Checked" Unchecked="RadToggleButton_Unchecked"/>
+                <teleik:RadToggleButton VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center"
+                                        MinWidth="35"
+                                        Margin="10" 
+                                        Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlue_Example2}" 
+                                        Content="OFF"
+                                        Checked="RadToggleButton_Checked"
+                                        Unchecked="RadToggleButton_Unchecked" />
             </StackPanel>
         </StackPanel>
     </Grid>
