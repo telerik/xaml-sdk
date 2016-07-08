@@ -28,6 +28,11 @@ namespace TimeBarOverChartView
             return data;
         }
 
+        private void chart1_PlotAreaClipChanged(object sender, EventArgs e)
+        {
+            this.UpdateTimeBarMargin();
+        }
+
         private void slider_SelectionChanged(object sender, Telerik.Windows.RadRoutedEventArgs e)
         {
             var slider = (RadSlider)sender;
@@ -54,7 +59,12 @@ namespace TimeBarOverChartView
         {
             double topMargin = this.timeBar1.ActualHeight - (this.timeBarContent1.ActualHeight + this.sliderActualHeight);
             this.chart1.Margin = new Thickness(0, topMargin, 0, this.sliderActualHeight);
-            this.verticalAxis.Margin = this.chart1.Margin;
+        }
+
+        private void UpdateTimeBarMargin()
+        {
+            double verticalAxisWidth = this.chart1.PlotAreaClip.X + this.chart1.PanOffset.X;
+            this.timeBar1.Margin = new Thickness(verticalAxisWidth, 0, 0, 0);
         }
     }
 }

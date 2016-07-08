@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylesAndTemplates_PivotMap", "StylesAndTemplates_PivotMap\StylesAndTemplates_PivotMap.csproj", "{D1B0764F-027B-468C-8ECA-B98C54630790}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylesAndTemplates_TreeMap", "StylesAndTemplates_TreeMap\StylesAndTemplates_TreeMap.csproj", "{9ACCDC31-69A0-4F9A-952E-EF4B6FF864EC}"
@@ -46,10 +48,10 @@ Global
 		{1D6FA949-3A34-4515-A67E-7BCB631227BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6FA949-3A34-4515-A67E-7BCB631227BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6FA949-3A34-4515-A67E-7BCB631227BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2C446B-64B3-4FBD-8EA4-F7C7549DC0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2C446B-64B3-4FBD-8EA4-F7C7549DC0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2C446B-64B3-4FBD-8EA4-F7C7549DC0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2C446B-64B3-4FBD-8EA4-F7C7549DC0EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

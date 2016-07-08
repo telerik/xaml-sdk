@@ -1,2 +1,4 @@
 ##How to bind SelectedItems in MVVM##
 This example demonstrates how to use the built-in ListBoxSelectedItemsBehavior of the RadListBox control in order to bind a collection of objects which will be two way synced with the control's SelectedItems collection.
+
+<keywords: ListBoxSelectedItemsBehavior>

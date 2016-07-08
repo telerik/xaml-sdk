@@ -6,3 +6,5 @@ Please note that although the code shows RadMaskedNumericInput and its custom su
 * The second control in the demo is custom RadMaskedNumericInput which allows you to select all and press OemMinus / Subtract key resulting in clearing the value and entering negative sign. This is achieved with overriding HandleSubtractkey method of RadMaskedNumericInput. 
 
 * The third control in the demo is custom RadMaskedNumericInput which allows you to delete the negative sign symbol with Backspace / Delete keys on the keyboard. This is achieved with overriding CanModifyChar, HandleBackKeyNoMask and HandleDeleteKeyNoMaks methods of the RadMaskedNumericInput.
+
+<keywords: minuskeycustomizations, maskednumericinput, allowminusonnullvalues, databinding, mvvm, maskedinputextensions>

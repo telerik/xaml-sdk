@@ -3,3 +3,5 @@ There are two ways you can change the template for the RadTimeline items. You ca
 
   - TimelineItemTemplate / TimelineInstantItemTemplate property
   - ItemTemplateSelector
+
+<keywords: itemtemplateselector, datatemplateselector, instantitemtemplate, itemwithdurationtemplate, databinding, mvvm>

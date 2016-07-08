@@ -4,3 +4,5 @@ The purpose of this example is to demonstrate how you can create a custom interv
 1. My custom interval {0}, {1}
 2. Custom interval {0}
 3. C{0} {1}
+
+<keywords: intervalbase, intervaltypes> 

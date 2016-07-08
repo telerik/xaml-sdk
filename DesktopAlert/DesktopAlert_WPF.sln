@@ -8,6 +8,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowingAndHidingUsingAnimationGroup_WPF", "ShowingAndHidingUsingAnimationGroup\ShowingAndHidingUsingAnimationGroup_WPF.csproj", "{4417DC5C-0CC8-4321-B0BF-32F14B357117}"
 EndProject
 Global
+	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

@@ -10,3 +10,5 @@ For Silverlight: The Silverlight application needs to be trusted and you need to
 
 For a more detailed information how to enable Trusted Applications to run inside the browser, please check the following article from MSDN:
 https://msdn.microsoft.com/en-us/library/gg192793(v=vs.95)
+
+<keywords:itemssource, trusted, xap, signing>

@@ -1,12 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomKeyboardCommandProvider_WPF", "CustomKeyboardCommandProvider\CustomKeyboardCommandProvider_WPF.csproj", "{7A46CAC0-06ED-4B3A-9A2F-6E196098848E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation_WPF", "Validation\Validation_WPF.csproj", "{347C1A1E-B650-4906-99AD-3C985FBB8B24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadWithEditorTemplateSelector_WPF", "FileUploadWithEditorTemplateSelector\FileUploadWithEditorTemplateSelector_WPF.csproj", "{92E0B490-B310-4FE6-9E07-1418C03E2F4A}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -28,8 +31,17 @@ Global
 		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{347C1A1E-B650-4906-99AD-3C985FBB8B24}.Release|x86.ActiveCfg = Release|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Debug|x86.Build.0 = Debug|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|x86.ActiveCfg = Release|Any CPU
+		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

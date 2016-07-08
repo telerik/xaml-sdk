@@ -8,41 +8,32 @@
     d:DesignHeight="300" d:DesignWidth="400">
 
     <Grid x:Name="LayoutRoot" Background="White">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <telerik:RadVerticalDataAxis x:Name="verticalAxis" 
-                                         Minimum="{Binding VerticalAxis.ActualRange.Minimum, ElementName=chart1}" 
-                                         Maximum="{Binding VerticalAxis.ActualRange.Maximum, ElementName=chart1}"
-                                         Step="{Binding VerticalAxis.ActualMajorStep, ElementName=chart1}"/>
-            <telerik:RadCartesianChart x:Name="chart1" Grid.Column="1" MinHeight="1">
-                <telerik:RadCartesianChart.HorizontalAxis>
-                    <telerik:DateTimeContinuousAxis Visibility="Collapsed" />
-                </telerik:RadCartesianChart.HorizontalAxis>
-                <telerik:RadCartesianChart.VerticalAxis>
-                    <telerik:LinearAxis Visibility="Collapsed" />
-                </telerik:RadCartesianChart.VerticalAxis>
-                <telerik:RadCartesianChart.Series>
-                    <telerik:LineSeries CategoryBinding="Date" ValueBinding="Val" ItemsSource="{Binding}" />
-                </telerik:RadCartesianChart.Series>
-            </telerik:RadCartesianChart>
-            <telerik:RadTimeBar x:Name="timeBar1" 
-                                Grid.Column="1"
-                                PeriodStart="{Binding HorizontalAxis.ActualRange.Minimum, ElementName=chart1}"
-                                PeriodEnd="{Binding HorizontalAxis.ActualRange.Maximum, ElementName=chart1}"
-                                Background="Transparent">
-                <telerik:RadTimeBar.Intervals>
-                    <telerik:MonthInterval />
-                    <telerik:WeekInterval />
-                    <telerik:MonthInterval />
-                    <telerik:DayInterval />
-                </telerik:RadTimeBar.Intervals>
-                <telerik:RadTimeBar.Content>
-                    <Border x:Name="timeBarContent1" SizeChanged="timeBarContent_SizeChanged" />
-                </telerik:RadTimeBar.Content>
-            </telerik:RadTimeBar>
-        </Grid>
-    </Grid>
+        <telerik:RadCartesianChart x:Name="chart1" 
+                                   MinHeight="1"
+                                   PlotAreaClipChanged="chart1_PlotAreaClipChanged">
+             <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeContinuousAxis Visibility="Collapsed" />
+             </telerik:RadCartesianChart.HorizontalAxis>
+             <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis SmartLabelsMode="SmartStepAndRange" />
+             </telerik:RadCartesianChart.VerticalAxis>
+             <telerik:RadCartesianChart.Series>
+                 <telerik:LineSeries CategoryBinding="Date" ValueBinding="Val" ItemsSource="{Binding}" />
+             </telerik:RadCartesianChart.Series>
+         </telerik:RadCartesianChart>
+         <telerik:RadTimeBar x:Name="timeBar1" 
+                             PeriodStart="{Binding HorizontalAxis.ActualRange.Minimum, ElementName=chart1}"
+                             PeriodEnd="{Binding HorizontalAxis.ActualRange.Maximum, ElementName=chart1}"
+                             Background="Transparent">
+             <telerik:RadTimeBar.Intervals>
+                <telerik:MonthInterval />
+                <telerik:WeekInterval />
+                <telerik:MonthInterval />
+                <telerik:DayInterval />
+             </telerik:RadTimeBar.Intervals>
+             <telerik:RadTimeBar.Content>
+                <Border x:Name="timeBarContent1" SizeChanged="timeBarContent_SizeChanged" />
+             </telerik:RadTimeBar.Content>
+         </telerik:RadTimeBar>
+     </Grid>
 </UserControl>

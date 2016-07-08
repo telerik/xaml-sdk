@@ -5,3 +5,5 @@ This example demonstrates the following:
   - Properties
   - Group Expand Modes
   - Changing the default collapsed state of expandable groups
+
+<keywords: grouppath, groupexpandmode, databinding, mvvm>

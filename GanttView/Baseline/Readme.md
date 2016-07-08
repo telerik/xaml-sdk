@@ -3,3 +3,5 @@ This example demonstrates how to customize the way items are rendered in the Tim
 custom elements by creating a custom TimeLineVisualizationBehavior for Silverlight and WPF. The example shows how to create Baseline 
 objects in the Timeline of the control that represent the assigned resource to a specific task in the iteration. The iteration Baseline
  is a summary of all Tasks Baseline intervals.
+
+<keywords:customize, timeline, timelinevisualizationbehavior, task, summary, timeruler>

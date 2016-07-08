@@ -1,2 +1,4 @@
 ##Modified Tasks##
 This example demonstrates how to implement a solution for setting a tasks as 'dirty'. A dirty task is a task whose properties have changed their initial values. You should note that when creating dependencies between Tasks via dragging, only the destination Task will be marked as dirty.
+
+<keywords:dirty, initial, dragging>

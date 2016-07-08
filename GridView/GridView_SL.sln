@@ -124,6 +124,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregateFunctionEnum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyExpandButtonStyleSelector_SL", "HierarchyExpandButtonStyleSelector\HierarchyExpandButtonStyleSelector_SL.csproj", "{6F1BA99E-6963-4B0D-9794-8814A989E890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDistinctValues_SL", "SortDistinctValues\SortDistinctValues_SL.csproj", "{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -725,6 +727,16 @@ Global
 		{6F1BA99E-6963-4B0D-9794-8814A989E890}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6F1BA99E-6963-4B0D-9794-8814A989E890}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6F1BA99E-6963-4B0D-9794-8814A989E890}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D3C1592-D44B-4456-B75E-1DC8339EF9BE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

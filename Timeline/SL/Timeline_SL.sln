@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsMargin", "AnnotationsMargin\AnnotationsMargin.csproj", "{518C2214-60D7-4B53-973D-783DB570E8D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsSource", "AnnotationsSource\AnnotationsSource.csproj", "{2AFE8A16-546B-455E-9D89-E9BAB3A45263}"
