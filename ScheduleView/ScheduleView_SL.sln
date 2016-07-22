@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingByTimeMarkers_SL", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCurrentTimeIndicatorStyle_SL", "CustomCurrentTimeIndicatorStyle\CustomCurrentTimeIndicatorStyle_SL.csproj", "{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingSelectedAppointments_SL", "SettingSelectedAppointments\SettingSelectedAppointments_SL.csproj", "{793AE457-D42D-47C8-B0BF-558B2367D2B0}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,6 +152,10 @@ Global
 		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4572DA88-D1E8-4591-A2E0-DE29A7A2AC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

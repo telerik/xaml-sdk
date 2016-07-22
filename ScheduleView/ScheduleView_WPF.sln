@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingByTimeMarkers_WPF",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCurrentTimeIndicatorStyle_WPF", "CustomCurrentTimeIndicatorStyle\CustomCurrentTimeIndicatorStyle_WPF.csproj", "{B0AD7DA8-485F-442E-B1EC-9EE4E4EC11F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingSelectedAppointments_WPF", "SettingSelectedAppointments\SettingSelectedAppointments_WPF.csproj", "{44A40231-F576-4B12-B059-7C91B2943609}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -280,6 +282,16 @@ Global
 		{B0AD7DA8-485F-442E-B1EC-9EE4E4EC11F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B0AD7DA8-485F-442E-B1EC-9EE4E4EC11F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B0AD7DA8-485F-442E-B1EC-9EE4E4EC11F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{44A40231-F576-4B12-B059-7C91B2943609}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,15 +44,40 @@ namespace ImportExportFromAndToMSProject
 
         private void ExportToMSProjectButtonClick(object sender, RoutedEventArgs e)
         {
-            var msApplication = new Microsoft.Office.Interop.MSProject.Application();
-            msApplication.AppMaximize();
-            msApplication.FileNew(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            Microsoft.Office.Interop.MSProject.Application msApplication = null;
+            try
+            {
+                msApplication = new Microsoft.Office.Interop.MSProject.Application();
+            }
+            catch (COMException)
+            {
+                MessageBox.Show("You need to have MSProject installed on your computer in order to use the export functionality of the example.", "No Installation");
+                return;
+            }
 
-            var msProject = msApplication.ActiveProject;
-            msProject.ManuallyScheduledTasksAutoRespectLinks = false;
-            FillProjectWithTasks(msProject, this.radGanttView1.TasksSource.OfType<IGanttTask>(), null, false);
-            FillTasksWithDependencies(msProject.Tasks.OfType<Task>(), this.radGanttView1.TasksSource.OfType<IGanttTask>());
-            msApplication.Visible = true;
+            try
+            {
+                msApplication.AppMaximize();
+                msApplication.FileNew(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+
+                var msProject = msApplication.ActiveProject;
+                msProject.ManuallyScheduledTasksAutoRespectLinks = false;
+                FillProjectWithTasks(msProject, this.radGanttView1.TasksSource.OfType<IGanttTask>(), null, false);
+                FillTasksWithDependencies(msProject.Tasks.OfType<Task>(), this.radGanttView1.TasksSource.OfType<IGanttTask>());
+                msApplication.Visible = true;
+            }
+            catch (COMException)
+            {
+                try
+                {
+                    msApplication.Quit(PjSaveType.pjDoNotSave);
+                }
+                catch (COMException)
+                {
+                    return;
+                }
+                MessageBox.Show("You should not interact with MSProject while Exporting is performed! Please, export again.", "Interaction exception");
+            }
         }
 
         /// <summary>

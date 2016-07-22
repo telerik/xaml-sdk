@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BringIntoView_WPF", "BringIntoView\BringIntoView_WPF.csproj", "{70337B65-C3A0-41A6-8C54-D41325DE1595}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterSearchSort_WPF", "FilterSearchSort\FilterSearchSort_WPF.csproj", "{3746B1FB-6751-481B-807C-8C3765249063}"
@@ -20,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropBetweenTreeViews_WPF", "DragDropBetweenTreeViews\DragDropBetweenTreeViews_WPF.csproj", "{139AB2A1-EDE8-46F1-8B5A-4B8E42F44CDD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisual_WPF", "CustomDragVisual\CustomDragVisual_WPF.csproj", "{072CDB69-BAE2-4B3C-BDEF-FA1BAC33642A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuttleControl_WPF", "ShuttleControl\ShuttleControl_WPF.csproj", "{3DB4640F-76CD-488D-A0DD-EB720C381DF7}"
 EndProject
 Global
 	 
@@ -132,6 +136,16 @@ Global
 		{072CDB69-BAE2-4B3C-BDEF-FA1BAC33642A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{072CDB69-BAE2-4B3C-BDEF-FA1BAC33642A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{072CDB69-BAE2-4B3C-BDEF-FA1BAC33642A}.Release|x86.ActiveCfg = Release|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
