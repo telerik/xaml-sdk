@@ -1,0 +1,46 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:RestoredTilesToSpanMultipleRowsAndColumns"
+		xmlns:TileView="clr-namespace:Telerik.Windows.Controls.TileView;assembly=Telerik.Windows.Controls.Navigation" 
+		x:Class="RestoredTilesToSpanMultipleRowsAndColumns.MainWindow"
+	
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+		Title="MainWindow" Height="550" Width="825">
+	<Grid>
+		<telerik:RadTileView MinimizedItemsPosition="Bottom" 
+							 MaximizeMode="Zero" 
+							 DragMode="Swap" >
+			<telerik:RadTileView.ItemsPanel>
+				<ItemsPanelTemplate>
+					<local:MultipleRowsAndColumnsPanel RowsCount="3" ColumnsCount="4" />
+				</ItemsPanelTemplate>
+			</telerik:RadTileView.ItemsPanel>
+			<telerik:RadTileViewItem Header="Item1" local:TileViewAttachedProperties.Row="0" local:TileViewAttachedProperties.Column="0">
+				<TextBlock Text="1"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Item2" local:TileViewAttachedProperties.Row="0" local:TileViewAttachedProperties.Column="1">
+				<TextBlock Text="2"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Item3" local:TileViewAttachedProperties.Row="1" local:TileViewAttachedProperties.Column="0">
+				<TextBlock Text="3"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Item4" local:TileViewAttachedProperties.Row="1" local:TileViewAttachedProperties.Column="1">
+				<TextBlock Text="4"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Item5" local:TileViewAttachedProperties.Row="2" local:TileViewAttachedProperties.Column="0">
+				<TextBlock Text="5"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Item6" local:TileViewAttachedProperties.Row="2" local:TileViewAttachedProperties.Column="1">
+				<TextBlock Text="6"/>
+			</telerik:RadTileViewItem>
+			<telerik:RadTileViewItem Header="Camera View" 
+									 local:TileViewAttachedProperties.Row="0" local:TileViewAttachedProperties.Column="2" 
+									 local:TileViewAttachedProperties.ColumnSpan="2" local:TileViewAttachedProperties.RowSpan="3">
+				<TextBlock Text="BigCamera"/>
+			</telerik:RadTileViewItem>
+		</telerik:RadTileView>
+
+	</Grid>
+</Window>

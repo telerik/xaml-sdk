@@ -19,6 +19,7 @@ namespace ImportExportFromAndToMSProject
     public partial class Example : UserControl
     {
         private ViewModel viewModel;
+        private Microsoft.Office.Interop.MSProject.Application msApplication;
 
         public Example()
         {
@@ -44,7 +45,8 @@ namespace ImportExportFromAndToMSProject
 
         private void ExportToMSProjectButtonClick(object sender, RoutedEventArgs e)
         {
-            Microsoft.Office.Interop.MSProject.Application msApplication = null;
+            MessageBox.Show("MSProject will start exporting RadGanttView soon. While the process in running we do not recommend interacting with MS Project because the export might break.", "Start Exporting", MessageBoxButton.OK, MessageBoxImage.Information);
+
             try
             {
                 msApplication = new Microsoft.Office.Interop.MSProject.Application();
@@ -54,6 +56,8 @@ namespace ImportExportFromAndToMSProject
                 MessageBox.Show("You need to have MSProject installed on your computer in order to use the export functionality of the example.", "No Installation");
                 return;
             }
+
+            System.Windows.Application.Current.MainWindow.WindowState = WindowState.Minimized;
 
             try
             {
@@ -76,7 +80,8 @@ namespace ImportExportFromAndToMSProject
                 {
                     return;
                 }
-                MessageBox.Show("You should not interact with MSProject while Exporting is performed! Please, export again.", "Interaction exception");
+                System.Windows.Application.Current.MainWindow.WindowState = WindowState.Normal;
+                MessageBox.Show("Export has failed. Please, do not interact with MSProject while Exporting is performed.", "Interaction exception");
             }
         }
 
@@ -122,6 +127,14 @@ namespace ImportExportFromAndToMSProject
                         }
 
                         project.Application.SelectCellDown(Type.Missing, Type.Missing);
+
+                        if (task == null)
+                        {
+                            msApplication.Quit(PjSaveType.pjDoNotSave);
+                            System.Windows.Application.Current.MainWindow.WindowState = WindowState.Normal;
+                            MessageBox.Show("Export has failed. Please, do not interact with MSProject while Exporting is performed.", "Interaction exception");
+                            break;
+                        }
 
                         OutlineTaskInProject(parentTask, task);
                     }
