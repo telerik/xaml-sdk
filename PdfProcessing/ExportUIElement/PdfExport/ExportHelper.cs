@@ -22,6 +22,7 @@ namespace ExportUIElement
         private static void SetUp(PdfRenderer renderer)
         {
             renderer.AddRenderer(new PanelRenderer());
+            renderer.AddRenderer(new TextBoxRenderer());
             renderer.AddRenderer(new TextBlockRenderer());
             renderer.AddRenderer(new BorderRenderer());
             renderer.AddRenderer(new RectangleRenderer());

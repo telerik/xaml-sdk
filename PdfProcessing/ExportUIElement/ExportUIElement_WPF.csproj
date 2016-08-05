@@ -87,6 +87,8 @@
       <DependentUpon>Example.xaml</DependentUpon>
     </Compile>
     <Compile Include="PdfExport\ConcreteRenderers\BorderRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextBoxRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\EllipseRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\FrameworkElementRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\ImageRenderer.cs" />

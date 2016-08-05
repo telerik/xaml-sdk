@@ -119,6 +119,8 @@
     <Compile Include="PdfExport\ConcreteRenderers\PathRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\RectangleRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\TextBlockRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextBoxRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextRenderer.cs" />
     <Compile Include="PdfExport\ConcreteRenderers\UIElementRendererBase.cs" />
     <Compile Include="PdfExport\ExportHelper.cs" />
     <Compile Include="PdfExport\Miscellaneous\CompositeDisposableObject.cs" />

@@ -26,8 +26,14 @@ namespace ExportUIElement
                 return null;
             }
 
-            PathGeometry geometry = MathHelper.TransformRectangle(drawingSurface.Position.Matrix, rectangleClip.Rect);
+            return SaveClip(drawingSurface, rectangleClip.Rect);
+        }
+
+        internal static IDisposable SaveClip(FixedContentEditor drawingSurface, Rect rectangle)
+        {
+            PathGeometry geometry = MathHelper.TransformRectangle(drawingSurface.Position.Matrix, rectangle);
             var pdfGeometry = PdfGeometryHelper.ConvertPathGeometry(geometry);
+
             return drawingSurface.PushClipping(pdfGeometry);
         }
 
@@ -48,6 +54,7 @@ namespace ExportUIElement
             matrix = MathHelper.Multiply(matrix, drawingSurface.Position.Matrix);
             IDisposable savePosition = drawingSurface.SavePosition();
             drawingSurface.Position = new Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition(matrix);
+
             return savePosition;
         }
 
