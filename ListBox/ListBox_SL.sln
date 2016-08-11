@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredUnfocused
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItemsSource_SL", "SelectedItemsSource\SelectedItemsSource_SL.csproj", "{8F439F16-3942-4F6E-938D-9AE874FBE2F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuttleControl_SL", "ShuttleControl\ShuttleControl_SL.csproj", "{13406823-BFDC-4EE1-8164-B6FDE684872B}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +66,10 @@ Global
 		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F439F16-3942-4F6E-938D-9AE874FBE2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13406823-BFDC-4EE1-8164-B6FDE684872B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13406823-BFDC-4EE1-8164-B6FDE684872B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13406823-BFDC-4EE1-8164-B6FDE684872B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13406823-BFDC-4EE1-8164-B6FDE684872B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

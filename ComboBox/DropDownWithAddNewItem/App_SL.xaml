@@ -1,0 +1,336 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+             xmlns:telerik1="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:telerikChromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls"
+             xmlns:local="clr-namespace:DropDownWithAddNewItem"
+             x:Class="DropDownWithAddNewItem.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <local:ViewModel x:Key="ViewModel" />
+            <ControlTemplate x:Key="CustomEditableComboBox" TargetType="telerikInput:RadComboBox">
+                <Grid x:Name="VisualRoot">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Disabled">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ControlOuterBorder_Disabled}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.050" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.050">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderEnabled">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <sys:Boolean>False</sys:Boolean>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Duration="0" Storyboard.TargetName="PART_EditableTextBox" Storyboard.TargetProperty="Opacity" To="0.6"/>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconForeground_Disabled}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconBackground_Disabled}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ControlBackground_Disabled}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Background" Storyboard.TargetProperty="Opacity">
+                                        <LinearDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Normal">
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.150" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.150">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderActive">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <sys:Boolean>True</sys:Boolean>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.115" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconForeground_MouseOver}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconBackground_MouseOver}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="DropDownOpen">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ControlOuterBorder_Pressed}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.050" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.050">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Collapsed</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Opacity">
+                                        <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconForeground_Pressed}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DropDownIcon" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonIconBackground_Pressed}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="FocusStates">
+                            <VisualState x:Name="Focused">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonChrome" Storyboard.TargetProperty="RenderFocused">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <sys:Boolean>True</sys:Boolean>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="00:00:00.150">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Unfocused"/>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="ValidationStates">
+                            <VisualState x:Name="Valid"/>
+                            <VisualState x:Name="InvalidUnfocused">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="InvalidFocused">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationTooltip" Storyboard.TargetProperty="IsOpen">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <sys:Boolean>True</sys:Boolean>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="WatermarkStates">
+                            <VisualState x:Name="WatermarkVisible">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Watermark" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="WatermarkInvisible"/>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="Background"
+                    Grid.Column="0"
+                    IsHitTestVisible="False"
+                    Background="{StaticResource PickerBackground_Normal}"
+                    CornerRadius="{StaticResource SplitButton_LeftPartCornerRadius}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderBrush="{StaticResource PickerBackground_Normal}"/>
+                    <Border Grid.ColumnSpan="2" IsHitTestVisible="False" Background="{TemplateBinding Background}" CornerRadius="{StaticResource SplitButton_SpanCornerRadius}" Margin="1"/>
+                    <Border x:Name="Border"
+                    Grid.ColumnSpan="2"
+                    IsHitTestVisible="False"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"/>
+                    <Border x:Name="MouseOverVisual"
+                    Grid.ColumnSpan="2"
+                    IsHitTestVisible="False"
+                    BorderBrush="{StaticResource ControlOuterBorder_MouseOver}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Opacity="0"
+                    Visibility="Collapsed"
+                    CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"/>
+                    <TextBox x:Name="PART_EditableTextBox"
+                    Grid.Column="0"
+                    Margin="1 1 0 1"
+                    Style="{StaticResource ComboBoxTextBoxStyle}"
+                    Padding="{TemplateBinding Padding}"
+                    IsReadOnly="{TemplateBinding IsReadOnly}"
+                    VerticalAlignment="Stretch"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}">
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="TextBox">
+                                <Grid>
+                                    <ScrollViewer
+                                    Padding="{TemplateBinding Padding}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    IsTabStop="False"
+                                    VerticalScrollBarVisibility="Auto"
+                                    VerticalContentAlignment="Center"
+                                    VerticalAlignment="Stretch"
+                                    x:Name="ContentElement"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Border x:Name="FocusVisual"
+                    Visibility="Collapsed"
+                    Grid.ColumnSpan="2"
+                    IsHitTestVisible="False"
+                    BorderBrush="{StaticResource ControlOuterBorder_Focused}"
+                    CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border BorderBrush="{StaticResource ControlInnerBorder_Focused}" CornerRadius="{StaticResource SplitButton_SpanInnerCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                    </Border>
+                    <telerik1:RadToggleButton x:Name="PART_DropDownButton" Margin="0" Padding="0" Grid.Column="1" IsTabStop="False" ClickMode="Press">
+                        <telerik1:RadToggleButton.Template>
+                            <ControlTemplate TargetType="telerik1:RadToggleButton">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </telerik1:RadToggleButton.Template>
+                        <Grid>
+                            <telerikChromes:ButtonChrome x:Name="ButtonChrome"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            RenderPressed="{TemplateBinding IsDropDownOpen}"
+                            RenderMouseOver="{Binding IsMouseOver, ElementName=PART_DropDownButton}"
+                            CornerRadius="{StaticResource SplitButton_RightPartCornerRadius}"
+                            RenderFocused="{TemplateBinding IsFocused}"/>
+                            <ContentControl x:Name="DropDownIcon"
+                            Grid.Column="1"
+                            IsTabStop="False"
+                            Foreground="{StaticResource ButtonIconForeground_Normal}"
+                            Background="{StaticResource ButtonIconBackground_Normal}"
+                            Template="{StaticResource ArrowTemplateEditableCombobox}"/>
+                        </Grid>
+                    </telerik1:RadToggleButton>
+                    <TextBlock x:Name="Watermark"
+                    Text="{TemplateBinding EmptyText}"
+                    Opacity=".5"
+                    IsHitTestVisible="False"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="5 0 0 0"
+                    Visibility="Collapsed"/>
+                    <telerikChromes:ValidationTooltip x:Name="ValidationTooltip"
+                    Grid.ColumnSpan="2"
+                    Visibility="Collapsed"
+                    TooltipPlacementTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                    TooltipContent="{Binding Path=(Validation.Errors), RelativeSource={RelativeSource TemplatedParent}}"/>
+                    <Popup x:Name="PART_Popup">
+                        <Grid x:Name="PopupRoot">
+                            <telerikChromes:ShadowChrome Margin="0 0 0 3"/>
+                            <Border
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            MinWidth="{TemplateBinding MinDropDownWidth}"
+                            MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                            Background="{StaticResource PickerPopupBackground}"
+                            CornerRadius="{StaticResource SplitButton_SpanCornerRadius}"
+                            x:Name="PART_ResizeBorder"
+                            Margin="0 0 0 3">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <telerik1:RadButton x:Name="AddItemButton"
+                                    Grid.Row="0"
+                                    Margin="-1 -1 -1 0"                                 
+                                    Content="Add new item"
+                                    IsEnabled="{Binding IsAddingItemEnabled, Source={StaticResource ViewModel}}" 
+                                    Command="{Binding AddNewItemCommand, Source={StaticResource ViewModel}}"/>
+                                    <ScrollViewer x:Name="PART_ScrollViewer"
+                                    Grid.Row="1"
+                                    Padding="0 1 0 0"
+                                    BorderThickness="0"
+                                    VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                    HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    telerik1:ScrollViewerExtensions.EnableMouseWheel="True">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Popup>
+                </Grid>
+            </ControlTemplate>
+            <Style x:Key="CustomRadComboBoxStyle" TargetType="telerik:RadComboBox" BasedOn="{StaticResource RadComboBoxStyle}">
+                <Setter Property="EditableTemplate" Value="{StaticResource CustomEditableComboBox}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
