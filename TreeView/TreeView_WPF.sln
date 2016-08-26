@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BringIntoView_WPF", "BringIntoView\BringIntoView_WPF.csproj", "{70337B65-C3A0-41A6-8C54-D41325DE1595}"
 EndProject
@@ -25,8 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisual_WPF", "Cus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuttleControl_WPF", "ShuttleControl\ShuttleControl_WPF.csproj", "{3DB4640F-76CD-488D-A0DD-EB720C381DF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowTooltipWhenNodeIsClipped_WPF", "ShowTooltipWhenNodeIsClipped\ShowTooltipWhenNodeIsClipped_WPF.csproj", "{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -146,8 +147,21 @@ Global
 		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3DB4640F-76CD-488D-A0DD-EB720C381DF7}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A8801D7-79A0-4BF8-8AE5-1CBC99219BAF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal
