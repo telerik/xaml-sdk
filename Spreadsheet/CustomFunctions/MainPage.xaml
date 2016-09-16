@@ -1673,21 +1673,23 @@
 
             <telerik:RadRibbonTab Header="Review">
                 <telerik:RadRibbonGroup Header="Changes">
-                    <spreadsheetControls:ProtectionButton DataContext="{Binding Path=CommandDescriptors, ElementName=radSpreadsheet}"
-                                                          CustomCommand="{Binding Path=ToggleSheetProtection.Command}"
-                                                          SelectedValue="{Binding Path=ToggleSheetProtection.SelectedValue}"
-                                                          IsCommandEnabled="{Binding Path=ToggleSheetProtection.IsEnabled}"
-                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorksheet.png, IconSources={StaticResource IconPaths}}" 
-                                                          telerik:ScreenTip.Title="Protect Sheet"
-                                                          telerik:ScreenTip.Description="Prevent unwanted changes from others by limiting their ability to edit."/>
+                    <telerik:RadRibbonButton 
+                        Command="{Binding Path=ToggleSheetProtection.Command}"
+                        IsEnabled="{Binding Path=ToggleSheetProtection.IsEnabled}"
+                        LargeImage="{telerik:IconResource IconRelativePath=32/protectWorksheet.png, IconSources={StaticResource IconPaths}}"
+                        Text="{Binding Path=ToggleSheetProtection.SelectedValue}"
+                        Size="Large"
+                        telerik:ScreenTip.Title="Protect Sheet"
+                        telerik:ScreenTip.Description="Prevent unwanted changes from others by limiting their ability to edit." />
 
-                    <spreadsheetControls:ProtectionButton DataContext="{Binding Path=CommandDescriptors, ElementName=radSpreadsheet}"
-                                                          CustomCommand="{Binding Path=ToggleWorkbookProtection.Command}"
-                                                          SelectedValue="{Binding Path=ToggleWorkbookProtection.SelectedValue}"
-                                                          IsCommandEnabled="{Binding Path=ToggleWorkbookProtection.IsEnabled}"
-                                                          Image="{telerik:IconResource IconRelativePath=32/protectWorkbook.png, IconSources={StaticResource IconPaths}}"
-                                                          telerik:ScreenTip.Title="Protect Workbook"
-                                                          telerik:ScreenTip.Description="Keep others from making structural changes to your workbook, such as moving, deleting or adding sheets."/>
+                    <telerik:RadRibbonButton 
+                        Command="{Binding Path=ToggleWorkbookProtection.Command}"
+                        IsEnabled="{Binding Path=ToggleWorkbookProtection.IsEnabled}"
+                        LargeImage="{telerik:IconResource IconRelativePath=32/protectWorkbook.png, IconSources={StaticResource IconPaths}}"
+                        Text="{Binding Path=ToggleWorkbookProtection.SelectedValue}"
+                        Size="Large"
+                        telerik:ScreenTip.Title="Protect Workbook"
+                        telerik:ScreenTip.Description="Keep others from making structural changes to your workbook, such as moving, deleting or adding sheets." />
 
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>

@@ -632,38 +632,47 @@
                     </telerik:RadRibbonDropDownButton>
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding ChangeSectionColumnsCommand}" telerik:ScreenTip.Description="Split your text on two or more columns." LargeImage="{telerik:IconResource IconRelativePath=SectionColumns/TwoLarge.png, IconSources={StaticResource IconSources}}" Size="Large" Text="Columns" telerik:ScreenTip.Title="Add or Remove Columns">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
-                            <telerik:RadGallery Height="270" ItemWidth="150" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionColumnsCommand}" ViewportWidth="150">
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/One.png, IconSources={StaticResource IconSources}}" Stretch="None" Width="23"/>
-                                        <TextBlock FontWeight="Bold" Margin="5 0" Text="One" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Two.png, IconSources={StaticResource IconSources}}" Stretch="None" Width="23"/>
-                                        <TextBlock FontWeight="Bold" Margin="5 0" Text="Two" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Three.png, IconSources={StaticResource IconSources}}" Stretch="None" Width="23"/>
-                                        <TextBlock FontWeight="Bold" Margin="5 0" Text="Three" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Left.png, IconSources={StaticResource IconSources}}" Stretch="None" Width="23"/>
-                                        <TextBlock FontWeight="Bold" Margin="5 0" Text="Left" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Right.png, IconSources={StaticResource IconSources}}" Stretch="None" Width="23"/>
-                                        <TextBlock FontWeight="Bold" Margin="5 0" Text="Right" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                            </telerik:RadGallery>
+                            <StackPanel>
+                                <telerik:RadGallery Height="270" ItemWidth="150" ItemHeight="54" 
+                                                telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionColumnsCommand}" 
+                                                ViewportWidth="150">
+                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/One.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
+                                            <TextBlock FontWeight="Bold" Text="One" VerticalAlignment="Center" Margin="5 0"/>
+                                        </StackPanel>
+                                    </telerik:RadGalleryItem>
+                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Two.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
+                                            <TextBlock FontWeight="Bold" Text="Two" VerticalAlignment="Center" Margin="5 0"/>
+                                        </StackPanel>
+                                    </telerik:RadGalleryItem>
+                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Three.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
+                                            <TextBlock FontWeight="Bold" Text="Three" VerticalAlignment="Center" Margin="5 0"/>
+                                        </StackPanel>
+                                    </telerik:RadGalleryItem>
+                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Left.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
+                                            <TextBlock FontWeight="Bold" Text="Left" VerticalAlignment="Center" Margin="5 0"/>
+                                        </StackPanel>
+                                    </telerik:RadGalleryItem>
+                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Right.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
+                                            <TextBlock FontWeight="Bold" Text="Right" VerticalAlignment="Center" Margin="5 0"/>
+                                        </StackPanel>
+                                    </telerik:RadGalleryItem>
+                                </telerik:RadGallery>
+                                <telerik:RadMenuItem IsSeparator="True"/>
+                                <telerik:RadRibbonButton telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ShowSectionColumnsDialogCommand}" 
+                                                         SmallImage="{telerik:IconResource IconRelativePath=SectionColumns/MoreColumns.png, IconSources={StaticResource IconSources}}" 
+                                                         HorizontalAlignment="Stretch" 
+                                                         Size="Medium" Text="More Columns..."/>
+                            </StackPanel>
                         </telerik:RadRibbonDropDownButton.DropDownContent>
                     </telerik:RadRibbonDropDownButton>
                     <StackPanel>
@@ -692,11 +701,17 @@
                                         </telerik:RadGalleryItem>
                                     </telerik:RadGallery>
                                     <telerik:RadGroupHeader Content="Section Breaks"/>
-                                    <telerik:RadGallery Height="162" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSectionBreakCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <telerik:RadGallery Height="216" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSectionBreakCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="NextPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/NextPageSectionBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
                                                 <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                        <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="Continuous">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="{telerik:IconResource IconRelativePath=32/ContinuousSectionBreak.png,IconSources={StaticResource IconSources}}" Stretch="None"/>
+                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="EvenPage">

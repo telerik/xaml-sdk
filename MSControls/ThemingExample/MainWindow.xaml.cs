@@ -250,5 +250,49 @@ namespace Theming
 			VisualStudio2013Palette.LoadPreset(VisualStudio2013Palette.ColorVariation.Blue);
 			this.container.Background = new SolidColorBrush(Colors.White);
 		}
+
+        private void Green_Light_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Green;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Green;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            GreenPalette.LoadPreset(GreenPalette.ColorVariation.Light);
+            this.container.Background = new SolidColorBrush(Colors.White);
+        }
+
+        private void Green_Dark_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Green;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Green;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            GreenPalette.LoadPreset(GreenPalette.ColorVariation.Dark);
+            this.container.Background = new SolidColorBrush() { Color = Color.FromArgb(255, 45, 45, 48) };
+        }
+
+        private void Office2016_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Office2016;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            this.container.Background = new SolidColorBrush(Colors.White);
+        }
 	}
 }

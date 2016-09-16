@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConnectorsTool_SL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRootsInSingleTreeLayout_SL", "MultipleRootsInSingleTreeLayout\MultipleRootsInSingleTreeLayout_SL.csproj", "{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortTreeLayoutShapes_SL", "SortTreeLayoutShapes\SortTreeLayoutShapes_SL.csproj", "{E647ACCC-44CE-45EA-91CF-A5C178FF482C}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -264,6 +266,16 @@ Global
 		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C85C23DB-CCCB-41ED-8D3B-E364A1BE50BF}.Release|x86.ActiveCfg = Release|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E647ACCC-44CE-45EA-91CF-A5C178FF482C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

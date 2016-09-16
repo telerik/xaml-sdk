@@ -633,38 +633,45 @@
                             </telerik:RadRibbonDropDownButton>
                         <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding ChangeSectionColumnsCommand}" telerik:ScreenTip.Description="Split your text on two or more columns." LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/TwoLarge.png" Size="Large" Text="Columns" telerik:ScreenTip.Title="Add or Remove Columns">
                             <telerik:RadRibbonDropDownButton.DropDownContent>
-                                <telerik:RadGallery Height="270" ItemWidth="150" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionColumnsCommand}" ViewportWidth="150">
-                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/One.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="One" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </telerik:RadGalleryItem>
-                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Two.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Two" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </telerik:RadGalleryItem>
-                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Three.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Three" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </telerik:RadGalleryItem>
-                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Left.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Left" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </telerik:RadGalleryItem>
-                                    <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Right.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Right" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </telerik:RadGalleryItem>
-                                </telerik:RadGallery>
+                                <StackPanel>
+                                    <telerik:RadGallery Height="270" ItemWidth="150" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeSectionColumnsCommand}" ViewportWidth="150">
+                                        <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/One.png" Stretch="None" Width="23"/>
+                                                <TextBlock FontWeight="Bold" Margin="5 0" Text="One" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                        <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Two.png" Stretch="None" Width="23"/>
+                                                <TextBlock FontWeight="Bold" Margin="5 0" Text="Two" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                        <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Three.png" Stretch="None" Width="23"/>
+                                                <TextBlock FontWeight="Bold" Margin="5 0" Text="Three" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                        <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Left.png" Stretch="None" Width="23"/>
+                                                <TextBlock FontWeight="Bold" Margin="5 0" Text="Left" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                        <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Right.png" Stretch="None" Width="23"/>
+                                                <TextBlock FontWeight="Bold" Margin="5 0" Text="Right" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </telerik:RadGalleryItem>
+                                    </telerik:RadGallery>
+                                    <telerik:RadMenuItem IsSeparator="True"/>
+                                    <telerik:RadRibbonButton telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ShowSectionColumnsDialogCommand}" 
+                                                         SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/MoreColumns.png" 
+                                                         HorizontalAlignment="Stretch" 
+                                                         Size="Medium" Text="More Columns..."/>
+                                </StackPanel>
                             </telerik:RadRibbonDropDownButton.DropDownContent>
                         </telerik:RadRibbonDropDownButton>
                         <StackPanel>
@@ -693,11 +700,17 @@
                                             </telerik:RadGalleryItem>
                                         </telerik:RadGallery>
                                         <telerik:RadGroupHeader Content="Section Breaks"/>
-                                        <telerik:RadGallery Height="162" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSectionBreakCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                        <telerik:RadGallery Height="216" ItemHeight="54" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSectionBreakCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                             <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="NextPage">
                                                 <StackPanel Orientation="Horizontal">
                                                     <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/NextPageSectionBreak.png" Stretch="None"/>
                                                     <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </telerik:RadGalleryItem>
+                                            <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="Continuous">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/NextPageSectionBreak.png" Stretch="None"/>
+                                                    <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
                                                 </StackPanel>
                                             </telerik:RadGalleryItem>
                                             <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="EvenPage">

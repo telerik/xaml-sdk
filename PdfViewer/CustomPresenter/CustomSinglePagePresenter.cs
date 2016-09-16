@@ -45,15 +45,6 @@ namespace CustomPresenter
         {
             get { return this.pagesLayoutManager; }
         }
-         
-        protected override IEnumerable<FixedPageLayoutInfo> VisiblePages
-        {
-            get 
-            { 
-
-                return new List<FixedPageLayoutInfo>() { this.visiblePage }; 
-            }
-        }
 
         private SinglePageInfo CurrentSinglePageInfo
         {
@@ -148,7 +139,8 @@ namespace CustomPresenter
 
             this.lastViewportHeight = ViewportSize.Height;
             this.lastVerticalScrollOffset = this.Owner.VerticalScrollOffset;
-             
+
+            this.VisiblePages = this.visiblePage == null ? Enumerable.Empty<FixedPageLayoutInfo>() : new FixedPageLayoutInfo[] { this.visiblePage };
             this.UpdateVisiblePage(this.visiblePage);
 
             return base.ArrangeOverride(arrangeBounds);

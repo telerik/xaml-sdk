@@ -1,0 +1,1 @@
+NHunspell is licensed under: GPL/LGPL/MPL. Free use in commercial applications is permitted according to the LGPL and MPL licenses. Your commercial application can link against the NHunspell DLLs.

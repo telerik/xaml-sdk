@@ -1,2 +1,4 @@
 ##Customization _ MVVM##
 Telerik Menu allows full customization of its items. In this example, thanks to the MVVM patterns and the custom style selectors, the submenu items represent rich content visualizing different view models.
+
+<keywords:ItemContainerStyleSelector, ItemContainerStyle, submenu, ViewModel>
