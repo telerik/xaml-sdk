@@ -1,4 +1,4 @@
 ##Export UI Element##
-In this sample we demonstrate how you can use the Telerik Documents library to export UI elements to pdf format.
+This sample demonstrates how you can use RadPdfProcessing to export UI elements to PDF. It provides a "framework" of renderers which can be easily used/extended to export arbitrary UI elements to PDF document.
 
 <keywords: xaml,pdf>
