@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddHeaderIcon_WPF", "AddHea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondLevelItemsStyledLikeTopLevelItems_WPF", "SecondLevelItemsStyledLikeTopLevelItems\SecondLevelItemsStyledLikeTopLevelItems_WPF.csproj", "{244E441B-99CC-435A-80DC-5AD8A7306297}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdjustPositionOfPanelBarItemsNoScrollBar", "AdjustPositionOfPanelBarItemsNoScrollBar\AdjustPositionOfPanelBarItemsNoScrollBar.csproj", "{95C813AA-A222-40CE-824D-8CC34ACCEC09}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{244E441B-99CC-435A-80DC-5AD8A7306297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{244E441B-99CC-435A-80DC-5AD8A7306297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{244E441B-99CC-435A-80DC-5AD8A7306297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C813AA-A222-40CE-824D-8CC34ACCEC09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C813AA-A222-40CE-824D-8CC34ACCEC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C813AA-A222-40CE-824D-8CC34ACCEC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C813AA-A222-40CE-824D-8CC34ACCEC09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
