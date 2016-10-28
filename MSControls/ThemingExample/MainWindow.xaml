@@ -133,7 +133,7 @@
 						</ScrollViewer>
 					</Grid>
 					<telerik:Label Margin="28,0,0,7" FontFamily="Segoe UI" VerticalAlignment="Bottom" FontSize="14" Content="StatusBar"/>
-					<StatusBar Grid.Row="2" Grid.ColumnSpan="3" Height="28">
+					<StatusBar Grid.Row="2" Grid.ColumnSpan="3">
 						<StatusBarItem>
 							<telerik:Label Content="20 Items" FontFamily="Segoe UI" FontSize="12" Margin="24,0,0,0"/>
 						</StatusBarItem>

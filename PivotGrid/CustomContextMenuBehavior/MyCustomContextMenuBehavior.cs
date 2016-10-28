@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -69,7 +70,7 @@ namespace CustomContextMenuBehavior
 
                     var groupDesc = obj as PropertyAggregateDescription;
                     selector.PropertyName = groupDesc.PropertyName;
-                    selector.LimitValue = double.Parse(e.PromptResult);
+                    selector.LimitValue = double.Parse(e.PromptResult, CultureInfo.InvariantCulture);
 
                     this.Pivot.CellTemplateSelector = null;
                     this.Pivot.CellTemplateSelector = selector;

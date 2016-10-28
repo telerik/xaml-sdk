@@ -572,31 +572,31 @@
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Normal">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginNormal.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Normal" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Normal" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Narrow">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginNarrow.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Narrow" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Narrow" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Moderate">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginModerate.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Moderate" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Moderate" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Wide">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginWide.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Wide" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Wide" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Office2003">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginNormal.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Office2003" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office2003" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                             </telerik:RadGallery>
@@ -611,7 +611,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationPortrait.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Portrait" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Portrait" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -620,7 +620,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationLandscape.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Landscape" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Landscape" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -629,7 +629,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate180.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Rotate 180" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Rotate 180" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -638,7 +638,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate270.png" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Rotate 270" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Rotate 270" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                             </telerik:RadGallery>
@@ -651,31 +651,31 @@
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/One.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="One" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5 0" Text="One" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Two.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Two" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5 0" Text="Two" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Three.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Three" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5 0" Text="Three" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Left.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Left" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5 0" Text="Left" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/SectionColumns/Right.png" Stretch="None" Width="23"/>
-                                            <TextBlock FontWeight="Bold" Margin="5 0" Text="Right" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5 0" Text="Right" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                 </telerik:RadGallery>
@@ -696,19 +696,19 @@
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="PageBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="ColumnBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/ColumnBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Column" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Column" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="LineBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/LineBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Text Wrapping" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Text Wrapping" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                     </telerik:RadGallery>
@@ -717,25 +717,25 @@
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="NextPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/NextPageSectionBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="Continuous">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/ContinuousSectionBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="EvenPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/EvenPageSectionBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Even Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Even Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="OddPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/OddPageSectionBreak.png" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Odd Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Odd Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                     </telerik:RadGallery>

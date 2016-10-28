@@ -577,31 +577,31 @@
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Normal">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=PageMarginNormal.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Normal" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Normal" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Narrow">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=PageMarginNarrow.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Narrow" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Narrow" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Moderate">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=PageMarginModerate.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Moderate" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Moderate" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Wide">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=PageMarginWide.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Wide" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Wide" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Office2003">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=PageMarginNormal.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Office2003" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Office2003" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                             </telerik:RadGallery>
@@ -616,7 +616,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=32/PageOrientationPortrait.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Portrait" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Portrait" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -625,7 +625,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=32/PageOrientationLandscape.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Landscape" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Landscape" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -634,7 +634,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=32/PageOrientationRotate180.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Rotate 180" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Rotate 180" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
@@ -643,7 +643,7 @@
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{telerik:IconResource IconRelativePath=32/PageOrientationRotate270.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                        <TextBlock FontWeight="Bold" Text="Rotate 270" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Rotate 270" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
                             </telerik:RadGallery>
@@ -658,31 +658,31 @@
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="One">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/One.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
-                                            <TextBlock FontWeight="Bold" Text="One" VerticalAlignment="Center" Margin="5 0"/>
+                                            <TextBlock Text="One" VerticalAlignment="Center" Margin="5 0"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Two">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Two.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
-                                            <TextBlock FontWeight="Bold" Text="Two" VerticalAlignment="Center" Margin="5 0"/>
+                                            <TextBlock Text="Two" VerticalAlignment="Center" Margin="5 0"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Three">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Three.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
-                                            <TextBlock FontWeight="Bold" Text="Three" VerticalAlignment="Center" Margin="5 0"/>
+                                            <TextBlock Text="Three" VerticalAlignment="Center" Margin="5 0"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Left">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Left.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
-                                            <TextBlock FontWeight="Bold" Text="Left" VerticalAlignment="Center" Margin="5 0"/>
+                                            <TextBlock Text="Left" VerticalAlignment="Center" Margin="5 0"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Right">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="{telerik:IconResource IconRelativePath=SectionColumns/Right.png,IconSources={StaticResource IconSources}}" Width="23" Stretch="None"/>
-                                            <TextBlock FontWeight="Bold" Text="Right" VerticalAlignment="Center" Margin="5 0"/>
+                                            <TextBlock Text="Right" VerticalAlignment="Center" Margin="5 0"/>
                                         </StackPanel>
                                     </telerik:RadGalleryItem>
                                 </telerik:RadGallery>
@@ -703,19 +703,19 @@
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="PageBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/PageBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="ColumnBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/ColumnBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Column" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Column" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="LineBreak">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/LineBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Text Wrapping" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Text Wrapping" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                     </telerik:RadGallery>
@@ -724,25 +724,25 @@
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="NextPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/NextPageSectionBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Next Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="Continuous">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/ContinuousSectionBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Continuous" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="EvenPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/EvenPageSectionBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Even Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Even Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                         <telerik:RadGalleryItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="OddPage">
                                             <StackPanel Orientation="Horizontal">
                                                 <Image Source="{telerik:IconResource IconRelativePath=32/OddPageSectionBreak.png, IconSources={StaticResource IconSources}}" Stretch="None"/>
-                                                <TextBlock FontWeight="Bold" Margin="8 0 0 0" Text="Odd Page" VerticalAlignment="Center"/>
+                                                <TextBlock Margin="8 0 0 0" Text="Odd Page" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </telerik:RadGalleryItem>
                                     </telerik:RadGallery>

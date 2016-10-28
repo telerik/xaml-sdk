@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.IO.IsolatedStorage;
 using System.Linq;
@@ -53,10 +54,10 @@ namespace SaveNormalSizeAndPosition
                             {
                                 this.Dispatcher.BeginInvoke(new Action(() =>
                                     {
-                                        this.Left = Double.Parse(settings[0]);
-                                        this.Top = Double.Parse(settings[1]);
-                                        this.Width = Double.Parse(settings[2]);
-                                        this.Height = Double.Parse(settings[3]);
+                                        this.Left = Double.Parse(settings[0], CultureInfo.InvariantCulture);
+                                        this.Top = Double.Parse(settings[1], CultureInfo.InvariantCulture);
+                                        this.Width = Double.Parse(settings[2], CultureInfo.InvariantCulture);
+                                        this.Height = Double.Parse(settings[3], CultureInfo.InvariantCulture);
                                     }));
                             }
                         }

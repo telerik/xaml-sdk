@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Telerik.Windows.Controls.GanttView;
@@ -88,10 +89,10 @@ namespace ImportExportFromAndToMSProject
                     ganttTask.Title = t.Element(xnamespace + "Name").Value;
                 }
                 ganttTask.UniqueId = t.Element(xnamespace + "UID").Value;
-                ganttTask.Start = DateTime.Parse(t.Element(xnamespace + "Start").Value);
-                ganttTask.End = DateTime.Parse(t.Element(xnamespace + "Finish").Value);
+                ganttTask.Start = DateTime.Parse(t.Element(xnamespace + "Start").Value, CultureInfo.InvariantCulture);
+                ganttTask.End = DateTime.Parse(t.Element(xnamespace + "Finish").Value, CultureInfo.InvariantCulture);
                 ganttTask.IsMilestone = t.Element(xnamespace + "Milestone").Value == "1";
-                ganttTask.Progress = Double.Parse(t.Element(xnamespace + "PercentComplete").Value);
+                ganttTask.Progress = Double.Parse(t.Element(xnamespace + "PercentComplete").Value, CultureInfo.InvariantCulture);
                 string outlineNumber = null;
                 if (t.Element(xnamespace + "OutlineNumber") != null)
                 {

@@ -10,12 +10,10 @@
     <Grid DataContext="{StaticResource MyViewModel}" x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
         <telerik:RadGridView Grid.Row="0" 
                              Name="clubsGrid" 
+                             CanUserInsertRows="False"
                              ItemsSource="{Binding Clubs}"
                              GroupRenderMode="Flat"
                              ShowSearchPanel="True"
