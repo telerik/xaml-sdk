@@ -21,7 +21,7 @@ namespace GenerateDocuments
             string filePath = String.Format("../../Files/{0}.xlsx", fileName);
             GenerateDocument(filePath);            
 
-            Console.Write("Want to opent the document? (Y/N)");
+            Console.Write("Want to open the document? (Y/N)");
             var readKey = Console.ReadKey();
             if (readKey.KeyChar == 'Y' || readKey.KeyChar == 'y')
             {
