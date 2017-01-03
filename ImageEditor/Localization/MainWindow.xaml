@@ -47,7 +47,7 @@
                         </telerik:ImageToolItem.CommandParameter>
                     </telerik:ImageToolItem>
 
-                    <telerik:ImageToolItem ImageKey="Draw" telerik:LocalizationManager.ResourceKey="ImageEditor_Draw" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                    <telerik:ImageToolItem ImageKey="Draw" telerik:LocalizationManager.ResourceKey="ImageEditor_DrawTool" Command="commands:ImageEditorRoutedCommands.ExecuteTool">
                         <telerik:ImageToolItem.CommandParameter>
                             <tools:DrawTool />
                         </telerik:ImageToolItem.CommandParameter>
