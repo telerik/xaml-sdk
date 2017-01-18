@@ -16,7 +16,7 @@ namespace ViewModesDisableCommand
         {
             string bingMapsKey = this.BingMapsKey.Text;
 
-            BingMapProvider provider = new BingMapProvider(MapMode.Aerial, true, bingMapsKey);
+            BingRestMapProvider provider = new BingRestMapProvider(MapMode.Aerial, true, bingMapsKey);
 
             this.DisableCommand(provider, typeof(BingMapBirdsEyeSource).FullName);
             this.DisableCommand(provider, "ChangeModeCommand");

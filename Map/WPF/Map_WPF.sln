@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapTrafficProvider", "ProvidersBingMapTrafficProvider\ProvidersBingMapTrafficProvider.csproj", "{A26B9D88-5600-424C-9020-F034A157DCC6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersOpenStreetMapProvider", "ProvidersOpenStreetMapProvider\ProvidersOpenStreetMapProvider.csproj", "{449D06AB-894C-4685-866C-C0AC29B17F1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMap", "MiniMap\MiniMap.csproj", "{7F1DD88D-35BD-431A-8A7B-1EFA0EA3BC6C}"
@@ -172,10 +170,6 @@ Global
 		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A26B9D88-5600-424C-9020-F034A157DCC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A26B9D88-5600-424C-9020-F034A157DCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A26B9D88-5600-424C-9020-F034A157DCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A26B9D88-5600-424C-9020-F034A157DCC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU

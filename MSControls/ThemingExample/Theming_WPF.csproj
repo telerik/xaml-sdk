@@ -54,6 +54,10 @@
     <Reference Include="Telerik.Windows.Controls">
       <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office2016Touch">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office2016Touch.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Black">
       <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
@@ -91,10 +95,10 @@
       <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Windows8Touch.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Green">
-        <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Green.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Green.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office2016">
-        <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office2016.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office2016.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

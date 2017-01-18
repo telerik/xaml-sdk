@@ -8,20 +8,27 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <telerik:RadMap Name="radMap"
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center"  x:Name="initializationArea">
+            <TextBlock Text="Please set a valid Bing Maps Key:" Foreground="Red" FontSize="18" />
+            <TextBox x:Name="BingMapsKey" Width="500" Margin="10, 0" BorderBrush="Red" Height="30"/>
+            <Button Click="Button_Click_1" Content="Set Bing Maps Key" />
+        </StackPanel>
+
+        <telerik:RadMap Name="radMap" Grid.Row="1"
                         Center="47,15"
                         ZoomLevel="5" 
                         MapMouseClick="MapMouseClick">
-            <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
-            </telerik:RadMap.Provider>
             <telerik:VisualizationLayer Name="wayPointsLayer" />
             <telerik:VisualizationLayer Name="routeLayer"
                                         UseBitmapCache="False"/>
         </telerik:RadMap>
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="20">
             <telerik:RadButton Name="findRouteButton" 
                                Content="Find Route" 
                                Click="FindRouteClicked" 
@@ -31,6 +38,17 @@
                                Content="Clear Route" 
                                Click="ClearRouteClicked" 
                                Margin="0,2" />
+            
+            <TextBlock Text="Mode: " FontWeight="Bold" Margin="0 20 0 0"/>
+            <ComboBox x:Name="modeCombo" SelectedIndex="0"/>
+
+
+            <TextBlock Text="Route Optimization:" FontWeight="Bold" Margin="0 20 0 0"/>
+            <ComboBox x:Name="routeOptimizatioCombo" SelectedIndex="1"/>
+
+            <TextBlock Text="Route Avoidance:" FontWeight="Bold" Margin="0 20 0 0"/>
+            <ComboBox x:Name="routeAvoidanceCombo" SelectedIndex="0"/>
+
         </StackPanel>
     </Grid>
 </Window>

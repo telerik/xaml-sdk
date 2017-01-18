@@ -3,4 +3,4 @@ The RadMap allows you to bring the map in several view modes. After setting the 
 
 To see and run the example, please use the 'Open in VS' button and execute the project inside Visual Studio.
 
-<keywords:MapMode, Arial>
+<keywords:MapMode, Arial, bingrest>

@@ -49,7 +49,12 @@
                             </tools:ShapeTool>
                         </telerik:ImageToolItem.CommandParameter>
                     </telerik:ImageToolItem>
-                    
+                    <telerik:ImageToolItem ImageKey="Pan" telerik:LocalizationManager.ResourceKey="ImageEditor_Pan"
+                                           Command="commands:ImageEditorRoutedCommands.ExecuteTool">
+                        <telerik:ImageToolItem.CommandParameter>
+                            <tools:PanTool />
+                        </telerik:ImageToolItem.CommandParameter>
+                    </telerik:ImageToolItem>
                 </telerik:ImageToolsSection>
                 <telerik:ImageToolsSection Header="Custom Tools">
                     <telerik:ImageToolItem Text="Watermark"  Command="commands:ImageEditorRoutedCommands.ExecuteTool" 

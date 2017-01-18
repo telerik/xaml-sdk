@@ -6,7 +6,7 @@ namespace Geocode
 {
     public partial class MainWindow : Window
     {
-        BingGeocodeProvider geocodeProvider;
+        BingRestMapProvider restProvider;
 
         public MainWindow()
         {
@@ -17,36 +17,47 @@ namespace Geocode
         {
             string bingMapsKey = this.BingMapsKey.Text;
 
-            this.radMap.Provider = new BingMapProvider(MapMode.Aerial, true, bingMapsKey);
-
-            this.geocodeProvider = new BingGeocodeProvider();
-            this.geocodeProvider.ApplicationId = (this.radMap.Provider as BingMapProvider).ApplicationId;
-            this.geocodeProvider.MapControl = this.radMap;
-            this.geocodeProvider.GeocodeCompleted += this.geocodeProvider_GeocodeCompleted;
-
+            this.restProvider = new BingRestMapProvider(MapMode.Aerial, true, bingMapsKey);
+            this.radMap.Provider = this.restProvider;
+            this.restProvider.SearchLocationCompleted += this.restProvider_SearchLocationCompleted;
+            this.restProvider.SearchLocationError += this.restProvider_SearchLocationError;
             this.GeocodeButton.IsEnabled = true;
         }
 
-        private void geocodeProvider_GeocodeCompleted(object sender, GeocodeCompletedEventArgs e)
+        private void restProvider_SearchLocationError(object sender, BingRestSearchLocationErrorEventArgs e)
         {
-            foreach (GeocodeResult result in e.Response.Results)
+            MessageBox.Show(e.Error.ToString());
+        }
+
+        private void restProvider_SearchLocationCompleted(object sender, BingRestSearchLocationCompletedEventArgs e)
+        {
+            double[] bbox = e.Locations[0].BoundingBox;
+            LocationRect rect = new LocationRect(new Location(bbox[2], bbox[1]), new Location(bbox[0], bbox[3]));
+            this.radMap.SetView(rect);
+
+            foreach (Telerik.Windows.Controls.DataVisualization.Map.BingRest.Location location in e.Locations)
             {
-                MessageBox.Show(string.Format("Longitude: {0}, Latitude: {1}, Address: {2}", result.Locations.First().Longitude, result.Locations.First().Latitude, result.DisplayName));
+                var coordinates = location.GeocodePoints[0].Coordinates;
+                double latitude = coordinates[0];
+                double longitude = coordinates[1];
+                MessageBox.Show(string.Format("Longitude: {0}, Latitude: {1}, Address: {2}", longitude, latitude, location.Address.FormattedAddress));
             }
         }
 
         private void GeocodeButton_Click(object sender, RoutedEventArgs e)
         {
-            GeocodeRequest request = new GeocodeRequest();
+            // Search Location by string Query. Geocode.
+            BingRestSearchLocationRequest request = new BingRestSearchLocationRequest();
             request.Query = this.InputBox.Text;
-            this.geocodeProvider.GeocodeAsync(request);
+            this.restProvider.SearchLocationAsync(request);
         }
 
         private void radMap_MapMouseDoubleClick(object sender, MapMouseRoutedEventArgs e)
         {
-            ReverseGeocodeRequest reverseRequest = new ReverseGeocodeRequest();
-            reverseRequest.Location = e.Location;
-            this.geocodeProvider.ReverseGeocodeAsync(reverseRequest);
+            // Search Address by Location. Reversed geocode.
+            BingRestSearchLocationRequest reverseRequest = new BingRestSearchLocationRequest();
+            reverseRequest.Query = e.Location.ToString();
+            this.restProvider.SearchLocationAsync(reverseRequest);
         }
     }
 }

@@ -4,4 +4,4 @@ This example demonstrates how you can disable a specific command for a provider,
 
 To see and run the example, please use the 'Open in VS' button and execute the project inside Visual Studio.
 
-<keywords:BingMapBirdsEyeSource, CommandDescription>
+<keywords:BingMapBirdsEyeSource, CommandDescription, bingrest>

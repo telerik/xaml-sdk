@@ -15,7 +15,7 @@ namespace ProvidersBingMapProvider
         {
             string bingMapsKey = this.BingMapsKey.Text;
 
-            BingMapProvider bingMap = new BingMapProvider(MapMode.Aerial, true, bingMapsKey);
+            BingRestMapProvider bingMap = new BingRestMapProvider(MapMode.Aerial, true, bingMapsKey);
             this.radMap.Provider = bingMap;
         }
     }

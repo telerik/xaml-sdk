@@ -294,5 +294,19 @@ namespace Theming
             });
             this.container.Background = new SolidColorBrush(Colors.White);
         }
+
+        private void Office2016Touch_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Office2016Touch;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Office2016Touch;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            this.container.Background = new SolidColorBrush(Colors.White);
+        }
 	}
 }

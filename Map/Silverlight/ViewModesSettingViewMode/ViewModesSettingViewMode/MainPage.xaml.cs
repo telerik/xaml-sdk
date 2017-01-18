@@ -15,7 +15,7 @@ namespace ViewModesSettingViewMode
         {
             string bingMapsKey = this.BingMapsKey.Text;
 
-            BingMapProvider bingMap = new BingMapProvider();
+            BingRestMapProvider bingMap = new BingRestMapProvider();
 
             bingMap.Mode = MapMode.Aerial;
             bingMap.IsLabelVisible = true;

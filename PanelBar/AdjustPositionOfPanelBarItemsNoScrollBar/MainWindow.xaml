@@ -4,6 +4,8 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
+        <telerik:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+
         <!--top level template-->
         <ControlTemplate TargetType="{x:Type telerik:RadPanelBarItem}" x:Key="TopLevelDefaultTemplate">
             <Grid x:Name="RootElement" SnapsToDevicePixels="True">
@@ -353,16 +355,18 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-
     </Window.Resources>
 
-    <Grid>
-        <telerik:RadPanelBar Width="200" Height="200" ExpandMode="Multiple"
-				             ScrollViewer.VerticalScrollBarVisibility="Disabled"
-                             HorizontalAlignment="Center"
+    <StackPanel>
+        <TextBlock Text="Choose ExpandMode for RadPanelBar:" />
+        <RadioButton Content="Single" IsChecked="{Binding ExpandMode, ElementName=radPanelBar, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Single, Mode=TwoWay}" />
+        <RadioButton Content="Multiple" IsChecked="{Binding ExpandMode, ElementName=radPanelBar, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Multiple, Mode=TwoWay}" />
+
+        <telerik:RadPanelBar x:Name="radPanelBar" MinWidth="200" Height="200" ExpandMode="Single" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                             HorizontalAlignment="Center" Expanded="radPanelBar_Expanded"
 				             VerticalAlignment="Center">
             <telerik:RadPanelBarItem Header="Sample 1">
-                <telerik:RadListBox ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top">
+                <telerik:RadListBox >
                     <TextBlock Text="1" />
                     <TextBlock Text="2" />
                     <TextBlock Text="3" />
@@ -386,7 +390,55 @@
                 </telerik:RadListBox>
             </telerik:RadPanelBarItem>
             <telerik:RadPanelBarItem Header="Sample 2">
-                <telerik:RadListBox ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <telerik:RadListBox >
+                    <TextBlock Text="1" />
+                    <TextBlock Text="2" />
+                    <TextBlock Text="3" />
+                    <TextBlock Text="4" />
+                    <TextBlock Text="5" />
+                    <TextBlock Text="6" />
+                    <TextBlock Text="7" />
+                    <TextBlock Text="8" />
+                    <TextBlock Text="9" />
+                    <TextBlock Text="10" />
+                    <TextBlock Text="11" />
+                    <TextBlock Text="12" />
+                    <TextBlock Text="13" />
+                    <TextBlock Text="14" />
+                    <TextBlock Text="15" />
+                    <TextBlock Text="16" />
+                    <TextBlock Text="17" />
+                    <TextBlock Text="18" />
+                    <TextBlock Text="19" />
+                    <TextBlock Text="20" />
+                </telerik:RadListBox>
+            </telerik:RadPanelBarItem>
+            <telerik:RadPanelBarItem Header="Sample 3">
+                <telerik:RadListBox >
+                    <TextBlock Text="1" />
+                    <TextBlock Text="2" />
+                    <TextBlock Text="3" />
+                    <TextBlock Text="4" />
+                    <TextBlock Text="5" />
+                    <TextBlock Text="6" />
+                    <TextBlock Text="7" />
+                    <TextBlock Text="8" />
+                    <TextBlock Text="9" />
+                    <TextBlock Text="10" />
+                    <TextBlock Text="11" />
+                    <TextBlock Text="12" />
+                    <TextBlock Text="13" />
+                    <TextBlock Text="14" />
+                    <TextBlock Text="15" />
+                    <TextBlock Text="16" />
+                    <TextBlock Text="17" />
+                    <TextBlock Text="18" />
+                    <TextBlock Text="19" />
+                    <TextBlock Text="20" />
+                </telerik:RadListBox>
+            </telerik:RadPanelBarItem>
+            <telerik:RadPanelBarItem Header="Sample 4">
+                <telerik:RadListBox >
                     <TextBlock Text="1" />
                     <TextBlock Text="2" />
                     <TextBlock Text="3" />
@@ -410,5 +462,5 @@
                 </telerik:RadListBox>
             </telerik:RadPanelBarItem>
         </telerik:RadPanelBar>
-    </Grid>
+    </StackPanel>
 </Window>
