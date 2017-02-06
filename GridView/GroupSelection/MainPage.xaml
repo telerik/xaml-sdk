@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:WpfApplication1"
     Height="350" Width="525" xmlns:my="clr-namespace:System;assembly=mscorlib">
 	<Grid>
-		<telerik:RadGridView x:Name="RadGridView1" GroupRenderMode="Flat" ItemsSource="{Binding}" AutoGenerateColumns="False" AutoExpandGroups="True" SelectionMode="Multiple">
+		<telerik:RadGridView x:Name="RadGridView1" GroupRenderMode="Flat" ItemsSource="{Binding}" AutoGenerateColumns="False" AutoExpandGroups="True" SelectionMode="Extended">
 			<telerik:RadGridView.GroupHeaderTemplate>
 				<DataTemplate>
 					<CheckBox local:MyBehavior.IsEnabled="True" IsThreeState="True" />

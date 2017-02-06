@@ -14,42 +14,34 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
-            propertyGrid1.Item = new Employee()
-               {
-                   FirstName = "Sarah",
-                   LastName = "Blake",
-                   Occupation = "Supplied Manager",
-                   StartingDate = new DateTime(2005, 04, 12),
-                   IsMarried = true,
-                   Salary = 3500
-               };
+            this.ResetPropertyGrid();
         }
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
-            this.propertyGrid1.ReadOnlyEditorState = ReadOnlyEditorStates.ReadOnly;
-            ResetItem();
-            this.button1.Content = "ReadOnlyEditorStates: ReadOnly";
+            this.propertyGrid.ReadOnlyEditorState = ReadOnlyEditorStates.ReadOnly;
+            this.ResetPropertyGrid();
+            this.toggleButton.Content = "ReadOnlyEditorState: ReadOnly";
         }
 
         private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
-            this.propertyGrid1.ReadOnlyEditorState = ReadOnlyEditorStates.Disabled;
-            ResetItem();
-            this.button1.Content = "ReadOnlyEditorStates: Disabled";
+            this.propertyGrid.ReadOnlyEditorState = ReadOnlyEditorStates.Disabled;
+            this.ResetPropertyGrid();
+            this.toggleButton.Content = "ReadOnlyEditorState: Disabled";
         }
 
-        private void button1_Indeterminate(object sender, RoutedEventArgs e)
+        private void ToggleButton_Indeterminate(object sender, RoutedEventArgs e)
         {
-            this.propertyGrid1.ReadOnlyEditorState = ReadOnlyEditorStates.Default;
-            ResetItem();
-            this.button1.Content = "ReadOnlyEditorStates: Default";
+            this.propertyGrid.ReadOnlyEditorState = ReadOnlyEditorStates.Default;
+            this.ResetPropertyGrid();
+            this.toggleButton.Content = "ReadOnlyEditorState: Default";
         }
 
-        private void ResetItem()
+        private void ResetPropertyGrid()
         {
-            this.propertyGrid1.Item = null;
-            propertyGrid1.Item = new Employee()
+            this.propertyGrid.Item = null;
+            this.propertyGrid.Item = new Employee()
               {
                   FirstName = "Sarah",
                   LastName = "Blake",

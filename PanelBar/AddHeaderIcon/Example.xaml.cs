@@ -16,9 +16,11 @@ namespace AddHeaderIcon
                 {
                     Header = "Category " + i,
                     ImageSourcePath = "../../Images/" + i + ".png",
-                    Items = new ObservableCollection<string>()
+                    Items = new ObservableCollection<ItemModel>()
                     {
-                        "Item 1", "Item 2", "Item 3", 
+                        new ItemModel() { Content = "Item 1", },
+                        new ItemModel() { Content = "Item 2", },
+                        new ItemModel() { Content = "Item 3", },
                     },
                 });                
             }
@@ -31,6 +33,11 @@ namespace AddHeaderIcon
     {
         public string Header { get; set; }
         public string ImageSourcePath { get; set; }
-        public ObservableCollection<string> Items { get; set; }
+        public ObservableCollection<ItemModel> Items { get; set; }
+    }
+
+    public class ItemModel
+    {
+        public string Content { get; set; }
     }
 }

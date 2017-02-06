@@ -49,7 +49,7 @@ namespace WpfApplication1
 		RadGridView grid = null;
         DependencyPropertyChangedEventHandler dataContextChangedHandler;
         RoutedEventHandler clickHandler;
-        GridViewGroupRow groupRow = null;
+        GroupHeaderRow groupRow = null;
 
 		public MyBehavior(CheckBox source)
 		{
@@ -61,9 +61,9 @@ namespace WpfApplication1
 				{
 					grid = checkBox.ParentOfType<RadGridView>();
                     
-					groupRow = checkBox.ParentOfType<GridViewGroupRow>();
-                    
-					if (grid != null && groupRow != null)
+					groupRow = checkBox.ParentOfType<GroupHeaderRow>();
+
+                    if (grid != null && groupRow != null && groupRow.Group != null)
 					{
                         groupRow.Unloaded += groupRow_Unloaded;
 						this.UpdateIsChecked(groupRow.Group);
@@ -71,9 +71,6 @@ namespace WpfApplication1
 
 					if (grid != null)
 					{
-						grid.SelectionMode = System.Windows.Controls.SelectionMode.Extended;
-						grid.SelectionUnit = GridViewSelectionUnit.FullRow;
-
                         checkBox.Click += clickHandler = (s, e) =>
                         {
                             grid.SelectionChanged -= grid_SelectionChanged;

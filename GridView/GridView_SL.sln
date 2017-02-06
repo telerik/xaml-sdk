@@ -102,8 +102,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFilterControl_SL", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringButtonsStates_SL", "FilteringButtonsStates\FilteringButtonsStates_SL.csproj", "{785C14DD-D531-457E-A569-BDBAC4EC30B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightweightComboBoxColumn_SL", "LightweightComboBoxColumn\LightweightComboBoxColumn_SL.csproj", "{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortGroupByAggregate_SL", "SortGroupByAggregate\SortGroupByAggregate_SL.csproj", "{085BD546-0161-481D-AE4C-442C938E2784}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortGroupByDifferentProperty_SL", "SortGroupByDifferentProperty\SortGroupByDifferentProperty_SL.csproj", "{003C4850-D058-460C-9D92-4ACE24D789B1}"
@@ -617,16 +615,6 @@ Global
 		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{785C14DD-D531-457E-A569-BDBAC4EC30B5}.Release|x86.ActiveCfg = Release|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D7613F17-43BA-4DB6-B1EF-5DF34FDA03C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{085BD546-0161-481D-AE4C-442C938E2784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{085BD546-0161-481D-AE4C-442C938E2784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{085BD546-0161-481D-AE4C-442C938E2784}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

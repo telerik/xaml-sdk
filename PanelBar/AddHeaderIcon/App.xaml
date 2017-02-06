@@ -6,7 +6,7 @@
         <HierarchicalDataTemplate x:Key="headerTemplate" ItemsSource="{Binding Items}">
             <HierarchicalDataTemplate.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}" />
+                    <TextBlock Text="{Binding Content}" />
                 </DataTemplate>
             </HierarchicalDataTemplate.ItemTemplate>
             <StackPanel Orientation="Horizontal" Margin="4">

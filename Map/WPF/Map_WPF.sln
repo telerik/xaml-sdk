@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
 EndProject
@@ -158,6 +158,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerItemsSelection", "VisualizationLayerItemsSelection\VisualizationLayerItemsSelection.csproj", "{5B089555-9F0B-40AC-9581-4D89820DB910}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerShapeSelection", "VisualizationLayerShapeSelection\VisualizationLayerShapeSelection.csproj", "{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Virtualization_And_Wraparound", "WrapAroundAndVirtualization\UI_Virtualization_And_Wraparound.csproj", "{286A10B1-A8F4-468C-944D-871D8E986E93}"
 EndProject
 Global
 	 
@@ -478,8 +480,13 @@ Global
 		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286A10B1-A8F4-468C-944D-871D8E986E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286A10B1-A8F4-468C-944D-871D8E986E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286A10B1-A8F4-468C-944D-871D8E986E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286A10B1-A8F4-468C-944D-871D8E986E93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

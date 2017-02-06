@@ -14,7 +14,6 @@ namespace WpfApplication1
 		public MainWindow()
 		{
 			InitializeComponent();
-			RadGridView1.GroupRenderMode = Telerik.Windows.Controls.GridView.GroupRenderMode.Nested;
 			List<TestClass> items = new List<TestClass>();
 			for (int i = 0; i < 100; i++)
 			{

@@ -8,15 +8,15 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ToggleButton x:Name="button1" 
+        <ToggleButton x:Name="toggleButton" 
                       IsThreeState="True"
                       Checked="ToggleButton_Checked"
-                      Indeterminate="button1_Indeterminate" 
+                      Indeterminate="ToggleButton_Indeterminate" 
                       Unchecked="ToggleButton_Unchecked"  
                       Content="Change PropertyGrid's ReadOnlyEditorState"/>        
-        <telerik:RadPropertyGrid x:Name="propertyGrid1"
+        <telerik:RadPropertyGrid x:Name="propertyGrid"
                                  Grid.Row="1"
-                                 ReadOnlyEditorState="ReadOnly">       
+                                 IsReadOnly="True">       
         </telerik:RadPropertyGrid>
     </Grid>
 </Window>

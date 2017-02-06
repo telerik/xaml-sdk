@@ -17,7 +17,6 @@ namespace GroupSelection_SL
 		public MainPage()
 		{
 			InitializeComponent();
-			RadGridView1.GroupRenderMode = Telerik.Windows.Controls.GridView.GroupRenderMode.Nested;
 			List<TestClass> items = new List<TestClass>();
 			for (int i = 0; i < 100; i++)
 			{
