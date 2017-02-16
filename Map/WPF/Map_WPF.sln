@@ -162,7 +162,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Virtualization_And_Wraparound", "WrapAroundAndVirtualization\UI_Virtualization_And_Wraparound.csproj", "{286A10B1-A8F4-468C-944D-871D8E986E93}"
 EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

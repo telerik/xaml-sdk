@@ -32,21 +32,16 @@ namespace WpfApplication1
                 var headerCell = clickedElement.ParentOfType<GridViewHeaderCell>();
                 if (headerCell != null)
                 {
+                    var column = headerCell.Column;
 
-                    foreach (var item in this.clubsGrid.Items)
+                    if (column.IsSelected)
                     {
-                        var cellInfo = new GridViewCellInfo(item, headerCell.Column, this.clubsGrid);
-
-                        if (!this.clubsGrid.SelectedCells.Contains(cellInfo))
-                        {
-                            this.clubsGrid.SelectedCells.Add(cellInfo);
-                        }
-                        else
-                        {
-                            this.clubsGrid.SelectedCells.Remove(cellInfo);
-                        }
+                        column.IsSelected = false;
                     }
-
+                    else
+                    {
+                        column.IsSelected = true;
+                    }
                 }
             }
         }
@@ -56,17 +51,9 @@ namespace WpfApplication1
             var headerCell = (sender as CheckBox).ParentOfType<GridViewHeaderCell>();
             if (headerCell != null)
             {
-                foreach (var item in this.clubsGrid2.Items)
-                {
-                    var cellInfo = new GridViewCellInfo(item, headerCell.Column, this.clubsGrid2);
-
-                    if (!this.clubsGrid2.SelectedCells.Contains(cellInfo))
-                    {
-                        this.clubsGrid2.SelectedCells.Add(cellInfo);
-                    }
-                }
+                var column = headerCell.Column;
+                this.clubsGrid2.SelectCellRegion(new CellRegion(column.DisplayIndex, 0, 1, this.clubsGrid2.Items.Count));
             }
-
         }
 
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -74,15 +61,8 @@ namespace WpfApplication1
             var headerCell = (sender as CheckBox).ParentOfType<GridViewHeaderCell>();
             if (headerCell != null)
             {
-                foreach (var item in this.clubsGrid2.Items)
-                {
-                    var cellInfo = new GridViewCellInfo(item, headerCell.Column, this.clubsGrid2);
-
-                    if (this.clubsGrid2.SelectedCells.Contains(cellInfo))
-                    {
-                        this.clubsGrid2.SelectedCells.Remove(cellInfo);
-                    }
-                }
+                var column = headerCell.Column;
+                this.clubsGrid2.UnselectCellRegion(new CellRegion(column.DisplayIndex, 0, 1, this.clubsGrid2.Items.Count));
             }
         }
     }
