@@ -105,6 +105,9 @@
     <Reference Include="Telerik.Windows.Themes.Vista">
       <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Vista.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Themes.VisualStudio2013">
+      <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.VisualStudio2013.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Themes.Windows7">
       <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Windows7.dll</HintPath>
     </Reference>

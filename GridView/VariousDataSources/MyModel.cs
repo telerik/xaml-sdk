@@ -8,16 +8,14 @@ using Telerik.Windows.Data;
 using System.ComponentModel;
 using System.Xml.Linq;
 using System.Xml;
+using System.Data;
 
 namespace VariousDataSources
 {
     public class MyModel : ViewModelBase
     {
-        private readonly NorthwindEntities northwind;
-
         public MyModel()
         {
-            this.northwind = new NorthwindEntities();
         }
 
         object _data;
@@ -64,13 +62,7 @@ namespace VariousDataSources
             {
                 case BindingType.ObservableCollection:
                     {
-                        return this.northwind.Customers;
-                    }
-                case BindingType.ICollectionView:
-                    {
-                        var cvs = new CollectionViewSource();
-                        cvs.Source = this.northwind.Order_Details;
-                        return cvs.View;
+                        return Club.GetClubs();
                     }
                 case BindingType.DynamicData:
                     {
@@ -89,12 +81,10 @@ namespace VariousDataSources
 
                         return data;
                     }
-#if !SILVERLIGHT
                 case BindingType.DataTable:
                     {
-                        return GetDataTable();
+                        return GetDataTable().DefaultView;
                     }
-#endif
                 case BindingType.Xml:
                     {
                         return GetXmlData();
@@ -119,31 +109,6 @@ namespace VariousDataSources
                 return _bindingTypes;
             }
         }
-
-#if !SILVERLIGHT
-        private static System.Data.DataTable GetDataTable()
-        {
-            var tableCustomers = new System.Data.DataTable();
-            tableCustomers.Columns.Add(new System.Data.DataColumn("CustomerID", typeof(string)));
-            tableCustomers.Columns.Add(new System.Data.DataColumn("CompanyName", typeof(string)));
-            tableCustomers.Columns.Add(new System.Data.DataColumn("ContactName", typeof(string)));
-            tableCustomers.Columns.Add(new System.Data.DataColumn("City", typeof(string)));
-            tableCustomers.Columns.Add(new System.Data.DataColumn("Country", typeof(string)));
-
-            foreach (Customer c in new NorthwindEntities().Customers)
-            {
-                var row = tableCustomers.NewRow();
-                row["CustomerID"] = c.CustomerID;
-                row["CompanyName"] = c.CompanyName;
-                row["ContactName"] = c.ContactName;
-                row["City"] = c.City;
-                row["Country"] = c.Country;
-
-                tableCustomers.Rows.Add(row);
-            }
-            return tableCustomers;
-        }
-#endif
         private static object GetXmlData()
         {
             var doc = XDocument.Parse(@"<?xml version=""1.0"" encoding=""utf-8"" ?>
@@ -198,6 +163,58 @@ namespace VariousDataSources
 
             return dict;
         }
+
+        private static DataTable GetDataTable()
+        {
+            // Here we create a DataTable with four columns.
+            DataTable table = new DataTable();
+            table.Columns.Add("Dosage", typeof(int));
+            table.Columns.Add("Drug", typeof(string));
+            table.Columns.Add("Patient", typeof(string));
+            table.Columns.Add("Date", typeof(DateTime));
+
+            // Here we add five DataRows.
+            table.Rows.Add(25, "Indocin", "David", DateTime.Now);
+            table.Rows.Add(50, "Enebrel", "Sam", DateTime.Now);
+            table.Rows.Add(10, "Hydralazine", "Christoff", DateTime.Now);
+            table.Rows.Add(21, "Combivent", "Janet", DateTime.Now);
+            table.Rows.Add(100, "Dilantin", "Melanie", DateTime.Now);
+            return table;
+        }
+    }
+
+    public class Club
+    {
+        public Club(string name, DateTime established, int stadiumCapacity)
+        {
+            this.Name = name;
+            this.Established = established;
+            this.StadiumCapacity = stadiumCapacity;
+        }
+        public string Name
+        {
+            get;
+            set;
+        }
+        public DateTime? Established
+        {
+            get;
+            set;
+        }
+        public int StadiumCapacity
+        {
+            get;
+            set;
+        }
+        public static IEnumerable<Club> GetClubs()
+        {
+            ObservableCollection<Club> clubs = new ObservableCollection<Club>();
+            clubs.Add(new Club("Liverpool", new DateTime(1892, 1, 1), 45362));
+            clubs.Add(new Club("Manchester Utd.", new DateTime(1878, 1, 1), 76212));
+            clubs.Add(new Club("Chelsea", new DateTime(1905, 1, 1), 42055));
+            clubs.Add(new Club("Arsenal", new DateTime(1886, 1, 1), 60355));
+            return clubs;
+        }
     }
 
     public enum BindingType
@@ -208,14 +225,10 @@ namespace VariousDataSources
         [Description("ObservableCollection")]
         ObservableCollection,
 
-        [Description("ICollectionView")]
-        ICollectionView,
-
-        [Description("Xml")]
-        Xml,
-#if !SILVERLIGHT
         [Description("Data Table")]
         DataTable,
-#endif
+
+        [Description("Xml")]
+        Xml
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Streaming;
 
@@ -6,8 +7,9 @@ namespace PdfStreamWriterPerformance
 {
     class Program
     {
+        public static readonly string RootDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        public static readonly string InputFileName = RootDirectory + "InputFiles\\BarChart.pdf";
         public const string ResultFileName = "MergeResult.pdf";
-        public const string InputFileName = "InputFiles/BarChart.pdf";
         public const int MergedDocumentPagesCount = 10000;
 
         static void Main()

@@ -12,12 +12,13 @@ namespace ManipulatePages
 {
     class Program
     {
+        public static readonly string RootDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        public static readonly string InputFileBarChart = RootDirectory + "InputFiles\\BarChart.pdf";
+        public static readonly string InputFileCentaurFeatures = RootDirectory + "InputFiles\\CentaurFeatures2014Q3.pdf";
+        public static readonly string InputFileBackgroundImage = RootDirectory + "InputFiles\\GRAYSCALE.jpg";
+        public static readonly string InputFileMultipageDocument = RootDirectory + "InputFiles\\MultipageDocument.pdf";
+        public static readonly string InputFileSoundVideoAnd3D = RootDirectory + "InputFiles\\Sound Video and 3D.pdf";
         public const string ResultDirName = "Demo results";
-        public const string InputFileBarChart = "InputFiles/BarChart.pdf";
-        public const string InputFileCentaurFeatures = "InputFiles/CentaurFeatures2014Q3.pdf";
-        public const string InputFileBackgroundImage = "InputFiles/GRAYSCALE.jpg";
-        public const string InputFileMultipageDocument = "InputFiles/MultipageDocument.pdf";
-        public const string InputFileSoundVideoAnd3D = "InputFiles/Sound Video and 3D.pdf";
 
         static void Main()
         {
