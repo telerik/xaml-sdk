@@ -11,7 +11,7 @@ namespace CustomDragDropBehavior
     {
         public override bool CanDrop(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
 
             if (appointment.Resources.Count > 0 && appointment.Resources.First() != state.DestinationSlots.First().Resources.First())
             {
@@ -23,7 +23,7 @@ namespace CustomDragDropBehavior
 
         public override void Drop(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
 
             if (appointment.IsDraggedFromListBox)
             {
@@ -54,7 +54,7 @@ namespace CustomDragDropBehavior
 
         public override bool CanStartResize(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
 
             if (appointment.IsReadOnly)
             {
@@ -66,7 +66,7 @@ namespace CustomDragDropBehavior
 
         public override void Resize(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
             var destinationSlot = state.DestinationSlots.First() as Slot;
             var duration = destinationSlot.End - destinationSlot.Start;
             appointment.Body = "Resize finished. New duration: " + duration.ToString("h\\:mm\\:ss");
@@ -75,14 +75,14 @@ namespace CustomDragDropBehavior
 
         public override void ResizeCanceled(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
             appointment.Body = "Resize Canceled";
             base.ResizeCanceled(state);
         }
 
         public override bool CanStartDrag(DragDropState state)
         {
-            var draggedAppointment = state.Appointment as CustomAppointment;
+            var draggedAppointment = GetAppointment(state.Appointment) as CustomAppointment;
 
             if (draggedAppointment.IsReadOnly)
             {
@@ -94,7 +94,7 @@ namespace CustomDragDropBehavior
 
         public override IEnumerable<IOccurrence> CoerceDraggedItems(DragDropState state)
         {
-            var resource = (state.Appointment as Appointment).Resources.First();
+            var resource = (GetAppointment(state.Appointment) as Appointment).Resources.First();
             var allAppointments = state.SourceAppointmentsSource.Cast<IOccurrence>();
             var desiredAppointments = allAppointments.Where(a => (a as Appointment).Resources.Any(r => r == resource) && !(a as CustomAppointment).IsReadOnly);
             return desiredAppointments;
@@ -118,16 +118,28 @@ namespace CustomDragDropBehavior
 
         public override void DragDropCanceled(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
             appointment.Body = "DragDrop canceled at: " + DateTime.Now;
             base.DragDropCanceled(state);
         }
 
         public override void DragDropCompleted(DragDropState state)
         {
-            var appointment = state.Appointment as CustomAppointment;
+            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
             appointment.Body = "DragDrop completed at: " + DateTime.Now;
             base.DragDropCompleted(state);
         }
+
+		private Appointment GetAppointment(IOccurrence occurance)
+		{
+			var appointment = occurance as CustomAppointment;
+			if (appointment == null)
+			{
+				var currentOccurance = occurance as Occurrence;
+				appointment = currentOccurance.Appointment as CustomAppointment;
+			}
+
+			return appointment;
+		}
     }
 }

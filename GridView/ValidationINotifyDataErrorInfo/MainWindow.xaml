@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:my="clr-namespace:ValidateINotifyDataErrorInfo"
-        Title="MainWindow" Height="400" Width="700">
+        Title="MainWindow" Height="600" Width="900">
     <Window.Resources>
         <my:MyViewModel x:Key="MyViewModel"/>
         <Style TargetType="TextBox" x:Key="editorStyle">
@@ -13,7 +13,7 @@
     <Grid DataContext="{StaticResource MyViewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <telerik:RadGridView Grid.Row="0" 
@@ -31,8 +31,14 @@
                                             DataFormatString="{}{0:N0}"/>
             </telerik:RadGridView.Columns>
         </telerik:RadGridView>
-        <TextBlock Text="RadGridView with dynamic validation" Grid.Row="1"/>
+        <TextBlock Text="RadGridView with dynamic validation. Modifying the data from the first RadGridView, so that a validation error appears, results in an update of the second RadGridView as well." 
+                   Foreground="DarkRed"
+                   HorizontalAlignment="Left"
+                   Width="650"
+                   TextWrapping="Wrap" 
+                   Grid.Row="1"/>
         <telerik:RadGridView Grid.Row="2" 
+                             IsReadOnly="True"
                              ItemsSource="{Binding Clubs}"
                              AutoGenerateColumns="False"
                              Margin="5">
