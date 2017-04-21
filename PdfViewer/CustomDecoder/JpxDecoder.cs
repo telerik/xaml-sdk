@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Windows.Media.Imaging;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters;
 
 namespace CustomDecoder_WPF
@@ -25,21 +26,39 @@ namespace CustomDecoder_WPF
             }
 
             Bitmap bitmap = FreeImage.GetBitmap(myImage);
+            byte[] result;
 
-            decodedObject.ColorSpace = ColorSpace.RGB;
-
-            byte[] result = new byte[decodedObject.Width * decodedObject.Height * 3];
-
-            for (int i = 0; i < decodedObject.Width; i++)
+            if (decodedObject.ColorSpace == ColorSpace.Gray)
             {
-                for (int j = 0; j < decodedObject.Height; j++)
-                {
-                    Color pixel = bitmap.GetPixel(i, j);
+                result = new byte[decodedObject.Width * decodedObject.Height];
 
-                    int index = j * decodedObject.Width + i;
-                    result[index * 3] = pixel.R;
-                    result[index * 3 + 1] = pixel.G;
-                    result[index * 3 + 2] = pixel.B;
+                for (int i = 0; i < decodedObject.Width; i++)
+                {
+                    for (int j = 0; j < decodedObject.Height; j++)
+                    {
+                        Color pixel = bitmap.GetPixel(i, j);
+                        int index = j * decodedObject.Width + i;
+                        byte grayColor = (byte)(0.2126 * pixel.R + 0.7152 * pixel.G + 0.0722 * pixel.B);
+
+                        result[index] = grayColor;
+                    }
+                }
+            }
+            else
+            {
+                result = new byte[decodedObject.Width * decodedObject.Height * 3];
+
+                for (int i = 0; i < decodedObject.Width; i++)
+                {
+                    for (int j = 0; j < decodedObject.Height; j++)
+                    {
+                        Color pixel = bitmap.GetPixel(i, j);
+
+                        int index = j * decodedObject.Width + i;
+                        result[index * 3] = pixel.R;
+                        result[index * 3 + 1] = pixel.G;
+                        result[index * 3 + 2] = pixel.B;
+                    }
                 }
             }
 

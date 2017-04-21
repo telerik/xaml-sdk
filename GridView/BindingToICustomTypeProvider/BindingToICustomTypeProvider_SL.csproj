@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57B6245C-C3D1-4EEA-BB88-EA4414168DE5}</ProjectGuid>
+    <ProjectGuid>{E36E55B5-BC4B-4A9D-8D13-75CD5740B5F6}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BindingToDynamicObject</RootNamespace>
+    <RootNamespace>BindingToICustomTypeProvider</RootNamespace>
     <AssemblyName>SilverlightApplication1</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>SilverlightApplication1.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>BindingToDynamicObject.App</SilverlightAppEntry>
+    <SilverlightAppEntry>BindingToICustomTypeProvider.App</SilverlightAppEntry>
     <TestPageFileName>SilverlightApplication1TestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
@@ -66,10 +66,14 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
@@ -90,10 +94,13 @@
     <Compile Include="App_SL.xaml.cs">
       <DependentUpon>App_SL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\Club.cs" />
+    <Compile Include="Helpers\MyPropertyInfo.cs" />
+    <Compile Include="Helpers\MyType.cs" />
+    <Compile Include="Helpers\MyTypeHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyDataRow.cs" />
     <Compile Include="MyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

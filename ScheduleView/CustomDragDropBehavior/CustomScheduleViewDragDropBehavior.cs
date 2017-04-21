@@ -11,9 +11,9 @@ namespace CustomDragDropBehavior
     {
         public override bool CanDrop(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
+			var appointment = state.Appointment as Appointment;
 
-            if (appointment.Resources.Count > 0 && appointment.Resources.First() != state.DestinationSlots.First().Resources.First())
+			if (appointment != null && appointment.Resources.Count > 0 && appointment.Resources.First() != state.DestinationSlots.First().Resources.First())
             {
                 return false;
             }
@@ -23,9 +23,9 @@ namespace CustomDragDropBehavior
 
         public override void Drop(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
+			var appointment = state.Appointment as CustomAppointment;
 
-            if (appointment.IsDraggedFromListBox)
+			if (appointment != null && appointment.IsDraggedFromListBox)
             {
                 appointment.Body = "Dragged from the ListBox";
             }
@@ -54,9 +54,9 @@ namespace CustomDragDropBehavior
 
         public override bool CanStartResize(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
+			var appointment = state.Appointment as CustomAppointment;
 
-            if (appointment.IsReadOnly)
+			if (appointment != null && appointment.IsReadOnly)
             {
                 return false;
             }
@@ -66,39 +66,53 @@ namespace CustomDragDropBehavior
 
         public override void Resize(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
-            var destinationSlot = state.DestinationSlots.First() as Slot;
-            var duration = destinationSlot.End - destinationSlot.Start;
-            appointment.Body = "Resize finished. New duration: " + duration.ToString("h\\:mm\\:ss");
+			var appointment = state.Appointment as Appointment;
+			if (appointment != null)
+			{
+				var destinationSlot = state.DestinationSlots.First() as Slot;
+				var duration = destinationSlot.End - destinationSlot.Start;
+				appointment.Body = "Resize finished. New duration: " + duration.ToString("h\\:mm\\:ss");
+			}
+
             base.Resize(state);
         }
 
         public override void ResizeCanceled(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
-            appointment.Body = "Resize Canceled";
+			var appointment = state.Appointment as Appointment;
+			if (appointment != null)
+			{
+				appointment.Body = "Resize Canceled";
+			}
+
             base.ResizeCanceled(state);
         }
 
         public override bool CanStartDrag(DragDropState state)
         {
-            var draggedAppointment = GetAppointment(state.Appointment) as CustomAppointment;
+			var draggedAppointment = state.Appointment as CustomAppointment;
 
-            if (draggedAppointment.IsReadOnly)
-            {
-                return false;
-            }
+			if (draggedAppointment != null && draggedAppointment.IsReadOnly)
+			{
+				return false;
+			}
 
-            return base.CanStartDrag(state);
+			return base.CanStartDrag(state);
         }
 
         public override IEnumerable<IOccurrence> CoerceDraggedItems(DragDropState state)
         {
-            var resource = (GetAppointment(state.Appointment) as Appointment).Resources.First();
-            var allAppointments = state.SourceAppointmentsSource.Cast<IOccurrence>();
-            var desiredAppointments = allAppointments.Where(a => (a as Appointment).Resources.Any(r => r == resource) && !(a as CustomAppointment).IsReadOnly);
-            return desiredAppointments;
-        }
+			var appointment = state.Appointment as Appointment;
+			if (appointment != null)
+			{
+				var resource = appointment.Resources.First();
+				var allAppointments = state.SourceAppointmentsSource.Cast<IOccurrence>();
+				var desiredAppointments = allAppointments.Where(a => (a as Appointment).Resources.Any(r => r == resource) && !(a as CustomAppointment).IsReadOnly);
+				return desiredAppointments;
+			}
+
+			return base.CoerceDraggedItems(state);
+		}
 
         public override IEnumerable<IOccurrence> ConvertDraggedData(object data)
         {
@@ -118,28 +132,24 @@ namespace CustomDragDropBehavior
 
         public override void DragDropCanceled(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
-            appointment.Body = "DragDrop canceled at: " + DateTime.Now;
+			var appointment = state.Appointment as Appointment;
+			if (appointment != null)
+			{
+				appointment.Body = "DragDrop canceled at: " + DateTime.Now;
+			}
+
             base.DragDropCanceled(state);
         }
 
         public override void DragDropCompleted(DragDropState state)
         {
-            var appointment = GetAppointment(state.Appointment) as CustomAppointment;
-            appointment.Body = "DragDrop completed at: " + DateTime.Now;
-            base.DragDropCompleted(state);
-        }
-
-		private Appointment GetAppointment(IOccurrence occurance)
-		{
-			var appointment = occurance as CustomAppointment;
-			if (appointment == null)
+			var appointment = state.Appointment as Appointment;
+			if (appointment != null)
 			{
-				var currentOccurance = occurance as Occurrence;
-				appointment = currentOccurance.Appointment as CustomAppointment;
+				appointment.Body = "DragDrop completed at: " + DateTime.Now;
 			}
 
-			return appointment;
-		}
+            base.DragDropCompleted(state);
+        }
     }
 }

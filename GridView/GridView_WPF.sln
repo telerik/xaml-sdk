@@ -136,6 +136,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortDistinctValues_WPF", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightCustomColumn_WPF", "HighlightCustomColumn\HighlightCustomColumn_WPF.csproj", "{2BE67171-CE58-4DEF-ABD2-C23B8C875E7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToICustomTypeProvider_WPF", "BindingToICustomTypeProvider\BindingToICustomTypeProvider_WPF.csproj", "{13E1F3FD-4B32-42A1-8566-1927F9ACB537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToDynamicObject_WPF", "BindingToDynamicObject\BindingToDynamicObject_WPF.csproj", "{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -797,6 +801,26 @@ Global
 		{2BE67171-CE58-4DEF-ABD2-C23B8C875E7D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2BE67171-CE58-4DEF-ABD2-C23B8C875E7D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2BE67171-CE58-4DEF-ABD2-C23B8C875E7D}.Release|x86.ActiveCfg = Release|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{13E1F3FD-4B32-42A1-8566-1927F9ACB537}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B6B18A1B-3453-4AA8-A363-57BA8380BB6E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
