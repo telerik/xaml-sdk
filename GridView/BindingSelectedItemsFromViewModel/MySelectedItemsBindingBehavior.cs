@@ -3,6 +3,7 @@ using System.Windows;
 using Telerik.Windows.Controls;
 using System.Collections.Specialized;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Windows.Data;
 
 namespace BindingSelectedItemsFromViewModel
