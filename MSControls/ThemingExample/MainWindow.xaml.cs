@@ -99,7 +99,7 @@ namespace Theming
 			{
 				Source = new Uri("/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
 			});
-
+			this.container.Background = new SolidColorBrush(Colors.White);
 		}
 
 		private void Windows8Touch_Checked(object sender, RoutedEventArgs e)
@@ -308,5 +308,22 @@ namespace Theming
             });
             this.container.Background = new SolidColorBrush(Colors.White);
         }
+
+		private void Material_Checked(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Resources.MergedDictionaries.Clear();
+			Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+			{
+				Source = new Uri("/Telerik.Windows.Themes.Material;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+			});
+			Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+			{
+				Source = new Uri("/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+			});
+			if (container != null)
+			{
+				this.container.Background = new SolidColorBrush(Colors.White);
+			}
+		}
 	}
 }

@@ -10,7 +10,7 @@
     <Grid>
         <telerik:RadMap x:Name="radMap"
                         NavigationVisibility="Collapsed"
-                        IsMouseWheelZoomEnabled="False"
+                        MouseWheelMode="None"
                         IsKeyboardNavigationEnabled="False"
                         MouseClickMode="None"
                         MouseDoubleClickMode="None"

@@ -21,7 +21,7 @@
                         MouseClickMode="None" 
                         MouseDoubleClickMode="None"
                         MouseDragMode="None"
-                        IsMouseWheelZoomEnabled="False">
+                        MouseWheelMode="None">
             <telerik:RadMap.Provider>
                 <telerik:EmptyProvider />
             </telerik:RadMap.Provider>

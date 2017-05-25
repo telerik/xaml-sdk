@@ -18,7 +18,7 @@ namespace ViewModesDisableCommand
 
             BingRestMapProvider provider = new BingRestMapProvider(MapMode.Aerial, true, bingMapsKey);
 
-            this.DisableCommand(provider, typeof(BingMapBirdsEyeSource).FullName);
+            this.DisableCommand(provider, typeof(BingRestBirdsEyeSource).FullName);
             this.DisableCommand(provider, "ChangeModeCommand");
 
             radMap.Provider = provider;
@@ -26,12 +26,12 @@ namespace ViewModesDisableCommand
 
         private void DisableCommand(MapProviderBase provider, string commandParameter)
         {
-            CommandDescription roadCommand = (from cmd in provider.Commands
+            CommandDescription command = (from cmd in provider.Commands
                                               where (string)cmd.CommandParameter == commandParameter
                                               select cmd).FirstOrDefault();
-            if (roadCommand != null)
+            if (command != null)
             {
-                roadCommand.IsAllowed = false;
+                command.IsAllowed = false;
             }
         }
     }

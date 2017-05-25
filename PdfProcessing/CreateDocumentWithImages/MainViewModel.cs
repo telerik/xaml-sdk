@@ -35,6 +35,7 @@ namespace CreateDocumentWithImages
         private readonly ObservableCollection<ImageQuality> imageQualityValues;
         private readonly ICommand saveFileCommand;
         private ImageQuality selectedImageQuality;
+        public const int OpaqueAlpha = 255;
 
         public MainViewModel()
         {
@@ -117,7 +118,12 @@ namespace CreateDocumentWithImages
             this.AddPageWithImage("This is JPEG image with RGB colorspace.", CreateImageSource("Resources/rgb.jpg"));
             this.AddPageWithImage("This is JPEG image with Grayscale colorspace.", CreateImageSource("Resources/grayScale.jpg"));
             this.AddPageWithImage("This is JPEG image with CMYK colorspace.", CreateImageSource("Resources/cmyk.jpg"));
-            this.AddPageWithImage("This is PNG image with transparency", CreateImageSource("Resources/transparent.png"));
+            this.AddPageWithImage("This is PNG image with transparency encoded with DCTDecode.", CreateImageSource("Resources/transparent.png"));
+
+            // This example shows how to insert RGBA image compressed with FlateDecode.
+            // This approach guarantees lossless image quality compression different from the previous compression which exports the images with the lossy DCTDecode filter.
+            EncodedImageData imageDataFlateDecode = EncodeRgbaPngImageWithFlateDecode("Resources/transparent.png");
+            this.AddPageWithImage("This is RGBA PNG image encoded with FlateDecode.", new ImageSource(imageDataFlateDecode));
 
             // JPEG2000 images must be inserted with ImageQuality.High. 
             // Exporting this image format with lower quality requires decoding the JPEG2000 image, which is currently not supported by RadPdfProcessing.
@@ -138,6 +144,8 @@ namespace CreateDocumentWithImages
             RadFixedPage page = this.document.Pages.AddPage();
             page.Size = PageSize;
             FixedContentEditor editor = new FixedContentEditor(page);
+            editor.GraphicProperties.StrokeThickness = 0;
+            editor.GraphicProperties.IsStroked = false;
             editor.GraphicProperties.FillColor = new RgbColor(200, 200, 200);
             editor.DrawRectangle(new Rect(0, 0, PageSize.Width, PageSize.Height));
             editor.Position.Translate(Margins.Left, Margins.Top);
@@ -172,6 +180,65 @@ namespace CreateDocumentWithImages
             }
         }
 
+        private EncodedImageData EncodeRgbaPngImageWithFlateDecode(string resourceImagePath)
+        {
+            using (Stream stream = GetResourceStream(resourceImagePath))
+            {
+#if SILVERLIGHT
+                BitmapImage source = new BitmapImage();
+                source.SetSource(stream);
+#else
+                PngBitmapDecoder decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+                BitmapSource source = decoder.Frames[0];
+#endif
+
+                byte[] rawData, rawAlpha;
+                GetRawDataFromRgbaSource(source, out rawData, out rawAlpha);
+                byte[] data = CompressDataWithDeflate(rawData);
+                byte[] alpha = rawAlpha == null ? null : CompressDataWithDeflate(rawAlpha);
+
+                return new EncodedImageData(data, alpha, 8, source.PixelWidth, source.PixelHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
+            }
+        }
+
+        private void GetRawDataFromRgbaSource(BitmapSource source, out byte[] data, out byte[] alpha)
+        {
+#if SILVERLIGHT
+            int[] pixels = new WriteableBitmap(source).Pixels;
+#else
+            int[] pixels = new int[source.PixelWidth * source.PixelHeight];
+            source.CopyPixels(pixels, source.PixelWidth * 4, 0);
+#endif
+
+            data = new byte[pixels.Length * 3];
+            alpha = new byte[pixels.Length];
+            bool shouldExportAlpha = false;
+
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                int pixel = pixels[i];
+                byte b = (byte)(pixel & 0xFF);
+                byte g = (byte)((pixel >> 8) & 0xFF);
+                byte r = (byte)((pixel >> 16) & 0xFF);
+                byte a = (byte)((pixel >> 24) & 0xFF);
+
+                data[3 * i] = r;
+                data[3 * i + 1] = g;
+                data[3 * i + 2] = b;
+                alpha[i] = a;
+
+                if (a != OpaqueAlpha)
+                {
+                    shouldExportAlpha = true;
+                }
+            }
+
+            if (!shouldExportAlpha)
+            {
+                alpha = null;
+            }
+        }
+
         private static EncodedImageData EncodeDualtonePngImage(string resourceImagePath)
         {
             byte[] imageData;
@@ -200,15 +267,15 @@ namespace CreateDocumentWithImages
                 int stride = (width + 7) / 8;
                 data = new byte[stride * height];
 #if SILVERLIGHT
-                CopyPixels(data, source);
-#else           
+                CopyDualtonePixels(data, source);   
+#else
                 source.CopyPixels(data, stride, 0);
 #endif
             }
         }
 
 #if SILVERLIGHT
-        private static void CopyPixels(byte[] data, BitmapImage dualtoneImage)
+        private static void CopyDualtonePixels(byte[] data, BitmapImage dualtoneImage)
         {
             int width = dualtoneImage.PixelWidth;
             int height = dualtoneImage.PixelHeight;

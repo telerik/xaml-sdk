@@ -33,12 +33,10 @@
                             <telerik:CloudUploadFileSizeValidationRule MaxFileSize="1048576" />
                         </telerik:RadCloudUpload.ValidationRules>
                     </telerik:RadCloudUpload>
-                    <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                        <StackPanel>
-                            <telerik:RadCloudUploadList ItemsSource="{Binding InvalidItems, ElementName=cloudUpload1}" />
-                            <telerik:RadCloudUploadList ItemsSource="{Binding ValidItems, ElementName=cloudUpload1}" />
-                        </StackPanel>
-                    </ScrollViewer>
+                    <StackPanel Grid.Row="1">
+                        <telerik:RadCloudUploadList ItemsSource="{Binding InvalidItems, ElementName=cloudUpload1}" />
+                        <telerik:RadCloudUploadList ItemsSource="{Binding ValidItems, ElementName=cloudUpload1}" />
+                    </StackPanel>
                 </Grid>
             </Border>
 

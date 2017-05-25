@@ -22,11 +22,8 @@
                 <local:DummyProvider />
             </telerik:RadCloudUpload.Provider>
         </telerik:RadCloudUpload>
-        <ScrollViewer VerticalScrollBarVisibility="Auto"
-                      Grid.Row="2">
-            <telerik:RadCloudUploadList ItemsSource="{Binding Items, ElementName=CloudUpload}"
+        <telerik:RadCloudUploadList Grid.Row="2" ItemsSource="{Binding Items, ElementName=CloudUpload}"
                                         AllowDrop="True"
                                         Drop="CloudUpload_Drop" />
-        </ScrollViewer>
     </Grid>
 </Window>

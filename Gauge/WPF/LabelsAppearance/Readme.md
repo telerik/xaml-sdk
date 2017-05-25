@@ -3,3 +3,5 @@ The RadialScale and LinearScale objects which inherit the GraphicScale class pro
 
   - Modifying Label's Foreground
   - Specifying a LabelTemplate
+
+<keywords: radradialgauge, radialscale, labeltemplate, foreground>

@@ -61,7 +61,7 @@ namespace BindingToICustomTypeProvider.Helpers
         /// <returns></returns>
         public override ParameterInfo[] GetIndexParameters()
         {
-            return null;
+            return new ParameterInfo[0];
         }
 
         public override MethodInfo GetSetMethod(bool nonPublic)

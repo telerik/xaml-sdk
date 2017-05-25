@@ -5,7 +5,7 @@
         Title="MainWindow" Height="800" Width="1200">
     <Grid>
         <telerik:RadMap x:Name="radMap"
-                        IsMouseWheelZoomEnabled="False"
+                        MouseWheelMode="None"
                         MouseDoubleClickMode="None"
                         ZoomBarVisibility="Collapsed">
             <telerik:RadMap.Provider>
