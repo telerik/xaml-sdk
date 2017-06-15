@@ -87,6 +87,7 @@
             </Style>
 
             <Style TargetType="telerik:RadDiagramTextShape" BasedOn="{StaticResource RadDiagramTextShapeStyle}">
+                <Setter Property="Padding" Value="4" />
                 <Setter Property="FontFamily" Value="{StaticResource TelerikWebUI}" />
                 <Setter Property="Foreground" Value="{telerik:Office2016Resource ResourceKey=AccentBrush}" />
                 <Setter Property="ContentTemplate">
@@ -114,7 +115,7 @@
                         <RowDefinition Height="42" />
                     </Grid.RowDefinitions>
                     <telerik:RadDiagramTextShape Margin="5" FontFamily="{StaticResource TelerikWebUI}"
-                                        Content="{Binding Shape.Content}"  FontSize="16"
+                                        Content="{Binding Shape.Content}"  FontSize="16" Padding="4"
                                         IsHitTestVisible="False"
                                         Foreground="{telerik:Office2016Resource ResourceKey=AccentBrush}"/>
                     <TextBlock Grid.Row="1"

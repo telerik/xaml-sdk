@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFiltering_WPF", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownWithAddNewItem_WPF", "DropDownWithAddNewItem\DropDownWithAddNewItem_WPF.csproj", "{A125E58E-B1B7-4202-8806-24091CB31855}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItemsBinding_WPF", "SelectedItemsBinding\SelectedItemsBinding_WPF.csproj", "{9AC31086-AE98-49CB-9883-1336F5EEBB1F}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

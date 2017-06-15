@@ -8,9 +8,7 @@ namespace WpfApplication1
 {
     public class CustomString : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         string _value;
 
         public CustomString()
@@ -62,7 +60,12 @@ namespace WpfApplication1
 
         public override string ToString()
         {
-            return _value.ToString();
-        }
+            if (_value != null)
+            {
+                return _value.ToString();
+            }
+            
+            return null;
+        } 
     }
 }
