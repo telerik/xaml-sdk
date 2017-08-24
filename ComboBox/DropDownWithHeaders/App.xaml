@@ -283,11 +283,10 @@
                                     Foreground="{TemplateBinding Foreground}"
                                     CanContentScroll="True">
                                         <!--<ItemsPresenter/>-->
-                                        <telerik:RadGridView DataContext="{StaticResource ViewModel}"
-                                                             ItemsSource="{Binding Materials}" 
+                                        <telerik:RadGridView ItemsSource="{Binding ItemsSource, RelativeSource={RelativeSource TemplatedParent}}" 
                                                              RowIndicatorVisibility="Collapsed"
                                                              EnableLostFocusSelectedState="False"
-                                                             SelectedItem="{Binding SelectedMaterial, Mode=TwoWay, Source={StaticResource ViewModel}}" 
+                                                             SelectedItem="{Binding SelectedItem, RelativeSource={RelativeSource TemplatedParent}}" 
                                                              ShowGroupPanel="False" IsFilteringAllowed="False" IsReadOnly="True" />
                                     </ScrollViewer>
                                 </Grid>
@@ -438,11 +437,10 @@
                                     VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                     CanContentScroll="True">
                                         <!--<ItemsPresenter/>-->
-                                        <telerik:RadGridView DataContext="{StaticResource ViewModel}"
-                                                             ItemsSource="{Binding Materials}" 
+                                        <telerik:RadGridView ItemsSource="{Binding ItemsSource, RelativeSource={RelativeSource TemplatedParent}}"
                                                              RowIndicatorVisibility="Collapsed"
                                                              EnableLostFocusSelectedState="False"
-                                                             SelectedItem="{Binding SelectedMaterial, Mode=TwoWay, Source={StaticResource ViewModel}}" 
+                                                             SelectedItem="{Binding SelectedItem, RelativeSource={RelativeSource TemplatedParent}}" 
                                                              ShowGroupPanel="False" IsFilteringAllowed="False" IsReadOnly="True" />
                                     </ScrollViewer>
                                 </Grid>

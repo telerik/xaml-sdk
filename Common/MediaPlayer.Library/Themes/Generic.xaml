@@ -1,0 +1,256 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                    xmlns:local="clr-namespace:MediaPlayer.Library">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MediaPlayer.Library;component/Themes/GlyphButtonsStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <telerik:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" />
+
+    <DataTemplate x:Key="ButtonEllipseBorderTemplate">
+        <Ellipse x:Name="ButtonEllipse" StrokeThickness="2" Stroke="{telerik:VisualStudio2013Resource ResourceKey=SelectedBrush}"/>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsMouseOver}" Value="True">
+                <Setter TargetName="ButtonEllipse" Property="Stroke" Value="{telerik:VisualStudio2013Resource ResourceKey=MouseOverBrush}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsMouseCaptured}" Value="True">
+                <Setter TargetName="ButtonEllipse" Property="Stroke" Value="{telerik:VisualStudio2013Resource ResourceKey=MouseOverBrush}" />
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <DataTemplate x:Key="PlaylistItemTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontFamily="{StaticResource TelerikWebUI}"                       
+                       Margin="0 0 5 0" 
+                       FontSize="16">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsVideo}" Value="False">
+                                <Setter Property="Text" Value="&#xe20b;" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsVideo}" Value="True">
+                                <Setter Property="Text" Value="&#xe915;" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBlock Text="{Binding MediaName}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <Style x:Key="PlayButtonStyle" TargetType="local:GlyphButton" BasedOn="{StaticResource GlyphButtonStyle}">
+        <Setter Property="Height" Value="80" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="GlyphValue" Value="&#xe200;" />
+        <Setter Property="GlyphSize" Value="40" />
+        <Setter Property="GlyphMargin" Value="10 0 0 0" />
+        <Setter Property="ContentTemplate" Value="{StaticResource ButtonEllipseBorderTemplate}" />
+    </Style>
+
+    <Style x:Key="PlayPauseButtonStyle" TargetType="local:GlyphToggleButton" BasedOn="{StaticResource GlyphToggleButtonStyle}">
+        <Setter Property="Height" Value="22" />
+        <Setter Property="Width" Value="22" />
+        <Setter Property="GlyphValue" Value="&#xe200;" />
+        <Setter Property="GlyphSize" Value="10" />
+        <Setter Property="GlyphMargin" Value="3 0 0 0" />
+        <Setter Property="ContentTemplate" Value="{StaticResource ButtonEllipseBorderTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="GlyphValue" Value="&#xe201;" />
+                <Setter Property="GlyphMargin" Value="0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MuteButtonStyle" TargetType="local:GlyphToggleButton" BasedOn="{StaticResource GlyphToggleButtonStyle}">
+        <Setter Property="GlyphValue" Value="&#xe206;" />
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="GlyphValue" Value="&#xe207;" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PlaylistButtonStyle" TargetType="local:GlyphToggleButton" BasedOn="{StaticResource GlyphToggleButtonStyle}">
+        <Setter Property="GlyphValue" Value="&#xe20a;" />
+        <Setter Property="GlyphMargin" Value="0 2 0 0" />
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="GlyphBrush" Value="{telerik:VisualStudio2013Resource ResourceKey=MouseOverBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Thumb" x:Key="ThumbStyle">
+        <Setter Property="IsTabStop" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Grid Background="Transparent"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="RepeatButton" x:Key="LargeHandleStyle">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Grid Background="{TemplateBinding Background}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="MediaPlayerSliderTemplate" TargetType="telerik:RadSlider">
+        <Grid x:Name="LayoutRoot" MinHeight="0" Height="6" Background="{TemplateBinding Background}" Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ContentControl x:Name="Track" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
+            <Rectangle Cursor="Hand" Width="Auto" VerticalAlignment="Center" Fill="{telerik:VisualStudio2013Resource ResourceKey=AccentMainBrush}" Height="6"/>
+            <telerik:RadTickBar x:Name="TopTickBar"
+                                ItemsSource="{TemplateBinding ResultTicks}"
+                                Grid.ColumnSpan="3"
+                                ItemTemplate="{TemplateBinding TickTemplate}"
+                                ItemTemplateSelector="{TemplateBinding TickTemplateSelector}"
+                                Maximum="{TemplateBinding Maximum}"
+                                Minimum="{TemplateBinding Minimum}"
+                                Style="{TemplateBinding TickBarStyle}"/>
+            <RepeatButton x:Name="LargeDecreaseButton" Style="{StaticResource LargeHandleStyle}" Background="#3399FF" Delay="{TemplateBinding Delay}" Interval="{TemplateBinding RepeatInterval}"/>
+            <Grid Grid.Column="1" Visibility="{TemplateBinding ThumbVisibility}">
+                <Thumb x:Name="SingleThumbHost" Style="{StaticResource ThumbStyle}"/>
+            </Grid>
+            <RepeatButton x:Name="LargeIncreaseButton" Grid.Column="2" Style="{StaticResource LargeHandleStyle}" Background="Transparent" Delay="{TemplateBinding Delay}" Interval="{TemplateBinding RepeatInterval}"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="MediaPlayerTemplate" TargetType="local:MediaPlayer">
+        <Grid x:Name="PlayerRootPanel" TextElement.Foreground="White" Background="{TemplateBinding Background}">
+            <Grid x:Name="ElementsPanel">
+                <MediaElement x:Name="PART_MediaElement" 
+                              KeyboardNavigation.IsTabStop="True"                              
+                              ScrubbingEnabled="True"
+                              Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=CurrentPlaylistItem.Source, Mode=OneWay}"
+                              LoadedBehavior="Manual"
+                              UnloadedBehavior="Manual"
+                              Stretch="{TemplateBinding MediaStretch}" 
+                              StretchDirection="{TemplateBinding MediaStretchDirection}"
+                              Volume="{TemplateBinding Volume}"
+                              IsMuted="{TemplateBinding IsMuted}"/>
+
+                <TextBlock x:Name="AudioVisual" Text="&#xe20b;" FontFamily="{StaticResource TelerikWebUI}" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <local:GlyphButton Style="{StaticResource PlayButtonStyle}" 
+                                   Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsPlaying, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Command="MediaCommands.Play"/>
+
+                <ContentControl x:Name="PlaylistPanel" Visibility="Collapsed">
+                    <telerik:RadListBox x:Name="PlaylistElement" 
+                                        ItemsSource="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Playlist}" 
+                                        ItemTemplate="{TemplateBinding PlaylistItemTemplate}"                                        
+                                        SelectedItem="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=CurrentPlaylistItem, Mode=OneWay}"
+                                        telerik:StyleManager.Theme="VisualStudio2013">
+                        <telerik:EventToCommandBehavior.EventBindings>
+                            <telerik:EventBinding EventName="MouseDoubleClick" 
+                                                  Command="MediaCommands.Select"
+                                                  CommandParameter="{Binding ElementName=PlaylistElement, Path=SelectedItem}" />
+                        </telerik:EventToCommandBehavior.EventBindings>
+                    </telerik:RadListBox>
+                </ContentControl>
+
+                <Border Background="Black" Padding="10 5 10 5" 
+                        VerticalAlignment="Bottom" x:Name="VideoControlsPanel" 
+                        Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=VideoControlsPanelVisibility}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal">
+                            <local:GlyphToggleButton Style="{StaticResource PlayPauseButtonStyle}" 
+                                                     IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsPlaying, Mode=OneWay}"
+                                                     Command="MediaCommands.TogglePlayPause"/>
+                            <ContentControl Content="{TemplateBinding AdditionalMediaControlContent}" Margin="10 0 0 0"/>
+                        </StackPanel>
+                        <telerik:RadSlider x:Name="PART_ProgressTrackBar" 
+                                           Grid.Column="1" 
+                                           Margin="10 0"                                        
+                                           Minimum="0" 
+                                           MinWidth="70"                                                          
+                                           ThumbVisibility="Hidden"
+                                           IsMoveToPointEnabled="True"
+                                           Template="{StaticResource MediaPlayerSliderTemplate}"/>
+                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                            <TextBlock x:Name="PART_TrackInfo" VerticalAlignment="Center" Background="Transparent" />
+                            <local:GlyphToggleButton Style="{StaticResource MuteButtonStyle}"
+                                                     IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsMuted, Mode=TwoWay}"
+                                                     Margin="10 0 10 0" />
+                            <telerik:RadSlider x:Name="VolumeTrackBar" 
+                                               Width="70"
+                                               Margin="0 0 10 0" 
+                                               Minimum="0" 
+                                               Maximum="1"                                            
+                                               Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Volume}"
+                                               ThumbVisibility="Hidden"
+                                               IsMoveToPointEnabled="True"
+                                               Template="{StaticResource MediaPlayerSliderTemplate}"/>
+                            <local:GlyphToggleButton x:Name="PlaylistButton"
+                                                     IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsPlaylistOpen}"
+                                                     Style="{StaticResource PlaylistButtonStyle}" />
+                            <ContentControl Content="{TemplateBinding AdditionalSettingsContent}" Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger SourceName="PlaylistButton" Property="IsChecked" Value="True">
+                <Setter TargetName="PlaylistPanel" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=CurrentPlaylistItem.IsVideo}" Value="True">
+                <Setter TargetName="AudioVisual" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MediaElement" Property="Visibility" Value="Visible" />
+            </DataTrigger>
+            <EventTrigger SourceName="PlayerRootPanel" RoutedEvent="MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="VideoControlsPanel" Storyboard.TargetProperty="Opacity" To="1" Duration="00:00:.7"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger SourceName="PlayerRootPanel" RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>                        
+                        <DoubleAnimation Storyboard.TargetName="VideoControlsPanel" Storyboard.TargetProperty="Opacity" To="0" BeginTime="00:00:.3" Duration="00:00:.7"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="MediaPlayerFullscreenWrapperTemplate" TargetType="local:MediaPlayerFullscreenWrapper">
+        <ContentControl x:Name="PART_MediaPlayerPresenter" Content="{TemplateBinding MediaPlayer}"/>
+    </ControlTemplate>
+
+    <Style TargetType="local:MediaPlayer">
+        <Setter Property="Background" Value="#B2000000" />
+        <Setter Property="PlaylistItemTemplate" Value="{StaticResource PlaylistItemTemplate}" />
+        <Setter Property="Template" Value="{StaticResource MediaPlayerTemplate}" />
+    </Style>
+
+    <Style TargetType="local:MediaPlayerFullscreenWrapper">
+        <Setter Property="Template" Value="{StaticResource MediaPlayerFullscreenWrapperTemplate}" />
+    </Style>
+</ResourceDictionary>
