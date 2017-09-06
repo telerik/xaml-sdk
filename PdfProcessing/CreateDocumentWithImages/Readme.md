@@ -1,7 +1,0 @@
-##Create Document With Images##
-This example demonstrates how to create RadFixedDocument containing images and export it with different ImageQuality. In CreateDocumentContent() method you can see 3 different ways of inserting images allowing you to control the exported image quality and size:
- - The first approach inserts the images by simply passing the image file stream in ImageSource constructor. This way the images will be exported with different image quality depending on PdfFormatProvider.ExportSettings. When the ImageQuality is set to High then PdfProcessing automatically detects if the image is JPEG or JPEG2000 and the image is inserted in the PDF file as it is which guarantees fast export with maximum image quality.
- - The second approach inserts the images by passing image file stream and ImageQuality enumeration value in the ImageSource's constructor. This way the images will be always exported with the specified image quality ignoring PdfFormatProvider.ExportSettings.
- - The third approach inserts black and white image using EncodedImageData class. This allows you to achieve maximum lossless compression by exporting the image data with BitsPerComponent equal to 1 and FlateDecode filter. As the encoded image data is exported as it is, the PdfFormatProvider.ExportSettings.ImageQuality value is ignored in this case as well.
-
- <keywords: create,scratch,prepare,data,imagesource,image,quality,insert,save,export>
