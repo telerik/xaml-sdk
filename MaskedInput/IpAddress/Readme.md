@@ -1,4 +1,6 @@
 ##Ip Address##
-The IP address demo shows how you can set up an IpAddressViewModel and validate it on user Input. The IpAddressViewModel validates with separating the 4 parts into 4 byte properties and also validates with System.Net.IpAddress class.
+The IP address demo shows how you can edit an IP Address with MaskedTextInput and validate it.
+Demo uses the ValueMode property of the MaskedTextInput so that decimal separators of the IP Address are included in the Value property.
+This makes it easier to parse and validate the address.
 
-<keywords: ipaddress, databinding, mvvm, validatesonexceptions, maskedtextinput, validation>
+<keywords: ipaddress, databinding, mvvm, validatesonexceptions, maskedtextinput, validation, ValueMode>

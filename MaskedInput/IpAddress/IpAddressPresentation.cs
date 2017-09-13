@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IpAddress
+﻿namespace IpAddress
 {
     public class IpAddressPresentation
     {
@@ -39,9 +33,43 @@ namespace IpAddress
             set;
         }
 
+        public string IpFullString
+        {
+            get
+            {
+                return this.CompletePart(this.PartA.ToString()) + "." +
+                       this.CompletePart(this.PartB.ToString()) + "." +
+                       this.CompletePart(this.PartC.ToString()) + "." +
+                       this.CompletePart(this.PartD.ToString());
+            }
+        }
+
+        public bool IsValid
+        {
+            get;
+            set;
+        }
+
         public override string ToString()
         {
-            return string.Format("{0}.{1}.{2}.{3}", PartA.ToString(), PartB.ToString(), PartC.ToString(), PartD.ToString());
+            return this.IpFullString;
+        }
+
+        private string CompletePart(string part)
+        {
+            if (part.Length == 3)
+            {
+                return part;
+            }
+            else if (part.Length == 2)
+            {
+                return "0" + part;
+            }
+            else if (part.Length == 1)
+            {
+                return "00" + part;
+            }
+            return string.Empty;
         }
     }
 }

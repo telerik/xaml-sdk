@@ -106,7 +106,7 @@
 		<TextBlock Text="Shared Horizontal Axis"
 				   HorizontalAlignment="Center"
 				   Grid.Row="2"/>
-		<telerik:RadCartesianChart Palette="Metro"
+		<telerik:RadCartesianChart Palette="Windows8"
 								   Grid.Row="3">
 			<telerik:RadCartesianChart.Resources>
 				<telerik:CategoricalAxis VerticalLocation="Bottom" x:Key="additionalHorizontalAxis" />
@@ -158,7 +158,7 @@
 				   HorizontalAlignment="Center"
 				   Grid.Row="2"
 				   Grid.Column="1"/>
-		<telerik:RadCartesianChart Palette="Metro"
+		<telerik:RadCartesianChart Palette="Windows8"
 								   Grid.Column="1"
 								   Grid.Row="3">
 			<telerik:RadCartesianChart.Resources>

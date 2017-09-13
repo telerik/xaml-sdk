@@ -26,6 +26,15 @@
                            Foreground="{Binding RelativeSource={RelativeSource AncestorType=ContentPresenter}, Path=(TextElement.Foreground)}" />
             </telerik:RadButton>
 
+            <telerik:RadButton Command="{Binding SaveAsCommandDescriptor.Command}" Visibility="{Binding SaveAsCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Save As" />
+                </ToolTipService.ToolTip>
+                <TextBlock Padding="4 0" FontFamily="{StaticResource TelerikWebUILocal}" FontSize="16"
+                           Text="{StaticResource GlyphSave}"
+                           Foreground="{Binding RelativeSource={RelativeSource AncestorType=ContentPresenter}, Path=(TextElement.Foreground)}" />
+            </telerik:RadButton>
+            
             <telerik:RadButton Command="{Binding PrintCommandDescriptor.Command}" Visibility="{Binding PrintCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
                 <ToolTipService.ToolTip>
                     <TextBlock Text="Print" />

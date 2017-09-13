@@ -15,7 +15,7 @@
 		</Grid.ColumnDefinitions>
 
 		<telerik:RadCartesianChart x:Name="RadChart1"
-								   Palette="Metro">
+								   Palette="Windows8">
 			<telerik:RadCartesianChart.SelectionPalette>
 				<telerik:ChartPalette>
 					<telerik:ChartPalette.GlobalEntries>
@@ -44,7 +44,7 @@
 
 		<telerik:RadCartesianChart x:Name="RadChart2"
 								   Grid.Column="1"
-								   Palette="Metro">
+								   Palette="Windows8">
 			<telerik:RadCartesianChart.SelectionPalette>
 				<telerik:ChartPalette>
 					<telerik:ChartPalette.GlobalEntries>

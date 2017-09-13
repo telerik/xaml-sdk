@@ -13,6 +13,4 @@
     <Grid>
         <local:Example />
     </Grid>
-
-
 </Window>

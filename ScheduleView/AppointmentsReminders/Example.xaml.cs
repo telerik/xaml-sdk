@@ -8,11 +8,11 @@ namespace AppointmentsReminders
 		ViewModel viewModel;
 
 		public Example()
-		{
+		{   
+			InitializeComponent();
             viewModel = new ViewModel(this.scheduleView);
             this.DataContext = viewModel;
-			InitializeComponent();
-		}
+        }
 
 		private void RadScheduleView_ShowDialog(object sender, Telerik.Windows.Controls.ShowDialogEventArgs e)
 		{

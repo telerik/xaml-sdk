@@ -13,7 +13,7 @@
 
 		<!--ChartView-->
 		<telerik:RadCartesianChart x:Name="chartView"
-								   Palette="Metro"
+								   Palette="Windows8"
 								   Grid.Row="0">
 			<telerik:RadCartesianChart.VerticalAxis>
 				<telerik:LinearAxis/>

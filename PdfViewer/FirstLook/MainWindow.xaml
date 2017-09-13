@@ -18,6 +18,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
@@ -30,6 +31,13 @@
                 <Image Source="{telerik:IconResource IconRelativePath=open.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
             </telerik:RadButton>
 
+            <telerik:RadButton Command="{Binding SaveAsCommandDescriptor.Command}" Visibility="{Binding SaveAsCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Save As" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=save.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+            
             <telerik:RadButton Command="{Binding PrintCommandDescriptor.Command}" Visibility="{Binding PrintCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
                 <ToolTipService.ToolTip>
                     <TextBlock Text="Print" />
@@ -149,7 +157,9 @@
             </telerik:RadToggleButton>
         </telerik:RadToolBar>
 
-        <telerik:RadPdfViewer Grid.Row="1" x:Name="pdfViewer" DocumentSource="/PdfViewer;component/SampleData/Sample.pdf" DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}">
+        <fixedViewersUI:SignaturePanel Grid.Row="1" x:Name="signaturePanel" PdfViewer="{Binding ElementName=pdfViewer, Mode=OneWay}" />
+
+        <telerik:RadPdfViewer Grid.Row="2" x:Name="pdfViewer" DocumentSource="/PdfViewer;component/SampleData/Sample.pdf" DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}">
             <telerik:RadContextMenu.ContextMenu>
                 <telerik:RadContextMenu x:Name="menu">
                     <telerik:RadMenuItem Header="Copy" Command="{Binding CopyCommandDescriptor.Command}"
@@ -181,7 +191,7 @@
             </telerik:RadContextMenu.ContextMenu>
         </telerik:RadPdfViewer>
         
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button Content="Load from Uri" Click="LoadFromUri" />
             <Button Content="Load from Stream" Click="LoadFromStream" />
         </StackPanel>

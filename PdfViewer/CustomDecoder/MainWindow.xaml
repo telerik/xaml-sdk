@@ -42,6 +42,13 @@
                 <Image Source="{telerik:IconResource IconRelativePath=open.png,IconSources={StaticResource IconPaths}}" Stretch="None" />
             </controls:RadButton>
 
+            <controls:RadButton Command="{Binding SaveAsPdfDocumentCommand}">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Save As" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=save.png,IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </controls:RadButton>
+            
             <controls:RadButton Command="{Binding PrintPdfDocumentCommand}">
                 <ToolTipService.ToolTip>
                     <TextBlock Text="Print" />

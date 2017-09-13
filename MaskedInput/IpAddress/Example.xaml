@@ -10,22 +10,19 @@
     <UserControl.Resources>
         <local:IpPresentationToStringConverter x:Key="converter" />
     </UserControl.Resources>
-    <Grid>
-        <Grid Width="600" Height="300" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <TextBlock Text="Ip Address" VerticalAlignment="Center" Margin="20 0 0 0"/>
-                <telerik:RadMaskedTextInput Grid.Row="0" x:Name="firstInput"
+    <Grid>       
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="IP Address" VerticalAlignment="Center" Margin="20 0 0 0" FontWeight="Bold" FontSize="14"/>
+            <telerik:RadMaskedTextInput Grid.Row="0" x:Name="firstInput"
                                                     Grid.Column="1"
                                                     Margin="10 5 10 5" 
-                                                    HorizontalAlignment="Stretch" TextMode="PlainText"
+                                                    HorizontalAlignment="Stretch" 
                                                     Mask="###.###.###.###"
-                                                    Value="{Binding IpValue, Mode=OneWay, ValidatesOnExceptions=True, Converter={StaticResource converter}}"
-                                                    Text="{Binding IpText, Mode=OneWayToSource, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}" />
-                <telerik:RadButton Content="Focus Catcher"  Width="100" Height="30"/>
-            </StackPanel>
-            <TextBlock Text="Type 260.255.255.255 and click the button to see the validation tooltip" FontWeight="Bold" Width="500" 
-                   TextWrapping="Wrap" VerticalAlignment="Top"/>
-
-        </Grid>
+                                                    Value="{Binding IpValue, Mode=TwoWay, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True, Converter={StaticResource converter}}"
+                                                    ValueMode="IncludeLiterals" />
+            <Button Content="VALIDATE!" Width="120"/>
+        </StackPanel>
+        <TextBlock Text="This IP Address is validated via simple byte validation rule - every portion should be in range 0-255. For more precise IP Address validation you can use System.Net.IPAddress class." 
+                   Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="Wrap" Width="320"/>
     </Grid>
 </UserControl>

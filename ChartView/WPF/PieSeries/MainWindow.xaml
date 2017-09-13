@@ -16,7 +16,7 @@
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		
-		<telerik:RadPieChart Palette="Metro">
+		<telerik:RadPieChart Palette="Windows8">
 			<telerik:PieSeries ShowLabels="True"
 							   RadiusFactor="0.7">
 				<telerik:PieSeries.DataPoints>

@@ -19,6 +19,10 @@ namespace FirstLook
             FindDialog findDialog = new FindDialog();
             findDialog.Owner = this;
             ExtensibilityManager.RegisterFindDialog(findDialog);
+
+            ExtensibilityManager.RegisterSignaturePropertiesDialog(new SignaturePropertiesDialog());
+            ExtensibilityManager.RegisterSignSignatureDialog(new SignSignatureDialog());
+
             InitializeComponent();
         }
 
