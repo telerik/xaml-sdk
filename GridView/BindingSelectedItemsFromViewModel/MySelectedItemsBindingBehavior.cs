@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Windows;
 using Telerik.Windows.Controls;
 using System.Collections.Specialized;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Windows.Data;
 
 namespace BindingSelectedItemsFromViewModel
@@ -11,8 +12,8 @@ namespace BindingSelectedItemsFromViewModel
     {
         private readonly RadGridView grid = null;
         private readonly INotifyCollectionChanged selectedItems = null;
-        private Boolean isSubscribedToEvents = false;
-        private static Boolean isAttached = false;
+        private bool isSubscribedToEvents = false;
+        private static ConcurrentDictionary<DependencyObject, bool> isAttachedDictionary = new ConcurrentDictionary<DependencyObject, bool>();
 
 
         public static readonly DependencyProperty SelectedItemsProperty
@@ -34,11 +35,11 @@ namespace BindingSelectedItemsFromViewModel
             RadGridView grid = dependencyObject as RadGridView;
             INotifyCollectionChanged selectedItems = e.NewValue as INotifyCollectionChanged;
 
-            if (grid != null && selectedItems != null && !isAttached)
+            if (grid != null && selectedItems != null && (!isAttachedDictionary.ContainsKey(dependencyObject) || !isAttachedDictionary[dependencyObject]))
             {
                 MySelectedItemsBindingBehavior behavior = new MySelectedItemsBindingBehavior(grid, selectedItems);
                 behavior.Attach();
-                isAttached = true;
+                isAttachedDictionary[dependencyObject] = true;
             }
         }
 
