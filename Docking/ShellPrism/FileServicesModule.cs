@@ -62,10 +62,12 @@ namespace ShellPrism
             if (regionManager != null)
             {
                 var dockRegion = regionManager.Regions["DocumentsRegion"];
-                var paneView = dockRegion.Views.FirstOrDefault(p => ((RadPane)p).Header.ToString() == documentHeader);
+                var paneView = dockRegion.Views.OfType<RadPane>.FirstOrDefault(p => p.Header.ToString() == documentHeader);
                 if (paneView != null)
                 {
                     dockRegion.Activate(paneView);
+                    
+                    paneView.IsHidden = false;
                 }
             }
         }
