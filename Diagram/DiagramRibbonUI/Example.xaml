@@ -6,6 +6,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
              xmlns:declaratives="clr-namespace:Telerik.Windows.Diagrams.Core;assembly=Telerik.Windows.Diagrams.Core"
+             x:Name="root"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
@@ -19,8 +20,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="1200" />    
-        </Grid.ColumnDefinitions>
-   
+        </Grid.ColumnDefinitions>   
     
     <Grid x:Name="LayoutRoot" Grid.Column="1">
         <Grid.RowDefinitions>

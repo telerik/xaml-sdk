@@ -3,10 +3,9 @@ using Microsoft.Practices.Prism.MefExtensions.Modularity;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
-using ShellPrism;
+using System.Linq;
 using ShellPrism.Menu;
 using System.ComponentModel.Composition;
-using System.Linq;
 using Telerik.Windows.Controls;
 
 namespace ShellPrism
@@ -62,10 +61,12 @@ namespace ShellPrism
             if (regionManager != null)
             {
                 var dockRegion = regionManager.Regions["DocumentsRegion"];
-                var paneView = dockRegion.Views.FirstOrDefault(p => ((RadPane)p).Header.ToString() == documentHeader);
+                var paneView = dockRegion.Views.OfType<RadPane>().FirstOrDefault(p => p.Header.ToString() == documentHeader);
                 if (paneView != null)
                 {
                     dockRegion.Activate(paneView);
+
+                    paneView.IsHidden = false;
                 }
             }
         }
