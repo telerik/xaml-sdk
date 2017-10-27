@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using Telerik.Windows.Controls;
 
 namespace BindingSelectedItemsFromViewModel
 {
@@ -14,7 +12,7 @@ namespace BindingSelectedItemsFromViewModel
             {
                 if (view == null)
                 {
-                    view = new ObservableCollection<MyObject>(from i in Enumerable.Range(0, 100) select new MyObject() { ID = i, Name = string.Format("Name{0}", i) });
+                    view = new ObservableCollection<MyObject>(from i in Enumerable.Range(0, 5000) select new MyObject() { ID = i, Name = string.Format("Name{0}", i) });
                 }
 
                 return view;

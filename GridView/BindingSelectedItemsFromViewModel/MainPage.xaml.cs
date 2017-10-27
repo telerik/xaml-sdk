@@ -1,16 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Controls;
-using BindingSelectedItemsFromViewModel;
+﻿using System.Windows.Controls;
 
-namespace SilverlightApplication1
+namespace BindingSelectedItemsFromViewModel
 {
     public partial class MainPage : UserControl
     {
         public MainPage()
         {
             InitializeComponent();
-
             DataContext = new MyDataContext();
         }
     }
