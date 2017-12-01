@@ -5,8 +5,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
 			 xmlns:scheduling="clr-namespace:Telerik.Windows.Controls.Scheduling;assembly=Telerik.Windows.Scheduling.Core"
              xmlns:gantt="clr-namespace:Telerik.Windows.Controls.GanttView;assembly=Telerik.Windows.Controls.GanttView"
-             x:Class="SameRowRecurringTask.App"
-             >
+             x:Class="SameRowRecurringTask.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

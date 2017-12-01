@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_WPF", "MonthTickProvider\MonthTickProvider_WPF.csproj", "{428E7461-E755-42A5-9728-F2F448EAE181}"
 EndProject
@@ -51,8 +51,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCurrentTimeIndicatorS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingSelectedAppointments_WPF", "SettingSelectedAppointments\SettingSelectedAppointments_WPF.csproj", "{44A40231-F576-4B12-B059-7C91B2943609}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomReadOnlyBehavior_WPF", "CustomReadOnlyBehavior\CustomReadOnlyBehavior_WPF.csproj", "{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -292,6 +293,18 @@ Global
 		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{44A40231-F576-4B12-B059-7C91B2943609}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{44A40231-F576-4B12-B059-7C91B2943609}.Release|x86.ActiveCfg = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{00081E9B-4F39-4541-A8C8-5FA2F00A7FFC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -299,4 +312,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CF1ACABB-248A-4F4C-9B01-5B9079EC1E9C} = {E41C2B1C-1399-4FAE-A367-84019E33108A}
 	EndGlobalSection
+	 
 EndGlobal

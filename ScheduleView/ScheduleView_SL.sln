@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthTickProvider_SL", "MonthTickProvider\MonthTickProvider_SL.csproj", "{4A6D4329-1DC7-4818-9F8D-E381A6CE555A}"
 EndProject
@@ -53,8 +53,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCurrentTimeIndicatorS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingSelectedAppointments_SL", "SettingSelectedAppointments\SettingSelectedAppointments_SL.csproj", "{793AE457-D42D-47C8-B0BF-558B2367D2B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomReadOnlyBehavior_SL", "CustomReadOnlyBehavior\CustomReadOnlyBehavior_SL.csproj", "{7FB66DA7-7DC6-43E1-89AF-F79B4EC5396C}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -156,6 +157,10 @@ Global
 		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{793AE457-D42D-47C8-B0BF-558B2367D2B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB66DA7-7DC6-43E1-89AF-F79B4EC5396C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB66DA7-7DC6-43E1-89AF-F79B4EC5396C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB66DA7-7DC6-43E1-89AF-F79B4EC5396C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB66DA7-7DC6-43E1-89AF-F79B4EC5396C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,4 +169,5 @@ Global
 		{5B6F1024-E90D-4E87-9CD6-534885013125} = {541E4356-27B6-4EFC-94E6-E79776268342}
 		{99D6D733-DB24-4D38-843B-2FDCBF6CE516} = {541E4356-27B6-4EFC-94E6-E79776268342}
 	EndGlobalSection
+	 
 EndGlobal

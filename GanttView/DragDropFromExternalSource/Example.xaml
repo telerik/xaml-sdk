@@ -11,7 +11,7 @@
     </UserControl.DataContext>
 
     <UserControl.Resources>
-        <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem">
+        <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem" BasedOn="{StaticResource RadListBoxItemStyle}">
             <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
         </Style>
     </UserControl.Resources>

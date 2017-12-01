@@ -10,7 +10,7 @@
         <local:ViewModel />
     </UserControl.DataContext>
     <UserControl.Resources>
-        <Style TargetType="telerik:EventContainer">
+        <Style TargetType="telerik:EventContainer" BasedOn="{StaticResource EventContainerStyle}">
             <Setter Property="local:GanttDoubleClickExtension.ClickCount"
                     Value="2" />
             <Setter Property="local:GanttDoubleClickExtension.CommandParameter"

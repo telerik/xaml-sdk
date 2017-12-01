@@ -74,16 +74,16 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+        <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GanttView">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Controls.GanttView.dll</HintPath>
+        <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Controls.GanttView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Scheduling.Core">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKSLDIR)\Binaries\Silverlight\Telerik.Windows.Scheduling.Core.dll</HintPath>
+        <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Scheduling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office_Black">
+        <HintPath>$(TELERIKSLDIR)\Binaries.NoXaml\Silverlight\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

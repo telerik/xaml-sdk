@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingColumnsFromViewModel_SL", "BindingColumnsFromViewModel\BindingColumnsFromViewModel_SL.csproj", "{CE4F77A1-9E0F-46E0-B2F4-80072ABE1483}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingSelectedItemsFromViewModel_SL", "BindingSelectedItemsFromViewModel\BindingSelectedItemsFromViewModel_SL.csproj", "{9A319631-3555-4B77-8CB3-A70A13CB67AC}"
@@ -128,8 +130,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToICustomTypeProvide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToDynamicObject_SL", "BindingToDynamicObject\BindingToDynamicObject_SL.csproj", "{57B6245C-C3D1-4EEA-BB88-EA4414168DE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertNewRowOnEnterAndScroll_SL", "InsertNewRowOnEnterAndScroll\InsertNewRowOnEnterAndScroll_SL.csproj", "{B44F9D11-4165-4A02-A981-A473230371BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportImageColumn_SL", "ExportImageColumn\ExportImageColumn_SL.csproj", "{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -749,8 +754,33 @@ Global
 		{57B6245C-C3D1-4EEA-BB88-EA4414168DE5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{57B6245C-C3D1-4EEA-BB88-EA4414168DE5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{57B6245C-C3D1-4EEA-BB88-EA4414168DE5}.Release|x86.ActiveCfg = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Debug|x86.Build.0 = Debug|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|x86.ActiveCfg = Release|Any CPU
+		{B44F9D11-4165-4A02-A981-A473230371BC}.Release|x86.Build.0 = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Debug|x86.Build.0 = Debug|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{6C3930C6-0F7C-4004-973F-A7B1B5D0A1CC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

@@ -9,8 +9,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
 			 Header="Custom Print Preview Dialog">
-	<telerik:RadWindow.Resources>
-		<Style TargetType="ListBoxItem">
+    <telerik:RadWindow.Resources>
+        <Style TargetType="ListBoxItem" BasedOn="{StaticResource ListBoxItemStyle}">
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="ListBoxItem">
@@ -20,7 +20,7 @@
 			</Setter>
 		</Style>
 
-		<Style x:Key="ListBoxStyle" TargetType="ListBox">
+        <Style x:Key="ListBoxStyle" TargetType="ListBox" BasedOn="{StaticResource ListBoxStyle}">
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="ListBox">
@@ -34,8 +34,8 @@
 					</ControlTemplate>
 				</Setter.Value>
 			</Setter>
-		</Style>
-	</telerik:RadWindow.Resources>
+        </Style>
+    </telerik:RadWindow.Resources>
 
 	<Grid>
 		<Grid.RowDefinitions>
