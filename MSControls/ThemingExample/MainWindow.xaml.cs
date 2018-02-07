@@ -324,6 +324,45 @@ namespace Theming
 			{
 				this.container.Background = new SolidColorBrush(Colors.White);
 			}
-		}
-	}
+        }
+        private void Fluent_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Fluent;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Fluent;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            FluentPalette.LoadPreset(FluentPalette.ColorVariation.Light);
+            if (container != null)
+            {
+                ImageBrush ib = new ImageBrush();
+                ib.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Theming;component/Images/bgFluent.png", UriKind.Absolute));
+                this.container.Background = ib;
+            }
+        }
+
+        private void Fluent_Dark_Checked(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Fluent;component/Themes/System.Windows.xaml", UriKind.RelativeOrAbsolute)
+            });
+            Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri("/Telerik.Windows.Themes.Fluent;component/Themes/Telerik.Windows.Controls.xaml", UriKind.RelativeOrAbsolute)
+            });
+            FluentPalette.LoadPreset(FluentPalette.ColorVariation.Dark);
+            if (container != null)
+            {
+                ImageBrush ib = new ImageBrush();
+                ib.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Theming;component/Images/bgFluentDark.png", UriKind.Absolute));
+                this.container.Background = ib;
+            }
+        }
+    }
 }

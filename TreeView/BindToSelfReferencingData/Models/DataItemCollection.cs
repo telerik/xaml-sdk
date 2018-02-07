@@ -1,39 +1,45 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace BindToSelfReferencingData.Models
 {
     public class DataItemCollection : ObservableCollection<DataItem>
     {
-        protected override void InsertItem(int index, DataItem item)
-        {   
-            this.AdoptItem(item);
-            base.InsertItem(index, item);
-        }
-        protected override void RemoveItem(int index)
+        public DataItemCollection()
+            : base()
         {
-            this.DiscardItem(this[index]);
-            base.RemoveItem(index);
         }
-        protected override void SetItem(int index, DataItem item)
+
+        public DataItemCollection(IEnumerable<DataItem> collection)
+            : base(collection)
         {
-            this.AdoptItem(item);
-            base.SetItem(index, item);
         }
-        protected override void ClearItems()
+
+        public DataItem AssociatedItem
         {
-            foreach (DataItem item in this)
+            get;
+            protected set;
+        }
+
+        public void SetAssociatedItem(DataItem item)
+        {
+            this.AssociatedItem = item;
+        }
+
+        protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+        {
+            base.OnCollectionChanged(e);
+            if (e.Action == NotifyCollectionChangedAction.Add)
             {
-                this.DiscardItem(item);
+                foreach (DataItem item in e.NewItems)
+                {
+                    if (this.AssociatedItem != null && item.ParentId != this.AssociatedItem.Id)
+                    {
+                        item.ParentId = this.AssociatedItem.Id;
+                    }                    
+                }
             }
-            base.ClearItems();
-        }
-        private void AdoptItem(DataItem item)
-        {
-            item.SetOwner(this);
-        }
-        private void DiscardItem(DataItem item)
-        {
-            item.SetOwner(null);
         }
     }
 }

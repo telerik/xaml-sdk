@@ -1,6 +1,8 @@
-﻿namespace BindToSelfReferencingData.Models
+﻿using Telerik.Windows.Controls;
+
+namespace BindToSelfReferencingData.Models
 {
-    public class DataItem
+    public class DataItem : ViewModelBase
     {
         public int Id
         {
@@ -17,14 +19,16 @@
             get;
             set;
         }
-        public DataItemCollection Owner
+
+        public DataItemCollection OwnerCollection
         {
             get;
             protected set;
         }
-        internal void SetOwner(DataItemCollection collection)
+
+        internal void SetOwnerCollection(DataItemCollection collection)
         {
-            this.Owner = collection;
+            this.OwnerCollection = collection;
         }
     }
 }

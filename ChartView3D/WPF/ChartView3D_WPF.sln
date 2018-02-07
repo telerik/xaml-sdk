@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultVisualMaterialSelector", "DefaultVisualMaterialSelector\DefaultVisualMaterialSelector.csproj", "{EF6ECB56-6E40-47A1-A3BB-C61D03679F46}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueGradientColorizer", "ValueGradientColorizer\ValueGradientColorizer.csproj", "{780D17BB-E3EC-4CC7-A757-F4603D4D950F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataPointColorizer", "DataPointColorizer\DataPointColorizer.csproj", "{7B1CC216-4821-417A-87D7-B08EB577F2EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceProjection", "SurfaceProjection\SurfaceProjection.csproj", "{C3ED42D2-AB90-41F4-8876-1FFA7039A51A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7B1CC216-4821-417A-87D7-B08EB577F2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B1CC216-4821-417A-87D7-B08EB577F2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B1CC216-4821-417A-87D7-B08EB577F2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3ED42D2-AB90-41F4-8876-1FFA7039A51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ED42D2-AB90-41F4-8876-1FFA7039A51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ED42D2-AB90-41F4-8876-1FFA7039A51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ED42D2-AB90-41F4-8876-1FFA7039A51A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

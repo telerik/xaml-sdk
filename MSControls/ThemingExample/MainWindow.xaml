@@ -25,11 +25,13 @@
                 </Border.Resources>
                 <ScrollViewer BorderThickness="0" Style="{StaticResource ScrollViewerStyle}">
                     <StackPanel Margin="11,6,0,8">
-						<RadioButton x:Name="Material" Checked="Material_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Material" Foreground="#CC000000" IsChecked="True"/>
+                        <RadioButton x:Name="Fluent_Dark" Checked="Fluent_Dark_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Fluent__Dark" Foreground="#CC000000"/>
+                        <RadioButton x:Name="Fluent_Light" Checked="Fluent_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Fluent__Light" Foreground="#CC000000" IsChecked="True"/>
+						<RadioButton x:Name="Material" Checked="Material_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Material" Foreground="#CC000000" />
 						<RadioButton x:Name="Office2016Touch" Checked="Office2016Touch_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Office2016Touch" Foreground="#CC000000"/>
                         <RadioButton x:Name="Office2016" Checked="Office2016_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Office2016" Foreground="#CC000000"/>
-                        <RadioButton x:Name="Green_Light" Checked="Green_Light_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Green_Dark" Foreground="#CC000000"/>
-                        <RadioButton x:Name="Green_Dark" Checked="Green_Dark_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Green_Light" Foreground="#CC000000"/>
+                        <RadioButton x:Name="Green_Light" Checked="Green_Light_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Green__Dark" Foreground="#CC000000"/>
+                        <RadioButton x:Name="Green_Dark" Checked="Green_Dark_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="Green__Light" Foreground="#CC000000"/>
                         <RadioButton x:Name="VisualStudio2013" Checked="VisualStudio2013_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="VisualStudio2013" Foreground="#CC000000"/>
                         <RadioButton x:Name="VisualStudio2013_Dark" Checked="VisualStudio2013_Dark_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="VisualStudio2013__Dark" Foreground="#CC000000"/>
                         <RadioButton x:Name="VisualStudio2013_Blue" Checked="VisualStudio2013_Blue_Checked" FontFamily="Segoe UI" VerticalContentAlignment="Center" FontSize="14" Margin="0,4" Content="VisualStudio2013__Blue" Foreground="#CC000000"/>
@@ -119,9 +121,9 @@
 							<PasswordBox  Margin="0,12,0,4" Password="PasswordBox" MinWidth="215" HorizontalAlignment="Left"/>
 						</StackPanel>
 						<telerik:Label Margin="-5,8,0,4" Grid.Row="5" FontFamily="Segoe UI" FontSize="14" Content="Buttons"/>
-						<StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,0,0,0">
+						<StackPanel Grid.Row="6" Orientation="Horizontal">
 							<Button MinWidth="100" Content="Button"/>
-							<RepeatButton MinWidth="100" Margin="14,0,0,0" HorizontalAlignment="Right" Content="RepeatButton"/>
+							<RepeatButton MinWidth="100" Margin="14,0,0,0" Content="RepeatButton"/>
 						</StackPanel>
 					</Grid>
 					<Grid Margin="34,22,0,0" Grid.Column="2">

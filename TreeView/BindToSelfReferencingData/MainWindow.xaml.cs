@@ -3,16 +3,14 @@ using System.Windows;
 
 namespace BindToSelfReferencingData
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new DataItemCollection()
-            {
+            
+            var source =  new DataItemCollection()
+            {                
                  new DataItem () { Text = "Item 1", Id = 1, ParentId = 0 },
                  new DataItem () { Text = "Item 2", Id = 2, ParentId = 0 },
                  new DataItem () { Text = "Item 3", Id = 3, ParentId = 0 },
@@ -24,8 +22,15 @@ namespace BindToSelfReferencingData
                  new DataItem () { Text = "Item 2.3", Id = 10, ParentId = 2 },
                  new DataItem () { Text = "Item 3.1", Id = 11, ParentId = 3 },
                  new DataItem () { Text = "Item 3.2", Id = 12, ParentId = 3 },
-                 new DataItem () { Text = "Item 3.3", Id = 13, ParentId = 3 }
+                 new DataItem () { Text = "Item 3.3", Id = 13, ParentId = 3, }                 
             };
+
+            foreach (var item in source)
+            {
+                item.SetOwnerCollection(source);
+            }
+
+            this.DataContext = source;
         }
     }
 }

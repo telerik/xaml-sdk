@@ -103,6 +103,9 @@
     <Reference Include="Telerik.Windows.Themes.Material">
       <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Material.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Themes.Fluent">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Fluent.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -137,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bgFluent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bgFluentDark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsAdding", "AnnotationsAdding\AnnotationsAdding.csproj", "{180BF7E5-F209-468F-8BAE-990B02E33D0A}"
 EndProject
@@ -95,8 +95,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginValue", "OriginValue\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationsProvider", "AnnotationsProvider\AnnotationsProvider.csproj", "{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragChartAnnotation", "DragChartAnnotation\DragChartAnnotation.csproj", "{BA2EF516-2018-4873-9959-0F99CFFCB3C0}"
+EndProject
 Global
-	 	
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -286,8 +287,13 @@ Global
 		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B8DC3C-293B-4F4C-922D-A0E39D0C78D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2EF516-2018-4873-9959-0F99CFFCB3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2EF516-2018-4873-9959-0F99CFFCB3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2EF516-2018-4873-9959-0F99CFFCB3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2EF516-2018-4873-9959-0F99CFFCB3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal
