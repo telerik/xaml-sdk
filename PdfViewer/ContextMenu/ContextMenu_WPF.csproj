@@ -54,6 +54,9 @@
     <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>

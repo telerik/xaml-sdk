@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomFunctions"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" xmlns:Controls="clr-namespace:Telerik.Windows.Controls.Spreadsheet.Controls;assembly=Telerik.Windows.Controls.Spreadsheet" xmlns:Txt="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;assembly=Telerik.Windows.Documents.Spreadsheet" xmlns:Csv="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;assembly=Telerik.Windows.Documents.Spreadsheet" xmlns:Pdf="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf" xmlns:Xlsx="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml" x:Class="CustomFunctions.MainWindow"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+
+        <Grid x:Name="spreadsheetLayoutRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <telerik:RadSpreadsheetRibbon BackstageClippingElement="{Binding ElementName=spreadsheetLayoutRoot, Mode=OneTime}" RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}"/>
+            <Controls:RadSpreadsheetFormulaBar Grid.Row="1" RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}"/>
+            <telerik:RadSpreadsheet x:Name="radSpreadsheet" Grid.Row="2">
+                <telerik:RadSpreadsheet.FormatProviders>
+                    <Txt:TxtFormatProvider/>
+                    <Csv:CsvFormatProvider/>
+                    <Pdf:PdfFormatProvider/>
+                    <Xlsx:XlsxFormatProvider/>
+                </telerik:RadSpreadsheet.FormatProviders>
+            </telerik:RadSpreadsheet>
+            <Controls:RadSpreadsheetStatusBar Grid.Row="3" RadSpreadsheet="{Binding ElementName=radSpreadsheet, Mode=OneTime}"/>
+        </Grid>
+
+    </Grid>
+</Window>

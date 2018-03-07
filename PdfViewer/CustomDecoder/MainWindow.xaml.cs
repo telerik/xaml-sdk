@@ -22,7 +22,7 @@ namespace CustomDecoder_WPF
             InitializeComponent();
 
             var stream = File.OpenRead("../../SampleData/test.pdf");
-            this.viewer.DocumentSource = new PdfDocumentSource(stream);
+            this.pdfViewer.DocumentSource = new PdfDocumentSource(stream);
         }
     }
 }

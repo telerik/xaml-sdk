@@ -331,6 +331,7 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
                                 foundCount++;
                             }
                             startFindPosition.RemoveAnchorFromNextFormattingSymbol();
+                            startFindPosition.MoveToPosition(this.Document.CaretPosition);
                         }
                     }
                 }
@@ -344,7 +345,8 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
             RadWindow.Alert(new DialogParameters()
             {
                 Header = this.Header,
-                Content = string.Format(LocalizationManager.GetString("Documents_FindReplaceDialog_MadeReplacements"), foundCount)
+                Content = string.Format(LocalizationManager.GetString("Documents_FindReplaceDialog_MadeReplacements"), foundCount),
+                Owner = this
             });
         }
 
