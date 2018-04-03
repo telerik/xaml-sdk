@@ -57,7 +57,12 @@ namespace FluentAccentColors
                 {
                     return ThemeVariation.Light;
                 }
-                return (ThemeVariation)reg.GetValue("AppsUseLightTheme");
+				var regValue = reg.GetValue("AppsUseLightTheme");
+				if (regValue != null)
+				{
+					return (ThemeVariation)regValue;
+				}
+                return ThemeVariation.Light;
             }
         }
 

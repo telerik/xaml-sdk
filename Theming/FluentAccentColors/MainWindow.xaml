@@ -6,7 +6,8 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:FluentAccentColors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" 
+        Background="{telerik:FluentResource ResourceKey=PrimaryBackgroundBrush}">
     <StackPanel Orientation="Vertical"
                 Margin="60 60 0 0"
                 VerticalAlignment="Top" HorizontalAlignment="Left">
