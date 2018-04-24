@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFindReplaceDialog_SL", "CustomFindReplaceDialog\CustomFindReplaceDialog_SL.csproj", "{CBF6DC0D-C163-45B2-AB34-A3807E2B413B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragAndDrop_SL", "DragAndDropRRTB\DragAndDrop_SL.csproj", "{F3E076A0-2D3D-4B35-95B4-B12DBFF6F87B}"
@@ -53,8 +55,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFontPropertiesDialog_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomParagraphPropertiesDialog_SL", "CustomParagraphPropertiesDialog\CustomParagraphPropertiesDialog_SL.csproj", "{D9EDB015-634F-41D6-8900-750006F3591B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizeCommands_SL", "CustomizeCommands\CustomizeCommands_SL.csproj", "{946EFFFF-6E1E-4CD2-B97B-F46229E9CB4A}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -164,8 +167,13 @@ Global
 		{D9EDB015-634F-41D6-8900-750006F3591B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9EDB015-634F-41D6-8900-750006F3591B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9EDB015-634F-41D6-8900-750006F3591B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946EFFFF-6E1E-4CD2-B97B-F46229E9CB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946EFFFF-6E1E-4CD2-B97B-F46229E9CB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946EFFFF-6E1E-4CD2-B97B-F46229E9CB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946EFFFF-6E1E-4CD2-B97B-F46229E9CB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal
