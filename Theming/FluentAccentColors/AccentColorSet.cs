@@ -20,7 +20,7 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-/* Portions of maxtruxa/AccentColors/AccentColors/AccentColor.cs file as modified by Telerik AD - Copyright © 2018 Telerik AD. All rights reserved.
+/* Portions of maxtruxa/AccentColors/AccentColors/AccentColor.cs file as modified by Telerik EAD - Copyright © 2018 Telerik EAD. All rights reserved.
 */
 
 using Microsoft.Win32;

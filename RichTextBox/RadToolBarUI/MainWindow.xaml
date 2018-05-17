@@ -26,6 +26,7 @@
                     <telerik:RadRibbonButton CollapseToSmall="WhenGroupIsMedium" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding CutCommand}" Size="Medium" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/cut.png"  />
                     <telerik:RadRibbonButton CollapseToSmall="WhenGroupIsMedium" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding CopyCommand}" Size="Medium" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/copy.png" />
                     <telerik:RadRibbonButton CollapseToSmall="WhenGroupIsMedium" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding PasteCommand}" Size="Medium" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/paste.png" />
+                    <telerik:FormatPainterButton CollapseToSmall="WhenGroupIsMedium" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeFormatPainterStateCommand}" Size="Medium" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/FormatPainter.png" />
                 </telerik:RadButtonGroup>
                 <telerik:RadToolBarSeparator />
                 <telerik:RadButtonGroup>

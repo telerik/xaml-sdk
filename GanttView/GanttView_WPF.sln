@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskDeadline_WPF", "TaskDeadline\TaskDeadline_WPF.csproj", "{356BD052-E473-498A-ABC8-1F79FE24F281}"
 EndProject
@@ -67,8 +67,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskResources_WPF", "TaskRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportExportFromAndToMSProject_WPF", "ImportExportFromAndToMSProject\ImportExportFromAndToMSProject_WPF.csproj", "{6136C385-8851-4801-A0CB-35AACB606950}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToDatabase_WPF", "ConnectToDatabase\ConnectToDatabase_WPF.csproj", "{104997B1-E17C-46A0-83E9-21A11CCBFBE2}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -398,8 +399,21 @@ Global
 		{6136C385-8851-4801-A0CB-35AACB606950}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6136C385-8851-4801-A0CB-35AACB606950}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6136C385-8851-4801-A0CB-35AACB606950}.Release|x86.ActiveCfg = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal
