@@ -1,8 +1,8 @@
 Progress Telerik XAML SDK Examples 2018
 
-Copyright © 2013-2018 Telerik AD. All rights reserved.
+Copyright © 2013-2018 Telerik EAD. All rights reserved.
 
-Portions of the Product include certain open source and commercial third-party components listed below (“Third-Party Components”). The authors of the Third-Party Components require Telerik AD (“Telerik”) to include the following notices and additional licensing terms as a condition of Telerik’s use of such Third-Party Components.  You acknowledge that the authors of the Third-Party Components have no obligation to provide support to you for the Third-Party Components or the Product.  You hereby undertake to comply with all licenses related to the applicable Third-Party Components.
+Portions of the Product include certain open source and commercial third-party components listed below (“Third-Party Components”). The authors of the Third-Party Components require Telerik EAD (“Telerik”) to include the following notices and additional licensing terms as a condition of Telerik’s use of such Third-Party Components.  You acknowledge that the authors of the Third-Party Components have no obligation to provide support to you for the Third-Party Components or the Product.  You hereby undertake to comply with all licenses related to the applicable Third-Party Components.
 
 
 1.	Special Notices Regarding Open Source Third-Party Components incorporated in the Product:
@@ -21,7 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 2.	Special Notices Regarding Commercially Licensed Third-Party Components incorporated in the Product:  None
 
  
-NOTICE FROM TELERIK AD: Additional notices may be included in the release notes or other documentation that accompanies updates received in connection with support of the Product.
+NOTICE FROM TELERIK EAD: Additional notices may be included in the release notes or other documentation that accompanies updates received in connection with support of the Product.
 
 
-2/9/2018
+5/11/2018
