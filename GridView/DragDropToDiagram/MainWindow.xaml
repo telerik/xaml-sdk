@@ -1,0 +1,39 @@
+﻿<Window x:Class="DragDropToDiagram_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragDropToDiagram_WPF"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+            <telerik:RadGridView x:Name="gridView" Height="285" Margin="5" CanUserReorderColumns="False"                          
+                                 ItemsSource="{Binding EmployeeData}" 
+                                 AllowDrop="True" 
+                                 local:DragDropBehavior.IsEnabled="True">
+                <telerik:RadGridView.RowStyle>
+                    <Style TargetType="telerik:GridViewRow">
+                        <Setter Property="telerik:DragDropManager.AllowDrag" Value="True" />
+                    </Style>
+                </telerik:RadGridView.RowStyle>
+            </telerik:RadGridView>
+            <TextBlock Grid.Row="1" Margin="5" Text="Drag a person to a desired division in the diagram." FontSize="16" FontWeight="Bold"/>
+        </Grid>
+      
+
+        <telerik:RadDiagram Grid.Column="1" GraphSource="{Binding EmployeeGraphSource}" 
+                            PreviewDrop="RadDiagram_PreviewDrop" 
+                            x:Name="xDiagram">    
+        </telerik:RadDiagram>
+    </Grid>
+</Window>

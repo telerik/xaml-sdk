@@ -53,9 +53,8 @@ namespace CustomParagraphPropertiesDialogDemo
             set { SetValue(NumericWidthProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for NumericWidth.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty NumericWidthProperty =
-            DependencyProperty.Register("NumericWidth", typeof(double), typeof(RadParagraphPropertiesDialog), null);
+            DependencyProperty.Register("NumericWidth", typeof(double), typeof(CustomParagraphPropertiesDialog), null);
 
         #endregion
 
@@ -73,6 +72,7 @@ namespace CustomParagraphPropertiesDialogDemo
         private bool isIndentationChanged;
         private bool isBackgroundChanged;
         private bool isUpdatingUI;
+
 
         #endregion
 
@@ -135,6 +135,14 @@ namespace CustomParagraphPropertiesDialogDemo
             if (StyleManager.ApplicationTheme.ToString().Equals("Windows8Touch"))
             {
                 this.NumericWidth = 160;
+            }
+            else if (StyleManager.ApplicationTheme.ToString().Equals("Material"))
+            {
+                this.NumericWidth = 150;
+            }
+            else if (StyleManager.ApplicationTheme.ToString().Equals("Fluent"))
+            {
+                this.NumericWidth = 100;
             }
             else
             {
@@ -299,6 +307,7 @@ namespace CustomParagraphPropertiesDialogDemo
             }
             else
             {
+                this.comboFirstIndentType.SelectedItem = null;
                 this.radNumFirstIndent.Value = null;
             }
 
@@ -419,6 +428,7 @@ namespace CustomParagraphPropertiesDialogDemo
 
             return lineSpacingDialogType;
         }
+
         public StyleDefinition GetParagraphStyleInfo()
         {
             StyleDefinition result = new StyleDefinition(StyleType.Paragraph);
@@ -473,10 +483,11 @@ namespace CustomParagraphPropertiesDialogDemo
             if (this.isIndentationChanged)
             {
                 double leftIndent = Unit.PointToDip(this.radNumLeftIndent.Value ?? 0);
-                string firstIndentValue = this.comboFirstIndentType.SelectedValue.ToString();
 
                 if (this.comboFirstIndentType.SelectedValue != null)
                 {
+                    string firstIndentValue = (string)this.comboFirstIndentType.SelectedValue;
+
                     double firstIndent = Unit.PointToDip(this.radNumFirstIndent.Value ?? this.radNumFirstIndent.Minimum);
                     if (firstIndentValue == this.firstLineIndentTypes[FirstLineIndentDialogTypes.FirstLine] && this.initialProperties.FirstLineIndent != firstIndent)
                     {
@@ -719,9 +730,9 @@ namespace CustomParagraphPropertiesDialogDemo
 
         private void ComboFirstIndent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string value = comboFirstIndentType.SelectedItem.ToString();
+            string value = (string)comboFirstIndentType.SelectedValue;
 
-            if (value == this.firstLineIndentTypes[FirstLineIndentDialogTypes.None])
+            if (value == null || value == this.firstLineIndentTypes[FirstLineIndentDialogTypes.None])
             {
                 this.radNumFirstIndent.Value = null;
             }
