@@ -12,6 +12,8 @@
         <telerik:RadGridView ItemsSource="{Binding Clubs}"
                              Margin="5" >
         </telerik:RadGridView>
-        
+
+        <TextBlock Text="NOTE: To successfully use the ICustomTypeProvider interface, please reference the 4.5 version of the Telerik UI for WPF binaries."
+                   FontSize="14" VerticalAlignment="Center" FontWeight="Bold" Width="400" TextWrapping="Wrap"/>
     </Grid>
 </Window>

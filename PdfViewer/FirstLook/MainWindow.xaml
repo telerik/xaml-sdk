@@ -13,11 +13,21 @@
         </Grid.RowDefinitions>
         <telerik:RadPdfViewerToolBar RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneTime}" SignaturePanel="{Binding ElementName=signaturePanel, Mode=OneTime}"/>
         <telerik:SignaturePanel x:Name="signaturePanel" PdfViewer="{Binding ElementName=pdfViewer, Mode=OneWay}" Grid.Row="1"/>
-        <telerik:RadPdfViewer x:Name="pdfViewer" DataContext="{Binding CommandDescriptors, ElementName=pdfViewer}" 
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <telerik:RadPdfViewerNavigationPane RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneTime}" />
+
+            <telerik:RadPdfViewer Grid.Column="1" x:Name="pdfViewer" DataContext="{Binding CommandDescriptors, ElementName=pdfViewer}" 
                             telerik:RadPdfViewerAttachedComponents.RegisterSignSignatureDialog="True" 
-                            telerik:RadPdfViewerAttachedComponents.RegisterFindDialog="True" Grid.Row="2" 
+                            telerik:RadPdfViewerAttachedComponents.RegisterFindDialog="True"
                             telerik:RadPdfViewerAttachedComponents.RegisterSignaturePropertiesDialog="True" 
                             telerik:RadPdfViewerAttachedComponents.RegisterContextMenu="True"/>
+        </Grid>
 
     <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button Content="Load from Uri" Click="LoadFromUri" />
