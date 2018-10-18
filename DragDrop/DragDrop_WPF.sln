@@ -7,8 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropImage_WPF", "DragDr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropUserConfirmation_WPF", "DropUserConfirmation\DropUserConfirmation_WPF.csproj", "{4A7A1C09-8708-4431-A0E4-64AB41ED24FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropUsingCommands_WPF", "DragDropUsingCommands\DragDropUsingCommands_WPF.csproj", "{6F4CA258-BF15-465A-A408-55C5D969B442}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -26,8 +27,13 @@ Global
 		{4A7A1C09-8708-4431-A0E4-64AB41ED24FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A7A1C09-8708-4431-A0E4-64AB41ED24FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A7A1C09-8708-4431-A0E4-64AB41ED24FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4CA258-BF15-465A-A408-55C5D969B442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4CA258-BF15-465A-A408-55C5D969B442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4CA258-BF15-465A-A408-55C5D969B442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4CA258-BF15-465A-A408-55C5D969B442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	 
 EndGlobal

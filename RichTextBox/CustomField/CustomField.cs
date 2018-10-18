@@ -8,7 +8,7 @@ namespace CustomField
     public class CustomField : CodeBasedField
     {
         private static readonly string FieldType = "CUSTOMFIELD";
-   
+
         public override string FieldTypeName
         {
             get
@@ -16,7 +16,7 @@ namespace CustomField
                 return CustomField.FieldType;
             }
         }
-       
+
         static CustomField()
         {
             CodeBasedFieldFactory.RegisterFieldType(CustomField.FieldType, () => new CustomField());
@@ -43,9 +43,12 @@ namespace CustomField
                 totalPageInCurrentSection = this.GetPageCountInSection(box);
             }
 
-            return DocumentFragment.CreateFromInline(new Span(
-                string.Format("Total pages in the document: {0}. Pages in current section: {1} / {2}", 
-                               totalPageCount, currentPageInCurrentSection, totalPageInCurrentSection)));
+            Span currentSpan = this.EvaluationContext.Document.CaretPosition.GetCurrentSpan();
+            Span spanToInsert = new Span(
+                string.Format("Total pages in the document: {0}. Pages in current section: {1} / {2}",
+                               totalPageCount, currentPageInCurrentSection, totalPageInCurrentSection));
+            spanToInsert.CopyPropertiesFrom(currentSpan);
+            return DocumentFragment.CreateFromInline(spanToInsert);
         }
 
         private int GetCurrentPageFromSectionPages(LayoutBox box)
