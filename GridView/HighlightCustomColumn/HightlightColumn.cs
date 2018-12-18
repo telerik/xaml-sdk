@@ -29,7 +29,7 @@ namespace HighlightCustomColumn
             }
 
             //Add HighlightTextBlock to keep the SearchPanel functionality
-            HighlightTextBlock htb = new HighlightTextBlock();
+            HighlightTextBlock htb = new HighlightTextBlock(this.DataControl.SearchStateManager);
             htb.DataType = this.DataType;
             htb.SetBinding(HighlightTextBlock.HighlightTextProperty, new Binding(this.DataMemberBinding.Path.Path));
             cell.SetBinding(GridViewCell.IsHighlightedProperty, new Binding("ContainsMatch") { Source = htb, Mode = BindingMode.TwoWay });

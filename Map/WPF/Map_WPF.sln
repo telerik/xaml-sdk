@@ -161,6 +161,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Virtualization_And_Wrapa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSqlGeospatialDataReader", "AsyncSqlGeospatialDataReader\AsyncSqlGeospatialDataReader.csproj", "{D3EF7F47-6E0B-4D38-914F-120A7F975715}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemMapProvider", "ProvidersFileSystemMapProvider\FileSystemMapProvider.csproj", "{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -483,6 +485,10 @@ Global
 		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

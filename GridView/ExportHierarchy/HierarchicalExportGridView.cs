@@ -18,12 +18,32 @@ namespace ExportHierarchy
     public class HierarchicalExportGridView : RadGridView
     {
         private int subItemsCount = 0;
-        private Dictionary<int, IList> subItemsDictionary = new Dictionary<int, IList>();
+        private List<ParentExportInfo> parentItemsDictionary = new List<ParentExportInfo>();
         private int headerRowCount;
 
         public HierarchicalExportGridView()
         {
+            this.ElementExportingToDocument += HierarchicalExportGridView_ElementExportingToDocument;
             this.ElementExportedToDocument += HierarchicalExportGridView_ElementExportedToDocument;
+        }
+
+        private void HierarchicalExportGridView_ElementExportingToDocument(object sender, GridViewElementExportingToDocumentEventArgs e)
+        {
+            if (e.Element == ExportElement.HeaderRow)
+            {
+                (e.VisualParameters as GridViewDocumentVisualExportParameters).Style = new CellSelectionStyle()
+                {
+                    IsBold = true,
+                    Fill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 232, 232, 232), Colors.Transparent),
+                };
+            }
+            else if (e.Element == ExportElement.Row)
+            {
+                (e.VisualParameters as GridViewDocumentVisualExportParameters).Style = new CellSelectionStyle()
+                {
+                    Fill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 255, 142, 142), Colors.Transparent),
+                };
+            }
         }
 
         private void HierarchicalExportGridView_ElementExportedToDocument(object sender, GridViewElementExportedToDocumentEventArgs e)
@@ -39,11 +59,19 @@ namespace ExportHierarchy
                     var subItems = item.GetType().GetProperty(property).GetValue(item) as IList;
                     if (subItems.Count > 0)
                     {
-                        var index = gridView.Items.IndexOf(item) + 1 + subItemsCount;
+                        var originalIndex = gridView.Items.IndexOf(item);
+                        var newIndex = originalIndex + subItemsCount;
                         subItemsCount += subItems.Count;
-                        this.subItemsDictionary.Add(index, subItems);
+                        this.parentItemsDictionary.Add(new ParentExportInfo()
+                        {
+                            OriginalIndex = originalIndex,
+                            ExportIndex = newIndex,
+                            SubItems = subItems
+                        });
                     }
                 }
+
+                
             }
         }
 
@@ -78,7 +106,7 @@ namespace ExportHierarchy
                 }
 
                 this.subItemsCount = 0;
-                this.subItemsDictionary.Clear();
+                this.parentItemsDictionary.Clear();
             }
         }
 
@@ -90,28 +118,47 @@ namespace ExportHierarchy
             workbook = this.ExportToWorkbook();
 
             var worksheet = workbook.ActiveWorksheet;
-            DataTemplate dt = this.HierarchyChildTemplate;
-            DependencyObject dio = dt.LoadContent();
-            var childGrid = dio as RadGridView;
+            worksheet.GroupingProperties.SummaryRowIsBelow = false;
+            DataTemplate template = this.HierarchyChildTemplate;
+            DependencyObject content = template.LoadContent();
+            var childGrid = content as RadGridView;
+            var parentItemCount = 0;
 
-            foreach (var subItem in subItemsDictionary)
+            foreach (var parentItem in parentItemsDictionary)
             {
-                var rowIndex = subItem.Key;
-                RowSelection selection = worksheet.Rows[rowIndex + 1, rowIndex + subItem.Value.Count];
+                var rowIndex = parentItem.ExportIndex + headerRowCount + parentItemCount + 1;
+                parentItemCount++;
+                RowSelection selection = worksheet.Rows[rowIndex, rowIndex + parentItem.SubItems.Count];
                 selection.Insert();
-                for (var i = 0; i < subItem.Value.Count; i++)
+                for (var j = 0; j < childGrid.Columns.Count; j++)
                 {
-                    var item = subItem.Value[i];
-                    for (var j = 0; j < childGrid.Columns.Count; j++)
+                    var column = childGrid.Columns[j] as GridViewDataColumn;
+                    var header = column.Header != null ? column.Header.ToString() : column.DataMemberBinding.Path.Path;
+                    var headerCell = worksheet.Cells[rowIndex, j];
+                    headerCell.SetValueAsText(header);
+                    var headerCellFill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 150, 150, 150), Colors.Transparent);
+                    headerCell.SetFill(headerCellFill);
+                    headerCell.SetIsBold(true);
+
+                    for (var i = 0; i < parentItem.SubItems.Count; i++)
                     {
-                        var column = childGrid.Columns[j] as GridViewDataColumn;
+                        var item = parentItem.SubItems[i];
+
                         var cell = worksheet.Cells[rowIndex + 1 + i, j];
                         var property = item.GetType().GetProperty(column.DataMemberBinding.Path.Path);
                         var value = property != null ? property.GetValue(item).ToString() : string.Empty;
                         cell.SetValueAsText(value);
-                        var solidPatternFill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
-                        cell.SetFill(solidPatternFill);
+                        var subItemCellFill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
+                        cell.SetFill(subItemCellFill);
                     }
+                }
+
+                selection.Group();
+                var originalItem = this.Items[parentItem.OriginalIndex];
+                var isExpanded = (bool)originalItem.GetType().GetProperty("IsExpanded").GetValue(originalItem);
+                if (!isExpanded)
+                {
+                    selection.SetHidden(true);
                 }
             }
 

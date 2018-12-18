@@ -5,8 +5,8 @@
         xmlns:my="clr-namespace:ExportHierarchy"
         Title="MainWindow" Height="700" Width="700">
 	<Window.Resources>
-		<my:MyViewModel x:Key="MyViewModel"/>
-	</Window.Resources>
+        <my:MyViewModel x:Key="MyViewModel"/>
+    </Window.Resources>
 	<Grid DataContext="{StaticResource MyViewModel}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
@@ -33,6 +33,7 @@
 		<my:HierarchicalExportGridView Grid.Row="0" 
                              x:Name="clubsGrid"
                              ItemsSource="{Binding Clubs}"
+                             IsExpandedBinding="{Binding IsExpanded, Mode=TwoWay}"
 							 CanUserGroupColumns="False"
                              AutoGenerateColumns="False"
                              GroupRenderMode="Flat"
@@ -47,15 +48,15 @@
 				</telerik:GridViewTableDefinition>
 			</my:HierarchicalExportGridView.ChildTableDefinitions>
             <my:HierarchicalExportGridView.Columns>
-				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
-				<telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Established}"
                                             Header="Est." 
                                             DataFormatString="{}{0:yyyy}"/>
-				<telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding StadiumCapacity}" 
                                             Header="Stadium" 
                                             DataFormatString="{}{0:N0}"/>
-			</my:HierarchicalExportGridView.Columns>
-		</my:HierarchicalExportGridView>
+            </my:HierarchicalExportGridView.Columns>
+        </my:HierarchicalExportGridView>
 		<StackPanel Grid.Row="1" Orientation="Horizontal">
 			<Button Name="Button1"
                 Content="Export to XLSX" 
