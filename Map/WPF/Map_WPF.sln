@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
 EndProject
@@ -158,6 +158,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualizationLayerShapeSelection", "VisualizationLayerShapeSelection\VisualizationLayerShapeSelection.csproj", "{7A729416-D12B-43F4-83C6-7A3F0B5CF42E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Virtualization_And_Wraparound", "WrapAroundAndVirtualization\UI_Virtualization_And_Wraparound.csproj", "{286A10B1-A8F4-468C-944D-871D8E986E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSqlGeospatialDataReader", "AsyncSqlGeospatialDataReader\AsyncSqlGeospatialDataReader.csproj", "{D3EF7F47-6E0B-4D38-914F-120A7F975715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -477,9 +479,16 @@ Global
 		{286A10B1-A8F4-468C-944D-871D8E986E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{286A10B1-A8F4-468C-944D-871D8E986E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{286A10B1-A8F4-468C-944D-871D8E986E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EF7F47-6E0B-4D38-914F-120A7F975715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B01C217-4303-4A1D-BB13-023EC0A41457}
 	EndGlobalSection
 	 
 EndGlobal

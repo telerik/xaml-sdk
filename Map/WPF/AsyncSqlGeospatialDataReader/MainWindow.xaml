@@ -1,0 +1,39 @@
+﻿<Window x:Class="AsyncSqlGeospatialDataReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="390" Width="620">
+    <Grid>
+        <telerik:RadMap Center="33.7861647934865,-84.371616833534"
+                        ZoomLevel="10">
+            <telerik:RadMap.Provider>
+                <telerik:OpenStreetMapProvider />
+            </telerik:RadMap.Provider>
+            <telerik:VisualizationLayer>
+                <telerik:VisualizationLayer.ItemTemplate>
+                    <DataTemplate>
+                        <Ellipse Width="10" Height="10" Fill="Red">
+                            <telerik:MapLayer.HotSpot>
+                                <telerik:HotSpot X="0.5" Y="0.5" />
+                            </telerik:MapLayer.HotSpot>
+                        </Ellipse>
+                    </DataTemplate>
+                </telerik:VisualizationLayer.ItemTemplate>
+                <telerik:VisualizationLayer.Reader>
+                    <telerik:AsyncSqlGeospatialDataReader x:Name="asyncSqlGeospatialDataReader"                                                           
+                                                          GeospatialPropertyName="Geometry"
+                                                          ToolTipFormat="Name" />
+                </telerik:VisualizationLayer.Reader>
+                <telerik:VisualizationLayer.ShapeFill>
+                    <telerik:MapShapeFill Fill="#7FFFFFFF" Stroke="#5A636B" StrokeThickness="3" />
+                </telerik:VisualizationLayer.ShapeFill>
+                <telerik:VisualizationLayer.HighlightFill>
+                    <telerik:MapShapeFill Fill="#B2FFFFFF" Stroke="#5A636B" StrokeThickness="3" />
+                </telerik:VisualizationLayer.HighlightFill>
+            </telerik:VisualizationLayer>
+        </telerik:RadMap>
+    </Grid>
+</Window>
