@@ -7,7 +7,7 @@
         xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"        
         WindowState="Maximized"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>                
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto" />
@@ -16,7 +16,7 @@
             <RowDefinition Height="60"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <telerik:RadDiagram x:Name="diagram" Grid.Row="1" BorderThickness="1" 
                             IsEditable="False"
                             ShapeSerialized="Diagram_ShapeSerialized"
@@ -25,7 +25,7 @@
                 <telerik:SettingsPane Diagram="{Binding ElementName=diagram}" />
             </primitives:ItemInformationAdorner.AdditionalContent>
         </telerik:RadDiagram>
-        
+
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="&#xe13e;" FontFamily="{StaticResource TelerikWebUI}" FontSize="16" Margin="10 8 0 0"/>
@@ -38,7 +38,7 @@
                                         SelectionChanged="AutoComplete_SelectionChanged"
                                         DropDownItemTemplate="{StaticResource dropDownItemTemplate}"/>
         </StackPanel>
-        
+
         <telerik:RadDiagramNavigationPane Diagram="{Binding ElementName=diagram}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="1" IsExpanded="True"/>
 
         <telerik:RadDiagramToolbox x:Name="toolbox" Loaded="Toolbox_Loaded" Grid.Column="1" Grid.Row="1" 
@@ -51,17 +51,36 @@
                                                     ElementName=toolboxButton,
                                                     Converter={StaticResource BooleanToVisibilityConverter}}" />
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
-            <telerik:RadButton Content="&#xe024;" ContentStringFormat="{}{0} Layout" FontSize="18" CommandTarget="{Binding ElementName=diagram}" Width="150" 
-                Command="telerik:DiagramCommands.Layout" Margin="5 10" FontFamily="{StaticResource TelerikWebUI}" FontWeight="Bold"/>
+            <telerik:RadButton  FontSize="18" CommandTarget="{Binding ElementName=diagram}" Width="150" 
+                Command="telerik:DiagramCommands.Layout" Margin="5 10"  FontWeight="Bold">
+                <StackPanel Orientation="Horizontal">
+                    <telerik:RadGlyph Glyph="&#xe024;" />
+                    <TextBlock Text="Layout" Margin="5 0 0 0"/>
+                </StackPanel>
+            </telerik:RadButton>
 
-            <telerik:RadButton Content="&#xe10a;" ContentStringFormat="{}{0} Print" CommandTarget="{Binding ElementName=diagram}" Width="150" 
-                 Command="extensions:DiagramExtensionCommands.Print" FontSize="18"  FontFamily="{StaticResource TelerikWebUI}"  Margin="5 10" FontWeight="Bold"/>
+            <telerik:RadButton CommandTarget="{Binding ElementName=diagram}" Width="150" 
+                 Command="extensions:DiagramExtensionCommands.Print" FontSize="18"  Margin="5 10" FontWeight="Bold">
+                <StackPanel Orientation="Horizontal">
+                    <telerik:RadGlyph Glyph="&#xe10a;" />
+                    <TextBlock Text="Print" Margin="5 0 0 0"/>
+                </StackPanel>
+            </telerik:RadButton>
 
 
-            <telerik:RadButton  Content="&#xe518;" ContentStringFormat="{}{0} Add Random 10 Glyphs" FontFamily="{StaticResource TelerikWebUI}"
-                                 FontSize="18" Click="GetRandomGlyphsButton_Clicked" Width="260" FontWeight="Bold" Margin="5 10"/>
-            <telerik:RadButton Content="&#xe502;" ContentStringFormat="{}{0} Export To Image" FontFamily="{StaticResource TelerikWebUI}"  FontSize="18"
-                               CommandTarget="{Binding ElementName=diagram}" Command="telerik:DiagramCommands.Export" Width="200" FontWeight="Bold" Margin="5 10"/>
+            <telerik:RadButton  FontSize="18" Click="GetRandomGlyphsButton_Clicked" Width="260" FontWeight="Bold" Margin="5 10">
+                <StackPanel Orientation="Horizontal">
+                    <telerik:RadGlyph Glyph="&#xe518;" />
+                    <TextBlock Text="Add Random 10 Glyphs" Margin="5 0 0 0"/>
+                </StackPanel>
+            </telerik:RadButton>
+
+            <telerik:RadButton  FontSize="18" CommandTarget="{Binding ElementName=diagram}" Command="telerik:DiagramCommands.Export" Width="200" FontWeight="Bold" Margin="5 10">
+                <StackPanel Orientation="Horizontal">
+                    <telerik:RadGlyph Glyph="&#xe502;" />
+                    <TextBlock Text="Export To Image" Margin="5 0 0 0"/>
+                </StackPanel>
+            </telerik:RadButton>
         </StackPanel>
     </Grid>
 </Window>

@@ -11,12 +11,12 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/System.Windows.xaml"/>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.xaml"/>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Diagrams.xaml"/>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Diagrams.Extensions.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/Telerik.Windows.Controls.Diagrams.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Crystal;component/Themes/Telerik.Windows.Controls.Diagrams.Extensions.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <local:GlyphTextConverter x:Key="GlyphTextConverter" />

@@ -1,28 +1,28 @@
 ﻿<Window x:Class="ToggleSwitchButton_WPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:teleik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel Margin="10 0">
-            <TextBlock Text="VisualStudio2013" Foreground="{teleik:VisualStudio2013Resource ResourceKey=AccentBrush}" FontWeight="Bold" Margin="0 10 0 4" />
+            <TextBlock Text="VisualStudio2013" Foreground="{telerik:VisualStudio2013Resource ResourceKey=AccentBrush}" FontWeight="Bold" Margin="0 10 0 4" />
             
             <StackPanel Orientation="Horizontal">
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" Margin="10" 
                                         IsChecked="True"
                                         Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example1}" />
 
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" 
                                         Margin="10" 
                                         Style="{StaticResource ToggleSwitchButtonStyle_VisualStudio2013_Example2}" 
                                         HorizontalContentAlignment="Right">
-                </teleik:RadToggleButton>
+                </telerik:RadToggleButton>
 
-                <teleik:RadToggleButton  VerticalAlignment="Center"
+                <telerik:RadToggleButton  VerticalAlignment="Center"
                                         HorizontalAlignment="Center"
                                         MinWidth="35" 
                                         Margin="10" 
@@ -33,7 +33,7 @@
                                         HorizontalContentAlignment="Right" 
                                         IsChecked="True" />
 
-                <teleik:RadToggleButton VerticalAlignment="Center"
+                <telerik:RadToggleButton VerticalAlignment="Center"
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" 
                                         Margin="10"
@@ -43,7 +43,7 @@
                                         Content="OFF" 
                                         HorizontalContentAlignment="Right" />
                 
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" 
                                         Margin="10" 
@@ -56,19 +56,19 @@
             <TextBlock Text="OfficeBlack" Foreground="#FFFE9227" FontWeight="Bold" Margin="0 10 0 4" />
             
             <StackPanel Orientation="Horizontal">
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35"
                                         Margin="10"
                                         Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlack_Example3}" />
                 
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center"
                                         MinWidth="35"
                                         Margin="10"
                                         Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlack_Example1}" />
                 
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" 
                                         Margin="10" 
@@ -82,18 +82,18 @@
             <TextBlock Text="OfficeBlue" Foreground="#83a5d2" FontWeight="Bold" Margin="0 10 0 4" />
             
             <StackPanel Orientation="Horizontal">
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center" 
                                         MinWidth="35" 
                                         Margin="10" 
                                         Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlue_Example3}" />
-                <teleik:RadToggleButton VerticalAlignment="Center"
+                <telerik:RadToggleButton VerticalAlignment="Center"
                                         HorizontalAlignment="Center"
                                         MinWidth="35" 
                                         Margin="10"
                                         Style="{StaticResource ToggleSwitchButtonStyle_OfficeBlue_Example1}" />
                 
-                <teleik:RadToggleButton VerticalAlignment="Center" 
+                <telerik:RadToggleButton VerticalAlignment="Center" 
                                         HorizontalAlignment="Center"
                                         MinWidth="35"
                                         Margin="10" 

@@ -9,9 +9,9 @@ namespace OrgChart.ViewModels
 			this.AddNode(node);
 			foreach (Node subNode in node.Children)
 			{
-				Link link = new Link(node, subNode);
+                this.PopulateGraphSource(subNode);
+                Link link = new Link(node, subNode);
 				this.AddLink(link);
-				this.PopulateGraphSource(subNode);
 			}
 		}
 	}
