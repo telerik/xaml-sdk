@@ -51,7 +51,7 @@
                 <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
             </Style>
 
-            <Style TargetType="telerik:RadTreeViewItem">
+            <Style TargetType="telerik:RadTreeViewItem" BasedOn="{StaticResource {x:Type telerik:RadTreeViewItem}}">
                 <Setter Property="IsExpanded" Value="True" />
             </Style>
         </Grid.Resources>
