@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Specialized;
 using System.Windows;
-using System.Windows.Interactivity;
 using Telerik.Windows.Controls;
 
 namespace BindPropertyDefinitionsViewModel
