@@ -147,7 +147,7 @@ namespace GridViewSerialization
 					{
 						List<ColumnProxy> columnProxies = value as List<ColumnProxy>;
 
-						foreach (ColumnProxy proxy in columnProxies)
+                        foreach (ColumnProxy proxy in columnProxies.OrderBy(x => x.DisplayOrder))
 						{
 							GridViewColumn column = gridView.Columns[proxy.UniqueName];
 							column.DisplayIndex = proxy.DisplayOrder;
