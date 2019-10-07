@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation_WPF", "Validatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadWithEditorTemplateSelector_WPF", "FileUploadWithEditorTemplateSelector\FileUploadWithEditorTemplateSelector_WPF.csproj", "{92E0B490-B310-4FE6-9E07-1418C03E2F4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INotifyDataErrorInfoSupport", "ValidationINotifyDataErrorInfo\INotifyDataErrorInfoSupport.csproj", "{2C9F27F2-8D54-49F2-A59B-D90BB6334496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{92E0B490-B310-4FE6-9E07-1418C03E2F4A}.Release|x86.Build.0 = Release|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C9F27F2-8D54-49F2-A59B-D90BB6334496}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
