@@ -3,8 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPaletteViewItemTooltip_WPF", "CustomPaletteViewItemTooltip\CustomPaletteViewItemTooltip_WPF.csproj", "{2787AEF0-079F-4FC7-A8DA-D2E854C152CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddColorPaletteViews_WPF", "AddColorPaletteViews\AddColorPaletteViews_WPF.csproj", "{3F7F0B18-9764-4D39-85F6-B7C41CEA818A}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -14,8 +15,16 @@ Global
 		{2787AEF0-079F-4FC7-A8DA-D2E854C152CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2787AEF0-079F-4FC7-A8DA-D2E854C152CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2787AEF0-079F-4FC7-A8DA-D2E854C152CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F7F0B18-9764-4D39-85F6-B7C41CEA818A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F7F0B18-9764-4D39-85F6-B7C41CEA818A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F7F0B18-9764-4D39-85F6-B7C41CEA818A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F7F0B18-9764-4D39-85F6-B7C41CEA818A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9057066-ADF9-4AEC-BC46-017137B110F6}
+	EndGlobalSection
+	 
 EndGlobal
