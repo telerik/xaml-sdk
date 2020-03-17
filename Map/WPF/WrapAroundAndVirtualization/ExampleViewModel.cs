@@ -23,7 +23,12 @@ namespace UI_Virtualization_And_Wraparound
 
         private void SetProvider()
         {
-            OpenStreetMapProvider provider = new OpenStreetMapProvider();
+            OpenStreetMapProvider provider = new OpenStreetMapProvider()
+            {
+                // This user agent should be set per application.
+                // Please specify different string in your application.
+                StandardModeUserAgent = "Telerik UI for WPF SDK samples"
+            };
             provider.Layer = OpenStreetMapLayer.Humanitarian;
 
             this.mapProvider = provider;

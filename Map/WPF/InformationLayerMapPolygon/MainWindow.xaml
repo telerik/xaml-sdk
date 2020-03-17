@@ -10,8 +10,9 @@
                         ZoomLevel="4"
                         Center="52, -100">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
-            </telerik:RadMap.Provider>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Provider>
             <telerik:InformationLayer>
                 <telerik:MapPolygon Points="56,-100 56,-108 48,-108 48,-100" Fill="Green" Stroke="Red"
                     StrokeThickness="4" CaptionLocation="52,-104">

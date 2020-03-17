@@ -152,6 +152,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightAddedGridViewRow",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptyGridMessageContent_WPF", "EmptyGridMessageContent\EmptyGridMessageContent_WPF.csproj", "{F27631AE-310A-4908-84AC-E2385DAD1DDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelEditing", "ExcelEditing\ExcelEditing.csproj", "{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -892,6 +894,18 @@ Global
 		{F27631AE-310A-4908-84AC-E2385DAD1DDD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F27631AE-310A-4908-84AC-E2385DAD1DDD}.Release|x86.ActiveCfg = Release|Any CPU
 		{F27631AE-310A-4908-84AC-E2385DAD1DDD}.Release|x86.Build.0 = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Debug|x86.Build.0 = Debug|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

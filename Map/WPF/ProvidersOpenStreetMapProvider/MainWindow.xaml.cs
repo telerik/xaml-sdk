@@ -9,7 +9,12 @@ namespace ProvidersOpenStreetMapProvider
         {
             InitializeComponent();
 
-            OpenStreetMapProvider openStreetMap = new OpenStreetMapProvider();
+            OpenStreetMapProvider openStreetMap = new OpenStreetMapProvider()
+            {
+                // This user agent should be set per application.
+                // Please specify different string in your application.
+                StandardModeUserAgent = "Telerik UI for WPF SDK samples"
+            };
             this.radMap.Provider = openStreetMap;
         }
     }

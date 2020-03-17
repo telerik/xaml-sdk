@@ -18,8 +18,9 @@
                             Height="480"
                             MouseLocationIndicatorVisibility="Collapsed">
                 <telerik:RadMap.Provider>
-                    <telerik:OpenStreetMapProvider />
-                </telerik:RadMap.Provider>
+					<!-- Please specify different user agent string in your application -->
+					<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+				</telerik:RadMap.Provider>
             </telerik:RadMap>
         </StackPanel>
     </Grid>

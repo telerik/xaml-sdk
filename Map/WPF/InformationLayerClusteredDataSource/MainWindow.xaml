@@ -48,8 +48,9 @@
                         ZoomLevel="4"
                         Center="39,-120">
             <telerik:RadMap.Providers>
-                <telerik:OpenStreetMapProvider />
-            </telerik:RadMap.Providers>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Providers>
             <telerik:InformationLayer x:Name="informationLayer"/>
         </telerik:RadMap>
     </Grid>

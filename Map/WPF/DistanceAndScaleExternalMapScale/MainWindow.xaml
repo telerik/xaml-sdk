@@ -20,7 +20,7 @@
                             Height="480"
                             ScaleVisibility="Collapsed">
                 <telerik:RadMap.Provider>
-                    <telerik:OpenStreetMapProvider />
+                    <telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples" />
                 </telerik:RadMap.Provider>
             </telerik:RadMap>
         </StackPanel>

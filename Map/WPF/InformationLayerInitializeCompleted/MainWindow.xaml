@@ -11,8 +11,9 @@
                         ZoomLevel="5"
                         InitializeCompleted="radMap_InitializeCompleted">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
-            </telerik:RadMap.Provider>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Provider>
             <telerik:InformationLayer x:Name="informationLayer"
                                       Visibility="Collapsed">
                 <Ellipse x:Name="Ellipse1"
