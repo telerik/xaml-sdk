@@ -8,8 +8,9 @@
                         MiniMapExpanderVisibility="Collapsed"
                         SizeChanged="MapSizeChanged">
             <telerik:RadMap.Providers>
-                <telerik:OpenStreetMapProvider/>
-            </telerik:RadMap.Providers>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Providers>
 
             <telerik:RadExpander VerticalAlignment="Top"
                                  HorizontalAlignment="Left">
@@ -23,8 +24,9 @@
                                  Width="256"
                                  Height="200">
                     <telerik:RadMap.Provider>
-                        <telerik:OpenStreetMapProvider />
-                    </telerik:RadMap.Provider>
+						<!-- Please specify different user agent string in your application -->
+						<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+					</telerik:RadMap.Provider>
                 </telerik:MiniMap>
             </telerik:RadExpander>
         </telerik:RadMap>

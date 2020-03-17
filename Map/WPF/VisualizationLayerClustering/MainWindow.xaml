@@ -51,7 +51,8 @@
                         Center="40, -100"
                         ZoomLevel="3">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
+				<!-- Please specify different user agent string in your application -->
+                <telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
             </telerik:RadMap.Provider>
             <telerik:VisualizationLayer x:Name="VisualizationLayer1"
 										ItemTemplate="{StaticResource ItemTemplate}"

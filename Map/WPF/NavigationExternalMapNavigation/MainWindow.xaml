@@ -10,8 +10,9 @@
                             Height="480"
                             NavigationVisibility="Collapsed">
                 <telerik:RadMap.Provider>
-                    <telerik:OpenStreetMapProvider />
-                </telerik:RadMap.Provider>
+					<!-- Please specify different user agent string in your application -->
+					<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+				</telerik:RadMap.Provider>
             </telerik:RadMap>
             <telerik:MapNavigation MapControl="{Binding ElementName=radMap}"
                                    Margin="10" />

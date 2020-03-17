@@ -47,8 +47,9 @@
                         MinZoomLevel="15"
                         GeoBounds="42.3683598045287, -71.0789727419614, 3.9167707221002743, 2.1883037274811104">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
-            </telerik:RadMap.Provider>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Provider>
         </telerik:RadMap>
     </Grid>
 </Window>

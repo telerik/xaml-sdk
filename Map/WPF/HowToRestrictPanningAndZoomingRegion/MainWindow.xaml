@@ -11,7 +11,7 @@
                         Center="42.72481708629, 23.3176519378416"
                         GeoBounds="42.786, 23.17, 25, 14">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider GeoBounds="42.786, 23.17, 25, 14" />
+                <telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples" GeoBounds="42.786, 23.17, 25, 14" />
             </telerik:RadMap.Provider>
         </telerik:RadMap>
     </Grid>

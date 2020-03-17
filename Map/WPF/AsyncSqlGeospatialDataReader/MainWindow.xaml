@@ -10,7 +10,7 @@
         <telerik:RadMap Center="33.7861647934865,-84.371616833534"
                         ZoomLevel="10">
             <telerik:RadMap.Provider>
-                <telerik:OpenStreetMapProvider />
+                <telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples" />
             </telerik:RadMap.Provider>
             <telerik:VisualizationLayer>
                 <telerik:VisualizationLayer.ItemTemplate>

@@ -14,7 +14,12 @@ namespace HowToImplementCustomCommandsForMapCommandBar
         {
             InitializeComponent();
 
-            OpenStreetMapProvider provider = new OpenStreetMapProvider();
+            OpenStreetMapProvider provider = new OpenStreetMapProvider()
+            {
+                // This user agent should be set per application.
+                // Please specify different string in your application.
+                StandardModeUserAgent = "Telerik UI for WPF SDK samples"
+            };
 
             provider.Commands.Clear();
 
