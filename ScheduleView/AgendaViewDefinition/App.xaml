@@ -17,7 +17,8 @@
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.ScheduleView.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <local:ViewDefinitionToVisibilityConverter x:Key="ViewDefinitionToVisibilityConverter"/>
+            <local:AgendaViewDefinitionToVisibilityConverter x:Key="AgendaViewDefinitionToVisibilityConverter"/>
+            <local:InvertedAgendaViewDefinitionToVisibilityConverter x:Key="InvertedAgendaViewDefinitionToVisibilityConverter"/>
           <DataTemplate x:Key="ListBoxItemTemplate">
             <Grid>
               <Grid.ColumnDefinitions>
@@ -167,7 +168,9 @@
                                 Orientation="{TemplateBinding EffectiveOrientation}"
                                 Offset="{Binding HorizontalOffset, RelativeSource={RelativeSource TemplatedParent}}"
                                 ClipToBounds="True"/>
-                                <telerikScheduleView:AppointmentsPanel x:Name="PART_ItemsHost" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="{x:Null}" Orientation="{TemplateBinding EffectiveOrientation}" Panel.ZIndex="1"/>
+                                <telerikScheduleView:AppointmentsPanel x:Name="PART_ItemsHost" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="{x:Null}" 
+                                                                       Orientation="{TemplateBinding EffectiveOrientation}" Panel.ZIndex="1"
+                                                                       Visibility="{Binding ActiveViewDefinition, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedAgendaViewDefinitionToVisibilityConverter}}"/>
                                 <telerikPrimitives:LayoutTransformControl
                                 Grid.Row="1"
                                 Grid.Column="1"
@@ -260,7 +263,7 @@
                                     <Grid x:Name="AppointmentSourceWarning" Background="White" Visibility="{Binding AppointmentsSource, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedNullToVisibilityConverter}}">
                                         <TextBlock telerik:LocalizationManager.ResourceKey="AppointmentSourceWarning" FontSize="32" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Grid>
-                                    <Grid x:Name="ListBoxAppointments"  Visibility="{Binding ActiveViewDefinition, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ViewDefinitionToVisibilityConverter}}">
+                                    <Grid x:Name="ListBoxAppointments"  Visibility="{Binding ActiveViewDefinition, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource AgendaViewDefinitionToVisibilityConverter}}">
                                         <telerik:RadListBox x:Name="radListBox1"
                                                             ItemsSource="{Binding ListBoxAppointments}" 
                                                             SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}"

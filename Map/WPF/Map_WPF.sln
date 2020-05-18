@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
 EndProject
@@ -162,6 +162,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSqlGeospatialDataReader", "AsyncSqlGeospatialDataReader\AsyncSqlGeospatialDataReader.csproj", "{D3EF7F47-6E0B-4D38-914F-120A7F975715}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemMapProvider", "ProvidersFileSystemMapProvider\FileSystemMapProvider.csproj", "{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingGeoDataAPI", "BingGeoDataAPI\BingGeoDataAPI.csproj", "{2624A8F0-543A-4BB3-AE0C-A02BCE152789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -489,6 +491,10 @@ Global
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

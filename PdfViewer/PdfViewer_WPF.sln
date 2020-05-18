@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDecoder_WPF", "Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerToolbarWithGlyphs_WPF", "PdfViewerToolbarWithGlyphs\PdfViewerToolbarWithGlyphs_WPF.csproj", "{A994D1BC-9634-408A-BB3F-9AFA3753461E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDocumentContent_WPF", "AddDocumentContent\AddDocumentContent_WPF.csproj", "{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}"
+EndProject
 Global
 	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

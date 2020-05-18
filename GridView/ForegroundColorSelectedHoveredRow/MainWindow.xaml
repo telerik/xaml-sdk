@@ -46,13 +46,13 @@
                                         </DiscreteObjectKeyFrame>
                                     </ObjectAnimationUsingKeyFrames>
                                     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Over" Storyboard.TargetProperty="BorderBrush">
-                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ItemOuterBorder_SelectedUnfocused}"/>
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemOuterBorder_SelectedUnfocused}"/>
                                     </ObjectAnimationUsingKeyFrames>
                                     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundInner_Over" Storyboard.TargetProperty="Background">
-                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ItemBackground_SelectedUnfocused}"/>
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemBackground_SelectedUnfocused}"/>
                                     </ObjectAnimationUsingKeyFrames>
                                     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundInner_Over" Storyboard.TargetProperty="BorderBrush">
-                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ItemInnerBorder_SelectedUnfocused}"/>
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemInnerBorder_SelectedUnfocused}"/>
                                     </ObjectAnimationUsingKeyFrames>
                                 </Storyboard>
                             </VisualState>
@@ -204,34 +204,34 @@
                         Margin="1 1 1 2"
                         BorderThickness="1"
                         CornerRadius="1"
-                        BorderBrush="{StaticResource ItemOuterBorder_Over}"
+                        BorderBrush="{StaticResource GridView_ItemOuterBorder_Over}"
                         Grid.Column="2"
                         Grid.ColumnSpan="2"
                         Visibility="Collapsed"
                         grid:SelectiveScrollingGrid.SelectiveScrollingClip="True">
-                            <Border x:Name="BackgroundInner_Over" BorderThickness="1" BorderBrush="{StaticResource ItemInnerBorder_Over}" Background="{StaticResource ItemBackground_Over}"/>
+                            <Border x:Name="BackgroundInner_Over" BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Over}" Background="{StaticResource GridView_ItemBackground_Over}"/>
                         </Border>
                         <Border x:Name="Background_Selected"
                         Margin="1 1 1 2"
                         BorderThickness="1"
                         CornerRadius="1"
-                        BorderBrush="{StaticResource ItemOuterBorder_Selected}"
+                        BorderBrush="{StaticResource GridView_ItemOuterBorder_Selected}"
                         Grid.Column="2"
                         Grid.ColumnSpan="2"
                         Visibility="Collapsed"
                         grid:SelectiveScrollingGrid.SelectiveScrollingClip="True">
-                            <Border BorderThickness="1" BorderBrush="{StaticResource ItemInnerBorder_Selected}" Background="{StaticResource ItemBackground_Selected}"/>
+                            <Border BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Selected}" Background="{StaticResource GridView_ItemBackground_Selected}"/>
                         </Border>
                         <Border x:Name="Background_Invalid"
                         Margin="1 1 1 2"
                         BorderThickness="1"
                         CornerRadius="1"
-                        BorderBrush="{StaticResource ItemOuterBorder_Invalid}"
+                        BorderBrush="{StaticResource GridView_ItemOuterBorder_Invalid}"
                         Grid.Column="2"
                         Grid.ColumnSpan="2"
                         Visibility="Collapsed"
                         grid:SelectiveScrollingGrid.SelectiveScrollingClip="True">
-                            <Border BorderThickness="1" BorderBrush="{StaticResource ItemInnerBorder_Invalid}" Background="{StaticResource ItemBackground_Invalid}"/>
+                            <Border BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Invalid}" Background="{StaticResource GridView_ItemBackground_Invalid}"/>
                         </Border>
                         <controls:GridViewToggleButton
                         Grid.Column="2"
@@ -260,7 +260,7 @@
                         Grid.Row="2"
                         Grid.ColumnSpan="2"
                         Padding="6"
-                        BorderBrush="{StaticResource ControlOuterBorder}"
+                        BorderBrush="{StaticResource GridView_ControlOuterBorder}"
                         BorderThickness="0,1"
                         Visibility="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <ContentPresenter x:Name="PART_HierarchyChildPresenter" grid:SelectiveScrollingGrid.SelectiveScrollingClip="True"/>
@@ -283,11 +283,11 @@
                         Visibility="{TemplateBinding RowIndicatorVisibility}"
                         grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
                         Grid.RowSpan="3"
-                        BorderBrush="{StaticResource ControlOuterBorder}"
+                        BorderBrush="{StaticResource GridView_ControlOuterBorder}"
                         BorderThickness="0 0 1 1">
                             <Border x:Name="NavigatorIndicatorBackground"
                             Background="{StaticResource GridView_RowIndicatorCellBackground}"
-                            BorderBrush="{StaticResource ControlInnerBorder}"
+                            BorderBrush="{StaticResource GridView_ControlInnerBorder}"
                             BorderThickness="1">
                                 <Grid>
                                     <Grid x:Name="NavigatorIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Width="11" Height="11" Visibility="Collapsed">
@@ -355,7 +355,7 @@
             <Style TargetType="grid:GridViewRow" BasedOn="{StaticResource GridViewRowStyle}">
                 <Setter Property="IsTabStop" Value="False"/>
                 <Setter Property="Template" Value="{StaticResource GridViewRowTemplate}"/>
-                <Setter Property="Background" Value="{StaticResource ItemBackground}"/>
+                <Setter Property="Background" Value="{StaticResource GridView_ItemBackground}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource GridView_GridLinesItemBorder}"/>
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="AllowDrop" Value="True"/>

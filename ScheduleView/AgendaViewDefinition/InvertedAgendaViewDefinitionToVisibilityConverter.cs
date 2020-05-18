@@ -4,16 +4,16 @@ using System.Windows.Data;
 
 namespace AgendaViewDefinition
 {
-    public class AgendaViewDefinitionToVisibilityConverter : IValueConverter
+    class InvertedAgendaViewDefinitionToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value.ToString().Equals("Agenda"))
             {
-                return Visibility.Visible;
+                return Visibility.Hidden;
             }
 
-            return Visibility.Collapsed;
+            return Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
