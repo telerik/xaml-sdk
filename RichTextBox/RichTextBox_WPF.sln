@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFindReplaceDialog_WPF", "CustomFindReplaceDialog\CustomFindReplaceDialog_WPF.csproj", "{0E8DDDBA-335E-4523-822D-FAA7144D326F}"
 EndProject
@@ -74,6 +74,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHunspellSpellChecking_WPF", "NHunspellSpellChecking\NHunspellSpellChecking_WPF.csproj", "{74AFDCB0-F9F6-4505-B5D7-5DF282EBD0FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizeCommands_WPF", "CustomizeCommands\CustomizeCommands_WPF.csproj", "{0450DD43-CB09-47D8-80A5-762E8B7D27C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomMergeField", "CreateCustomMergeField\CreateCustomMergeField.csproj", "{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -447,9 +449,21 @@ Global
 		{0450DD43-CB09-47D8-80A5-762E8B7D27C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0450DD43-CB09-47D8-80A5-762E8B7D27C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{0450DD43-CB09-47D8-80A5-762E8B7D27C3}.Release|x86.Build.0 = Release|Any CPU
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Debug|x86.ActiveCfg = Debug|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Debug|x86.Build.0 = Debug|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Release|Any CPU.ActiveCfg = Release|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Release|Mixed Platforms.Build.0 = Release|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Release|x86.ActiveCfg = Release|x86
+		{533D2608-2AD0-48C3-9BC9-CBB557C85BCC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	 
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D666377-6CB9-40CB-AF82-58C863DC1E13}
+	EndGlobalSection
 EndGlobal
