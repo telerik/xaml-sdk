@@ -13,7 +13,6 @@ using Telerik.Windows.Controls.RichTextBoxUI;
 using Telerik.Windows.Controls.RichTextBoxUI.ColorPickers;
 using Telerik.Windows.Documents.Layout;
 using System.Globalization;
-using Telerik.Windows.Documents.UI.Extensibility;
 using Tuples = System;
 using BaselineAlignment = Telerik.Windows.Documents.Model.BaselineAlignment;
 
@@ -24,7 +23,7 @@ namespace CustomFontPropertiesDialog
     [CustomFontPropertiesDialog]
     public partial class FontPropertiesDialog : RadRichTextBoxWindow, IFontPropertiesDialog
     {
-         #region Fields
+        #region Fields
 
         bool isInInit = false;
 
@@ -50,8 +49,8 @@ namespace CustomFontPropertiesDialog
         {
             InitializeComponent();
 
-            this.fontStyleListBox.ItemsSource = new List<Tuples.Tuple<string, DialogFontStyle>>() 
-            { 
+            this.fontStyleListBox.ItemsSource = new List<Tuples.Tuple<string, DialogFontStyle>>()
+            {
                 new Tuples.Tuple<string, DialogFontStyle>(LocalizationManager.GetString("Documents_FontPropertiesDialog_FontStyles_Regular"), DialogFontStyle.Regular),
                 new Tuples.Tuple<string, DialogFontStyle>(LocalizationManager.GetString("Documents_FontPropertiesDialog_FontStyles_Italic"), DialogFontStyle.Italic),
                 new Tuples.Tuple<string, DialogFontStyle>(LocalizationManager.GetString("Documents_FontPropertiesDialog_FontStyles_Bold"), DialogFontStyle.Bold),
@@ -352,7 +351,7 @@ namespace CustomFontPropertiesDialog
         {
             StyleDefinition result = new StyleDefinition(StyleType.Character);
             FontFamily selectedFontFamily = this.GetSelectedFontFamily();
-            
+
             this.SetPropertyToStyleDefinitionIfDifferent<FontFamily, SpanProperties>(result, Span.FontFamilyProperty, selectedFontFamily, this.initialFontFamily);
             this.SetFontSizeToStyleDefinitionToApply(result);
             this.SetPropertyToStyleDefinitionIfDifferent<Color?, SpanProperties>(result, Span.ForeColorProperty, this.currentForeColor, this.initialForeColor);
@@ -364,7 +363,7 @@ namespace CustomFontPropertiesDialog
 
             return result;
         }
-  
+
         private void SetFontSizeToStyleDefinitionToApply(StyleDefinition result)
         {
             if (fontSizeListBox.SelectedItem as double? != this.initialFontSize)
