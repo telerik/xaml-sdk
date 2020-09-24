@@ -1,0 +1,3 @@
+##  Create PDF document using RadFixedDocumentEditor 
+
+This demo shows how to generate a PDF file with [RadFixedDocumentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/radfixeddocumenteditor) in a flow-like manner. The example exports two similar PDF documents - one using only Standard PDF fonts and other using fonts from the machine, which are embedded in the PDF file. More information about the different types of fonts is available at [https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts).

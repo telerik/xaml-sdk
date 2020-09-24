@@ -1,0 +1,4 @@
+##  PdfStreamWriter Performance 
+This project demonstrates the performance of PdfStreamWriter class. The example takes some single-paged PDF document and merges its page into a new document 10000 times. The new PDF file with 10000 pages is generated in less than a second with minimal memory footprint thanks to the perfomance and memory efficiency of PdfStreamWriter class. Additionally, due to maximized reuse of PDF objects the result file size is only 10 times bigger that the original file, despite the fact that the result file has 10000 times more pages.
+
+[//]: <keywords: PdfStreamWriter,PDF,stream,processing,performance,memory,efficiency,file size,optimization>

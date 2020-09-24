@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RegisterAndExportPdfFonts.Web.PdfFontsService" CodeBehind="PdfFontsService.svc.cs" %>

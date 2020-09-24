@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64944/PdfFontsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RegisterAndExportPdfFonts.Web" />
+  <xs:element name="GetFontData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fontFamilyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isItalic" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isBold" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFontDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RegisterAndExportPdfFonts.Web" minOccurs="0" name="GetFontDataResult" nillable="true" type="q1:PdfFontsService.FontData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
