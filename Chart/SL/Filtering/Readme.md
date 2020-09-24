@@ -1,4 +1,4 @@
-##Filtering##
+## Filtering
 The RadChart allows you to programmatically filter its data. This is achieved via the FilterDescriptors property of the RadChart or the FilterDescriptors property of the SeriesMapping. This collection allows you to use descriptors which define the sorting member and the sorting direction for the data to which the RadChart is bound. As this is a collection you are able not only to add, but also to remove or clear the entries in it, too.
 
 The items in this collection are of type ChartFilterDescriptor. It exposes a few important properties:

@@ -1,2 +1,2 @@
-##Flattened Series##
+## Flattened Series
 Sometimes when the grouping and aggregation get applied you might want to flatten it, in order to make it appear as one. This is done by combining all data points into one series and can be achieved by just setting the ShouldFlattenSeries property of the GroupingSettings class.

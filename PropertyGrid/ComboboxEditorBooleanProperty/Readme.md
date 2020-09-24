@@ -1,4 +1,4 @@
-##Combobox editor for Boolean property##
+## Combobox editor for Boolean property
 This example demonstrates how to show RadCombobox as an editor for Boolean property.
 
 See also:

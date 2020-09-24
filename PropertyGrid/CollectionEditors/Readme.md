@@ -1,4 +1,4 @@
-##CollectionEditor##
+## CollectionEditor
 This example demonstrates how to use CollectionEditor - control that provides UI for editing collections and their items.
 On the left side a ListBox generates its items based on CollectionEditor's source. 
 On the right side RadPropertyGrid is generated for editing each item.

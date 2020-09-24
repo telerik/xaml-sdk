@@ -1,4 +1,4 @@
-##Layout Mode##
+## Layout Mode
 RadChart allows you to modify the layout of the X-axis to better fit the different chart types in the chart area. This will help you to improve the look and feel of your charts. Depending on the selected layout mode, the X-Axis's ticks and labels and also the charts are visualized differently. LayoutMode is property related only to the X-Axis, hence charts without X-Axis, like Pie and Doughnut, do not use it.
 
 Each LayoutMode is best to be used with certain chart types:

@@ -1,4 +1,4 @@
-##Export Paged Data To Excel##
+## Export Paged Data To Excel
 This example demonstrates how to export paged data to Excel.
 
 More details can be found in our online help:

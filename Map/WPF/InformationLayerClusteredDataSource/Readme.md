@@ -1,5 +1,5 @@
-##Information Layer Clustered Data Source##
+## Information Layer Clustered Data Source
 Clustered data source provides functionality for grouping of the geographic locations using some criteria. The default implementation uses distance in degrees between 2 locations as grouping condition. It can be changed at any time by creation of the new class which implements IClusterItemGenerator or which inherits from the ClusterItemGenerator class (the default built-in implementation of the grouping condition).
 The clustered data source provides information layer with 2 kinds of items: ClusterItem and ClusteredItem. The first one represents cluster which contains list of the items grouped by some criteria. The second one represents wrapper around original data with some additional functionality.
 
-<keywords:MapLayer, Pushpin, ClusterItem, ClusterTemplate>
+[//]: <keywords:MapLayer, Pushpin, ClusterItem, ClusterTemplate>

@@ -1,4 +1,4 @@
-##Binding LocalDataSourceProvider in MVVM##
+## Binding LocalDataSourceProvider in MVVM
 This example demonstrates how to bind the DataProvider of RadPivotGrid and RadPivotFieldList to a property in the ViewModel and thus to fill the control with data.
 
-<keywords:DataProvider, ViewModel>
+[//]: <keywords:DataProvider, ViewModel>

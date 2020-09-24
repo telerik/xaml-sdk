@@ -1,4 +1,4 @@
-##ToolBar MVVM##
+## ToolBar MVVM
 The ToolBar MVVM sample demonstrates the following features and custommization techniques in the RadToolBar:
 	
 	1) DataBinding the RadToolBar to collection of ViewModels.
@@ -10,4 +10,4 @@ Notes: The predefined styles are located in Resources.xaml.
 	   The ColorPicker uses the predefined RadSplitButtonStyle to achieve consistency when used in Toolbar. 
 	   Otherwise it will have borders, non-transparent background etc. because Toolbar does not have predefined style for RadColorPicker.
 
-<keywords: databinding, radcolorpicker, itemtemplateselector, datatemplateselector>
+[//]: <keywords: databinding, radcolorpicker, itemtemplateselector, datatemplateselector>

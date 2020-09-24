@@ -1,4 +1,4 @@
-##Layout##
+## Layout
 The layout sample highlights two areas or RadDiagram which are somewhat hidden in the API although it comprises a considerable amount of code and power:
 
 - the graph analysis API which implements the typical graph algorithms
@@ -13,4 +13,4 @@ The sample allows you to:
 
 While this sample is certainly not a full application examplifying a graph-theoretic textbook it is a stepping stone if you wish to go into this direction. 
 
-<keywords: treelayout, sugiyama, settings, radial, component, graph>
+[//]: <keywords: treelayout, sugiyama, settings, radial, component, graph>

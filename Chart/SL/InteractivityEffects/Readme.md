@@ -1,4 +1,4 @@
-##Interactivity Effects##
+## Interactivity Effects
 The hover and selection interactivity effects greatly enhance the data presentation and readability in various business analysis scenarios. Hover and selection interactivity is supported for all 2D series types (note that "selection" for pie and doughnut types is implemented in the form of exploding the respective item slices). The interactivity support is disabled by default and can be controlled through the Interactivity API under SeriesDefinition.InteractivitySettings complex property:
 
   - HoverScope - gets or sets a value indicating the scope of interactivity for hover effects.

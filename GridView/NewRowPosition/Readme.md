@@ -1,4 +1,4 @@
-##New Row Position##
+## New Row Position
 This example demonstrates how you can configure the NewRowPosition property of RadGridView.
 
 More details can be found in our online help:

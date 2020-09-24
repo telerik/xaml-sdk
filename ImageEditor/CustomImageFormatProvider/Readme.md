@@ -1,4 +1,4 @@
-##Custom Image Format Provider##
+## Custom Image Format Provider
 This example demonstrates how you could implement a custom image format provider using a third party library*, which encodes/decodes different image types. 
 
 * This software uses the FreeImage open source image library. See http://freeimage.sourceforge.net for details.

@@ -51,9 +51,12 @@ namespace SelectedItemsBinding
 
         private void ComboSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            this.UnsubscribeFromEvents();
-            Transfer(this.ComboBox.SelectedItems, SelectedItems as IList);
-            this.SubscribeToEvents();
+            if (this.ComboBox.ItemsSource != null)
+            {
+                this.UnsubscribeFromEvents();
+                Transfer(this.ComboBox.SelectedItems, SelectedItems as IList);
+                this.SubscribeToEvents();
+            }
         }
 
         private void SubscribeToEvents()

@@ -9,6 +9,7 @@ using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Documents.Spreadsheet.Model;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls;
 
 namespace CustomContextMenu
 {
@@ -27,6 +28,7 @@ namespace CustomContextMenu
             InitializeComponent();
 
             WorkbookFormatProvidersManager.RegisterFormatProvider(new PdfFormatProvider());
+            WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsFormatProvider());
             WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
 
             this.AddCustomContextMenuItem();

@@ -1,4 +1,4 @@
-##Visual Studio Implementation with MVVM##
+## Visual Studio Implementation with MVVM
 This example shows how to implement the main functionality of RadDocking using MVVM in VS-like scenarios. Here are the covered points:
  - MVVM
  - Activation
@@ -7,4 +7,4 @@ This example shows how to implement the main functionality of RadDocking using M
  - Adding new documents at runtime
  - Custom Compass logic
 
-<keywords:vs, activation, predefined, save, load, layout, compass>
+[//]: <keywords:vs, activation, predefined, save, load, layout, compass>

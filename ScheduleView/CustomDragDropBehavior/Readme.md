@@ -1,4 +1,4 @@
-##Custom DragDropBehavior##
+## Custom DragDropBehavior
 This example shows how to implement and use a custom ScheduleViewDragDropBehavior. The functionality of example is explained below and demonstrates the use of all the methods available for overriding:
 -	Drag and drop between ScheduleView and ListBox
 -	Custom Appointment with IsReadOnly property which cannot be moved or resized and has different Background color (Red in the example)
@@ -7,4 +7,4 @@ This example shows how to implement and use a custom ScheduleViewDragDropBehavio
 -	Appointments cannot be moved from one Resource to another
 -	Dragging Appointment with Control key pressed doesn't copy the Appointment
 
-<keywords: scheduleviewdragdropbehavior, listbox, move, resize, readonly, appointments>
+[//]: <keywords: scheduleviewdragdropbehavior, listbox, move, resize, readonly, appointments>

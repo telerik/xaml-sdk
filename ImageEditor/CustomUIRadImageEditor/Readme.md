@@ -1,2 +1,2 @@
-## Custom UI ##
+##  Custom UI 
 In this sample you can see how to create custom UI for RadImageEditor. A custom container for settings is implemented in a user control and set to be the image editor's ToolSettingsContainer.

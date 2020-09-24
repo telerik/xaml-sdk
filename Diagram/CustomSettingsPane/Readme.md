@@ -1,4 +1,4 @@
-##Custom SettingsPane##
+## Custom SettingsPane
 The CustomSettingsPane example highlights the following features of RadDiagram and DiagramExtensions:
 *Binding the DiagramToolBox
 *Drawing Tools in MVVM Diagram
@@ -8,4 +8,4 @@ The CustomSettingsPane example highlights the following features of RadDiagram a
     -Binding to App's MainViewModel's Commands
     -Adding custom shapes in toolbox from SettingsPane
 
-<keywords:mvvm, drawing, path, penciltool, commands, diagramtoolbox>
+[//]: <keywords:mvvm, drawing, path, penciltool, commands, diagramtoolbox>

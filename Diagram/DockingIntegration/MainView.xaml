@@ -32,8 +32,8 @@
 										Background="{Binding SelectedColor, ElementName=BackgroundColorEditor, Converter={StaticResource customColorToBrushConverter}, Mode=TwoWay}"
 										IsBackgroundSurfaceVisible="{Binding IsGridVisible, Mode=TwoWay}"
 										IsSnapToGridEnabled="{Binding IsSnapEnabled, Mode=TwoWay}"
-										primitives:GraphPaper.CellSize="{Binding CellSize, Mode=TwoWay}"
-										primitives:GraphPaper.LineStroke="{Binding SelectedColor, ElementName=GridColorEditor, Converter={StaticResource customColorToBrushConverter}, Mode=TwoWay}"
+										primitives:BackgroundGrid.CellSize="{Binding CellSize, Mode=TwoWay}"
+										primitives:BackgroundGrid.LineStroke="{Binding SelectedColor, ElementName=GridColorEditor, Converter={StaticResource customColorToBrushConverter}, Mode=TwoWay}"
 										SnapX="{Binding SnapX, Mode=TwoWay}" SnapY="{Binding SnapY, Mode=TwoWay}"
 										Zoom="{Binding ZoomLevel, Mode=TwoWay}">
 									<primitives:ItemInformationAdorner.AdditionalContent>

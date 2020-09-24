@@ -1,4 +1,4 @@
-##Special Slots##
+## Special Slots
 The purpose of this topic is to demonstrate how you may use the special slots feature of RadTimeline. It provides the following four samples:
 	
 	-WeekDaysGenerator - It demonstrates a customizable slot, where the first day and the duration of the period can be set.
@@ -6,4 +6,4 @@ The purpose of this topic is to demonstrate how you may use the special slots fe
 	-WeekendGenerator - Similarly to the WeekDaysGenerator, Saturday and Sunday are marked.
 	-MonthDayGenerator - It is a customizable slot, where you have a reccuring day once in the month. For instance, every 15th day of the month.
 
-<keywords: itemrangegenerator>
+[//]: <keywords: itemrangegenerator>

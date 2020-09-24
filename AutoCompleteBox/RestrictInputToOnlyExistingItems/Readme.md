@@ -1,4 +1,4 @@
-##Restrict Input To Only Existing Items##
+## Restrict Input To Only Existing Items
 This example demonstrates how to restrict the input of the user to only the existing items inside the ItemsSource of RadAutoCompleteBox.
 
 For Silverlight: The Silverlight application needs to be trusted and you need to enable trusted applications to run inside the browser. This needs be done in order to import the WinAPI function 'GetKeyState' - it is used to find if the 'Caps Lock' key is pressed. If the application is not trusted the attached behavior won't work. Please, follow the next steps:
@@ -11,4 +11,4 @@ For Silverlight: The Silverlight application needs to be trusted and you need to
 For a more detailed information how to enable Trusted Applications to run inside the browser, please check the following article from MSDN:
 https://msdn.microsoft.com/en-us/library/gg192793(v=vs.95)
 
-<keywords:itemssource, trusted, xap, signing>
+[//]: <keywords:itemssource, trusted, xap, signing>

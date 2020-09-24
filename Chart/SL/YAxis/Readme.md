@@ -1,4 +1,4 @@
-##Y Axis##
+## Y Axis
 This example demonstrates only the properties that are specific to the Y-axis. If you want to learn more about the properties that are common to both X and Y axes take a look at the Axes Overview example.
 
 Besides those common properties, Y-axis has some specific properties, explained in the list below:

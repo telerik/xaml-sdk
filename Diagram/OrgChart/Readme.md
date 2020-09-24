@@ -1,4 +1,4 @@
-##Org Chart##
+## Org Chart
 The Telerik OrgChart demo brings a great new visualization to organizational structures and hierarchies. 
 DiagramOrgchart demonstrates the following RadDiagram  features:
    - Shapes Layout. Different Layout types. Customizing the Layout with properties
@@ -10,5 +10,5 @@ DiagramOrgchart demonstrates the following RadDiagram  features:
    - Search for a node
    - Animations when templates are changed
 
-<keywords: container, organization, hierarchy, root, tree, xml, graphsource, orgtreerouter, mvvm, bringintoview, semantic, zoom>
+[//]: <keywords: container, organization, hierarchy, root, tree, xml, graphsource, orgtreerouter, mvvm, bringintoview, semantic, zoom>
    

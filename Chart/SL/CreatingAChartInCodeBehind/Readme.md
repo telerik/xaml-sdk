@@ -1,4 +1,4 @@
-##Creating a Chart in code behind##
+## Creating a Chart in code behind
 RadChart provides you with API, which you can use to build the charts you need from code-behind, without using XAML. This example will walk you through the common tasks of:
 
   - Adding RadChart and setting the DefaultView property in the code-behind
