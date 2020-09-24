@@ -1,4 +1,4 @@
-﻿## Customize Commands ##
+##  Customize Commands 
 
 This example demonstrates how you can use the CommandExecuting and CommandExecuted events to stop the execution of a command or change its default behavior. 
 The following customizations are shown:
@@ -7,4 +7,4 @@ The following customizations are shown:
  - The PasteCommand is altered just before its execution so it only allows to paste plain text;
  - After executing InsertPictureCommand, the image is resized so it doesn't exceed 200px width. 
 
-<keywords: behavior, save, implement>
+[//]: <keywords: behavior, save, implement>

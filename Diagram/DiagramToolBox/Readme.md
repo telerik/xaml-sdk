@@ -1,4 +1,4 @@
-##Diagram Tool Box##
+## Diagram Tool Box
 The DesignToolBox example allows you to drag & drop various shapes from a custom toolbox control. The example also supports the standard available diagram features such as:
 	- Drag & Drop of shapes and connections
 	- Shapes Rotation & Resizing
@@ -15,4 +15,4 @@ The DesignToolBox example allows you to drag & drop various shapes from a custom
 	- MVVM Support 
 This is a strip version of the QSF sample DiagramToolBox.
 
-<keywords: layout, save, load, settingspane>
+[//]: <keywords: layout, save, load, settingspane>

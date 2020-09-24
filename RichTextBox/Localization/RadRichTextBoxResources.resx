@@ -294,8 +294,62 @@
   <data name="ColorSelectorStandardPaletteHeaderText" xml:space="preserve">
     <value>Standard colors</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="Documents_AddBibliographySource_BibliographyFieldsFor" xml:space="preserve">
     <value>Bibliography Fields for </value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Art" xml:space="preserve">
+    <value>Art</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Book" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_BookSection" xml:space="preserve">
+    <value>Book Section</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Case" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_ConferenceProceedings" xml:space="preserve">
+    <value>Conference Proceedings</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_DocumentFromWebsite" xml:space="preserve">
+    <value>Document From Web site</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_ElectronicSource" xml:space="preserve">
+    <value>Electronic Source</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Film" xml:space="preserve">
+    <value>Film</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Interview" xml:space="preserve">
+    <value>Interview</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_JournalArticle" xml:space="preserve">
+    <value>Journal Article</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Misc" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Patent" xml:space="preserve">
+    <value>Patent</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_PeriodicalArticle" xml:space="preserve">
+    <value>Article in a Periodical</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_SoundRecording" xml:space="preserve">
+    <value>Sound Recording</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Website" xml:space="preserve">
+    <value>Web site</value>
   </data>
   <data name="Documents_AddBibliographySource_Header" xml:space="preserve">
     <value>Create Source</value>
@@ -642,6 +696,9 @@
   <data name="Documents_Commands_ChangeParagraphFlowDirectionCommand_Name" xml:space="preserve">
     <value>Flow Direction</value>
   </data>
+  <data name="Documents_Commands_ChangeSectionColumnsCommand_Name" xml:space="preserve">
+    <value>Columns</value>
+  </data>
   <data name="Documents_Commands_ChangeSpanStyleCommand_Name" xml:space="preserve">
     <value>Font Formatting</value>
   </data>
@@ -668,6 +725,9 @@
   </data>
   <data name="Documents_Commands_ChangeTableRowHeightCommand_Name" xml:space="preserve">
     <value>Row Height</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableRowRepeatOnEveryPageCommand_Name" xml:space="preserve">
+    <value>Headings</value>
   </data>
   <data name="Documents_Commands_ChangeTag_Name" xml:space="preserve">
     <value>Tag</value>
@@ -777,6 +837,12 @@
   <data name="Documents_Commands_InsertHyperlinkCommand_Name" xml:space="preserve">
     <value>Insert Hyperlink</value>
   </data>
+  <data name="Documents_Commands_InsertionCommand_Name" xml:space="preserve">
+    <value>Insertion</value>
+  </data>
+  <data name="Documents_Commands_InsertPageBreak_Name" xml:space="preserve">
+    <value>Insert Page Break</value>
+  </data>
   <data name="Documents_Commands_InsertPermissionRangeCommand_Name" xml:space="preserve">
     <value>Protect</value>
   </data>
@@ -827,6 +893,12 @@
   </data>
   <data name="Documents_Commands_MoveSelectionCommand_Name" xml:space="preserve">
     <value>Move</value>
+  </data>
+  <data name="Documents_Commands_ParagraphAutomaticSpacingAfterCommand_Name" xml:space="preserve">
+    <value>Automatic Spacing After</value>
+  </data>
+  <data name="Documents_Commands_ParagraphAutomaticSpacingBeforeCommand_Name" xml:space="preserve">
+    <value>Automatic Spacing Before</value>
   </data>
   <data name="Documents_Commands_ParagraphBackgroundCommand_Name" xml:space="preserve">
     <value>Paragraph Background</value>
@@ -881,6 +953,9 @@
   </data>
   <data name="Documents_Commands_SectionChangeDifferentFirstPageHeaderFooterCommand_Name" xml:space="preserve">
     <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeFirstPageNumberCommand_Name" xml:space="preserve">
+    <value>Page Number</value>
   </data>
   <data name="Documents_Commands_SectionChangeFooterBottomMarginCommand_Name" xml:space="preserve">
     <value>Page Setup</value>
@@ -945,6 +1020,9 @@
   <data name="Documents_Commands_UnderlineCommand_Name" xml:space="preserve">
     <value>Underline</value>
   </data>
+  <data name="Documents_Commands_UnmergeTableCellsCommand_Name" xml:space="preserve">
+    <value>Unmerge Cells</value>
+  </data>
   <data name="Documents_Commands_UpdateAllCaptionsCommand_Name" xml:space="preserve">
     <value>Update All Captions</value>
   </data>
@@ -953,6 +1031,204 @@
   </data>
   <data name="Documents_Commands_UpdateFieldCommand_Name" xml:space="preserve">
     <value>Update Field</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_AddChoiceTitle" xml:space="preserve">
+    <value>Add Choice</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayName" xml:space="preserve">
+    <value>Display Name:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayNameAlreadyUsed" xml:space="preserve">
+    <value>An entry with the same display name already exists - each entry must specify a display name.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayNameEmptyMessage" xml:space="preserve">
+    <value>Display name cannot be blank.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_ModifyChoiceTitle" xml:space="preserve">
+    <value>Modify Choice</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_Value" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_ValueAlreadyUsed" xml:space="preserve">
+    <value>An entry with the same value already exists - each entry must specify a unique value.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_Change" xml:space="preserve">
+    <value>Change...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_CheckBoxProperties" xml:space="preserve">
+    <value>Check Box Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_CheckedSymbol" xml:space="preserve">
+    <value>Checked symbol:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_UncheckedSymbol" xml:space="preserve">
+    <value>Unchecked symbol:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_ContentControlProperties" xml:space="preserve">
+    <value>Content Control Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_CalendarType" xml:space="preserve">
+    <value>Calendar type:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_DatePickerProperties" xml:space="preserve">
+    <value>Date Picker Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_DisplayLikeThis" xml:space="preserve">
+    <value>Display the date like this:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_Locale" xml:space="preserve">
+    <value>Locale:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents" xml:space="preserve">
+    <value>Store XML contents in the following format when mapped:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_Date" xml:space="preserve">
+    <value>Date (xsd:date)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_DateAndTime" xml:space="preserve">
+    <value>Date and Time (xsd:dateTime)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_Text" xml:space="preserve">
+    <value>Text (same as display)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Add" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_DropDownListProperties" xml:space="preserve">
+    <value>Drop-Down List Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Modify" xml:space="preserve">
+    <value>Modify...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_NewStyle" xml:space="preserve">
+    <value>New Style...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_RemoveContentControl" xml:space="preserve">
+    <value>Remove content control when contents are edited</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs" xml:space="preserve">
+    <value>Show as:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_BoundingBox" xml:space="preserve">
+    <value>Bounding Box</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_StartEndTag" xml:space="preserve">
+    <value>Start/End Tag</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Style" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Tag" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Title" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_UseStyle" xml:space="preserve">
+    <value>Use a style to format text typed into the empty control</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Deleted" xml:space="preserve">
+    <value>Content control cannot be deleted</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Edited" xml:space="preserve">
+    <value>Contents cannot be edited</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Locking" xml:space="preserve">
+    <value>Locking</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_PlainTextSection_AllowCarriageReturns" xml:space="preserve">
+    <value>Allow carriage returns (multiple paragraphs)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_PlainTextSection_PlainTextProperties" xml:space="preserve">
+    <value>Plain Text Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_AllowUsers" xml:space="preserve">
+    <value>Allow users to add and remove sections</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_RepeatingSectionProperties" xml:space="preserve">
+    <value>Repeating Section Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_SectionTitle" xml:space="preserve">
+    <value>Section title:</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_Date" xml:space="preserve">
+    <value>Click or tap to enter a date.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_ListItem" xml:space="preserve">
+    <value>Choose an item.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_RepeatingItem" xml:space="preserve">
+    <value>Enter any content that you want to repeat, including other content controls. You can also insert this control around table rows in order to repeat parts of a table.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_Text" xml:space="preserve">
+    <value>Click or tap here to enter text.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AfterTable" xml:space="preserve">
+    <value>This content control type cannot be placed after a table row or a table cell.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundImage" xml:space="preserve">
+    <value>This content control type cannot be inserted around a selected image.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundMultipleParagraphs" xml:space="preserve">
+    <value>This content control type cannot be inserted around multiple paragraphs.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundTableRows" xml:space="preserve">
+    <value>This content control type cannot be inserted around table rows.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_BeforeTable" xml:space="preserve">
+    <value>This content control type cannot be placed before a table row or a table cell.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_InsertControl" xml:space="preserve">
+    <value>Insert Content Control</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_Intersect" xml:space="preserve">
+    <value>Content controls cannot intersect with each other.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_MultipleBlocks" xml:space="preserve">
+    <value>Content controls containing multiple blocks cannot be placed in a partially selected table.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_MultipleSelection" xml:space="preserve">
+    <value>This content control type cannot be placed in multiple selection.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_PictureControl" xml:space="preserve">
+    <value>Picture control cannot be used in selection that contains any non-image content, or more than a single image.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_RepeatingSectionControl" xml:space="preserve">
+    <value>Repeating section control can only be inserted around entire paragraphs or rows.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_TableRow" xml:space="preserve">
+    <value>Content controls can be inserted around a row only when all of its cells are selected.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_TableRows" xml:space="preserve">
+    <value>Content controls can be inserted around rows, only when all of their cells are selected.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_UpdateProperties" xml:space="preserve">
+    <value>Update content control properties</value>
   </data>
   <data name="Documents_ContextMenu_Clipboard_Copy" xml:space="preserve">
     <value>Copy</value>
@@ -1110,6 +1386,9 @@
   <data name="Documents_ContextMenu_Table_SelectTable" xml:space="preserve">
     <value>Select Table</value>
   </data>
+  <data name="Documents_ContextMenu_Table_SplitCell" xml:space="preserve">
+    <value>Unmerge Cell</value>
+  </data>
   <data name="Documents_ContextMenu_Table_TableBordersProperties" xml:space="preserve">
     <value>Table Borders...</value>
   </data>
@@ -1127,6 +1406,30 @@
   </data>
   <data name="Documents_ContextMenu_TrackChanges_Reject" xml:space="preserve">
     <value>Reject Change</value>
+  </data>
+  <data name="Documents_DocumentRuler_CenterTab" xml:space="preserve">
+    <value>Center Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_DecimalTab" xml:space="preserve">
+    <value>Decimal Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_FirstLineIndent" xml:space="preserve">
+    <value>First Line Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_HangingIndent" xml:space="preserve">
+    <value>Hanging Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_LeftIndent" xml:space="preserve">
+    <value>Left Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_LeftTab" xml:space="preserve">
+    <value>Left Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_RightIndent" xml:space="preserve">
+    <value>Right Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_RightTab" xml:space="preserve">
+    <value>Right Tab</value>
   </data>
   <data name="Documents_DoubleLineDecoration_DoubleLine" xml:space="preserve">
     <value>Double line</value>
@@ -1265,7 +1568,7 @@
     <value>TopMargin</value>
   </data>
   <data name="Documents_FloatingBlockPropertiesDialog_TextWrapping" xml:space="preserve">
-    <value>TextWrapping</value>
+    <value>Text Wrapping</value>
   </data>
   <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_BehindText" xml:space="preserve">
     <value>Behind Text</value>
@@ -1447,6 +1750,9 @@
   <data name="Documents_InsertCaptionDialog_ChapterStartsWithStyle" xml:space="preserve">
     <value>Chapter starts with style</value>
   </data>
+  <data name="Documents_InsertCaptionDialog_Colon" xml:space="preserve">
+    <value>colon</value>
+  </data>
   <data name="Documents_InsertCaptionDialog_DeleteLabel" xml:space="preserve">
     <value>Delete Label</value>
   </data>
@@ -1461,6 +1767,9 @@
   </data>
   <data name="Documents_InsertCaptionDialog_Header" xml:space="preserve">
     <value>Caption</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Hyphen" xml:space="preserve">
+    <value>hyphen</value>
   </data>
   <data name="Documents_InsertCaptionDialog_IncludeChapterNumber" xml:space="preserve">
     <value>Include chapter number</value>
@@ -1482,6 +1791,9 @@
   </data>
   <data name="Documents_InsertCaptionDialog_Options" xml:space="preserve">
     <value>Options</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Period" xml:space="preserve">
+    <value>period</value>
   </data>
   <data name="Documents_InsertCaptionDialog_Position" xml:space="preserve">
     <value>Position:</value>
@@ -1710,6 +2022,9 @@
   </data>
   <data name="Documents_ManageBibliographicSources_New" xml:space="preserve">
     <value>New...</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_PreviewExample" xml:space="preserve">
+    <value>Preview (APA Fifth Edition): EXAMPLE</value>
   </data>
   <data name="Documents_ManageBibliographicSource_Preview" xml:space="preserve">
     <value>Preview</value>
@@ -1948,6 +2263,9 @@
   <data name="Documents_ParagraphPropertiesDialog_LineSpacing_Single" xml:space="preserve">
     <value>Single</value>
   </data>
+  <data name="Documents_ParagraphPropertiesDialog_Pt" xml:space="preserve">
+    <value>pt</value>
+  </data>
   <data name="Documents_ParagraphPropertiesDialog_RightIndentation" xml:space="preserve">
     <value>Right:</value>
   </data>
@@ -1957,8 +2275,14 @@
   <data name="Documents_ParagraphPropertiesDialog_SpacingAfter" xml:space="preserve">
     <value>After:</value>
   </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingAfter_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
   <data name="Documents_ParagraphPropertiesDialog_SpacingBefore" xml:space="preserve">
     <value>Before:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingBefore_Auto" xml:space="preserve">
+    <value>Auto</value>
   </data>
   <data name="Documents_ParagraphPropertiesDialog_Tabs" xml:space="preserve">
     <value>Tabs</value>
@@ -1978,6 +2302,21 @@
   <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Right" xml:space="preserve">
     <value>Right</value>
   </data>
+  <data name="Documents_PasteOptions_KeepSourceFormatting" xml:space="preserve">
+    <value>Keep Source Formatting (K)</value>
+  </data>
+  <data name="Documents_PasteOptions_KeepTextOnly" xml:space="preserve">
+    <value>Keep Text Only (T)</value>
+  </data>
+  <data name="Documents_PasteOptions_MergeFormatting" xml:space="preserve">
+    <value>Merge Formatting (M)</value>
+  </data>
+  <data name="Documents_PasteOptions_Name" xml:space="preserve">
+    <value>Paste Options</value>
+  </data>
+  <data name="Documents_PasteOptions_UseDestinationStyles" xml:space="preserve">
+    <value>Use Destination Styles (H)</value>
+  </data>
   <data name="Documents_PermissionType_Everyone" xml:space="preserve">
     <value>Everyone</value>
   </data>
@@ -1992,6 +2331,15 @@
   </data>
   <data name="Documents_ProtectDocumentDialog_ReenterPassword" xml:space="preserve">
     <value>Reenter password to confirm:</value>
+  </data>
+  <data name="Documents_RadDocument_FigureCaption" xml:space="preserve">
+    <value>Figure</value>
+  </data>
+  <data name="Documents_RadDocument_TableCaption" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_RadRichTextBox_ColumnBreak" xml:space="preserve">
+    <value>‧‧‧‧‧‧‧ Column Break ‧‧‧‧‧‧‧</value>
   </data>
   <data name="Documents_RadRichTextBox_ContinueToNextCommentFromBeginningOfDocument" xml:space="preserve">
     <value>Do you want to continue searching from the beginning of the document?</value>
@@ -2029,6 +2377,9 @@
   <data name="Documents_RadRichTextBox_SectionBreak" xml:space="preserve">
     <value>::::::: Section Break ({0}) :::::::</value>
   </data>
+  <data name="Documents_RadRichTextBox_SectionBreak_Continuous" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
   <data name="Documents_RadRichTextBox_SectionBreak_EvenPage" xml:space="preserve">
     <value>Even Page</value>
   </data>
@@ -2044,11 +2395,83 @@
   <data name="Documents_ReferenceTypes_Heading" xml:space="preserve">
     <value>Heading</value>
   </data>
+  <data name="Documents_RowProperties_NextRow" xml:space="preserve">
+    <value>Next Row</value>
+  </data>
+  <data name="Documents_RowProperties_PreviousRow" xml:space="preserve">
+    <value>Previous Row</value>
+  </data>
+  <data name="Documents_RowProperties_RepeatAsHeaderRow" xml:space="preserve">
+    <value>Repeat as header row at the top of each page</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeightAtLeast" xml:space="preserve">
+    <value>at least</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeight_InvalidNumberMessage" xml:space="preserve">
+    <value>Enter a valid number between 0 and 2112.</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeight_InvalidNumberMessageHeader" xml:space="preserve">
+    <value>Row height</value>
+  </data>
+  <data name="Documents_RowProperties_RowIndex" xml:space="preserve">
+    <value>Row Index {0}:</value>
+  </data>
+  <data name="Documents_RowProperties_RowOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Documents_RowProperties_RowSize" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Documents_RowProperties_SpecifyHeight" xml:space="preserve">
+    <value>Specify height:</value>
+  </data>
   <data name="Documents_SaveCommand_UnableToSaveFile" xml:space="preserve">
     <value>Unable to save the file.</value>
   </data>
   <data name="Documents_SaveCommand_UnsupportedFileFormat" xml:space="preserve">
     <value>Unsupported file format.</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnNumber" xml:space="preserve">
+    <value>Col #:</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnSpacing" xml:space="preserve">
+    <value>Spacing:</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnWidth" xml:space="preserve">
+    <value>Width: </value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_EqualColumnWidth" xml:space="preserve">
+    <value>Equal column width</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_Header" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_LeftColumns" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_LineBetween" xml:space="preserve">
+    <value>Line between</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_NumberOfColumns" xml:space="preserve">
+    <value>Number of columns: </value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_OneColumn" xml:space="preserve">
+    <value>One</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_Presets" xml:space="preserve">
+    <value>Presets</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_RightColumns" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ThreeColumns" xml:space="preserve">
+    <value>Three</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_TwoColumns" xml:space="preserve">
+    <value>Two</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_WidthAndSpacing" xml:space="preserve">
+    <value>Width and spacing</value>
   </data>
   <data name="Documents_SetNumberingValueDialog_AdvanceValue" xml:space="preserve">
     <value>Advance value (skip numbers)</value>
@@ -2419,6 +2842,9 @@
   <data name="Documents_TableofContentsDialog_PrintPreviewTable" xml:space="preserve">
     <value>Table</value>
   </data>
+  <data name="Documents_TableofContentsDialog_PrintPreview_Heading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
   <data name="Documents_TableofContentsDialog_RightAlignPageNumbers" xml:space="preserve">
     <value>Right align page numbers</value>
   </data>
@@ -2445,6 +2871,9 @@
   </data>
   <data name="Documents_TablePropertiesDialog_Header" xml:space="preserve">
     <value>Table Properties</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Row" xml:space="preserve">
+    <value>Row</value>
   </data>
   <data name="Documents_TablePropertiesDialog_Table" xml:space="preserve">
     <value>Table</value>
@@ -2517,6 +2946,9 @@
   </data>
   <data name="Documents_TabStopsPropertiesDialog_Alignment" xml:space="preserve">
     <value>Alignment</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_All" xml:space="preserve">
+    <value>All</value>
   </data>
   <data name="Documents_TabStopsPropertiesDialog_Center" xml:space="preserve">
     <value>Center</value>
@@ -2637,8 +3069,5 @@
   </data>
   <data name="Documents_WaveDecoration_WaveLine" xml:space="preserve">
     <value>Wave line</value>
-  </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
   </data>
 </root>

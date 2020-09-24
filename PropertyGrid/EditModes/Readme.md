@@ -1,4 +1,4 @@
-##Edit Modes##
+## Edit Modes
 This example demonstrates how the editing behavior of RadPropertyGrid can be modified via EditMode property.
 
 See also:

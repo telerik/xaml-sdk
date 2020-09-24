@@ -1,4 +1,4 @@
-##Ticks##
+## Ticks
 The ticks are part of the chart axes and are typically used to mark a specific value on the axis. There are two types of ticks - minor and major. The major ticks always represent the primary axis values. The minor ticks are used for more readable visualization of the data values.
 
 To control the visibility of the ticks you have to use one fo the following properties:

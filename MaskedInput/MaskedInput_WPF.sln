@@ -13,8 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueToTextConverter", "Val
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinusKeyCustomizations_WPF", "MinusKeyCustomizations\MinusKeyCustomizations_WPF.csproj", "{4C534578-EFB5-488D-BC29-B809446C954D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexValidationForTimeSpan_WPF", "RegexValidationForTimeSpan\RegexValidationForTimeSpan_WPF.csproj", "{2A28B030-9115-4D3B-A5B2-5C04760F1B33}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -44,8 +45,16 @@ Global
 		{4C534578-EFB5-488D-BC29-B809446C954D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C534578-EFB5-488D-BC29-B809446C954D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C534578-EFB5-488D-BC29-B809446C954D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A28B030-9115-4D3B-A5B2-5C04760F1B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A28B030-9115-4D3B-A5B2-5C04760F1B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A28B030-9115-4D3B-A5B2-5C04760F1B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A28B030-9115-4D3B-A5B2-5C04760F1B33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72138393-2522-4AED-9594-C46B1AE6C8B2}
+	EndGlobalSection
+	 
 EndGlobal

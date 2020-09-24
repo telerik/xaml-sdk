@@ -1,4 +1,4 @@
-##Declaring standalone RadRadialMenu##
+## Declaring standalone RadRadialMenu
 This example demonstrates how to declare the RadRadialMenu as a standalone menu.
 
-<keywords: declare, menu >
+[//]: <keywords: declare, menu >

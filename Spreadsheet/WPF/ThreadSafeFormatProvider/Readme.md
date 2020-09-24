@@ -1,4 +1,4 @@
-## Thread Safe Format Provider ##
+##  Thread Safe Format Provider 
 
 This WPF example shows how RadSpreadsheet provides an easy solution for making import and export of files asynchronous and thread safe.
 The example UserControl provides four buttons:
@@ -7,4 +7,4 @@ The example UserControl provides four buttons:
  - "Save file synchronously" button saves current Workbook to file synchronously. When pressing this button you may see how the UI thread is unresponsive during the export (this is easier to be noticed when saving big files with time-consuming export).
  - "Save file asynchronously" button saves current Workbook to file asynchronously. When pressing this button you may notice that the UI thread is responsive as you may interact freely with the UserControl during the export.
 
- <keywords: open,save,synchronously,asynchronously,bigfile,xlsx,csv,save,import,export>
+ [//]: <keywords: open,save,synchronously,asynchronously,bigfile,xlsx,csv,save,import,export>

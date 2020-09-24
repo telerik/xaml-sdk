@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerCustomSaveCommand_WPF", "PdfViewerCustomSaveCommand\PdfViewerCustomSaveCommand_WPF.csproj", "{13B7DB8D-2E98-463F-82C2-82E56BAF112A}"
 EndProject
@@ -27,8 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDecoder_WPF", "Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerToolbarWithGlyphs_WPF", "PdfViewerToolbarWithGlyphs\PdfViewerToolbarWithGlyphs_WPF.csproj", "{A994D1BC-9634-408A-BB3F-9AFA3753461E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDocumentContent_WPF", "AddDocumentContent\AddDocumentContent_WPF.csproj", "{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawOnDocument_WPF", "DrawOnDocument\DrawOnDocument_WPF.csproj", "{52C49A13-038F-427D-A06E-919C72A88FA0}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -82,8 +85,20 @@ Global
 		{A994D1BC-9634-408A-BB3F-9AFA3753461E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A994D1BC-9634-408A-BB3F-9AFA3753461E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A994D1BC-9634-408A-BB3F-9AFA3753461E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F53CE3-6B74-412A-BE7D-241A0F2E4F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C49A13-038F-427D-A06E-919C72A88FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C49A13-038F-427D-A06E-919C72A88FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C49A13-038F-427D-A06E-919C72A88FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C49A13-038F-427D-A06E-919C72A88FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F823E27-4FFE-4216-8632-38428796D48A}
+	EndGlobalSection
+	 
 EndGlobal

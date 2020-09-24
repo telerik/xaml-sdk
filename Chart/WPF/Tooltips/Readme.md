@@ -1,2 +1,2 @@
-##Tooltips##
+## Tooltips
 RadChart provides support for displaying tooltips when the mouse cursor hovers over the respective series items. The tooltips are disabled by default but you can enable them by setting the SeriesDefinition.ShowItemToolTips to True. Moreover, you can enable the functionality for one series and disable it for another in the same chart area. Additionally, you can change the default tooltip format by using SeriesDefinition.ItemToolTipFormat property or you can completely customize the tooltip content by using the ChartArea.ItemToolTipOpening and ChartArea.ItemToolTipClosing events.

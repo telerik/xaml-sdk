@@ -1,4 +1,4 @@
-## Custom Functions ##
+##  Custom Functions 
 This examples shows how to create and register custom functions in RadSpreadsheet.
 The example shows several functions inheriting from different members from RadSpreadsheet functions inheritance tree.
  - Arguments and E functions are inheriting from FunctionBase abstract class.
@@ -10,4 +10,4 @@ The example shows several functions inheriting from different members from RadSp
  
 You should additionally notice that all this function classes are registered through the FunctionManager class, so that they can be used in RadSpreadsheet.
 
-<keywords: cell,reference,range,expression,add,geomean,nand,upper,indirect>
+[//]: <keywords: cell,reference,range,expression,add,geomean,nand,upper,indirect>

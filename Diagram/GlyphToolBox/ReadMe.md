@@ -1,4 +1,4 @@
-﻿The GlyphToolBox Diagram SDK shows how you can extend the default Diagram Toolbox with the Glyphs collection we provide from R3 2016.
+The GlyphToolBox Diagram SDK shows how you can extend the default Diagram Toolbox with the Glyphs collection we provide from R3 2016.
 Glyphs are SVG images built via with special FontFamily you can apply to TextBlock / Button / DiagramTextShape etc.
 In the example Glyphs are added in the Diagram ToolBox, DiagramSettingsPane, RadAutoCompleteBox and RadButtons.
 Below are listed some demo specifics:

@@ -6,6 +6,7 @@
         xmlns:Txt="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;assembly=Telerik.Windows.Documents.Spreadsheet"
         xmlns:Csv="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;assembly=Telerik.Windows.Documents.Spreadsheet" 
         xmlns:Pdf="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf"
+        xmlns:Xls="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls" 
         xmlns:Xlsx="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml" 
         xmlns:local="clr-namespace:Localization"
         xmlns:Spreadsheet="clr-namespace:Telerik.Windows.Controls.Spreadsheet;assembly=Telerik.Windows.Controls.Spreadsheet" x:Class="Localization.MainWindow"
@@ -936,6 +937,7 @@
                     <Txt:TxtFormatProvider/>
                     <Csv:CsvFormatProvider/>
                     <Pdf:PdfFormatProvider/>
+                    <Xls:XlsFormatProvider/>
                     <Xlsx:XlsxFormatProvider/>
                 </telerik:RadSpreadsheet.FormatProviders>
             </telerik:RadSpreadsheet>

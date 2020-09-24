@@ -1,4 +1,4 @@
-##Row Alternation With RowStyleSelector##
+## Row Alternation With RowStyleSelector
 This example demonstrates how to simulate row alternation with a RowStyleSelector.
 
 More details can be found in our online help:

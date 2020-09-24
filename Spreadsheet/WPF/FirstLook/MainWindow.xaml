@@ -6,6 +6,7 @@
         xmlns:Csv="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;assembly=Telerik.Windows.Documents.Spreadsheet" 
         xmlns:Pdf="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf"
         xmlns:Xlsx="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml" 
+        xmlns:Xls="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls" 
         x:Class="Spreadsheet_WPF.MainWindow"
         Title="MainWindow" Height="600" Width="1000" >
     <Grid>
@@ -23,6 +24,7 @@
                     <Txt:TxtFormatProvider/>
                     <Csv:CsvFormatProvider/>
                     <Pdf:PdfFormatProvider/>
+                    <Xls:XlsFormatProvider/>
                     <Xlsx:XlsxFormatProvider/>
                 </telerik:RadSpreadsheet.FormatProviders>
             </telerik:RadSpreadsheet>

@@ -1,4 +1,4 @@
-##Linear Scale Tick Marks Custom Tick Marks##
+## Linear Scale Tick Marks Custom Tick Marks
 The RadGauge control provides very flexible standard tick marks and labels, but sometimes it is necessary to show additional elements in particular scale position. This can be achievied by using custom elements which can be placed at a specific value (shown at value 0,75 and 100 in the image below) by setting the Value property. Just like the major and minor tick marks, the look of the custom tick marks can be fully customized.
 
-<keywords: radhorizontallineargauge, horizontallinearscale, majortickstep, gaugerange, majortickuserangecolor, middletickuserangecolor, minortickuserangecolor, customitems>
+[//]: <keywords: radhorizontallineargauge, horizontallinearscale, majortickstep, gaugerange, majortickuserangecolor, middletickuserangecolor, minortickuserangecolor, customitems>

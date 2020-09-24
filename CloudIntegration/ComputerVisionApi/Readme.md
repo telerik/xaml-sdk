@@ -1,2 +1,2 @@
-##Azure Computer Vision API Integration##
+## Azure Computer Vision API Integration
 This example demonstrates how to integrate Azure's Computer Vision API with the controls from the UI for WPF suite. More specifically, it uses the RadFileDialogs, RadGauge and RadGlyph to create a simple user control which determines whether an uploaded photo is a portrait or not.

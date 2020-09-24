@@ -1,4 +1,4 @@
-##Data Binding With Automatic Series Mappings##
+## Data Binding With Automatic Series Mappings
 One of the features of the RadChart is the automatic series mapping. With automatic series mapping, you can easily create a chart by simply setting the RadChart.ItemsSource to the data source you have. RadChart will create a chart series for every numeric field in the data source by mapping the numeric value to the DataPointMember.YValue field for each respective series. The type of the chart depends on the RadChart.DefaultSeriesDefinition property and by default it is set to BarSeriesDefinition.
 
 Note that SeriesDefinition set through the RadChart.DefaultSeriesDefinition property does not support change notifications i.e. if you try to change a RadChart.DefaultSeriesDefinition property after the control is databound, it will not have any effect till the next rebind operation. The recommended approach in this scenario would be to use unique SeriesMapping.SeriesDefinition or alternatively you can access the generated DataSeries directly (i.e. RadChart.DefaultView.ChartArea.DataSeries[i]) and update its DataSeries.Definition properties.

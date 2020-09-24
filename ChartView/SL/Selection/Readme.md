@@ -1,4 +1,4 @@
-##Selection##
+## Selection
 This help example will demonstrate how you can make your charts more interactive by adding a selection behavior. Here are the main properties that ChartSelectionBehavior exposes:
 
   - DataPointSelectionMode - to control single / multiple data point selection.
@@ -6,4 +6,4 @@ This help example will demonstrate how you can make your charts more interactive
   - SelectionPoints - to detect the selection. You may also use the SelectionChanged event of the RadChartView for the same purpose.
   - SelectionPalette - to control the selected element appearance.
   
-<keywords: scatterpointseries, datapointselectionmode, selectionpoints, selectionpalette, singleselection, chartpalette> 
+[//]: <keywords: scatterpointseries, datapointselectionmode, selectionpoints, selectionpalette, singleselection, chartpalette> 

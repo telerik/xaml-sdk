@@ -1,4 +1,4 @@
-##ReadOnly PropertyDefinition##
+## ReadOnly PropertyDefinition
 This example demonstrates how to control which property definitions of RadPropertyGrid to be read only.
 
 

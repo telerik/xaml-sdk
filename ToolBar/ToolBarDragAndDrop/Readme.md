@@ -1,4 +1,4 @@
-##Tool Bar Drag And Drop##
+## Tool Bar Drag And Drop
 The ToolBarDragAndDrop SDK demo shows integration between DragDropManager and RadToolBar / RadToolBarTray.
 In this demo you are able to:
 
@@ -7,4 +7,4 @@ In this demo you are able to:
    - Create new Bands (rows) in the current tray or other tray with Drag and Drop.
    - Drop a toolbar outside tray so that it can be dragged with Window around it (this is available only in the WPF demo).
 
-<keywords: radtoolbartray, toolbardraganddrop, dragdropmanager> 
+[//]: <keywords: radtoolbartray, toolbardraganddrop, dragdropmanager> 

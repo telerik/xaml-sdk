@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace AgendaViewDefinition
 {
-    public class ViewDefinitionToVisibilityConverter : IValueConverter
+    public class AgendaViewDefinitionToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {

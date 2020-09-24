@@ -1,4 +1,4 @@
-## Custom Row And Column Headings ##
+##  Custom Row And Column Headings 
 
 This examples shows how to change the row and column headers or hide them in RadSpreadsheet.
 The example shows two different custom header name rendering converters:
@@ -6,4 +6,4 @@ The example shows two different custom header name rendering converters:
  - DynamicHeaderNameRenderingConverter which makes row and column headers that intersect with the table data on scroling to contain the data
    from the first row and first column of the table.
 
-<keywords: dynamicheadernamerenderingconverter,numberedcolumnsheadernamerenderingconverter>
+[//]: <keywords: dynamicheadernamerenderingconverter,numberedcolumnsheadernamerenderingconverter>

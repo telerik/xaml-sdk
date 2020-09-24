@@ -1,4 +1,4 @@
-## Alert Different Icon ##
+##  Alert Different Icon 
 This example demonstrates how you could customize the template of the Alert and change the Alert Icon.
 
 IMPORTANT:
@@ -7,4 +7,4 @@ With the release of Telerik UI for WPF Q1 2016 there is a built-in functionality
 - For WPF here: http://docs.telerik.com/devtools/wpf/controls/radwindow/styles-and-templates/styling-the-predefined-windows#applying-icontemplate
 - For Silverlight here: http://docs.telerik.com/devtools/silverlight/controls/radwindow/styles-and-templates/styling-the-predefined-windows#applying-icontemplate
 
-<keywords:alert, radalert, controltemplate, customization>
+[//]: <keywords:alert, radalert, controltemplate, customization>

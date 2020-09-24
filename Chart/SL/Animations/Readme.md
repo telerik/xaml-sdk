@@ -1,4 +1,4 @@
-##Animations##
+## Animations
 When displayed, each chart is nicely animated using default animation settings. AnimationSettings allows you to control how the animation is applied to each series and/or series item:
 
   - ItemDelay - this property specifies the delay for each series item toward the previous one. For example, if you have bar chart, when a bar item animation is started, the next bar item will start its animation with the delay specified by this property.

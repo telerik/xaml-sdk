@@ -1,4 +1,4 @@
-##Custom Connectors Tools##
+## Custom Connectors Tools
 The Custom Connectors Tool Diagram SDK shows some possible ways to create Custom Connectors runtime.
 
 	- the CustomConnectorAddTool allows you to add custom connectors by pressing Shift + Ctrl + MouseDown over a shape.
@@ -6,4 +6,4 @@ The Custom Connectors Tool Diagram SDK shows some possible ways to create Custom
 
 	- the SettingsPane in the demo provides a way to add custom Connector via additional custom made userControl placed in the second tab of the SettingsPane.
 
-<keywords:connectiontool, hittest, service>
+[//]: <keywords:connectiontool, hittest, service>

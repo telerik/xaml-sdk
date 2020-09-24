@@ -1,4 +1,4 @@
-##Data Binding##
+## Data Binding
 Databinding for the RadDataBar control involves the correlation between the business logic/data, and the visualization of the control.
 
 The DataBinding involves the following three properties:
@@ -6,4 +6,4 @@ The DataBinding involves the following three properties:
 * Value (a property of RadDataBar) - expects a value which will be used to determine the size of the bar.
 * ValuePath (a property of RadStackedDataBar and RadStacked100DataBar) - expects the name of the property from the underlying datasource, which will determine the value of each bar in the stack.
 
-<keywords: databinding, mvvm, stackeddatabar>
+[//]: <keywords: databinding, mvvm, stackeddatabar>

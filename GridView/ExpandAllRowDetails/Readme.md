@@ -1,4 +1,4 @@
-##Expand All RowDetails##
+## Expand All RowDetails
 This example demonstrates how to expand all RowDetails.
 
 More details can be found in our online help:

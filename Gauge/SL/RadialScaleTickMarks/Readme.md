@@ -1,8 +1,8 @@
-##Radial Scale Tick Marks##
+## Radial Scale Tick Marks
 Tick marks allow displaying value intervals along the gauge scale. There are 3 types of the tick marks:
 
   * Major: Specify primary value intervals. MajorTicks or MajorTickStep property of the scale specifies the number of the value intervals along the entire length of the scale bar. Major tick marks can have a label. You can specify common properties and appearance for the major tick marks using MajorTick property of the scale.
   * Middle: Specify secondary value intervals. MiddleTicks property of the scale specifies the number of the secondary value intervals inside the primary value interval. Middle tick marks can't have labels. You can specify common properties and appearance of the middle tick mark using MiddleTick property of the scale.
   * Minor: Specify third level of the value intervals. MinorTicks scale's property specifies number of the third level value intervals inside the secondary value interval. Minor tick marks can't have labels. You can specify common properties and appearance of the minor tick mark using MinorTick property of the scale.
 
-<keywords: radradialgauge, radialscale, needle, pinpoint, majorticks, majortickstep, middleticks, showlastlabel, minortick>
+[//]: <keywords: radradialgauge, radialscale, needle, pinpoint, majorticks, majortickstep, middleticks, showlastlabel, minortick>

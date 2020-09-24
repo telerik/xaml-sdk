@@ -890,6 +890,67 @@
                     </telerik:RadRibbonButton>
                 </telerik:RadRibbonGroup>
             </telerik:RadRibbonTab>
+            <telerik:RadRibbonTab Header="Developer">
+                <telerik:RadRibbonGroup Header="Controls">
+                    <StackPanel>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a rich text content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="RichText"
+                                                SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-richtext.png,IconSources={StaticResource IconSources}}"
+                                                Size="Small" telerik:ScreenTip.Title="Rich Text Content Control">
+                        </telerik:RadRibbonButton>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a check box content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="CheckBox"
+                                            SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-checkbox.png,IconSources={StaticResource IconSources}}"
+                                            Size="Small" telerik:ScreenTip.Title="Check Box Content Control">
+                        </telerik:RadRibbonButton>
+                    </StackPanel>
+                    <StackPanel>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a plain text content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="Text"
+                                                SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-plaintext.png,IconSources={StaticResource IconSources}}"
+                                                Size="Small" telerik:ScreenTip.Title="Plain Text Content Control">
+                        </telerik:RadRibbonButton>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a combo box content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="ComboBox"
+                                            SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-combobox.png,IconSources={StaticResource IconSources}}"
+                                            Size="Small" telerik:ScreenTip.Title="Combo Box Content Control">
+                        </telerik:RadRibbonButton>
+                    </StackPanel>
+                    <StackPanel>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a picture content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="Picture"
+                                                SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-picture.png,IconSources={StaticResource IconSources}}"
+                                                Size="Small" telerik:ScreenTip.Title="Picture Content Control">
+                        </telerik:RadRibbonButton>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a drop-down list content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="DropDownList"
+                                            SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-dropdownlist.png,IconSources={StaticResource IconSources}}"
+                                            Size="Small" telerik:ScreenTip.Title="Drop-Down List Content Control">
+                        </telerik:RadRibbonButton>
+                    </StackPanel>
+                    <StackPanel>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a content control that contains other controls and repeats the contents of the control as needed."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="RepeatingSection"
+                                        SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-repeatingsection.png,IconSources={StaticResource IconSources}}"
+                                        Size="Small" telerik:ScreenTip.Title="Repeating Section Content Control">
+                        </telerik:RadRibbonButton>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="Insert a date content control."
+													 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding InsertSdtCommand}" CommandParameter="Date"
+                                            SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-datepicker.png,IconSources={StaticResource IconSources}}"
+                                            Size="Small" telerik:ScreenTip.Title="Date Picker Content Control">
+                        </telerik:RadRibbonButton>
+                    </StackPanel>
+                    <telerik:Separator/>
+                    <StackPanel>
+                        <telerik:RadRibbonButton telerik:ScreenTip.Description="View or modify properties for the selected control."
+                                                 SmallImage="{telerik:IconResource IconRelativePath=16/contentControl-properties.png,IconSources={StaticResource IconSources}}"
+                                                 telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ShowContentControlPropertiesDialogCommand}"
+                                                 Size="Medium" telerik:ScreenTip.Title="Control Properties"
+                                                 Text="Properties">
+                        </telerik:RadRibbonButton>
+                    </StackPanel>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
             <telerik:RadRibbonTab ContextualGroupName="TableTools" Header="Design">
                 <telerik:RadRibbonGroup Header="Table Style Options">
                     <telerik:RadCollapsiblePanel>

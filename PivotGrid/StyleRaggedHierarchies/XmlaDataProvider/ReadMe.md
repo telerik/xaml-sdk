@@ -1,4 +1,4 @@
-##Style Ragged Hierarchies XmlaDataProvider##
+## Style Ragged Hierarchies XmlaDataProvider
 This example demonstrates how you can customize RadPivotGrid in order to show Ragged Hierarchies in different ways.
 
-<keywords:xmla, olap, customization>
+[//]: <keywords:xmla, olap, customization>

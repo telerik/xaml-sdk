@@ -1,4 +1,4 @@
-## Customize Visual States ##
+##  Customize Visual States 
 
 This example shows how to customize the visual states (mouse over, pressed, focused, etc.) of the RadButton control. The sample shows how to customize the colors of the mouse over, pressed and the focused states, but you can apply the same approach for all other states listed in the ControlTemplate of the button.
 
@@ -8,4 +8,4 @@ The guidelines shown in this project can be used for customizing any other butto
 
 In the RadButtonCustomOffice_BlackStyle.xaml and RadButtonCustomOffice2016Style.xaml files, you can find the default Styles for the RadButton control extracted from the Office_Black and Office2016 themes. The changes applied are marked with comments following pattern "Changed OldValue to NewValue". For example: "Changed Background from "{StaticResource ControlBackground_MouseOver}" to "#FF8080:""
 
-<keywords: trigger, mouseover, pressed, office2016, officeblack>
+[//]: <keywords: trigger, mouseover, pressed, office2016, officeblack>

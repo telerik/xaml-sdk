@@ -1,4 +1,4 @@
-##Chart Export##
+## Chart Export
 RadChart allows you to export the chart in several file formats:
 
   - Png - Portable Netwok Graphic. Use RadChart.ExportToImage(Stream).

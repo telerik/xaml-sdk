@@ -1,5 +1,5 @@
-## MultiSelection in RadRibbonGallery ##
+##  MultiSelection in RadRibbonGallery 
 
 This example demonstrates how to implement multiple selection in the RibbonGallery control.
 
-<keywords: selectionmode, gallery, closedropdownonselection>
+[//]: <keywords: selectionmode, gallery, closedropdownonselection>
