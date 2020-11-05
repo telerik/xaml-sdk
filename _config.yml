@@ -1,1 +1,4 @@
 theme: jekyll-theme-slate
+url: "https://telerik.github.io/xaml-sdk"
+plugins:
+  - jekyll-sitemap
