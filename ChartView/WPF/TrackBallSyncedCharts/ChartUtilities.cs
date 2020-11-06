@@ -120,7 +120,7 @@ namespace TrackBallSyncedCharts
             if (e.Context.DataPointInfos.Count != 0)
             {
                 var center = e.Context.DataPointInfos[0].DataPoint.LayoutSlot.Center;
-                var dataTuple = chart.ConvertPointToData(new Point(center.X, center.Y));
+                var dataTuple = chart.ConvertPointToData(new Point(center.X + chart.PanOffset.X, center.Y));
                 xCategory = dataTuple.FirstValue;
             }
             MoveTrackBallsSafe(GetTrackBallGroup(behavior), xCategory, behavior);
