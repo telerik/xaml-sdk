@@ -1,6 +1,6 @@
-Progress Telerik XAML SDK Examples 2018
+Progress Telerik XAML SDK Examples 2021
 
-Copyright © 2013-2018 Telerik EAD. All rights reserved.
+Copyright © 2013-2021 Telerik EAD. All rights reserved.
 
 Portions of the Product include certain open source and commercial third-party components listed below (“Third-Party Components”). The authors of the Third-Party Components require Telerik EAD (“Telerik”) to include the following notices and additional licensing terms as a condition of Telerik’s use of such Third-Party Components.  You acknowledge that the authors of the Third-Party Components have no obligation to provide support to you for the Third-Party Components or the Product.  You hereby undertake to comply with all licenses related to the applicable Third-Party Components.
 
@@ -9,7 +9,7 @@ Portions of the Product include certain open source and commercial third-party c
 
 (1) 	MIT-style Licenses:
 
-(a) Progress Telerik XAML SDK Examples 2018 incorporates 
+(a) Progress Telerik XAML SDK Examples 2021 incorporates 
 AccentColors.  Such technology is subject to the following terms and conditions:
 The MIT License (MIT) 
 Copyright (c) 2013 Max Truxa 
@@ -24,4 +24,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 NOTICE FROM TELERIK EAD: Additional notices may be included in the release notes or other documentation that accompanies updates received in connection with support of the Product.
 
 
-5/11/2018
+1/29/2021
