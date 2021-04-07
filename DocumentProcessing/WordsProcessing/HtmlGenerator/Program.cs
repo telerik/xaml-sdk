@@ -1,4 +1,8 @@
 ﻿using System;
+#if NETCOREAPP
+using Telerik.Windows.Documents.Extensibility;
+using Telerik.Documents.ImageUtils;
+#endif
 
 namespace HtmlGenerator
 {
@@ -6,6 +10,10 @@ namespace HtmlGenerator
     {
         static void Main()
         {
+#if NETCOREAPP
+            JpegImageConverter jpegImageConverter = new JpegImageConverter();
+            FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
+#endif
             DocumentGenerator generator = new DocumentGenerator();
             generator.Generate();
 

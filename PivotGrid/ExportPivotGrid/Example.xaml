@@ -22,6 +22,10 @@
             </Grid>
         </DataTemplate>
 
+        <DataTemplate x:Key="CellTemplate">
+            <TextBlock Text="{Binding Data, Mode=OneWay}" Margin="4" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </DataTemplate>
+
         <pivot:LocalDataSourceProvider x:Key="LocalDataProvider" AggregatesPosition="Rows">
             <pivot:LocalDataSourceProvider.ItemsSource>
                 <data:SampleOrders/>
@@ -52,7 +56,7 @@
         </Grid.RowDefinitions>
 
         <telerik:RadBusyIndicator x:Name="BusyIndicator" Grid.Column="0" Grid.RowSpan="2">
-            <pivot:RadPivotGrid x:Name="pivot" DataProvider="{StaticResource LocalDataProvider}"/>
+            <pivot:RadPivotGrid x:Name="pivot" DataProvider="{StaticResource LocalDataProvider}" HorizontalLayout="Outline" VerticalLayout="Outline"/>
         </telerik:RadBusyIndicator>
         <pivot:RadPivotFieldList x:Name="PivotFieldList" Grid.Column="1" DataProvider="{StaticResource LocalDataProvider}" Grid.Row="0"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Width="200" Margin="5">

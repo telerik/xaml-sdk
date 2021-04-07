@@ -23,7 +23,7 @@ namespace GenerateDocuments
 
             if (formatProvider == null)
             {
-                Console.WriteLine("Uknown or not supported format.");
+                Console.WriteLine("Unknown or not supported format.");
                 return;
             }
 

@@ -206,7 +206,24 @@
                     <telerik:RadOrderedWrapPanel>
                         <telerik:RadButtonGroup>
                             <telerik:RadRibbonToggleButton telerik:ScreenTip.Description="Start a bulleted list." telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleBulletsCommand}" Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/list-bullets.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Bullets"/>
-                            <telerik:RadRibbonToggleButton telerik:ScreenTip.Description="Start a numbered list." telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleNumberedCommand}" Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/list-numbered.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Numbering"/>
+                            <telerik:RadRibbonSplitButton Command="{Binding ToggleNumberedCommand}" telerik:ScreenTip.Description="Start a numbered list. Click the arrow to choose different numbered list styles." AutomationProperties.Name="Numbering" Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/list-numbered.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Numbering">
+                                <telerik:RadRibbonSplitButton.DropDownContent>
+                                    <StackPanel>
+                                        <telerik:RadGroupHeader Content="List Library"/>
+                                        <telerik:RadGallery Height="264" ItemWidth="88" ItemHeight="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeListStyleCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ViewportWidth="266">
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=MultilevelListNone.png, IconSources={StaticResource IconSources}}" Tag="None"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_Numbered.png, IconSources={StaticResource IconSources}}" Tag="Numbered"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_Numbered_Parentheses.png, IconSources={StaticResource IconSources}}" Tag="NumberedParenthesis"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_UpperRoman.png, IconSources={StaticResource IconSources}}" Tag="UpperRoman"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_UpperLetter.png, IconSources={StaticResource IconSources}}" Tag="UpperLetter"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_LowerLetter_Parentheses.png, IconSources={StaticResource IconSources}}" Tag="LowerLetterParentheses"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_LowerLetter.png, IconSources={StaticResource IconSources}}" Tag="LowerLetter"/>
+                                            <telerik:RadGalleryItem Image="{telerik:IconResource IconRelativePath=List_LowerRoman.png, IconSources={StaticResource IconSources}}" Tag="LowerRoman"/>
+                                        </telerik:RadGallery>
+                                        <telerik:ListStylesGallery AssociatedRichTextBox="{Binding AssociatedRichTextBox, Mode=OneWay}"/>
+                                    </StackPanel>
+                                </telerik:RadRibbonSplitButton.DropDownContent>
+                            </telerik:RadRibbonSplitButton>
                             <telerik:RadRibbonDropDownButton telerik:ScreenTip.Description="Start a multilevel list. Click the arrow to choose different multilevel list styles." Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/MultilevelList.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Multilevel List">
                                 <telerik:RadRibbonDropDownButton.DropDownContent>
                                     <StackPanel>

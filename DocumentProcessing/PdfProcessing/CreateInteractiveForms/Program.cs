@@ -89,7 +89,7 @@ namespace CreateInteractiveForms
             radio.Options.Add(new RadioOption("Radio option 2"));
             radio.Value = radio.Options[1];
 
-            SignatureField signature = new SignatureField("signiture");
+            SignatureField signature = new SignatureField("signature");
             document.AcroForm.FormFields.Add(signature);
 
             TextBoxField textBox = new TextBoxField("textBox");

@@ -24,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;WPF</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;WPF</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -74,6 +74,9 @@
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Core">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Flow">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
@@ -133,6 +136,25 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PdfExport\ConcreteRenderers\BorderRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\FrameworkElementRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\LineRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\PanelRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\PathRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\RectangleRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\ShapeRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextBlockRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\TextRenderer.cs" />
+    <Compile Include="PdfExport\ConcreteRenderers\UIElementRendererBase.cs" />
+    <Compile Include="PdfExport\ExportHelper.cs" />
+    <Compile Include="PdfExport\Miscellaneous\CompositeDisposableObject.cs" />
+    <Compile Include="PdfExport\Miscellaneous\DisposableOpacity.cs" />
+    <Compile Include="PdfExport\Miscellaneous\MathHelper.cs" />
+    <Compile Include="PdfExport\Miscellaneous\PdfColorHelper.cs" />
+    <Compile Include="PdfExport\Miscellaneous\PdfGeometryHelper.cs" />
+    <Compile Include="PdfExport\Miscellaneous\PdfRenderContext.cs" />
+    <Compile Include="PdfExport\PDFExportHelper.cs" />
+    <Compile Include="PdfExport\PdfRenderer.cs" />
     <Compile Include="PrintPreview.xaml.cs">
       <DependentUpon>PrintPreview.xaml</DependentUpon>
     </Compile>

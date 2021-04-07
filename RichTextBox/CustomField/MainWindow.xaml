@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:CustomField"
-        Title="Custom Field" Height="350" Width="525">
+        Title="Custom Field" Height="1000" Width="900">
     <Window.Resources>
         <local:ExampleViewModel x:Key="viewModel" />
     </Window.Resources>

@@ -1,8 +1,5 @@
-﻿using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats.Jpeg;
-using SixLabors.ImageSharp.Processing;
+﻿using ImageMagick;
 using System;
-using System.IO;
 using System.Linq;
 using Telerik.Windows.Documents.Extensibility;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
@@ -13,24 +10,17 @@ namespace CustomJpegImageConverter
     {
         public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
         {
-            string[] imageSharpImageFormats = new string[] { "jpeg", "bmp", "png", "gif" };
+            string[] magickImageFormats = Enum.GetNames(typeof(MagickFormat)).Select(x => x.ToLower()).ToArray();
             string imageFormat;
-
-            if (this.TryGetImageFormat(imageData, out imageFormat) && imageSharpImageFormats.Contains(imageFormat.ToLower()))
+            if (this.TryGetImageFormat(imageData, out imageFormat) && magickImageFormats.Contains(imageFormat.ToLower()))
             {
-                using (Image imageSharp = Image.Load(imageData))
+                using (MagickImage magickImage = new MagickImage(imageData))
                 {
-                    imageSharp.Mutate(x => x.BackgroundColor(Color.White));
+                    magickImage.Format = MagickFormat.Jpeg;
+                    magickImage.Alpha(AlphaOption.Remove);
+                    magickImage.Quality = (int)imageQuality;
 
-                    JpegEncoder options = new JpegEncoder
-                    {
-                        Quality = (int)imageQuality,
-                    };
-
-                    MemoryStream ms = new MemoryStream();
-                    imageSharp.SaveAsJpeg(ms, options);
-
-                    jpegImageData = ms.ToArray();
+                    jpegImageData = magickImage.ToByteArray();
                 }
 
                 return true;

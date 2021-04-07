@@ -51,8 +51,30 @@ namespace AppendWorksheetToExistingWorkbook
                             using (ICellExporter cell = row.CreateCellExporter())
                             {
                                 cell.SetValue("value 1");
+                            }
+                            using (ICellExporter cell = row.CreateCellExporter())
+                            {
                                 cell.SetValue("value 2");
+                            }
+                            using (ICellExporter cell = row.CreateCellExporter())
+                            {
                                 cell.SetValue("value 3");
+                            }
+                        }
+                        using (IRowExporter row = worksheet.CreateRowExporter())
+                        {
+                            using (ICellExporter cell = row.CreateCellExporter())
+                            {
+                                cell.SetValue("value 4");
+                            }
+                            using (ICellExporter cell = row.CreateCellExporter())
+                            {
+                                cell.SetValue("value 5");
+                            }
+                            using (ICellExporter cell = row.CreateCellExporter())
+                            {
+                                cell.SetValue("value 6");
+
                             }
                         }
                     }

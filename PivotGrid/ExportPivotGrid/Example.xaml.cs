@@ -10,9 +10,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Microsoft.Win32;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Pivot.Export;
+using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Windows.Documents.Fixed.Model.Editing;
 using Telerik.Windows.Documents.FormatProviders;
 using Telerik.Windows.Documents.FormatProviders.Html;
 using Telerik.Windows.Documents.FormatProviders.OpenXml.Docx;
@@ -36,6 +40,7 @@ namespace ExportPivotGrid
                 new ExportType { ImageSource = new Uri("/ExportPivotGrid;component/Icons/ExcelIcon.png", UriKind.RelativeOrAbsolute), ExportFormat = "Excel" },
                 new ExportType { ImageSource = new Uri("/ExportPivotGrid;component/Icons/WordIcon.png", UriKind.RelativeOrAbsolute), ExportFormat = "Word" },
                 new ExportType { ImageSource = new Uri("/ExportPivotGrid;component/Icons/PdfIcon.png", UriKind.RelativeOrAbsolute), ExportFormat = "PDF" },
+                new ExportType { ImageSource = new Uri("/ExportPivotGrid;component/Icons/PdfIcon.png", UriKind.RelativeOrAbsolute), ExportFormat = "PDF (via PdfProcessing)" },
                 new ExportType { ImageSource = new Uri("/ExportPivotGrid;component/Icons/HtmlIcon.png", UriKind.RelativeOrAbsolute), ExportFormat = "HTML" },
             };
 
@@ -62,6 +67,9 @@ namespace ExportPivotGrid
                     break;
                 case "PDF":
                     ExportToPdf();
+                    break;
+                case "PDF (via PdfProcessing)":
+                    ExportToPdfViaPdfProcessing();
                     break;
                 case "HTML":
                     ExportToHtml();
@@ -283,6 +291,101 @@ namespace ExportPivotGrid
             ShowPrintPreviewDialog(document, provider);
         }
 
+        private void ExportToPdfViaPdfProcessing()
+        {
+            PrepareForExport(this.pivot);
+
+            var dialog = new SaveFileDialog
+            {
+                DefaultExt = "pdf",
+                Filter = "Pdf files|*.pdf|All Files (*.*)|*.*",
+            };
+            if (dialog.ShowDialog() == true)
+            {
+                using (var stream = dialog.OpenFile())
+                {
+                    // Use a normal TextBlock instead of the internal LightTextBlock that the RadPivotGrid uses
+                    this.pivot.CellTemplate = this.Resources["CellTemplate"] as DataTemplate;
+                    ExpandGrid();
+                    
+                    PDFExportHelper.ExportToFile(this.pivot, stream);
+                    this.pivot.CellTemplate = null;
+                    ResetGrid();
+                }
+            }
+        }
+
+        private void ExpandGrid()
+        {
+            var grid = this.pivot.ParentOfType<Grid>() as Grid;
+            if (grid != null)
+            {
+                grid.Width = 20000;
+                grid.Height = 20000;
+            }
+            this.pivot.UpdateLayout();
+
+            
+            var newsize = this.pivot.DesiredSize;
+            this.pivot.VerticalAlignment = VerticalAlignment.Top;
+            this.pivot.HorizontalAlignment = HorizontalAlignment.Left;
+            this.pivot.Width = newsize.Width + 1;
+            this.pivot.Height = newsize.Height + 1;
+            this.pivot.UpdateLayout();
+        }
+
+        private void ResetGrid()
+        {
+            var grid = this.pivot.ParentOfType<Grid>() as Grid;
+            if (grid != null)
+            {
+                grid.Width = Double.NaN;
+                grid.Height = Double.NaN;
+                grid.UpdateLayout();
+            }
+
+            
+            this.pivot.Width = Double.NaN;
+            this.pivot.Height = Double.NaN;
+            this.pivot.VerticalAlignment = VerticalAlignment.Stretch;
+            this.pivot.HorizontalAlignment = HorizontalAlignment.Stretch;
+            this.pivot.InvalidateMeasure();
+        }
+
+        private RadFixedDocument CreateDocument(RadPivotGrid element)
+        {
+            RadFixedDocument document = new RadFixedDocument();
+
+            RadFixedPage page = this.CreatePage(element);
+            document.Pages.Add(page);
+
+            return document;
+        }
+
+        private RadFixedPage CreatePage(RadPivotGrid element)
+        {
+            RadFixedPage page = new RadFixedPage();
+            page.Size = new Size(1000, 1000);
+            FixedContentEditor editor = new FixedContentEditor(page, Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition.Default);
+
+            ExportHelper.ExportToPdf(element, editor);
+
+            return page;
+        }
+
+        private static void PrepareForExport(FrameworkElement element)
+        {
+            if (element.ActualWidth == 0 && element.ActualHeight == 0)
+            {
+                double width = element.Width > 0 ? element.Width : 500;
+                double height = element.Height > 0 ? element.Height : 300;
+                element.Measure(Size.Empty);
+                element.Measure(new Size(width, height));
+                element.Arrange(new Rect(0, 0, width, height));
+                element.UpdateLayout();
+            }
+        }
+
         private void ExportToHtml()
         {
             RadDocument document = GenerateRadDocument();
@@ -437,7 +540,7 @@ namespace ExportPivotGrid
 
             if (!borderThickness.HasValue)
             {
-                return new TableCellBorders(new Telerik.Windows.Documents.Model.Border(BorderStyle.None));
+                return new TableCellBorders(new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None));
             }
 
             var thickness = borderThickness.Value;
@@ -448,34 +551,34 @@ namespace ExportPivotGrid
 
             if (rowIndex == rowStartIndex)
             {
-                topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, BorderStyle.Single, borderBrushColor);
+                topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
             }
 
             if (rowIndex == rowEndIndex)
             {
-                bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, BorderStyle.Single, borderBrushColor);
+                bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
             }
 
             if (rowStartIndex < rowIndex && rowIndex < rowEndIndex)
             {
-                topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Top;
-                bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Bottom;
+                topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Top;
+                bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Bottom;
             }
 
             if (columnIndex == columnStartIndex)
             {
-                leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, BorderStyle.Single, borderBrushColor);
+                leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
             }
 
             if (columnIndex == columnEndIndex)
             {
-                rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, BorderStyle.Single, borderBrushColor);
+                rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
             }
 
             if (columnStartIndex < columnIndex && columnIndex < columnEndIndex)
             {
-                leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Left;
-                rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Right;
+                leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Left;
+                rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Right;
             }
 
             return new TableCellBorders(leftBorder, topBorder, rightBorder, bottomBorder);
@@ -488,32 +591,32 @@ namespace ExportPivotGrid
 
             if (!borderThickness.HasValue)
             {
-                return new TableCellBorders(new Telerik.Windows.Documents.Model.Border(BorderStyle.None));
+                return new TableCellBorders(new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None));
             }
 
             var thickness = borderThickness.Value;
             if (isRow)
             {
-                var leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, BorderStyle.Single, borderBrushColor);
-                var rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, BorderStyle.Single, borderBrushColor);
+                var leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
+                var rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
                 Telerik.Windows.Documents.Model.Border topBorder;
                 Telerik.Windows.Documents.Model.Border bottomBorder;
                 switch (position)
                 {
                     case Position.First:
-                        topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, BorderStyle.Single, borderBrushColor);
-                        bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Bottom;
+                        topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
+                        bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Bottom;
                         break;
 
                     case Position.Middle:
-                        topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Top;
-                        bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Bottom;
+                        topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Top;
+                        bottomBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Bottom;
                         break;
 
                     case Position.Last:
                     default:
-                        topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Top;
-                        bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, BorderStyle.Single, borderBrushColor);
+                        topBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Top;
+                        bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
                         break;
                 }
 
@@ -521,26 +624,26 @@ namespace ExportPivotGrid
             }
             else
             {
-                var topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, BorderStyle.Single, borderBrushColor);
-                var bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, BorderStyle.Single, borderBrushColor);
+                var topBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Top, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
+                var bottomBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Bottom, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
                 Telerik.Windows.Documents.Model.Border leftBorder;
                 Telerik.Windows.Documents.Model.Border rightBorder;
                 switch (position)
                 {
                     case Position.First:
-                        leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, BorderStyle.Single, borderBrushColor);
-                        rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Right;
+                        leftBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Left, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
+                        rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Right;
                         break;
 
                     case Position.Middle:
-                        leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Left;
-                        rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Right;
+                        leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Left;
+                        rightBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Right;
                         break;
 
                     case Position.Last:
                     default:
-                        leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(BorderStyle.None) : cellBorders.Left; ;
-                        rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, BorderStyle.Single, borderBrushColor);
+                        leftBorder = hasBackground ? new Telerik.Windows.Documents.Model.Border(Telerik.Windows.Documents.Model.BorderStyle.None) : cellBorders.Left; ;
+                        rightBorder = new Telerik.Windows.Documents.Model.Border((float)thickness.Right, Telerik.Windows.Documents.Model.BorderStyle.Single, borderBrushColor);
                         break;
                 }
 

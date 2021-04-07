@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Model;
@@ -23,7 +21,7 @@ namespace CustomField
                 if (this.insertCustomFieldCommand != value)
                 {
                     this.insertCustomFieldCommand = value;
-                    OnPropertyChanged("InsertCustomFieldCommand");
+                    this.OnPropertyChanged("InsertCustomFieldCommand");
                 }
             }
         }
@@ -77,7 +75,7 @@ namespace CustomField
 
         private void InsertCustomFieldInDocument()
         {
-            associatedRichTextBox.InsertField(new CustomField(), FieldDisplayMode.Result);
+            associatedRichTextBox.InsertField(new CustomPageField(), FieldDisplayMode.Code);
         }
 
         private void InsertCustomFieldInFooter()
@@ -88,7 +86,12 @@ namespace CustomField
             Footer footer = associatedRichTextBox.Document.Sections.First.Footers.Default;
             footer.Body = document;
 
-            editor.InsertField(new CustomField(), FieldDisplayMode.Result);
+            CustomPageField customPageField = new CustomPageField
+            {
+                NumberFormattingType = NumberFormattingTypes.Latin
+            };
+
+            editor.InsertField(customPageField, FieldDisplayMode.Result);
         }
 
         private void InsertCustomFieldInHeader()
@@ -99,7 +102,13 @@ namespace CustomField
             Header header = associatedRichTextBox.Document.Sections.First.Headers.Default;
             header.Body = document;
 
-            editor.InsertField(new CustomField(), FieldDisplayMode.Result);
+            CustomPageField customPageField = new CustomPageField
+            {
+                NumberFormattingType = NumberFormattingTypes.Roman,
+                DocumentName = "RadDocument",
+            };
+
+            editor.InsertField(customPageField, FieldDisplayMode.Result);
         }
     }
 }

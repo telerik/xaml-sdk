@@ -194,7 +194,23 @@
                     <telerik:RadOrderedWrapPanel>
                         <telerik:RadButtonGroup>
                             <telerik:RadRibbonToggleButton telerik:ScreenTip.Description="Start a bulleted list." telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleBulletsCommand}" Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/list-bullets.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Bullets"/>
-                            <telerik:RadRibbonToggleButton telerik:ScreenTip.Description="Start a numbered list." telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ToggleNumberedCommand}" Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/list-numbered.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Numbering"/>
+                            <telerik:RadRibbonSplitButton Command="{Binding ToggleNumberedCommand}" telerik:ScreenTip.Description="Start a numbered list. Click the arrow to choose different numbered list styles." AutomationProperties.Name="Numbering" Size="Small" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/list-numbered.png" telerik:ScreenTip.Title="Numbering">
+                                <telerik:RadRibbonSplitButton.DropDownContent>
+                                    <StackPanel>
+                                        <telerik:RadGroupHeader Content="List Library"/>
+                                        <telerik:RadGallery Height="264" ItemWidth="88" ItemHeight="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeListStyleCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ViewportWidth="266">
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListNone.png" Tag="None"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_Numbered.png" Tag="Numbered"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_Numbered_Parentheses.png" Tag="NumberedParenthesis"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_UpperRoman.png" Tag="UpperRoman"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_UpperLetter.png" Tag="UpperLetter"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_LowerLetter_Parentheses.png" Tag="LowerLetterParentheses"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_LowerLetter.png" Tag="LowerLetter"/>
+                                            <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/List_LowerRoman.png" Tag="LowerRoman"/>
+                                        </telerik:RadGallery>
+                                    </StackPanel>
+                                </telerik:RadRibbonSplitButton.DropDownContent>
+                            </telerik:RadRibbonSplitButton>
                             <telerik:RadRibbonDropDownButton Command="{Binding ChangeListStyleCommand}" telerik:ScreenTip.Description="Start a multilevel list. Click the arrow to choose different multilevel list styles." Size="Small" SmallImage="{telerik:IconResource IconRelativePath=16/MultilevelList.png, IconSources={StaticResource IconSources}}" telerik:ScreenTip.Title="Multilevel List">
                                 <telerik:RadRibbonDropDownButton.DropDownContent>
                                     <StackPanel>

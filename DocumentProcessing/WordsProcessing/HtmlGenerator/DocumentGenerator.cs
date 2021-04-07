@@ -62,17 +62,10 @@ namespace HtmlGenerator
             Paragraph paragraphWithImage = bodyTable.Rows[0].Cells[1].Blocks.AddParagraph();
             editor.MoveToParagraphStart(paragraphWithImage);
 
-#if NETCOREAPP
-            using (Stream stream = File.OpenRead(SampleDataFolder + "WordsProcessing.jpg"))
-            {
-                editor.InsertImageInline(stream, "jpg", new Size(470, 261));
-            }
-#else
             using (Stream stream = File.OpenRead(SampleDataFolder + "WordsProcessing.png"))
             {
                 editor.InsertImageInline(stream, "png", new Size(470, 261));
             }
-#endif
 
             return document;
         }

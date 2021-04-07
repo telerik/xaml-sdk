@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMerge", "MailMerge\Mail
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertDocuments", "ConvertDocuments\ConvertDocuments.csproj", "{C21FB8BA-8A42-4C06-A870-74A4C0743796}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentControls", "ContentControls\ContentControls.csproj", "{576D340B-8809-4256-809C-575B1907283C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C21FB8BA-8A42-4C06-A870-74A4C0743796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C21FB8BA-8A42-4C06-A870-74A4C0743796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C21FB8BA-8A42-4C06-A870-74A4C0743796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576D340B-8809-4256-809C-575B1907283C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576D340B-8809-4256-809C-575B1907283C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576D340B-8809-4256-809C-575B1907283C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576D340B-8809-4256-809C-575B1907283C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

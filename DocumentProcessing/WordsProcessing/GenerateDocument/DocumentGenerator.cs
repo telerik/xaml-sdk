@@ -120,17 +120,10 @@ namespace GenerateDocument
             paragraphWithImage.Spacing.SpacingAfter = 0;
             editor.MoveToParagraphStart(paragraphWithImage);
 
-#if NETCOREAPP
-            using (Stream stream = File.OpenRead(this.sampleDataFolder + "Telerik_logo.jpg"))
-            {
-                editor.InsertImageInline(stream, "jpg", new Size(118, 28));
-            }
-#else
             using (Stream stream = File.OpenRead(this.sampleDataFolder + "Telerik_logo.png"))
             {
                 editor.InsertImageInline(stream, "png", new Size(118, 28));
             }
-#endif
 
             // Create cell with name and position
             signatureTable.Rows[0].Cells[1].Padding = new Telerik.Windows.Documents.Primitives.Padding(12, 0, 0, 0);
@@ -159,17 +152,10 @@ namespace GenerateDocument
             Header header = editor.Document.Sections.First().Headers.Add();
             editor.MoveToParagraphStart(header.Blocks.AddParagraph());
 
-#if NETCOREAPP
-            using (Stream stream = File.OpenRead(this.sampleDataFolder + "Telerik_develop_experiences.jpg"))
-            {
-                editor.InsertImageInline(stream, "jpg", new Size(660, 237));
-            }
-#else
             using (Stream stream = File.OpenRead(this.sampleDataFolder + "Telerik_develop_experiences.png"))
             {
                 editor.InsertImageInline(stream, "png", new Size(660, 237));
             }
-#endif
         }
 
         private void SaveDocument(RadFlowDocument document, string selectedFormat)
@@ -198,7 +184,7 @@ namespace GenerateDocument
 
             if (formatProvider == null)
             {
-                Console.WriteLine("Uknown or not supported format.");
+                Console.WriteLine("Unknown or not supported format.");
                 return;
             }
 
