@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.IO.IsolatedStorage;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.Windows.Input;
 using System.Xml.Serialization;
 using Telerik.Windows.Controls;
@@ -43,6 +41,10 @@ namespace VisualStudioDocking
             }
         }
 
+        public Action<Stream> SaveAction { get; set; }
+        
+        public Action<Stream> LoadAction { get; set; }
+
         public ICommand SaveCommand
         {
             get
@@ -67,7 +69,6 @@ namespace VisualStudioDocking
 
         public void Load(object param)
         {
-            var docking = (RadDocking)param;
             using (IsolatedStorageFile storage = IsolatedStorageFile.GetMachineStoreForAssembly())
             {
                 if (storage.FileExists(newDocumentsFileName))
@@ -100,7 +101,7 @@ namespace VisualStudioDocking
                     using (var isoStream = storage.OpenFile(dockingLayoutFileName, FileMode.Open))
                     {
                         isoStream.Seek(0, SeekOrigin.Begin);
-                        docking.LoadLayout(isoStream);
+                        this.LoadAction.Invoke(isoStream);
                     }
                 }
             }
@@ -108,7 +109,6 @@ namespace VisualStudioDocking
 
         public void Save(object param)
         {
-            var docking = (RadDocking)param;
             using (IsolatedStorageFile storage = IsolatedStorageFile.GetMachineStoreForAssembly())
             {
                 using (var isoStream = storage.OpenFile(newDocumentsFileName, FileMode.Create))
@@ -120,7 +120,7 @@ namespace VisualStudioDocking
                 using (var isoStream = storage.OpenFile(dockingLayoutFileName, FileMode.Create))
                 {
                     isoStream.Seek(0, SeekOrigin.Begin);
-                    docking.SaveLayout(isoStream);
+                    this.SaveAction.Invoke(isoStream);
                 }
             }
         }

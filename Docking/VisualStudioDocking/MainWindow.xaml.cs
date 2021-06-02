@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Windows;
-using System.Windows.Documents;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Docking;
 
@@ -26,7 +24,7 @@ namespace VisualStudioDocking
             var viewModel = this.DataContext as MainWindowViewModel;
             if (viewModel != null)
             {
-                viewModel.Save(this.radDocking);
+                viewModel.Save(null);
             }
         }
 
@@ -35,7 +33,9 @@ namespace VisualStudioDocking
             var viewModel = this.DataContext as MainWindowViewModel;
             if (viewModel != null)
             {
-                viewModel.Load(this.radDocking);
+                viewModel.SaveAction = new Action<Stream>((str) => { this.radDocking.SaveLayout(str); }); 
+                viewModel.LoadAction = new Action<Stream>((str) => { this.radDocking.LoadLayout(str); });
+                viewModel.Load(null);
             }
         }
 

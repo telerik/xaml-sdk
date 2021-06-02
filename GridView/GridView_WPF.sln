@@ -154,6 +154,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptyGridMessageContent_WPF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelEditing", "ExcelEditing\ExcelEditing.csproj", "{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectAllIndentCell", "SelectAllIndentCell\SelectAllIndentCell.csproj", "{E8B79763-3DD6-4E56-91AC-B1153C592A9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -906,6 +908,18 @@ Global
 		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|x86.ActiveCfg = Release|Any CPU
 		{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}.Release|x86.Build.0 = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

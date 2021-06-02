@@ -22,8 +22,8 @@
         <telerik:RadMenu VerticalAlignment="Top" >
             <telerik:RadMenuItem Header="File">
                 <telerik:RadMenuItem Header="New document" Command="{Binding NewDocumentCommand}" />
-                <telerik:RadMenuItem Header="Save" Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=radDocking}"/>
-                <telerik:RadMenuItem Header="Load" Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=radDocking}"/>
+                <telerik:RadMenuItem Header="Save" Command="{Binding SaveCommand}" />
+                <telerik:RadMenuItem Header="Load" Command="{Binding LoadCommand}" />
             </telerik:RadMenuItem>
 
             <telerik:RadMenuItem Header="View" 
