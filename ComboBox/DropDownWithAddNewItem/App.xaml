@@ -241,7 +241,9 @@
                             IsTabStop="False"
                             Foreground="{StaticResource ButtonIconForeground_Normal}"
                             Background="{StaticResource ButtonIconBackground_Normal}"
-                            Template="{StaticResource ArrowTemplateEditableCombobox}"/>
+                            Margin="5 0"
+                            Content="{Binding RelativeSource={RelativeSource AncestorType=telerik:RadComboBox}, Path=DropDownButtonIconContent}"
+                            ContentTemplate="{Binding RelativeSource={RelativeSource AncestorType=telerik:RadComboBox}, Path=DropDownButtonIconTemplate}"/>
                         </Grid>
                     </telerik1:RadToggleButton>
                     <TextBlock x:Name="Watermark"
@@ -269,7 +271,7 @@
                                     </Grid.RowDefinitions>
                                     <telerik1:RadButton x:Name="AddItemButton"
                                     Grid.Row="0"
-                                    Margin="-1 -1 -1 0"                                 
+                                    Margin="-1 -1 -1 0"
                                     Content="Add new item"
                                     IsEnabled="{Binding DataContext.IsAddingItemEnabled, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=telerik:RadComboBox}}" 
                                     Command="{Binding DataContext.AddNewItemCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=telerik:RadComboBox}}"/>

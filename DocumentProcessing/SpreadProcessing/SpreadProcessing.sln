@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertDocuments", "Convert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateModifyExport", "CreateModifyExport\CreateModifyExport.csproj", "{1D4D30E9-D11C-487F-A102-E52D5E1C867E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportChart", "ExportChart\ExportChart.csproj", "{20AE28EB-DA06-47F9-ACF4-0C776F9FECBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportChart_WPF", "ExportChart\ExportChart_WPF.csproj", "{20AE28EB-DA06-47F9-ACF4-0C776F9FECBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

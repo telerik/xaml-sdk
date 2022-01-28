@@ -95,6 +95,8 @@
       <DependentUpon>App_SL.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\Club.cs" />
+    <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\Stadium.cs" />
     <Compile Include="Helpers\MyPropertyInfo.cs" />
     <Compile Include="Helpers\MyType.cs" />
     <Compile Include="Helpers\MyTypeHelper.cs" />

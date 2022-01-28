@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingColumnsFromViewModel_WPF", "BindingColumnsFromViewModel\BindingColumnsFromViewModel_WPF.csproj", "{BC8A8E52-FB31-494C-BE4A-0CF75C2CC604}"
 EndProject
@@ -155,6 +155,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelEditing", "ExcelEditing\ExcelEditing.csproj", "{8DD56B1F-A517-4D36-9AD5-CC2C66E9DD70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectAllIndentCell", "SelectAllIndentCell\SelectAllIndentCell.csproj", "{E8B79763-3DD6-4E56-91AC-B1153C592A9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistSelectionOnFilterOrSearch", "PersistSelectionOnFilterOrSearch\PersistSelectionOnFilterOrSearch.csproj", "{BABD3A40-B530-490E-B3F8-2FA290FA625C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -920,6 +922,18 @@ Global
 		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{E8B79763-3DD6-4E56-91AC-B1153C592A9D}.Release|x86.Build.0 = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Debug|x86.Build.0 = Debug|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|x86.ActiveCfg = Release|Any CPU
+		{BABD3A40-B530-490E-B3F8-2FA290FA625C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

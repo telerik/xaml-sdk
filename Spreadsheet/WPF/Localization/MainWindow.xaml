@@ -768,6 +768,90 @@
                         <telerik:RadRibbonButton Command="{Binding ToggleSheetProtection.Command}" telerik:ScreenTip.Description="Prevent unwanted changes from others by limiting their ability to edit." IsEnabled="{Binding ToggleSheetProtection.IsEnabled}" LargeImage="{telerik:IconResource IconRelativePath=32/protectWorksheet.png, IconSources={StaticResource IconPaths}}" Size="Large" Text="{Binding ToggleSheetProtection.SelectedValue}" telerik:ScreenTip.Title="Protect Sheet"/>
                         <telerik:RadRibbonButton Command="{Binding ToggleWorkbookProtection.Command}" telerik:ScreenTip.Description="Keep others from making structural changes to your workbook, such as moving, deleting or adding sheets." IsEnabled="{Binding ToggleWorkbookProtection.IsEnabled}" LargeImage="{telerik:IconResource IconRelativePath=32/protectWorkbook.png, IconSources={StaticResource IconPaths}}" Size="Large" Text="{Binding ToggleWorkbookProtection.SelectedValue}" telerik:ScreenTip.Title="Protect Workbook"/>
                     </telerik:RadRibbonGroup>
+                    
+                    <telerik:RadRibbonGroup Header="Notes">
+                        <telerik:RadRibbonDropDownButton Size="Large" 
+                                                                       LargeImage="{telerik:IconResource IconRelativePath=32/Notes/showHideNote.png, IconSources={StaticResource IconPaths}}"
+                                                                       Text="Notes"
+                                                                       x:Name="NotesButton"
+                                                                       telerik:ScreenTip.Description="Add a note about this part of the document."
+                                                                       telerik:ScreenTip.Title="Notes">
+                            <telerik:RadRibbonDropDownButton.DropDownContent>
+                                <telerik:RadContextMenu BorderThickness="0" Padding="0" IconColumnWidth="55">
+                                    <telerik:RadMenuItem Command="{Binding Path=AddNote.Command}" 
+                                                                           Visibility="{Binding Path=AddNote.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/newNote.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="New Note"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem Command="{Binding Path=EditNote.Command}" 
+                                                                           Visibility="{Binding Path=EditNote.IsEnabled, Mode=TwoWay, Converter={StaticResource BoolToVisibilityValueConverter}}">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/editNote.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="Edit Note"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem Command="{Binding Path=JumpToPreviousNote.Command}"
+                                                                           IsEnabled="{Binding Path=JumpToPreviousNote.IsEnabled}">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/previousNote.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="Previous Note"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem Command="{Binding Path=JumpToNextNote.Command}"
+                                                                           IsEnabled="{Binding Path=JumpToNextNote.IsEnabled}">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/nextNote.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="Next Note"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem Command="{Binding Path=ShowHideNote.Command}"
+                                                                           IsEnabled="{Binding Path=ShowHideNote.IsEnabled}">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/showHideNote.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="Show/Hide Note"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem IsCheckable="True"
+                                                                           Command="{Binding Path=ShowAllNotes.Command}"
+                                                                           CommandParameter="{Binding Path=ShowAllNotes.SelectedValue}"
+                                                                           IsChecked="{Binding Path=ShowAllNotes.SelectedValue, Mode=TwoWay}"
+                                                                           IsEnabled="{Binding Path=ShowAllNotes.IsEnabled}"
+                                                                           telerik:ScreenTip.Description="Show/Hide All Notes">
+                                        <telerik:RadMenuItem.Icon>
+                                            <Image Source="{telerik:IconResource IconRelativePath=16/Notes/showAllNotes.png, IconSources={StaticResource IconPaths}}" Width="16" />
+                                        </telerik:RadMenuItem.Icon>
+                                        <telerik:RadMenuItem.Header>
+                                            <StackPanel>
+                                                <TextBlock Text="Show/Hide All Notes"/>
+                                            </StackPanel>
+                                        </telerik:RadMenuItem.Header>
+                                    </telerik:RadMenuItem>
+                                </telerik:RadContextMenu>
+                            </telerik:RadRibbonDropDownButton.DropDownContent>
+                        </telerik:RadRibbonDropDownButton>
+                    </telerik:RadRibbonGroup>
                 </telerik:RadRibbonTab>
                 <telerik:RadRibbonTab ContextualGroupName="PictureTools" Header="Format">
                     <telerik:RadRibbonGroup Header="Arrange">

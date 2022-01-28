@@ -69,6 +69,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportExportFromAndToMSProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToDatabase_WPF", "ConnectToDatabase\ConnectToDatabase_WPF.csproj", "{104997B1-E17C-46A0-83E9-21A11CCBFBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightedAndSelectableDependencies", "HighlightedAndSelectableDependencies\HighlightedAndSelectableDependencies.csproj", "{2132E2E4-FA45-4DCD-B20C-90F792354819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropAndResizeCustomContainers_WPF", "DragDropAndResizeCustomContainers\DragDropAndResizeCustomContainers_WPF.csproj", "{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -411,9 +415,36 @@ Global
 		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|x86.ActiveCfg = Release|Any CPU
 		{104997B1-E17C-46A0-83E9-21A11CCBFBE2}.Release|x86.Build.0 = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Debug|x86.Build.0 = Debug|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|x86.ActiveCfg = Release|Any CPU
+		{2132E2E4-FA45-4DCD-B20C-90F792354819}.Release|x86.Build.0 = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D0DBFAA-3E5B-4808-8F18-47A4B77EBBA2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF0B5428-EFF3-43F4-8DC2-1E3169126CB4}
 	EndGlobalSection
 	 
 EndGlobal

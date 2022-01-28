@@ -1,54 +1,75 @@
 ﻿using BindingToICustomTypeProvider.Data;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using Telerik.Windows.Controls;
 
 namespace BindingToICustomTypeProvider
 {
-    public class MyViewModel: ViewModelBase
-    {
-        private ObservableCollection<Club> clubs;
+	public class MyViewModel : ViewModelBase
+	{
+		private ObservableCollection<Club> clubs;
 
-        public ObservableCollection<Club> Clubs 
-        {
-            get 
-            {
-                if (this.clubs == null)
-                {
-                    this.clubs = this.GenerateClubs();
-                }
+		public ObservableCollection<Club> Clubs
+		{
+			get
+			{
+				if (this.clubs == null)
+				{
+					this.clubs = this.GenerateClubs();
+				}
 
-                return this.clubs;
-            }
-        }
+				return this.clubs;
+			}
+		}
 
-        private ObservableCollection<Club> GenerateClubs() 
-        {
-            ObservableCollection<Club> clubs = new ObservableCollection<Club>();
+		private ObservableCollection<Club> GenerateClubs()
+		{
+			ObservableCollection<Club> clubs = new ObservableCollection<Club>();
 
-            Club.AddProperty("Name", typeof(string));
-            Club.AddProperty("StadiumCapacity", typeof(int));
-            Club.AddProperty("IsChampion", typeof(bool));
+			Club.AddProperty("Name", typeof(string));
+			Club.AddProperty("Stadium", typeof(Stadium));
+			Club.AddProperty("Players", typeof(Dictionary<string, List<Player>>));
 
-            Club club = new Club();
-            club.SetPropertyValue("Name", "Liverpool");
-            club.SetPropertyValue("StadiumCapacity", 45362);
-            club.SetPropertyValue("IsChampion", false);
-            clubs.Add(club);
+			Stadium.AddProperty("Name", typeof(string));
+			Stadium.AddProperty("Capacity", typeof(int));
 
-            club = new Club();
-            club.SetPropertyValue("Name", "Chelsea");
-            club.SetPropertyValue("StadiumCapacity", 42055);
-            club.SetPropertyValue("IsChampion", false);
+			Player.AddProperty("Name", typeof(string));
+			Player.AddProperty("Position", typeof(string));
 
-            clubs.Add(club);
+			Club club = new Club();
+			club.SetPropertyValue("Name", "Liverpool");
+			Stadium stadium = new Stadium();
+			stadium.SetPropertyValue("Name", "Anfield");
+			stadium.SetPropertyValue("Capacity", 45362);
+			club.SetPropertyValue("Stadium", stadium);
+			List<Player> players = new List<Player>();
+			Player gk = new Player();
+			gk.SetPropertyValue("Name", "Alisson Becker");
+			gk.SetPropertyValue("Position", "GK");
+			players.Add(gk);
+			Dictionary<string, List<Player>> playersByPosition = new Dictionary<string, List<Player>>();
+			playersByPosition["GK"] = players;
+			club.SetPropertyValue("Players", playersByPosition);
+			clubs.Add(club);
 
-            return clubs;
-        }
-    }
+			club = new Club();
+			club.SetPropertyValue("Name", "Chelsea");
+			stadium = new Stadium();
+			stadium.SetPropertyValue("Name", "Stamford Bridge");
+			stadium.SetPropertyValue("Capacity", 42055);
+			club.SetPropertyValue("Stadium", stadium);
+			players = new List<Player>();
+			gk = new Player();
+			gk.SetPropertyValue("Name", "Kepa Arrizabalaga");
+			gk.SetPropertyValue("Position", "GK");
+			players.Add(gk);
+			playersByPosition = new Dictionary<string, List<Player>>();
+			playersByPosition["GK"] = players;
+			club.SetPropertyValue("Players", playersByPosition);
+
+			clubs.Add(club);
+
+			return clubs;
+		}
+	}
 }

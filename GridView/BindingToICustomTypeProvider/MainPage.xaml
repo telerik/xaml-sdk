@@ -11,7 +11,9 @@
         <local:MyViewModel x:Key="ViewModel"/>
     </UserControl.Resources>
     <Grid DataContext="{StaticResource ViewModel}">
-            <telerik:RadGridView ItemsSource="{Binding Clubs}" 
-                                 Margin="5"/>
+        <telerik:RadGridView x:Name="radGridView"
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
+                             Margin="5" />
     </Grid>
 </UserControl>

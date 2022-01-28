@@ -9,7 +9,9 @@
         <local:MyViewModel x:Key="ViewModel"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource ViewModel}">
-        <telerik:RadGridView ItemsSource="{Binding Clubs}"
+        <telerik:RadGridView x:Name="radGridView"
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
                              Margin="5" >
         </telerik:RadGridView>
 

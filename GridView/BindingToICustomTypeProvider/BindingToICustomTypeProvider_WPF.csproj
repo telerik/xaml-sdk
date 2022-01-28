@@ -37,7 +37,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup>
-	<SkipSdkExample>true</SkipSdkExample>
+    <SkipSdkExample>true</SkipSdkExample>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -120,6 +120,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\Club.cs" />
+    <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\Stadium.cs" />
     <Compile Include="Helpers\MyPropertyInfo.cs" />
     <Compile Include="Helpers\MyType.cs" />
     <Compile Include="Helpers\MyTypeHelper.cs" />

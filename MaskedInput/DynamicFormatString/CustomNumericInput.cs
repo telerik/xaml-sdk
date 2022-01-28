@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
 using Telerik.Windows.Controls;
 
 namespace DynamicFormatString
@@ -23,7 +21,48 @@ namespace DynamicFormatString
             this.ValueChanged += (s, e) => this.UpdateFormatString();
         }
 
-        protected override void OnKeyDown(System.Windows.Input.KeyEventArgs e)
+#if WPF
+        protected override void OnPreviewKeyDown(KeyEventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.Mask) && (e.Key == Key.Delete || e.Key == Key.Back))
+            {
+                if (this.Text.Length > this.SelectionStart &&
+                    this.SelectionStart > this.Text.IndexOf(this.DecimalSeparator.Token))
+                {
+                    this.PerformCustomDigitDelete();
+                    e.Handled = true;
+                }
+            }
+
+            base.OnPreviewKeyDown(e);
+        }
+#else
+        protected override void HandleDeleteKeyNoMask()
+        {
+            if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
+            {
+                this.PerformCustomDigitDelete();
+            }
+            else
+            {
+                base.HandleDeleteKeyNoMask();
+            }
+        }
+
+        protected override void HandleBackKeyNoMask()
+        {
+            if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
+            {
+                this.PerformCustomDigitDelete();
+            }
+            else
+            {
+                base.HandleBackKeyNoMask();
+            }
+        }
+#endif
+
+        protected override void OnKeyDown(KeyEventArgs e)
         {
             string stringKey = e.Key.ToString();
             bool isDigit = stringKey.StartsWith("D") || stringKey.StartsWith("NumPad");
@@ -37,34 +76,10 @@ namespace DynamicFormatString
                 this.FormatString = "n" + (++this.decimalNum);
             }
 
-            base.OnKeyDown(e);           
+            base.OnKeyDown(e);
         }
 
-        protected override void HandleDeleteKeyNoMask()
-        {
-            if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
-            {
-                this.PerformSingleDigitDelete();
-            }
-            else
-            {
-                base.HandleDeleteKeyNoMask();
-            }
-        }
-
-        protected override void HandleBackKeyNoMask()
-        {
-           if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
-            {
-                this.PerformSingleDigitDelete();
-            }
-            else
-            {
-                base.HandleBackKeyNoMask();
-            }
-        }
-
-        private void PerformSingleDigitDelete()
+        private void PerformCustomDigitDelete()
         {
             StringBuilder builder = new StringBuilder(this.Text);
             builder.Remove(this.SelectionStart, Math.Max(1, this.SelectionLength));
@@ -74,7 +89,7 @@ namespace DynamicFormatString
 
         private void UpdateFormatString()
         {
-            int decimalIndex = this.Value.ToString().IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator);
+            int decimalIndex = this.Value.ToString().IndexOf(this.DecimalSeparator.Token);
             if (decimalIndex != -1)
             {
                 string decimalString = this.Value.ToString().Substring(decimalIndex);

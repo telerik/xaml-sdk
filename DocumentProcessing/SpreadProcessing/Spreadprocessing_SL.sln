@@ -9,12 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertDocuments_SL", "Conv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateModifyExport_SL", "CreateModifyExport\CreateModifyExport_SL.csproj", "{8F3D3247-788B-43CD-9509-95F3C09396F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterAndExportPdfFonts", "RegisterAndExportPdfFonts\RegisterAndExportPdfFonts.csproj", "{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{97678125-4183-43AC-B226-64B8C5889982} = {97678125-4183-43AC-B226-64B8C5889982}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterAndExportPdfFonts.Web", "RegisterAndExportPdfFonts.Web\RegisterAndExportPdfFonts.Web.csproj", "{97678125-4183-43AC-B226-64B8C5889982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterAndExportPdfFonts_SL", "RegisterAndExportPdfFonts\RegisterAndExportPdfFonts_SL.csproj", "{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,14 +31,14 @@ Global
 		{8F3D3247-788B-43CD-9509-95F3C09396F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F3D3247-788B-43CD-9509-95F3C09396F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F3D3247-788B-43CD-9509-95F3C09396F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97678125-4183-43AC-B226-64B8C5889982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97678125-4183-43AC-B226-64B8C5889982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97678125-4183-43AC-B226-64B8C5889982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97678125-4183-43AC-B226-64B8C5889982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EABF3C2-5C91-4AFE-AE8E-EC3EDE942A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

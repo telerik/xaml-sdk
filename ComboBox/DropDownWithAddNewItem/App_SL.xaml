@@ -273,7 +273,9 @@
                             IsTabStop="False"
                             Foreground="{StaticResource ButtonIconForeground_Normal}"
                             Background="{StaticResource ButtonIconBackground_Normal}"
-                            Template="{StaticResource ArrowTemplateEditableCombobox}"/>
+                            Margin="5 0"
+                            Content="{Binding RelativeSource={RelativeSource AncestorType=telerik:RadComboBox}, Path=DropDownButtonIconContent}"
+                            ContentTemplate="{Binding RelativeSource={RelativeSource AncestorType=telerik:RadComboBox}, Path=DropDownButtonIconTemplate}"/>
                         </Grid>
                     </telerik1:RadToggleButton>
                     <TextBlock x:Name="Watermark"

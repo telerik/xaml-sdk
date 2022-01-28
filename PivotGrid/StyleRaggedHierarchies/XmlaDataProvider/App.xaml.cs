@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
+﻿using System.Net;
 using System.Windows;
 
 namespace XmlaStyleRaggedHierarchies
@@ -12,5 +8,9 @@ namespace XmlaStyleRaggedHierarchies
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+        }
     }
 }
