@@ -71,6 +71,7 @@
     <Compile Include="DynamicDataObject.cs" />
     <Compile Include="DynamicObjectGetMemberBinder.cs" />
     <Compile Include="DynamicObjectSetMemberBinder.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

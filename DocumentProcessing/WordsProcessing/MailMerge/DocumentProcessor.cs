@@ -7,6 +7,14 @@ using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Flow.Model;
 using Telerik.Windows.Documents.Flow.Model.Editing;
 using Telerik.Windows.Documents.Flow.Model.Fields;
+using Telerik.Windows.Documents.Flow.Model.Styles;
+#if NETSTANDARD
+using Telerik.Documents.Common.Model;
+using Telerik.Documents.Media;
+#else
+using Telerik.Windows.Documents.Spreadsheet.Model;
+using System.Windows.Media;
+#endif
 
 namespace MailMerge
 {
@@ -24,6 +32,41 @@ namespace MailMerge
             IEnumerable mailMergeSource = this.GetConcreteMailMergeDataSouce();
             RadFlowDocument mergedDocument = this.MergeTemplateWithData(mailMergeSource);
             this.SaveFile(mergedDocument);
+        }
+
+        private static void InsertTextOnHeaderRow(RadFlowDocumentEditor editor, TableCell cell, string text)
+        {
+            InsertParagraphAndPositionEditor(editor, cell);
+
+            editor.InsertText(text);
+        }
+
+        private static void InsertTextOnTableRow(RadFlowDocumentEditor editor, TableCell cell, string[] fieldNames)
+        {
+            InsertParagraphAndPositionEditor(editor, cell);
+
+            for (int i = 0; i < fieldNames.Length; i++)
+            {
+                InsertMergeField(editor, fieldNames[i]);
+            }
+        }
+
+        private static void InsertParagraphAndPositionEditor(RadFlowDocumentEditor editor, TableCell cell)
+        {
+            Paragraph paragraph = cell.Blocks.AddParagraph();
+            editor.MoveToParagraphStart(paragraph);
+        }
+
+        private static void InsertMergeField(RadFlowDocumentEditor editor, string mergeField)
+        {
+            editor.InsertField(string.Format("MERGEFIELD {0}", mergeField), string.Format("«{0}»", mergeField));
+        }
+
+        private static void UpdateTableProperties(Table table)
+        {
+            table.PreferredWidth = new TableWidthUnit(TableWidthUnitType.Percent, 100);
+            Border border = new Border(1, BorderStyle.Single, new ThemableColor(Colors.Black));
+            table.Borders = new TableBorders(border);
         }
 
         private RadFlowDocument MergeTemplateWithData(IEnumerable mailMergeSource)
@@ -69,12 +112,25 @@ namespace MailMerge
             editor.InsertText("On behalf of ");
             editor.InsertField("MERGEFIELD CompanyName ", "«CompanyName»");
             editor.InsertText(", ");
-            editor.InsertText("I would like to thank you for the purchase of ");
-            editor.InsertField("MERGEFIELD PurchasedItemsCount ", "«PurchasedItemsCount»");
-            editor.InsertText(" ");
-            editor.InsertField("MERGEFIELD ProductName ", "«ProductName»");
-            editor.InsertText(" done by you from us.");
+            editor.InsertText("I would like to thank you for the purchase of:");
 
+            Table table = editor.InsertTable(2, 2);
+
+            TableRow row = table.Rows[0];
+            InsertTextOnHeaderRow(editor, row.Cells[0], "Product");
+            InsertTextOnHeaderRow(editor, row.Cells[1], "Quantity");
+
+            row = table.Rows[1];
+            string[] fieldNames = new string[] { "GroupStart:Products", "ProductName" };
+            InsertTextOnTableRow(editor, row.Cells[0], fieldNames);
+            fieldNames = new string[] { "PurchasedItemsCount", "GroupEnd:Products" };
+            InsertTextOnTableRow(editor, row.Cells[1], fieldNames);
+
+            UpdateTableProperties(table);
+
+            editor.MoveToTableEnd(table);
+
+            editor.InsertParagraph();
             editor.InsertParagraph();
             editor.InsertText("We are committed to provide you with the highest level of customer satisfaction possible. ");
             editor.InsertText("If for any reasons you have questions or comments please call ");
@@ -115,12 +171,28 @@ namespace MailMerge
         {
             List<DynamicDataObject> mailMergeSource = new List<DynamicDataObject>();
 
+            List<DynamicDataObject> products = new List<DynamicDataObject>();
+
+            DynamicDataObject product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhonePro 128GB");
+            product.Set("PurchasedItemsCount", 100);
+            products.Add(product);
+
+            product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhonePro 64GB");
+            product.Set("PurchasedItemsCount", 150);
+            products.Add(product);
+
+            product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhoneLite 16GB");
+            product.Set("PurchasedItemsCount", 250);
+            products.Add(product);
+
             DynamicDataObject data = new DynamicDataObject();
             data.Set("FirstName", "Andrew");
             data.Set("LastName", "Fuller");
             data.Set("CompanyName", "Mobile Phone Factory");
-            data.Set("PurchasedItemsCount", 500);
-            data.Set("ProductName", "mobile phones");
+            data.Set("Products", products);
             data.Set("ProductSupportPhone", "skype: MobilePhoneFactorySupport");
             data.Set("ProductSupportPhoneAvailability", "24/7");
             data.Set("ProductSupportEmail", "support@mobilephonefactory.org");
@@ -130,12 +202,28 @@ namespace MailMerge
 
             mailMergeSource.Add(data);
 
+            products = new List<DynamicDataObject>();
+
+            product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhonePro 64GB");
+            product.Set("PurchasedItemsCount", 200);
+            products.Add(product);
+
+            product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhoneLite 32GB");
+            product.Set("PurchasedItemsCount", 450);
+            products.Add(product);
+
+            product = new DynamicDataObject();
+            product.Set("ProductName", "MobilePhoneLite 16GB");
+            product.Set("PurchasedItemsCount", 550);
+            products.Add(product);
+
             data = new DynamicDataObject();
             data.Set("FirstName", "Margaret");
             data.Set("LastName", "Peacock");
             data.Set("CompanyName", "Mobile Phone Factory Japan");
-            data.Set("PurchasedItemsCount", 1200);
-            data.Set("ProductName", "mobile phones");
+            data.Set("Products", products);
             data.Set("ProductSupportPhone", "skype: MobilePhoneFactorySupportJapan");
             data.Set("ProductSupportPhoneAvailability", "24/7");
             data.Set("ProductSupportEmail", "support@mobilephonefactory.org");
@@ -151,13 +239,20 @@ namespace MailMerge
         private IEnumerable GetConcreteMailMergeDataSouce()
         {
             List<ConcreteDataObject> collection = new List<ConcreteDataObject>();
+
+            List<Product> products = new List<Product>()
+            {
+                new Product("MobilePhonePro 128GB", 100),
+                new Product("MobilePhonePro 64GB", 150),
+                new Product("MobilePhoneLite 16GB", 250)
+            };
+
             ConcreteDataObject data = new ConcreteDataObject()
             {
                 FirstName = "Andrew",
                 LastName = "Fuller",
                 CompanyName = "Mobile Phone Factory",
-                PurchasedItemsCount = 50,
-                ProductName = "mobile phones",
+                Products = products,
                 ProductSupportPhone = "skype: MobilePhoneFactorySupport",
                 ProductSupportPhoneAvailability = "24/7",
                 ProductSupportEmail = "support@mobilephonefactory.org",
@@ -168,13 +263,19 @@ namespace MailMerge
 
             collection.Add(data);
 
+            products = new List<Product>()
+            {
+                new Product("MobilePhonePro 64GB", 200),
+                new Product("MobilePhoneLite 32GB", 450),
+                new Product("MobilePhoneLite 16GB", 550)
+            };
+
             data = new ConcreteDataObject()
             {
                 FirstName = "Margaret",
                 LastName = "Peacock",
                 CompanyName = "Mobile Phone Factory Japan",
-                PurchasedItemsCount = 1200,
-                ProductName = "mobile phones",
+                Products = products,
                 ProductSupportPhone = "skype: MobilePhoneFactorySupportJapan",
                 ProductSupportPhoneAvailability = "24/7",
                 ProductSupportEmail = "support@mobilephonefactory.org",
