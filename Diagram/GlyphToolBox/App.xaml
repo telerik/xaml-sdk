@@ -35,7 +35,7 @@
                                     </Grid.RowDefinitions>
                                     <ScrollViewer MaxHeight="90" BorderThickness="0"
 									HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" >
-                                        <TextBox AcceptsReturn="True" HorizontalAlignment="Stretch" FontFamily="{DynamicResource TelerikWebUI}"
+                                        <TextBox AcceptsReturn="True" HorizontalAlignment="Stretch" FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}"
                                                 FontSize="32" Height="60" x:Name="contentBox"
                                                 Foreground="{Binding SelectedItem.Fill, ElementName=foregroundListBox}"
 											    VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -46,7 +46,7 @@
 
                                     <StackPanel Grid.Row="1" Margin="0 5 0 0">
                                         <TextBlock Text="Decoded Glyph String: " />
-                                        <TextBox FontFamily="{DynamicResource TelerikWebUI}" IsReadOnly="True"
+                                        <TextBox FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}" IsReadOnly="True"
 											     Text="{Binding Path=Text, Mode=TwoWay, ElementName=contentBox, Converter={StaticResource GlyphTextConverter}}" />
                                     </StackPanel>
 
@@ -57,7 +57,7 @@
                                         </Grid.ColumnDefinitions>                                      
                                         <telerik:RadToggleButton Grid.Column="0"
                                                          Content="{StaticResource GlyphBold}" 
-                                                         FontFamily="{StaticResource TelerikWebUI}" 
+                                                         FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}" 
                                                          FontSize="16" Focusable="False" Margin="0 5 0 0"
 										Width="22" MinHeight="22" Padding="0 0 0 1" 
 										extensions:SettingsPaneView.EditorPropertyName="FontWeight"
@@ -66,7 +66,7 @@
                                         </telerik:RadToggleButton>
                                         <telerik:RadToggleButton Grid.Column="1" Margin="0 5 0 0"
                                                          Content="{StaticResource GlyphItalic}" 
-                                                         FontFamily="{StaticResource TelerikWebUI}" 
+                                                         FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}" 
                                                          FontSize="16" Focusable="False"
 										Width="22" MinHeight="22" Padding="0 0 0 1" 
 										extensions:SettingsPaneView.EditorPropertyName="FontStyle"
@@ -88,14 +88,14 @@
 
             <Style TargetType="telerik:RadDiagramTextShape" BasedOn="{StaticResource RadDiagramTextShapeStyle}">
                 <Setter Property="Padding" Value="4" />
-                <Setter Property="FontFamily" Value="{StaticResource TelerikWebUI}" />
+                <Setter Property="FontFamily" Value="{x:Static telerik:RadGlyph.TelerikFontFamily}" />
                 <Setter Property="Foreground" Value="{telerik:Office2016Resource ResourceKey=AccentBrush}" />
                 <Setter Property="ContentTemplate">
                     <Setter.Value>
                         <DataTemplate>
                             <Viewbox>
                                 <TextBlock Text="{Binding}"                                           
-                                           FontFamily="{StaticResource TelerikWebUI}"  
+                                           FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}"  
                                            FontSize="{Binding FontSize, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramTextShape}}"
                                            Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramTextShape}}"/>
                             </Viewbox>
@@ -114,7 +114,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="42" />
                     </Grid.RowDefinitions>
-                    <telerik:RadDiagramTextShape Margin="5" FontFamily="{StaticResource TelerikWebUI}"
+                    <telerik:RadDiagramTextShape Margin="5" FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}"
                                         Content="{Binding Shape.Content}"  FontSize="16" Padding="4"
                                         IsHitTestVisible="False"
                                         Foreground="{telerik:Office2016Resource ResourceKey=AccentBrush}"/>
@@ -169,7 +169,7 @@
 
             <DataTemplate x:Key="dropDownItemTemplate">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{Binding GlyphContent}" FontSize="18" FontFamily="{StaticResource TelerikWebUI}" Margin="5 0"/>
+                    <TextBlock Text="{Binding GlyphContent}" FontSize="18" FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}" Margin="5 0"/>
                     <TextBlock Text="{Binding GlyphName}" Margin="5 0"/>
                 </StackPanel>
             </DataTemplate>

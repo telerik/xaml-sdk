@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace GenerateDocuments.SampleData
 {
-    public class Products
+    public sealed class Products
     {
         private static readonly string[] names = new string[] { "Côte de Blaye", "Boston Crab Meat",
             "Singaporean Hokkien Fried Mee", "Gula Malacca", "Rogede sild",
@@ -17,7 +17,7 @@ namespace GenerateDocuments.SampleData
             new DateTime(2008, 7, 31), new DateTime(2007, 7, 16) };
 
 
-        public IEnumerable<Product> GetData(int itemCount)
+        public static IEnumerable<Product> GetData(int itemCount)
         {
             Random rnd = new Random();
 

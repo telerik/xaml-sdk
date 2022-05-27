@@ -42,7 +42,7 @@ namespace CreateDocumentWithImages
 
             string resultFile = Path.Combine(filePath, defaultFileName);
 
-            this.PrepareDirectory(filePath, resultFile);
+            PrepareDirectory(filePath, resultFile);
 
             PdfFormatProvider provider;
             provider = new PdfFormatProvider();
@@ -63,7 +63,7 @@ namespace CreateDocumentWithImages
             Process.Start(psi);
         }
 
-        private void PrepareDirectory(string filePath, string resultFile)
+        private static void PrepareDirectory(string filePath, string resultFile)
         {
             if (Directory.Exists(filePath))
             {

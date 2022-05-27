@@ -5,7 +5,7 @@ using Telerik.Windows.Documents.Extensibility;
 
 namespace GenerateDocument
 {
-    public class Program
+    public static class Program
     {
         private static readonly string ResultDirName = AppDomain.CurrentDomain.BaseDirectory + "Demo results/";
 

@@ -15,10 +15,10 @@ namespace GenerateDocuments
 {
     public class DocumentGenerator
     {
-        private static readonly int IndexColumnQuantity = 5;
-        private static readonly int IndexColumnUnitPrice = 6;
-        private static readonly int IndexColumnSubTotal = 7;
-        private static readonly int IndexRowItemStart = 1;
+        private const int IndexColumnQuantity = 5;
+        private const int IndexColumnUnitPrice = 6;
+        private const int IndexColumnSubTotal = 7;
+        private const int IndexRowItemStart = 1;
 
         private static readonly string AccountFormatString = GenerateCultureDependentFormatString();
         private static readonly ThemableColor InvoiceBackground = new ThemableColor(Color.FromArgb(255, 44, 62, 80));
@@ -27,7 +27,7 @@ namespace GenerateDocuments
         private readonly Products data;
         private readonly string defaultExportFormat = "xlsx";
 
-        private List<Product> products;
+        private IEnumerable<Product> products;
         private string selectedExportFormat;
 
         public double Total
@@ -38,7 +38,7 @@ namespace GenerateDocuments
             }
         }
 
-        public List<Product> Products
+        public IEnumerable<Product> Products
         {
             get
             {
@@ -78,7 +78,7 @@ namespace GenerateDocuments
 
         private void GenerateData()
         {
-            this.Products = this.data.GetData(20).ToList();
+            this.Products = SampleData.Products.GetData(20).ToList();
         }
 
         private double CalculateTotal()
@@ -107,7 +107,7 @@ namespace GenerateDocuments
 
             Worksheet worksheet = workbook.ActiveWorksheet;
 
-            this.PrepareInvoiceDocument(worksheet, this.Products.Count);
+            PrepareInvoiceDocument(worksheet, this.Products.Count());
 
             int currentRow = IndexRowItemStart + 1;
             foreach (Product product in this.Products)
@@ -123,7 +123,7 @@ namespace GenerateDocuments
             return workbook;
         }
 
-        private void PrepareInvoiceDocument(Worksheet worksheet, int itemsCount)
+        private static void PrepareInvoiceDocument(Worksheet worksheet, int itemsCount)
         {
             int lastItemIndexRow = IndexRowItemStart + itemsCount;
 

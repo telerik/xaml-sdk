@@ -18,7 +18,7 @@ namespace GlyphToolBox
     {
         private RadDiagramToolboxItem selectedToolBoxItem;
         Dictionary<int, GlyphInfo> allGlyphs = new Dictionary<int, GlyphInfo>();
-        Dictionary<string, Gallery> glyphGalleries = new Dictionary<string, Gallery>()        
+        Dictionary<string, Gallery> glyphGalleries = new Dictionary<string, Gallery>()
         {
             {"e0", new Gallery(){ Header ="NavigationLayout" }},
             {"e1", new Gallery(){ Header= "Action" }},
@@ -30,6 +30,7 @@ namespace GlyphToolBox
             {"e7", new Gallery(){ Header= "Map" }},
             {"e8", new Gallery(){ Header= "Social" }},
             {"e9", new Gallery(){ Header= "File" }},
+            {"ea", new Gallery(){ Header= "Charts" }}
         };
         Dictionary<string, ObservableCollection<GalleryItem>> sortedGallleries = new Dictionary<string, ObservableCollection<GalleryItem>>();
 

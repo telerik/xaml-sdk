@@ -18,18 +18,18 @@ using Telerik.Windows.Documents.Flow.Model.Styles;
 
 namespace HtmlGenerator
 {
-    public class DocumentGenerator
+    public static class DocumentGenerator
     {
+        private const string SampleDataFolder = "SampleData/";
         private static readonly ThemableColor GreenColor = new ThemableColor(Color.FromArgb(255, 92, 230, 0));
-        private static readonly string SampleDataFolder = "SampleData/";
 
-        public void Generate()
+        public static void Generate()
         {
-            RadFlowDocument document = this.CreateDocument();
-            this.SaveDocument(document);
+            RadFlowDocument document = CreateDocument();
+            SaveDocument(document);
         }
 
-        private RadFlowDocument CreateDocument()
+        private static RadFlowDocument CreateDocument()
         {
             RadFlowDocument document = new RadFlowDocument();
             RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -70,7 +70,7 @@ namespace HtmlGenerator
             return document;
         }
 
-        private void SaveDocument(RadFlowDocument document)
+        private static void SaveDocument(RadFlowDocument document)
         {
             HtmlFormatProvider formatProvider = new HtmlFormatProvider();
 

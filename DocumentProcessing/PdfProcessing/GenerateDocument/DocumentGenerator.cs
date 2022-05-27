@@ -23,8 +23,8 @@ namespace GenerateDocument
 {
     public class DocumentGenerator
     {
-        private static readonly double defaultLeftIndent = 50;
-        private static readonly double defaultLineHeight = 16;
+        private const double defaultLeftIndent = 50;
+        private const double defaultLineHeight = 16;
         public static readonly string RootDirectory = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string sampleDataPath = RootDirectory + "/SampleData/";
         private readonly string defaultDocumentName = "Sample Document.pdf";
@@ -48,11 +48,11 @@ namespace GenerateDocument
 
             string resultFile = System.IO.Path.Combine(filePath, this.defaultDocumentName);
 
-            this.PrepareDirectory(filePath, resultFile);
+            PrepareDirectory(filePath, resultFile);
 
             using (FileStream stream = File.OpenWrite(resultFile))
             {
-                RadFixedDocument document = this.CreateDocument();
+                RadFixedDocument document = CreateDocument();
                 formatProvider.Export(document, stream);
             }
 
@@ -66,7 +66,7 @@ namespace GenerateDocument
             Process.Start(psi);
         }
 
-        private RadFixedDocument CreateDocument()
+        private static RadFixedDocument CreateDocument()
         {
             RadFixedDocument document = new RadFixedDocument();
             RadFixedPage page = document.Pages.AddPage();
@@ -82,14 +82,14 @@ namespace GenerateDocument
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
             double maxWidth = page.Size.Width - defaultLeftIndent * 2;
 
-            this.DrawDescription(editor, maxWidth);
+            DrawDescription(editor, maxWidth);
 
             currentTopOffset += defaultLineHeight * 4;
             editor.Position.Translate(defaultLeftIndent, currentTopOffset);
 
             using (editor.SaveProperties())
             {
-                this.DrawFunnelFigure(editor);
+                DrawFunnelFigure(editor);
             }
 
             editor.Position.Translate(defaultLeftIndent * 4, page.Size.Height - 100);
@@ -98,12 +98,12 @@ namespace GenerateDocument
                 editor.DrawImage(stream);
             }
 
-            this.DrawText(editor, maxWidth);
+            DrawText(editor, maxWidth);
 
             return document;
         }
 
-        private void DrawDescription(FixedContentEditor editor, double maxWidth)
+        private static void DrawDescription(FixedContentEditor editor, double maxWidth)
         {
             Block block = new Block();
             block.GraphicProperties.FillColor = RgbColors.Black;
@@ -117,7 +117,7 @@ namespace GenerateDocument
             editor.DrawBlock(block, new Size(maxWidth, double.PositiveInfinity));
         }
 
-        private void DrawText(FixedContentEditor editor, double maxWidth)
+        private static void DrawText(FixedContentEditor editor, double maxWidth)
         {
             double currentTopOffset = 470;
             currentTopOffset += defaultLineHeight * 2;
@@ -211,7 +211,7 @@ namespace GenerateDocument
             editor.DrawText("키스의 고유조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다.", new Size(maxWidth, double.PositiveInfinity));
         }
 
-        private void DrawFunnelFigure(FixedContentEditor editor)
+        private static void DrawFunnelFigure(FixedContentEditor editor)
         {
             editor.GraphicProperties.IsStroked = false;
             editor.GraphicProperties.FillColor = new RgbColor(231, 238, 247);
@@ -283,7 +283,7 @@ namespace GenerateDocument
             editor.DrawBlock(block, new Size(272, double.PositiveInfinity));
         }
 
-        private void PrepareDirectory(string filePath, string resultFile)
+        private static void PrepareDirectory(string filePath, string resultFile)
         {
             if (Directory.Exists(filePath))
             {

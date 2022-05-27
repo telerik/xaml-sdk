@@ -14,8 +14,7 @@ namespace HtmlGenerator
             JpegImageConverter jpegImageConverter = new JpegImageConverter();
             FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
 #endif
-            DocumentGenerator generator = new DocumentGenerator();
-            generator.Generate();
+            DocumentGenerator.Generate();
 
             Console.Read();
         }

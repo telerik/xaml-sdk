@@ -18,20 +18,20 @@ using System.Windows.Media;
 
 namespace MailMerge
 {
-    public class DocumentProcessor
+    public static class DocumentProcessor
     {
-        public void MailMergeWithDynamicDataObject()
+        public static void MailMergeWithDynamicDataObject()
         {
-            IEnumerable mailMergeSource = this.GetDynamicMailMergeDataSource();
-            RadFlowDocument mergedDocument = this.MergeTemplateWithData(mailMergeSource);
-            this.SaveFile(mergedDocument);
+            IEnumerable mailMergeSource = GetDynamicMailMergeDataSource();
+            RadFlowDocument mergedDocument = MergeTemplateWithData(mailMergeSource);
+            SaveFile(mergedDocument);
         }
 
-        public void MailMergeWithConcreteDataObject()
+        public static void MailMergeWithConcreteDataObject()
         {
-            IEnumerable mailMergeSource = this.GetConcreteMailMergeDataSouce();
-            RadFlowDocument mergedDocument = this.MergeTemplateWithData(mailMergeSource);
-            this.SaveFile(mergedDocument);
+            IEnumerable mailMergeSource = GetConcreteMailMergeDataSouce();
+            RadFlowDocument mergedDocument = MergeTemplateWithData(mailMergeSource);
+            SaveFile(mergedDocument);
         }
 
         private static void InsertTextOnHeaderRow(RadFlowDocumentEditor editor, TableCell cell, string text)
@@ -69,15 +69,15 @@ namespace MailMerge
             table.Borders = new TableBorders(border);
         }
 
-        private RadFlowDocument MergeTemplateWithData(IEnumerable mailMergeSource)
+        private static RadFlowDocument MergeTemplateWithData(IEnumerable mailMergeSource)
         {
-            RadFlowDocument template = this.CreateMailMergeDocumentTemplate();
+            RadFlowDocument template = CreateMailMergeDocumentTemplate();
             RadFlowDocument mergedDocument = template.MailMerge(mailMergeSource);
 
             return mergedDocument;
         }
 
-        private void SaveFile(RadFlowDocument document)
+        private static void SaveFile(RadFlowDocument document)
         {
             string path = "Mail Merge Sample.docx";
             using (Stream stream = File.OpenWrite(path))
@@ -96,7 +96,7 @@ namespace MailMerge
             Console.Write("Mail merge finished - the document is saved.");
         }
 
-        private RadFlowDocument CreateMailMergeDocumentTemplate()
+        private static RadFlowDocument CreateMailMergeDocumentTemplate()
         {
             RadFlowDocument document = new RadFlowDocument();
             RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -167,7 +167,7 @@ namespace MailMerge
             return document;
         }
 
-        private IEnumerable GetDynamicMailMergeDataSource()
+        private static IEnumerable GetDynamicMailMergeDataSource()
         {
             List<DynamicDataObject> mailMergeSource = new List<DynamicDataObject>();
 
@@ -236,7 +236,7 @@ namespace MailMerge
             return mailMergeSource;
         }
 
-        private IEnumerable GetConcreteMailMergeDataSouce()
+        private static IEnumerable GetConcreteMailMergeDataSouce()
         {
             List<ConcreteDataObject> collection = new List<ConcreteDataObject>();
 

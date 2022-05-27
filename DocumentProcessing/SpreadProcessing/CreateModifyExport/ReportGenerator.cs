@@ -21,7 +21,6 @@ namespace CreateModifyExport
     public class ReportGenerator
     {
         private Worksheet worksheet;
-        private Workbook workbook;
 
         public ReportGenerator()
         {
@@ -57,13 +56,7 @@ namespace CreateModifyExport
             }
         }
 
-        public Workbook Workbook
-        {
-            get
-            {
-                return this.workbook;
-            }
-        }
+        public Workbook Workbook { get; private set; }
 
         public void ExportReports()
         {
@@ -97,8 +90,8 @@ namespace CreateModifyExport
 
         private void CreateWorkbook()
         {
-            this.workbook = new Workbook();
-            this.worksheet = this.workbook.Worksheets.Add();
+            this.Workbook = new Workbook();
+            this.worksheet = this.Workbook.Worksheets.Add();
             this.worksheet.Name = "Expense Report 2014";
         }
 
@@ -174,38 +167,38 @@ namespace CreateModifyExport
 
             ThemeFontScheme fontScheme = new ThemeFontScheme("ExpenseReport", "Cambria", "Segoe UI");
             DocumentTheme theme = new DocumentTheme("ExpenseReport", colorScheme, fontScheme);
-            this.workbook.Theme = theme;
+            this.Workbook.Theme = theme;
         }
 
         private void CreateWorkbookStyles()
         {
-            CellStyle normalStyle = this.workbook.Styles["Normal"];
+            CellStyle normalStyle = this.Workbook.Styles["Normal"];
             normalStyle.Fill = PatternFill.CreateSolidFill(new ThemableColor(ThemeColorType.Background1));
             normalStyle.FontFamily = new ThemableFontFamily(ThemeFontType.Minor);
             normalStyle.FontSize = UnitHelper.PointToDip(10);
             normalStyle.VerticalAlignment = RadVerticalAlignment.Center;
 
-            CellStyle companyNameStyle = this.workbook.Styles.Add("CompanyNameStyle");
+            CellStyle companyNameStyle = this.Workbook.Styles.Add("CompanyNameStyle");
             companyNameStyle.FontFamily = new ThemableFontFamily(ThemeFontType.Major);
             companyNameStyle.FontSize = UnitHelper.PointToDip(48);
             companyNameStyle.HorizontalAlignment = RadHorizontalAlignment.Left;
 
-            CellStyle expensePeriodStyle = this.workbook.Styles.Add("ExpensePeriodStyle");
+            CellStyle expensePeriodStyle = this.Workbook.Styles.Add("ExpensePeriodStyle");
             expensePeriodStyle.FontFamily = new ThemableFontFamily("Segoe UI Light");
             expensePeriodStyle.FontSize = UnitHelper.PointToDip(20);
             expensePeriodStyle.HorizontalAlignment = RadHorizontalAlignment.Right;
 
-            CellStyle columnHeadersStyle = this.workbook.Styles.Add("ColumnHeadersStyle");
+            CellStyle columnHeadersStyle = this.Workbook.Styles.Add("ColumnHeadersStyle");
             columnHeadersStyle.FontFamily = new ThemableFontFamily(ThemeFontType.Major);
             columnHeadersStyle.BottomBorder = new CellBorder(CellBorderStyle.Thick, new ThemableColor(ThemeColorType.Accent2));
             columnHeadersStyle.FontSize = UnitHelper.PointToDip(14);
 
-            CellStyle departmentTotalStyle = this.workbook.Styles.Add("DepartmentTotalStyle");
+            CellStyle departmentTotalStyle = this.Workbook.Styles.Add("DepartmentTotalStyle");
             departmentTotalStyle.CopyPropertiesFrom(normalStyle);
             departmentTotalStyle.FontSize = UnitHelper.PointToDip(14);
             departmentTotalStyle.FontFamily = new ThemableFontFamily("Segoe UI Light");
 
-            CellStyle totalStyle = this.workbook.Styles.Add("TotalStyle");
+            CellStyle totalStyle = this.Workbook.Styles.Add("TotalStyle");
             totalStyle.Fill = PatternFill.CreateSolidFill(new ThemableColor(ThemeColorType.Accent2));
             totalStyle.FontSize = UnitHelper.PointToDip(14);
             totalStyle.ForeColor = new ThemableColor(ThemeColorType.Background1);
@@ -270,7 +263,7 @@ namespace CreateModifyExport
             using (Stream fileStream = this.GetFileStream(fileName))
             {
                 PdfFormatProvider provider = new PdfFormatProvider();
-                provider.Export(this.workbook, fileStream);
+                provider.Export(this.Workbook, fileStream);
             }
         }
 
@@ -279,20 +272,20 @@ namespace CreateModifyExport
             using (fileStream)
             {
                 PdfFormatProvider provider = new PdfFormatProvider();
-                provider.Export(this.workbook, fileStream);
+                provider.Export(this.Workbook, fileStream);
             }
         }
 
         private Stream GetFileStream(string fileName)
         {
-            this.PrepareDirectory(this.ExportDirectory, fileName);
+            PrepareDirectory(this.ExportDirectory, fileName);
             string filePath = string.Format("{0}\\{1}", this.ExportDirectory, fileName);
 
             return new FileStream(filePath, FileMode.OpenOrCreate);
         }
 
 
-        private void PrepareDirectory(string filePath, string resultFile)
+        private static void PrepareDirectory(string filePath, string resultFile)
         {
             if (Directory.Exists(filePath))
             {

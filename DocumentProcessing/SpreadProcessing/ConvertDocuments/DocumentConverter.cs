@@ -12,7 +12,7 @@ namespace ConvertDocuments
 {
     public class DocumentConverter
     {
-        private static readonly string SampleDocumentFilePath = "SampleData\\SampleDocument.xlsx";
+        private const string SampleDocumentFilePath = "SampleData\\SampleDocument.xlsx";
 
         private readonly List<IWorkbookFormatProvider> providers;
         private readonly string defaultFromat = "xlsx";
@@ -106,7 +106,7 @@ namespace ConvertDocuments
             string extension = Path.GetExtension(fileName);
             IWorkbookFormatProvider provider = this.providers
                 .FirstOrDefault(p => p.SupportedExtensions
-                    .Any(e => string.Compare(extension, e, StringComparison.InvariantCultureIgnoreCase) == 0));
+                    .Any(e => string.Compare(extension, e, StringComparison.OrdinalIgnoreCase) == 0));
 
             if (provider != null)
             {

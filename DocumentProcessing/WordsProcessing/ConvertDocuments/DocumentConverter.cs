@@ -15,7 +15,7 @@ namespace ConvertDocuments
 {
     internal class DocumentConverter
     {
-        private static readonly string sampleDocumentFilePath = "SampleData\\SampleDocument.docx";
+        private const string sampleDocumentFilePath = "SampleData\\SampleDocument.docx";
 
         private readonly List<IFormatProvider<RadFlowDocument>> providers;
 
@@ -50,7 +50,7 @@ namespace ConvertDocuments
             string extension = Path.GetExtension(fileName);
             IFormatProvider<RadFlowDocument> provider = this.providers
                                                             .FirstOrDefault(p => p.SupportedExtensions
-                                                                                  .Any(e => string.Compare(extension, e, StringComparison.InvariantCultureIgnoreCase) == 0));
+                                                                                  .Any(e => string.Compare(extension, e, StringComparison.OrdinalIgnoreCase) == 0));
 
             if (provider != null)
             {
@@ -132,4 +132,3 @@ namespace ConvertDocuments
         }
     }
 }
-

@@ -1,0 +1,15 @@
+﻿--  SAMPLE returns a given number of rows from a table expression.
+--
+--  The rows are evenly chosen following the order provided
+--  in the third and fourth arguments
+DEFINE
+    TABLE SampleData = { 2, 4, 4, 4, 5, 5, 7, 9 }
+EVALUATE
+SAMPLE ( 3, SampleData, [Value], ASC )
+ 
+EVALUATE
+SAMPLE ( 3, SampleData, [Value], DESC )
+ 
+/* Because SampleData has 8 elements, the elements considered are in position 1, 5, 8
+The second query returns 5 instead of 4 because the sort order is descending
+SAMPLE is deterministic when used over the same table with the same argument */

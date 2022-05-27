@@ -8,8 +8,7 @@ namespace ContentControls
         {
             Console.WriteLine("Exporting file...");
 
-            DocumentGenerator generator = new DocumentGenerator();
-            generator.Generate();
+            DocumentGenerator.Generate();
 
             Console.ReadKey();
         }

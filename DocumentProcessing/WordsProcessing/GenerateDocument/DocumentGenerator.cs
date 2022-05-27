@@ -61,7 +61,7 @@ namespace GenerateDocument
         {
             RadFlowDocument document = this.CreateDocument();
 
-            this.SaveDocument(document, this.SelectedExportFormat);
+            SaveDocument(document, this.SelectedExportFormat);
         }
 
         private RadFlowDocument CreateDocument()
@@ -100,7 +100,7 @@ namespace GenerateDocument
 
             this.CreateHeader(editor);
 
-            this.CreateFooter(editor);
+            CreateFooter(editor);
 
             return document;
         }
@@ -137,7 +137,7 @@ namespace GenerateDocument
             editor.InsertText("Support Officer");
         }
 
-        private void CreateFooter(RadFlowDocumentEditor editor)
+        private static void CreateFooter(RadFlowDocumentEditor editor)
         {
             Footer footer = editor.Document.Sections.First().Footers.Add();
             Paragraph paragraph = footer.Blocks.AddParagraph();
@@ -158,7 +158,7 @@ namespace GenerateDocument
             }
         }
 
-        private void SaveDocument(RadFlowDocument document, string selectedFormat)
+        private static void SaveDocument(RadFlowDocument document, string selectedFormat)
         {
             string selectedFormatLower = selectedFormat.ToLower();
 

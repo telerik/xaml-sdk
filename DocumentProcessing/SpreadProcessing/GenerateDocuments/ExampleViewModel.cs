@@ -100,7 +100,7 @@ namespace GenerateDocuments
 
         private void GenerateData()
         {
-            this.Products = this.data.GetData(20).ToList();
+            this.Products = SampleData.Products.GetData(20).ToList();
         }
 
         private double CalculateTotal()

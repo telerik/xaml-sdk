@@ -28,7 +28,7 @@
 
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="&#xe13e;" FontFamily="{StaticResource TelerikWebUI}" FontSize="16" Margin="10 8 0 0"/>
+                <TextBlock Text="&#xe13e;" FontFamily="{x:Static telerik:RadGlyph.TelerikFontFamily}" FontSize="16" Margin="10 8 0 0"/>
                 <TextBlock Text="Search a Glyph by Keyword: " FontSize="14" Margin="5" FontWeight="Bold"/>
             </StackPanel>
             <telerik:RadAutoCompleteBox x:Name="autoComplete" Margin="10 0 10 10"

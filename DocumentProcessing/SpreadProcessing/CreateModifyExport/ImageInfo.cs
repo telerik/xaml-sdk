@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Telerik.Documents.Primitives;
 using Telerik.Windows.Documents.Core.Imaging;
 
@@ -13,6 +14,11 @@ namespace CreateModifyExport
             {
                 return new Size(image.Width, image.Height);
             }
+        }
+
+        public override bool TryGetRawImageData(byte[] imageData, out byte[] rawRgbData, out byte[] rawAlpha, out Size size)
+        {
+            throw new NotImplementedException();
         }
     }
 }

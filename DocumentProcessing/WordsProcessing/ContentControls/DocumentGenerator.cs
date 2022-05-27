@@ -23,24 +23,24 @@ namespace ContentControls
     class DocumentGenerator
     {
 #if NETCOREAPP
-        private static readonly string SampleDataFolder = "../../../SampleData/";
+        private const string SampleDataFolder = "../../../SampleData/";
 #else
-        private static readonly string SampleDataFolder = "../../SampleData/";
+        private const string SampleDataFolder = "../../SampleData/";
 #endif
-        private static readonly string TemplatePath = SampleDataFolder + "CVTemplate.docx";
-        private static readonly string ImagePath = SampleDataFolder + "TelerikNinja.png";
+        private const string TemplatePath = SampleDataFolder + "CVTemplate.docx";
+        private const string ImagePath = SampleDataFolder + "TelerikNinja.png";
         private static readonly string Heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
 
 
-        public void Generate()
+        public static void Generate()
         {
-            RadFlowDocument template = this.OpenSample();
-            RadFlowDocument document = this.CreateDocument(template);
+            RadFlowDocument template = OpenSample();
+            RadFlowDocument document = CreateDocument(template);
 
-            this.Save(document);
+            Save(document);
         }
 
-        private RadFlowDocument OpenSample()
+        private static RadFlowDocument OpenSample()
         {
             using (Stream stream = File.OpenRead(TemplatePath))
             {
@@ -49,7 +49,7 @@ namespace ContentControls
             }
         }
 
-        private void Save(RadFlowDocument document)
+        private static void Save(RadFlowDocument document)
         {
             IFormatProvider<RadFlowDocument> formatProvider = new DocxFormatProvider();
 
@@ -70,21 +70,21 @@ namespace ContentControls
             Process.Start(psi);
         }
 
-        private RadFlowDocument CreateDocument(RadFlowDocument template)
+        private static RadFlowDocument CreateDocument(RadFlowDocument template)
         {
             RadFlowDocument document = template;
             RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
             Section firstSection = document.Sections[0];
 
-            this.PersonalDetailsSection(editor, firstSection);
-            this.SummarySection(editor, firstSection);
-            this.ExperienceSection(document, editor, firstSection);
-            this.SkillsSection(editor, firstSection);
+            PersonalDetailsSection(editor, firstSection);
+            SummarySection(editor, firstSection);
+            ExperienceSection(document, editor, firstSection);
+            SkillsSection(editor, firstSection);
 
             return document;
         }
 
-        private void PersonalDetailsSection(RadFlowDocumentEditor editor, Section firstSection)
+        private static void PersonalDetailsSection(RadFlowDocumentEditor editor, Section firstSection)
         {
             double tabStopPosition = Unit.InchToDip(6);
 
@@ -96,7 +96,7 @@ namespace ContentControls
 
 
             Run nameRun = nameAndPhotoParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, nameRun, "Enter your name", SdtType.RichText);
+            SetupAndInsertSdt(editor, nameRun, "Enter your name", SdtType.RichText);
 
             nameAndPhotoParagraph.Inlines.AddRun("\t");
 
@@ -104,7 +104,7 @@ namespace ContentControls
             imageInline.Image.Size = new Size(200, 200);
             imageInline.Image.ImageSource = new ImageSource(File.ReadAllBytes(ImagePath), ".png");
             nameAndPhotoParagraph.Inlines.Add(imageInline);
-            this.SetupAndInsertSdt(editor, imageInline, null, SdtType.Picture);
+            SetupAndInsertSdt(editor, imageInline, null, SdtType.Picture);
 
             #endregion
 
@@ -113,7 +113,7 @@ namespace ContentControls
 
             Paragraph roleParagraph = firstSection.Blocks.AddParagraph();
             Run roleRun = roleParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, roleRun, "Your desired role?", SdtType.RichText);
+            SetupAndInsertSdt(editor, roleRun, "Your desired role?", SdtType.RichText);
 
             #endregion
 
@@ -124,12 +124,12 @@ namespace ContentControls
             phoneAndEmailParagraph.TabStops = phoneAndEmailParagraph.TabStops.Insert(new TabStop(tabStopPosition, TabStopType.Right));
 
             Run phoneRun = phoneAndEmailParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, phoneRun, "Phone number", SdtType.RichText);
+            SetupAndInsertSdt(editor, phoneRun, "Phone number", SdtType.RichText);
 
             phoneAndEmailParagraph.Inlines.AddRun("\t");
 
             Run emailRun = phoneAndEmailParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, emailRun, "Email address", SdtType.RichText);
+            SetupAndInsertSdt(editor, emailRun, "Email address", SdtType.RichText);
 
             #endregion
 
@@ -141,17 +141,17 @@ namespace ContentControls
 
             InlineCollection websiteAndLocationInlines = websiteAndLocationParagraph.Inlines;
             Run websiteRun = websiteAndLocationInlines.AddRun();
-            this.SetupAndInsertSdt(editor, websiteRun, "Website", SdtType.RichText);
+            SetupAndInsertSdt(editor, websiteRun, "Website", SdtType.RichText);
 
             websiteAndLocationInlines.AddRun("\t");
 
             Run locationRun = websiteAndLocationInlines.AddRun();
-            this.SetupAndInsertSdt(editor, locationRun, "Location", SdtType.RichText);
+            SetupAndInsertSdt(editor, locationRun, "Location", SdtType.RichText);
 
             #endregion
         }
 
-        private void SummarySection(RadFlowDocumentEditor editor, Section firstSection)
+        private static void SummarySection(RadFlowDocumentEditor editor, Section firstSection)
         {
             Paragraph summaryTitleParagraph = editor.InsertParagraph();
             summaryTitleParagraph.StyleId = Heading1StyleId;
@@ -161,12 +161,12 @@ namespace ContentControls
 
             Paragraph summaryContentParagraph = firstSection.Blocks.AddParagraph();
             Run summaryRun = summaryContentParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, summaryRun, "What`s the one thing you want someone to remember after reading your resume?", SdtType.RichText);
+            SetupAndInsertSdt(editor, summaryRun, "What`s the one thing you want someone to remember after reading your resume?", SdtType.RichText);
 
             #endregion
         }
 
-        private void ExperienceSection(RadFlowDocument document, RadFlowDocumentEditor editor, Section firstSection)
+        private static void ExperienceSection(RadFlowDocument document, RadFlowDocumentEditor editor, Section firstSection)
         {
             Paragraph experienceTitleParagraph = editor.InsertParagraph();
             experienceTitleParagraph.StyleId = Heading1StyleId;
@@ -176,7 +176,7 @@ namespace ContentControls
 
             Paragraph titleContentParagraph = firstSection.Blocks.AddParagraph();
             Run titleRun = titleContentParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, titleRun, "Title", SdtType.RichText);
+            SetupAndInsertSdt(editor, titleRun, "Title", SdtType.RichText);
 
             #endregion
 
@@ -185,7 +185,7 @@ namespace ContentControls
 
             Paragraph companyNameParagraph = firstSection.Blocks.AddParagraph();
             Run companyRun = companyNameParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, companyRun, "Company name", SdtType.RichText);
+            SetupAndInsertSdt(editor, companyRun, "Company name", SdtType.RichText);
 
             #endregion
 
@@ -195,12 +195,12 @@ namespace ContentControls
             Paragraph periodParagraph = firstSection.Blocks.AddParagraph();
 
             Run startDateRun = periodParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, startDateRun, "Select start date", SdtType.Date);
+            SetupAndInsertSdt(editor, startDateRun, "Select start date", SdtType.Date);
 
             periodParagraph.Inlines.AddRun(" - ");
 
             Run endDateRun = periodParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, endDateRun, "Select end date", SdtType.Date);
+            SetupAndInsertSdt(editor, endDateRun, "Select end date", SdtType.Date);
 
             #endregion
 
@@ -209,7 +209,7 @@ namespace ContentControls
 
             Paragraph companyDescriptionParagraph = firstSection.Blocks.AddParagraph();
             Run companyDescriptionRun = companyDescriptionParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, companyDescriptionRun, "Company Description", SdtType.RichText);
+            SetupAndInsertSdt(editor, companyDescriptionRun, "Company Description", SdtType.RichText);
 
             #region Achievements
 
@@ -218,17 +218,17 @@ namespace ContentControls
             Paragraph achievementsParagraph = firstSection.Blocks.AddParagraph();
             achievementsParagraph.ListId = list.Id;
             Run achievementsRun = achievementsParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, achievementsRun, "What did you achieve in this role?", SdtType.RichText);
+            SetupAndInsertSdt(editor, achievementsRun, "What did you achieve in this role?", SdtType.RichText);
 
             editor.InsertStructuredDocumentTag(SdtType.RepeatingSectionItem, achievementsParagraph, achievementsParagraph);
-            this.SetupAndInsertSdt(editor, achievementsParagraph.Inlines.First(), null, SdtType.RepeatingSection, achievementsParagraph);
+            SetupAndInsertSdt(editor, achievementsParagraph.Inlines.First(), null, SdtType.RepeatingSection, achievementsParagraph);
 
             #endregion
 
             #endregion
         }
 
-        private void SkillsSection(RadFlowDocumentEditor editor, Section firstSection)
+        private static void SkillsSection(RadFlowDocumentEditor editor, Section firstSection)
         {
             Paragraph skillsTitleParagpraph = editor.InsertParagraph();
             skillsTitleParagpraph.StyleId = Heading1StyleId;
@@ -238,15 +238,15 @@ namespace ContentControls
 
             Paragraph skillsContentParagraph = firstSection.Blocks.AddParagraph();
             Run skillRun = skillsContentParagraph.Inlines.AddRun();
-            this.SetupAndInsertSdt(editor, skillRun, "Tool/Technology", SdtType.RichText);
+            SetupAndInsertSdt(editor, skillRun, "Tool/Technology", SdtType.RichText);
 
             editor.InsertStructuredDocumentTag(SdtType.RepeatingSectionItem, skillsContentParagraph, skillsContentParagraph);
-            this.SetupAndInsertSdt(editor, skillsContentParagraph.Inlines.First(), null, SdtType.RepeatingSection, skillsContentParagraph);
+            SetupAndInsertSdt(editor, skillsContentParagraph.Inlines.First(), null, SdtType.RepeatingSection, skillsContentParagraph);
 
             #endregion
         }
 
-        private void SetupAndInsertSdt(RadFlowDocumentEditor editor, InlineBase inline, string text, SdtType sdtType, DocumentElementBase start = null, DocumentElementBase end = null)
+        private static void SetupAndInsertSdt(RadFlowDocumentEditor editor, InlineBase inline, string text, SdtType sdtType, DocumentElementBase start = null, DocumentElementBase end = null)
         {
             if (sdtType == SdtType.RepeatingSection)
             {

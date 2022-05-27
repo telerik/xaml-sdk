@@ -13,14 +13,13 @@ namespace MailMerge
             Console.Write("Your choice: ");
             string choice = Console.ReadLine();
 
-            DocumentProcessor processor = new DocumentProcessor();
             switch (choice)
             {
                 case "1":
-                    processor.MailMergeWithDynamicDataObject();
+                    DocumentProcessor.MailMergeWithDynamicDataObject();
                     break;
                 case "2":
-                    processor.MailMergeWithConcreteDataObject();
+                    DocumentProcessor.MailMergeWithConcreteDataObject();
                     break;
                 default:
                     Console.WriteLine("Invalid choice");
