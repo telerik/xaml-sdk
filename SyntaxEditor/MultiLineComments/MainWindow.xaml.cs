@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Windows.Controls.SyntaxEditor.UI;
@@ -13,9 +14,13 @@ namespace MultiLineComments
         {
             InitializeComponent();
 
-            using (StreamReader reader = new StreamReader("../../query.txt"))
+            var assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream("MultiLineComments.query.txt"))
             {
-                this.syntaxEditor.Document = new TextDocument(reader);
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    this.syntaxEditor.Document = new TextDocument(reader);
+                }
             }
 
             var daxTagger = new DAXTagger(this.syntaxEditor);

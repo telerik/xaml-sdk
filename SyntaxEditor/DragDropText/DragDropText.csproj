@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,25 +51,22 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.SyntaxEditor">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.SyntaxEditor.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

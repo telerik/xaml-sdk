@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -17,9 +18,13 @@ namespace CustomLanguage
         {
             InitializeComponent();
 
-            using (StreamReader reader = new StreamReader("../../script.py"))
+            var assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream("CustomLanguage.script.py"))
             {
-                this.syntaxEditor.Document = new TextDocument(reader);
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    this.syntaxEditor.Document = new TextDocument(reader);
+                }
             }
 
             var pythonTagger = new PythonTagger(this.syntaxEditor);

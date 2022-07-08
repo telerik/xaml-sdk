@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4CE30DF-4DED-4DCE-A6C2-E028C34E444C}</ProjectGuid>
+    <ProjectGuid>{F25366C4-ABE6-4CB9-9B94-C0E58063A688}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CustomLanguage</RootNamespace>
     <AssemblyName>CustomLanguage</AssemblyName>
@@ -52,24 +52,24 @@
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.SyntaxEditor">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.SyntaxEditor.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -81,7 +81,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="PythonTagger.cs" />
-    <None Include="script.py" />
+    <EmbeddedResource Include="script.py" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
