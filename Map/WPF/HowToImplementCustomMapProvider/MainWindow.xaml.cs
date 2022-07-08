@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Net;
+using System.Windows;
 
 namespace HowToImplementCustomMapProvider
 {
@@ -6,6 +7,8 @@ namespace HowToImplementCustomMapProvider
     {
         public MainWindow()
         {
+            // ArcGis rest services require TLS 1.2 protocol.
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
             InitializeComponent();
         }
     }

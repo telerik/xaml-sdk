@@ -21,15 +21,10 @@ namespace HowToImplementCustomMapProvider
         {
             int zoomLevel = ConvertTileToZoomLevel(tileLevel);
 
-            if (tilePositionY > Math.Pow(2, zoomLevel - 1) - 1)
-            {
-                return null;
-            }
-
-            string url = "http://services.arcgisonline.com/ArcGIS/rest/services/ESRI_Imagery_World_2D/MapServer";
+            string url = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
 
             StringBuilder builder = new StringBuilder();
-            builder.AppendFormat("{0}/tile/{1}/{2}/{3}", new object[] { url, zoomLevel - 1, tilePositionY, tilePositionX });
+            builder.AppendFormat("{0}/tile/{1}/{2}/{3}", new object[] { url, zoomLevel, tilePositionY, tilePositionX });
 
             return new Uri(builder.ToString());
         }
