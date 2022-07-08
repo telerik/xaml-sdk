@@ -27,7 +27,7 @@
 			<telerik:RadGridView.Columns>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding FirstName}" Header="First Name"/>
 				<telerik:GridViewDataColumn DataMemberBinding="{Binding LastName}" Header="Last Name"/>
-				<telerik:GridViewDataColumn Width="110" DataMemberBinding="{Binding SelectedItem.Name}" Header="Country">
+				<telerik:GridViewDataColumn Width="110" DataMemberBinding="{Binding SelectedCountry.Name}" Header="Country">
 					<telerik:GridViewDataColumn.CellEditTemplate>
 						<DataTemplate>
 							<telerik:RadAutoCompleteBox ItemsSource="{Binding Countries}"
