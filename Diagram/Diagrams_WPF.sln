@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlShape_WPF", "ControlShape\ControlShape_WPF.csproj", "{0A7B9791-6F96-4DFD-A0CF-2B8A6E5B21E9}"
 EndProject
@@ -54,6 +54,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortTreeLayoutShapes_WPF", "SortTreeLayoutShapes\SortTreeLayoutShapes_WPF.csproj", "{FF81B116-53D2-4BD5-B13A-9487D28E8FCD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportToHighQualityImage_WPF", "ExportToHighQualityImage\ExportToHighQualityImage_WPF.csproj", "{24937FA6-2071-4F09-9921-BD3022353A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectorsBinding_WPF", "ConnectorsBinding\ConnectorsBinding_WPF.csproj", "{500FDEF1-0DE9-4962-823E-A083D580E82F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +329,18 @@ Global
 		{24937FA6-2071-4F09-9921-BD3022353A55}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{24937FA6-2071-4F09-9921-BD3022353A55}.Release|x86.ActiveCfg = Release|Any CPU
 		{24937FA6-2071-4F09-9921-BD3022353A55}.Release|x86.Build.0 = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Debug|x86.Build.0 = Debug|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|x86.ActiveCfg = Release|Any CPU
+		{500FDEF1-0DE9-4962-823E-A083D580E82F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -334,7 +348,6 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE28AEBD-B4FB-4BAA-B15C-76807A3CEAB1}
 	EndGlobalSection
-	 
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Diagrams_WPF_Work.vsmdi
 	EndGlobalSection
