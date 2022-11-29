@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Data;
 
 namespace BindingColumnsFromViewModel
 {
@@ -21,16 +22,21 @@ namespace BindingColumnsFromViewModel
             }
         }
 
-        ObservableCollection<GridViewColumn> columns;
-        public ObservableCollection<GridViewColumn> Columns
+        RadObservableCollection<GridViewColumn> columns;
+        public RadObservableCollection<GridViewColumn> Columns
         {
             get
             {
                 if (columns == null)
                 {
-                    columns = new ObservableCollection<GridViewColumn>();
+                    columns = new RadObservableCollection<GridViewColumn>();
+
+                    // The calls to SuspendNotifications and ResumeNotifications can be replaced with the AddRange method.
+                    // Required when adding a large number of columns simultaneously to avoid performance issues.
+                    columns.SuspendNotifications();
                     columns.Add(new GridViewDataColumn() { DataMemberBinding = new System.Windows.Data.Binding("ID") });
                     columns.Add(new GridViewDataColumn() { DataMemberBinding = new System.Windows.Data.Binding("Name") });
+                    columns.ResumeNotifications();
                 }
                 return columns;
             }
