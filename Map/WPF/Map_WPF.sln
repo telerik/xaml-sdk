@@ -167,6 +167,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingGeoDataAPI", "BingGeoDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapShapeData", "MapShapeData\MapShapeData.csproj", "{B951808E-1800-49B1-8110-B8950F5B7B36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersMapBoxMapProvider", "ProvidersMapBoxMapProvider\ProvidersMapBoxMapProvider.csproj", "{7A63213A-BAA5-4C09-A033-EFF57334B065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -501,6 +503,10 @@ Global
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A63213A-BAA5-4C09-A033-EFF57334B065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A63213A-BAA5-4C09-A033-EFF57334B065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A63213A-BAA5-4C09-A033-EFF57334B065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A63213A-BAA5-4C09-A033-EFF57334B065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
