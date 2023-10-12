@@ -239,7 +239,7 @@ namespace CreateModifyExport
                 image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, "jpg");
             }
 
-            this.worksheet.Shapes.Add(image);
+            this.worksheet.Images.Add(image);
         }
 
         private void FilterByDepartment(string departmentName)

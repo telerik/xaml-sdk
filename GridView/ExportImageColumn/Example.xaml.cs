@@ -78,7 +78,7 @@ namespace ExportImageColumn
 						image.Width = imageWidth;
 						image.Height = imageHeight;
 
-						worksheet.Shapes.Add(image);
+						worksheet.Images.Add(image);
 						cell.SetValue(string.Empty);
 						worksheet.Rows[i].SetHeight(new RowHeight(imageHeight + padding * 2, true));
 					}
