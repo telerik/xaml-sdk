@@ -240,7 +240,7 @@ namespace CreateModifyExport
             image.Width = 65;
             image.Height = 65;
 
-            worksheet.Shapes.Add(image);
+            worksheet.Images.Add(image);
         }
 
         private static Stream GetResourceStream(string resource)
