@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OData4Consumption", "OData4Consumption\OData4Consumption.csproj", "{DCAD10B8-6C6E-4BB4-AB1F-D23AA90E03A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OData4Consumption", "OData4ConsumptionNetCore\OData4Consumption.csproj", "{60274A79-55AC-4171-82E2-AA98C9EC586E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,24 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DCAD10B8-6C6E-4BB4-AB1F-D23AA90E03A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCAD10B8-6C6E-4BB4-AB1F-D23AA90E03A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCAD10B8-6C6E-4BB4-AB1F-D23AA90E03A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCAD10B8-6C6E-4BB4-AB1F-D23AA90E03A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60274A79-55AC-4171-82E2-AA98C9EC586E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60274A79-55AC-4171-82E2-AA98C9EC586E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60274A79-55AC-4171-82E2-AA98C9EC586E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60274A79-55AC-4171-82E2-AA98C9EC586E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08EB110B-CCE8-4FA8-B8F5-63628E2B7EA3}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfsemea.progress.com/defaultcollection
-		SccProjectUniqueName0 = OData4Consumption\\OData4Consumption.csproj
-		SccProjectName0 = OData4Consumption
-		SccLocalPath0 = OData4Consumption
-		SccLocalPath1 = .
 	EndGlobalSection
 EndGlobal
