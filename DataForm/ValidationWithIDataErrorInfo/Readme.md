@@ -1,0 +1,1 @@
+This example demonstrates how to validate RadDataForm with IDataErrorInfo interface. This example is available for WPF.

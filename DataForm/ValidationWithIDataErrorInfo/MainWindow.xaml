@@ -1,0 +1,15 @@
+﻿<Window x:Class="ValidationWithIDataErrorInfo.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        xmlns:my="clr-namespace:ValidationWithIDataErrorInfo"
+        Title="MainWindow" Height="700" Width="700">
+    <Window.Resources>
+        <my:MyViewModel x:Key="MyViewModel"/>
+    </Window.Resources>
+    
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <telerik:RadDataForm ItemsSource="{Binding Clubs}" 
+                             AutoGeneratingField="RadDataForm_AutoGeneratingField"/>
+    </Grid>
+</Window>
