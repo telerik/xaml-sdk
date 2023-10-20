@@ -48,6 +48,9 @@
             <telerik:RadCartesianChart.VerticalAxis>
                 <telerik:LinearAxis />
             </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior ZoomMode="Both"/>
+            </telerik:RadCartesianChart.Behaviors>
             <telerik:RadCartesianChart.Series>
                 <telerik:BarSeries CategoryBinding="Date" 
                                    ValueBinding="YVal" 
@@ -70,6 +73,9 @@
             <telerik:RadCartesianChart.VerticalAxis>
                 <telerik:LinearAxis />
             </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartPanAndZoomBehavior ZoomMode="Both"/>
+            </telerik:RadCartesianChart.Behaviors>
             <telerik:RadCartesianChart.Series>
                 <telerik:LineSeries CategoryBinding="Date" 
                                     ValueBinding="YVal" 

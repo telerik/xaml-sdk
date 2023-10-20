@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarMVVM", "ToolBarMVVM\ToolBarMVVM.csproj", "{28C68DF6-F7E0-4116-9C33-B4C9B87D04AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarCustomStyledElements_WPF", "ToolBarCustomStyledElements\ToolBarCustomStyledElements_WPF.csproj", "{E72916A9-9942-4CA5-8006-AD13DA110B9A}"
@@ -9,8 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolbarRightAlignedItems", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarDragAndDrop", "ToolBarDragAndDrop\ToolBarDragAndDrop.csproj", "{16AA763D-110F-47F9-BA85-73E04E69660F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomRadComboBoxStyle", "ToolBarCustomComboBoxStyle\CustomRadComboBoxStyle.csproj", "{521F2335-D2AB-425C-B891-EE6BADA3CEAE}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -32,6 +35,10 @@ Global
 		{16AA763D-110F-47F9-BA85-73E04E69660F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16AA763D-110F-47F9-BA85-73E04E69660F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16AA763D-110F-47F9-BA85-73E04E69660F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521F2335-D2AB-425C-B891-EE6BADA3CEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521F2335-D2AB-425C-B891-EE6BADA3CEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521F2335-D2AB-425C-B891-EE6BADA3CEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521F2335-D2AB-425C-B891-EE6BADA3CEAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

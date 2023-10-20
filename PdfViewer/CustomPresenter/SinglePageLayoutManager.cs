@@ -100,7 +100,7 @@ namespace CustomPresenter
             }
 
             SinglePageInfo pageInfo = this.visiblePage;
-            if (pageInfo == null || !pageInfo.FixedPage.HasContent)
+            if (pageInfo == null || pageInfo.FixedPage.Content == null)
             {
                 return false;
             }

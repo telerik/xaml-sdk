@@ -10,6 +10,7 @@ using Telerik.Windows.Documents.Fixed;
 using Telerik.Windows.Documents.Fixed.FormatProviders;
 #if WPF
 using Microsoft.Win32;
+using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import;
 #endif
 
 namespace PdfViewerCustomSaveCommand.Commands
@@ -49,7 +50,7 @@ namespace PdfViewerCustomSaveCommand.Commands
                 str.Flush();
                 str.Seek(0, SeekOrigin.Begin);
                 stream.Flush();
-                PdfDocumentSource source = new PdfDocumentSource(str, FormatProviderSettings.ReadOnDemand);
+                PdfDocumentSource source = new PdfDocumentSource(str, PdfImportSettings.ReadOnDemand);
                 source.Loaded += (s, e) =>
                 {
                     str.Close();
