@@ -50,7 +50,7 @@
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Binaries\WPF\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

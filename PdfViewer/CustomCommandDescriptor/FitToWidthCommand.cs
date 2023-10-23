@@ -17,7 +17,7 @@ namespace CustomCommandDescriptor
         public override void Execute(object parameter)
         {
             double width = this.Viewer.ActualWidth - 2 * PageMargin;
-            double pageWidth = this.Viewer.CurrentPage.ActualWidth;
+            double pageWidth = this.Viewer.CurrentPage.Size.Width;
             this.Viewer.ScaleFactor = width / pageWidth;
         }
     }

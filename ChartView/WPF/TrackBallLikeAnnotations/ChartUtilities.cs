@@ -112,7 +112,7 @@ namespace TrackBallLikeAnnotations
             object currentXCategory = GetCurrentXCategory(chart);
 
             Point position = e.GetPosition(chart);
-            if (!chart.PlotAreaClip.Contains(position.X, position.Y))
+            if (!chart.PlotAreaClip.Contains(position.X - chart.PanOffset.X, position.Y - chart.PanOffset.Y))
             {
                 if (HidesAnnotationsOnMouseLeave && currentXCategory != null)
                 {
