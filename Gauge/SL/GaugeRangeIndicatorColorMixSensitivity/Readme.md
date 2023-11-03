@@ -1,6 +1,0 @@
-## Gauge Range Indicator Color Mix Sensitivity
-The IndicatorColorMixSensitivity property is used to colorize bar indicator. This feature is typical for the Bar Indicators.
-This property is applicable when RangeColorMode property of the indicator is set to MixedColor (works for both radial and linear scales), HorizontalGradient or VerticalGradient (work for linear scale only). The IndicatorColorMixSensitivity property indicates how the colors of two ranges (previous and current) are mixed to create the background of the indicator. Its value can be a double between 0 and 1. For example, if the BarIndicator has its RangeColorMode set to MixedColor and range's IndicatorColorMixSensitivity property is set to 0.5 then the bar indicator will use mixed color from both current and previous ranges. The mixed color will be used when indicator takes a value from the range start and up to the half of it.
-This example demonstrates how the indicator changes its background in this case.
-
-[//]: <keywords: radverticallineargauge, gaugerange, barindicator, rangecolormode, userangecolor>
