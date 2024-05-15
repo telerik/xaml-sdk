@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="TaskSnappingDragDropAndResizeBehavior.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskSnappingDragDropAndResizeBehavior"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:ViewModel x:Key="ViewModel"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource ViewModel}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to create a custom GanttDragDropBehavior and SchedulingResizeBehavior in order to create a Task snapping behaviors. In the example if you resize a task or drag it its Start and End time will be snapped to 00:00."
+                   TextWrapping="Wrap" FontWeight="Bold" Width="600" Margin="10"/>
+        <telerik:RadGanttView TasksSource="{Binding Tasks}" Margin="20"
+                              Grid.Row="1"
+							  VerticalAlignment="Top" 
+							  VisibleRange="{Binding VisibleTime}" >
+            <telerik:RadGanttView.Columns>
+                <telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" Width="AutoHeaderAndContent"/>
+                <telerik:ColumnDefinition MemberBinding="{Binding Start}" Header="Start" Width="AutoHeaderAndContent"/>
+                <telerik:ColumnDefinition MemberBinding="{Binding End}" Header="End" Width="AutoHeaderAndContent"/>
+            </telerik:RadGanttView.Columns>
+            <telerik:RadGanttView.DragDropBehavior>
+                <local:SnappingGanttDragDropBehavior/>
+            </telerik:RadGanttView.DragDropBehavior>
+            <telerik:RadGanttView.ResizeBehavior>
+                <local:SnappingSchedulingResizeBehavior />
+            </telerik:RadGanttView.ResizeBehavior>
+        </telerik:RadGanttView>
+    </Grid>
+</UserControl>

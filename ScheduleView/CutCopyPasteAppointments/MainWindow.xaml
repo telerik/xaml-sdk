@@ -1,0 +1,39 @@
+﻿<Window x:Class="CutCopyPasteAppointments.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+				xmlns:local="clr-namespace:CutCopyPasteAppointments"
+				Title="MainWindow" Height="350" Width="525">
+	<Window.Resources>
+        <local:ViewModel x:Key="ViewModel" />      
+    </Window.Resources>
+	<Grid DataContext="{StaticResource ViewModel}">		
+		<telerik:RadScheduleView x:Name="ScheduleView" ActiveViewDefinitionIndex="1"
+								 AppointmentsSource="{Binding Appointments}">		            
+			<telerik:RadScheduleView.InputBindings>
+				<KeyBinding Command="{Binding CutCommand}"	CommandParameter="{Binding SelectedAppointments, ElementName=ScheduleView}" Key="X" Modifiers="Control" />
+				<KeyBinding Command="{Binding CopyCommand}" CommandParameter="{Binding SelectedAppointments, ElementName=ScheduleView}" Key="C" Modifiers="Control" />
+				<KeyBinding Command="{Binding PasteCommand}" CommandParameter="{Binding SelectedSlot, ElementName=ScheduleView}" Key="V" Modifiers="Control" />
+			</telerik:RadScheduleView.InputBindings>
+			<telerik:RadScheduleView.ViewDefinitions>
+				<telerik:DayViewDefinition />
+				<telerik:WeekViewDefinition  />
+				<telerik:MonthViewDefinition />
+				<telerik:TimelineViewDefinition />
+			</telerik:RadScheduleView.ViewDefinitions>	
+			<telerik:RadContextMenu.ContextMenu>
+				<telerik:RadContextMenu  IsOpen="{Binding IsContextMenuOpen, Source={StaticResource ViewModel},Mode=TwoWay}">
+					<telerik:RadMenuItem Header="Cut" 
+										 Command="{Binding CutCommand, Source={StaticResource ViewModel}}"
+										 CommandParameter="{Binding Menu.UIElement.SelectedAppointments, RelativeSource={RelativeSource Self}}" />
+					<telerik:RadMenuItem Header="Copy" 
+										 Command="{Binding CopyCommand, Source={StaticResource ViewModel}}"
+										 CommandParameter="{Binding Menu.UIElement.SelectedAppointments, RelativeSource={RelativeSource Self}}" />
+					<telerik:RadMenuItem Header="Paste" 
+										 Command="{Binding PasteCommand, Source={StaticResource ViewModel}}"
+										 CommandParameter="{Binding Menu.UIElement.SelectedSlot, RelativeSource={RelativeSource Self}}" />		
+				</telerik:RadContextMenu>
+			</telerik:RadContextMenu.ContextMenu>
+		</telerik:RadScheduleView>
+	</Grid>
+</Window>

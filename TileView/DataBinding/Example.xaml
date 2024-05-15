@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="DataBinding.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <FrameworkElement.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ContentTemplate">
+            <StackPanel >
+                <TextBlock Text="{Binding City,StringFormat='City: {0}'}"/>
+                <TextBlock Text="{Binding Balance,StringFormat='Balance: {0:C0}'}"/>
+                <TextBlock Text="{Binding Description,StringFormat='Decription: {0}'}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </DataTemplate>
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <telerik:RadTileView x:Name="xTileView" 
+                             ItemTemplate="{StaticResource ItemTemplate}"
+                             ContentTemplate="{StaticResource ContentTemplate}"
+                             ItemsSource="{Binding Customers}"
+                             MinimizedColumnWidth="200"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="ChangeResizeCursorAtRuntime.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:ChangeResizeCursorAtRuntime"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to easily change the resize cursor of RadScheduleView while resizing an appointment. Start resizing an appointment and notice how the cursor changes when resizing is not possible."
+                   FontSize="14" Grid.Row="0"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <telerik:RadScheduleView Grid.Row="1" AppointmentsSource="{Binding Appointments}">
+            <telerik:RadScheduleView.ViewDefinitions>
+                <telerik:DayViewDefinition DayStartTime="06:00:00"/>
+                <telerik:WeekViewDefinition/>
+                <telerik:TimelineViewDefinition/>
+            </telerik:RadScheduleView.ViewDefinitions>
+            <telerik:RadScheduleView.DragDropBehavior>
+                <local:CustomScheduleViewDragDropBehavior/>
+            </telerik:RadScheduleView.DragDropBehavior>
+        </telerik:RadScheduleView>
+    </Grid>
+</UserControl>

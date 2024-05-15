@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CustomGanttTaskWithStatus.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:CustomGanttTaskWithStatus"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="280" d:DesignWidth="1080">
+	<UserControl.Resources>
+		<local:ViewModel x:Key="ViewModel"/>
+	</UserControl.Resources>
+
+	<Grid Background="White" DataContext="{StaticResource ViewModel}">
+		<telerik:RadGanttView TasksSource="{Binding Tasks}" Margin="5"
+							  VisibleRange="{Binding VisibleTime}"
+							  VerticalAlignment="Top"
+							  Height="200">
+			<telerik:RadGanttView.Columns>
+				<telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="140"/>
+				<telerik:ColumnDefinition MemberBinding="{Binding Start}" Header="Start" ColumnWidth="140"/>
+				<telerik:ColumnDefinition MemberBinding="{Binding End}" Header="End" ColumnWidth="140"/>
+				<telerik:ColumnDefinition MemberBinding="{Binding Status}" Header="Status" ColumnWidth="100">
+					<telerik:ColumnDefinition.CellEditTemplate>
+						<DataTemplate>
+							<telerik:RadComboBox ItemsSource="{Binding StatusList}"
+												 SelectedItem="{Binding Status, Mode=TwoWay}"/>
+						</DataTemplate>
+					</telerik:ColumnDefinition.CellEditTemplate>
+				</telerik:ColumnDefinition>
+			</telerik:RadGanttView.Columns>
+		</telerik:RadGanttView>
+	</Grid>
+</UserControl>

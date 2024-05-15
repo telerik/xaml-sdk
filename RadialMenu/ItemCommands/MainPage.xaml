@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="ItemCommands.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:ItemCommands"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <local:RotateLeftCommand x:Key="RotateLeftCommand" />
+        <local:RotateRightCommand x:Key="RotateRightCommand" />
+        <local:ExampleViewModel x:Key="CommandsExampleViewModel" />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"
+          Background="White"
+          DataContext="{StaticResource CommandsExampleViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="This example demonstrates how to add commands to the RadRadialMenuItems to a RadRadialMenu and RadRadialContextMenu which manipulate an Image's RenderTransform."
+                   TextWrapping="Wrap"
+                   Grid.ColumnSpan="2"
+                   Margin="100 20 20 20"
+                   Width="400" />
+        <StackPanel Grid.Row="1"
+                    Margin="20"
+                    Grid.Column="0">
+            <TextBlock Text="RadRadialMenu:"
+                       Margin="10" />
+            <telerik:RadRadialMenu StartAngle="90"
+                                   IsOpen="True">
+                <telerik:RadRadialMenuItem Header="Scale X"
+                                           CanUserSelect="False">
+                    <telerik:RadRadialMenuItem Header="Scale +"
+                                               DataContext="{StaticResource CommandsExampleViewModel}"
+                                               Command="{Binding ScaleXCommand}"
+                                               CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+                    <telerik:RadRadialMenuItem Header="Scale -"
+                                               DataContext="{StaticResource CommandsExampleViewModel}"
+                                               Command="{Binding ScaleXCommand}"
+                                               CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+                </telerik:RadRadialMenuItem>
+                <telerik:RadRadialMenuItem Header="Scale Y"
+                                           CanUserSelect="False">
+                    <telerik:RadRadialMenuItem Header="Scale +"
+                                               DataContext="{StaticResource CommandsExampleViewModel}"
+                                               Command="{Binding ScaleYCommand}"
+                                               CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+                    <telerik:RadRadialMenuItem Header="Scale -"
+                                               DataContext="{StaticResource CommandsExampleViewModel}"
+                                               Command="{Binding ScaleYCommand}"
+                                               CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+                </telerik:RadRadialMenuItem>
+            </telerik:RadRadialMenu>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Margin="20"
+                    Grid.Column="1">
+            <TextBlock Text="RadRadialContextMenu (click the image in order to open the ContextMenu):"
+                       Margin="10" />
+            <Image Source="image.jpg"
+                   x:Name="Image"
+                   Width="200"
+                   RenderTransform="{Binding RenderTransform}"
+                   Height="200"
+                   Margin="0 20 0 0"
+                   RenderTransformOrigin="0.5, 0.5">
+                <telerik:RadRadialMenu.RadialContextMenu>
+                    <telerik:RadRadialMenu ShowEventName="MouseLeftButtonDown">
+                        <telerik:RadRadialMenuItem Header="Rotate left"
+                                                   CanUserSelect="False"
+                                                   Command="{StaticResource RotateLeftCommand}"
+                                                   CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+
+
+                        <telerik:RadRadialMenuItem Header="Rotate right"
+                                                   CanUserSelect="False"
+                                                   Command="{StaticResource RotateRightCommand}"
+                                                   CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
+                    </telerik:RadRadialMenu>
+                </telerik:RadRadialMenu.RadialContextMenu>
+            </Image>
+        </StackPanel>
+    </Grid>
+</UserControl>

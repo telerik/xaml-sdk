@@ -1,0 +1,9 @@
+﻿<Window x:Class="CustomImageFormatProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomImageFormatProvider"
+        Title="Custom ImageFormatProvider SDK demo">
+    <Grid>
+        <local:ImageEditor />
+    </Grid>
+</Window>

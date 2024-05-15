@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" mc:Ignorable="d"
+             xmlns:my="clr-namespace:ReadOnlyEditorState"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ToggleButton x:Name="toggleButton" 
+                      IsThreeState="True"
+                      Checked="ToggleButton_Checked"
+                      Indeterminate="ToggleButton_Indeterminate" 
+                      Unchecked="ToggleButton_Unchecked"  
+                      Content="Change PropertyGrid's ReadOnlyEditorState"/>
+        <telerik:RadPropertyGrid x:Name="propertyGrid"
+                                 Grid.Row="1"
+                                 IsReadOnly="True">
+        </telerik:RadPropertyGrid>
+    </Grid>
+</UserControl>

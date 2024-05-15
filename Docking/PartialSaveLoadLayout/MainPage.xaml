@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="PartialSaveLoadLayout.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" MinWidth="800"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20" HorizontalAlignment="Center" Grid.Column="1">
+                <StackPanel>
+                    <telerik:RadButton Content="Save Left Layout to File" Click="SaveLeftLayoutToFileButtonClick" Margin="5" />
+                    <telerik:RadButton x:Name="LoadLeftLayoutFromFileButton" IsEnabled="False" Content="Load Left Layout" 
+									   Click="LoadLeftLayoutFromFileButtonClick" Margin="5" />
+                </StackPanel>
+
+                <StackPanel>
+                    <telerik:RadButton Content="Save Right Layout to File" Click="SaveRightLayoutToFileButtonClick" Margin="5" />
+                    <telerik:RadButton x:Name="LoadRightLayoutFromFileButton" IsEnabled="False" Content="Load Right Layout" 
+									   Click="LoadRightLayoutFromFileButtonClick" Margin="5" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <telerik:RadDocking x:Name="Docking"  BorderThickness="0" Padding="0" Grid.Row="1" ElementLayoutSaving="Docking_ElementLayoutSaving"
+                            ElementLayoutCleaning="Docking_ElementLayoutCleaning">
+            <telerik:RadDocking.DocumentHost>
+                <telerik:RadSplitContainer telerik:RadDocking.SerializationTag="DocumentHostSplitContainer">
+                    <telerik:RadPaneGroup x:Name="DocumentGroup" >
+                        <telerik:RadPane x:Name="LayoutXml" Header="Layout Xml"
+								telerik:RadDocking.SerializationTag="LayoutXml"
+								telerik:RadDocking.FloatingSize="450, 400">
+                            <StackPanel>
+                                <TextBlock Text="Document host elements will not be changed (saved, loaded or cleaned) " Margin="0 0 0 10" FontWeight="Bold" FontSize="24"/>
+                                <TextBlock Text="Last saved xml: "/>
+                                <TextBox TextWrapping="Wrap" Grid.Row="2" x:Name="XmlTextBox" VerticalContentAlignment="Top" />
+                            </StackPanel>
+                        </telerik:RadPane>
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking.DocumentHost>
+
+            <telerik:RadSplitContainer InitialPosition="DockedLeft" telerik:RadDocking.SerializationTag="LeftSplitContainer">
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Pane Left 1" x:Name="Pane1"
+							telerik:RadDocking.SerializationTag="PaneLeft1"/>
+                    <telerik:RadPane Header="Pane Left 2"
+							telerik:RadDocking.SerializationTag="PaneLeft2">
+                        <TextBox Text="Pane Left 2" VerticalContentAlignment="Top" />
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="Pane Left 3"
+							telerik:RadDocking.SerializationTag="PaneLeft3">
+                        <TextBox Text="Pane Left 3" VerticalContentAlignment="Top" />
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="Pane Left 4"
+							telerik:RadDocking.SerializationTag="PaneLeft4">
+                        <TextBox Text="Pane Left 4" VerticalContentAlignment="Top" />
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+
+            <telerik:RadSplitContainer InitialPosition="DockedRight" telerik:RadDocking.SerializationTag="RightSplitContainer">
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="RightPane1" telerik:RadDocking.SerializationTag="RightPane1" />
+                    <telerik:RadPane Header="RightPane2" telerik:RadDocking.SerializationTag="RightPane2" />
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+        </telerik:RadDocking>
+    </Grid>
+</UserControl>

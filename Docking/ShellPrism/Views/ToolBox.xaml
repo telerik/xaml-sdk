@@ -1,0 +1,51 @@
+﻿<telerik:RadPane x:Class="ShellPrism.ToolBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Header="ToolBox"
+             telerik:RadDocking.SerializationTag="ToolBox"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <telerik:RadWatermarkTextBox WatermarkContent="Search Toolbox" Margin="5"/>
+
+        <telerik:RadTreeView Grid.Row="1" Margin="5"
+							VerticalAlignment="Stretch"
+							Background="{StaticResource LightGrayBackgroundBrush}"
+							IsLineEnabled="False"
+							SelectionMode="Multiple" IsEditable="True" IsDragDropEnabled="True">
+            <telerik:RadTreeViewItem Header="Telerik Input 2012 Q2" IsExpanded="true">
+                <telerik:RadTreeViewItem Header="RadPdfViewer" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/pdfviewer.png" />
+                <telerik:RadTreeViewItem Header="RadImageEditor" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/imageeditor.png" />
+                <telerik:RadTreeViewItem Header="RadRichTextBox" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/richtextbox.png" />
+            </telerik:RadTreeViewItem>
+
+            <telerik:RadTreeViewItem Header="Telerik Visualization 2012 Q2" IsExpanded="true">
+                <telerik:RadTreeViewItem Header="RadChartview" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/chartview.png" />
+                <telerik:RadTreeViewItem Header="RadTimeline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/timeline.png" />
+                <telerik:RadTreeViewItem Header="RadTimebar" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/timebar.png" />
+                <telerik:RadTreeViewItem Header="RadMap" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/map.png" />
+                <telerik:RadTreeViewItem Header="RadAreaSparkline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/sparklines.png" />
+                <telerik:RadTreeViewItem Header="RadColumnSparkline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/sparklines.png" />
+                <telerik:RadTreeViewItem Header="RadLinearSparkline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/sparklines.png" />
+                <telerik:RadTreeViewItem Header="RadScatterSparkline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/sparklines.png" />
+                <telerik:RadTreeViewItem Header="RadWinLossSparkline" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/sparklines.png" />
+                <telerik:RadTreeViewItem Header="RadPivot" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/pivotgrid.png" />
+                <telerik:RadTreeViewItem Header="RadTreeMap" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/treemapandpivotmap.png" />
+            </telerik:RadTreeViewItem>
+
+            <telerik:RadTreeViewItem Header="Telerik Data 2012 Q2" IsExpanded="true">
+                <telerik:RadTreeViewItem Header="RadDataFilter" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/datafilter.png" />
+                <telerik:RadTreeViewItem Header="RadDataForm" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/dataform.png" />
+                <telerik:RadTreeViewItem Header="RadDataPager" DefaultImageSrc="/ShellPrism;component/Images/Docking/Toolbox/datapager.png" />
+            </telerik:RadTreeViewItem>
+        </telerik:RadTreeView>
+    </Grid>
+
+</telerik:RadPane>

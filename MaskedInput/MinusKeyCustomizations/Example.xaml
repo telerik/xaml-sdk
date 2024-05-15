@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="MinusKeyCustomizations.Example"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
+        xmlns:local="clr-namespace:MinusKeyCustomizations"
+        Height="600" Width="1200" >
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="TextAlignment" Value="Center" />
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Text="RadMaskedNumericInput:"  FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="( Press OemMinus / Subtract Key to enter negative sign on null value )" />
+        </StackPanel>
+        <telerik:RadMaskedNumericInput Grid.Row="1" Grid.Column="1" Mask="" FormatString="n2" Value="{x:Null}" Width="240" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                       maskedInput:MaskedInputExtensions.AllowMinusOnNullValue="{Binding IsChecked, ElementName=firstInputCheckBox}" x:Name="inputA"
+                                       EmptyContent="click and press minus key"/>
+
+        <StackPanel Grid.Row="3" VerticalAlignment="Center">
+            <TextBlock Text="Custom NumericInput:"  FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="( Select all and press OemMinus / Subtract key to remove the selection and enter new negative value )" Width="350" />
+        </StackPanel>        
+        <local:NumericInputMinusClearsSelection Grid.Row="3" Grid.Column="1"  Mask="" FormatString="n2" Value="123456" Width="240" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                                maskedInput:MaskedInputExtensions.AllowMinusOnNullValue="{Binding IsChecked, ElementName=secondInputCheckBox}" x:Name="inputB"/>
+       
+        <StackPanel Grid.Row="5" VerticalAlignment="Center">
+            <TextBlock Text="Custom NumericInput:" Grid.Row="5" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Text="( Backspace / Delete key removes the negative sign symbol )" />
+        </StackPanel>
+        <local:NumericInputMinusDeletable Grid.Row="5" Grid.Column="1"  Mask="" FormatString="n2" Value="-567" Width="240" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                                maskedInput:MaskedInputExtensions.AllowMinusOnNullValue="{Binding IsChecked, ElementName=thirdInputCheckBox}" x:Name="inputC"/>
+        
+        <CheckBox Content="AllowMinusOnNullValue" x:Name="firstInputCheckBox" IsChecked="True" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <CheckBox Content="AllowMinusOnNullValue" x:Name="secondInputCheckBox" IsChecked="True" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <CheckBox Content="AllowMinusOnNullValue" x:Name="thirdInputCheckBox" IsChecked="True" Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Width="240">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text="Value: " />
+                <TextBlock Text="{Binding Value, ElementName=inputA}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBlock FontWeight="Bold" Text="Text: " />
+                <TextBlock Text="{Binding Text, ElementName=inputA}" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" Width="240">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text="Value: " />
+                <TextBlock Text="{Binding Value, ElementName=inputB}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBlock FontWeight="Bold" Text="Text: " />
+                <TextBlock Text="{Binding Text, ElementName=inputB}" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" Width="240">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text="Value: " />
+                <TextBlock Text="{Binding Value, ElementName=inputC}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBlock FontWeight="Bold" Text="Text: " />
+                <TextBlock Text="{Binding Text, ElementName=inputC}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

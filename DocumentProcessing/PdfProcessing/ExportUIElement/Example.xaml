@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="ExportUIElement.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <FrameworkElement.Resources>
+        <DataTemplate x:Key="pointTemplate1">
+            <Ellipse Width="9" Height="9" Fill="#FF9F8E7C" />
+        </DataTemplate>
+        <ControlTemplate x:Key="radialGaugeNeedleTemplate" TargetType="telerik:Needle">
+            <Grid x:Name="PART_Grid" Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+    </FrameworkElement.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Border x:Name="chart1Container" Grid.Column="1" BorderBrush="LightGray" BorderThickness="1">
+                <Grid>
+                    <telerik:RadCartesianChart x:Name="chart1" Palette="Flower">
+                        <telerik:RadCartesianChart.HorizontalAxis>
+                            <telerik:CategoricalAxis />
+                        </telerik:RadCartesianChart.HorizontalAxis>
+                        <telerik:RadCartesianChart.VerticalAxis>
+                            <telerik:LinearAxis />
+                        </telerik:RadCartesianChart.VerticalAxis>
+                        <telerik:RadCartesianChart.Series>
+                            <telerik:SplineAreaSeries CategoryBinding="Category" ValueBinding="Value" ItemsSource="{Binding Data1}">
+                                <telerik:SplineAreaSeries.LegendSettings>
+                                    <telerik:SeriesLegendSettings Title="spline" />
+                                </telerik:SplineAreaSeries.LegendSettings>
+                            </telerik:SplineAreaSeries>
+                            <telerik:BarSeries CategoryBinding="Category" ValueBinding="Value" ItemsSource="{Binding Data2}">
+                                <telerik:BarSeries.LegendSettings>
+                                    <telerik:SeriesLegendSettings Title="bars" />
+                                </telerik:BarSeries.LegendSettings>
+                            </telerik:BarSeries>
+                            <telerik:LineSeries CategoryBinding="Category" ValueBinding="Value" ItemsSource="{Binding Data3}" PointTemplate="{StaticResource pointTemplate1}">
+                                <telerik:LineSeries.LegendSettings>
+                                    <telerik:SeriesLegendSettings Title="line" />
+                                </telerik:LineSeries.LegendSettings>
+                            </telerik:LineSeries>
+                        </telerik:RadCartesianChart.Series>
+                    </telerik:RadCartesianChart>
+                    <telerik:RadLegend Items="{Binding LegendItems, ElementName=chart1}" 
+                                       HorizontalAlignment="Right" 
+                                       VerticalAlignment="Top" 
+                                       BorderBrush="LightBlue" 
+                                       BorderThickness="1" />
+                </Grid>
+            </Border>
+            <Button Content="Export" Click="Button1_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Border x:Name="chart2Container" Grid.Column="1" BorderBrush="LightGray" BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <telerik:RadPieChart Palette="Flower" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                        <telerik:PieSeries ValueBinding="Value" ItemsSource="{Binding Data2}" RadiusFactor="1" />
+                    </telerik:RadPieChart>
+                    <telerik:RadRadialGauge Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                        <telerik:RadialScale Min="1" Max="12">
+                            <telerik:RadialScale.Indicators>
+                                <telerik:Needle Name="needle" Value="6" Template="{StaticResource radialGaugeNeedleTemplate}" />
+                                <telerik:Pinpoint />
+                            </telerik:RadialScale.Indicators>
+                        </telerik:RadialScale>
+                    </telerik:RadRadialGauge>
+                    <StackPanel Grid.Row="2" VerticalAlignment="Bottom">
+                        <telerik:RadDataBar Value="65" Height="20" />
+                        <telerik:RadDataBar Value="85" Height="20" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Margin="0 0 15 0">
+                        <telerik:RadHorizontalBulletGraph ProjectedValue="80" FeaturedMeasure="50" ComparativeMeasure="55" Height="45">
+                            <telerik:RadHorizontalBulletGraph.QualitativeRanges>
+                                <telerik:QualitativeRange Value="30" Brush="#77000000" />
+                                <telerik:QualitativeRange Value="70" Brush="#55000000" />
+                                <telerik:QualitativeRange Value="100" Brush="#33000000" />
+                            </telerik:RadHorizontalBulletGraph.QualitativeRanges>
+                        </telerik:RadHorizontalBulletGraph>
+                        <telerik:RadHorizontalBulletGraph ProjectedValue="85" FeaturedMeasure="50" ComparativeMeasure="60" Height="20" Margin="0 5 0 0" QuantitativeScaleVisibility="Collapsed" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Button Content="Export" Click="Button2_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Border x:Name="calendarContainer" BorderBrush="LightGray" BorderThickness="1">
+                <Grid>
+                    <telerik:RadCalendar SelectionMode="Extended" />
+                </Grid>
+            </Border>
+            <Button Content="Export" Click="Button3_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Border x:Name="ganttContainer" BorderBrush="LightGray" BorderThickness="1">
+                <Grid>
+                    <telerik:RadGanttView TasksSource="{Binding Tasks}" VisibleRange="{Binding VisibleRange}" >
+                        <telerik:RadGanttView.Columns>
+                            <telerik:ColumnDefinition Header="Title" MemberBinding="{Binding Title}" Width="AutoHeaderAndContent" IsFrozenColumn="False">
+                            </telerik:ColumnDefinition>
+                        </telerik:RadGanttView.Columns>
+                    </telerik:RadGanttView>
+                </Grid>
+            </Border>
+            <Button Content="Export" Click="Button4_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        </Grid>
+
+    </Grid>
+</UserControl>

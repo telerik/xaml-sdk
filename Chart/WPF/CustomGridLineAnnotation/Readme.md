@@ -1,0 +1,2 @@
+## Custom Grid Line Annotation
+The Custom Gridline allows you to place a vertical or horizontal gridline at a specific place in your ChartArea. This allows you to mark a specific value on the Y-Axis and/or the X-Axis, which can, for example, serve as a border value. In order to place the Custom GridLine you have to add a CustomGridLine object to the Annotations collection of the ChartArea. You also have to set either its XIntercept or YIntercept properties. These properties allow you to specify the value of the X- and Y-Axis, for which the gridline should be placed.

@@ -1,0 +1,9 @@
+﻿<Window x:Class="SingleSelectionModeWithClearButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SingleSelectionModeWithClearButton"
+        Title="MainWindow" Height="300" Width="425">
+    <Grid>
+        <local:Example/>
+    </Grid>
+</Window>

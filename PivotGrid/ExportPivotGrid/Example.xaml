@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="ExportPivotGrid.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:ExportPivotGrid"
+             xmlns:data="clr-namespace:RadPivotGrid_Data"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <DataTemplate x:Key="ListItemsTemplate">
+            <Grid Margin="0 1 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="36"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Stretch="None" Source="{Binding ImageSource}"/>
+                <TextBlock Grid.Column="1" Text="{Binding ExportFormat}" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplate">
+            <TextBlock Text="{Binding Data, Mode=OneWay}" Margin="4" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </DataTemplate>
+
+        <pivot:LocalDataSourceProvider x:Key="LocalDataProvider" AggregatesPosition="Rows">
+            <pivot:LocalDataSourceProvider.ItemsSource>
+                <data:SampleOrders/>
+            </pivot:LocalDataSourceProvider.ItemsSource>
+            <pivot:LocalDataSourceProvider.RowGroupDescriptions>
+                <pivot:PropertyGroupDescription PropertyName="Product" />
+                <pivot:DateTimeGroupDescription PropertyName="Date" Step="Month" />
+            </pivot:LocalDataSourceProvider.RowGroupDescriptions>
+            <pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+                <pivot:PropertyGroupDescription PropertyName="Advertisement" />
+                <pivot:PropertyGroupDescription PropertyName="Promotion" />
+            </pivot:LocalDataSourceProvider.ColumnGroupDescriptions>
+            <pivot:LocalDataSourceProvider.AggregateDescriptions>
+                <pivot:PropertyAggregateDescription PropertyName="Net" StringFormat="$0" />
+                <pivot:PropertyAggregateDescription PropertyName="Quantity" />
+            </pivot:LocalDataSourceProvider.AggregateDescriptions>
+        </pivot:LocalDataSourceProvider>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadBusyIndicator x:Name="BusyIndicator" Grid.Column="0" Grid.RowSpan="2">
+            <pivot:RadPivotGrid x:Name="pivot" DataProvider="{StaticResource LocalDataProvider}" HorizontalLayout="Outline" VerticalLayout="Outline"/>
+        </telerik:RadBusyIndicator>
+        <pivot:RadPivotFieldList x:Name="PivotFieldList" Grid.Column="1" DataProvider="{StaticResource LocalDataProvider}" Grid.Row="0"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Width="200" Margin="5">
+            <TextBlock Text="Export To:" Margin="0 8 0 0" Grid.Column="1" />
+            <telerik:RadListBox x:Name="ExportToListBox" ItemTemplate="{StaticResource ListItemsTemplate}"  />
+            <telerik:RadButton x:Name="ExportButton" Margin="0 4 0 0" Content="Export" Click="ExportButton_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="CustomColumnEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:CustomColumnEditor"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:MyViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ViewModel}">
+        <telerik:RadGridView x:Name="radGridView" AutoGenerateColumns="False" ItemsSource="{Binding Clubs}">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" Header="Name" />
+                <telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
+				                            DataMemberBinding="{Binding StadiumCapacity}"
+				                            Header="Stadium" />
+                <local:CustomColumn DataMemberBinding="{Binding Captain}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</Window>

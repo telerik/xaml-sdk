@@ -1,0 +1,3073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ResetAll" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="ColorSelectorAutomaticColorText" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Searched Text:"{0}"</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="ImageEditor_Adjust" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="ImageEditor_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ImageEditor_Background" xml:space="preserve">
+    <value>Background:</value>
+  </data>
+  <data name="ImageEditor_BorderColor" xml:space="preserve">
+    <value>Border Color:</value>
+  </data>
+  <data name="ImageEditor_BorderThickness" xml:space="preserve">
+    <value>Border Thickness:</value>
+  </data>
+  <data name="ImageEditor_CanvasResize" xml:space="preserve">
+    <value>Canvas Resize</value>
+  </data>
+  <data name="ImageEditor_CanvasSize" xml:space="preserve">
+    <value>Canvas Size</value>
+  </data>
+  <data name="ImageEditor_Crop" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="ImageEditor_DrawText" xml:space="preserve">
+    <value>Draw Text</value>
+  </data>
+  <data name="ImageEditor_DrawText_YourTextHere" xml:space="preserve">
+    <value>Your text here...</value>
+  </data>
+  <data name="ImageEditor_Effects" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="ImageEditor_Effect_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="ImageEditor_Effect_Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="ImageEditor_Effect_ContrastAdjust" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="ImageEditor_Effect_HueShift" xml:space="preserve">
+    <value>Hue Shift</value>
+  </data>
+  <data name="ImageEditor_Effect_InvertColors" xml:space="preserve">
+    <value>Invert Colors</value>
+  </data>
+  <data name="ImageEditor_Effect_Saturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ImageEditor_Effect_Sharpen" xml:space="preserve">
+    <value>Sharpen</value>
+  </data>
+  <data name="ImageEditor_FlipHorizontal" xml:space="preserve">
+    <value>Flip Horizontal</value>
+  </data>
+  <data name="ImageEditor_FlipVertical" xml:space="preserve">
+    <value>Flip Vertical</value>
+  </data>
+  <data name="ImageEditor_FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="ImageEditor_Height" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="ImageEditor_HorizontalPosition" xml:space="preserve">
+    <value>Horizontal Position</value>
+  </data>
+  <data name="ImageEditor_ImageAlignment" xml:space="preserve">
+    <value>Image Alignment</value>
+  </data>
+  <data name="ImageEditor_ImagePreview" xml:space="preserve">
+    <value>Image Preview</value>
+  </data>
+  <data name="ImageEditor_ImageSize" xml:space="preserve">
+    <value>Image Size</value>
+  </data>
+  <data name="ImageEditor_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ImageEditor_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ImageEditor_PreserveAspectRatio" xml:space="preserve">
+    <value>Preserve Aspect Ratio</value>
+  </data>
+  <data name="ImageEditor_Radius" xml:space="preserve">
+    <value>Radius:</value>
+  </data>
+  <data name="ImageEditor_Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="ImageEditor_RelativeSize" xml:space="preserve">
+    <value>Relative Size</value>
+  </data>
+  <data name="ImageEditor_Resize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="ImageEditor_Rotate180" xml:space="preserve">
+    <value>Rotate 180°</value>
+  </data>
+  <data name="ImageEditor_Rotate270" xml:space="preserve">
+    <value>Rotate 270°</value>
+  </data>
+  <data name="ImageEditor_Rotate90" xml:space="preserve">
+    <value>Rotate 90°</value>
+  </data>
+  <data name="ImageEditor_Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ImageEditor_RoundCorners" xml:space="preserve">
+    <value>Round Corners</value>
+  </data>
+  <data name="ImageEditor_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ImageEditor_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ImageEditor_TextColor" xml:space="preserve">
+    <value>Text Color</value>
+  </data>
+  <data name="ImageEditor_TheFileCannotBeOpened" xml:space="preserve">
+    <value>The file cannot be opened.</value>
+  </data>
+  <data name="ImageEditor_TheFileIsLocked" xml:space="preserve">
+    <value>The file cannot be opened. It might be locked by another application.</value>
+  </data>
+  <data name="ImageEditor_Transform" xml:space="preserve">
+    <value>Transform</value>
+  </data>
+  <data name="ImageEditor_UnableToSaveFile" xml:space="preserve">
+    <value>Unable to save the file.</value>
+  </data>
+  <data name="ImageEditor_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="ImageEditor_UnsupportedFileFormat" xml:space="preserve">
+    <value>Unsupported file format.</value>
+  </data>
+  <data name="ImageEditor_VerticalPosition" xml:space="preserve">
+    <value>Vertical Position</value>
+  </data>
+  <data name="ImageEditor_Width" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="ColorSelectorMainPaletteHeaderText" xml:space="preserve">
+    <value>Theme colors</value>
+  </data>
+  <data name="ColorSelectorStandardPaletteHeaderText" xml:space="preserve">
+    <value>Standard colors</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographyFieldsFor" xml:space="preserve">
+    <value>Bibliography Fields for </value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Art" xml:space="preserve">
+    <value>Art</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Book" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_BookSection" xml:space="preserve">
+    <value>Book Section</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Case" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_ConferenceProceedings" xml:space="preserve">
+    <value>Conference Proceedings</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_DocumentFromWebsite" xml:space="preserve">
+    <value>Document From Web site</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_ElectronicSource" xml:space="preserve">
+    <value>Electronic Source</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Film" xml:space="preserve">
+    <value>Film</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Interview" xml:space="preserve">
+    <value>Interview</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_JournalArticle" xml:space="preserve">
+    <value>Journal Article</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Misc" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Patent" xml:space="preserve">
+    <value>Patent</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_PeriodicalArticle" xml:space="preserve">
+    <value>Article in a Periodical</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_SoundRecording" xml:space="preserve">
+    <value>Sound Recording</value>
+  </data>
+  <data name="Documents_AddBibliographySource_BibliographySourceType_Website" xml:space="preserve">
+    <value>Web site</value>
+  </data>
+  <data name="Documents_AddBibliographySource_Header" xml:space="preserve">
+    <value>Create Source</value>
+  </data>
+  <data name="Documents_AddBibliographySource_RecommendedField" xml:space="preserve">
+    <value>Recommended Field</value>
+  </data>
+  <data name="Documents_AddBibliographySource_ShowAll" xml:space="preserve">
+    <value>Show All Bibliography Fields</value>
+  </data>
+  <data name="Documents_AddBibliographySource_TagName" xml:space="preserve">
+    <value>Tag name</value>
+  </data>
+  <data name="Documents_AddBibliographySource_TagNameDescription" xml:space="preserve">
+    <value>The Tag Name will be used to uniquely identify this source.</value>
+  </data>
+  <data name="Documents_AddBibliographySource_TagNameNotEmpty" xml:space="preserve">
+    <value>Tag name cannot be empty!</value>
+  </data>
+  <data name="Documents_AddBibliographySource_TagNameUniqe" xml:space="preserve">
+    <value>Tag name must be unique!</value>
+  </data>
+  <data name="Documents_AddBibliographySource_TypeOfSource" xml:space="preserve">
+    <value>Type of Source</value>
+  </data>
+  <data name="Documents_BibliographicProperty_AbbreviatedCaseNumber" xml:space="preserve">
+    <value>Abbreviated Case Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_AlbumTitle" xml:space="preserve">
+    <value>AlbumTitle</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Artist" xml:space="preserve">
+    <value>Artist</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Documents_BibliographicProperty_BookAuthor" xml:space="preserve">
+    <value>Book Author</value>
+  </data>
+  <data name="Documents_BibliographicProperty_BookTitle" xml:space="preserve">
+    <value>Book Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Broadcaster" xml:space="preserve">
+    <value>Broadcaster</value>
+  </data>
+  <data name="Documents_BibliographicProperty_BroadcastTitle" xml:space="preserve">
+    <value>Broadcast Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_CaseNumber" xml:space="preserve">
+    <value>Case Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ChapterNumber" xml:space="preserve">
+    <value>Chapter Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Documents_BibliographicProperty_CommentsExampleText" xml:space="preserve">
+    <value>Enter comments about this source.</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Compiler" xml:space="preserve">
+    <value>Compiler</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Composer" xml:space="preserve">
+    <value>Composer</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Conductor" xml:space="preserve">
+    <value>Conductor</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ConferencePublicationName" xml:space="preserve">
+    <value>Conference Publication Name</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Counsel" xml:space="preserve">
+    <value>Counsel</value>
+  </data>
+  <data name="Documents_BibliographicProperty_CountryRegion" xml:space="preserve">
+    <value>Country/Region</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Court" xml:space="preserve">
+    <value>Court</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Documents_BibliographicProperty_DayAccessed" xml:space="preserve">
+    <value>Day Accessed</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Distributor" xml:space="preserve">
+    <value>Distributor</value>
+  </data>
+  <data name="Documents_BibliographicProperty_DOI" xml:space="preserve">
+    <value>DOI</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Edition" xml:space="preserve">
+    <value>Edition</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ExampleText" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Institution" xml:space="preserve">
+    <value>Institution</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Interviewee" xml:space="preserve">
+    <value>Interviewee</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Interviewer" xml:space="preserve">
+    <value>Interviewer</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Inventor" xml:space="preserve">
+    <value>Inventor</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Issue" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="Documents_BibliographicProperty_JournalName" xml:space="preserve">
+    <value>Journal Name</value>
+  </data>
+  <data name="Documents_BibliographicProperty_MediaType" xml:space="preserve">
+    <value>Media Type</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Documents_BibliographicProperty_MonthAccessed" xml:space="preserve">
+    <value>Month Accessed</value>
+  </data>
+  <data name="Documents_BibliographicProperty_MonthExample" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="Documents_BibliographicProperty_NameOfWebpage" xml:space="preserve">
+    <value>Name of Web Page</value>
+  </data>
+  <data name="Documents_BibliographicProperty_NameOfWebsite" xml:space="preserve">
+    <value>Name of Web Site</value>
+  </data>
+  <data name="Documents_BibliographicProperty_NumberOfVolumes" xml:space="preserve">
+    <value>Number of Volumes</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="Documents_BibliographicProperty_PatentNumber" xml:space="preserve">
+    <value>Patent Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Performer" xml:space="preserve">
+    <value>Performer</value>
+  </data>
+  <data name="Documents_BibliographicProperty_PeriodicalTitle" xml:space="preserve">
+    <value>Periodical Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_PlacePublished" xml:space="preserve">
+    <value>Place Published</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ProducerName" xml:space="preserve">
+    <value>Producer Name</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ProductionCompany" xml:space="preserve">
+    <value>Production Company</value>
+  </data>
+  <data name="Documents_BibliographicProperty_PublicationTitle" xml:space="preserve">
+    <value>Publication Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="Documents_BibliographicProperty_RecordingNumber" xml:space="preserve">
+    <value>Recording Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Report" xml:space="preserve">
+    <value>Reporter</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ReportType" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="Documents_BibliographicProperty_ShortTitle" xml:space="preserve">
+    <value>Short Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_StandardNumber" xml:space="preserve">
+    <value>Standard Number</value>
+  </data>
+  <data name="Documents_BibliographicProperty_StateProvince" xml:space="preserve">
+    <value>State/Province</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Station" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Theater" xml:space="preserve">
+    <value>Theater</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Documents_BibliographicProperty_TitleExampleText" xml:space="preserve">
+    <value>How to Write Bibliographies</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Translator" xml:space="preserve">
+    <value>Translator</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Documents_BibliographicProperty_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Writer" xml:space="preserve">
+    <value>Writer</value>
+  </data>
+  <data name="Documents_BibliographicProperty_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Documents_BibliographicProperty_YearAccessed" xml:space="preserve">
+    <value>Year Accessed</value>
+  </data>
+  <data name="Documents_ChangeEditingPermissionsDialog_Groups" xml:space="preserve">
+    <value>Groups:</value>
+  </data>
+  <data name="Documents_ChangeEditingPermissionsDialog_Header" xml:space="preserve">
+    <value>Editing Permissions</value>
+  </data>
+  <data name="Documents_ChangeEditingPermissionsDialog_Users" xml:space="preserve">
+    <value>Users:</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_AlternatingLines" xml:space="preserve">
+    <value>Alternating Lines</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_DisplayLineNumbers" xml:space="preserve">
+    <value>Display Line Numbers</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_Header" xml:space="preserve">
+    <value>Format Code Block</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_OptionsLabel" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_PasteSourceCodeLabel" xml:space="preserve">
+    <value>Paste source code below</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_PreviewButton" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_PreviewLabel" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Documents_CodeFormattingDialog_SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="Documents_ColorSelector_Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="Documents_ColorSelector_Transparent" xml:space="preserve">
+    <value>No color</value>
+  </data>
+  <data name="Documents_ColumnProperties_ColumnIndex" xml:space="preserve">
+    <value>Column index: {0}</value>
+  </data>
+  <data name="Documents_ColumnProperties_MeasureIn" xml:space="preserve">
+    <value>Measure in:</value>
+  </data>
+  <data name="Documents_ColumnProperties_NextColumn" xml:space="preserve">
+    <value>Next Column</value>
+  </data>
+  <data name="Documents_ColumnProperties_Percents" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="Documents_ColumnProperties_Pixels" xml:space="preserve">
+    <value>Pixels</value>
+  </data>
+  <data name="Documents_ColumnProperties_PreferredWidth" xml:space="preserve">
+    <value>Preferred width:</value>
+  </data>
+  <data name="Documents_ColumnProperties_PreferredWidth_InvalidNumberMessage" xml:space="preserve">
+    <value>Enter number.</value>
+  </data>
+  <data name="Documents_ColumnProperties_PreferredWidth_InvalidNumberMessageHeader" xml:space="preserve">
+    <value>Column width</value>
+  </data>
+  <data name="Documents_ColumnProperties_PreviousColumn" xml:space="preserve">
+    <value>Previous Column</value>
+  </data>
+  <data name="Documents_ColumnProperties_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Documents_Commands_AcceptAllRevisionsCommand_Name" xml:space="preserve">
+    <value>Change Accept</value>
+  </data>
+  <data name="Documents_Commands_AcceptRevisionCommand_Name" xml:space="preserve">
+    <value>Change Accept</value>
+  </data>
+  <data name="Documents_Commands_BaselineAlignmentCommand_Name" xml:space="preserve">
+    <value>Baseline Alignment</value>
+  </data>
+  <data name="Documents_Commands_BoldCommand_Name" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="Documents_Commands_ChangeAllFieldsDisplayModeCommand_Name" xml:space="preserve">
+    <value>Toggle Fields Code</value>
+  </data>
+  <data name="Documents_Commands_ChangeBibliographicStyleCommand_Name" xml:space="preserve">
+    <value>Update Citations and Bibliography</value>
+  </data>
+  <data name="Documents_Commands_ChangeDocumentIsStrictLineBreakingRuleEnabled_Name" xml:space="preserve">
+    <value>Strict Line Breaking Character Rule</value>
+  </data>
+  <data name="Documents_Commands_ChangeDocumentLineBreakingRuleLanguage_Name" xml:space="preserve">
+    <value>Line Breaking Rule Language</value>
+  </data>
+  <data name="Documents_Commands_ChangeDocumentNoLineBreaksAfterRule_Name" xml:space="preserve">
+    <value>Change No Line Breaks After Rule</value>
+  </data>
+  <data name="Documents_Commands_ChangeDocumentNoLineBreaksBeforeRule_Name" xml:space="preserve">
+    <value>Change No Line Breaks Before Rule</value>
+  </data>
+  <data name="Documents_Commands_ChangeFieldDisplayModeCommand_Name" xml:space="preserve">
+    <value>Toggle Field Code</value>
+  </data>
+  <data name="Documents_Commands_ChangeFooterCommand_Name" xml:space="preserve">
+    <value>Footer Changed</value>
+  </data>
+  <data name="Documents_Commands_ChangeHeaderCommand_Name" xml:space="preserve">
+    <value>Header Changed</value>
+  </data>
+  <data name="Documents_Commands_ChangeParagraphFlowDirectionCommand_Name" xml:space="preserve">
+    <value>Flow Direction</value>
+  </data>
+  <data name="Documents_Commands_ChangeSectionColumnsCommand_Name" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Documents_Commands_ChangeSpanStyleCommand_Name" xml:space="preserve">
+    <value>Font Formatting</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableBordersCommand_Name" xml:space="preserve">
+    <value>Table Borders</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableColumnsLayoutModeCommand_Name" xml:space="preserve">
+    <value>Auto Fit</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableFlowDirectionCommand_Name" xml:space="preserve">
+    <value>Table Flow Direction</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableGridColumnWidthCommand_Name" xml:space="preserve">
+    <value>Column Width</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableHorizontalAlignment" xml:space="preserve">
+    <value>Table Alignment</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableIndentCommand_Name" xml:space="preserve">
+    <value>Table Indent</value>
+  </data>
+  <data name="Documents_Commands_ChangeTablePreferredWidthCommand_Name" xml:space="preserve">
+    <value>Table Preferred Width</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableRowHeightCommand_Name" xml:space="preserve">
+    <value>Row Height</value>
+  </data>
+  <data name="Documents_Commands_ChangeTableRowRepeatOnEveryPageCommand_Name" xml:space="preserve">
+    <value>Headings</value>
+  </data>
+  <data name="Documents_Commands_ChangeTag_Name" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Documents_Commands_ChangeWatermarkCommand_Name" xml:space="preserve">
+    <value>Watermark</value>
+  </data>
+  <data name="Documents_Commands_ClearAllCellBordersInTableCommand_Name" xml:space="preserve">
+    <value>Table Clear Cell Borders</value>
+  </data>
+  <data name="Documents_Commands_ClearAllFormattingCommand_Name" xml:space="preserve">
+    <value>Clear All Formatting</value>
+  </data>
+  <data name="Documents_Commands_ClearFormattingCommand_Name" xml:space="preserve">
+    <value>Reset Char</value>
+  </data>
+  <data name="Documents_Commands_ClearSelectedCellBordersCommand_Name" xml:space="preserve">
+    <value>Table Clear Selected Cell Borders</value>
+  </data>
+  <data name="Documents_Commands_ContinueNumberingCommand_Name" xml:space="preserve">
+    <value>Continue Numbering</value>
+  </data>
+  <data name="Documents_Commands_DecrementFontSizeCommand_Name" xml:space="preserve">
+    <value>Shrink Font</value>
+  </data>
+  <data name="Documents_Commands_DecrementParagraphLeftIndentCommand_Name" xml:space="preserve">
+    <value>Decrease Left Indent</value>
+  </data>
+  <data name="Documents_Commands_DeleteAllCommentsCommand_Name" xml:space="preserve">
+    <value>Delete All Comments</value>
+  </data>
+  <data name="Documents_Commands_DeleteBookmarkCommand_Name" xml:space="preserve">
+    <value>Delete Bookmark</value>
+  </data>
+  <data name="Documents_Commands_DeleteCodeBlockCommand_Name" xml:space="preserve">
+    <value>Delete Code Block</value>
+  </data>
+  <data name="Documents_Commands_DeleteCommand_Name" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Documents_Commands_DeleteCommentCommand_Name" xml:space="preserve">
+    <value>Delete Comment</value>
+  </data>
+  <data name="Documents_Commands_DeletePermissionRangeCommand_Name" xml:space="preserve">
+    <value>Protect</value>
+  </data>
+  <data name="Documents_Commands_DeleteReadOnlyRangeCommand_Name" xml:space="preserve">
+    <value>Delete Read Only Range</value>
+  </data>
+  <data name="Documents_Commands_DeleteTableColumnCommand_Name" xml:space="preserve">
+    <value>Delete Table Column</value>
+  </data>
+  <data name="Documents_Commands_DeleteTableCommand_Name" xml:space="preserve">
+    <value>Delete Table</value>
+  </data>
+  <data name="Documents_Commands_EndnoteCommand_Name" xml:space="preserve">
+    <value>Endnote</value>
+  </data>
+  <data name="Documents_Commands_FontFamilyCommand_Name" xml:space="preserve">
+    <value>Font Formatting</value>
+  </data>
+  <data name="Documents_Commands_FontSizeCommand_Name" xml:space="preserve">
+    <value>Font Formatting</value>
+  </data>
+  <data name="Documents_Commands_FootnoteCommand_Name" xml:space="preserve">
+    <value>Footnote</value>
+  </data>
+  <data name="Documents_Commands_ImageResizeCommand_Name" xml:space="preserve">
+    <value>Resize Image</value>
+  </data>
+  <data name="Documents_Commands_ImageRotateCommand_Name" xml:space="preserve">
+    <value>Rotate Image</value>
+  </data>
+  <data name="Documents_Commands_IncrementFontSizeCommand_Name" xml:space="preserve">
+    <value>Grow Font</value>
+  </data>
+  <data name="Documents_Commands_IncrementParagraphLeftIndentCommand_Name" xml:space="preserve">
+    <value>Increase Left Indent</value>
+  </data>
+  <data name="Documents_Commands_InsertBookmarkCommand_Name" xml:space="preserve">
+    <value>Insert Bookmark</value>
+  </data>
+  <data name="Documents_Commands_InsertCaptionCommand_Name" xml:space="preserve">
+    <value>Insert Caption</value>
+  </data>
+  <data name="Documents_Commands_InsertCodeBlockCommand_Name" xml:space="preserve">
+    <value>Insert Code Block</value>
+  </data>
+  <data name="Documents_Commands_InsertCommentCommand_Name" xml:space="preserve">
+    <value>Insert Comment</value>
+  </data>
+  <data name="Documents_Commands_InsertCrossReferenceCommand_Name" xml:space="preserve">
+    <value>Insert Cross Reference</value>
+  </data>
+  <data name="Documents_Commands_InsertCustomAnnotationRangeCommand_Name" xml:space="preserve">
+    <value>Insert Annotation Range</value>
+  </data>
+  <data name="Documents_Commands_InsertEndnoteCommand_Name" xml:space="preserve">
+    <value>Endnote</value>
+  </data>
+  <data name="Documents_Commands_InsertFieldCommand_Name" xml:space="preserve">
+    <value>Insert Field</value>
+  </data>
+  <data name="Documents_Commands_InsertFootnoteCommand_Name" xml:space="preserve">
+    <value>Footnote</value>
+  </data>
+  <data name="Documents_Commands_InsertHyperlinkCommand_Name" xml:space="preserve">
+    <value>Insert Hyperlink</value>
+  </data>
+  <data name="Documents_Commands_InsertionCommand_Name" xml:space="preserve">
+    <value>Insertion</value>
+  </data>
+  <data name="Documents_Commands_InsertPageBreak_Name" xml:space="preserve">
+    <value>Insert Page Break</value>
+  </data>
+  <data name="Documents_Commands_InsertPermissionRangeCommand_Name" xml:space="preserve">
+    <value>Protect</value>
+  </data>
+  <data name="Documents_Commands_InsertSectionBreak_Name" xml:space="preserve">
+    <value>Insert Section Break</value>
+  </data>
+  <data name="Documents_Commands_InsertSubDocumentCommand_Name" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Documents_Commands_InsertTableColumnCommand_Name" xml:space="preserve">
+    <value>Table Column</value>
+  </data>
+  <data name="Documents_Commands_InsertTableColumnToTheLeftCommand_Name" xml:space="preserve">
+    <value>Insert Table Column to Left</value>
+  </data>
+  <data name="Documents_Commands_InsertTableColumnToTheRightCommand_Name" xml:space="preserve">
+    <value>Insert Table Column to Right</value>
+  </data>
+  <data name="Documents_Commands_InsertTableCommand_Name" xml:space="preserve">
+    <value>Insert Table</value>
+  </data>
+  <data name="Documents_Commands_InsertTableRowAboveCommand_Name" xml:space="preserve">
+    <value>Insert Table Row Above</value>
+  </data>
+  <data name="Documents_Commands_InsertTableRowBelowCommand_Name" xml:space="preserve">
+    <value>Insert Table Row Below</value>
+  </data>
+  <data name="Documents_Commands_InsertTableRowCommand_Name" xml:space="preserve">
+    <value>Insert Table Row</value>
+  </data>
+  <data name="Documents_Commands_InsertTextCommand_Name" xml:space="preserve">
+    <value>Typing</value>
+  </data>
+  <data name="Documents_Commands_ItalicCommand_Name" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="Documents_Commands_LinkFooterCommand_Name" xml:space="preserve">
+    <value>Toggle Footer Link</value>
+  </data>
+  <data name="Documents_Commands_LinkHeaderCommand_Name" xml:space="preserve">
+    <value>Toggle Header Link</value>
+  </data>
+  <data name="Documents_Commands_ListCommand_Name" xml:space="preserve">
+    <value>Bullets and Numbering</value>
+  </data>
+  <data name="Documents_Commands_MergeTableCellsCommand_Name" xml:space="preserve">
+    <value>Merge Cells</value>
+  </data>
+  <data name="Documents_Commands_MoveSelectionCommand_Name" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="Documents_Commands_ParagraphAutomaticSpacingAfterCommand_Name" xml:space="preserve">
+    <value>Automatic Spacing After</value>
+  </data>
+  <data name="Documents_Commands_ParagraphAutomaticSpacingBeforeCommand_Name" xml:space="preserve">
+    <value>Automatic Spacing Before</value>
+  </data>
+  <data name="Documents_Commands_ParagraphBackgroundCommand_Name" xml:space="preserve">
+    <value>Paragraph Background</value>
+  </data>
+  <data name="Documents_Commands_ParagraphChangeStyleCommand_Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="Documents_Commands_ParagraphFirstLineIndentCommand_Name" xml:space="preserve">
+    <value>Paragraph First Line Indent</value>
+  </data>
+  <data name="Documents_Commands_ParagraphFormattingCompositeCommand_Name" xml:space="preserve">
+    <value>Paragraph Formatting</value>
+  </data>
+  <data name="Documents_Commands_ParagraphHangingIndentCommand_Name" xml:space="preserve">
+    <value>Paragraph Hanging Indent</value>
+  </data>
+  <data name="Documents_Commands_ParagraphIsLineBreakingRuleEnabledCommand_Name" xml:space="preserve">
+    <value>Paragraph First and Last Characters Rule</value>
+  </data>
+  <data name="Documents_Commands_ParagraphLeftIndentCommand_Name" xml:space="preserve">
+    <value>Paragraph Left Indent</value>
+  </data>
+  <data name="Documents_Commands_ParagraphLineSpacingCommand_Name" xml:space="preserve">
+    <value>Line Spacing</value>
+  </data>
+  <data name="Documents_Commands_ParagraphLineSpacingTypeCommand_Name" xml:space="preserve">
+    <value>Paragraph Line Spacing Type</value>
+  </data>
+  <data name="Documents_Commands_ParagraphRightIndentCommand_Name" xml:space="preserve">
+    <value>Paragraph Right Indent</value>
+  </data>
+  <data name="Documents_Commands_ParagraphSpacingAfterCommand_Name" xml:space="preserve">
+    <value>Paragraph Spacing After</value>
+  </data>
+  <data name="Documents_Commands_ParagraphSpacingBeforeCommand_Name" xml:space="preserve">
+    <value>Paragraph Spacing Before</value>
+  </data>
+  <data name="Documents_Commands_RejectAllRevisionsCommand_Name" xml:space="preserve">
+    <value>Change Reject</value>
+  </data>
+  <data name="Documents_Commands_RejectRevisionCommand_Name" xml:space="preserve">
+    <value>Change Reject</value>
+  </data>
+  <data name="Documents_Commands_RemoveHyperlinkCommand_Name" xml:space="preserve">
+    <value>Remove Hyperlink</value>
+  </data>
+  <data name="Documents_Commands_RestartNumberingCommand_Name" xml:space="preserve">
+    <value>Restart Numbering</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeDifferentEvenAndOddPagesHeaderFooterCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeDifferentFirstPageHeaderFooterCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeFirstPageNumberCommand_Name" xml:space="preserve">
+    <value>Page Number</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeFooterBottomMarginCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeHeaderTopMarginCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangeMarginCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangePageOrientationCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SectionChangePageSizeCommand_Name" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="Documents_Commands_SetNumberingValueCommand_Name" xml:space="preserve">
+    <value>Set Numbering Value</value>
+  </data>
+  <data name="Documents_Commands_StrikethroughCommand_Name" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="Documents_Commands_StyleNameCommand_Name" xml:space="preserve">
+    <value>Change Style</value>
+  </data>
+  <data name="Documents_Commands_TableCellBackgroundCommand_Name" xml:space="preserve">
+    <value>Table Cell Background</value>
+  </data>
+  <data name="Documents_Commands_TableCellBordersCommand_Name" xml:space="preserve">
+    <value>Table Cell Borders</value>
+  </data>
+  <data name="Documents_Commands_TableCellContentAlignmentCommand_Name" xml:space="preserve">
+    <value>Content Alignment</value>
+  </data>
+  <data name="Documents_Commands_TableCellPaddingCommand_Name" xml:space="preserve">
+    <value>Table Cell Padding</value>
+  </data>
+  <data name="Documents_Commands_TableCellSpacingCommand_Name" xml:space="preserve">
+    <value>Table Cell Spacing</value>
+  </data>
+  <data name="Documents_Commands_TableDefaultCellPaddingCommand_Name" xml:space="preserve">
+    <value>Table Cell Padding</value>
+  </data>
+  <data name="Documents_Commands_TablePropertiesCompositeCommand_Name" xml:space="preserve">
+    <value>Table Properties</value>
+  </data>
+  <data name="Documents_Commands_TabStopsCommand_Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="Documents_Commands_TextAlignmentCommand_Name" xml:space="preserve">
+    <value>Text Alignment</value>
+  </data>
+  <data name="Documents_Commands_TextBackColorCommand_Name" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="Documents_Commands_TextForeColorCommand_Name" xml:space="preserve">
+    <value>Text Fill Effect</value>
+  </data>
+  <data name="Documents_Commands_UnderlineColorCommand_Name" xml:space="preserve">
+    <value>Underline Color</value>
+  </data>
+  <data name="Documents_Commands_UnderlineCommand_Name" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="Documents_Commands_UnmergeTableCellsCommand_Name" xml:space="preserve">
+    <value>Unmerge Cells</value>
+  </data>
+  <data name="Documents_Commands_UpdateAllCaptionsCommand_Name" xml:space="preserve">
+    <value>Update All Captions</value>
+  </data>
+  <data name="Documents_Commands_UpdateAllFieldsCommand_Name" xml:space="preserve">
+    <value>Update All Fields</value>
+  </data>
+  <data name="Documents_Commands_UpdateFieldCommand_Name" xml:space="preserve">
+    <value>Update Field</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_AddChoiceTitle" xml:space="preserve">
+    <value>Add Choice</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayName" xml:space="preserve">
+    <value>Display Name:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayNameAlreadyUsed" xml:space="preserve">
+    <value>An entry with the same display name already exists - each entry must specify a display name.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_DisplayNameEmptyMessage" xml:space="preserve">
+    <value>Display name cannot be blank.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_ModifyChoiceTitle" xml:space="preserve">
+    <value>Modify Choice</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_Value" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_AddModifySection_ValueAlreadyUsed" xml:space="preserve">
+    <value>An entry with the same value already exists - each entry must specify a unique value.</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_Change" xml:space="preserve">
+    <value>Change...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_CheckBoxProperties" xml:space="preserve">
+    <value>Check Box Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_CheckedSymbol" xml:space="preserve">
+    <value>Checked symbol:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_CheckBoxSection_UncheckedSymbol" xml:space="preserve">
+    <value>Unchecked symbol:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_ContentControlProperties" xml:space="preserve">
+    <value>Content Control Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_CalendarType" xml:space="preserve">
+    <value>Calendar type:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_DatePickerProperties" xml:space="preserve">
+    <value>Date Picker Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_DisplayLikeThis" xml:space="preserve">
+    <value>Display the date like this:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_Locale" xml:space="preserve">
+    <value>Locale:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents" xml:space="preserve">
+    <value>Store XML contents in the following format when mapped:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_Date" xml:space="preserve">
+    <value>Date (xsd:date)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_DateAndTime" xml:space="preserve">
+    <value>Date and Time (xsd:dateTime)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DatePickerSection_StoreXmlContents_Text" xml:space="preserve">
+    <value>Text (same as display)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Add" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_DropDownListProperties" xml:space="preserve">
+    <value>Drop-Down List Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Modify" xml:space="preserve">
+    <value>Modify...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_DropDownListSection_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_NewStyle" xml:space="preserve">
+    <value>New Style...</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_RemoveContentControl" xml:space="preserve">
+    <value>Remove content control when contents are edited</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs" xml:space="preserve">
+    <value>Show as:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_BoundingBox" xml:space="preserve">
+    <value>Bounding Box</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_ShowAs_StartEndTag" xml:space="preserve">
+    <value>Start/End Tag</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Style" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Tag" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_Title" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_GeneralSection_UseStyle" xml:space="preserve">
+    <value>Use a style to format text typed into the empty control</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Deleted" xml:space="preserve">
+    <value>Content control cannot be deleted</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Edited" xml:space="preserve">
+    <value>Contents cannot be edited</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_LockingSection_Locking" xml:space="preserve">
+    <value>Locking</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_PlainTextSection_AllowCarriageReturns" xml:space="preserve">
+    <value>Allow carriage returns (multiple paragraphs)</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_PlainTextSection_PlainTextProperties" xml:space="preserve">
+    <value>Plain Text Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_AllowUsers" xml:space="preserve">
+    <value>Allow users to add and remove sections</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_RepeatingSectionProperties" xml:space="preserve">
+    <value>Repeating Section Properties</value>
+  </data>
+  <data name="Documents_ContentControlsDialogs_RepeatingSection_SectionTitle" xml:space="preserve">
+    <value>Section title:</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_Date" xml:space="preserve">
+    <value>Click or tap to enter a date.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_ListItem" xml:space="preserve">
+    <value>Choose an item.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_RepeatingItem" xml:space="preserve">
+    <value>Enter any content that you want to repeat, including other content controls. You can also insert this control around table rows in order to repeat parts of a table.</value>
+  </data>
+  <data name="Documents_ContentControlsGenerator_Text" xml:space="preserve">
+    <value>Click or tap here to enter text.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AfterTable" xml:space="preserve">
+    <value>This content control type cannot be placed after a table row or a table cell.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundImage" xml:space="preserve">
+    <value>This content control type cannot be inserted around a selected image.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundMultipleParagraphs" xml:space="preserve">
+    <value>This content control type cannot be inserted around multiple paragraphs.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_AroundTableRows" xml:space="preserve">
+    <value>This content control type cannot be inserted around table rows.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_BeforeTable" xml:space="preserve">
+    <value>This content control type cannot be placed before a table row or a table cell.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_InsertControl" xml:space="preserve">
+    <value>Insert Content Control</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_Intersect" xml:space="preserve">
+    <value>Content controls cannot intersect with each other.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_MultipleBlocks" xml:space="preserve">
+    <value>Content controls containing multiple blocks cannot be placed in a partially selected table.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_MultipleSelection" xml:space="preserve">
+    <value>This content control type cannot be placed in multiple selection.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_PictureControl" xml:space="preserve">
+    <value>Picture control cannot be used in selection that contains any non-image content, or more than a single image.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_RepeatingSectionControl" xml:space="preserve">
+    <value>Repeating section control can only be inserted around entire paragraphs or rows.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_TableRow" xml:space="preserve">
+    <value>Content controls can be inserted around a row only when all of its cells are selected.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_TableRows" xml:space="preserve">
+    <value>Content controls can be inserted around rows, only when all of their cells are selected.</value>
+  </data>
+  <data name="Documents_ContentControlsMessages_UpdateProperties" xml:space="preserve">
+    <value>Update content control properties</value>
+  </data>
+  <data name="Documents_ContextMenu_Clipboard_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Documents_ContextMenu_Clipboard_Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Documents_ContextMenu_Clipboard_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Documents_ContextMenu_CodeBlock_Delete" xml:space="preserve">
+    <value>Delete Code Block</value>
+  </data>
+  <data name="Documents_ContextMenu_CodeBlock_Edit" xml:space="preserve">
+    <value>Edit Code Block</value>
+  </data>
+  <data name="Documents_ContextMenu_Field_ToggleFieldCodes" xml:space="preserve">
+    <value>Toggle Field Codes</value>
+  </data>
+  <data name="Documents_ContextMenu_Field_UpdateField" xml:space="preserve">
+    <value>Update Field</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_BehindText" xml:space="preserve">
+    <value>Behind Text</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_InFrontOfText" xml:space="preserve">
+    <value>In Front of Text</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_InLineWithText" xml:space="preserve">
+    <value>In Line with Text</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_MoreLayoutOptions" xml:space="preserve">
+    <value>More Layout Options</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_Square" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_TextWrapping" xml:space="preserve">
+    <value>Text Wrapping</value>
+  </data>
+  <data name="Documents_ContextMenu_FloatingBlock_TopAndBottom" xml:space="preserve">
+    <value>Top and Bottom</value>
+  </data>
+  <data name="Documents_ContextMenu_HeaderFooter_EditFooter" xml:space="preserve">
+    <value>Edit Footer</value>
+  </data>
+  <data name="Documents_ContextMenu_HeaderFooter_EditHeader" xml:space="preserve">
+    <value>Edit Header</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_CopyHyperlink" xml:space="preserve">
+    <value>Copy Hyperlink</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_OpenHyperlink" xml:space="preserve">
+    <value>Open Hyperlink</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_RemoveHyperlink" xml:space="preserve">
+    <value>Remove Hyperlink</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_SelectHyperlink" xml:space="preserve">
+    <value>Select Hyperlink</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_ShowEditHyperlinkPropertiesDialog" xml:space="preserve">
+    <value>Edit Hyperlink...</value>
+  </data>
+  <data name="Documents_ContextMenu_Hyperlink_ShowHyperlinkPropertiesDialog" xml:space="preserve">
+    <value>Hyperlink...</value>
+  </data>
+  <data name="Documents_ContextMenu_Image_EditImage" xml:space="preserve">
+    <value>Edit Image</value>
+  </data>
+  <data name="Documents_ContextMenu_Image_InsertCaption" xml:space="preserve">
+    <value>Insert Caption</value>
+  </data>
+  <data name="Documents_ContextMenu_Lists_ContinueNumbering" xml:space="preserve">
+    <value>Continue Numbering</value>
+  </data>
+  <data name="Documents_ContextMenu_Lists_RestartAt" xml:space="preserve">
+    <value>Restart at 1</value>
+  </data>
+  <data name="Documents_ContextMenu_Lists_SetNumberingValue" xml:space="preserve">
+    <value>Set Numbering Value...</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_AddingWordsNotAvailable" xml:space="preserve">
+    <value>Adding words is not available at the moment.</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_AddToDictionary" xml:space="preserve">
+    <value>Add to Dictionary</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_IgnoreAll" xml:space="preserve">
+    <value>Ignore All</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_IgnoreWord" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_NoSpellingSuggestions" xml:space="preserve">
+    <value>(No Spelling Suggestions)</value>
+  </data>
+  <data name="Documents_ContextMenu_SpellChecker_ShowSpellCheckingDialog" xml:space="preserve">
+    <value>Spelling...</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_AutoFit" xml:space="preserve">
+    <value>AutoFit</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_AutoFitToWindow" xml:space="preserve">
+    <value>AutoFit to Window</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_CellAlignment" xml:space="preserve">
+    <value>Cell Alignment</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_DeleteColumn" xml:space="preserve">
+    <value>Delete Column</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_DeleteRow" xml:space="preserve">
+    <value>Delete Row</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_DeleteTable" xml:space="preserve">
+    <value>Delete Table</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_FixedColumnWidth" xml:space="preserve">
+    <value>Fixed Column Width</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_InsertColumnToTheLeft" xml:space="preserve">
+    <value>Insert Column to the Left</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_InsertColumnToTheRight" xml:space="preserve">
+    <value>Insert Column to the Right</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_InsertRowAbove" xml:space="preserve">
+    <value>Insert Row Above</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_InsertRowBelow" xml:space="preserve">
+    <value>Insert Row Below</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_MergeCells" xml:space="preserve">
+    <value>Merge Cells</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_SelectCell" xml:space="preserve">
+    <value>Select Cell</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_SelectColumn" xml:space="preserve">
+    <value>Select Column</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_SelectRow" xml:space="preserve">
+    <value>Select Row</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_SelectTable" xml:space="preserve">
+    <value>Select Table</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_SplitCell" xml:space="preserve">
+    <value>Unmerge Cell</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_TableBordersProperties" xml:space="preserve">
+    <value>Table Borders...</value>
+  </data>
+  <data name="Documents_ContextMenu_Table_TableProperties" xml:space="preserve">
+    <value>Table Properties...</value>
+  </data>
+  <data name="Documents_ContextMenu_Text_ShowFontPropertiesDialog" xml:space="preserve">
+    <value>Font...</value>
+  </data>
+  <data name="Documents_ContextMenu_Text_ShowParagraphPropertiesDialog" xml:space="preserve">
+    <value>Paragraph...</value>
+  </data>
+  <data name="Documents_ContextMenu_TrackChanges_Accept" xml:space="preserve">
+    <value>Accept Change</value>
+  </data>
+  <data name="Documents_ContextMenu_TrackChanges_Reject" xml:space="preserve">
+    <value>Reject Change</value>
+  </data>
+  <data name="Documents_DocumentRuler_CenterTab" xml:space="preserve">
+    <value>Center Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_DecimalTab" xml:space="preserve">
+    <value>Decimal Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_FirstLineIndent" xml:space="preserve">
+    <value>First Line Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_HangingIndent" xml:space="preserve">
+    <value>Hanging Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_LeftIndent" xml:space="preserve">
+    <value>Left Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_LeftTab" xml:space="preserve">
+    <value>Left Tab</value>
+  </data>
+  <data name="Documents_DocumentRuler_RightIndent" xml:space="preserve">
+    <value>Right Indent</value>
+  </data>
+  <data name="Documents_DocumentRuler_RightTab" xml:space="preserve">
+    <value>Right Tab</value>
+  </data>
+  <data name="Documents_DoubleLineDecoration_DoubleLine" xml:space="preserve">
+    <value>Double line</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_Add" xml:space="preserve">
+    <value>_Add</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_Delete" xml:space="preserve">
+    <value>Dele_te</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_DeleteAll" xml:space="preserve">
+    <value>Delete A_ll</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_DeleteAllMessage" xml:space="preserve">
+    <value>Click OK to delete all of the entries in your dictionary.</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_DeleteAllMessageHeader" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_Dictionary" xml:space="preserve">
+    <value>Dictionary:</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_Header" xml:space="preserve">
+    <value>Edit Custom Dictionary</value>
+  </data>
+  <data name="Documents_EditCustomDictionaryDialog_Word" xml:space="preserve">
+    <value>Word:</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_FindNext" xml:space="preserve">
+    <value>Find Next</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_FinishedSearching" xml:space="preserve">
+    <value>Finished searching the document.</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_Header" xml:space="preserve">
+    <value>Find/Replace</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_MadeReplacements" xml:space="preserve">
+    <value>{0} replacements made.</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_ReplaceAll" xml:space="preserve">
+    <value>Replace All</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_ReplaceWith" xml:space="preserve">
+    <value>Replace with</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_SearchedTextNotFound" xml:space="preserve">
+    <value>The searched text was not found:
+"{0}"</value>
+  </data>
+  <data name="Documents_FindReplaceDialog_TextToFind" xml:space="preserve">
+    <value>Text to find</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_Header" xml:space="preserve">
+    <value>Floating Blocks Layout</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_AbsolutePosition" xml:space="preserve">
+    <value>Absolute position</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_Alignment" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_AllowOverlap" xml:space="preserve">
+    <value>Allow overlap</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_Below" xml:space="preserve">
+    <value>below</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_Horizontal" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_HorizontalRelativeFrom_LeftMargin" xml:space="preserve">
+    <value>LeftMargin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_HorizontalRelativeFrom_Margin" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_HorizontalRelativeFrom_Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_HorizontalRelativeFrom_Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_HorizontalRelativeFrom_RightMargin" xml:space="preserve">
+    <value>RightMargin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadHorizontalAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadHorizontalAlignment_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadHorizontalAlignment_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadVerticalAlignment_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadVerticalAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RadVerticalAlignment_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_RelativeTo" xml:space="preserve">
+    <value>relative to</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_ToTheRightOf" xml:space="preserve">
+    <value>to the right of</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_Vertical" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_VerticalRelativeFrom_BottomMargin" xml:space="preserve">
+    <value>BottomMargin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_VerticalRelativeFrom_Margin" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_VerticalRelativeFrom_Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_VerticalRelativeFrom_Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_PositionProperties_VerticalRelativeFrom_TopMargin" xml:space="preserve">
+    <value>TopMargin</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrapping" xml:space="preserve">
+    <value>Text Wrapping</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_BehindText" xml:space="preserve">
+    <value>Behind Text</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_BothSides" xml:space="preserve">
+    <value>Both sides</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_DistanceFromText" xml:space="preserve">
+    <value>Distance from text</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_InFrontOfText" xml:space="preserve">
+    <value>In front of text</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_InLineWithText" xml:space="preserve">
+    <value>In line with text</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_LeftOnly" xml:space="preserve">
+    <value>Left only</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_RightOnly" xml:space="preserve">
+    <value>Right only</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_Square" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_TopAndBottom" xml:space="preserve">
+    <value>Top and bottom</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_WrappingStyle" xml:space="preserve">
+    <value>Wrapping style</value>
+  </data>
+  <data name="Documents_FloatingBlockPropertiesDialog_TextWrappingProperties_WrapText" xml:space="preserve">
+    <value>Wrap Text</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Effects" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Effects_Strikethrough" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Effects_Subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Effects_Superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Font" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontColor" xml:space="preserve">
+    <value>Font color:</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontStyle" xml:space="preserve">
+    <value>Font style:</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontStyles_Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontStyles_BoldItalic" xml:space="preserve">
+    <value>Bold and Italic</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontStyles_Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_FontStyles_Regular" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Header" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_HighlightColor" xml:space="preserve">
+    <value>Highlight color:</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles" xml:space="preserve">
+    <value>Underline Styles</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_DashedLine" xml:space="preserve">
+    <value>Dashed line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_DotDashedLine" xml:space="preserve">
+    <value>Dot-dashed line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_DotDotDashedLine" xml:space="preserve">
+    <value>Dot-dot-dashed line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_DottedLine" xml:space="preserve">
+    <value>Dotted line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_DoubleLine" xml:space="preserve">
+    <value>Double line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_ThickLine" xml:space="preserve">
+    <value>Thick line</value>
+  </data>
+  <data name="Documents_FontPropertiesDialog_UnderlineStyles_Wave" xml:space="preserve">
+    <value>Wave</value>
+  </data>
+  <data name="Documents_HeadersFooters_DefaultFooterLabel" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="Documents_HeadersFooters_DefaultHeaderLabel" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Documents_HeadersFooters_EvenPageFooterLabel" xml:space="preserve">
+    <value>Even Page Footer</value>
+  </data>
+  <data name="Documents_HeadersFooters_EvenPageHeaderLabel" xml:space="preserve">
+    <value>Even Page Header</value>
+  </data>
+  <data name="Documents_HeadersFooters_FirstPageFooterLabel" xml:space="preserve">
+    <value>First Page Footer</value>
+  </data>
+  <data name="Documents_HeadersFooters_FirstPageHeaderLabel" xml:space="preserve">
+    <value>First Page Header</value>
+  </data>
+  <data name="Documents_HeadersFooters_OddPageFooterLabel" xml:space="preserve">
+    <value>Odd Page Footer</value>
+  </data>
+  <data name="Documents_HeadersFooters_OddPageHeaderLabel" xml:space="preserve">
+    <value>Odd Page Header</value>
+  </data>
+  <data name="Documents_HeadersFooters_SameAsPrevious" xml:space="preserve">
+    <value>Same as Previous</value>
+  </data>
+  <data name="Documents_HeadersFooter_SectionNumber" xml:space="preserve">
+    <value>-Section {0}-</value>
+  </data>
+  <data name="Documents_ImageEditorDialog_Header" xml:space="preserve">
+    <value>Image Editor Dialog</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Crop" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_FlipHorizontal" xml:space="preserve">
+    <value>Flip Horizontal</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_FlipVertical" xml:space="preserve">
+    <value>Flip Vertical</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Header" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Resize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="Documents_ImageMiniToolBar_Sharpen" xml:space="preserve">
+    <value>Sharpen</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Caption" xml:space="preserve">
+    <value>Caption:</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_CaptionExamples" xml:space="preserve">
+    <value>Figure 1-III, Table 1-A</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_ChapterStartsWithStyle" xml:space="preserve">
+    <value>Chapter starts with style</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Colon" xml:space="preserve">
+    <value>colon</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_DeleteLabel" xml:space="preserve">
+    <value>Delete Label</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Examples" xml:space="preserve">
+    <value>Examples:</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_ExcludeLabel" xml:space="preserve">
+    <value>Exclude label from caption</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Format" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Header" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Hyphen" xml:space="preserve">
+    <value>hyphen</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_IncludeChapterNumber" xml:space="preserve">
+    <value>Include chapter number</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_InsertAboveSelection" xml:space="preserve">
+    <value>Above selected item</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_InsertBelowSelection" xml:space="preserve">
+    <value>Below selected item</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Label" xml:space="preserve">
+    <value>Label:</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_NewLabel" xml:space="preserve">
+    <value>New Label...</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Numbering" xml:space="preserve">
+    <value>Numbering</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Period" xml:space="preserve">
+    <value>period</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_Position" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="Documents_InsertCaptionDialog_UseSeparator" xml:space="preserve">
+    <value>Use separator:</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_Header" xml:space="preserve">
+    <value>Cross-Reference</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAsHyperlink" xml:space="preserve">
+    <value>Insert as hyperlink</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_AboveBelow" xml:space="preserve">
+    <value>Above/below</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_BookmarkText" xml:space="preserve">
+    <value>Bookmark text</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_CaptionText" xml:space="preserve">
+    <value>Only caption text</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_EntireCaption" xml:space="preserve">
+    <value>Entire caption</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_HeadingText" xml:space="preserve">
+    <value>Heading text</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_LabelAndNumber" xml:space="preserve">
+    <value>Only label and number</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertAs_PageNumber" xml:space="preserve">
+    <value>Page number</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_InsertReferenceTo" xml:space="preserve">
+    <value>Insert reference to:</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_ReferenceType" xml:space="preserve">
+    <value>Reference type:</value>
+  </data>
+  <data name="Documents_InsertCrossReferenceWindow_SelectElement" xml:space="preserve">
+    <value>For which element:</value>
+  </data>
+  <data name="Documents_InsertDateTimeDialog_AvailableFormats" xml:space="preserve">
+    <value>Available Formats:</value>
+  </data>
+  <data name="Documents_InsertDateTimeDialog_Header" xml:space="preserve">
+    <value>Date and Time</value>
+  </data>
+  <data name="Documents_InsertDateTimeDialog_UpdateAutomatically" xml:space="preserve">
+    <value>Update Automatically</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_Address" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_ExistingFrameOrWebpage" xml:space="preserve">
+    <value>Existing file or web page</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_Header" xml:space="preserve">
+    <value>Insert Hyperlink</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_InvalidAddress" xml:space="preserve">
+    <value>Invalid address</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_InvalidBookmark" xml:space="preserve">
+    <value>Please select bookmark item</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_InvalidText" xml:space="preserve">
+    <value>Text should not be empty</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_LinkTo" xml:space="preserve">
+    <value>Link to:</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_NewWindow" xml:space="preserve">
+    <value>New window</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_PlaceInDocument" xml:space="preserve">
+    <value>Place in the document</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_SameFrame" xml:space="preserve">
+    <value>Same frame</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_SelectBookmark" xml:space="preserve">
+    <value>Select bookmark</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_SelectionInDocument" xml:space="preserve">
+    <value>&lt;&lt;Selection in Document&gt;&gt;</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_TargetFrame" xml:space="preserve">
+    <value>Target frame:</value>
+  </data>
+  <data name="Documents_InsertHyperlinkDialog_TextToDisplay" xml:space="preserve">
+    <value>Text to display:</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_Filter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_Font" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_Header" xml:space="preserve">
+    <value>Insert Symbol</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_AllSymbols" xml:space="preserve">
+    <value>All Symbols</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_ClosePunctuation" xml:space="preserve">
+    <value>Close Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_ConnectorPunctuation" xml:space="preserve">
+    <value>Connector Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_CurrencySymbol" xml:space="preserve">
+    <value>Currency Symbol</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_DashPunctuation" xml:space="preserve">
+    <value>Dash Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_DecimalDigitNumber" xml:space="preserve">
+    <value>Decimal Digit Number</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_EnclosingMark" xml:space="preserve">
+    <value>Enclosing Mark</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_FinalQuotePunctuation" xml:space="preserve">
+    <value>Final Quote Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_InitialQuotePunctuation" xml:space="preserve">
+    <value>Initial Quote Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_LetterNumber" xml:space="preserve">
+    <value>Letter Number</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_LineSeparator" xml:space="preserve">
+    <value>Line Separator</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_LowercaseLetter" xml:space="preserve">
+    <value>Lowercase Letter</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_MathSymbol" xml:space="preserve">
+    <value>Math Symbol</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_ModifierLetter" xml:space="preserve">
+    <value>Modifier Letter</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_ModifierSymbol" xml:space="preserve">
+    <value>Modifier Symbol</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_NonSpacingMark" xml:space="preserve">
+    <value>Non Spacing Mark</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OpenPunctuation" xml:space="preserve">
+    <value>Open Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OtherLetter" xml:space="preserve">
+    <value>Other Letter</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OtherNotAssigned" xml:space="preserve">
+    <value>Other Not Assigned</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OtherNumber" xml:space="preserve">
+    <value>Other Number</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OtherPunctuation" xml:space="preserve">
+    <value>Other Punctuation</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_OtherSymbol" xml:space="preserve">
+    <value>Other Symbol</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_ParagraphSeparator" xml:space="preserve">
+    <value>Paragraph Separator</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_PrivateUse" xml:space="preserve">
+    <value>Private Use</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_SpaceSeparator" xml:space="preserve">
+    <value>Space Separator</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_SpacingCombiningMark" xml:space="preserve">
+    <value>Spacing Combining Mark</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_Surrogate" xml:space="preserve">
+    <value>Surrogate</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_TitlecaseLetter" xml:space="preserve">
+    <value>Titlecase Letter</value>
+  </data>
+  <data name="Documents_InsertSymbolDialog_UnicodeCategory_UppercaseLetter" xml:space="preserve">
+    <value>Uppercase Letter</value>
+  </data>
+  <data name="Documents_InsertTableDialog_Header" xml:space="preserve">
+    <value>Insert Table</value>
+  </data>
+  <data name="Documents_InsertTableDialog_NumberMustBeBetween" xml:space="preserve">
+    <value>The number must be between {0} and {1}.</value>
+  </data>
+  <data name="Documents_InsertTableDialog_NumberOfColumns" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+  <data name="Documents_InsertTableDialog_NumberOfRows" xml:space="preserve">
+    <value>Number of rows:</value>
+  </data>
+  <data name="Documents_InsertTableDialog_TableSize" xml:space="preserve">
+    <value>Table size</value>
+  </data>
+  <data name="Documents_LineDecoration_SingleLine" xml:space="preserve">
+    <value>Single line</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_Edit" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_Header" xml:space="preserve">
+    <value>Source Manager</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_New" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <data name="Documents_ManageBibliographicSources_PreviewExample" xml:space="preserve">
+    <value>Preview (APA Fifth Edition): EXAMPLE</value>
+  </data>
+  <data name="Documents_ManageBibliographicSource_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Documents_ManageBlibliographicSources_BibliographyEntry" xml:space="preserve">
+    <value>Bibliography Entry:</value>
+  </data>
+  <data name="Documents_ManageBlibliographicSources_Citation" xml:space="preserve">
+    <value>Citation:</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_BookmarkName" xml:space="preserve">
+    <value>Bookmark name:</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_GoTo" xml:space="preserve">
+    <value>Go To</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_Header" xml:space="preserve">
+    <value>Bookmarks</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_HiddenBookmarks" xml:space="preserve">
+    <value>Hidden bookmarks</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_SortBy" xml:space="preserve">
+    <value>Sort by:</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_SortByLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Documents_ManageBookmarksDialog_SortByName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_DeleteStyle" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_Header" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_ModifyStyle" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_NewStyle" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Documents_ManageStylesDialog_ShowPreview" xml:space="preserve">
+    <value>Show Preview</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Header" xml:space="preserve">
+    <value>Modify Multilevel List</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_IncludeLevelNumberFrom" xml:space="preserve">
+    <value>Include Level number from:</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level1" xml:space="preserve">
+    <value>Level 1</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level2" xml:space="preserve">
+    <value>Level 2</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level3" xml:space="preserve">
+    <value>Level 3</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level4" xml:space="preserve">
+    <value>Level 4</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level5" xml:space="preserve">
+    <value>Level 5</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level6" xml:space="preserve">
+    <value>Level 6</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level7" xml:space="preserve">
+    <value>Level 7</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level8" xml:space="preserve">
+    <value>Level 8</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_Level9" xml:space="preserve">
+    <value>Level 9</value>
+  </data>
+  <data name="Documents_ModifyMultilevelList_StartingIndex" xml:space="preserve">
+    <value>Starting Index:</value>
+  </data>
+  <data name="Documents_MultipleUndoControl_Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Documents_MultipleUndoControl_Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Documents_MultipleUndoControl_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Documents_NewCaptionLabelDialog_Header" xml:space="preserve">
+    <value>New Label</value>
+  </data>
+  <data name="Documents_NotesDialog_ApplyChanges" xml:space="preserve">
+    <value>Apply changes</value>
+  </data>
+  <data name="Documents_NotesDialog_ApplyChangesTo" xml:space="preserve">
+    <value>Apply changes to:</value>
+  </data>
+  <data name="Documents_NotesDialog_ApplyToDecument" xml:space="preserve">
+    <value>Whole document</value>
+  </data>
+  <data name="Documents_NotesDialog_ApplyToSection" xml:space="preserve">
+    <value>Current section</value>
+  </data>
+  <data name="Documents_NotesDialog_BottomOfPage" xml:space="preserve">
+    <value>Bottom of page</value>
+  </data>
+  <data name="Documents_NotesDialog_CustomMark" xml:space="preserve">
+    <value>Custom mark:</value>
+  </data>
+  <data name="Documents_NotesDialog_DocumentEnd" xml:space="preserve">
+    <value>End of document</value>
+  </data>
+  <data name="Documents_NotesDialog_Endnotes" xml:space="preserve">
+    <value>Endnotes</value>
+  </data>
+  <data name="Documents_NotesDialog_Footnotes" xml:space="preserve">
+    <value>Footnotes</value>
+  </data>
+  <data name="Documents_NotesDialog_Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Documents_NotesDialog_Header" xml:space="preserve">
+    <value>Footnote and Endnote</value>
+  </data>
+  <data name="Documents_NotesDialog_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Documents_NotesDialog_NumberFormat" xml:space="preserve">
+    <value>Number format:</value>
+  </data>
+  <data name="Documents_NotesDialog_Numbering" xml:space="preserve">
+    <value>Numbering:</value>
+  </data>
+  <data name="Documents_NotesDialog_NumberingRestart_Continuous" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
+  <data name="Documents_NotesDialog_NumberingRestart_EachPage" xml:space="preserve">
+    <value>Each page</value>
+  </data>
+  <data name="Documents_NotesDialog_NumberingRestart_EachSection" xml:space="preserve">
+    <value>Each section</value>
+  </data>
+  <data name="Documents_NotesDialog_SectionEnd" xml:space="preserve">
+    <value>End of section</value>
+  </data>
+  <data name="Documents_NotesDialog_StartAt" xml:space="preserve">
+    <value>Start At:</value>
+  </data>
+  <data name="Documents_NotesDialog_Symbol" xml:space="preserve">
+    <value>Symbol...</value>
+  </data>
+  <data name="Documents_OpenDocumentCommand_TheFileCannotBeOpened" xml:space="preserve">
+    <value>The file cannot be opened.</value>
+  </data>
+  <data name="Documents_OpenDocumentCommand_TheFileIsLocked" xml:space="preserve">
+    <value>The file cannot be opened. It might be locked by another application.</value>
+  </data>
+  <data name="Documents_OpenDocumentCommand_UnsupportedFileFormat" xml:space="preserve">
+    <value>Unsupported file format.</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Alignment" xml:space="preserve">
+    <value>Alignment:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_BackgroundColor" xml:space="preserve">
+    <value>Background color:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Direction" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Direction_LeftToRight" xml:space="preserve">
+    <value>Left-to-right</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Direction_RightToLeft" xml:space="preserve">
+    <value>Right-to-left</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_FirstIndentationBy" xml:space="preserve">
+    <value>By:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_FirstIndentationSpecial" xml:space="preserve">
+    <value>Special:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_FirstLineIndentDialogTypes_FirstLine" xml:space="preserve">
+    <value>First line</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_FirstLineIndentDialogTypes_Hanging" xml:space="preserve">
+    <value>Hanging</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_FirstLineIndentDialogTypes_None" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Header" xml:space="preserve">
+    <value>Paragraph Properties</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Indentation" xml:space="preserve">
+    <value>Indentation</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LeftIndentation" xml:space="preserve">
+    <value>Left:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing" xml:space="preserve">
+    <value>Line spacing:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacingAt" xml:space="preserve">
+    <value>At:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_AtLeast" xml:space="preserve">
+    <value>At least</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_Exactly" xml:space="preserve">
+    <value>Exactly</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_LineAndAHalf" xml:space="preserve">
+    <value>1.5 lines</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_Multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_LineSpacing_Single" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Pt" xml:space="preserve">
+    <value>pt</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_RightIndentation" xml:space="preserve">
+    <value>Right:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Spacing" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingAfter" xml:space="preserve">
+    <value>After:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingAfter_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingBefore" xml:space="preserve">
+    <value>Before:</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_SpacingBefore_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_Tabs" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Distribute" xml:space="preserve">
+    <value>Distribute</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Justify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_ParagraphPropertiesDialog_TextAlignment_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_PasteOptions_KeepSourceFormatting" xml:space="preserve">
+    <value>Keep Source Formatting (K)</value>
+  </data>
+  <data name="Documents_PasteOptions_KeepTextOnly" xml:space="preserve">
+    <value>Keep Text Only (T)</value>
+  </data>
+  <data name="Documents_PasteOptions_MergeFormatting" xml:space="preserve">
+    <value>Merge Formatting (M)</value>
+  </data>
+  <data name="Documents_PasteOptions_Name" xml:space="preserve">
+    <value>Paste Options</value>
+  </data>
+  <data name="Documents_PasteOptions_UseDestinationStyles" xml:space="preserve">
+    <value>Use Destination Styles (H)</value>
+  </data>
+  <data name="Documents_PermissionType_Everyone" xml:space="preserve">
+    <value>Everyone</value>
+  </data>
+  <data name="Documents_ProtectDocumentDialog_EnterPassword" xml:space="preserve">
+    <value>Enter new password (optional):</value>
+  </data>
+  <data name="Documents_ProtectDocumentDialog_Header" xml:space="preserve">
+    <value>Start Enforcing Protection</value>
+  </data>
+  <data name="Documents_ProtectDocumentDialog_NoPasswordsMatch" xml:space="preserve">
+    <value>The password confirmation does not match.</value>
+  </data>
+  <data name="Documents_ProtectDocumentDialog_ReenterPassword" xml:space="preserve">
+    <value>Reenter password to confirm:</value>
+  </data>
+  <data name="Documents_RadDocument_FigureCaption" xml:space="preserve">
+    <value>Figure</value>
+  </data>
+  <data name="Documents_RadDocument_TableCaption" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_RadRichTextBox_ColumnBreak" xml:space="preserve">
+    <value>‧‧‧‧‧‧‧ Column Break ‧‧‧‧‧‧‧</value>
+  </data>
+  <data name="Documents_RadRichTextBox_ContinueToNextCommentFromBeginningOfDocument" xml:space="preserve">
+    <value>Do you want to continue searching from the beginning of the document?</value>
+  </data>
+  <data name="Documents_RadRichTextBox_ContinueToPreviousCommentFromEndOfDocument" xml:space="preserve">
+    <value>Do you want to continue searching from the end of the document?</value>
+  </data>
+  <data name="Documents_RadRichTextBox_FinishedSpellChecking" xml:space="preserve">
+    <value>Finished spell checking.</value>
+  </data>
+  <data name="Documents_RadRichTextBox_HtmlPrintPreview_Close" xml:space="preserve">
+    <value>Close </value>
+    <comment>Silverlight only</comment>
+  </data>
+  <data name="Documents_RadRichTextBox_HtmlPrintPreview_Print" xml:space="preserve">
+    <value>Print</value>
+    <comment>Silverlight only</comment>
+  </data>
+  <data name="Documents_RadRichTextBox_HyperlinkToolTipClick" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="Documents_RadRichTextBox_HyperlinkToolTipCtrlClick" xml:space="preserve">
+    <value>Ctrl + Click</value>
+  </data>
+  <data name="Documents_RadRichTextBox_HyperlinkToolTipCurrentDocument" xml:space="preserve">
+    <value>Current Document</value>
+  </data>
+  <data name="Documents_RadRichTextBox_HyperlinkToolTipFormatString" xml:space="preserve">
+    <value>{0}
+{1} to follow link</value>
+  </data>
+  <data name="Documents_RadRichTextBox_PageBreak" xml:space="preserve">
+    <value>‧‧‧‧‧‧‧ Page Break ‧‧‧‧‧‧‧</value>
+  </data>
+  <data name="Documents_RadRichTextBox_SectionBreak" xml:space="preserve">
+    <value>::::::: Section Break ({0}) :::::::</value>
+  </data>
+  <data name="Documents_RadRichTextBox_SectionBreak_Continuous" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
+  <data name="Documents_RadRichTextBox_SectionBreak_EvenPage" xml:space="preserve">
+    <value>Even Page</value>
+  </data>
+  <data name="Documents_RadRichTextBox_SectionBreak_NextPage" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="Documents_RadRichTextBox_SectionBreak_OddPage" xml:space="preserve">
+    <value>Odd Page</value>
+  </data>
+  <data name="Documents_ReferenceTypes_Bookmark" xml:space="preserve">
+    <value>Bookmark</value>
+  </data>
+  <data name="Documents_ReferenceTypes_Heading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="Documents_RowProperties_NextRow" xml:space="preserve">
+    <value>Next Row</value>
+  </data>
+  <data name="Documents_RowProperties_PreviousRow" xml:space="preserve">
+    <value>Previous Row</value>
+  </data>
+  <data name="Documents_RowProperties_RepeatAsHeaderRow" xml:space="preserve">
+    <value>Repeat as header row at the top of each page</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeightAtLeast" xml:space="preserve">
+    <value>at least</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeight_InvalidNumberMessage" xml:space="preserve">
+    <value>Enter a valid number between 0 and 2112.</value>
+  </data>
+  <data name="Documents_RowProperties_RowHeight_InvalidNumberMessageHeader" xml:space="preserve">
+    <value>Row height</value>
+  </data>
+  <data name="Documents_RowProperties_RowIndex" xml:space="preserve">
+    <value>Row Index {0}:</value>
+  </data>
+  <data name="Documents_RowProperties_RowOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Documents_RowProperties_RowSize" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Documents_RowProperties_SpecifyHeight" xml:space="preserve">
+    <value>Specify height:</value>
+  </data>
+  <data name="Documents_SaveCommand_UnableToSaveFile" xml:space="preserve">
+    <value>Unable to save the file.</value>
+  </data>
+  <data name="Documents_SaveCommand_UnsupportedFileFormat" xml:space="preserve">
+    <value>Unsupported file format.</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnNumber" xml:space="preserve">
+    <value>Col #:</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnSpacing" xml:space="preserve">
+    <value>Spacing:</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ColumnWidth" xml:space="preserve">
+    <value>Width: </value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_EqualColumnWidth" xml:space="preserve">
+    <value>Equal column width</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_Header" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_LeftColumns" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_LineBetween" xml:space="preserve">
+    <value>Line between</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_NumberOfColumns" xml:space="preserve">
+    <value>Number of columns: </value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_OneColumn" xml:space="preserve">
+    <value>One</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_Presets" xml:space="preserve">
+    <value>Presets</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_RightColumns" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_ThreeColumns" xml:space="preserve">
+    <value>Three</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_TwoColumns" xml:space="preserve">
+    <value>Two</value>
+  </data>
+  <data name="Documents_SectionColumnsDialog_WidthAndSpacing" xml:space="preserve">
+    <value>Width and spacing</value>
+  </data>
+  <data name="Documents_SetNumberingValueDialog_AdvanceValue" xml:space="preserve">
+    <value>Advance value (skip numbers)</value>
+  </data>
+  <data name="Documents_SetNumberingValueDialog_Header" xml:space="preserve">
+    <value>Set Numbering Value</value>
+  </data>
+  <data name="Documents_SetNumberingValueDialog_LessValue" xml:space="preserve">
+    <value>The value is less than the previous entry in the list.</value>
+  </data>
+  <data name="Documents_SetNumberingValueDialog_StartNewList" xml:space="preserve">
+    <value>Start new list</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_AddToDictionary" xml:space="preserve">
+    <value>Add to Dictionary</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_ChangeAll" xml:space="preserve">
+    <value>Change All</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_ChangeAllUndoGroup_DisplayText" xml:space="preserve">
+    <value>Change All</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_ChangeTo" xml:space="preserve">
+    <value>Change To:</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_EditCustomDictionary" xml:space="preserve">
+    <value>Edit Custom Dictionary...</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_Header" xml:space="preserve">
+    <value>Spell checking</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_Ignore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_IgnoreAll" xml:space="preserve">
+    <value>Ignore All</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_NotInDictionary" xml:space="preserve">
+    <value>Not in Dictionary:</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_SpellingCheckIsComplete" xml:space="preserve">
+    <value>The spelling check is complete.</value>
+  </data>
+  <data name="Documents_SpellCheckingDialog_Suggestions" xml:space="preserve">
+    <value>Suggestions:</value>
+  </data>
+  <data name="Documents_StyleDefinition_BasedOn" xml:space="preserve">
+    <value>Based on:</value>
+  </data>
+  <data name="Documents_StyleDefinition_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Documents_StyleDefinition_LinkedTo" xml:space="preserve">
+    <value>Linked to:</value>
+  </data>
+  <data name="Documents_StyleDefinition_NextStyle" xml:space="preserve">
+    <value>Following style:</value>
+  </data>
+  <data name="Documents_StyleDefinition_Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Documents_StyleDefinition_Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="Documents_StyleDefinition_Table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_StyleDefinition_TableCell" xml:space="preserve">
+    <value>Table Cell</value>
+  </data>
+  <data name="Documents_StyleDefinition_TableRow" xml:space="preserve">
+    <value>Table Row</value>
+  </data>
+  <data name="Documents_StyleDefinition_Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_AddToQuickStyleList" xml:space="preserve">
+    <value>Add to Quick Style list</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_ApplyFormattingTo" xml:space="preserve">
+    <value>Apply formatting to:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Banding" xml:space="preserve">
+    <value>Banding</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_AllBorders" xml:space="preserve">
+    <value>All Borders</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_BottomBorder" xml:space="preserve">
+    <value>Bottom Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_InnerHorizontalBorder" xml:space="preserve">
+    <value>Inner Horizontal Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_InnerVerticalBorder" xml:space="preserve">
+    <value>Inner Vertical Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_InsideBorders" xml:space="preserve">
+    <value>Inside Borders</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_LeftBorder" xml:space="preserve">
+    <value>Left Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_NoBorders" xml:space="preserve">
+    <value>No Borders</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_OutsideBorders" xml:space="preserve">
+    <value>Outside Borders</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_RightBorder" xml:space="preserve">
+    <value>Right Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BorderType_TopBorder" xml:space="preserve">
+    <value>Top Border</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BottomLeftCell" xml:space="preserve">
+    <value>Bottom left cell</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_BottomRightCell" xml:space="preserve">
+    <value>Bottom right cell</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Character" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_CreateStyleHeader" xml:space="preserve">
+    <value>Create New Style from Formatting</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_DefineNewListStyle" xml:space="preserve">
+    <value>Define New List Style</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_DuplicatedStyleName" xml:space="preserve">
+    <value>This style name already exists.</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_EmptyStyleName" xml:space="preserve">
+    <value>Name cannot be empty.</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_EvenColumnBanding" xml:space="preserve">
+    <value>Even banded columns</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_EvenRowBanding" xml:space="preserve">
+    <value>Even banded rows</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_FirstColumn" xml:space="preserve">
+    <value>First column</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_FirstRow" xml:space="preserve">
+    <value>Header row</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Formatting" xml:space="preserve">
+    <value>Formatting</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_LastColumn" xml:space="preserve">
+    <value>Last column</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_LastRow" xml:space="preserve">
+    <value>Total row</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_LinkedStyle" xml:space="preserve">
+    <value>Linked</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_ModifyStyleHeader" xml:space="preserve">
+    <value>Modify style</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NoBandingValue" xml:space="preserve">
+    <value>No banding</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NoStyle" xml:space="preserve">
+    <value>(no style)</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NotSupportedStyleEditing" xml:space="preserve">
+    <value>Editing of style of type {0} is not supported.</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NotSupportedStyleType" xml:space="preserve">
+    <value>This type of style is not supported.</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NumberOfColumnsInColumnBand" xml:space="preserve">
+    <value>Number of columns in column band:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_NumberOfRowsInRowBand" xml:space="preserve">
+    <value>Number of rows in row band:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_OddColumnBanding" xml:space="preserve">
+    <value>Odd banded columns</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_OddRowBanding" xml:space="preserve">
+    <value>Odd banded rows</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_StyleBasedOn" xml:space="preserve">
+    <value>Style based on:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_StyleForFollowingParagraph" xml:space="preserve">
+    <value>Style for following paragraph:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_StyleName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_StyleType" xml:space="preserve">
+    <value>Style type:</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_Table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_TopLeftCell" xml:space="preserve">
+    <value>Top left cell</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_TopRightCell" xml:space="preserve">
+    <value>Top right cell</value>
+  </data>
+  <data name="Documents_StyleFormattingPropertiesDialog_WholeTable" xml:space="preserve">
+    <value>Whole table</value>
+  </data>
+  <data name="Documents_StylesGallery_ScreenTip_Description" xml:space="preserve">
+    <value>Format titles, quotes, and other text using this gallery of styles.</value>
+  </data>
+  <data name="Documents_StylesGallery_ScreenTip_Title" xml:space="preserve">
+    <value>Quick Styles</value>
+  </data>
+  <data name="Documents_StylesGallery_Title" xml:space="preserve">
+    <value>Quick Styles</value>
+  </data>
+  <data name="Documents_TableAndCellPadding_AllTheSame" xml:space="preserve">
+    <value>Same for all sides</value>
+  </data>
+  <data name="Documents_TableAndCellPadding_Bottom" xml:space="preserve">
+    <value>Bottom:</value>
+  </data>
+  <data name="Documents_TableAndCellPadding_Left" xml:space="preserve">
+    <value>Left:</value>
+  </data>
+  <data name="Documents_TableAndCellPadding_Right" xml:space="preserve">
+    <value>Right:</value>
+  </data>
+  <data name="Documents_TableAndCellPadding_Top" xml:space="preserve">
+    <value>Top:</value>
+  </data>
+  <data name="Documents_TableBordersDialog_CellBorders" xml:space="preserve">
+    <value>Cell Borders</value>
+  </data>
+  <data name="Documents_TableBordersDialog_Header" xml:space="preserve">
+    <value>Table Borders</value>
+  </data>
+  <data name="Documents_TableBordersDialog_TableBorders" xml:space="preserve">
+    <value>Table Borders</value>
+  </data>
+  <data name="Documents_TableBorderSelector_AutomaticColorName" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="Documents_TableBorderSelector_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Documents_TableBorderSelector_Preview" xml:space="preserve">
+    <value>Preview:</value>
+  </data>
+  <data name="Documents_TableBorderSelector_Style" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="Documents_TableBorderSelector_Width" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="Documents_TableBorders_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Documents_TableBorders_ApplyBordersText" xml:space="preserve">
+    <value>Click on the image or use the buttons to apply borders</value>
+  </data>
+  <data name="Documents_TableBorders_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="Documents_TableBorders_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Documents_TableBorders_Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="Documents_TableBorders_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Documents_TableBorders_Setting" xml:space="preserve">
+    <value>Setting:</value>
+  </data>
+  <data name="Documents_TableCellBorders_ApplyBordersText" xml:space="preserve">
+    <value>Click on the image or use the buttons to apply borders</value>
+  </data>
+  <data name="Documents_TableCellBorders_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="Documents_TableCellBorders_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Documents_TableCellBorders_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Documents_TableCellBorders_Setting" xml:space="preserve">
+    <value>Setting:</value>
+  </data>
+  <data name="Documents_TableCellProperties_Background" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="Documents_TableCellProperties_CellPaddings" xml:space="preserve">
+    <value>Cell Paddings</value>
+  </data>
+  <data name="Documents_TableCellProperties_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Documents_TableCellProperties_TextAlignment" xml:space="preserve">
+    <value>Text Alignment</value>
+  </data>
+  <data name="Documents_TableCellProperties_TextAlignment_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Documents_TableCellProperties_TextAlignment_Justified" xml:space="preserve">
+    <value>Justified</value>
+  </data>
+  <data name="Documents_TableCellProperties_TextAlignment_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_TableCellProperties_TextAlignment_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_TableCellProperties_VerticalAlignment" xml:space="preserve">
+    <value>Vertical Alignment</value>
+  </data>
+  <data name="Documents_TableCellProperties_VerticalAlignment_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Documents_TableCellProperties_VerticalAlignment_Middle" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="Documents_TableCellProperties_VerticalAlignment_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_CaptionLabel" xml:space="preserve">
+    <value>Caption label:</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_Header" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_PrintPreview" xml:space="preserve">
+    <value>Print Preview</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_PrintPreviewEquation" xml:space="preserve">
+    <value>Equation</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_PrintPreviewFigure" xml:space="preserve">
+    <value>Figure</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_PrintPreviewTable" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_PrintPreview_Heading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_RightAlignPageNumbers" xml:space="preserve">
+    <value>Right align page numbers</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_ShowLevels" xml:space="preserve">
+    <value>Show levels:</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_ShowPageNumbers" xml:space="preserve">
+    <value>Show page numbers</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_TabLeader" xml:space="preserve">
+    <value>Tab Leader:</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_TabLeaderNone" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="Documents_TableofContentsDialog_TOFTabHeader" xml:space="preserve">
+    <value>Table of Figures</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Cell" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Header" xml:space="preserve">
+    <value>Table Properties</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Row" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="Documents_TablePropertiesDialog_Table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Documents_TableProperties_Alignment" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Documents_TableProperties_DefaultCellPaddings" xml:space="preserve">
+    <value>Default cell paddings</value>
+  </data>
+  <data name="Documents_TableProperties_DefaultCellSpacing" xml:space="preserve">
+    <value>Default cell spacing</value>
+  </data>
+  <data name="Documents_TableProperties_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Documents_TableProperties_SpacingBetweenCells" xml:space="preserve">
+    <value>Spacing between cells:</value>
+  </data>
+  <data name="Documents_TableProperties_TableDirection" xml:space="preserve">
+    <value>Table direction</value>
+  </data>
+  <data name="Documents_TableProperties_TableDirection_LeftToRight" xml:space="preserve">
+    <value>Left-to-right</value>
+  </data>
+  <data name="Documents_TableProperties_TableDirection_RightToLeft" xml:space="preserve">
+    <value>Right-to-left</value>
+  </data>
+  <data name="Documents_TableProperties_TableIndent" xml:space="preserve">
+    <value>Indent:</value>
+  </data>
+  <data name="Documents_TableSizePicker_InsertTable" xml:space="preserve">
+    <value>Insert Table</value>
+  </data>
+  <data name="Documents_TableSizePicker_TableSize" xml:space="preserve">
+    <value>{0}x{1} Table</value>
+  </data>
+  <data name="Documents_TableStylesGallery_BuiltInOffice2010TablesHeader" xml:space="preserve">
+    <value>Built-In(Office 2010)</value>
+  </data>
+  <data name="Documents_TableStylesGallery_CustomTablesHeader" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Documents_TableStylesGallery_DeleteBuiltInStyleDialogText" xml:space="preserve">
+    <value>Do you want to remove {0} from the document? The default formatting for the style will remain in the gallery.</value>
+  </data>
+  <data name="Documents_TableStylesGallery_DeleteCustomStyleDialogText" xml:space="preserve">
+    <value>Do you want to delete style {0} from the document?</value>
+  </data>
+  <data name="Documents_TableStylesGallery_DeleteStyleDialogCaption" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Documents_TableStylesGallery_DeleteTableStylePopupMenuItemHeader" xml:space="preserve">
+    <value>Delete Table Style...</value>
+  </data>
+  <data name="Documents_TableStylesGallery_GridTablesHeader" xml:space="preserve">
+    <value>Grid Tables</value>
+  </data>
+  <data name="Documents_TableStylesGallery_ListTablesHeader" xml:space="preserve">
+    <value>List Tables</value>
+  </data>
+  <data name="Documents_TableStylesGallery_ModifyTableStylePopupMenuItemHeader" xml:space="preserve">
+    <value>Modify Table Style...</value>
+  </data>
+  <data name="Documents_TableStylesGallery_NewTableStylePopupMenuItemHeader" xml:space="preserve">
+    <value>New Table Style...</value>
+  </data>
+  <data name="Documents_TableStylesGallery_PlainTablesHeader" xml:space="preserve">
+    <value>Plain Tables</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Alignment" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_DefaultTabStop" xml:space="preserve">
+    <value>Default tab stops:</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Header" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_InValidTabStop" xml:space="preserve">
+    <value>This is not a valid tab stop.</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Leader" xml:space="preserve">
+    <value>Leader</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_ProblemRemovingTabStop" xml:space="preserve">
+    <value>Problem in removing tab stop.</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_TabsToBeCleared" xml:space="preserve">
+    <value>Tab stops to be cleared:</value>
+  </data>
+  <data name="Documents_TabStopsPropertiesDialog_TabStopPosition" xml:space="preserve">
+    <value>Tab stop position:</value>
+  </data>
+  <data name="Documents_ThickLineDecoration_ThickLine" xml:space="preserve">
+    <value>Thick line</value>
+  </data>
+  <data name="Documents_TrackChanges_ContinueSearchingFromBeginning" xml:space="preserve">
+    <value>Do you want to continue searching from the beginning of the document?</value>
+  </data>
+  <data name="Documents_TrackChanges_ContinueSearchingFromEnd" xml:space="preserve">
+    <value>Do you want to continue searching from the end of the document?</value>
+  </data>
+  <data name="Documents_TrackChanges_NoChanges" xml:space="preserve">
+    <value>The document contains no changes.</value>
+  </data>
+  <data name="Documents_TrackChanges_UntrackableChange" xml:space="preserve">
+    <value>This action will not be marked as change. Do you want to continue?</value>
+  </data>
+  <data name="Documents_TrackChanges_UntrackableChangeTitle" xml:space="preserve">
+    <value>Confirm Action</value>
+  </data>
+  <data name="Documents_UnprotectDocumentDialog_EnterPassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="Documents_UnprotectDocumentDialog_Header" xml:space="preserve">
+    <value>Unprotect Document</value>
+  </data>
+  <data name="Documents_UnprotectDocumentDialog_IncorrectPassword" xml:space="preserve">
+    <value>The password is incorrect.</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_Buttons_InsertPicture" xml:space="preserve">
+    <value>Insert Picture...</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_Header" xml:space="preserve">
+    <value>Custom Watermark Settings</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_NoWatermark" xml:space="preserve">
+    <value>No watermark</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_PictureWatermark" xml:space="preserve">
+    <value>Picture watermark</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_Text" xml:space="preserve">
+    <value>CONFIDENTIAL</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Font" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Layout" xml:space="preserve">
+    <value>Layout:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_LayoutDiagonal" xml:space="preserve">
+    <value>Diagonal</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_LayoutHorizontal" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Semitransparent" xml:space="preserve">
+    <value>Semitransparent</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Text" xml:space="preserve">
+    <value>Text:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextSettings_Transparency" xml:space="preserve">
+    <value>Transparency:</value>
+  </data>
+  <data name="Documents_WatermarkSettingsDialog_TextWatermark" xml:space="preserve">
+    <value>Text watermark</value>
+  </data>
+  <data name="Documents_WaveDecoration_WaveLine" xml:space="preserve">
+    <value>Wave line</value>
+  </data>
+</root>

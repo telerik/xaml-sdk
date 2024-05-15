@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<folders>
+  <folder Name="Program Files" CreationTime="11/17/2009 2:52:52 PM" IsEmpty="False">
+    <folder Name="Common Files" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+      <folder Name="Microsoft Shared" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+        <folder Name="DW" CreationTime="11/17/2009 4:11:42 PM" IsEmpty="True" />
+        <folder Name="Filters" CreationTime="11/17/2009 3:22:19 PM" IsEmpty="True" />
+        <folder Name="ink" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="ar-SA" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="bg-BG" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="cs-CZ" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="da-DK" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="de-DE" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="el-GR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="en-US" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="es-ES" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="et-EE" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="fi-FI" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="fr-FR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="fsdefinitions" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+            <folder Name="auxpad" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="keypad" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="main" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="numbers" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="oskmenu" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="osknumpad" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="oskpred" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="symbols" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            <folder Name="web" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          </folder>
+          <folder Name="he-IL" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="hr-HR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="hu-HU" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="it-IT" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="ja-JP" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="ko-KR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="lt-LT" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="lv-LV" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="nb-NO" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="nl-NL" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="pl-PL" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="pt-BR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="pt-PT" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="ro-RO" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="ru-RU" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="sk-SK" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="sl-SI" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="sr-Latn-CS" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="sv-SE" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="th-TH" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="tr-TR" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="uk-UA" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="zh-CN" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+          <folder Name="zh-TW" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="MSEnv" CreationTime="3/9/2011 12:55:21 PM" IsEmpty="True" />
+        <folder Name="MSInfo" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="OFFICE11" CreationTime="11/17/2009 3:22:19 PM" IsEmpty="False">
+          <folder Name="1033" CreationTime="11/17/2009 3:22:19 PM" IsEmpty="True" />
+        </folder>
+        <folder Name="OFFICE12" CreationTime="11/17/2009 3:22:19 PM" IsEmpty="True" />
+        <folder Name="OFFICE14" CreationTime="11/16/2011 12:11:39 PM" IsEmpty="False">
+          <folder Name="Cultures" CreationTime="11/17/2011 10:06:28 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="OfficeSoftwareProtectionPlatform" CreationTime="11/16/2011 12:11:40 PM" IsEmpty="True" />
+        <folder Name="SQL Debugging" CreationTime="1/12/2010 4:15:17 PM" IsEmpty="True" />
+        <folder Name="Stationery" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+        <folder Name="Team Foundation Server" CreationTime="4/13/2010 8:20:26 AM" IsEmpty="False">
+          <folder Name="10.0" CreationTime="4/13/2010 8:20:26 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="TextConv" CreationTime="7/14/2009 5:32:38 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="Triedit" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="VC" CreationTime="10/21/2010 8:29:52 AM" IsEmpty="True" />
+        <folder Name="VGX" CreationTime="7/14/2009 5:32:38 AM" IsEmpty="True" />
+        <folder Name="VS7Debug" CreationTime="11/17/2009 3:40:46 PM" IsEmpty="False">
+          <folder Name="1033" CreationTime="4/13/2010 8:19:40 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="VSTO" CreationTime="3/9/2011 12:58:01 PM" IsEmpty="False">
+          <folder Name="10.0" CreationTime="3/9/2011 12:58:01 PM" IsEmpty="False">
+            <folder Name="1033" CreationTime="3/9/2011 12:58:06 PM" IsEmpty="True" />
+            <folder Name="Microsoft Visual Studio 2010 Tools for Office Runtime (x64)" CreationTime="3/9/2011 12:58:01 PM" IsEmpty="True" />
+          </folder>
+        </folder>
+        <folder Name="WF" CreationTime="4/13/2010 8:19:40 AM" IsEmpty="False">
+          <folder Name="amd64" CreationTime="4/13/2010 8:19:40 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="Windows Live" CreationTime="4/7/2011 11:45:24 AM" IsEmpty="True" />
+      </folder>
+      <folder Name="Services" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+      <folder Name="SpeechEngines" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+        <folder Name="Microsoft" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="TTS20" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+            <folder Name="en-US" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+              <folder Name="enu-dsk" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="True" />
+            </folder>
+          </folder>
+        </folder>
+      </folder>
+      <folder Name="Symantec Shared" CreationTime="11/18/2009 12:50:37 PM" IsEmpty="False">
+        <folder Name="Common Client" CreationTime="11/18/2009 12:50:37 PM" IsEmpty="True" />
+        <folder Name="SPManifests" CreationTime="11/18/2009 12:51:16 PM" IsEmpty="True" />
+      </folder>
+      <folder Name="System" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+        <folder Name="ado" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        <folder Name="msadc" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="Ole DB" CreationTime="7/14/2009 3:20:08 AM" IsEmpty="False">
+          <folder Name="en-US" CreationTime="7/14/2009 5:37:47 AM" IsEmpty="True" />
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="Microsoft" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="False">
+      <folder Name="Web Platform Installer" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="False">
+        <folder Name="de" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="True" />
+        <folder Name="en" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="True" />
+        <folder Name="es" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="True" />
+        <folder Name="fr" CreationTime="12/17/2009 12:34:27 PM" IsEmpty="True" />
+        <folder Name="it" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+        <folder Name="ja" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+        <folder Name="ko" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+        <folder Name="ru" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+        <folder Name="zh-CHS" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+        <folder Name="zh-CHT" CreationTime="12/17/2009 12:34:28 PM" IsEmpty="True" />
+      </folder>
+    </folder>
+    <folder Name="Microsoft Office" CreationTime="11/17/2009 3:21:46 PM" IsEmpty="False">
+      <folder Name="Office12" CreationTime="11/17/2009 3:21:46 PM" IsEmpty="False">
+        <folder Name="1033" CreationTime="11/17/2009 3:21:46 PM" IsEmpty="True" />
+      </folder>
+      <folder Name="Office14" CreationTime="11/16/2011 12:11:01 PM" IsEmpty="False">
+        <folder Name="1033" CreationTime="11/16/2011 12:11:01 PM" IsEmpty="True" />
+      </folder>
+    </folder>
+    <folder Name="Microsoft Sync Framework" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+      <folder Name="v1.0" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+        <folder Name="Documentation" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+          <folder Name="1033" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+            <folder Name="License Agreements" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="True" />
+          </folder>
+        </folder>
+        <folder Name="Runtime" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+          <folder Name="ADO.NET" CreationTime="4/13/2010 8:30:48 AM" IsEmpty="False">
+            <folder Name="V2.0" CreationTime="4/13/2010 8:30:48 AM" IsEmpty="False">
+              <folder Name="x64" CreationTime="4/13/2010 8:30:48 AM" IsEmpty="True" />
+            </folder>
+          </folder>
+          <folder Name="x64" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+            <folder Name="resources" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="False">
+              <folder Name="1033" CreationTime="4/13/2010 8:30:47 AM" IsEmpty="True" />
+            </folder>
+          </folder>
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="Microsoft Synchronization Services" CreationTime="4/13/2010 8:30:44 AM" IsEmpty="False">
+      <folder Name="ADO.NET" CreationTime="4/13/2010 8:30:44 AM" IsEmpty="False">
+        <folder Name="v1.0" CreationTime="4/13/2010 8:30:44 AM" IsEmpty="True" />
+      </folder>
+    </folder>
+    <folder Name="Microsoft Visual Studio 10.0" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="False">
+      <folder Name="Common7" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="False">
+        <folder Name="IDE" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="False">
+          <folder Name="PrivateAssemblies" CreationTime="4/13/2010 8:19:40 AM" IsEmpty="False">
+            <folder Name="1033" CreationTime="3/9/2011 12:55:17 PM" IsEmpty="True" />
+          </folder>
+          <folder Name="Xml" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="True" />
+        </folder>
+        <folder Name="Packages" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="False">
+          <folder Name="Debugger" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="False">
+            <folder Name="X64" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="True" />
+            <folder Name="x86" CreationTime="4/13/2010 8:19:39 AM" IsEmpty="True" />
+          </folder>
+        </folder>
+      </folder>
+      <folder Name="Team Tools" CreationTime="4/13/2010 8:30:59 AM" IsEmpty="False">
+        <folder Name="TraceDebugger Tools" CreationTime="4/13/2010 8:30:59 AM" IsEmpty="False">
+          <folder Name="1033" CreationTime="4/13/2010 8:30:59 AM" IsEmpty="True" />
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="Microsoft Visual Studio 9.0" CreationTime="11/17/2009 3:40:46 PM" IsEmpty="False">
+      <folder Name="Common7" CreationTime="11/17/2009 3:40:46 PM" IsEmpty="False">
+        <folder Name="IDE" CreationTime="11/17/2009 3:40:46 PM" IsEmpty="False">
+          <folder Name="Remote Debugger" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="False">
+            <folder Name="x64" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="False">
+              <folder Name="1033" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="True" />
+            </folder>
+            <folder Name="x86" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="False">
+              <folder Name="1033" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="True" />
+            </folder>
+          </folder>
+          <folder Name="Xml" CreationTime="11/17/2009 3:40:46 PM" IsEmpty="True" />
+        </folder>
+        <folder Name="Packages" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="False">
+          <folder Name="Debugger" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="False">
+            <folder Name="X64" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="True" />
+            <folder Name="x86" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="True" />
+          </folder>
+        </folder>
+      </folder>
+      <folder Name="Microsoft Visual Studio 2008 Remote Debugger - ENU" CreationTime="11/17/2009 3:46:28 PM" IsEmpty="True" />
+    </folder>
+    <folder Name="Microsoft Windows Performance Toolkit" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="False">
+      <folder Name="GPUView" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="False">
+        <folder Name="plugins" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="True" />
+        <folder Name="tplugins" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="True" />
+      </folder>
+      <folder Name="WPF Performance Suite" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="False">
+        <folder Name="Config" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="True" />
+        <folder Name="Demo Applications" CreationTime="10/21/2010 8:43:58 AM" IsEmpty="True" />
+      </folder>
+    </folder>
+    <folder Name="Microsoft.NET" CreationTime="12/17/2009 12:39:51 PM" IsEmpty="False">
+      <folder Name="ADOMD.NET" CreationTime="12/17/2009 12:39:51 PM" IsEmpty="False">
+        <folder Name="100" CreationTime="12/17/2009 12:39:51 PM" IsEmpty="True" />
+      </folder>
+    </folder>
+  </folder>
+</folders>

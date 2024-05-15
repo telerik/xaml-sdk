@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListBoxDragDropBehavior_WPF", "CustomListBoxDragDropBehavior\CustomListBoxDragDropBehavior_WPF.csproj", "{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDropCueWithWrapPanel_WPF", "CustomDropCueWithWrapPanel\CustomDropCueWithWrapPanel_WPF.csproj", "{7267FE87-2911-43B7-BE48-F0B599BA71FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItems_WPF", "SelectedItems\SelectedItems_WPF.csproj", "{651C4722-1D53-4090-8E59-275C446161AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDragVisualStyle_WPF", "CustomDragVisualStyle\CustomDragVisualStyle_WPF.csproj", "{00792FFE-E34A-4DE6-A082-CDC345C04F03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropWithScheduleView_WPF", "DragDropWithScheduleView\DragDropWithScheduleView_WPF.csproj", "{D427F3F8-1FE9-4B75-A1BB-D65B20462100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropDataConversion_WPF", "DragDropDataConversion\DragDropDataConversion_WPF.csproj", "{A6D83707-BF53-4E68-BC9D-BE9AB65BCC6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyListBoxDragVisualStyle_WPF", "ModifyListBoxDragVisualStyle\ModifyListBoxDragVisualStyle_WPF.csproj", "{2F73542F-A91B-4BF0-8065-44AD33C6E80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentlyColoredUnfocusedSelectedItems_WPF", "DifferentlyColoredUnfocusedSelectedItems\DifferentlyColoredUnfocusedSelectedItems_WPF.csproj", "{3209856E-773C-4C5D-9881-B4A7AEA9C19D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedItemsSource_WPF", "SelectedItemsSource\SelectedItemsSource_WPF.csproj", "{E0C171E0-6060-491A-81BA-F8020D4504DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuttleControl_WPF", "ShuttleControl\ShuttleControl_WPF.csproj", "{B1209742-ECB7-459D-964B-56D0C3B56FD9}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA062B8E-56C4-4CF1-93DC-03C9DCA90CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7267FE87-2911-43B7-BE48-F0B599BA71FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651C4722-1D53-4090-8E59-275C446161AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00792FFE-E34A-4DE6-A082-CDC345C04F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D427F3F8-1FE9-4B75-A1BB-D65B20462100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D83707-BF53-4E68-BC9D-BE9AB65BCC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D83707-BF53-4E68-BC9D-BE9AB65BCC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D83707-BF53-4E68-BC9D-BE9AB65BCC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D83707-BF53-4E68-BC9D-BE9AB65BCC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F73542F-A91B-4BF0-8065-44AD33C6E80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F73542F-A91B-4BF0-8065-44AD33C6E80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F73542F-A91B-4BF0-8065-44AD33C6E80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F73542F-A91B-4BF0-8065-44AD33C6E80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3209856E-773C-4C5D-9881-B4A7AEA9C19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C171E0-6060-491A-81BA-F8020D4504DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1209742-ECB7-459D-964B-56D0C3B56FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1209742-ECB7-459D-964B-56D0C3B56FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1209742-ECB7-459D-964B-56D0C3B56FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1209742-ECB7-459D-964B-56D0C3B56FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

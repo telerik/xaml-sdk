@@ -1,0 +1,32 @@
+﻿<Window x:Class="FileUploadWithEditorTemplateSelector_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        xmlns:local="clr-namespace:FileUploadWithEditorTemplateSelector"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.Resources>
+            <local:FileUploadTemplateSelector x:Key="dataTemplateSelector">
+                <local:FileUploadTemplateSelector.OpenFileDialogTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox telerik:AutoBindBehavior.UpdateBindingOnElementLoaded="Text" Grid.Column="0"/>
+                            <Button Padding="5, 0" Content="..." Grid.Column="1" Click="SelectFileClick"/>
+                        </Grid>
+                    </DataTemplate>
+                </local:FileUploadTemplateSelector.OpenFileDialogTemplate>
+                <local:FileUploadTemplateSelector.NumericPropertyTemplate>
+                    <DataTemplate>
+                        <telerik:RadNumericUpDown telerik:AutoBindBehavior.UpdateBindingOnElementLoaded="Value" />
+                    </DataTemplate>
+                </local:FileUploadTemplateSelector.NumericPropertyTemplate>
+            </local:FileUploadTemplateSelector>
+        </Grid.Resources>
+
+        <telerik:RadPropertyGrid x:Name="PropertyGrid1" EditorTemplateSelector="{StaticResource dataTemplateSelector}" />
+    </Grid>
+</Window>

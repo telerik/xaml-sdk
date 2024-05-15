@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" mc:Ignorable="d"
+             xmlns:my="clr-namespace:ComboboxColumn"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <my:MyViewModel x:Key="MyViewModel"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <telerik:RadGridView Grid.Row="0" 
+                             Name="pilotsGrid" 
+                             ValidatesOnDataErrors="None"
+                             ItemsSource="{Binding Pilots}"
+                             AutoGenerateColumns="False"
+                             Margin="5">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewComboBoxColumn DataMemberBinding="{Binding CountryId}"
+                                                IsComboBoxEditable="True"
+                                                UniqueName="Country"
+                                                SelectedValueMemberPath="Id"
+                                                DisplayMemberPath="Name" />
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding FirstName}"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding LastName}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</UserControl>

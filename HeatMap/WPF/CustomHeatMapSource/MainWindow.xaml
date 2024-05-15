@@ -1,0 +1,19 @@
+﻿<Window x:Class="CustomHeatMapSourceAndDefinition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid>
+        <telerik:RadHeatMap x:Name="heatmap">
+            <telerik:RadHeatMap.RowHeaderSettings>
+                <telerik:HeatMapRowHeaderSettings LabelInterval="100" LabelClipToBounds="False" />
+            </telerik:RadHeatMap.RowHeaderSettings>
+            <telerik:RadHeatMap.ColumnHeaderSettings>
+                <telerik:HeatMapColumnHeaderSettings LabelInterval="200" LabelClipToBounds="False" />
+            </telerik:RadHeatMap.ColumnHeaderSettings>            
+        </telerik:RadHeatMap>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="BingGeoDataAPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid Background="{telerik:FluentResource ResourceKey=BasicBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10 10 0 10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <telerik:RadWatermarkTextBox x:Name="appIdInput" WatermarkContent="Enter Bing Maps Application Id"/>
+                <telerik:RadButton HorizontalAlignment="Right" Margin="10 0" Grid.Column="1"
+                                   Width="150" Content="Set Id" Click="OnSetIdClick" />
+            </Grid>
+            <Grid x:Name="searchBarPanel" IsEnabled="False" Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <telerik:RadWatermarkTextBox x:Name="textInput" WatermarkContent="Enter address"/>
+                <telerik:RadButton Grid.Column="1" Click="OnSearchClick" IsDefault="True"
+                                   Content="Search" Width="150" Margin="10 0" />
+            </Grid>
+        </StackPanel>
+        <telerik:RadMap x:Name="radMap" Margin="10" Center="43.7, -79.3834" ZoomLevel="10" Grid.Row="1">
+            <telerik:RadMap.Provider>
+                <telerik:BingRestMapProvider x:Name="bingProvider"/>
+            </telerik:RadMap.Provider>
+            <telerik:VisualizationLayer x:Name="vizLayer">
+                <telerik:VisualizationLayer.ShapeFill>
+                    <telerik:MapShapeFill Fill="#220000FF" Stroke="Blue" StrokeThickness="2" />
+                </telerik:VisualizationLayer.ShapeFill>
+            </telerik:VisualizationLayer>
+        </telerik:RadMap>
+    </Grid>
+</Window>

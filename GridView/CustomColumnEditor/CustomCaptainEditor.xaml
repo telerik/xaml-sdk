@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="CustomColumnEditor.CustomCaptainEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:my="clr-namespace:CustomColumnEditor"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBox Text="{Binding CaptainName, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=my:CustomCaptainEditor}}"/>
+        <telerik:RadComboBox   Grid.Column="1" SelectedValue="{Binding CaptainPosition, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=my:CustomCaptainEditor}}" 
+                               ItemsSource="{Binding Positions, RelativeSource={RelativeSource AncestorType=my:CustomCaptainEditor}}"
+                               DisplayMemberPath="Name" SelectedValuePath="Value"/>
+    </Grid>
+</UserControl>

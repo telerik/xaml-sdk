@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="AvoidOverlappingAppointments.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+	xmlns:local="clr-namespace:AvoidOverlappingAppointments"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="RadScheduleForeground" Color="Black" />
+        <telerik:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+        <telerik:InvertedNullToVisibilityConverter x:Key="InvertedNullToVisibilityConverter" />
+        <telerik:AppointmentsSubjectToLocalizatedStringConverter DefaultTextKey="Untitled" x:Key="AppointmentsSubjectToLocalizatedStringConverter"/>
+        <ControlTemplate x:Key="RecurrenceChoiceDragDropTemplate" TargetType="telerik:SchedulerDialog">
+            <StackPanel>
+                <StackPanel Margin="15 15 15 15">
+                    <TextBlock Text="{Binding Occurrence.Appointment.Subject,Converter={StaticResource AppointmentsSubjectToLocalizatedStringConverter}, ConverterParameter=DragRecurringItemQuestion}" TextWrapping="Wrap" Margin="3"/>
+                    <RadioButton Margin="3 9 3 3" telerik:LocalizationManager.ResourceKey="DragDropOccurrence" GroupName="RecurrenceModeChoice" IsChecked="{Binding IsOccurrenceModeSelected, Mode=TwoWay}" />
+                    <RadioButton Margin="3" telerik:LocalizationManager.ResourceKey="DragDropSeries" GroupName="RecurrenceModeChoice" IsChecked="{Binding IsSeriesModeSelected, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel x:Name="FooterControls" Grid.Row="2" Margin="13 6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+                    <telerik:RadButton Margin="2" MinWidth="84" telerik:LocalizationManager.ResourceKey="Ok" 
+                                       Click="OkButton_Click"
+                                       telerik:RadWindow.ResponseButton="Accept"></telerik:RadButton>
+                    <telerik:RadButton Margin="2" MinWidth="84" telerik:LocalizationManager.ResourceKey="Cancel" Command="telerik:WindowCommands.Cancel" telerik:RadWindow.ResponseButton="Cancel"></telerik:RadButton>
+                </StackPanel>
+            </StackPanel>
+        </ControlTemplate>
+        <Style x:Key="CustomRecurrenceChoiceDragDropDialogStyle" TargetType="telerik:SchedulerDialog">
+            <Setter Property="Foreground" Value="{StaticResource RadScheduleForeground}" />
+            <Setter Property="Width" Value="350" />
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock MaxWidth="200" HorizontalAlignment="Left" telerik:LocalizationManager.ResourceKey="AppointmentRecurrence" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template" Value="{StaticResource RecurrenceChoiceDragDropTemplate}" />
+        </Style>
+
+        <ControlTemplate x:Key="RecurrenceChoiceResizeTemplate" TargetType="telerik:SchedulerDialog">
+            <StackPanel>
+                <StackPanel Margin="15 15 15 15" VerticalAlignment="Top">
+                    <TextBlock Text="{Binding Occurrence.Appointment.Subject, Converter={StaticResource AppointmentsSubjectToLocalizatedStringConverter}, ConverterParameter=ResizeRecurringItemQuestion}" TextWrapping="Wrap" Margin="3"/>
+                    <RadioButton
+                        Margin="3 9 3 3"
+                        telerik:LocalizationManager.ResourceKey="ResizeOccurrence"
+                        GroupName="RecurrenceModeChoice"
+                        IsChecked="{Binding IsOccurrenceModeSelected, Mode=TwoWay}"/>
+                    <RadioButton Margin="3" telerik:LocalizationManager.ResourceKey="ResizeSeries" GroupName="RecurrenceModeChoice" IsChecked="{Binding IsSeriesModeSelected, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel x:Name="FooterControls" Grid.Row="2" Margin="13 6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+                    <telerik:RadButton Margin="2" MinWidth="84" telerik:LocalizationManager.ResourceKey="Ok" 
+                                       Click="OkButton_Click"
+                                       telerik:RadWindow.ResponseButton="Accept"/>
+                    <telerik:RadButton Margin="2" MinWidth="84" telerik:LocalizationManager.ResourceKey="Cancel" Command="telerik:WindowCommands.Cancel" telerik:RadWindow.ResponseButton="Cancel"/>
+                </StackPanel>
+            </StackPanel>
+        </ControlTemplate>
+        
+        <Style x:Key="CustomRecurrenceChoiceResizeDialogStyle" TargetType="telerik:SchedulerDialog">
+            <Setter Property="Foreground" Value="{StaticResource RadScheduleForeground}"/>
+            <Setter Property="Width" Value="350"/>
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock MaxWidth="200" HorizontalAlignment="Left" telerik:LocalizationManager.ResourceKey="AppointmentRecurrence"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template" Value="{StaticResource RecurrenceChoiceResizeTemplate}"/>
+        </Style>
+        
+    </UserControl.Resources>   
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadScheduleView x:Name="scheduleView" 
+				AppointmentsSource="{Binding Appointments}"		
+                SelectedAppointment="{Binding SelectedAppointment, Mode=TwoWay}"
+                ShowDialog="RadScheduleView_ShowDialog"    FirstDayOfWeek="Sunday"
+                RecurrenceChoiceDragDropDialogStyle="{StaticResource CustomRecurrenceChoiceDragDropDialogStyle}"
+                RecurrenceChoiceResizeDialogStyle="{StaticResource CustomRecurrenceChoiceResizeDialogStyle}"                                       
+				>
+            <telerik:RadScheduleView.ViewDefinitions>
+                <telerik:WeekViewDefinition />
+            </telerik:RadScheduleView.ViewDefinitions>
+            <telerik:RadScheduleView.ResourceTypesSource>
+                <telerik:ResourceTypeCollection>
+                    <telerik:ResourceType Name="Room">
+                        <telerik:Resource ResourceName="Room 1" />
+                        <telerik:Resource ResourceName="Room 2" />
+                    </telerik:ResourceType>
+                </telerik:ResourceTypeCollection>
+            </telerik:RadScheduleView.ResourceTypesSource>
+            <telerik:RadScheduleView.GroupDescriptionsSource>
+                <telerik:GroupDescriptionCollection>
+                    <telerik:ResourceGroupDescription ResourceType="Room" />
+                </telerik:GroupDescriptionCollection>
+            </telerik:RadScheduleView.GroupDescriptionsSource>
+            <telerik:RadScheduleView.DragDropBehavior>
+                <local:ConflictCheckingDragDropBehavior  />
+            </telerik:RadScheduleView.DragDropBehavior>
+        </telerik:RadScheduleView>
+    </Grid>
+</UserControl>

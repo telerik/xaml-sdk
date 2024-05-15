@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAccentColors", "FluentAccentColors\FluentAccentColors.csproj", "{990CD660-E978-4B7A-886E-5FEDEE44CE0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveOpacityInFluentTheme", "RemoveOpacityInFluentTheme\RemoveOpacityInFluentTheme.csproj", "{E458D860-C5CD-49C3-882B-B9CC4F189FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePaletteSettingsPerControl", "ChangePaletteSettingsPerControl\ChangePaletteSettingsPerControl.csproj", "{D67CDF13-CE55-41D9-8BA1-20FF5CF919CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeThemeVariationRuntime", "ChangeThemeVariationRuntime\ChangeThemeVariationRuntime.csproj", "{1AB47EF6-CD4F-4CB0-8824-240ABEF3E8CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeThemeRuntime", "ChangeThemeRuntime\ChangeThemeRuntime.csproj", "{20EC93F8-0851-4C1E-ADB7-A94E831FE218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaletteResourcesExtractor", "PaletteResourcesExtractor\PaletteResourcesExtractor.csproj", "{4E8921AA-2E7F-48C2-A0ED-44CE4C6F9B80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{990CD660-E978-4B7A-886E-5FEDEE44CE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990CD660-E978-4B7A-886E-5FEDEE44CE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990CD660-E978-4B7A-886E-5FEDEE44CE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990CD660-E978-4B7A-886E-5FEDEE44CE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E458D860-C5CD-49C3-882B-B9CC4F189FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E458D860-C5CD-49C3-882B-B9CC4F189FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E458D860-C5CD-49C3-882B-B9CC4F189FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E458D860-C5CD-49C3-882B-B9CC4F189FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67CDF13-CE55-41D9-8BA1-20FF5CF919CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67CDF13-CE55-41D9-8BA1-20FF5CF919CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67CDF13-CE55-41D9-8BA1-20FF5CF919CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67CDF13-CE55-41D9-8BA1-20FF5CF919CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB47EF6-CD4F-4CB0-8824-240ABEF3E8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB47EF6-CD4F-4CB0-8824-240ABEF3E8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB47EF6-CD4F-4CB0-8824-240ABEF3E8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB47EF6-CD4F-4CB0-8824-240ABEF3E8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EC93F8-0851-4C1E-ADB7-A94E831FE218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EC93F8-0851-4C1E-ADB7-A94E831FE218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EC93F8-0851-4C1E-ADB7-A94E831FE218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EC93F8-0851-4C1E-ADB7-A94E831FE218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8921AA-2E7F-48C2-A0ED-44CE4C6F9B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8921AA-2E7F-48C2-A0ED-44CE4C6F9B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8921AA-2E7F-48C2-A0ED-44CE4C6F9B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8921AA-2E7F-48C2-A0ED-44CE4C6F9B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="ExportToPDF_SL.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<telerik:RadDiagramToolbox x:Name="toolBox"
+		                           Title="Gallery"
+		                           Grid.Column="1"
+		                           Margin="5 0 0 0"
+		                           Header="ToolBox" />
+		<telerik:RadDiagram x:Name="diagram">
+			<primitives:ItemInformationAdorner.AdditionalContent>
+				<telerik:SettingsPane Diagram="{Binding ElementName=diagram}" />
+			</primitives:ItemInformationAdorner.AdditionalContent>
+			<telerik:RadDiagramShape x:Name="shape1"
+			                         Content="This is some text"
+			                         Position="200 160">
+				<telerik:RadDiagramShape.Background>
+					<RadialGradientBrush Center=" 0.5, 0.5" GradientOrigin="0.5, 0.5" RadiusX="0.5" RadiusY="0.5">
+						<RadialGradientBrush.GradientStops>
+							<GradientStop Offset="0" Color="Red" />
+							<GradientStop Offset="0.5" Color="Blue" />
+							<GradientStop Offset="1" Color="LimeGreen" />
+						</RadialGradientBrush.GradientStops>
+					</RadialGradientBrush>
+				</telerik:RadDiagramShape.Background>
+			</telerik:RadDiagramShape>
+			<telerik:RadDiagramShape x:Name="shape2"
+			                         Height="160"
+			                         Content="Shape 2"
+			                         Geometry="{telerik:CommonShape ShapeType=OctagonShape}"
+			                         Position="540 50"
+			                         RotationAngle="76">
+				<telerik:RadDiagramShape.Background>
+					<RadialGradientBrush Center=" 0.5, 0.5" GradientOrigin="0.5, 0.5" RadiusX="0.5" RadiusY="0.5">
+						<RadialGradientBrush.GradientStops>
+							<GradientStop Offset="0" Color="Red" />
+							<GradientStop Offset="0.5" Color="Blue" />
+							<GradientStop Offset="1" Color="LimeGreen" />
+						</RadialGradientBrush.GradientStops>
+					</RadialGradientBrush>
+				</telerik:RadDiagramShape.Background>
+			</telerik:RadDiagramShape>
+			<telerik:RadDiagramShape x:Name="shape3"
+			                         Width="180"
+			                         Content="Shape 3"
+			                         Geometry="{telerik:ArrowShape ShapeType=DoubleArrow4}"
+			                         Position="600 320" />
+			<telerik:RadDiagramShape Width="180"
+			                         Content="Shape 4"
+			                         Geometry="{telerik:ArrowShape ShapeType=DoubleArrow4}"
+			                         Position="600 320"
+			                         RotationAngle="90" />
+			<telerik:RadDiagramShape x:Name="shape4"
+			                         Geometry="{telerik:FlowChartShape ShapeType=FeedbackShape}"
+			                         Position="200 400" />
+			<telerik:RadDiagramContainerShape Width="300"
+			                                  Background="Pink"
+			                                  Position="180 150" />
+			<telerik:RadDiagramContainerShape IsCollapsible="True" Position="880 190" />
+			<telerik:RadDiagramTextShape Width="200"
+			                             Height="80"
+			                             Content="textShape"
+			                             Position="800 450"
+			                             RotationAngle="45">
+				<telerik:RadDiagramTextShape.Background>
+					<LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+						<GradientStop Offset="0" Color="White" />
+						<GradientStop Offset="0.5" Color="Green" />
+						<GradientStop Offset="1" Color="Red" />
+					</LinearGradientBrush>
+				</telerik:RadDiagramTextShape.Background>
+			</telerik:RadDiagramTextShape>
+			<telerik:RadDiagramTextShape Content="some text shape"
+			                             Position="150 700"
+			                             RotationAngle="10" />
+			<telerik:RadDiagramConnection Background="Red"
+			                              Source="{Binding ElementName=shape1}"
+			                              Target="{Binding ElementName=shape2}"
+			                              TargetCapType="Arrow6Filled">
+				<telerik:RadDiagramConnection.Stroke>
+					<LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+						<GradientStop Offset="0" Color="Red" />
+						<GradientStop Offset="0.5" Color="Blue" />
+						<GradientStop Offset="1" Color="Green" />
+					</LinearGradientBrush>
+				</telerik:RadDiagramConnection.Stroke>
+			</telerik:RadDiagramConnection>
+			<telerik:RadDiagramConnection Background="Red"
+			                              Source="{Binding ElementName=shape2}"
+			                              Target="{Binding ElementName=shape3}"
+			                              TargetCapType="Arrow2" />
+			<telerik:RadDiagramConnection Background="Green"
+			                              ConnectionType="Bezier"
+			                              Source="{Binding ElementName=shape3}"
+			                              Target="{Binding ElementName=shape4}"
+			                              TargetCapType="Arrow4" />
+			<telerik:RadDiagramConnection Background="Blue"
+			                              BezierTension="1"
+			                              ConnectionType="Polyline"
+			                              Source="{Binding ElementName=shape4}"
+			                              Target="{Binding ElementName=shape1}"
+			                              TargetCapType="Arrow1Filled" />
+		</telerik:RadDiagram>
+
+		<telerik:RadDiagramNavigationPane x:Name="navigationPane"
+		                                  HorizontalAlignment="Left"
+		                                  VerticalAlignment="Bottom"
+		                                  Diagram="{Binding ElementName=diagram}" />
+		<StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+			<telerik:RadButton Width="120"
+			                   Height="30"
+			                   Command="telerik:DiagramCommands.Save"
+			                   Content="Save" />
+			<telerik:RadButton Width="120"
+			                   Height="30"
+			                   Command="telerik:DiagramCommands.Open"
+			                   Content="Open" />
+			<telerik:RadButton Width="120"
+			                   Height="30"
+			                   Click="OnExportClick"
+			                   Content="Export" />
+		</StackPanel>
+	</Grid>
+</UserControl>

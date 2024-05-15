@@ -1,0 +1,255 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:my="clr-namespace:CustomHyperlinkToolTip"
+        Title="MainWindow" Height="600" Width="700">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Data.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type telerik:PropertyGridField}" BasedOn="{StaticResource PropertyGridFieldStyle}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type telerik:PropertyGridField}">
+                            <Border x:Name="PART_RootElement" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="FocusStates">
+                                        <VisualState x:Name="Unfocused"/>
+                                        <VisualState x:Name="Focused">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="NavigatorIndicator">
+                                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <Visibility>Visible</Visibility>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup x:Name="SelectionStates">
+                                        <VisualState x:Name="Unselected">
+                                            <Storyboard Duration="0">
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PART_SelectionBackgroundN">
+                                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <Visibility>Collapsed</Visibility>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Selected">
+                                            <Storyboard Duration="0">
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="PART_SelectionBackgroundN">
+                                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <Visibility>Visible</Visibility>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid x:Name="PART_PropertyGridFieldGridN" Height="{TemplateBinding Height}" MinHeight="25">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="{Binding LabelColumnWidth, ElementName=PropertyGridPresenter}"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border x:Name="PART_SelectionBackgroundN" BorderBrush="#FFFFC92B" BorderThickness="1" Grid.Column="1" CornerRadius="1" HorizontalAlignment="Stretch" Margin="1,1,1,2" Visibility="Collapsed" VerticalAlignment="Stretch">
+                                            <Border BorderBrush="White" BorderThickness="1" CornerRadius="1">
+                                                <Border.Background>
+                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                        <GradientStop Color="#FFFCE79F" Offset="1"/>
+                                                        <GradientStop Color="#FFFDD3A8"/>
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                            </Border>
+                                        </Border>
+                                        <Border x:Name="Background_Over" BorderBrush="#FFFFC92B" BorderThickness="1" Grid.ColumnSpan="2" Grid.Column="1" CornerRadius="1" HorizontalAlignment="Stretch" Margin="1,1,1,2" VerticalAlignment="Stretch">
+                                            <Border.Visibility>
+                                                <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}">
+                                                    <Binding.Converter>
+                                                        <telerik:BooleanToVisibilityConverter/>
+                                                    </Binding.Converter>
+                                                </Binding>
+                                            </Border.Visibility>
+                                            <Border BorderBrush="White" BorderThickness="1" CornerRadius="1">
+                                                <Border.Background>
+                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                        <GradientStop Color="#FFFFFBA3" Offset="1"/>
+                                                        <GradientStop Color="#FFFFFBDA" Offset="0"/>
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                            </Border>
+                                        </Border>
+                                        <Grid x:Name="FieldIndicator" Visibility="{Binding FieldIndicatorVisibility, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type telerik:RadPropertyGrid}}}">
+                                            <Border BorderBrush="#FF848484" BorderThickness="0,0,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="25">
+                                                <Border BorderBrush="White" BorderThickness="1,0" Background="#FFE4E4E4">
+                                                    <Path x:Name="NavigatorIndicator" Data="F1M32.0234,6.66669L24.2923,0.0248413 28.3697,0.0248413 32,3.14362 36.1492,6.70819 32,10.2728 28.4664,13.3085 24.2923,13.3085 32.0234,6.66669z" Fill="#FF848484" HorizontalAlignment="Center" Height="8" Margin="0" Stretch="Fill" SnapsToDevicePixels="True" Visibility="Collapsed" VerticalAlignment="Center" Width="8"/>
+                                                </Border>
+                                            </Border>
+                                        </Grid>
+                                        <Border BorderBrush="#FFCBCBCB" BorderThickness="1,0,0,1" Grid.Column="4">
+                                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                        </Border>
+                                        <Border BorderBrush="#FFCBCBCB" BorderThickness="0,0,0,1" Grid.Column="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <telerik:PropertyGridIndentPresenter Grid.Column="0" IsTabStop="False" IndentLevel="{Binding IndentLevel, RelativeSource={RelativeSource TemplatedParent}}">
+                                                    <telerik:PropertyGridIndentPresenter.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <StackPanel IsItemsHost="True" Orientation="Horizontal"/>
+                                                        </ItemsPanelTemplate>
+                                                    </telerik:PropertyGridIndentPresenter.ItemsPanel>
+                                                    <telerik:PropertyGridIndentPresenter.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <telerik:PropertyGridIndentCell IsTabStop="False"/>
+                                                        </DataTemplate>
+                                                    </telerik:PropertyGridIndentPresenter.ItemTemplate>
+                                                    <telerik:PropertyGridIndentPresenter.Template>
+                                                        <ControlTemplate>
+                                                            <ItemsPresenter/>
+                                                        </ControlTemplate>
+                                                    </telerik:PropertyGridIndentPresenter.Template>
+                                                </telerik:PropertyGridIndentPresenter>
+                                                <telerik:RadToggleButton Grid.Column="1" x:Name="PART_NestedPropertiesButton" Background="Transparent" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" InnerCornerRadius="0" Width="25">
+                                                    <telerik:RadToggleButton.Style>
+                                                        <Style TargetType="{x:Type telerik:RadToggleButton}">
+                                                            <Setter Property="BorderThickness" Value="1"/>
+                                                            <Setter Property="Foreground" Value="#FF9D9D9D"/>
+                                                            <Setter Property="BorderBrush">
+                                                                <Setter.Value>
+                                                                    <LinearGradientBrush EndPoint="0.854,0.854" StartPoint="0.146,0.146">
+                                                                        <GradientStop Color="#FF282828" Offset="1"/>
+                                                                        <GradientStop Color="#FFBFBFBF"/>
+                                                                    </LinearGradientBrush>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                            <Setter Property="Background">
+                                                                <Setter.Value>
+                                                                    <LinearGradientBrush EndPoint="0.854,0.854" StartPoint="0.146,0.146">
+                                                                        <GradientStop Color="#FFD1D1D1" Offset="1"/>
+                                                                        <GradientStop Color="White"/>
+                                                                    </LinearGradientBrush>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                                            <Setter Property="Padding" Value="0"/>
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="{x:Type telerik:RadToggleButton}">
+                                                                        <Border Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Height="9" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="9">
+                                                                                <Grid>
+                                                                                    <Path x:Name="plus" Data="M1.937,0L2.937,0 2.937,2.0209999 5,2.0209999 5,3.0209999 2.937,3.0209999 2.937,5 1.937,5 1.937,3.0209999 0,3.0209999 0,2.0209999 1.937,2.0209999z" Fill="Black" Height="5" Margin="{TemplateBinding Padding}" Stretch="Fill" Stroke="{x:Null}" Width="5"/>
+                                                                                    <Rectangle x:Name="minus" Fill="Black" HorizontalAlignment="Center" Height="1" Margin="{TemplateBinding Padding}" Opacity="0" RadiusY="0" RadiusX="0" Stroke="{x:Null}" VerticalAlignment="Center" Width="5"/>
+                                                                                </Grid>
+                                                                            </Border>
+                                                                        </Border>
+                                                                        <ControlTemplate.Triggers>
+                                                                            <Trigger Property="IsChecked" Value="True">
+                                                                                <Setter Property="Opacity" TargetName="plus" Value="0"/>
+                                                                                <Setter Property="Opacity" TargetName="minus" Value="1"/>
+                                                                            </Trigger>
+                                                                        </ControlTemplate.Triggers>
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                            <Setter Property="SnapsToDevicePixels" Value="True"/>
+                                                        </Style>
+                                                    </telerik:RadToggleButton.Style>
+                                                    <telerik:RadToggleButton.Visibility>
+                                                        <Binding Path="ShouldDisplayNestedProperties" RelativeSource="{RelativeSource TemplatedParent}">
+                                                            <Binding.Converter>
+                                                                <telerik:BooleanToVisibilityConverter/>
+                                                            </Binding.Converter>
+                                                        </Binding>
+                                                    </telerik:RadToggleButton.Visibility>
+                                                </telerik:RadToggleButton>
+                                                <TextBlock Grid.Column="2" x:Name="PART_FieldLabelN" IsHitTestVisible="True" Margin="4,2,0,2" Text="{Binding DisplayName}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                <telerik:RadRadioButton GroupName="1" Grid.Column="3" Content="Help" x:Name="helpButton" HorizontalAlignment="Right" />
+                                                <Popup AllowsTransparency="True" IsOpen="{Binding ElementName=helpButton, Path=IsChecked}" PlacementTarget="{Binding ElementName=helpButton}" DataContext="{Binding ElementName=helpButton, Path=DataContext}" Placement="Right">
+                                                    <ContentControl Content="{Binding}">
+                                                        <ContentControl.ContentTemplate>
+                                                            <DataTemplate>
+                                                                <Grid MaxWidth="180" Background="White">
+                                                                    <Grid.RowDefinitions>
+                                                                        <RowDefinition Height="Auto"/>
+                                                                        <RowDefinition />
+                                                                        <RowDefinition Height="Auto"/>
+                                                                    </Grid.RowDefinitions>
+                                                                    <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Row="0"/>
+                                                                    <ContentControl Content="{Binding Content}" Grid.Row="1" />
+                                                                    <TextBlock Grid.Row="2" my:HyperlinkNavigationBehavior.RequestNavigateOnLostFocusProperty="True" >
+																	<Hyperlink NavigateUri="{Binding NavigateUri}">
+																		<TextBlock Text="Additional help" />
+																	</Hyperlink>
+																</TextBlock>
+                                                                </Grid>
+                                                            </DataTemplate>
+                                                        </ContentControl.ContentTemplate>
+                                                    </ContentControl>
+                                                </Popup>
+                                            </Grid>
+                                        </Border>
+                                        <telerik:PropertyGridColumnResizer x:Name="ColumnResizer" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,-4,0">
+                                            <telerik:StyleManager.Theme>
+                                                <telerik:Office_BlackTheme/>
+                                            </telerik:StyleManager.Theme>
+                                        </telerik:PropertyGridColumnResizer>
+                                    </Grid>
+                                    <ItemsControl Grid.Row="1">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <telerik:PropertyGridField Content="{Binding}" Visibility="{Binding Visibility}">
+                                                    <telerik:StyleManager.Theme>
+                                                        <telerik:Office_BlackTheme/>
+                                                    </telerik:StyleManager.Theme>
+                                                </telerik:PropertyGridField>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                        <ItemsControl.Visibility>
+                                            <Binding Path="ShouldDisplayNestedItemsControl" RelativeSource="{RelativeSource TemplatedParent}">
+                                                <Binding.Converter>
+                                                    <telerik:BooleanToVisibilityConverter/>
+                                                </Binding.Converter>
+                                            </Binding>
+                                        </ItemsControl.Visibility>
+                                    </ItemsControl>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderBrush" Value="#FF848484"/>
+                <Setter Property="IsTabStop" Value="False"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="SnapsToDevicePixels" Value="True"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <telerik:RadPropertyGrid x:Name="rpg" my:CustomToolTipBehavior.CustomToolTipOnFieldLoaded="True"/>
+    </Grid>
+</Window>

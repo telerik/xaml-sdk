@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="DataValidation.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate x:Key="CustomBoxesParticipantItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="2" Text="{Binding FirstName}"/>
+                <TextBlock Margin="2" Text="{Binding LastName}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="CustomDropDownItemTemplate">
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="0"
+                               Margin="5"
+                               FontWeight="Bold"
+                               Text="Name" />
+                    <TextBlock Grid.Row="0" 
+                               Grid.Column="1"
+                               Margin="0 5 0 0" 
+                               Text=":"
+                               FontWeight="Bold"/>
+                    <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                        <TextBlock Margin="5 5 2 5" Text="{Binding FirstName}" />
+                        <TextBlock Margin="5 5 2 5" Text="{Binding LastName}" />
+                    </StackPanel>
+                    <Border BorderBrush="Gray" BorderThickness="0.5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+                    <TextBlock Grid.Column="0" 
+                               Grid.Row="2" 
+                               Margin="5"
+                               FontWeight="Bold"
+                               Text="Job Title" />
+                    <TextBlock Grid.Row="2" 
+                               Grid.Column="1" 
+                               Margin="0 5 0 0"
+                               Text=":"
+                               FontWeight="Bold"/>
+                    <TextBlock Grid.Column="2"
+                               Grid.Row="2"
+                               Margin="5" 
+                               Text="{Binding JobTitle}" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="This example demonstrates how to easily implement a validation for RadAutoCompleteBox using the IDataErrorInfo interface." 
+                       TextWrapping="Wrap"
+                       FontFamily="Segoe UI"
+                       FontSize="14" 
+                       FontStyle="Italic"
+                       Margin="8,6,10,20"/>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="For example: Enter 'Team1' inside the first RadAutoCompleteBox in order to generate some items for the second one and to successfully pass the Validation." 
+                       TextWrapping="Wrap"
+                       FontFamily="Segoe UI"
+                       FontSize="14" 
+                       FontStyle="Italic"
+                       Margin="8,6,10,20"/>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="ASSIGN A TASK" 
+                       FontFamily="Segoe UI"
+                       FontSize="14" 
+                       Margin="8,6,10,0"/>
+        </StackPanel>
+        <StackPanel Margin="190 0 190 0" Grid.Row="1">
+            <TextBlock Text="Team" Padding="0 3"/>
+            <telerik:RadAutoCompleteBox x:Name="radAutoCompleteBoxTeam" 
+                                        WatermarkContent="&lt;team&gt;" 
+                                        Margin="0 0 0 8" 
+                                        ItemsSource="{Binding Teams}" 
+                                        DisplayMemberPath="Name"
+                                        SelectedItem="{Binding SelectedTeam, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                                        SearchText="{Binding ItemSearchText,Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}">
+                <telerik:EventToCommandBehavior.EventBindings>
+                    <telerik:EventBinding EventName="SelectionChanged" Command="{Binding SelectionChanged}" PassEventArgsToCommand="True"/>
+                </telerik:EventToCommandBehavior.EventBindings>
+            </telerik:RadAutoCompleteBox>
+            <TextBlock Text="Members" Padding="0 3"/>
+            <telerik:RadAutoCompleteBox WatermarkContent="&lt;team members&gt;" 
+                                        Margin="0 0 0 8"
+                                        DropDownItemTemplate="{StaticResource CustomDropDownItemTemplate}"
+                                        BoxesItemTemplate="{StaticResource CustomBoxesParticipantItemTemplate}"
+                                        TextSearchPath="FirstName"
+                                        TextSearchMode="Contains"
+                                        ItemsSource="{Binding Employees}"
+                                        IsEnabled="{Binding IsMembersBoxEnabled, Mode=TwoWay}"
+                                        SelectedItems="{Binding SelectedEmployees, Mode=TwoWay}"
+                                        SelectedItem="{Binding SelectedEmployee, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                                        SearchText="{Binding EmployeeSearchText,Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+            <TextBlock Text="Task description" Padding="0 3"/>
+            <TextBox  Margin="0 0 0 8" 
+                      TextWrapping="Wrap" 
+                      AcceptsReturn="True" 
+                      BorderThickness="1"
+                      Height="50"
+                      VerticalContentAlignment="Top" />
+            <telerik:RadButton Margin="0 6" 
+                               Content="Assign" 
+                               MinWidth="84"
+                               Padding="16 3"
+                               HorizontalAlignment="Left"
+                               Command="{Binding Assign}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

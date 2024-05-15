@@ -1,0 +1,153 @@
+﻿<Application x:Class="AlertWithDifferentIcon.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+
+        <SolidColorBrush x:Key="RadAlert_OuterStrokeBrush" Color="#34000000" />
+        <SolidColorBrush x:Key="RadAlert_InnerBackgroundBrush1" Color="Red" />
+        <SolidColorBrush x:Key="RadAlert_InnerBackgroundBrush2" Color="Green" />
+        <SolidColorBrush x:Key="RadAlert_InnerStrokeBrush" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="RadAlert_InnerMostStrokeBrush" Color="#1A000000" />
+        <SolidColorBrush x:Key="RadAlert_ExclamationMarkBackgroundBrush" Color="#FF000000" />
+
+        <Style x:Key="Icon1AlertStyle" TargetType="telerik:RadAlert" BasedOn="{StaticResource RadAlertStyle}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerik:RadAlert">
+                        <Grid x:Name="LayoutRoot" FocusManager.FocusedElement="{Binding ElementName=OK}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.InputBindings>
+                                <KeyBinding Key="Escape" Command="{x:Static telerik:WindowCommands.Confirm}"/>
+                            </Grid.InputBindings>
+                            <Grid Width="42" Height="42" VerticalAlignment="Top" HorizontalAlignment="Left"
+									  Margin="10,10,12,12">
+                                <Path Stretch="Fill" StrokeThickness="5" StrokeLineJoin="Round"
+										  Stroke="{StaticResource RadAlert_OuterStrokeBrush}"
+										  Data="F1 M 30.2128,2.5L 2.5,50.5L 57.9256,50.5L 30.2128,2.5 Z "
+										  Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Path Stretch="Fill" StrokeThickness="4" StrokeLineJoin="Round"
+										  Fill="{StaticResource RadAlert_InnerBackgroundBrush1}"
+										  Stroke="{StaticResource RadAlert_InnerStrokeBrush}"
+										  Data="F1 M 30.2128,2.5L 2.5,50.5L 57.9256,50.5L 30.2128,2.5 Z "
+										  Margin="0.5,0.5,0.5,1.5" HorizontalAlignment="Center"
+										  VerticalAlignment="Center" />
+                                <Path Stretch="Fill" StrokeLineJoin="Round"
+										  Stroke="{StaticResource RadAlert_InnerMostStrokeBrush}"
+										  Data="F1 M 30.2128,5.52939L 5.99807,48.6372L 54.4276,48.6372L 30.2128,5.52939 Z "
+										  Margin="5.498,5.029,5.498,4.863" HorizontalAlignment="Center"
+										  VerticalAlignment="Center" />
+                                <Path Stretch="Fill" Fill="{StaticResource RadAlert_ExclamationMarkBackgroundBrush}"
+										  Data="F1 M 30.6528,34.7639L 30.0128,34.7639C 29.9395,33.5806 29.7028,32.1489 29.3028,30.4689L 28.4978,27.0789C 28.0145,25.0456 27.7728,23.5872 27.7728,22.7039C 27.7728,21.9072 28.0086,21.2647 28.4803,20.7764C 28.952,20.2881 29.5661,20.0439 30.3228,20.0439C 31.0628,20.0439 31.6761,20.2906 32.1628,20.7839C 32.6495,21.2772 32.8928,21.9022 32.8928,22.6589C 32.8928,23.4456 32.6328,24.9189 32.1128,27.0789L 31.2928,30.4689C 30.9995,31.6722 30.7861,33.1039 30.6528,34.7639 Z M 30.3328,37.0039C 31.0395,37.0039 31.6428,37.2531 32.1428,37.7514C 32.6428,38.2497 32.8928,38.8572 32.8928,39.5739C 32.8928,40.2772 32.6428,40.8781 32.1428,41.3764C 31.6428,41.8747 31.0395,42.1239 30.3328,42.1239C 29.6261,42.1239 29.0228,41.8747 28.5228,41.3764C 28.0228,40.8781 27.7728,40.2772 27.7728,39.5739C 27.7728,38.8672 28.0203,38.2622 28.5153,37.7589C 29.0103,37.2556 29.6161,37.0039 30.3328,37.0039 Z "
+										  Margin="17,15,17,8" />
+                            </Grid>
+                            <ScrollViewer IsTabStop="False" Grid.Row="0" Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0 0 0 8">
+                                <ContentPresenter x:Name="AlertText" Margin="8 8 8 0"/>
+                            </ScrollViewer>
+                            <Border x:Name="HorizontalRule"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                BorderThickness="0 0 0 1"
+                                Height="2"
+                                Background="{StaticResource BorderLineOuterColor}"
+                                BorderBrush="{StaticResource BorderLineInnerColor}"
+                                VerticalAlignment="Top"/>
+                            <telerik:RadButton x:Name="OK"
+                                Command="{x:Static telerik:WindowCommands.Confirm}"
+                                telerik:RadWindow.ResponseButton="Accept"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                MinWidth="70"
+                                IsTabStop="True"
+                                TabIndex="0"
+                                HorizontalAlignment="Right"
+                                telerik:LocalizationManager.ResourceKey="Ok"
+                                Margin="0 10 8 8"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="Icon2AlertStyle" TargetType="telerik:RadAlert" BasedOn="{StaticResource RadAlertStyle}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerik:RadAlert">
+                        <Grid x:Name="LayoutRoot" FocusManager.FocusedElement="{Binding ElementName=OK}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.InputBindings>
+                                <KeyBinding Key="Escape" Command="{x:Static telerik:WindowCommands.Confirm}"/>
+                            </Grid.InputBindings>
+                            <Grid Width="42" Height="42" VerticalAlignment="Top" HorizontalAlignment="Left"
+									  Margin="10,10,12,12">
+                                <Path Stretch="Fill" StrokeThickness="5" StrokeLineJoin="Round"
+										  Stroke="{StaticResource RadAlert_OuterStrokeBrush}"
+										  Data="F1 M 30.2128,2.5L 2.5,50.5L 57.9256,50.5L 30.2128,2.5 Z "
+										  Margin="0,0,0,1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Path Stretch="Fill" StrokeThickness="4" StrokeLineJoin="Round"
+										  Fill="{StaticResource RadAlert_InnerBackgroundBrush2}"
+										  Stroke="{StaticResource RadAlert_InnerStrokeBrush}"
+										  Data="F1 M 30.2128,2.5L 2.5,50.5L 57.9256,50.5L 30.2128,2.5 Z "
+										  Margin="0.5,0.5,0.5,1.5" HorizontalAlignment="Center"
+										  VerticalAlignment="Center" />
+                                <Path Stretch="Fill" StrokeLineJoin="Round"
+										  Stroke="{StaticResource RadAlert_InnerMostStrokeBrush}"
+										  Data="F1 M 30.2128,5.52939L 5.99807,48.6372L 54.4276,48.6372L 30.2128,5.52939 Z "
+										  Margin="5.498,5.029,5.498,4.863" HorizontalAlignment="Center"
+										  VerticalAlignment="Center" />
+                                <Path Stretch="Fill" Fill="{StaticResource RadAlert_ExclamationMarkBackgroundBrush}"
+										  Data="F1 M 30.6528,34.7639L 30.0128,34.7639C 29.9395,33.5806 29.7028,32.1489 29.3028,30.4689L 28.4978,27.0789C 28.0145,25.0456 27.7728,23.5872 27.7728,22.7039C 27.7728,21.9072 28.0086,21.2647 28.4803,20.7764C 28.952,20.2881 29.5661,20.0439 30.3228,20.0439C 31.0628,20.0439 31.6761,20.2906 32.1628,20.7839C 32.6495,21.2772 32.8928,21.9022 32.8928,22.6589C 32.8928,23.4456 32.6328,24.9189 32.1128,27.0789L 31.2928,30.4689C 30.9995,31.6722 30.7861,33.1039 30.6528,34.7639 Z M 30.3328,37.0039C 31.0395,37.0039 31.6428,37.2531 32.1428,37.7514C 32.6428,38.2497 32.8928,38.8572 32.8928,39.5739C 32.8928,40.2772 32.6428,40.8781 32.1428,41.3764C 31.6428,41.8747 31.0395,42.1239 30.3328,42.1239C 29.6261,42.1239 29.0228,41.8747 28.5228,41.3764C 28.0228,40.8781 27.7728,40.2772 27.7728,39.5739C 27.7728,38.8672 28.0203,38.2622 28.5153,37.7589C 29.0103,37.2556 29.6161,37.0039 30.3328,37.0039 Z "
+										  Margin="17,15,17,8" />
+                            </Grid>
+                            <ScrollViewer IsTabStop="False" Grid.Row="0" Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0 0 0 8">
+                                <ContentPresenter x:Name="AlertText" Margin="8 8 8 0"/>
+                            </ScrollViewer>
+                            <Border x:Name="HorizontalRule"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                BorderThickness="0 0 0 1"
+                                Height="2"
+                                Background="{StaticResource BorderLineOuterColor}"
+                                BorderBrush="{StaticResource BorderLineInnerColor}"
+                                VerticalAlignment="Top"/>
+                            <telerik:RadButton x:Name="OK"
+                                Command="{x:Static telerik:WindowCommands.Confirm}"
+                                telerik:RadWindow.ResponseButton="Accept"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                MinWidth="70"
+                                IsTabStop="True"
+                                TabIndex="0"
+                                HorizontalAlignment="Right"
+                                telerik:LocalizationManager.ResourceKey="Ok"
+                                Margin="0 10 8 8"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

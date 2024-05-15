@@ -1,0 +1,39 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        x:Class="WPFLayout.MainWindow"
+        Title="MainWindow">
+    <Window.Resources>
+        <Style x:Key="CustomIncreaseHandleStyle" TargetType="RepeatButton" BasedOn="{StaticResource IncreaseHandleStyle}">
+            <Setter Property="Margin" Value="2 0" />
+            <Setter Property="RenderTransform" Value="{x:Null}" />
+        </Style>
+        <Style x:Key="CustomDecreaseHandleStyle" TargetType="RepeatButton" BasedOn="{StaticResource CustomIncreaseHandleStyle}">
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="180"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <RepeatButton Tag="Start" Click="OnDecreaseSelectionButtonClick" Grid.Column="0" Style="{StaticResource CustomIncreaseHandleStyle}" />
+        <RepeatButton Tag="Start" Click="OnIncreaseSelectionButtonClick" Grid.Column="1" Style="{StaticResource CustomDecreaseHandleStyle}" />
+        <telerik:RadSlider x:Name="slider" 
+                           Grid.Column="2"
+                           Minimum="0"
+                           Maximum="100" 
+                           IsSelectionRangeEnabled="True"
+                           SelectionStart="30"
+                           SelectionEnd="50"/>
+        <RepeatButton Tag="End" Click="OnDecreaseSelectionButtonClick" Grid.Column="3" Style="{StaticResource CustomIncreaseHandleStyle}" />
+        <RepeatButton Tag="End" Click="OnIncreaseSelectionButtonClick" Grid.Column="4" Style="{StaticResource CustomDecreaseHandleStyle}" />
+    </Grid>
+</Window>

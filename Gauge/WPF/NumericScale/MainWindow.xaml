@@ -1,0 +1,32 @@
+﻿<Window x:Class="NumericScale.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<telerik:RadRadialGauge Width="200"
+								Height="200"
+								telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Min="0"
+								 Max="100"/>
+			<telerik:NumericScale Min="0"
+								  Max="1000"
+								  Multiplier="10" >
+				<telerik:NumericIndicator Value="1"
+										  telerik:ScaleObject.RelativeX="0.23"
+										  telerik:ScaleObject.RelativeY="0.38">
+					<telerik:NumericIndicator.Positions>
+						<telerik:FontNumberPosition FontSize="30"/>
+						<telerik:FontNumberPosition FontSize="30" />
+						<telerik:FontNumberPosition FontSize="30" />
+						<telerik:FontNumberPosition FontSize="30" />
+						<telerik:FontNumberPosition FontSize="30" />
+						<telerik:FontNumberPosition FontSize="30" />
+					</telerik:NumericIndicator.Positions>
+				</telerik:NumericIndicator>
+			</telerik:NumericScale>
+		</telerik:RadRadialGauge>
+	</Grid>
+</Window>

@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="DragDropWithLines.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <telerik:RadGridView AutoGenerateColumns="True"
+                             Grid.Row="0"
+                                 Margin="5"
+                                 Name="radGridView"
+                                 AllowDrop="True"
+                                 EnableLostFocusSelectedState="False"
+                                 ShowGroupPanel="False"
+                                 GroupRenderMode="Flat">
+            <telerik:RadGridView.Resources>
+                <DataTemplate x:Key="DraggedItemTemplate">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Dragging:" />
+                            <TextBlock Text="{Binding CurrentDraggedItem}"
+                               FontWeight="Bold" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding CurrentDropPosition}" 
+                               FontWeight="Bold"
+                               MinWidth="45" />
+                            <TextBlock Text=", ("
+                               Foreground="Gray" />
+                            <TextBlock Text="{Binding CurrentDraggedOverItem}" />
+                            <TextBlock Text=")"
+                               Foreground="Gray" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </telerik:RadGridView.Resources>
+            <telerik:RadGridView.RowStyle>
+                <Style TargetType="telerik:GridViewRow">
+                    <Setter Property="telerik:DragDropManager.AllowDrag"
+                    Value="True" />
+                    <Setter Property="telerik:DragDropManager.TouchDragTrigger"
+                    Value="TapAndHold"/>
+                </Style>
+            </telerik:RadGridView.RowStyle>
+        </telerik:RadGridView>
+        <telerik:RadButton Grid.Row="1"
+                           Content="Disable/Enable Reorder"
+                           Click="ButtonBase_OnClick"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="TransitionWithoutBindings.Docking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="700">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+		<telerik:RadDocking>
+			<telerik:RadDocking.DocumentHost>
+				<telerik:RadSplitContainer>
+					<telerik:RadPaneGroup>
+						<telerik:RadPane Header="Pane 2">
+							<TextBlock Text="Sample RadDocking control." VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						</telerik:RadPane>
+					</telerik:RadPaneGroup>
+				</telerik:RadSplitContainer>
+			</telerik:RadDocking.DocumentHost>
+			<telerik:RadSplitContainer>
+				<telerik:RadPaneGroup>
+					<telerik:RadPane Header="Pane 1" IsPinned="False"/>
+				</telerik:RadPaneGroup>
+			</telerik:RadSplitContainer>
+			<telerik:RadSplitContainer InitialPosition="DockedRight">
+				<telerik:RadPaneGroup>
+					<telerik:RadPane Header="Pane 3" IsPinned="False"/>
+				</telerik:RadPaneGroup>
+			</telerik:RadSplitContainer>
+		</telerik:RadDocking>
+	</Grid>
+</UserControl>

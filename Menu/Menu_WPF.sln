@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToDynamicData_WPF", "BindingToDynamicData\BindingToDynamicData_WPF.csproj", "{94B1139A-D101-4CD1-BAC9-77F613795B2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingIconColumnWidth_WPF", "UsingIconColumnWidth\UsingIconColumnWidth_WPF.csproj", "{DE0AFA5C-BEB8-403A-A958-2DC78027E629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollingMenuItems_WPF", "ScrollingMenuItems\ScrollingMenuItems_WPF.csproj", "{A7DCAE8D-56E7-4E40-B3BB-06FD57F1DC52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingPopupProperties_WPF", "SettingPopupProperties\SettingPopupProperties_WPF.csproj", "{3CE0FC32-93F5-41D9-BD82-78179C393C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customization_MVVM_WPF", "Customization_MVVM\Customization_MVVM_WPF.csproj", "{D5A63070-2BCE-492E-99AB-63708B89B511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldMenuAndItemStyle_WPF", "OldMenuAndItemStyle\OldMenuAndItemStyle_WPF.csproj", "{DECE970F-5959-481E-9158-D6F66D21FD45}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94B1139A-D101-4CD1-BAC9-77F613795B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B1139A-D101-4CD1-BAC9-77F613795B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B1139A-D101-4CD1-BAC9-77F613795B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B1139A-D101-4CD1-BAC9-77F613795B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0AFA5C-BEB8-403A-A958-2DC78027E629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0AFA5C-BEB8-403A-A958-2DC78027E629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0AFA5C-BEB8-403A-A958-2DC78027E629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AFA5C-BEB8-403A-A958-2DC78027E629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DCAE8D-56E7-4E40-B3BB-06FD57F1DC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DCAE8D-56E7-4E40-B3BB-06FD57F1DC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DCAE8D-56E7-4E40-B3BB-06FD57F1DC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DCAE8D-56E7-4E40-B3BB-06FD57F1DC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE0FC32-93F5-41D9-BD82-78179C393C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE0FC32-93F5-41D9-BD82-78179C393C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE0FC32-93F5-41D9-BD82-78179C393C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE0FC32-93F5-41D9-BD82-78179C393C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A63070-2BCE-492E-99AB-63708B89B511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A63070-2BCE-492E-99AB-63708B89B511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A63070-2BCE-492E-99AB-63708B89B511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A63070-2BCE-492E-99AB-63708B89B511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECE970F-5959-481E-9158-D6F66D21FD45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

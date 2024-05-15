@@ -1,0 +1,222 @@
+﻿<UserControl x:Class="XmlaStyleRaggedHierarchies.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+             xmlns:local="clr-namespace:XmlaStyleRaggedHierarchies"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="ControlForeground_Normal" Color="#FF000000"/>
+        <SolidColorBrush x:Key="CellsForeground" Color="#FF000000"/>
+        <SolidColorBrush x:Key="CellLines" Color="#FFCBCBCB"/>
+        <SolidColorBrush x:Key="HeaderCellFill" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="SubHeadersFill" Color="#FFE4E4E4"/>
+        <SolidColorBrush x:Key="RowSubTotalsFill" Color="#FFFFEBB6"/>
+        <SolidColorBrush x:Key="ColumnSubTotalsFill" Color="#FFE1FFD3"/>
+        <SolidColorBrush x:Key="GrandTotalsFill" Color="#FFCBCBCB"/>
+        <SolidColorBrush x:Key="ControlBackground_Normal" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="ControlBorder_Normal" Color="#FF848484"/>
+        <LinearGradientBrush x:Key="ExpandIconBackground" EndPoint="0.85,0.85" StartPoint="0.15,0.15">
+            <GradientStop Color="#FFD1D1D1" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="ExpandIconBorder" EndPoint="0.85,0.85" StartPoint="0.15,0.15">
+            <GradientStop Color="#FF282828" Offset="1"/>
+            <GradientStop Color="#FFBFBFBF"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="IconBrush" Color="#FF000000"/>
+
+        <Style x:Key="PivotHeaderStyle" TargetType="pivot:PivotHeader">
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="4 3 4 3"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+
+            <!-- Added FontWeight="Normal" for TextBlock-->
+            <Setter Property="DataTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Data}" FontWeight="Normal"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="pivot:PivotHeader">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{Binding}"
+                                ContentTemplate="{TemplateBinding DataTemplate}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <local:RowHeaderStyleSelector x:Key="RowHeaderStyleSelector" BottomLevelStyle="{StaticResource PivotHeaderStyle}"/>
+        <local:CellTemplateSelector x:Key="CellTemplateSelector">
+            <local:CellTemplateSelector.NormalFontWeightTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Data}" FontWeight="Normal"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Right"
+                               Margin="0 2 4 0"/>
+                </DataTemplate>
+            </local:CellTemplateSelector.NormalFontWeightTemplate>
+        </local:CellTemplateSelector>
+        
+        <pivot:XmlaDataProvider x:Key="DataProvider">
+
+            <pivot:XmlaDataProvider.ConnectionSettings>
+                <pivot:XmlaConnectionSettings 
+                    Cube="Adventure Works" 
+                    Database="Adventure Works DW 2008R2" 
+                    ServerAddress="https://demos.telerik.com/olap/msmdpump.dll"/>
+            </pivot:XmlaDataProvider.ConnectionSettings>
+
+            <pivot:XmlaDataProvider.RowGroupDescriptions>
+                <pivot:XmlaGroupDescription MemberName="[Sales Territory].[Sales Territory]" />
+                <pivot:XmlaGroupDescription MemberName="[Date].[Calendar Year]"/>
+            </pivot:XmlaDataProvider.RowGroupDescriptions>
+
+            <pivot:XmlaDataProvider.ColumnGroupDescriptions>
+                <pivot:XmlaGroupDescription MemberName="[Department].[Departments]"/>
+            </pivot:XmlaDataProvider.ColumnGroupDescriptions>
+
+            <pivot:XmlaDataProvider.AggregateDescriptions>
+                <pivot:XmlaAggregateDescription MemberName="[Measures].[Reseller Order Quantity]"/>
+                <pivot:XmlaAggregateDescription MemberName=" [Measures].[Reseller Order Count]"/>
+            </pivot:XmlaDataProvider.AggregateDescriptions>
+            
+        </pivot:XmlaDataProvider>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextWrapping="Wrap" Margin="2 2 20 2"
+                   Text="This is the default style of RadPivotGrid. You can see how the Years in rows are displayed with gray background even if they do not have children."
+                   />
+        <pivot:RadPivotGrid Grid.Row="1"
+                            x:Name="radPivotGrid1"
+                            DataProvider="{StaticResource DataProvider}"
+                            Margin="3"/>
+
+        <TextBlock TextWrapping="Wrap" Margin="2 2 20 2" Grid.Row="0" Grid.Column="1"
+                   Text="This RadPivotGrid is using default QuickStyle, custom CellTemplateSelector and RowHeaderStyleSelector. All groups which have children are bold, while the groups which do not have children are using normal FontWeight."
+                   />
+        <pivot:RadPivotGrid x:Name="radPivotGrid3" DataProvider="{StaticResource DataProvider}"
+                            RowHeaderStyleSelector="{StaticResource RowHeaderStyleSelector}" 
+                            CellTemplateSelector="{StaticResource CellTemplateSelector}"
+                            Grid.Column="1" Grid.Row="1"
+                            Margin="3">
+        </pivot:RadPivotGrid>
+        <pivot:RadPivotFieldList x:Name="radPivotFieldList" Grid.Column="3" DataProvider="{StaticResource DataProvider}" Grid.RowSpan="2"/>
+
+
+        <TextBlock TextWrapping="Wrap" Margin="2 2 20 2" Grid.Row="0" Grid.Column="2"
+                   Text="This RadPivotGrid is using custom QuickStyle, CellTemplateSelector and RowHeaderStyleSelector. All groups which have children are bold, while the groups which do not have children are using normal FontWeight. The background of all groups which are not SubTotals or Totals is transparent."
+                  />
+        <pivot:RadPivotGrid x:Name="radPivotGrid2" DataProvider="{StaticResource DataProvider}"
+                            CellTemplateSelector="{StaticResource CellTemplateSelector}"
+                            RowHeaderStyleSelector="{StaticResource RowHeaderStyleSelector}" 
+                            ColumnHeaderStyleSelector="{StaticResource RowHeaderStyleSelector}"
+                            Grid.Column="2" Grid.Row="1"
+                            Margin="3">
+            <pivot:RadPivotGrid.QuickStyle>
+                <pivot:QuickStyle>
+                    <pivot:QuickStyle.HeaderRow>
+                        <pivot:ElementProperties BorderThickness="1" BorderBrush="{StaticResource CellLines}"/>
+                    </pivot:QuickStyle.HeaderRow>
+                    <pivot:QuickStyle.HeaderColumn>
+                        <pivot:ElementProperties BorderThickness="1" BorderBrush="{StaticResource CellLines}"/>
+                    </pivot:QuickStyle.HeaderColumn>
+                    <pivot:QuickStyle.HeaderCell>
+                        <pivot:ElementProperties Background="{StaticResource HeaderCellFill}" BorderThickness="1" BorderBrush="{StaticResource CellLines}"/>
+                    </pivot:QuickStyle.HeaderCell>
+
+                    <!-- NOTE: Background changed from Background="{StaticResource SubHeadersFill}"-->
+                    <pivot:QuickStyle.RowSubgroups>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                BorderThickness="1"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource CellLines}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.RowSubgroups>
+
+                    <!-- NOTE: In case you expect Ragged Hierarchy in Columns, you have to remove the Background from ColumnSubgroups: Background="{StaticResource SubHeadersFill}"-->
+                    <pivot:QuickStyle.ColumnSubgroups>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                BorderThickness="1"
+                                Background="{StaticResource SubHeadersFill}"
+                                BorderBrush="{StaticResource CellLines}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.ColumnSubgroups>
+
+                    <pivot:QuickStyle.ColumnFirstAlternationPattern>
+                        <pivot:AlternationElementProperties AlternationCount="1" BorderThickness="1" BorderBrush="{StaticResource CellLines}" Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.ColumnFirstAlternationPattern>
+                    <pivot:QuickStyle.ColumnSecondAlternationPattern>
+                        <pivot:AlternationElementProperties AlternationCount="1" BorderThickness="1" BorderBrush="{StaticResource CellLines}" Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.ColumnSecondAlternationPattern>
+                    <pivot:QuickStyle.RowFirstAlternationPattern>
+                        <pivot:AlternationElementProperties AlternationCount="1" BorderThickness="1" BorderBrush="{StaticResource CellLines}" Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.RowFirstAlternationPattern>
+                    <pivot:QuickStyle.RowSecondAlternationPattern>
+                        <pivot:AlternationElementProperties AlternationCount="1" BorderThickness="1" BorderBrush="{StaticResource CellLines}" Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.RowSecondAlternationPattern>
+                    <pivot:QuickStyle.SubtotalRows>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource CellLines}"
+                                Background="{StaticResource RowSubTotalsFill}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.SubtotalRows>
+                    <pivot:QuickStyle.SubtotalColumns>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource CellLines}"
+                                Background="{StaticResource ColumnSubTotalsFill}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.SubtotalColumns>
+                    <pivot:QuickStyle.GrandTotalRow>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                Background="{StaticResource GrandTotalsFill}"
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource CellLines}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.GrandTotalRow>
+                    <pivot:QuickStyle.GrandTotalColumn>
+                        <pivot:ElementProperties
+                                FontWeight="Bold"
+                                Background="{StaticResource GrandTotalsFill}"
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource CellLines}"
+                                Foreground="{StaticResource CellsForeground}"/>
+                    </pivot:QuickStyle.GrandTotalColumn>
+                </pivot:QuickStyle>
+            </pivot:RadPivotGrid.QuickStyle>
+        </pivot:RadPivotGrid>
+
+    </Grid>
+</UserControl>

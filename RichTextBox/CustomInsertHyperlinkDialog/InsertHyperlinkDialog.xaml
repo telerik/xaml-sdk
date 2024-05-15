@@ -1,0 +1,68 @@
+﻿<telerikUI:RadRichTextBoxWindow x:Class="CustomInsertHyperlinkDialog.InsertHyperlinkDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:telerikUI="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    mc:Ignorable="d" ResizeMode="NoResize" 
+    telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_Header" 
+    WindowStartupLocation="CenterOwner"
+    Closed="RadWindow_Closed"
+    MinHeight="200" 
+    MinWidth="450" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" MinWidth="320" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <telerikUI:DialogLabel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 0 6 0" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_TextToDisplay" />
+            <TextBox x:Name="txtText" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="340" />
+
+            <telerikUI:DialogLabel Grid.Row="1" HorizontalAlignment="Left" Margin="0 0 6 0" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_TargetFrame" VerticalAlignment="Center" />
+            <telerik:RadComboBox Grid.Row="1" x:Name="comboTarget" Margin="0 5" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="120" Grid.Column="1" SelectedIndex="0">
+                <telerik:RadComboBox.Items>
+                    <telerik:RadComboBoxItem Tag="Blank" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_NewWindow" />
+                    <telerik:RadComboBoxItem Tag="Self" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_SameFrame" />
+                </telerik:RadComboBox.Items>
+            </telerik:RadComboBox>
+
+            <telerikUI:DialogLabel Grid.Row="2"  HorizontalAlignment="Left" Margin="0 0 6 0" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_LinkTo"  />
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <RadioButton x:Name="rbURL" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_ExistingFrameOrWebpage" GroupName="ResourceType" IsChecked="True" Click="RadRadioButton_Click" VerticalAlignment="Center" Margin="0 0 12 0" />
+                <RadioButton x:Name="rbBookmark" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_PlaceInDocument" Grid.Column="2" GroupName="ResourceType" Click="RadRadioButton_Click" VerticalAlignment="Center" Margin="0 0 6 0"/>
+            </StackPanel>
+
+            <telerikUI:DialogLabel Grid.Row="3"  HorizontalAlignment="Left" Margin="0 0 6 0" telerik:LocalizationManager.ResourceKey="Documents_InsertHyperlinkDialog_Address"   />
+            <TextBox Grid.Row="3" x:Name="txtAddress" HorizontalAlignment="Left" Width="340" VerticalAlignment="Center" Grid.Column="1" />
+
+            <telerik:RadComboBox Grid.Row="3" Grid.Column="1" x:Name="comboBookmarks" HorizontalAlignment="Left" Width="340" VerticalAlignment="Center" Visibility="Collapsed" ItemsSource="{Binding}" />
+
+            <TextBlock x:Name="txtValidation" Grid.Row="4" Grid.ColumnSpan="2" Margin="0 3" Foreground="Red" FontSize="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+        </Grid>
+
+        <telerikUI:DialogFooter Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Ok" Name="buttonOK" Margin="4" MinWidth="75" Click="buttonOK_Click" VerticalAlignment="Center"/>
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Cancel" Name="buttonCancel"  Margin="4" VerticalAlignment="Center" MinWidth="75" Click="buttonCancel_Click"/>
+            </StackPanel>
+        </telerikUI:DialogFooter>
+    </Grid>
+
+</telerikUI:RadRichTextBoxWindow>

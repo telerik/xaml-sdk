@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="CustomSettingsPane.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
+             xmlns:local="clr-namespace:CustomSettingsPane.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:MainViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid>
+            <Grid.Resources>
+                <telerik:ColorToBrushConverter x:Key="colorToBrushConv" />
+                <telerik:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+                <!--  ToolboxItemTemplate  -->
+                <DataTemplate x:Key="ToolboxItemTemplate">
+                    <Border Width="76" Height="100" Margin="0 1 1 0" Background="Transparent">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Viewbox Width="64" Height="50" Margin="5 10 5 0"
+                             HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform">
+                                <telerik:RadDiagramShape Margin="15"
+                                                 VerticalAlignment="Top"                                                 
+                                                 HorizontalContentAlignment="Center"
+                                                 VerticalContentAlignment="Center"
+                                                 Geometry="{Binding Geometry}"
+                                                 IsHitTestVisible="False" />
+                            </Viewbox>
+                            <TextBlock Grid.Row="1"
+                               Margin="0 0 0 5"
+                               HorizontalAlignment="Center"
+                               FontFamily="Segoe UI Semibold"
+                               Padding="4 0"
+                               Text="{Binding ShapeName}"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap" />
+                        </Grid>
+                    </Border>
+
+                </DataTemplate>
+                <!--  ToolboxGroupTemplate  -->
+                <local:HierarchicalDataTemplate x:Key="ToolboxGroupTemplate"
+                                  ItemsSource="{Binding Shapes}"
+                                  ItemTemplate="{StaticResource ToolboxItemTemplate}">
+                    <TextBlock Text="{Binding Header}" />
+                </local:HierarchicalDataTemplate>
+
+                <Style TargetType="telerik:RadDiagramToolboxGroup">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                </Style>
+                <Style TargetType="telerik:RadDiagramShape">
+                    <Setter Property="Geometry" Value="{Binding Geometry, Mode=TwoWay}" />
+                </Style>
+            </Grid.Resources>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <telerik:RadDiagramToolbox x:Name="toolbox" Grid.Row="1"  Width="350"
+                               Title="Gallery"
+                               HorizontalAlignment="Left"
+                               Header="{Binding SelectedItem.Header,
+                                                RelativeSource={RelativeSource Self}}"
+                               ItemsSource="{Binding Items}"
+                               ItemTemplate="{StaticResource ToolboxGroupTemplate}"
+                               Visibility="{Binding IsChecked,
+                                                    ElementName=toolboxButton,
+                                                    Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                <telerik:RadDiagram x:Name="diagram" Grid.Column="1" Grid.Row="1" SelectedItem="{Binding SelectedShapeModel, Mode=TwoWay}"
+                                primitives:DrawingAdorner.Fill="{Binding SelectedColor, ElementName=fillPicker, Converter={StaticResource colorToBrushConv}}"
+					            primitives:DrawingAdorner.Stroke="{Binding SelectedColor, ElementName=strokePicker, Converter={StaticResource colorToBrushConv}}"
+                                primitives:DrawingAdorner.StrokeThickness="3"
+                                GraphSource="{Binding GraphSource}"
+                                >
+                    <primitives:ItemInformationAdorner.AdditionalContent>
+                        <telerik:SettingsPane Diagram="{Binding ElementName=diagram}" />
+                    </primitives:ItemInformationAdorner.AdditionalContent>
+                </telerik:RadDiagram>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1">
+                    <telerik:RadRadioButton Content="Pointer Tool" Click="RadRadioButton_Click" Width="120"/>
+                    <telerik:RadRadioButton Content="Path Tool" Click="RadRadioButton_Click_1" Width="120"/>
+                    <telerik:RadRadioButton Content="Pencil Tool" Click="RadRadioButton_Click_2" Width="120"/>
+
+                    <TextBlock Text="Fill: " FontWeight="Bold" Margin="10 0 0 0"/>
+                    <telerik:RadColorPicker SelectedColor="DeepSkyBlue" x:Name="fillPicker" AutomaticColor="Transparent" Margin="10 0 0 0"/>
+
+                    <TextBlock Text="Stroke: " FontWeight="Bold" Margin="10 0 0 0"/>
+                    <telerik:RadColorPicker SelectedColor="Blue" x:Name="strokePicker" Margin="10 0 0 0"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

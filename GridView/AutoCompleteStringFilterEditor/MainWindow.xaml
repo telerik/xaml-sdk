@@ -1,0 +1,21 @@
+﻿<Window x:Class="RadGridView_WPF_AR_7.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:my="clr-namespace:AutoCompleteStringFilterEditor"
+        Title="MainWindow" Height="700" Width="700">
+	<Window.Resources>
+		<my:MyViewModel x:Key="MyViewModel"/>
+	</Window.Resources>
+	<Grid DataContext="{StaticResource MyViewModel}">
+        <telerik:RadGridView 
+                             Name="playersGrid" 
+                             AutoGenerateColumns="False"
+                             ItemsSource="{Binding Clubs}">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}"/>
+                <my:AutoCompleteFilterStringColumn DataMemberBinding="{Binding Name}" Header="Name (AutoComplete)"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+	</Grid>
+</Window>

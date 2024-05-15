@@ -1,0 +1,29 @@
+﻿<Window x:Class="DeferredSearching.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:my="clr-namespace:DeferredSearching"
+        Title="MainWindow" Height="567" Width="500">
+	<Window.Resources>
+		<my:MyViewModel x:Key="MyViewModel"/>
+	</Window.Resources>
+	<Grid DataContext="{StaticResource MyViewModel}"
+		  Margin="5">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<telerik:RadGridView Grid.Row="0"
+							 x:Name="playersGrid"
+							 ItemsSource="{Binding Players}" 
+							 ShowSearchPanel="True"
+							 IsSearchingDeferred="{Binding ElementName=isSearchingDeferredCheckBox, Path=IsChecked, Mode=OneWay}"/>
+		<StackPanel Grid.Row="1"
+					Orientation="Horizontal"
+					Margin="0 5">
+			<CheckBox Name="isSearchingDeferredCheckBox"
+					  Content="IsSearchingDeferred"
+					  FontWeight="Bold"/>
+		</StackPanel>
+	</Grid>
+</Window>

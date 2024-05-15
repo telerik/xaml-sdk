@@ -1,0 +1,389 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" mc:Ignorable="d"
+             xmlns:grid="clr-namespace:Telerik.Windows.Controls.GridView;assembly=Telerik.Windows.Controls.GridView"    
+             xmlns:controls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"
+             xmlns:my="clr-namespace:ForegroundColorSelectedHoveredRow"
+             d:DesignHeight="300" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.GridView.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <my:MyViewModel x:Key="MyViewModel"/>
+            <SolidColorBrush x:Key="GridView_ItemForeground_Selected" Color="Green"/>
+            <SolidColorBrush x:Key="GridView_ItemForeground_Over" Color="Red"/>
+            <ControlTemplate x:Key="GridViewRowTemplate" TargetType="grid:GridViewRow">
+                <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="FocusStates">
+                            <VisualState x:Name="Unfocused"/>
+                            <VisualState x:Name="Focused">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NavigatorIndicator" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected"/>
+                            <VisualState x:Name="SelectedUnfocused">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="Background_Over" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Over" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemOuterBorder_SelectedUnfocused}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundInner_Over" Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemBackground_SelectedUnfocused}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundInner_Over" Storyboard.TargetProperty="BorderBrush">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_ItemInnerBorder_SelectedUnfocused}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+
+                            <!--Changes-->
+                            <!--<VisualState x:Name="MouseOver">
+                            <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="Background_Over" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                            <DiscreteObjectKeyFrame.Value>
+                            <Visibility>Visible</Visibility>
+                            </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                            <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="Background_Selected" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                            <DiscreteObjectKeyFrame.Value>
+                            <Visibility>Visible</Visibility>
+                            </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NavigatorIndicatorBackground" Storyboard.TargetProperty="Background">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource GridView_RowIndicatorCellBackground_Selected}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                            </VisualState>-->
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="Background_Over"
+                                                                   Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_DataCellsPresenter"
+                                                                   Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                                                                Value="{StaticResource GridView_ItemForeground_Over}" />
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="Background_Selected"
+                                                                   Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NavigatorIndicatorBackground"
+                                                                   Storyboard.TargetProperty="Background">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                                                                Value="{StaticResource GridView_RowIndicatorCellBackground_Selected}" />
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_DataCellsPresenter"
+                                                                   Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                                                                Value="{StaticResource GridView_ItemForeground_Selected}" />
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="ValueStates">
+                            <VisualState x:Name="RowValid"/>
+                            <VisualState x:Name="RowInvalid">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Invalid" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ErrorIndicator" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="EditStates">
+                            <VisualState x:Name="ReadOnlyMode"/>
+                            <VisualState x:Name="EditMode">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EditIndicator" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="InvalidEditMode">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Invalid" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InvalidEditableIndicator" Storyboard.TargetProperty="Visibility">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <grid:SelectiveScrollingGrid x:Name="grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Name="SelectionBackground"
+                                Grid.Column="2"
+                                Grid.ColumnSpan="2"
+                                Background="{TemplateBinding Background}"
+                                Margin="{TemplateBinding Margin}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Padding="{TemplateBinding Padding}"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                MinWidth="{Binding RenderWidth, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <Border x:Name="Background_Over"
+                                Margin="1 1 1 2"
+                                BorderThickness="1"
+                                CornerRadius="1"
+                                BorderBrush="{StaticResource GridView_ItemOuterBorder_Over}"
+                                Grid.Column="2"
+                                Grid.ColumnSpan="2"
+                                Visibility="Collapsed"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                MinWidth="{Binding RenderWidth, RelativeSource={RelativeSource TemplatedParent}}">
+                            <Border x:Name="BackgroundInner_Over" BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Over}" Background="{StaticResource GridView_ItemBackground_Over}"/>
+                        </Border>
+                        <Border x:Name="Background_Selected"
+                                Margin="1 1 1 2"
+                                BorderThickness="1"
+                                CornerRadius="1"
+                                BorderBrush="{StaticResource GridView_ItemOuterBorder_Selected}"
+                                Grid.Column="2"
+                                Grid.ColumnSpan="2"
+                                Visibility="Collapsed"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                MinWidth="{Binding RenderWidth, RelativeSource={RelativeSource TemplatedParent}}">
+                            <Border BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Selected}" Background="{StaticResource GridView_ItemBackground_Selected}"/>
+                        </Border>
+                        <Border x:Name="Background_Invalid"
+                                Margin="1 1 1 2"
+                                BorderThickness="1"
+                                CornerRadius="1"
+                                BorderBrush="{StaticResource GridView_ItemOuterBorder_Invalid}"
+                                Grid.Column="2"
+                                Grid.ColumnSpan="2"
+                                Visibility="Collapsed"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                MinWidth="{Binding RenderWidth, RelativeSource={RelativeSource TemplatedParent}}">
+                            <Border BorderThickness="1" BorderBrush="{StaticResource GridView_ItemInnerBorder_Invalid}" Background="{StaticResource GridView_ItemBackground_Invalid}"/>
+                        </Border>
+                        <controls:GridViewToggleButton
+                            Grid.Column="2"
+                            x:Name="PART_HierarchyExpandButton"
+                            Width="25"
+                            grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                            Opacity="{Binding IsExpandable, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToOpacityConverter}}"
+                            IsHitTestVisible="{Binding IsExpandable, RelativeSource={RelativeSource TemplatedParent}}"
+                            Visibility="{Binding HasHierarchy, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"
+                            IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                            IsTabStop="{TemplateBinding IsTabStop}"/>
+                        <Border Grid.Column="2" grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HasHierarchy, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        <grid:DataCellsPresenter Grid.Column="3" x:Name="PART_DataCellsPresenter"/>
+                        <Border x:Name="PART_RowBorder"
+                                BorderBrush="{TemplateBinding HorizontalGridLinesBrush}"
+                                BorderThickness="{Binding HorizontalGridLinesWidth, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource GridLineWidthToThicknessConverter}, ConverterParameter=Bottom}"
+                                Grid.ColumnSpan="4"
+                                Grid.Column="1"
+                                Grid.RowSpan="4"
+                                VerticalAlignment="Bottom"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                MinWidth="{Binding RenderWidth, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <Border
+                            Background="{StaticResource GridView_HierarchyBackground}"
+                            grid:SelectiveScrollingGrid.SelectiveScrollingClip="True"
+                            Grid.Column="2"
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            Padding="6"
+                            BorderBrush="{StaticResource GridView_ControlOuterBorder}"
+                            BorderThickness="0,1"
+                            Visibility="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"
+                            HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                            MaxWidth="30000">
+                            <ContentPresenter x:Name="PART_HierarchyChildPresenter" grid:SelectiveScrollingGrid.SelectiveScrollingClip="True"/>
+                        </Border>
+                        <grid:DetailsPresenter x:Name="PART_DetailsPresenter"
+                                               grid:SelectiveScrollingGrid.SelectiveScrollingClip="True"
+                                               Grid.Column="2"
+                                               Grid.ColumnSpan="2"
+                                               Grid.Row="1"
+                                               DetailsProvider="{TemplateBinding DetailsProvider}"
+                                               HorizontalAlignment="{Binding RenderHorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                               MaxWidth="30000"/>
+                        <grid:IndentPresenter x:Name="PART_IndentPresenter"
+                                              IndentLevel="{TemplateBinding IndentLevel}"
+                                              Grid.Column="1"
+                                              Grid.RowSpan="4"
+                                              grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"/>
+                        <Border x:Name="PART_IndicatorPresenter"
+                                Width="25"
+                                VerticalAlignment="Stretch"
+                                Grid.Column="0"
+                                Visibility="{TemplateBinding RowIndicatorVisibility}"
+                                grid:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                Grid.RowSpan="3"
+                                BorderBrush="{StaticResource GridView_ControlOuterBorder}"
+                                BorderThickness="0 0 1 1">
+                            <Border x:Name="NavigatorIndicatorBackground"
+                                    Background="{StaticResource GridView_RowIndicatorCellBackground}"
+                                    BorderBrush="{StaticResource GridView_ControlInnerBorder}"
+                                    BorderThickness="1">
+                                <Grid>
+                                    <Grid x:Name="NavigatorIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Width="11" Height="11" Visibility="Collapsed">
+                                        <Path
+                                            Stretch="Fill"
+                                            Data="F1 M 32.0234,6.66669L 24.2923,0.0248413L 28.3697,0.0248413L 32,3.14362L 36.1492,6.70819L 32,10.2728L 28.4664,13.3085L 24.2923,13.3085L 32.0234,6.66669 Z"
+                                            Margin="0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Width="8"
+                                            Height="8"
+                                            Fill="{StaticResource GridView_NavigatorIndicatorBackground}"/>
+                                    </Grid>
+                                    <Grid x:Name="EditIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="10" Visibility="Collapsed">
+                                        <Path Fill="{StaticResource GridView_EditIndicatorBackground1}" Stretch="Fill" Data="M14,9 L15,9 15,10 14,10 z M1,9 L2,9 2,10 1,10 z M15,8 L16,8 16,9 15,9 z M0,8 L1,8 1,9 0,9 z M15,1 L16,1 16,2 15,2 z M0,1 L1,1 1,2 0,2 z M14,0 L15,0 15,1 14,1 z M1,0 L2,0 2,1 1,1 z"/>
+                                        <Path
+                                            Fill="{StaticResource GridView_EditIndicatorBackground2}"
+                                            Stretch="Fill"
+                                            Margin="1"
+                                            Data="M0.99999994,6.9999995 L2,6.9999995 3,6.9999995 4,6.9999995 5,6.9999995 6,6.9999995 7,6.9999995 8,6.9999995 9,6.9999995 10,6.9999995 11,6.9999995 12,6.9999995 13,6.9999995 13,7.9999995 12,7.9999995 11,7.9999995 10,7.9999995 9,7.9999995 8,7.9999995 7,7.9999995 6,7.9999995 5,7.9999995 4,7.9999995 3,7.9999995 2,7.9999995 0.99999994,7.9999995 z M13,0.99999994 L14,0.99999994 14,1.9999999 14,2.9999995 14,3.9999995 14,4.9999995 14,5.9999995 14,6.9999995 13,6.9999995 13,5.9999995 13,4.9999995 13,3.9999995 13,2.9999995 13,1.9999999 z M0,0.99999994 L0.99999994,0.99999994 0.99999994,1.9999999 0.99999994,2.9999995 0.99999994,3.9999995 0.99999994,4.9999995 0.99999994,5.9999995 0.99999994,6.9999995 0,6.9999995 0,5.9999995 0,4.9999995 0,3.9999995 0,2.9999995 0,1.9999999 z M11,0 L12,0 13,0 13,0.99999994 12,0.99999994 11,0.99999994 10,0.99999994 9,0.99999994 8,0.99999994 7,0.99999994 6,0.99999994 5,0.99999994 4,0.99999994 3,0.99999994 2,0.99999994 0.99999994,0.99999994 0.99999994,2.3841858E-07 2,2.3841858E-07 3,2.3841858E-07 4,2.3841858E-07 5,2.3841858E-07 6,2.3841858E-07 7,2.3841858E-07 8,2.3841858E-07 9,2.3841858E-07 10,2.3841858E-07 z"/>
+                                        <Path Fill="{StaticResource GridView_EditIndicatorBackground3}" Stretch="Fill" Data="M2,9 L3,9 4,9 5,9 6,9 7,9 8,9 9,9 10,9 11,9 12,9 13,9 14,9 14,10 13,10 12,10 11,10 10,10 9,10 8,10 7,10 6,10 5,10 4,10 3,10 2,10 z M14,8 L15,8 15,9 14,9 z M1,8 L2,8 2,9 1,9 z M15,2 L16,2 16,3 16,4 16,5 16,6 16,7 16,8 15,8 15,7 15,6 15,5 15,4 15,3 z M3,2 L4,2 5,2 6,2 6,3 5,3 5,4 5,5 5,6 5,7 6,7 6,8 5,8 4,8 3,8 3,7 4,7 4,6 4,5 4,4 4,3 3,3 z M0,2 L1,2 1,3 1,4 1,5 1,6 1,7 1,8 0,8 0,7 0,6 0,5 0,4 0,3 z M14,1 L15,1 15,2 14,2 z M1,1 L2,1 2,2 1,2 z M2,0 L3,0 4,0 5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 13,0 14,0 14,1 13,1 12,1 11,1 10,1 9,1 8,1 7,1 6,1 5,1 4,1 3,1 2,1 z"/>
+                                        <Path
+                                            Fill="{StaticResource GridView_EditIndicatorBackground4}"
+                                            Stretch="Fill"
+                                            Margin="2"
+                                            Data="M4,0 L5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 12,1 12,2 12,3 12,4 12,5.0000001 12,6 11,6 10,6 9,6 8,6 7,6 6,6 5,6 4,6 4,5.0000001 3,5.0000001 3,4 3,3 3,2 3,1 4,1 z M0,0 L1,0 1,1 2,1 2,2 2,3 2,4 2,5.0000001 1,5.0000001 1,6 0,6 0,5.0000001 0,4 0,3 0,2 0,1 z"/>
+                                    </Grid>
+                                    <Grid x:Name="InvalidEditableIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="10" Visibility="Collapsed">
+                                        <Path Fill="{StaticResource GridView_InvalidEditIndicatorBackground1}" Stretch="Fill" Data="M14,9 L15,9 15,10 14,10 z M1,9 L2,9 2,10 1,10 z M15,8 L16,8 16,9 15,9 z M0,8 L1,8 1,9 0,9 z M15,1 L16,1 16,2 15,2 z M0,1 L1,1 1,2 0,2 z M14,0 L15,0 15,1 14,1 z M1,0 L2,0 2,1 1,1 z"/>
+                                        <Path
+                                            Fill="{StaticResource GridView_InvalidEditIndicatorBackground2}"
+                                            Stretch="Fill"
+                                            Margin="1"
+                                            Data="M0.99999994,6.9999995 L2,6.9999995 3,6.9999995 4,6.9999995 5,6.9999995 6,6.9999995 7,6.9999995 8,6.9999995 9,6.9999995 10,6.9999995 11,6.9999995 12,6.9999995 13,6.9999995 13,7.9999995 12,7.9999995 11,7.9999995 10,7.9999995 9,7.9999995 8,7.9999995 7,7.9999995 6,7.9999995 5,7.9999995 4,7.9999995 3,7.9999995 2,7.9999995 0.99999994,7.9999995 z M13,0.99999994 L14,0.99999994 14,1.9999999 14,2.9999995 14,3.9999995 14,4.9999995 14,5.9999995 14,6.9999995 13,6.9999995 13,5.9999995 13,4.9999995 13,3.9999995 13,2.9999995 13,1.9999999 z M0,0.99999994 L0.99999994,0.99999994 0.99999994,1.9999999 0.99999994,2.9999995 0.99999994,3.9999995 0.99999994,4.9999995 0.99999994,5.9999995 0.99999994,6.9999995 0,6.9999995 0,5.9999995 0,4.9999995 0,3.9999995 0,2.9999995 0,1.9999999 z M11,0 L12,0 13,0 13,0.99999994 12,0.99999994 11,0.99999994 10,0.99999994 9,0.99999994 8,0.99999994 7,0.99999994 6,0.99999994 5,0.99999994 4,0.99999994 3,0.99999994 2,0.99999994 0.99999994,0.99999994 0.99999994,2.3841858E-07 2,2.3841858E-07 3,2.3841858E-07 4,2.3841858E-07 5,2.3841858E-07 6,2.3841858E-07 7,2.3841858E-07 8,2.3841858E-07 9,2.3841858E-07 10,2.3841858E-07 z"/>
+                                        <Path Fill="{StaticResource GridView_InvalidEditIndicatorBackground3}" Stretch="Fill" Data="M2,9 L3,9 4,9 5,9 6,9 7,9 8,9 9,9 10,9 11,9 12,9 13,9 14,9 14,10 13,10 12,10 11,10 10,10 9,10 8,10 7,10 6,10 5,10 4,10 3,10 2,10 z M14,8 L15,8 15,9 14,9 z M1,8 L2,8 2,9 1,9 z M15,2 L16,2 16,3 16,4 16,5 16,6 16,7 16,8 15,8 15,7 15,6 15,5 15,4 15,3 z M3,2 L4,2 5,2 6,2 6,3 5,3 5,4 5,5 5,6 5,7 6,7 6,8 5,8 4,8 3,8 3,7 4,7 4,6 4,5 4,4 4,3 3,3 z M0,2 L1,2 1,3 1,4 1,5 1,6 1,7 1,8 0,8 0,7 0,6 0,5 0,4 0,3 z M14,1 L15,1 15,2 14,2 z M1,1 L2,1 2,2 1,2 z M2,0 L3,0 4,0 5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 13,0 14,0 14,1 13,1 12,1 11,1 10,1 9,1 8,1 7,1 6,1 5,1 4,1 3,1 2,1 z"/>
+                                        <Path
+                                            Fill="{StaticResource GridView_InvalidEditIndicatorBackground4}"
+                                            Stretch="Fill"
+                                            Margin="2"
+                                            Data="M4,0 L5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 12,1 12,2 12,3 12,4 12,5.0000001 12,6 11,6 10,6 9,6 8,6 7,6 6,6 5,6 4,6 4,5.0000001 3,5.0000001 3,4 3,3 3,2 3,1 4,1 z M0,0 L1,0 1,1 2,1 2,2 2,3 2,4 2,5.0000001 1,5.0000001 1,6 0,6 0,5.0000001 0,4 0,3 0,2 0,1 z"/>
+                                    </Grid>
+                                    <Grid x:Name="ErrorIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16" Visibility="Collapsed">
+                                        <Path
+                                            Fill="{StaticResource GridView_ErrorIndicatorBackground1}"
+                                            Stretch="Fill"
+                                            Margin="1"
+                                            Data="M3,12.999999 L4,12.999999 5,12.999999 6,12.999999 7,12.999999 8,12.999999 9,12.999999 10,12.999999 11,12.999999 11,13.999999 10,13.999999 9,13.999999 8,13.999999 7,13.999999 6,13.999999 5,13.999999 4,13.999999 3,13.999999 z M11,11.999999 L12,11.999999 12,12.999999 11,12.999999 z M2.0000001,11.999999 L3,11.999999 3,12.999999 2.0000001,12.999999 z M12,10.999999 L13,10.999999 13,11.999999 12,11.999999 z M1,10.999999 L2.0000001,10.999999 2.0000001,11.999999 1,11.999999 z M13,2.9999992 L14,2.9999992 14,3.9999992 14,4.9999992 14,5.9999992 14,6.9999992 14,7.9999992 14,8.9999992 14,9.9999992 14,10.999999 13,10.999999 13,9.9999992 13,8.9999992 13,7.9999992 13,6.9999992 13,5.9999992 13,4.9999992 13,3.9999992 z M0,2.9999992 L1,2.9999992 1,3.9999992 1,4.9999992 1,5.9999992 1,6.9999992 1,7.9999992 1,8.9999992 1,9.9999992 1,10.999999 0,10.999999 0,9.9999992 0,8.9999992 0,7.9999992 0,6.9999992 0,5.9999992 0,4.9999992 0,3.9999992 z M12,1.9999999 L13,1.9999999 13,2.9999992 12,2.9999992 z M1,1.9999999 L2.0000001,1.9999999 2.0000001,2.9999992 1,2.9999992 z M11,0.99999994 L12,0.99999994 12,1.9999999 11,1.9999999 z M2.0000001,0.99999994 L2.9999998,0.99999994 2.9999998,1.9999999 2.0000001,1.9999999 z M2.9999998,0 L3.9999998,0 5,0 6,0 7,0 8,0 9,0 10,0 11,0 11,0.99999994 10,0.99999994 9,0.99999994 8,0.99999994 7,0.99999994 6,0.99999994 5,0.99999994 3.9999998,0.99999994 2.9999998,0.99999994 z"/>
+                                        <Path
+                                            Fill="{StaticResource GridView_ErrorIndicatorBackground2}"
+                                            Stretch="Fill"
+                                            Margin="7,3"
+                                            Data="M1.4901161E-07,8 L1.0000001,8 2.0000002,8 2.0000002,9 2.0000002,10 1.0000003,10 1.0000003,9 1.0000001,10 1.4901161E-07,10 1.4901161E-07,9 z M1.4901161E-07,0 L1.0000001,0 2.0000002,0 2.0000002,1 2.0000002,2 2.0000002,3 2.0000002,4.0000001 2.0000002,5 2.0000002,5.9999999 2.0000002,7 1.0000001,7 1.4901161E-07,7 1.4901161E-07,5.9999999 1.4901161E-07,5 1.4901161E-07,4.0000001 1.4901161E-07,3 1.4901161E-07,2 0,1 z"/>
+                                        <Path Fill="{StaticResource GridView_ErrorIndicatorBackground3}" Stretch="Fill" Data="M4,15 L5,15 6,15 7,15 8,15 9,15 10,15 11,15 12,15 12,16 11,16 10,16 9,16 8,16 7,16 6,16 5,16 4,16 z M12,14 L13,14 13,15 12,15 z M3,14 L4,14 4,15 3,15 z M13,13 L14,13 14,14 13,14 z M2,13 L3,13 3,14 2,14 z M14,12 L15,12 15,13 14,13 z M1,12 L2,12 2,13 1,13 z M7,11 L7,12 7,13 8,13 9,13 9,12 9,11 8,11 z M15,4 L16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 15,12 15,11 15,10 15,9 15,8 15,7 15,6 15,5 z M0,4 L1,4 1,5 1,6 1,7 1,8 1,9 1,10 1,11 1,12 0,12 0,11 0,10 0,9 0,8 0,7 0,6 0,5 z M14,3 L15,3 15,4 14,4 z M7,3 L7,4 7,5 7,6 7,7 7,8 7,9 7,10 8,10 9,10 9,9 9,8 9,7 9,6 9,5 9,4 9,3 8,3 z M1,3 L2,3 2,4 1,4 z M13,2 L14,2 14,3 13,3 z M4,2 L5,2 6,2 7,2 8,2 9,2 10,2 11,2 12,2 12,3 13,3 13,4 14,4 14,5 14,6 14,7 14,8 14,9 14,10 14,11 14,12 13,12 13,13 12,13 12,14 11,14 10,14 9,14 8,14 7,14 6,14 5,14 4,14 4,13 3,13 3,12 2,12 2,11 2,10 2,9 2,8 2,7 2,6 2,5 2,4 3,4 3,3 4,3 z M2,2 L3,2 3,3 2,3 z M12,1 L13,1 13,2 12,2 z M3,1 L4,1 4,2 3,2 z M4,0 L5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 12,1 11,1 10,1 9,1 8,1 7,1 6,1 5,1 4,1 z"/>
+                                        <ToolTipService.ToolTip>
+                                            <ToolTip x:Name="validationTooltip" Placement="Bottom" Content="{TemplateBinding Errors}" Template="{StaticResource GridViewRow_ValidationToolTipTemplate}"/>
+                                        </ToolTipService.ToolTip>
+                                    </Grid>
+                                    <Border x:Name="PART_RowResizer" Background="Transparent" Height="2" VerticalAlignment="Bottom" Cursor="SizeNS"/>
+                                </Grid>
+                            </Border>
+                        </Border>
+                    </grid:SelectiveScrollingGrid>
+                </Border>
+            </ControlTemplate>
+            <Style TargetType="grid:GridViewRow" BasedOn="{StaticResource GridViewRowStyle}">
+                <Setter Property="IsTabStop" Value="False"/>
+                <Setter Property="Template" Value="{StaticResource GridViewRowTemplate}"/>
+                <Setter Property="Background" Value="{StaticResource GridView_ItemBackground}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource GridView_GridLinesItemBorder}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="AllowDrop" Value="True"/>
+                <Setter Property="FontWeight" Value="Normal"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="Padding" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <telerik:RadGridView ItemsSource="{Binding Clubs}"/>
+    </Grid>
+</UserControl>

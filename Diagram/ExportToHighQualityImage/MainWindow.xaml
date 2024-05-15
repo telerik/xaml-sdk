@@ -1,0 +1,26 @@
+﻿<Window x:Class="ExportToHighQualityImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExportToHighQualityImage"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <telerik:RadDiagram x:Name="diagram" Zoom="0.25">
+            <telerik:RadDiagramShape Content="Shape 1" Position="150, 100" Width="1200" Height="500"/>
+            <telerik:RadDiagramShape Content="Shape 2" Position="1100, 700" />
+            <telerik:RadDiagramShape Content="Shape 3" Position="2300, 1200" />
+        </telerik:RadDiagram>
+
+        <Border Background="Bisque" Grid.Column="1">
+                <telerik:RadButton Content="Export to image" Click="Button_Click" VerticalAlignment="Top" Padding="10" Margin="3"/>
+        </Border>
+    </Grid>
+</Window>

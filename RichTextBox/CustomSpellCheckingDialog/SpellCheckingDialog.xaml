@@ -1,0 +1,83 @@
+﻿<local:RadRichTextBoxWindow x:Class="CustomSpellCheckingDialog.SpellCheckingDialog"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:local="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           Height="348" 
+           telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_Header" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"    
+           KeyDown="RadWindow_KeyDown">
+
+    <telerik:RadWindow.Icon>
+        <Image Source="/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/EnableSpellCheck.png" />
+    </telerik:RadWindow.Icon>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="LayoutRoot" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <local:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_NotInDictionary" />
+            <telerik:RadRichTextBox Name="rtbSpellCheckingContext" Grid.Row="1"
+                                    IsContextMenuEnabled="False" 
+                                    IsSpellCheckingEnabled="False" 
+                                    IsSelectionMiniToolBarEnabled="False" 
+                                    IsReadOnly="True" 
+                                    IsSelectionEnabled="False"/>
+
+            <local:HeadingLabel telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_Suggestions" Grid.Row="2" />
+            <ListBox Grid.Row="3" Name="suggestionsListBox" HorizontalContentAlignment="Stretch" SelectionChanged="SuggestionsListBox_SelectionChanged">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Loaded="ListBoxItemTemplateTextBlock_Loaded" Unloaded="ListBoxItemTemplateTextBlock_Unloaded" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_IgnoreAll" Name="buttonIgnoreAll" Margin="0 0 0 6" MinWidth="75" Click="ButtonIgnoreAll_Click" />
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_AddToDictionary" Name="buttonAddToDictionary" Margin="0 0 0 6"  MinWidth="75" Click="ButtonAddToDictionary_Click" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="3">
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_Change" Name="buttonChange" IsEnabled="False" Margin="0 0 0 6"  MinWidth="75" Click="ButtonChange_Click" />
+            </StackPanel>
+        </Grid>
+
+        <local:DialogFooter Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_SpellCheckingDialog_EditCustomDictionary" Margin="4" MinWidth="75" Name="buttonEditCustomDictionary" HorizontalAlignment="Left" Click="ButtonEditCustomDictionary_Click" VerticalAlignment="Center"/>
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Close" Margin="4" Grid.Column="3" MinWidth="75" Name="buttonClose"  Click="ButtonClose_Click" VerticalAlignment="Center"/>
+            </Grid>
+        </local:DialogFooter>
+    </Grid>
+
+
+</local:RadRichTextBoxWindow>

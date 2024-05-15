@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="MinimumInputPrefixLengthBeforeFiltering.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:MinimumInputPrefixLengthBeforeFiltering"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ViewModel/>
+    </UserControl.DataContext>
+    <StackPanel>
+        <TextBlock Text="This example demonstrates how to set a minimum length for the search text that needs to be entered before the items of RadAutoCompleteBox get filtered."
+                   FontSize="16"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <TextBlock Text="The filtering will start when the length of the search text is equal or bigger than five. For example type : 'unite'."
+                   FontSize="14"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <telerik:RadAutoCompleteBox ItemsSource="{Binding Countries}" 
+                                    DisplayMemberPath="Name"
+                                    Width="300">
+            <telerik:RadAutoCompleteBox.FilteringBehavior>
+                <local:MinimumInputFilteringBehavior/>
+            </telerik:RadAutoCompleteBox.FilteringBehavior>
+        </telerik:RadAutoCompleteBox>
+    </StackPanel>
+</UserControl>

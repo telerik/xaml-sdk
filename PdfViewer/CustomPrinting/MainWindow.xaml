@@ -1,0 +1,17 @@
+﻿<Window x:Class="CustomPrinting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Print" Click="Print_Click" />
+            <TextBox x:Name="PrinterName" Text="Microsoft XPS Document Writer" />
+        </StackPanel>
+        <telerik:RadPdfViewer x:Name="viewer" Grid.Row="1" DocumentSource="/CustomPrinting;component/printme.pdf" />
+    </Grid>
+</Window>

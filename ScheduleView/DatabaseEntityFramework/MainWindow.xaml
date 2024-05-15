@@ -1,0 +1,39 @@
+﻿<Window x:Class="DatabaseEntityFramework.MainWindow"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                xmlns:local="clr-namespace:DatabaseEntityFramework"
+                Title="MainWindow" Height="550" Width="1025">
+    <Window.DataContext>
+        <local:ScheduleViewViewModel/>
+    </Window.DataContext>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <telerik:RadBusyIndicator IsBusy="{Binding IsLoading}">
+            <telerik:RadScheduleView Grid.Row="0"    
+            AppointmentsSource="{Binding Appointments}"
+            ResourceTypesSource="{Binding ResourceTypes}"
+            TimeMarkersSource="{Binding TimeMarkers}"
+            CategoriesSource="{Binding Categories}"
+            VisibleRangeChangedCommand="{Binding VisibleRangeChanged}"
+            VisibleRangeChangedCommandParameter="{Binding VisibleRange, RelativeSource={RelativeSource Self}}">
+                <telerik:RadScheduleView.ViewDefinitions>
+                    <telerik:WeekViewDefinition />
+                    <telerik:MonthViewDefinition  />
+                    <telerik:TimelineViewDefinition />
+                </telerik:RadScheduleView.ViewDefinitions>
+                <telerik:RadScheduleView.GroupDescriptionsSource>
+                    <telerik:GroupDescriptionCollection>
+                        <telerik:DateGroupDescription />
+                        <telerik:ResourceGroupDescription ResourceType="Level" ShowNullGroup="True" />
+                        <telerik:ResourceGroupDescription ResourceType="Speaker" ShowNullGroup="True" />
+                    </telerik:GroupDescriptionCollection>
+                </telerik:RadScheduleView.GroupDescriptionsSource>
+            </telerik:RadScheduleView>
+        </telerik:RadBusyIndicator>
+        <Button Grid.Row="1" Content="Save data" HorizontalAlignment="Center" Command="{Binding SaveCommand}" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

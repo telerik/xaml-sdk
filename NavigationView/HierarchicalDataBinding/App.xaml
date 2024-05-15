@@ -1,0 +1,86 @@
+﻿<Application x:Class="HierarchicalDataBinding.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate x:Key="EditorsTemplate">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Visit the UI for WPF " />
+                <telerik:RadHyperlinkButton NavigateUri="https://docs.telerik.com/devtools/wpf/introduction" Content="documentation" TargetName="_blank"  />
+                <TextBlock Text=" to learn more about the different editors in the suite." />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="LayoutControlsTemplate">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Visit the UI for WPF " />
+                <telerik:RadHyperlinkButton NavigateUri="https://docs.telerik.com/devtools/wpf/introduction" Content="documentation" TargetName="_blank"  />
+                <TextBlock Text=" to learn more about the different layout controls in the suite." />
+            </StackPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RadComboBoxTemplate">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                <telerik:RadComboBox ItemsSource="{Binding EditorItemsSource}" EmptyText="Select a country" />
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0 50">
+                    <TextBlock Text="Visit the RadComboBox " />
+                    <telerik:RadHyperlinkButton NavigateUri="{Binding DocumentationLink}" Content="documentation." TargetName="_blank"  />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="RadAutoCompleteBoxTemplate">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                <telerik:RadAutoCompleteBox ItemsSource="{Binding EditorItemsSource}" SelectionMode="Single" WatermarkContent="Select a country"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0 50">
+                    <TextBlock Text="Visit the RadAutoCompleteBox " />
+                    <telerik:RadHyperlinkButton NavigateUri="{Binding DocumentationLink}" Content="documentation." TargetName="_blank"  />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="PersonTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Name,StringFormat=Name: {0}}" />
+                <TextBlock Text="{Binding Age,StringFormat=Age: {0}}" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="RadTileViewTemplate">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <telerik:RadTileView ItemsSource="{Binding LayoutControlItems}" DisplayMemberPath="Name" ContentTemplate="{StaticResource PersonTemplate}" MaximizeMode="Zero"/>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="0 50">
+                    <TextBlock Text="Visit the RadTileView " />
+                    <telerik:RadHyperlinkButton NavigateUri="{Binding DocumentationLink}" Content="documentation." TargetName="_blank"  />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RadTileListTemplate">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <telerik:RadTileList ItemsSource="{Binding LayoutControlItems}" DisplayMemberPath="Name" ItemTemplate="{StaticResource PersonTemplate}" />
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="0 50">
+                    <TextBlock Text="Visit the RadTileList " />
+                    <telerik:RadHyperlinkButton NavigateUri="{Binding DocumentationLink}" Content="documentation." TargetName="_blank"  />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

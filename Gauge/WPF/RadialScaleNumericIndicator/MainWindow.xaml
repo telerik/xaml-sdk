@@ -1,0 +1,36 @@
+﻿<Window x:Class="RadialScaleNumericIndicator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadRadialGauge Width="200"
+								Height="200"
+								telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale>
+				<telerik:RadialScale.Indicators>
+					<telerik:NumericIndicator Name="numericIndicator"
+											  Format="{}{0:F1}"
+											  telerik:ScaleObject.RelativeX="0.32"
+											  telerik:ScaleObject.RelativeY="0.65"
+											  telerik:ScaleObject.RelativeWidth="0.55*"
+											  telerik:ScaleObject.RelativeHeight="0.16*"
+											  Value="53.7">
+						<telerik:NumericIndicator.Background>
+							<SolidColorBrush Color="#EEEEEE"/>
+						</telerik:NumericIndicator.Background>
+						<telerik:NumericIndicator.Positions>
+							<telerik:SevenSegsNumberPosition />
+							<telerik:SevenSegsNumberPosition />
+							<telerik:SevenSegsNumberPosition />
+							<telerik:SevenSegsNumberPosition />
+							<telerik:SevenSegsNumberPosition />
+						</telerik:NumericIndicator.Positions>
+					</telerik:NumericIndicator>
+				</telerik:RadialScale.Indicators>
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+	</Grid>
+</Window>

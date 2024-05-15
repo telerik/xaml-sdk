@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="ToolBarMVVM.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:ToolBarMVVM"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="Resources.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+
+                <!--Custom Styles-->
+                <Style TargetType="telerik:RadButton" x:Key="RadButtonStyle" BasedOn="{StaticResource ToolBarRadButtonStyle}">
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="Content" Value="{Binding Content}" />
+                    <Setter Property="ToolTipService.ToolTip" Value="{Binding ToolTipContent}" />
+                    <Setter Property="Command" Value="{Binding InfoCommand}" />
+                </Style>
+
+                <Style TargetType="telerik:RadColorPaletteViewItem" x:Key="customPaletteItemsStyle" >
+                    <Setter Property="Width" Value="28" />
+                    <Setter Property="Height" Value="24" />
+                    <Setter Property="Margin" Value="2" />
+                </Style>
+                <!-- End of Styles-->
+
+                <!-- DataTemplates-->
+                <DataTemplate x:Key="RadButtonTemplate">
+                    <telerik:RadButton Style="{StaticResource RadButtonStyle}" VerticalAlignment="Center"/>
+                </DataTemplate>
+
+                <DataTemplate x:Key="TextBlockTemplate">
+                    <TextBlock Style="{StaticResource ToolBarTextBlockStyle}" 
+                               FontWeight="Bold" Text="{Binding Text}"/>
+                </DataTemplate>
+
+                <DataTemplate x:Key="RadColorPickerTemplate">
+                    <telerik:RadColorPicker HeaderPaletteVisibility="Collapsed" StandardPaletteVisibility="Collapsed"
+                                        MainPaletteItemsSource="{Binding MainPaletteColors}" SplitButtonStyle="{StaticResource ToolBarRadSplitButtonStyle}"
+                                        MainPaletteHeaderText="Custom Colors"  MainPaletteColumnsCount="5" MainPaletteOrientation="Horizontal"
+                                        MainPaletteItemsStyle="{StaticResource customPaletteItemsStyle}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="SeparatorTemplate">
+                    <telerik:RadToolBarSeparator Margin="3" />
+                </DataTemplate>
+                <!-- End Of Datatempaltes-->
+                <local:ToolBarItemTemplateSelector x:Key="TemplateSelector"
+                                              ButtonTemplate="{StaticResource RadButtonTemplate}"
+                                              TextBlockTemplate="{StaticResource TextBlockTemplate}"
+                                              ColorPickerTemplate="{StaticResource RadColorPickerTemplate}"
+                                              SeparatorTemplate="{StaticResource SeparatorTemplate}"  />
+            </ResourceDictionary>
+        </Grid.Resources>
+        <telerik:RadToolBar VerticalAlignment="Center" Margin="20 0 20 50"
+                            ItemsSource="{Binding Items}"
+                            ItemTemplateSelector="{StaticResource TemplateSelector}"/>
+    </Grid>
+</UserControl>

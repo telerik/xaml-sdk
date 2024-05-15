@@ -1,0 +1,43 @@
+﻿<Window x:Class="GroupStyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="commonGroupStyle" TargetType="telerik:RadToggleButton">
+                <Setter Property="Foreground" Value="Blue" />
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Height"  Value="50" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="GroupStyle" Grid.Row="0" 
+                   Grid.Column="0"
+                   Margin="5"/>
+        <telerik:RadPropertyGrid x:Name="propertyGrid"
+                                 AutoGeneratePropertyDefinitions="False"
+                                 IsGrouped="True"
+                                 Grid.Row="1"
+                                 Grid.Column="0"
+                                 Margin="5"
+                                 RenderMode="Flat"    
+                                 GroupStyle="{StaticResource commonGroupStyle}">
+            <telerik:RadPropertyGrid.PropertyDefinitions>
+                <telerik:PropertyDefinition DisplayName="First Name" Binding="{Binding FirstName}" GroupName="Name"></telerik:PropertyDefinition>
+                <telerik:PropertyDefinition DisplayName="Last Name" Binding="{Binding LastName}" GroupName="Name"></telerik:PropertyDefinition>
+                <telerik:PropertyDefinition DisplayName="Occupation" Binding="{Binding Occupation}" GroupName="Work Information"></telerik:PropertyDefinition>
+                <telerik:PropertyDefinition DisplayName="Salary" Binding="{Binding Salary}" GroupName="Work Information"></telerik:PropertyDefinition>
+                <telerik:PropertyDefinition DisplayName="Start Date" Binding="{Binding StartDate}" GroupName="Work Information"></telerik:PropertyDefinition>
+                <telerik:PropertyDefinition DisplayName="Married?" Binding="{Binding IsMarried}" GroupName="Personal Information"></telerik:PropertyDefinition>
+
+
+            </telerik:RadPropertyGrid.PropertyDefinitions>
+            
+        </telerik:RadPropertyGrid>
+    </Grid>
+</Window>

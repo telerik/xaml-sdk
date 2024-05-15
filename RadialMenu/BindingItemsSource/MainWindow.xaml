@@ -1,0 +1,9 @@
+﻿<Window x:Class="BindingItemsSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BindingItemsSource"
+        Title="MainWindow" Height="375" Width="615">
+    <Grid>
+        <local:Example />
+    </Grid>
+</Window>

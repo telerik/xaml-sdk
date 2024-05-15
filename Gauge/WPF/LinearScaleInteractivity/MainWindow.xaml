@@ -1,0 +1,55 @@
+﻿<Window x:Class="LinearScaleInteractivity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid UseLayoutRounding="True"
+		  Margin="20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<telerik:RadVerticalLinearGauge Width="102"
+										Height="210"
+										VerticalAlignment="Top"
+										HorizontalAlignment="Left"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale Min="0"
+										 Max="100"
+										 RelativeHeight="1"
+										 RelativeY="0"
+										 MiddleTickRelativeWidth="0.05*"
+										 MiddleTickRelativeHeight="0.003*"
+										 MinorTickRelativeHeight="0.003*"
+										 MajorTickRelativeHeight="0.003*"
+										 IsInteractive="True">
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:Marker Name="marker"
+									telerik:LinearScale.RotateForVertical="True"
+									telerik:ScaleObject.RelativeWidth="0.08*"
+									telerik:ScaleObject.RelativeHeight="0.03*"
+									telerik:ScaleObject.Location="OverCenter"
+									Value="{Binding ElementName=markerValue, Path=Value, Mode=TwoWay}"  />
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+		<Grid Grid.Column="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<TextBlock>Marker value:</TextBlock>
+			<telerik:RadNumericUpDown Name="markerValue"
+									  Grid.Column="1"
+									  VerticalAlignment="Top"
+									  Width="100"
+									  Height="21"
+									  Minimum="0"
+									  Maximum="100"
+									  Value="50"
+									  telerik:StyleManager.Theme="Windows8"/>
+		</Grid>
+	</Grid>
+</Window>

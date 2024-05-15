@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="CustomBoxesItemTemplate.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:CustomBoxesItemTemplate"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:ContinentToColorConverter x:Key="ContinentToColorConverter"/>
+        
+        <DataTemplate x:Key="CustomBoxesItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="14" 
+                       Height="12" 
+                       Margin="2"
+                       Source="{Binding Flag}" />
+                <TextBlock Foreground="{Binding Converter={StaticResource ContinentToColorConverter}}" 
+                           Margin="2" 
+                           FontWeight="Bold"
+                           Text="{Binding Name}" />
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to create a custom BoxesItemTemplate for RadAutoCompleteBox control in Silverlight and WPF."
+                   Grid.Row="0"
+                   FontSize="16"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
+        <TextBlock Text="Select a country (Type B for example):" 
+                   Grid.Row="1" 
+                   FontSize="16"
+                   Margin="20 5"
+                   FontStyle="Italic"
+                   HorizontalAlignment="Left"/>
+        <telerik:RadAutoCompleteBox Grid.Row="2" 
+                                    Margin="20 0"
+                                    ItemsSource="{Binding Countries}" 
+                                    DisplayMemberPath="Name"
+                                    BoxesItemTemplate="{StaticResource CustomBoxesItemTemplate}"/>
+        <TextBlock Text="Continents:"
+                   Grid.Row="3" 
+                   FontSize="16"
+                   FontStyle="Italic"
+                   Margin="20 10 20 0"
+                   HorizontalAlignment="Left"/>
+        <telerik:RadLegend Grid.Row="4" 
+                           Margin="20 0"
+                           FontSize="14"
+                           FontStyle="Italic" 
+                           HorizontalAlignment="Left">
+            <telerik:RadLegend.Items>
+                <telerik:LegendItemCollection>
+                    <telerik:LegendItem MarkerFill="Blue" Title="Europe"/>
+                    <telerik:LegendItem MarkerFill="Magenta" Title="Africa" />
+                    <telerik:LegendItem MarkerFill="Green" Title="NorthAmerica"/>
+                    <telerik:LegendItem MarkerFill="Red" Title="SouthAmerica"/>
+                    <telerik:LegendItem MarkerFill="Orange" Title="Asia"/>
+                    <telerik:LegendItem MarkerFill="Purple" Title="Australia"/>
+                    <telerik:LegendItem MarkerFill="Gray" Title="Antarctica" />
+                </telerik:LegendItemCollection>
+            </telerik:RadLegend.Items>
+        </telerik:RadLegend>
+    </Grid>
+</UserControl>

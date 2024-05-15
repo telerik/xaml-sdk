@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration_SL", "PdfViewerIntegration\PdfViewerIntegration_SL.csproj", "{F747C0C0-D959-4875-BFC0-3ABC625EB588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocument_SL", "GenerateDocument\GenerateDocument_SL.csproj", "{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUIElement_SL", "ExportUIElement\ExportUIElement_SL.csproj", "{57034B21-1805-447E-8B71-1F64567C0060}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F747C0C0-D959-4875-BFC0-3ABC625EB588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F747C0C0-D959-4875-BFC0-3ABC625EB588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F747C0C0-D959-4875-BFC0-3ABC625EB588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F747C0C0-D959-4875-BFC0-3ABC625EB588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F53523F-5597-4AE9-B74E-3D4592AA0EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57034B21-1805-447E-8B71-1F64567C0060}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	 
+EndGlobal

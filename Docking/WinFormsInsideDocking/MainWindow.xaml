@@ -1,0 +1,29 @@
+﻿<Window x:Class="WinFormsInsideDocking_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:WinFormsInsideDocking_WPF">
+    <Grid>
+        <telerik:RadDocking x:Name="docking">
+            <telerik:RadDocking.FlyoutBehavior>
+                <telerik:ClickFlyoutBehavior/>
+            </telerik:RadDocking.FlyoutBehavior>
+            <telerik:RadDocking.GeneratedItemsFactory>
+                <local:NonTrasparentWindowsGeneratedItemsFactory />
+            </telerik:RadDocking.GeneratedItemsFactory>
+            <telerik:RadSplitContainer>
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="WinForms" x:Name="winFormsPane">
+                        <WindowsFormsHost>
+                            <local:WinFormsUserControl MouseDown="WinFormsUserControl_MouseDown"/>
+                        </WindowsFormsHost>
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="WPF">
+                        <Button Content="WPF Button" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+        </telerik:RadDocking>
+    </Grid>
+</Window>

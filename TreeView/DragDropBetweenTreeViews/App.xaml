@@ -1,0 +1,38 @@
+﻿<Application x:Class="DragDropBetweenTreeViews_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate x:Key="mediaFilesTemplate">
+            <StackPanel Orientation="Horizontal" >
+                <Image Width="16"
+					       Height="16"
+					       Source="Images/DefaultIcons/photos.png"
+					       Stretch="Fill" />
+                <TextBlock Text="{Binding ImageFilePath}" />
+            </StackPanel>
+        </DataTemplate>
+        <HierarchicalDataTemplate x:Key="localMachineTemplate"
+			                          ItemTemplate="{StaticResource mediaFilesTemplate}"
+			                          ItemsSource="{Binding MediaFiles}">
+            <TextBlock Text="{Binding Name}" />
+        </HierarchicalDataTemplate>
+
+        <DataTemplate x:Key="resourceTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16"
+					       Height="16"
+					       Source="{Binding ImageFilePath}"
+					       Stretch="Fill" />
+                <TextBlock Text="{Binding Title}" />
+            </StackPanel>
+        </DataTemplate>
+
+
+        <HierarchicalDataTemplate x:Key="applicationTemplate"
+			                          ItemTemplate="{StaticResource resourceTemplate}"
+			                          ItemsSource="{Binding Resources}">
+            <TextBlock Text="{Binding Name}"/>
+        </HierarchicalDataTemplate>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="DataBindingToNestedCollections.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="400"
+		Width="600">
+	<Grid>
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartTitle>
+						<telerik:ChartTitle Content="Trade Data" />
+					</telerik:ChartDefaultView.ChartTitle>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+			
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping LegendLabel="CSCO"
+									   CollectionIndex="0">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition ShowItemLabels="False" />
+					</telerik:SeriesMapping.SeriesDefinition>
+					
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping DataPointMember="YValue"
+											 FieldName="Close" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+				
+				<telerik:SeriesMapping LegendLabel="MSFT"
+									   CollectionIndex="1">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition ShowItemLabels="False" />
+					</telerik:SeriesMapping.SeriesDefinition>
+					
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping DataPointMember="YValue"
+											 FieldName="Close" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+		</telerik:RadChart>
+	</Grid>
+</Window>

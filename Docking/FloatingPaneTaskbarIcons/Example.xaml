@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="FloatingPaneTaskbarIcons.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:FloatingPaneTaskbarIcons"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="GreenBrush" Color="#38BC2B" />
+        <SolidColorBrush x:Key="BlueBrush" Color="#17A8CB" />
+        <SolidColorBrush x:Key="DefaultBrush" Color="#CB1700" />
+        <LinearGradientBrush x:Key="WindowButtonIconFill" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF282828"/>
+            <GradientStop Color="#FF7C7C7C" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="WindowButtonIconStroke" Color="#FFFFFFFF"/>
+        <telerik:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+        <DataTemplate x:Key="SystemButtonsTitleTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ContentPresenter Content="{Binding}"/>
+                <StackPanel x:Name="HeaderButtons" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <telerik:RadButton x:Name="PART_MinimizeButton"
+                                       IsBackgroundVisible="False"
+                                       Command="{x:Static telerik:WindowCommands.Minimize}"
+                                       Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Path Fill="{StaticResource WindowButtonIconFill}" Stroke="{StaticResource WindowButtonIconStroke}" Width="14" Height="14" Data="M1.5,7.5 L12.5,7.5 12.5,11.5 1.5,11.5 Z"/>
+                    </telerik:RadButton>
+                    <telerik:RadButton x:Name="PART_RestoreButton"
+                                       Command="{x:Static telerik:WindowCommands.Restore}"
+                                       IsBackgroundVisible="False"
+                                       Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Path
+                            Fill="{StaticResource WindowButtonIconFill}"
+                            Stroke="{StaticResource WindowButtonIconStroke}"
+                            Width="14"
+                            Height="14"
+                            Data="M0.5,4.5 0.5,11.5 1.5,12.5 8.5,12.5 9.5,11.5 9.5,3.5 1.5,3.5 Z M3.5,6.5 L3.5,9.5 L6.5,9.5 6.5,6.5 Z M3.5,3.5 3.5,1.5 4.5,0.5 11.5,0.5 12.5,1.5 12.5,9.5 11.5,10.5 9.5,10.5 9.5,3.5 Z"/>
+                    </telerik:RadButton>
+                    <telerik:RadButton x:Name="PART_MaximizeButton"
+                                       IsBackgroundVisible="False"
+                                       Command="{x:Static telerik:WindowCommands.Maximize}"
+                                       Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Path
+                            Fill="{StaticResource WindowButtonIconFill}"
+                            Stroke="{StaticResource WindowButtonIconStroke}"
+                            Width="14"
+                            Height="14"
+                            Data="M1.5,2.5 L12.5,2.5 12.5,11.5 1.5,11.5 Z M4.5,5.5 L9.5,5.5 9.5,8.5 4.5,8.5 Z"/>
+                    </telerik:RadButton>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <telerik:RadDocking PaneStateChange="RadDocking_PaneStateChange"
+                            PreviewShowCompass="RadDocking_PreviewShowCompass">
+            <telerik:RadDocking.DocumentHost>
+                <telerik:RadSplitContainer>
+                    <telerik:RadPaneGroup>
+                        <telerik:RadPane Header="Green Pane 1" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                            <Grid Background="{StaticResource GreenBrush}"/>
+                        </telerik:RadPane>
+                        <telerik:RadPane Header="Green Pane 2" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                            <Grid Background="{StaticResource GreenBrush}"/>
+                        </telerik:RadPane>
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking.DocumentHost>
+            <telerik:RadSplitContainer InitialPosition="DockedRight">
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Blue Pane 1" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                        <Grid Background="{StaticResource BlueBrush}"/>
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="Blue Pane 2" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                        <Grid Background="{StaticResource BlueBrush}"/>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadSplitContainer InitialPosition="DockedLeft">
+                <telerik:RadPaneGroup>
+                    <telerik:RadPane Header="Default Pane 1" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                        <Grid Background="{StaticResource DefaultBrush}"/>
+                    </telerik:RadPane>
+                    <telerik:RadPane Header="Default Pane 2" TitleTemplate="{StaticResource SystemButtonsTitleTemplate}">
+                        <Grid Background="{StaticResource DefaultBrush}"/>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadDocking.GeneratedItemsFactory>
+                <local:CustomDefaultGeneratedItemsFactory />
+            </telerik:RadDocking.GeneratedItemsFactory>
+        </telerik:RadDocking>
+    </Grid>
+</UserControl>

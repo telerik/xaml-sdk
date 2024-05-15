@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TrackBallSyncedCharts.KeyboardNavigation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:TrackBallSyncedCharts"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <telerik:RadCartesianChart x:Name="chart1" Grid.Row="0">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeCategoricalAxis LabelFormat="MMM dd" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries CategoryBinding="Date" ValueBinding="YVal" ItemsSource="{Binding}" />
+            </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartTrackBallBehavior x:Name="behav1" local:ChartUtilities.TrackBallStaysOnMouseLeave="True" />
+            </telerik:RadCartesianChart.Behaviors>
+        </telerik:RadCartesianChart>
+        
+        <Border Background="White" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBlock Text="Press the Left and Right arrow keys" FontSize="20" />
+        </Border>
+    </Grid>
+</UserControl>
