@@ -4,6 +4,7 @@ using Telerik.Windows.Controls;
 using Telerik.Windows.Persistence;
 using Telerik.Windows.Zip;
 using System.Windows;
+using System.Linq;
 
 namespace ZipIntegration
 {
@@ -152,21 +153,32 @@ namespace ZipIntegration
         {
             PersistenceManager manager = new PersistenceManager();
             this.compressedStream = new MemoryStream();
-            ZipPackage zipPackage = ZipPackage.Create(this.compressedStream);
             this.rawStream = manager.Save(parameter);
             this.rawStream.Position = 0L;
-            zipPackage.AddStream(this.rawStream, "persistence", ZipCompression.Default, DateTime.Now.Date);
-            zipPackage.Close(false);
+
+            using (ZipArchive archive = ZipArchive.Create(this.compressedStream))
+            {
+                using (ZipArchiveEntry entry = archive.CreateEntry("persistence"))
+                {
+                    var entryStream = entry.Open();
+                    this.rawStream.CopyTo(entryStream);
+                }
+            }
             this.UncompressedSize = this.rawStream.Length;
             this.CompressedSize = this.compressedStream.Length;
         }
 
         public void Load(object parameter)
         {
-            ZipPackage zip = ZipPackage.Open(this.compressedStream);
-            Stream uncompressedStream = zip.ZipPackageEntries[0].OpenInputStream();
-            PersistenceManager manager = new PersistenceManager();
-            manager.Load(parameter, uncompressedStream);
+            using (var zip = ZipArchive.Read(this.compressedStream))
+            {
+                Stream uncompressedStream = zip.Entries.ElementAt(0).Open();
+                PersistenceManager manager = new PersistenceManager();
+                manager.Load(parameter, uncompressedStream);
+            }
+
+            this.compressedStream.Close();
+            this.compressedStream = null;
         }
 
         public bool CanLoad(object parameter)

@@ -181,7 +181,7 @@
                                     Cursor="SizeNS"
                                     dragDrop:DragDropManager.AllowDrag="True"
                                     Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
-                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                    telerik:TouchManager.DragStartTrigger="TapAndHold">
                                 <StackPanel x:Name="StartResizeGrip" Margin="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Border
                                         Width="3"
@@ -213,7 +213,7 @@
                                     Cursor="SizeNS"
                                     dragDrop:DragDropManager.AllowDrag="True"
                                     Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
-                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                    telerik:TouchManager.DragStartTrigger="TapAndHold">
                                 <StackPanel x:Name="EndResizeGrip" Margin="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Border
                                         Width="3"
@@ -418,7 +418,7 @@
                                     Cursor="SizeWE"
                                     dragDrop:DragDropManager.AllowDrag="True"
                                     Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
-                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                    telerik:TouchManager.DragStartTrigger="TapAndHold">
                                 <StackPanel x:Name="StartResizeGrip" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Border
                                         Width="3"
@@ -450,7 +450,7 @@
                                     Cursor="SizeWE"
                                     dragDrop:DragDropManager.AllowDrag="True"
                                     Visibility="{Binding IsAllDay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
-                                    dragDrop:DragDropManager.TouchDragTrigger="TapAndHold">
+                                    telerik:TouchManager.DragStartTrigger="TapAndHold">
                                 <StackPanel x:Name="EndResizeGrip" Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Border
                                         Width="3"

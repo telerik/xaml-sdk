@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using Telerik.Windows.Data;
-
 
 namespace ValidateINotifyDataErrorInfo
 {
-#if !SILVERLIGHT
-    public abstract class ViewModelBase : INotifyPropertyChanged, Telerik.Windows.Data.INotifyDataErrorInfo
-#else
-    public abstract class ViewModelBase : INotifyPropertyChanged, System.ComponentModel.INotifyDataErrorInfo
-#endif
+    public abstract class ViewModelBase : INotifyPropertyChanged, INotifyDataErrorInfo
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

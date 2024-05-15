@@ -1,13 +1,14 @@
-﻿using System;
+﻿extern alias DataAnnotations;
+
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConnectToDatabase_WPF.Data
 {
     public class TaskDbModel
     {        
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

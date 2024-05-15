@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿extern alias DataAnnotations;
+
+using System.Collections.Generic;
 
 namespace ConnectToDatabase_WPF.Data
 {
     public class RelationDbModel
     {
-        [Key]
-        public int Id { get; set; }                
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
+        public int Id { get; set; }
         public int Type { get; set; }
 
         // this.Tasks[0] - from task

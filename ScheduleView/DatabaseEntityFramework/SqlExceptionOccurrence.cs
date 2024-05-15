@@ -1,14 +1,12 @@
 namespace DatabaseEntityFramework
 {
+    extern alias DataAnnotations;
+
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class SqlExceptionOccurrence
     {
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int ExceptionId { get; set; }
 
         public int MasterSqlAppointmentId { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿extern alias DataAnnotations;
+
 using System.Windows.Media;
 using Telerik.Windows.Controls;
 
@@ -8,8 +9,7 @@ namespace DatabaseEntityFramework
 	{
 		private Brush categoryBrush;
 
-
-        [NotMapped]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Schema.NotMapped]
         public Brush CategoryBrush
 		{
 			get
