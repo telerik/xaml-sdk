@@ -1,0 +1,9 @@
+﻿<Window x:Class="Persistence.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Persistence"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <local:PersistLocalDataSource/>
+    </Grid>
+</Window>

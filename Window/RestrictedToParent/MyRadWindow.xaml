@@ -1,0 +1,22 @@
+﻿<telerik:RadWindow x:Class="RestrictedToParent.MyRadWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    IsRestricted="True"
+	IsTopmost="True"
+    mc:Ignorable="d"
+    x:Name="Window"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <StackPanel>
+        <TextBlock Text="RadWindow with:" 
+				   FontWeight="Bold"
+				   Margin="10 10 10 0"/>
+        <TextBlock Text="{Binding ElementName=Window, Path=IsRestricted, StringFormat='IsRestricted = {0}'}" 
+				   Margin="10 10 10 0"/>
+        <TextBlock Text="{Binding ElementName=Window, Path=IsTopmost, StringFormat='IsTopmost = {0}'}" 
+				   Margin="10 10 10 10"/>
+    </StackPanel>
+</telerik:RadWindow>

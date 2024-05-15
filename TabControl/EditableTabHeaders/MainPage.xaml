@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="EditableTabHeaders.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:EditableTabHeaders"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style TargetType="local:EditableTabHeader">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:EditableTabHeader">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="EditStates">
+                                    <VisualState x:Name="EditMode">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="ContentPresenter"
+                                            Storyboard.TargetProperty="Visibility">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="TextBox"
+                                            Storyboard.TargetProperty="Visibility">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="ViewMode">
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                            x:Name="ContentPresenter"
+                            ContentTemplate="{TemplateBinding ContentTemplate}" />
+                            <TextBox Text="{TemplateBinding Content}" x:Name="TextBox"
+                            Visibility="Collapsed" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <telerik:RadTabControl x:Name="radTabControl">
+            <telerik:RadTabControl.ContentTemplate>
+                <!--The Content Template:-->
+                <DataTemplate>
+                    <Grid Background="WhiteSmoke">
+                        <TextBlock Text="{Binding Content}" />
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadTabControl.ContentTemplate>
+            <telerik:RadTabControl.ItemTemplate>
+                <!--The Header Template:-->
+                <DataTemplate>
+                    <local:EditableTabHeader Content="{Binding Name, Mode=TwoWay}" />
+                </DataTemplate>
+            </telerik:RadTabControl.ItemTemplate>
+        </telerik:RadTabControl>
+    </Grid>
+</UserControl>

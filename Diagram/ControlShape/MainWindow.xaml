@@ -1,0 +1,7 @@
+﻿<Window x:Class="ControlShape.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:controlshape="clr-namespace:ControlShape" Title="Hosting controls in shapes" Width="1024" Height="768"
+		WindowStartupLocation="CenterScreen">
+	<controlshape:MainPage />
+</Window>

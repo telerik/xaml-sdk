@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="HolidayEvents.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:HolidayEvents"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:ViewModel x:Key="ViewModel"/>
+
+        <Style TargetType="local:GlobalEventContainer">
+            <Setter Property="Canvas.ZIndex" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <Rectangle Fill="Green" VerticalAlignment="Stretch" Opacity="0.7"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="local:NationalEventContainer">
+            <Setter Property="Canvas.ZIndex" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <Rectangle Fill="Blue" VerticalAlignment="Stretch" Opacity="0.7"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to create a custom TimeLineVisualizationBehavior in order to render multiple containers in the TimeRuler of the control. In the example the containers represent national and global holidays of 2013."
+                   TextWrapping="Wrap" Width="520" Margin="20 50 20 20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Zoom:" Margin="0 15 10 0"/>
+            <telerik:RadSlider VerticalAlignment="Center" 
+                           Width="120" x:Name="PixelLength" 
+                           Value="{Binding SliderValue, Mode=TwoWay}"
+					       Minimum="0" Maximum="2" Margin="20 0 20 15" TickFrequency="1" TickPlacement="TopLeft">
+                <telerik:RadSlider.TickTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock FontSize="11" Text="{Binding StringFormat=P0}" />
+                        </Grid>
+                    </DataTemplate>
+                </telerik:RadSlider.TickTemplate>
+            </telerik:RadSlider>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Global Holiday:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="50 10 10 10" HorizontalAlignment="Right"/>
+                <TextBlock Text="National Holiday:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="50 10 10 10" HorizontalAlignment="Right"/>
+                <Rectangle Fill="Green" Opacity="0.7" Height="22" Width="100" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                <Rectangle Fill="Blue" Opacity="0.7" Height="22" Width="100" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+        <telerik:RadGanttView TasksSource="{Binding Tasks}" Margin="5" Grid.Row="2"
+                              x:Name="GanttView"
+							  TimeLineVisualizationBehavior="{Binding TimeLineDeadlineBehavior}"
+							  VisibleRange="{Binding VisibleRange}"
+                              PixelLength="{Binding PixelLenght, Mode=TwoWay}"
+							  Height="200" VerticalAlignment="Top">
+            <telerik:RadGanttView.TimelineContainerSelector>
+                <local:HolidayEventsTimeLineContainerSelector/>
+            </telerik:RadGanttView.TimelineContainerSelector>
+            <telerik:RadGanttView.Columns>
+                <telerik:TreeColumnDefinition Header="Title" MemberBinding="{Binding Title}" ColumnWidth="140"/>
+                <telerik:ColumnDefinition MemberBinding="{Binding Description}" Header="Description" ColumnWidth="160" />
+            </telerik:RadGanttView.Columns>
+        </telerik:RadGanttView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+﻿<Window x:Class="LinkButton_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:LinkButton"
+		Title="MainWindow" Height="350" Width="525">
+	<StackPanel>
+		<telerik:RadButton Content="Link Button" Margin="10" local:VisitedBehavior.IsEnabled="True" />
+	</StackPanel>
+</Window>

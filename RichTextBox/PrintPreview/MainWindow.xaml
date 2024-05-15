@@ -1,0 +1,7 @@
+﻿<Window x:Class="PrintPreviewUsingRichTextBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PrintPreviewUsingRichTextBox"
+        Title="MainWindow" Height="350" Width="525">
+    <local:MainPage/>
+</Window>

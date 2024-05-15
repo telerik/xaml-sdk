@@ -1,0 +1,30 @@
+﻿<Window x:Class="SaveAndSaveAs_WPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" >
+            <telerik:RadButton  Content="New" Click="NewDocumentButton_Click" Padding="25,5" Margin="5" />
+            <telerik:RadButton  Content="Open" Click="OpenButton_Click" Padding="25,5" Margin="5" />
+            <telerik:RadButton  Content="Save" Click="SaveButton_Click"  Margin="5" Padding="25,5"/>
+            <telerik:RadButton  Content="Save As" Click="SaveAsButton_Click"  Margin="5" Padding="25,5"/>
+        </StackPanel>
+
+        <telerik:DocumentRuler Grid.Row="1">
+            <telerik:RadRichTextBox 
+                    telerik:Analytics.Name="rtb"
+                    x:Name="radRichTextBox" 
+                    IsSpellCheckingEnabled="False"
+                    LayoutMode="Paged"
+                    AllowDrop="True" >
+            </telerik:RadRichTextBox>
+        </telerik:DocumentRuler>
+
+    </Grid>
+</Window>

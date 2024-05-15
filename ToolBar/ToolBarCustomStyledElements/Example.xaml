@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="ToolBarCustomStyledElements.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="RadButtonToolTipStyle" TargetType="telerik:RadButton">   
+                <!-- Predefined properties:-->
+                <Setter Property="Margin" Value="1" />
+                <Setter Property="Padding" Value="2" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="IsBackgroundVisible" Value="False" />
+
+                <!-- Properties you add to achieve customization (randomly chosen for the example's purpose):-->
+                <Setter Property="ToolTipService.ToolTip" Value="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Width" Value="100" />
+            </Style>
+
+            <!-- This is the most important setting. Overriding the ToolBarContainerStyleSelector.-->
+            <!-- For every control you will place inside RadToolbar, add a ToolbarContainerStyle in this collection.-->
+            <!-- Then the ContainerStyle must contain the predefined properties from the default toolbar predefined-->
+            <!-- styles and the properties you need to add. -->
+            <!--This way you override the default predefines style in non-databinding scenarios.-->
+            <telerik:ToolBarContainerStyleSelector x:Key="selector">
+                <telerik:ToolBarContainerStyle TypeName="RadButton" ContainerStyle="{StaticResource RadButtonToolTipStyle}" />
+            </telerik:ToolBarContainerStyleSelector>
+        </Grid.Resources>
+
+        <StackPanel>
+        <!-- Correct way of setting custom Styles-->
+                <TextBlock Text="Correct Approach:"  Margin="0 0 15 0"/>
+                <telerik:RadToolBar ItemContainerStyleSelector="{StaticResource selector}">
+                    <telerik:RadButton Content="Alpha" />
+                    <telerik:RadButton Content="Beta" />
+                    <telerik:RadButton Content="Gamma" />
+                    <telerik:RadButton Content="Delta" />
+                </telerik:RadToolBar>
+
+            <!-- Incorrect way of setting custom Styles. Notice that the custom style is not applied.
+            The predefined one has overridden the custom style-->
+                <TextBlock Text="WRONG Approach (Does not work in WPF, works in SL but not in all theme-changing scenarios):" Margin="0 0 15 0"/>
+                <telerik:RadToolBar>
+                    <telerik:RadButton Content="Alpha" Style="{StaticResource RadButtonToolTipStyle}"/>
+                    <telerik:RadButton Content="Beta" Style="{StaticResource RadButtonToolTipStyle}"/>
+                    <telerik:RadButton Content="Gamma" Style="{StaticResource RadButtonToolTipStyle}"/>
+                    <telerik:RadButton Content="Delta" Style="{StaticResource RadButtonToolTipStyle}"/>
+                </telerik:RadToolBar>
+            </StackPanel>
+    </Grid>
+</UserControl>

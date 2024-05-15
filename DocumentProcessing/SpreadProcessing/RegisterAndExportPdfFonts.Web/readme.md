@@ -1,0 +1,2 @@
+## Register And Export Pdf Fonts . Web
+This project demonstrates how to return the fonts data needed for SpreadProcessing PDF export using a WCF service. The service from this project is consumed by the Silverlight project RegisterAndExportPdfFonts.

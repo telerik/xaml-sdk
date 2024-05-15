@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="CopyPasteFunctionality_SL.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+	xmlns:local="clr-namespace:CopyPasteFunctionality"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+	<UserControl.Resources>
+		<local:MyViewModel x:Key="MyViewModel"/>
+	</UserControl.Resources>
+	<Grid DataContext="{StaticResource MyViewModel}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition Width="220"/>
+		</Grid.ColumnDefinitions>
+
+		<telerik:RadGridView x:Name="productsGrid" GroupRenderMode="Flat"
+							 ItemsSource="{Binding Products}"
+							 CanUserFreezeColumns="False" CanUserReorderColumns="False"
+							 HorizontalAlignment="Center"
+							 CanUserSelect="{Binding IsChecked, ElementName=CanUserSelectCheckBox}"
+							 SelectionUnit="{Binding SelectedValue, ElementName=selectionUnitCombo}"
+							 SelectionMode="{Binding SelectedValue, ElementName=selectionModeCombo}"
+							 ShowColumnFooters="True"
+							 AutoGenerateColumns="False"
+							 local:GridViewClipboardContextMenu.IsEnabled="True"
+							 local:GridViewClipboardCustomBehavior_SL.IsEnabled="True">
+			<telerik:RadGridView.Columns>
+				<telerik:GridViewSelectColumn />
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding ProductID}" 
+											IsVisible="{Binding IsChecked, ElementName=IsColumnWithCustomHeaderVisibleCheckBox, Mode=TwoWay}">
+					<telerik:GridViewDataColumn.Header>
+						<TextBlock Text="ID" Foreground="SpringGreen" />
+					</telerik:GridViewDataColumn.Header>
+				</telerik:GridViewDataColumn>
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding ProductName}"
+											Width="*" >
+					<telerik:GridViewDataColumn.AggregateFunctions>
+						<telerik:CountFunction Caption="Count: " />
+					</telerik:GridViewDataColumn.AggregateFunctions>
+				</telerik:GridViewDataColumn>
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding UnitPrice}" IsReadOnly="{Binding IsChecked, ElementName= IsUnitPriceReadOnlyCheckBox, Mode=TwoWay}"
+											Header="Unit Price" />
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding QuantityPerUnit}" />
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding UnitsOnOrder}" >
+					<telerik:GridViewDataColumn.AggregateFunctions>
+						<telerik:SumFunction Caption="All ordered units: " />
+					</telerik:GridViewDataColumn.AggregateFunctions>
+				</telerik:GridViewDataColumn>
+				<telerik:GridViewExpressionColumn Header="OrderPrice" Expression="UnitPrice * UnitsOnOrder" />
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding Discontinued}"
+											Width="100" IsVisible="{Binding IsChecked, ElementName=IsDiscontinuedColumnVisibleCheckBox, Mode=TwoWay}"/>
+
+			</telerik:RadGridView.Columns>
+		</telerik:RadGridView>
+
+
+		<telerik:RadSpreadsheet x:Name="radSpreadsheet"  Grid.Column="1"/>
+
+		<StackPanel Margin="3" Grid.Column="2">
+			<CheckBox x:Name="CanUserSelectCheckBox"
+                      IsChecked="True"
+                      Content="Can user select items"
+                      Margin="0,2" />
+			<CheckBox x:Name="IsUnitPriceReadOnlyCheckBox"
+                      IsChecked="False"
+                      Content="Is UnitPrice ReadOnly"
+                      Margin="0,2" />
+			<CheckBox x:Name="ShouldCopySelectColumnCheckBox"
+                      IsChecked="{Binding ShouldCopySelectColumn, Mode=TwoWay}"
+					  IsThreeState="False"
+                      Content="Should Copy GridViewSelectColumn"
+                      Margin="0,2" />
+			<CheckBox x:Name="IsDiscontinuedColumnVisibleCheckBox"
+                      IsChecked="False"
+					  IsThreeState="False"
+                      Content="Is Discontinued column visible"
+                      Margin="0,2" />
+			<CheckBox x:Name="IsColumnWithCustomHeaderVisibleCheckBox"
+                      IsChecked="False"
+					  IsThreeState="False"
+                      Content="Is column with custom header visible"
+                      Margin="0,2" />
+			<TextBlock Text="Selection unit:"
+					   telerik:StyleManager.Theme="Windows8"
+                       Margin="0,10,0,0" />
+			<telerik:RadComboBox x:Name="selectionUnitCombo"
+                                 SelectedValuePath="Value"
+								 SelectedIndex="1"
+                                 ItemsSource="{Binding Units}"
+                                 DisplayMemberPath="DisplayName"
+                                 SelectedValue="{Binding SelectionUnit,ElementName=productsGrid, Mode=TwoWay}"
+                                 Margin="0,2" />
+			<TextBlock Text="Selection mode:"
+                       Margin="0,10,0,0" />
+			<telerik:RadComboBox x:Name="selectionModeCombo"
+                                 SelectedIndex="0"
+                                 SelectedValuePath="Value"
+                                 ItemsSource="{Binding Modes}"
+                                 DisplayMemberPath="DisplayName"
+                                 SelectedValue="{Binding SelectionMode,ElementName=productsGrid, Mode=TwoWay}"
+                                 Margin="0,2" />
+		</StackPanel>
+	</Grid>
+</UserControl>

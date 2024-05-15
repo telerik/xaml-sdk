@@ -1,0 +1,16 @@
+﻿<Window x:Class="DiagramCustomPaste.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:DiagramCustomPaste"
+        Title="MainWindow" Height="600" Width="600" WindowState="Maximized">
+    <Grid>
+    
+        <local:CustomDiagram x:Name="diagram" IsEditable="False"/>
+        
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 50">
+            <TextBlock Text="Paste a Shape or Connection and it will be positioned under Mouse pointer." FontSize="18" FontWeight="bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Paste a Connection when the Mouse is over a Shape Connector and this will attach the connection to the shape." FontSize="18" FontWeight="bold" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

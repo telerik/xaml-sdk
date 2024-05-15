@@ -1,0 +1,79 @@
+﻿<Application x:Class="VisualStudioDocking.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Windows8;component/Themes/Telerik.Windows.Controls.Docking.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <telerik:InvertedBooleanConverter x:Key="InvertedBooleanConveter" />
+
+            <SolidColorBrush x:Key="LightGrayBrush" Color="#FFEFEFF2" />
+            <SolidColorBrush x:Key="LightGrayBackgroundBrush" Color="#FFFFFFFF" />
+            <SolidColorBrush x:Key="DarkGrayBrush" Color="#FF424242" />
+            <SolidColorBrush x:Key="ContentForegroundBrush" Color="#FF020202" />
+            <SolidColorBrush x:Key="GreenBrush" Color="#FF388B41" />
+            <SolidColorBrush x:Key="DisableBrush" Color="#4C434647" />
+            <SolidColorBrush x:Key="LabelBrush" Color="#767676" />
+            <SolidColorBrush x:Key="ToolbarForegroundBrush" Color="#FF434647" />
+
+            <Style x:Key="ContentTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontFamily" Value="Segoe UI Light" />
+                <Setter Property="VerticalAlignment" Value="Top" />
+            </Style>
+
+            <Style TargetType="telerik:RadTreeViewItem" BasedOn="{StaticResource RadTreeViewItemStyle}">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontFamily" Value="Segoe UI" />
+            </Style>
+
+            <Style TargetType="telerik:RadToolBar" BasedOn="{StaticResource RadToolBarStyle}">
+                <Setter Property="Height" Value="28" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+
+            <Style TargetType="telerik:RadButton" x:Key="test" BasedOn="{StaticResource RadButtonStyle}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+            </Style>
+
+            <Style x:Key="ViewMenuItemStyle" TargetType="telerik:RadMenuItem" BasedOn="{StaticResource RadMenuItemStyle}">
+                <Setter Property="IsCheckable" Value="True"/>
+                <Setter Property="StaysOpenOnClick" Value="True" />
+                <Setter Property="Header" Value="{Binding Header}" />
+                <Setter Property="IsChecked" Value="{Binding IsHidden, Mode=TwoWay, Converter={StaticResource InvertedBooleanConveter}}" />
+            </Style>
+
+            <Style x:Key="WindowMenuItemStyle" TargetType="telerik:RadMenuItem" BasedOn="{StaticResource ViewMenuItemStyle}">
+                <Setter Property="IsCheckable" Value="True" />
+                <Setter Property="Header" Value="{Binding Header}"/>
+                <Setter Property="IsChecked" Value="{Binding IsActive, Mode=TwoWay}"/>
+            </Style>
+
+            <Style TargetType="telerik:RadPane" BasedOn="{StaticResource RadPaneStyle}">
+                <Setter Property="CanDockInDocumentHost" Value="False" />
+                <Setter Property="Header" Value="{Binding Header}" />
+                <Setter Property="IsHidden" Value="{Binding IsHidden, Mode=TwoWay}" />
+                <Setter Property="IsActive" Value="{Binding IsActive, Mode=TwoWay}" />
+            </Style>
+
+            <Style TargetType="telerik:RadDocumentPane" BasedOn="{StaticResource RadPaneStyle}">
+                <Setter Property="Header" Value="{Binding Header}" />
+                <Setter Property="IsHidden" Value="{Binding IsHidden, Mode=TwoWay}" />
+                <Setter Property="IsActive" Value="{Binding IsActive, Mode=TwoWay}" />
+            </Style>
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

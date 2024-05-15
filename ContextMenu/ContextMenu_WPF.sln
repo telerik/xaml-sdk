@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToDynamicData_WPF", "BindingToDynamicData\BindingToDynamicData_WPF.csproj", "{BF2117FF-27D5-446D-ABDE-227CB4E7BA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadContextMenuAndRadGridViewMVVM_WPF", "RadContextMenuAndRadGridViewMVVM\RadContextMenuAndRadGridViewMVVM_WPF.csproj", "{EA6210CC-9DCF-4918-9A5C-C534B2EF57A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadContextMenuForRadGridView_WPF", "RadContextMenuForRadGridView\RadContextMenuForRadGridView_WPF.csproj", "{CAFEB03D-85E4-467C-82E9-6F53792F1DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonsAndContextMenu_WPF", "ButtonsAndContextMenu\ButtonsAndContextMenu_WPF.csproj", "{B8501E65-6F0A-4BF3-B295-F1895EA531A0}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF2117FF-27D5-446D-ABDE-227CB4E7BA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2117FF-27D5-446D-ABDE-227CB4E7BA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2117FF-27D5-446D-ABDE-227CB4E7BA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2117FF-27D5-446D-ABDE-227CB4E7BA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6210CC-9DCF-4918-9A5C-C534B2EF57A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6210CC-9DCF-4918-9A5C-C534B2EF57A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6210CC-9DCF-4918-9A5C-C534B2EF57A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6210CC-9DCF-4918-9A5C-C534B2EF57A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFEB03D-85E4-467C-82E9-6F53792F1DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFEB03D-85E4-467C-82E9-6F53792F1DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFEB03D-85E4-467C-82E9-6F53792F1DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFEB03D-85E4-467C-82E9-6F53792F1DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8501E65-6F0A-4BF3-B295-F1895EA531A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8501E65-6F0A-4BF3-B295-F1895EA531A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8501E65-6F0A-4BF3-B295-F1895EA531A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8501E65-6F0A-4BF3-B295-F1895EA531A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

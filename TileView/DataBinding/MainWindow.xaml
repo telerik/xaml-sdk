@@ -1,0 +1,9 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataBinding"
+        Title="MainWindow">
+    <Grid>
+        <local:Example />
+    </Grid>
+</Window>

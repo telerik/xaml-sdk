@@ -1,0 +1,19 @@
+﻿<Window x:Class="TrackBallSyncedCharts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TrackBallSyncedCharts"
+        Title="MainWindow" Height="650" Width="925">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Synced PlotArea Sizes">
+                <local:ChartsWithSamePlotAreaSize />
+            </TabItem>
+            <TabItem Header="Different PlotArea Sizes and Axes Ranges">
+                <local:SyncedTrackBalls />
+            </TabItem>
+            <TabItem Header="Keyboard Navigation">
+                <local:KeyboardNavigation />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

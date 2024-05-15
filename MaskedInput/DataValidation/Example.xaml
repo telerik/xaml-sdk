@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="DataValidation.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Validation On Load With IDataErorInfo. Valid Range [1, 9999]." TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <telerik:RadMaskedNumericInput Grid.Column="1" Grid.Row="0" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center"        
+                                       Value="{Binding CardID, ValidatesOnDataErrors=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                       Mask="#4" FormatString="N0" x:Name="firstInput" AutoFillNumberGroupSeparators="False"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Validation On User Input With IDataErorInfo. Valid Range [1, 9999]." TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <telerik:RadMaskedNumericInput Grid.Column="1" Grid.Row="1" Width="120" HorizontalAlignment="Center"         VerticalAlignment="Center"
+                                       Value="{Binding CardID, ValidatesOnDataErrors=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                       Mask="#4" FormatString="N0" x:Name="secondInput" AutoFillNumberGroupSeparators="False"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Validation On User Input with ValidationExceptions. Valid Range [1, 9999]." VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <telerik:RadMaskedNumericInput Grid.Column="1" Grid.Row="2" Width="120" HorizontalAlignment="Center"  VerticalAlignment="Center"           
+                                       Value="{Binding CardID, ValidatesOnExceptions=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                       Mask="#4" FormatString="N0" x:Name="thirdInput" AutoFillNumberGroupSeparators="False" />
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Validation On User Input with RegularExpressions (DataAnnotations). Valid Range [-30, 30]." TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <telerik:RadMaskedNumericInput Grid.Column="3" Grid.Row="3" Width="120" HorizontalAlignment="Center"  VerticalAlignment="Center"           
+                                       Value="{Binding Temperature, ValidatesOnExceptions=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                       x:Name="fourthInput" AutoFillNumberGroupSeparators="False" UpdateValueEvent="PropertyChanged" AllowInvalidValues="True"/>
+    </Grid>
+</UserControl>

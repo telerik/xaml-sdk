@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:RowDetailsVisibilityOptions"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300"
+             d:DesignWidth="500"
+             mc:Ignorable="d">
+	<UserControl.Resources>
+		<local:MyViewModel x:Key="MyViewModel" />
+	</UserControl.Resources>
+	<Grid DataContext="{StaticResource MyViewModel}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.Resources>
+			<local:ComboBoxSelectedItemToRowDetailsVisibilityModeConverter x:Key="ComboBoxToRowDetailsVisibilityModeConverter" />
+			<DataTemplate x:Key="RowDetailsTemplate">
+				<telerik:RadGridView Name="playersGrid"
+				                     AutoGenerateColumns="False"
+				                     ItemsSource="{Binding Players}">
+					<telerik:RadGridView.Columns>
+						<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" />
+						<telerik:GridViewDataColumn DataMemberBinding="{Binding Number}" />
+						<telerik:GridViewDataColumn DataMemberBinding="{Binding Position}" />
+						<telerik:GridViewDataColumn DataMemberBinding="{Binding Country}" />
+					</telerik:RadGridView.Columns>
+				</telerik:RadGridView>
+			</DataTemplate>
+		</Grid.Resources>
+		<telerik:RadGridView Name="clubsGrid"
+		                     Grid.Row="0"
+		                     Grid.Column="1"
+		                     Margin="5"
+		                     AutoGenerateColumns="False"
+		                     ItemsSource="{Binding Clubs}"
+		                     RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
+		                     RowDetailsVisibilityMode="{Binding SelectedValue,
+		                                                        ElementName=xRowDetailsVisibilityMode,
+		                                                        Converter={StaticResource ComboBoxToRowDetailsVisibilityModeConverter}}">
+			<telerik:RadGridView.Columns>
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" />
+				<telerik:GridViewDataColumn DataFormatString="{}{0:yyyy}"
+				                            DataMemberBinding="{Binding Established}"
+				                            Header="Est." />
+				<telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
+				                            DataMemberBinding="{Binding StadiumCapacity}"
+				                            Header="Stadium" />
+			</telerik:RadGridView.Columns>
+		</telerik:RadGridView>
+		<telerik:RadGridView Name="clubsGridToggleRowDetailsColumn"
+		                     Grid.Row="1"
+		                     Grid.Column="1"
+		                     Margin="5"
+		                     AutoGenerateColumns="False"
+		                     ItemsSource="{Binding Clubs}"
+		                     RowDetailsTemplate="{StaticResource RowDetailsTemplate}">
+			<telerik:RadGridView.Columns>
+				<telerik:GridViewToggleRowDetailsColumn />
+				<telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" />
+				<telerik:GridViewDataColumn DataFormatString="{}{0:yyyy}"
+				                            DataMemberBinding="{Binding Established}"
+				                            Header="Est." />
+				<telerik:GridViewDataColumn DataFormatString="{}{0:N0}"
+				                            DataMemberBinding="{Binding StadiumCapacity}"
+				                            Header="Stadium" />
+			</telerik:RadGridView.Columns>
+		</telerik:RadGridView>
+		<Border Width="200"
+		        Margin="5"
+		        Background="White"
+		        BorderBrush="#FF848484"
+		        BorderThickness="1"
+		        Padding="5">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="10" ShadowDepth="0" />
+			</Border.Effect>
+			<StackPanel x:Name="OptionsContainer">
+				<TextBlock Margin="0,0,0,5" TextWrapping="Wrap">
+					<Run>The first</Run>
+					<Run FontWeight="Bold">RadGridView</Run>
+					<Run>uses the</Run>
+					<Run FontWeight="Bold">RowDetailsVisibilityMode</Run>
+					<Run>property to customize the expand / collapse behavior.</Run>
+				</TextBlock>
+				<TextBlock Margin="0,0,0,5" Text="RowDetailsVisibilityMode:" />
+				<telerik:RadComboBox x:Name="xRowDetailsVisibilityMode"
+				                     Margin="0,0,0,5"
+				                     DisplayMemberPath="DisplayName"
+				                     FontWeight="Bold"
+				                     ItemsSource="{Binding RowDetailsVisibilityModes,
+				                                           Source={StaticResource MyViewModel}}"
+				                     SelectedIndex="0" />
+
+			</StackPanel>
+		</Border>
+		<Border Grid.Row="1"
+		        Grid.Column="0"
+		        Width="200"
+		        Margin="5"
+		        Background="White"
+		        BorderBrush="#FF848484"
+		        BorderThickness="1"
+		        Padding="5">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="10" ShadowDepth="0" />
+			</Border.Effect>
+			<TextBlock Margin="0,0,0,5" TextWrapping="Wrap">
+				<Run>The second grid uses the</Run>
+				<Run FontWeight="Bold">GridViewRowDetailsToggleColumn</Run>
+			</TextBlock>
+		</Border>
+	</Grid>
+</UserControl>

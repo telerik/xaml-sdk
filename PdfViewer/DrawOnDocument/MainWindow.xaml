@@ -1,0 +1,229 @@
+﻿<Window x:Class="DrawOnDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+        xmlns:fixedViewersUI="clr-namespace:Telerik.Windows.Controls.FixedDocumentViewersUI;assembly=Telerik.Windows.Controls.FixedDocumentViewersUI"
+        xmlns:local="clr-namespace:DrawOnDocument"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/"
+                                               DarkBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Dark/"
+                                               ModernBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/" />
+        <converters:FixedDocumentViewerModeConverter x:Key="ModeConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <telerik:VisibilityToBooleanConverter x:Key="VisibilityToBooleanConverter" />
+        <telerik:InvertedBooleanConverter x:Key="InvertedBooleanConverter"/>
+        <local:InvertedNullToBooleanConverter x:Key="InvertedNullToBooleanConverter"/>
+
+        <local:MainPageDrawViewModel x:Key="ViewModel" />
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <telerik:RadToolBar DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}">
+
+            <telerik:RadButton Command="{Binding OpenCommandDescriptor.Command}" Visibility="{Binding OpenCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=open.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Click="SaveRadButton_Click" IsEnabled="{Binding Path=Document, Source={x:Reference Name=pdfViewer}, Converter={StaticResource InvertedNullToBooleanConverter}}" Visibility="{Binding SaveAsCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Save As" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=save.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Command="{Binding PrintCommandDescriptor.Command}" Visibility="{Binding PrintCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Print" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=printer.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:RadButton x:Name="counterClockwiseButton" 
+                                    Command="{Binding RotateCounterClockwiseCommandDescriptor.Command}"                                    
+                                    Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Rotate counterclockwise" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/rotate-counterclockwise.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton x:Name="clockwiseButton" 
+                                    Command="{Binding RotateClockwiseCommandDescriptor.Command}"                                    
+                                    Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Rotate clockwise" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/rotate-clockwise.png" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:RadButton Command="{Binding PageUpCommandDescriptor.Command}" Visibility="{Binding PageUpCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"  HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Previous page" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=previous.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton Command="{Binding PageDownCommandDescriptor.Command}" Visibility="{Binding PageDownCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Next page" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=next.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <TextBox Width="45" Margin="2" Text="{Binding FixedDocumentViewer.CurrentPageNumber, Mode=TwoWay}" HorizontalContentAlignment="Center" x:Name="tbCurrentPage" KeyDown="tbCurrentPage_KeyDown"/>
+            <TextBlock VerticalAlignment="Center" Margin="2" Text="/" />
+            <TextBlock VerticalAlignment="Center" Margin="2" Text="{Binding FixedDocumentViewer.PagesCount}" />
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:RadButton Command="{Binding ZoomInCommandDescriptor.Command}" Visibility="{Binding ZoomInCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Zoom in" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=zoom-in.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <telerik:RadButton x:Name="PART_btnZoomOut" Command="{Binding ZoomOutCommandDescriptor.Command}" Visibility="{Binding ZoomOutCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Zoom out" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=zoom-out.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadButton>
+
+            <fixedViewersUI:PercentComboBox Value="{Binding ElementName=pdfViewer, Path=ScaleFactor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                            RadPdfViewer="{Binding ElementName=pdfViewer}"
+                                            Margin="2">
+                <fixedViewersUI:PercentComboBox.PercentValues>
+                    <fixedViewersUI:Percent Value="10"/>
+                    <fixedViewersUI:Percent Value="25"/>
+                    <fixedViewersUI:Percent Value="50"/>
+                    <fixedViewersUI:Percent Value="75"/>
+                    <fixedViewersUI:Percent Value="100"/>
+                    <fixedViewersUI:Percent Value="150"/>
+                    <fixedViewersUI:Percent Value="200"/>
+                    <fixedViewersUI:Percent Value="500"/>
+                    <fixedViewersUI:Percent Value="1000"/>
+                    <fixedViewersUI:Percent Value="2000"/>
+                </fixedViewersUI:PercentComboBox.PercentValues>
+            </fixedViewersUI:PercentComboBox>
+
+            <telerik:RadToolBarSeparator />
+            <telerik:RadToggleButton x:Name="fitToWidthButton"
+                                     Command="{Binding FitToWidthFixedDocumentPagesPresenterCommandDescriptor.Command}" 
+                                     IsEnabled="{Binding FitToWidthFixedDocumentPagesPresenterCommandDescriptor.IsEnabled, Converter={StaticResource InvertedBooleanConverter}, Mode=TwoWay}" 
+                                     IsChecked="{Binding FitToWidthFixedDocumentPagesPresenterCommandDescriptor.IsEnabled, Mode=TwoWay}"
+                                     Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Fit to window width and enable scrolling." />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=document-fit-width.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToggleButton x:Name="fitToPageButton" 
+                                    Command="{Binding FitToPageFixedDocumentSinglePageViewPresenterCommandDescriptor.Command}" 
+                                    IsEnabled="{Binding FitToPageFixedDocumentSinglePageViewPresenterCommandDescriptor.IsEnabled, Converter={StaticResource InvertedBooleanConverter}, Mode=TwoWay}"
+                                    IsChecked="{Binding FitToPageFixedDocumentSinglePageViewPresenterCommandDescriptor.IsEnabled, Mode=TwoWay}"
+                                    Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Fit one full page to window." />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=document-fit-page.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+
+            </telerik:RadToggleButton>
+            <telerik:RadToolBarSeparator />
+
+            <telerik:RadToggleButton IsChecked="{Binding Path=IsDrawModeEnabled, Mode=TwoWay, Source={StaticResource ResourceKey=ViewModel}}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Draw" />
+                </ToolTipService.ToolTip>
+                <Image Source="/DrawOnDocument;component/Icons/draw.png" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToggleButton IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=Pan}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Pan" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=hand-free.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToggleButton IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=TextSelection}" Margin="2" Padding="0" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Text Selection" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=text-selection.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadToggleButton>
+
+            <telerik:RadToggleButton IsChecked="{Binding ElementName=signaturePanel, Path=Visibility, Mode=TwoWay, Converter={StaticResource VisibilityToBooleanConverter}}"
+                                     IsEnabled="{Binding ValidateSignaturesCommandDescriptor.IsEnabled}"
+                                     Margin="2" IsBackgroundVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Signature Panel" />
+                </ToolTipService.ToolTip>
+                <Image Source="{telerik:IconResource IconRelativePath=signature16x16.png, IconSources={StaticResource IconPaths}}" Stretch="None" />
+            </telerik:RadToggleButton>
+        </telerik:RadToolBar>
+
+        <fixedViewersUI:SignaturePanel Grid.Row="1" x:Name="signaturePanel" PdfViewer="{Binding ElementName=pdfViewer, Mode=OneWay}" />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <telerik:RadPdfViewerNavigationPane RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneWay}" />
+
+            <telerik:RadPdfViewer Grid.Column="1" x:Name="pdfViewer" DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}" telerik:Analytics.Name="pdfViewer">
+                <telerik:RadContextMenu.ContextMenu>
+                    <telerik:RadContextMenu x:Name="menu">
+                        <telerik:RadMenuItem Header="Copy" Command="{Binding CopyCommandDescriptor.Command}"
+                                         Visibility="{Binding CopyCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <telerik:RadMenuItem Header="Select All" Command="{Binding SelectAllCommandDescriptor.Command}"
+                                         Visibility="{Binding SelectAllCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                        <telerik:RadMenuItem IsSeparator="True" 
+                                         Visibility="{Binding TextSelectionCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <telerik:RadMenuItem IsCheckable="True" IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=Pan}" Header="Pan" />
+                        <telerik:RadMenuItem IsCheckable="True" IsChecked="{Binding FixedDocumentViewer.Mode, Mode=TwoWay, Converter={StaticResource ModeConverter}, ConverterParameter=TextSelection}" Header="Text Selection" />
+
+                        <telerik:RadMenuItem IsSeparator="True"
+                                         Visibility="{Binding ViewCommandDescriptorsGroup.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <telerik:RadMenuItem Header="Zoom In" Command="{Binding ZoomInCommandDescriptor.Command}"
+                                         Visibility="{Binding ZoomInCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <telerik:RadMenuItem Header="Zoom Out" Command="{Binding ZoomOutCommandDescriptor.Command}"
+                                         Visibility="{Binding ZoomOutCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                        <telerik:RadMenuItem IsSeparator="True" />
+
+                        <telerik:RadMenuItem Header="Print..." Command="{Binding PrintCommandDescriptor.Command}"
+                                         Visibility="{Binding PrintCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <telerik:RadMenuItem Header="Find" Command="{Binding ShowFindDialogCommandDescriptor.Command}"
+                                         Visibility="{Binding ShowFindDialogCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    </telerik:RadContextMenu>
+                </telerik:RadContextMenu.ContextMenu>
+            </telerik:RadPdfViewer>
+        </Grid>
+    </Grid>
+</Window>

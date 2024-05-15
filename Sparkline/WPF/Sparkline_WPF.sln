@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{845DF576-368B-467D-806A-CAD78D20A43A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_BusinessObjects", "DataBinding_BusinessObjects\DataBinding_BusinessObjects.csproj", "{3E89B88C-C681-4DDE-8B33-7BD3CF142687}"
+EndProject
+Global
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{845DF576-368B-467D-806A-CAD78D20A43A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845DF576-368B-467D-806A-CAD78D20A43A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845DF576-368B-467D-806A-CAD78D20A43A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845DF576-368B-467D-806A-CAD78D20A43A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E89B88C-C681-4DDE-8B33-7BD3CF142687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E89B88C-C681-4DDE-8B33-7BD3CF142687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E89B88C-C681-4DDE-8B33-7BD3CF142687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E89B88C-C681-4DDE-8B33-7BD3CF142687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

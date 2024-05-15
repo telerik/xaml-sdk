@@ -1,0 +1,19 @@
+﻿<Window x:Class="Groups.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:Groups"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="300"
+		Width="525">
+    <Grid UseLayoutRounding="True"
+		  Margin="20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<local:LinearGaugeGroupsDemo/>
+		<local:RadialGaugeGroupsDemo Grid.Column="1"/>
+	</Grid>
+</Window>

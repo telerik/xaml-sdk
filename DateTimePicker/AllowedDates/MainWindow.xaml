@@ -1,0 +1,17 @@
+﻿<Window x:Class="AllowedDates.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AllowedDates"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This project demonstrates how to use the SelectableDateStart, SelectableDateEnd and BlackoutDates properties in order to make only the current month and only weekdays selectable in the RadDatePicker control."
+				   TextWrapping="Wrap" 
+				   Margin="20" HorizontalAlignment="Center"
+				   FontWeight="Bold"/>
+        <local:Example Grid.Row="1" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

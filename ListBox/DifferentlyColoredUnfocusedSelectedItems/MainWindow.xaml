@@ -1,0 +1,29 @@
+﻿<Window x:Class="DifferentlyColoredUnfocusedSelectedItems.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:DifferentlyColoredUnfocusedSelectedItems"
+        Title="MainWindow" SizeToContent="Height" Width="450" >
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="This sample project demonstates how to change the background color of RadListBoxItems when RadListBox loses the focus." Margin="10"/>
+            <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="Select an item from RadListBox and lose the focus by clicking inside the TextBox located below RadListBox."  Margin="10 0"/>
+        </StackPanel>
+        <telerik:RadListBox ItemsSource="{Binding CountryList}" Grid.Row="1"                               
+                                Margin="10"
+                                SelectedIndex="3"
+                                HorizontalAlignment="Stretch"
+                                SelectionMode="Multiple"
+                                VerticalAlignment="Stretch">
+        </telerik:RadListBox>
+        <TextBox Margin="10 0 10 5" Grid.Row="2" Text="Click here in order to lost the focus."/>
+    </Grid>
+</Window>

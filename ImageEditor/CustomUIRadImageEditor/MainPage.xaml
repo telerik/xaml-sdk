@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="CustomUIRadImageEditor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"      
+    xmlns:local="clr-namespace:CustomUIRadImageEditor"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <Storyboard x:Key="FadeIn">
+                <DoubleAnimation Duration="00:00:00.200" To="1.00" From="0.3" Storyboard.TargetName="fadeoutPanel" Storyboard.TargetProperty="Opacity"/>
+            </Storyboard>
+            <Storyboard x:Key="FadeOut">
+                <DoubleAnimation Duration="00:00:00.200" To="0.3" From="1.00" Storyboard.TargetName="fadeoutPanel" Storyboard.TargetProperty="Opacity"/>
+            </Storyboard>
+        </Grid.Resources>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" >
+            <telerik:RadImageEditor x:Name="imageEditor" ScaleFactor="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="250" Width="500"/>
+
+            <Grid x:Name="fadeoutPanel" Opacity="0.3">
+                <local:CustomSettingsContainer x:Name="settingsContainer" />
+                <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 14" Background="#CCF0F4FA" CornerRadius="10" Padding="4">
+                    <Grid x:Name="tools" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <telerik:RadImageEditorButton Grid.Column="0" Image="/Telerik.Windows.Controls.ImageEditor;Component/Images/open.png"  
+                                                  Command="{Binding Path=Commands.Open, ElementName=imageEditor}"/>
+                        <telerik:RadImageEditorButton Grid.Column="1" Image="/Telerik.Windows.Controls.ImageEditor;Component/Images/save.png"  
+                                                  Command="{Binding Path=Commands.Save, ElementName=imageEditor}"/>
+
+                        <telerik:RadImageEditorButton Grid.Column="2" Image="/Telerik.Windows.Controls.ImageEditor;Component/Images/Default/Crop.png"  
+                                                  Command="{Binding Path=Commands.ExecuteTool, ElementName=imageEditor}">
+                            <telerik:RadButton.CommandParameter>
+                                <tools:CropTool />
+                            </telerik:RadButton.CommandParameter>
+                        </telerik:RadImageEditorButton>
+
+                        <telerik:RadImageEditorButton Grid.Column="3" Image="/Telerik.Windows.Controls.ImageEditor;Component/Images/Default/Rotate90CW.png"
+                                                  Command="{Binding Path=Commands.Rotate90Clockwise, ElementName=imageEditor}"/>
+
+                        <telerik:RadImageEditorButton Grid.Column="4" Image="/Telerik.Windows.Controls.ImageEditor;Component/Images/Default/Rotate90CCW.png"
+                                                  Command="{Binding Path=Commands.Rotate90Counterclockwise, ElementName=imageEditor}"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

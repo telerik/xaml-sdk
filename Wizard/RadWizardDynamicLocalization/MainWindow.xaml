@@ -1,0 +1,29 @@
+﻿<Window x:Class="RadWizardDynamicLocalization.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		 xmlns:wizard="clr-namespace:Telerik.Windows.Controls.Wizard;assembly=Telerik.Windows.Controls.Navigation"
+        Title="Dynamic Localization" Height="441" Width="618" >
+	<Grid>
+		<telerik:RadWizard>
+			<telerik:RadWizard.WizardPages>
+				<telerik:WizardPage ButtonsVisibilityMode="All">
+					<telerik:RadComboBox Name="LanguageComboBox" 
+										 Width="150"
+										 Height="30"
+										 HorizontalAlignment="Center"
+										 SelectionChanged="RadComboBox_SelectionChanged">
+						<telerik:RadComboBoxItem Content="en"/>
+						<telerik:RadComboBoxItem Content="de"/>
+						<telerik:RadComboBoxItem Content="es"/>
+						<telerik:RadComboBoxItem Content="fr"/>
+						<telerik:RadComboBoxItem Content="it"/>
+						<telerik:RadComboBoxItem Content="nl"/>
+						<telerik:RadComboBoxItem Content="tr"/>
+					</telerik:RadComboBox>
+				</telerik:WizardPage>
+			</telerik:RadWizard.WizardPages>
+		</telerik:RadWizard>
+
+	</Grid>
+</Window>

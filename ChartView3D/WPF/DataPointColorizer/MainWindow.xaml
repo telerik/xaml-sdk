@@ -1,0 +1,16 @@
+﻿<Window x:Class="DataPointColorizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataPointColorizer"
+        Title="MainWindow" >
+    <Grid>
+        <TabControl FontSize="22" Margin="4">
+            <TabItem Header="Blend">
+                <local:Blend FontSize="12" />
+            </TabItem>
+            <TabItem Header="Tiles">
+                <local:Tiles FontSize="12" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="FloatingActionButton_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FloatingActionButton_WPF"
+        mc:Ignorable="d"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:mat="clr-namespace:Telerik.Windows.Controls.MaterialControls;assembly=Telerik.Windows.Controls"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Source="/Images/CustomUIImage.jpg"/>
+        <telerik:RadExpander HeaderButtonStyle="{StaticResource CusomizedToggleButton}" 
+                             ToolTip="Share" 
+                             HorizontalAlignment="Right" 
+                             VerticalAlignment="Bottom" 
+                             Margin="20" 
+                             ExpandDirection="Up" 
+                             Padding="-8 0 0 2">
+            <StackPanel>
+                <telerik:RadButton Content="{StaticResource GlyphTwitter}" ToolTip="Twitter" Style="{StaticResource RoundButton}"/>
+                <telerik:RadButton Content="{StaticResource GlyphFacebook}" ToolTip="Facebook" Style="{StaticResource RoundButton}"/>
+                <telerik:RadButton Content="{StaticResource GlyphPinterest}" ToolTip="Pinterest" Style="{StaticResource RoundButton}"/>
+            </StackPanel>
+        </telerik:RadExpander>
+    </Grid>
+</Window>

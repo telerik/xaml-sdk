@@ -1,0 +1,2 @@
+## Drawing
+This example demonstrates how to implement a custom shape and use it in the Draw Tool of the RadImageEditor. The example utilizes the implicit styling approach explained at http://docs.telerik.com/devtools/wpf/styling-and-appearance/styling-apperance-implicit-styles-overview.html.

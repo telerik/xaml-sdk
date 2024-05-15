@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media.Imaging;
+using Telerik.Windows.Controls.GanttView;
+
+namespace PrintingAndExporting
+{
+	public class GanttPaginator : DocumentPaginator
+	{
+        private IList<ImageInfo> exportImages;
+
+        public GanttPaginator(IEnumerable<ImageInfo> exportImages)
+		{
+			this.exportImages = exportImages.ToList();
+		}
+
+		public override DocumentPage GetPage(int pageNumber)
+		{
+            var bitmap = this.exportImages[pageNumber].Export();
+			var imageSize = new Size(bitmap.Width, bitmap.Height);
+			var image = new Image { Source = bitmap };
+			image.Measure(imageSize);
+			image.Arrange(new Rect(imageSize));
+			image.UpdateLayout();
+			return new DocumentPage(image);
+		}
+
+		public override bool IsPageCountValid
+		{
+			get { return true; }
+		}
+
+		public override int PageCount
+		{
+			get { return exportImages.Count(); }
+		}
+
+		public override Size PageSize
+		{
+			get
+			{
+				return new Size(0, 0);
+			}
+			set
+			{
+				throw new NotImplementedException();
+			}
+		}
+
+		public override IDocumentPaginatorSource Source
+		{
+			get { return null; }
+		}
+	}
+}

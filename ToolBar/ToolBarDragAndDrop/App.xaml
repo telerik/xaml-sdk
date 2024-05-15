@@ -1,0 +1,15 @@
+﻿<Application x:Class="ToolBarDragAndDrop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="DraggableToolBarStyle" TargetType="telerik:RadToolBar">
+            <Setter Property="telerik:DragDropManager.AllowDrag" Value="True" />
+        </Style>
+
+        <!--When a tool bar is dropped outside a tray, the ToolBarUtilities class will initialize a new Window to place the tool bar in.
+        We need to make sure that the tool bar has the AllowDrag property set to true.-->
+        <Style TargetType="telerik:RadToolBar" BasedOn="{StaticResource DraggableToolBarStyle}" />
+    </Application.Resources>
+</Application>

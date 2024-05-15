@@ -1,0 +1,79 @@
+﻿<Window x:Class="_2._5D_Chart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:_2._5D_Chart"
+        Title="MainWindow" Height="550" Width="825">
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+    
+    <Grid>
+        <!--The 2.5D appearance depends highly on the custom templates.-->
+        <telerik:RadCartesianChart Palette="Flower" 
+                                   Margin="30" 
+                                   local:ChartViewUtilities.Is3DCameraEnabled="True"
+                                   local:ChartViewUtilities.IsInitialAnimationEnabled="True">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:CategoricalAxis />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis MajorTickTemplate="{StaticResource tickTemplate25D}" 
+                                    ZIndex="-500" />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries PaletteMode="DataPoint" 
+                                   PointTemplate="{StaticResource barTemplate25D}">
+                    <telerik:BarSeries.DataPoints>
+                        <telerik:CategoricalDataPoint Category="Jan" Value="500" />
+                        <telerik:CategoricalDataPoint Category="Feb" Value="1000" />
+                        <telerik:CategoricalDataPoint Category="Mar" Value="1500" />
+                        <telerik:CategoricalDataPoint Category="Apr" Value="1900" />
+                        <telerik:CategoricalDataPoint Category="May" Value="800" />
+                        <telerik:CategoricalDataPoint Category="Jun" Value="1300" />
+                    </telerik:BarSeries.DataPoints>
+                </telerik:BarSeries>
+                <telerik:LineSeries>
+                    <FrameworkElement.RenderTransform>
+                        <TranslateTransform X="{DynamicResource hOffsetHalf}" 
+                                            Y="{DynamicResource vOffsetNegatedHalf}" />
+                    </FrameworkElement.RenderTransform>
+                    <telerik:LineSeries.DataPoints>
+                        <telerik:CategoricalDataPoint Category="Jan" Value="800" />
+                        <telerik:CategoricalDataPoint Category="Feb" Value="1600" />
+                        <telerik:CategoricalDataPoint Category="Mar" Value="1800" />
+                        <telerik:CategoricalDataPoint Category="Apr" Value="2300" />
+                        <telerik:CategoricalDataPoint Category="May" Value="1900" />
+                        <telerik:CategoricalDataPoint Category="Jun" Value="1700" />
+                    </telerik:LineSeries.DataPoints>
+                </telerik:LineSeries>
+                <telerik:BubbleSeries PaletteMode="DataPoint" 
+                                      PointTemplate="{StaticResource ellipseTemplate25D}">
+                    <telerik:BubbleSeries.BubbleSizeSelector>
+                        <telerik:RelativeBubbleSizeSelector />
+                    </telerik:BubbleSeries.BubbleSizeSelector>
+                    <telerik:BubbleSeries.DataPoints>
+                        <telerik:BubbleDataPoint Category="Jan" Value="800" BubbleSize="15" />
+                        <telerik:BubbleDataPoint Category="Feb" Value="1600" BubbleSize="35" />
+                        <telerik:BubbleDataPoint Category="Mar" Value="1800" BubbleSize="12" />
+                        <telerik:BubbleDataPoint Category="Apr" Value="2300" BubbleSize="15" />
+                        <telerik:BubbleDataPoint Category="May" Value="1900" BubbleSize="35" />
+                        <telerik:BubbleDataPoint Category="Jun" Value="1700" BubbleSize="15" />
+                    </telerik:BubbleSeries.DataPoints>
+                </telerik:BubbleSeries>
+            </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Grid>
+                <telerik:CartesianChartGrid MajorLinesVisibility="Y">
+                    <FrameworkElement.RenderTransform>
+                        <TranslateTransform X="{DynamicResource hOffset}" 
+                                            Y="{DynamicResource vOffsetNegated}" />
+                    </FrameworkElement.RenderTransform>
+                </telerik:CartesianChartGrid>
+            </telerik:RadCartesianChart.Grid>
+        </telerik:RadCartesianChart>        
+    </Grid>
+</Window>

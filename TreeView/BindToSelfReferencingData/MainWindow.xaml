@@ -1,0 +1,22 @@
+﻿<Window x:Class="BindToSelfReferencingData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:BindToSelfReferencingData.Converters"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <converters:HierarchyConverter x:Key="HierarchyConverter" />
+
+        <HierarchicalDataTemplate x:Key="ItemTemplate"
+                                          ItemsSource="{Binding Converter={StaticResource HierarchyConverter}}">
+            <TextBlock Text="{Binding Text}" />
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadTreeView x:Name="radTreeView"
+                             ItemTemplate="{StaticResource ItemTemplate}"
+                             ItemsSource="{Binding Converter={StaticResource HierarchyConverter}}"/>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ResourcesPaging.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+			 xmlns:local="clr-namespace:ResourcesPaging"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerik:RadScheduleView  AppointmentsSource="{Binding Appointments}" 
+                                  ResourceTypesSource="{Binding ResourceTypes}" 
+                                  Grid.Row="1">
+            <telerik:RadScheduleView.ViewDefinitions>
+                <telerik:DayViewDefinition />
+            </telerik:RadScheduleView.ViewDefinitions>
+            <telerik:RadScheduleView.GroupDescriptionsSource>
+                <telerik:GroupDescriptionCollection>
+                    <telerik:ResourceGroupDescription ResourceType="Room" />
+                </telerik:GroupDescriptionCollection>
+            </telerik:RadScheduleView.GroupDescriptionsSource>
+        </telerik:RadScheduleView>
+        <StackPanel  Orientation="Horizontal" VerticalAlignment="Center">
+            <telerik:RadComboBox SelectedValue="{Binding ResourcesPerPage, Mode=TwoWay}">
+                <telerik:RadComboBox.Items>
+                    <sys:Int32>5</sys:Int32>
+                    <sys:Int32>10</sys:Int32>
+                    <sys:Int32>20</sys:Int32>
+                    <sys:Int32>30</sys:Int32>
+                </telerik:RadComboBox.Items>
+            </telerik:RadComboBox>
+            <telerik:RadButton Width="70" Content="Prev" Command="{Binding PreviousResources}"/>
+            <telerik:RadButton Width="70" Content="Next" Command="{Binding NextResources}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

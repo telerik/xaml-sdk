@@ -1,0 +1,42 @@
+﻿<Window x:Class="DefaultVisualStyleSelector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:DefaultVisualStyleSelector"
+        Title="MainWindow" Height="350" Width="525">
+    <FrameworkElement.Resources>
+        <Style x:Key="greenBarStyle" TargetType="Border">
+            <Setter Property="Background" Value="Green" />
+        </Style>
+        <Style x:Key="redBarStyle" TargetType="Border">
+            <Setter Property="Background" Value="Red" />
+        </Style>
+        <Style x:Key="zeroBarStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Opacity" Value="0.5" />
+            <Setter Property="MinHeight" Value="3" />
+            <Setter Property="Margin" Value="0 -2 0 2" />
+        </Style>
+        <local:NegativeStyleSelector x:Key="negativeStyleSelector" 
+                                     ZeroValueStyle="{StaticResource zeroBarStyle}"
+                                     NegativeValueStyle="{StaticResource redBarStyle}" />
+    </FrameworkElement.Resources>
+    <Grid>
+        <telerik:RadCartesianChart>
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeCategoricalAxis LabelFormat="yyyy" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries CategoryBinding="Date" 
+                                   ValueBinding="YVal" 
+                                   ItemsSource="{Binding}"
+                                   DefaultVisualStyle="{StaticResource greenBarStyle}"
+                                   DefaultVisualStyleSelector="{StaticResource negativeStyleSelector}" />
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+    </Grid>
+</Window>

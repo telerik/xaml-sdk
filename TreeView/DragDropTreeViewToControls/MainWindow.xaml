@@ -1,0 +1,101 @@
+﻿<Window x:Class="DragDropTreeViewToControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:example="clr-namespace:DragDropTreeViewToControls.Behaviors"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow">
+    <Grid x:Name="LayoutRoot"
+          Margin="8"
+          Background="White">
+        <Grid.Resources>
+            <DataTemplate x:Key="WishlistProduct">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="#FF000000" Text="{Binding Name}" />
+                    <TextBlock Foreground="#FF000000" Text=", (" />
+                    <TextBlock Foreground="#FF000000" Text="{Binding UnitPrice}" />
+                    <TextBlock Foreground="#FF000000" Text=")" />
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="ProductTemplate">
+                <telerik:RadDockPanel MaxWidth="200" Margin="2">
+                    <TextBlock Foreground="{telerik:Windows8Resource ResourceKey=MarkerBrush}"
+                               Text="{Binding Name}"
+                               telerik:RadDockPanel.Dock="Top" />
+                    <TextBlock Foreground="{telerik:Windows8Resource ResourceKey=AccentBrush}"
+                               Text="{Binding UnitPrice}"
+                               telerik:RadDockPanel.Dock="Left" />
+                    <TextBlock Margin="2 0 0 0"
+                               Foreground="{telerik:Windows8Resource ResourceKey=StrongBrush}"
+                               Text="{Binding Description}"
+                               TextWrapping="Wrap"
+                               telerik:RadDockPanel.Dock="Left" />
+                </telerik:RadDockPanel>
+            </DataTemplate>
+            <HierarchicalDataTemplate x:Key="CategoryTemplate"
+                                      ItemTemplate="{StaticResource ProductTemplate}"
+                                      ItemsSource="{Binding Items}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="16"
+                           Height="16"
+                           Margin="3"
+                           VerticalAlignment="Center"
+                           Source="Images/folder_icon.png" />
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Foreground="{telerik:Windows8Resource ResourceKey=MarkerBrush}"
+                               Text="{Binding Name}" />
+                </StackPanel>
+            </HierarchicalDataTemplate>
+            <!--  Note: With this style we make the ListBoxItems draggable:  -->
+            <Style TargetType="ListBoxItem">
+                <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
+            </Style>
+
+            <Style TargetType="telerik:RadTreeViewItem">
+                <Setter Property="IsExpanded" Value="True" />
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <!--  All Products  -->
+        <telerik:RadTreeView x:Name="allProductsView"
+                             Grid.Row="0"
+                             Grid.RowSpan="2"
+                             Grid.Column="0"
+                             Margin="0,0,5,0"
+                             IsDragDropEnabled="True"
+                             ItemTemplate="{StaticResource CategoryTemplate}"
+                             Padding="5" />
+
+        <!--  Whishlist  -->
+        <ListBox x:Name="wishlistView"
+                 Grid.Column="1"
+                 AllowDrop="True"
+                 FontSize="11"
+                 ItemTemplate="{StaticResource WishlistProduct}"
+                 Padding="5"
+                 SelectionMode="Extended"
+                 example:ListBoxDragDropBehavior.IsEnabled="True">
+            <ListBox.Resources>
+                <DataTemplate x:Key="DraggedItemTemplate">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Dragging:" />
+                            <TextBlock FontWeight="Bold" Text="{Binding CurrentDraggedItem.Name}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock MinWidth="45"
+                                       FontWeight="Bold"
+                                       Text="{Binding CurrentDropPosition}" />
+                            <TextBlock Foreground="Gray" Text=", (" />
+                            <TextBlock Text="{Binding CurrentDraggedOverItem.Name}" />
+                            <TextBlock Foreground="Gray" Text=")" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.Resources>
+        </ListBox>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CustomDockingPanesFactory.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:CustomDockingPanesFactory"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to use a custom DockingPanesFactory in order to add the RadPanes from the PanesSource collection to a predefined empty RadPaneGroups in the control. The example also demonstrates how to permanently remove a RadPane instance when its 'X' close button is pressed." 
+                   TextWrapping="Wrap" Width="600" Margin="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <telerik:RadDocking PanesSource="{Binding Panes}" Grid.Row="1"
+                            Close="OnRadDockingClose">
+            <telerik:RadDocking.DocumentHost>
+                <telerik:RadSplitContainer>
+                    <telerik:RadPaneGroup x:Name="DocumentHostPaneGroup"/>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking.DocumentHost>
+            <telerik:RadSplitContainer InitialPosition="DockedLeft">
+                <telerik:RadPaneGroup  x:Name="LeftPaneGroup"/>
+            </telerik:RadSplitContainer>
+            <telerik:RadSplitContainer InitialPosition="DockedBottom">
+                <telerik:RadPaneGroup x:Name="BottomPaneGroup"/>
+            </telerik:RadSplitContainer>
+            <telerik:RadDocking.DockingPanesFactory>
+                <local:MyDockingPanesFactory />
+            </telerik:RadDocking.DockingPanesFactory>
+        </telerik:RadDocking>
+    </Grid>
+</UserControl>

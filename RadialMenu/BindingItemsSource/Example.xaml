@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="BindingItemsSource.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BindingItemsSource"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:ViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="20">
+            <telerik:RadButton Content="Insert Item On Index 1 (Top Level)" Command="{Binding AddItemCommand}" Margin="5" />
+            <telerik:RadButton Content="Remove Selected Item (Top Level)" Command="{Binding RemoveItemCommand}" Margin="5" />
+            <telerik:RadButton Content="Reset ItemsSource" Command="{Binding ResetAllItemsCommand}" Margin="5" />
+            <TextBlock Text="{Binding Description}" Margin="5 20 0 0" TextWrapping="Wrap" />
+        </StackPanel>
+        <telerik:RadRadialMenu Grid.Column="1" VerticalAlignment="Top" Margin="0 50 20 20"
+                               ItemsSource="{Binding MenuItems}" 
+                               IsOpen="{Binding IsOpen, Mode=TwoWay}">
+        </telerik:RadRadialMenu>
+    </Grid>
+</UserControl>

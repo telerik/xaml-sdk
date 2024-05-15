@@ -1,0 +1,48 @@
+﻿<Window x:Class="ChangeScaleFactor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+        Title="MainWindow" Height="600" Width="1000"
+        x:Name="wnd">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <telerik:RadToolBar DataContext="{Binding ElementName=pdfViewer, Path=CommandDescriptors}">  
+            <telerik:RadButton Command="{Binding OpenCommandDescriptor.Command}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="pack://application:,,,/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/open.png" Stretch="None" />
+            </telerik:RadButton> 
+            <telerik:RadToolBarSeparator/>
+            
+            <TextBlock Text="Initial scale factor:"/>
+            <TextBox Width="50"
+                     Text="{Binding ElementName=wnd, Path=ViewModel.InitialScaleFactor, Mode=TwoWay}"
+                     HorizontalContentAlignment="Left"/>
+            <telerik:RadToolBarSeparator/>
+
+            <telerik:PercentComboBox Value="{Binding ElementName=pdfViewer, Path=ScaleFactor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                            RadPdfViewer="{Binding ElementName=pdfViewer}"
+                                            Margin="2">
+                <telerik:PercentComboBox.PercentValues>
+                    <telerik:Percent Value="10"/>
+                    <telerik:Percent Value="25"/>
+                    <telerik:Percent Value="50"/>
+                    <telerik:Percent Value="75"/>
+                    <telerik:Percent Value="100"/>
+                    <telerik:Percent Value="150"/>
+                    <telerik:Percent Value="200"/>
+                    <telerik:Percent Value="500"/>
+                    <telerik:Percent Value="1000"/>
+                    <telerik:Percent Value="2000"/>
+                </telerik:PercentComboBox.PercentValues>
+            </telerik:PercentComboBox>
+        </telerik:RadToolBar>
+
+        <telerik:RadPdfViewer Name="pdfViewer" Grid.Row="1" DocumentSource="/ChangeScaleFactor;component/SampleData/Sample.pdf"/>
+    </Grid>
+</Window>

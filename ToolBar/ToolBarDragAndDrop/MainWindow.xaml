@@ -1,0 +1,217 @@
+﻿<Window x:Class="ToolBarDragAndDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ToolBarDragAndDrop"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="Drag Drop ToolBars" Height="600" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="telerik:RadToolBarTray">
+                <Setter Property="AllowDrop" Value="True" />
+                <Setter Property="local:ToolBarTrayUtilities.IsDragDropEnabled" Value="True" />
+                <Setter Property="MinWidth" Value="6" />
+                <Setter Property="MinHeight" Value="6" />
+                <Setter Property="Background" Value="LightGray" />
+            </Style>
+            <Style x:Key="NewBandIndicatorStyle" TargetType="Border">
+                <Setter Property="IsHitTestVisible" Value="False" />
+                <Setter Property="BorderBrush" Value="#AA25A0DA" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1">
+            <telerik:RadToolBarTray  x:Name="tray1" Orientation="Vertical">
+                <telerik:RadToolBar telerik:DragDropManager.AllowDrag="True" x:Name="b1">
+                    <telerik:RadButton>
+                        <Image Source="Images/3_ColumnsInsert.png" ToolTip="Columns Insert" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/3_ColumnsRemove.png" ToolTip="Columns Remove" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_ThickBorderBox.png" ToolTip="Thick Border Box" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_ThickBottomBorder.png" ToolTip="Thick Bottom Border" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_TopAndBottomBorder.png" ToolTip="Top And Bottom Border" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_TopAndThickBottomBorder.png" ToolTip="Top And Thick Bottom Border" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_TopBorder.png" ToolTip="Top Border" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+            </telerik:RadToolBarTray>
+            <Border local:ToolBarTrayUtilities.TrayOwner="{Binding ElementName=tray1}" Style="{StaticResource NewBandIndicatorStyle}" />
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <telerik:RadToolBarTray x:Name="tray2" Orientation="Horizontal">
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/4_Copy.png" ToolTip="Copy" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/4_Cut.png" ToolTip="Cut" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/4_Paste.png" ToolTip="Paste" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/7_Open.png" ToolTip="Open" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/7_Save.png" ToolTip="Save" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/7_SaveAs.png" ToolTip="Save As" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar Band="1">
+                    <telerik:RadButton>
+                        <Image Source="Images/8_ThickBorderBox.png" ToolTip="Thick Border Box" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_ThickBottomBorder.png" ToolTip="Thick Bottom Border" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/8_TopAndBottomBorder.png" ToolTip="Top And Bottom Border" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar Band="1">
+                    <telerik:RadButton>
+                        <Image Source="Images/6_FontSizeDecrease.png" ToolTip="Font Size Decrease" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_FontSizeIncrease.png" ToolTip="Font Size Increase" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_ForegroundColor.png" ToolTip="Foreground Color" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar Band="2">
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignCenter.png" ToolTip="Align Center" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignLeft.png" ToolTip="Align Left" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignMiddle.png" ToolTip="Align Middle" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+            </telerik:RadToolBarTray>
+            <Border local:ToolBarTrayUtilities.TrayOwner="{Binding ElementName=tray2}"  Style="{StaticResource NewBandIndicatorStyle}" />
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="1">
+            <telerik:RadToolBarTray x:Name="tray3" Orientation="Vertical">
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/1_Copy.png" ToolTip="Copy" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/1_Paste.png" ToolTip="Paste" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/1_Save.png" ToolTip="Save" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignCenter.png" ToolTip="Align Center" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignLeft.png" ToolTip="Align Left" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignMiddle.png" ToolTip="Align Middle" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/2_AlignRight.png" ToolTip="Align Right" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+            </telerik:RadToolBarTray>
+            <Border local:ToolBarTrayUtilities.TrayOwner="{Binding ElementName=tray3}" Style="{StaticResource NewBandIndicatorStyle}" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <telerik:RadToolBarTray x:Name="tray4" Orientation="Horizontal">
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/5_FillDown.png" ToolTip="Fill Down" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/5_FillLeft.png" ToolTip="Fill Left" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/5_FillRight.png" ToolTip="Fill Right" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/5_FillUp.png" ToolTip="Fill Up" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+                <telerik:RadToolBar>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_FontSizeDecrease.png" ToolTip="Font Size Decrease" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_FontSizeIncrease.png" ToolTip="Font Size Increase" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_ForegroundColor.png" ToolTip="Foreground Color" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_Merge.png" ToolTip="Merge" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_MergeAcross.png" ToolTip="Merge Across" Stretch="None" />
+                    </telerik:RadButton>
+                    <telerik:RadButton>
+                        <Image Source="Images/6_MergeAndCenter.png" ToolTip="Merge And Center" Stretch="None" />
+                    </telerik:RadButton>
+                </telerik:RadToolBar>
+            </telerik:RadToolBarTray>
+            <Border local:ToolBarTrayUtilities.TrayOwner="{Binding ElementName=tray4}" Style="{StaticResource NewBandIndicatorStyle}" />
+        </Grid>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
+            <TextBlock FontSize="16" Margin="20 20 0 0" TextWrapping="Wrap"
+                       Text="*Drag a Toolbar to reorder ToolBars in the current Band or to create new Band after the last one*" />
+
+            <TextBlock FontSize="16" Margin="20 20 0 0" TextWrapping="Wrap"
+                       Text="*Drop Toolbar outsite ToolBarTrays and it will be placed in draggable Window*" />
+
+            <TextBlock FontSize="16" Margin="20 20 0 0" TextWrapping="Wrap"
+                       Text="* Set Indicator Mode and you will see horizontal / vertical indicator line for new Band when the dragged ToolBar is near the last Band in a ToolBarTray*" />
+
+            <TextBlock FontSize="16" Margin="20 20 0 0" TextWrapping="Wrap"
+                       Text="* Set Live Mode and new Band will be automatically created when the dragged toolbar is near the last Band in a ToolBarTray*" />
+
+
+            <StackPanel HorizontalAlignment="Center" Margin="0 50 0 0">
+                <TextBlock HorizontalAlignment="Center" Text="NewBandMode:" FontWeight="Bold" FontSize="15"/>
+                <RadioButton x:Name="ButtonNone" Content="None" Click="RadioButton_Click" IsChecked="True" Margin="30 0 0 0"/>
+                <RadioButton x:Name="ButtonIndicator" Content="Indicator" Click="RadioButton_Click" Margin="30 0 0 0"/>
+                <RadioButton x:Name="ButtonLive" Content="Live" Click="RadioButton_Click" Margin="30 0 0 0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="UsingDayTemplateSelector.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:UsingDayTemplateSelector"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:DayButtonTemplateSelector x:Key="DayButtonTemplateSelector">
+            <local:DayButtonTemplateSelector.DefaultTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Text}" />
+                </DataTemplate>
+            </local:DayButtonTemplateSelector.DefaultTemplate>
+            <local:DayButtonTemplateSelector.BookedDayTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Path Data="M3.9,1.9 L3.9,4.9 L5.9,4.9 L5.9,1.9 z M4.9,0 C6.5,0 7.9,1.3 7.9,2.9 L7.9,4.9 L10,4.9 L10,12 L0,12 L0,4.9 L1.9,4.9 L1.9,2.9 C1.9,1.3 3.2,0 4.9,0 z" 
+                              Fill="LightSalmon"
+                              Height="28" 
+                              Stretch="Fill" 
+                              UseLayoutRounding="False"
+                              Width="32"
+                              Opacity="0.4"/>
+                        <TextBlock Text="{Binding Text}" 
+                                   Margin="0 6 0 0"
+                                   Foreground="Black" 
+                                   FontWeight="Bold" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </local:DayButtonTemplateSelector.BookedDayTemplate>
+            <local:DayButtonTemplateSelector.SpecialHolidayTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Path Data="M11.5,0 L14.2,8.3 L23.0,8.3 L16,13.5 L18.6,22 L11.5,16.7 L4.4,22 L7.1,13.5 L0,8.3 L8.7,8.3 z" 
+                              Fill="#FF25A0DA" 
+                              Height="34"
+                              Stretch="Fill"
+                              UseLayoutRounding="False"
+                              Width="34"
+                              Opacity="0.4"/>
+                        <TextBlock Text="{Binding Text}" 
+                                   Margin="0 5 0 0"
+                                   Foreground="Black"
+                                   FontWeight="Bold" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </local:DayButtonTemplateSelector.SpecialHolidayTemplate>
+        </local:DayButtonTemplateSelector>
+    </UserControl.Resources>
+    <Grid MinWidth="390">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="This example demonstrates how to create a custom DayTemplateSelector in order to customize the day buttons in RadCalendar" 
+				   Grid.Row="0"
+				   Margin="20 20 20 0"
+                   Width="350" 
+				   FontWeight="Bold"
+				   TextWrapping="Wrap" />
+        <telerik:RadCalendar Grid.Row="1" Margin="20" Width="350" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center" DayTemplateSelector="{StaticResource DayButtonTemplateSelector}" />
+    </Grid>
+</UserControl>

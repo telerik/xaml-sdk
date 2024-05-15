@@ -1,0 +1,9 @@
+﻿<Application x:Class="WpfApplication1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+       
+    </Application.Resources>
+</Application>

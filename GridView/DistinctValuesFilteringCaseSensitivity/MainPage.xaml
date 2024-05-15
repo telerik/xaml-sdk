@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" mc:Ignorable="d"
+             xmlns:my="clr-namespace:DistinctValuesFilteringCaseSensitivity"
+             d:DesignHeight="300" d:DesignWidth="500">
+    <UserControl.Resources>
+        <my:MyViewModel x:Key="MyViewModel"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource MyViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Case-Sensitive Distinct Values" Grid.Row="0" />
+        <telerik:RadGridView Name="clubsGrid1" 
+                             Grid.Row="1"
+                             ItemsSource="{Binding Clubs}"/>
+        <TextBlock Text="Case-InSensitive Distinct Values" Grid.Row="2" />
+        <telerik:RadGridView Name="clubsGrid2" 
+                             Grid.Row="3"
+                             ItemsSource="{Binding Clubs}"
+                             Filtered="clubsGrid2_Filtered"
+                             DistinctValuesLoading="clubsGrid2_DistinctValuesLoading"/>
+    </Grid>
+</UserControl>

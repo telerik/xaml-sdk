@@ -1,0 +1,68 @@
+﻿<Window x:Class="MapLegend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid Width="600" Height="480">
+        <telerik:RadMap x:Name="radMap"
+                        Width="600"
+                        Height="480"
+                        UseDefaultLayout="False">
+            <telerik:RadMap.Provider>
+                <telerik:EmptyProvider />
+            </telerik:RadMap.Provider>
+            <telerik:InformationLayer x:Name="informationLayer">
+                <telerik:InformationLayer.Reader>
+                    <telerik:MapShapeReader DataSource="/MapLegend;component/Resources/world.dbf"
+                                            Source="/MapLegend;component/Resources/world.shp" />
+                </telerik:InformationLayer.Reader>
+                <telerik:InformationLayer.Colorizer>
+                    <telerik:ColorMeasureScale ExtendedPropertyName="SQKM"
+                                               Mode="Count"
+                                               TickMarkCount="7">
+                        <telerik:ColorMeasureScale.ShapeFillCollection>
+                            <telerik:MapShapeFill Fill="#FFF0D9"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#FFE4BA"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#FFDBA3"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#FFD28D"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#FFBF5C"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#FFAF33"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                            <telerik:MapShapeFill Fill="#E2942D"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                        </telerik:ColorMeasureScale.ShapeFillCollection>
+                        <telerik:ColorMeasureScale.HighlightFillCollection>
+                            <telerik:MapShapeFill Fill="Orange"
+                                                  Stroke="#B1946D"
+                                                  StrokeThickness="1" />
+                        </telerik:ColorMeasureScale.HighlightFillCollection>
+                    </telerik:ColorMeasureScale>
+                </telerik:InformationLayer.Colorizer>
+            </telerik:InformationLayer>
+        </telerik:RadMap>
+        <telerik:MapLegend x:Name="mapLegend"
+                    Layer="{Binding ElementName=informationLayer}"
+                    Header="Area (in million sq.km.):"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Format="{}{0:0,,.0}"
+                    MarkerSize="40,20"
+                    MarkerSpacing="0"
+                    LabelLayout="Between"
+                    LabelLocation="BottomRight"
+                    Margin="0,0,10,10">
+        </telerik:MapLegend>
+    </Grid>
+</Window>

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ImageEditor_Adjust" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="ImageEditor_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ImageEditor_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="ImageEditor_Background" xml:space="preserve">
+    <value>Background:</value>
+  </data>
+  <data name="ImageEditor_BorderColor" xml:space="preserve">
+    <value>Border Color:</value>
+  </data>
+  <data name="ImageEditor_BorderThickness" xml:space="preserve">
+    <value>Border Thickness:</value>
+  </data>
+  <data name="ImageEditor_CanvasResize" xml:space="preserve">
+    <value>Canvas Resize</value>
+  </data>
+  <data name="ImageEditor_CanvasSize" xml:space="preserve">
+    <value>Canvas Size</value>
+  </data>
+  <data name="ImageEditor_Crop" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="ImageEditor_DrawText" xml:space="preserve">
+    <value>Draw Text</value>
+  </data>
+  <data name="ImageEditor_DrawText_YourTextHere" xml:space="preserve">
+    <value>Your text here...</value>
+  </data>
+  <data name="ImageEditor_Effects" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="ImageEditor_Effect_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="ImageEditor_Effect_Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="ImageEditor_Effect_ContrastAdjust" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="ImageEditor_Effect_HueShift" xml:space="preserve">
+    <value>Hue Shift</value>
+  </data>
+  <data name="ImageEditor_Effect_InvertColors" xml:space="preserve">
+    <value>Invert Colors</value>
+  </data>
+  <data name="ImageEditor_Effect_Saturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ImageEditor_Effect_Sharpen" xml:space="preserve">
+    <value>Sharpen</value>
+  </data>
+  <data name="ImageEditor_FlipHorizontal" xml:space="preserve">
+    <value>Flip Horizontal</value>
+  </data>
+  <data name="ImageEditor_FlipVertical" xml:space="preserve">
+    <value>Flip Vertical</value>
+  </data>
+  <data name="ImageEditor_FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="ImageEditor_Height" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="ImageEditor_HorizontalPosition" xml:space="preserve">
+    <value>Horizontal Position</value>
+  </data>
+  <data name="ImageEditor_ImageAlignment" xml:space="preserve">
+    <value>Image Alignment</value>
+  </data>
+  <data name="ImageEditor_ImagePreview" xml:space="preserve">
+    <value>Image Preview</value>
+  </data>
+  <data name="ImageEditor_ImageSize" xml:space="preserve">
+    <value>Image Size</value>
+  </data>
+  <data name="ImageEditor_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ImageEditor_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ImageEditor_PreserveAspectRatio" xml:space="preserve">
+    <value>Preserve Aspect Ratio</value>
+  </data>
+  <data name="ImageEditor_Radius" xml:space="preserve">
+    <value>Radius:</value>
+  </data>
+  <data name="ImageEditor_Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="ImageEditor_RelativeSize" xml:space="preserve">
+    <value>Relative Size</value>
+  </data>
+  <data name="ImageEditor_Resize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="ImageEditor_Rotate180" xml:space="preserve">
+    <value>Rotate 180°</value>
+  </data>
+  <data name="ImageEditor_Rotate270" xml:space="preserve">
+    <value>Rotate 270°</value>
+  </data>
+  <data name="ImageEditor_Rotate90" xml:space="preserve">
+    <value>Rotate 90°</value>
+  </data>
+  <data name="ImageEditor_Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ImageEditor_RoundCorners" xml:space="preserve">
+    <value>Round Corners</value>
+  </data>
+  <data name="ImageEditor_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ImageEditor_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ImageEditor_TextColor" xml:space="preserve">
+    <value>Text Color</value>
+  </data>
+  <data name="ImageEditor_TheFileCannotBeOpened" xml:space="preserve">
+    <value>The file cannot be opened.</value>
+  </data>
+  <data name="ImageEditor_TheFileIsLocked" xml:space="preserve">
+    <value>The file cannot be opened. It might be locked by another application.</value>
+  </data>
+  <data name="ImageEditor_Transform" xml:space="preserve">
+    <value>Transform</value>
+  </data>
+  <data name="ImageEditor_UnableToSaveFile" xml:space="preserve">
+    <value>Unable to save the file.</value>
+  </data>
+  <data name="ImageEditor_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="ImageEditor_UnsupportedFileFormat" xml:space="preserve">
+    <value>Unsupported file format.</value>
+  </data>
+  <data name="ImageEditor_VerticalPosition" xml:space="preserve">
+    <value>Vertical Position</value>
+  </data>
+  <data name="ImageEditor_Width" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="ImageEditor_DrawTool" xml:space="preserve">
+    <value>Draw</value>
+  </data>
+  <data name="ImageEditor_DrawTool_BrushColor" xml:space="preserve">
+    <value>Brush Color:</value>
+  </data>
+  <data name="ImageEditor_DrawTool_BrushSize" xml:space="preserve">
+    <value>Brush Size:</value>
+  </data>
+  <data name="ImageEditor_Shape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_BorderColor" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_BorderThickness" xml:space="preserve">
+    <value>Border Thickness</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_FillShape" xml:space="preserve">
+    <value>Fill Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_LockRatio" xml:space="preserve">
+    <value>Lock Ratio</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_Shape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="ImageEditor_ShapeTool_ShapeFill" xml:space="preserve">
+    <value>Shape Fill</value>
+  </data>
+  <data name="ImageEditor_ColorPicker_NoColorText_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="ImageEditor_Shapes_Ellipse" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="ImageEditor_Shapes_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="ImageEditor_Shapes_Rectangle" xml:space="preserve">
+    <value>Rectangle</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetAll" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+</root>

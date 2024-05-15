@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="DragDropWithScheduleView.Example"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:DragDropWithScheduleView"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="900">
+	<UserControl.Resources>
+		<local:ViewModel x:Key="ViewModel"/>
+
+		<Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem">
+			<Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
+		</Style>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White" DataContext="{StaticResource ViewModel}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="150" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock Text="This example demonstrates how to achieve drag and drop functionality between RadListBox and RadScheduleView by creating AppointmentToCustomerConverter and CustomScheduleViewDragDropBehavior."
+				   Grid.ColumnSpan="2"
+				   Margin="20"
+				   HorizontalAlignment="Center"
+				   TextWrapping="Wrap"
+				   FontWeight="Bold"/>
+
+		<TextBlock Text="RadListBox" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" 
+				   Margin="0 10 0 0" FontWeight="Bold"/>
+		<TextBlock Text="RadScheduleView" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" 
+				   Margin="0 10 0 0" FontWeight="Bold"/>
+
+		<telerik:RadListBox Margin="10 5 10 10"
+							x:Name="ListBox"
+							Grid.Row="2" Grid.Column="0"
+							ItemsSource="{Binding CustomersSource}" 
+							DisplayMemberPath="Name" 
+							SelectionMode="Multiple"
+							ItemContainerStyle="{StaticResource DraggableListBoxItem}">
+			<telerik:RadListBox.DragVisualProvider>
+				<telerik:ScreenshotDragVisualProvider />
+			</telerik:RadListBox.DragVisualProvider>
+			<telerik:RadListBox.DataConverter>
+				<local:AppointmentToCustomerConverter />
+			</telerik:RadListBox.DataConverter>
+			<telerik:RadListBox.DragDropBehavior>
+				<telerik:ListBoxDragDropBehavior />
+			</telerik:RadListBox.DragDropBehavior>
+		</telerik:RadListBox>
+
+		<telerik:RadScheduleView x:Name="scheduleView" 
+								 AppointmentsSource="{Binding AppointmentsSource}" 
+								 Grid.Column="1" Grid.Row="2" Margin="0 5 0 0"
+								 Loaded="scheduleView_Loaded_1">
+			<telerik:RadScheduleView.ViewDefinitions>
+				<telerik:DayViewDefinition/>
+				<telerik:WeekViewDefinition/>
+				<telerik:MonthViewDefinition/>
+				<telerik:TimelineViewDefinition/>
+			</telerik:RadScheduleView.ViewDefinitions>
+			<telerik:RadScheduleView.ResourceTypesSource>
+				<telerik:ResourceTypeCollection>
+					<telerik:ResourceType Name="Person">
+						<telerik:Resource ResourceName="Mary Baird" DisplayName="MARY BAIRD" />
+						<telerik:Resource ResourceName="Diego Roel" DisplayName="DIEGO ROEL" />
+					</telerik:ResourceType>
+				</telerik:ResourceTypeCollection>
+			</telerik:RadScheduleView.ResourceTypesSource>
+			<telerik:RadScheduleView.GroupDescriptionsSource>
+				<telerik:GroupDescriptionCollection>
+					<telerik:DateGroupDescription />
+					<telerik:ResourceGroupDescription ResourceType="Person" />
+				</telerik:GroupDescriptionCollection>
+			</telerik:RadScheduleView.GroupDescriptionsSource>
+			<telerik:RadScheduleView.DragDropBehavior>
+				<local:CustomScheduleViewDragDropBehavior/>
+			</telerik:RadScheduleView.DragDropBehavior>
+		</telerik:RadScheduleView>
+	</Grid>
+</UserControl>

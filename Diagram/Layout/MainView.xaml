@@ -1,0 +1,405 @@
+﻿<UserControl x:Class="Diagrams.Layout.MainView"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+  <UserControl.Resources>
+    <Style TargetType="telerik:RadTabItem">
+      <Setter Property="MinWidth" Value="70"/>
+    </Style>
+    <Style TargetType="RadioButton">
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+    </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="400" MinWidth="200" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <telerik:RadTabControl x:Name="SettingsTab" Margin="5" TabStripPlacement="Right" TabOrientation="Vertical" Background="{Binding ElementName=diagram,Path=Background}" HeaderBackground="{Binding ElementName=diagram,Path=Background}">
+      <telerik:RadTabControl.Resources></telerik:RadTabControl.Resources>
+      <telerik:RadTabItem Header="Creation" IsSelected="true">
+        <StackPanel Margin="5">
+          <telerik:GroupBox BorderThickness="1" BorderBrush="Gray" Header="Random">
+            <Grid Margin="5">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Number of shapes to create:" />
+                <telerik:RadNumericUpDown x:Name="CountSpinner" IsEditable="true"
+                        Grid.Column="1" KeyDown="CountSpinner_OnKeyDown"
+                        NumberDecimalDigits="0" VerticalAlignment="Center"
+                        HorizontalAlignment="Left" Grid.Row="1" Margin="15,0,0,0" />
+              </StackPanel>
+              <CheckBox x:Name="ConnectedCheck"
+                      ToolTipService.ToolTip="Whether the graph should be connected or have components"
+                      IsChecked="true" Grid.Row="1" Margin="0,10,0,0"
+                      VerticalAlignment="Center" Content="Connected graph" />
+              <CheckBox x:Name="ConnectionsCheck"
+                      ToolTipService.ToolTip="Whether connections should be generated"
+                      IsChecked="true" Grid.Row="2" Margin="0,10,0,0"
+                      VerticalAlignment="Center" Content="Create connections" />
+              <CheckBox x:Name="TreeCheck"
+                      ToolTipService.ToolTip="Whether the graph should be a tree"
+                      IsChecked="false" Grid.Row="3" Margin="0,10,0,0"
+                      VerticalAlignment="Center" Content="Should be a random tree" />
+              <CheckBox x:Name="RandomSizeCheck"
+                      ToolTipService.ToolTip="Whether the size of the generated shapes should be random"
+                      IsChecked="false" Grid.Row="4" Margin="0,10,0,0"
+                      VerticalAlignment="Center" Content="Randomize sizes" />
+              <TextBlock Margin="15,15" Foreground="Orange" TextWrapping="Wrap"
+                      Text="Note: this only creates a graph or shapes. Go to the Sugiyama or Tree tab to apply a layout to the generated diagram. "
+                      Grid.Row="5" />
+              <telerik:RadButton
+                      ToolTipService.ToolTip="Press to generate a random graph"
+                      Width="120" HorizontalAlignment="Right" Margin="0,10,0,0"
+                      Content="Create shapes" x:Name="CreateButton"
+                      Click="CreateButton_OnClick" Grid.Row="6" />
+              <TextBlock x:Name="info" Margin="0,15,0,0" Grid.Row="7" />
+            </Grid>
+          </telerik:GroupBox>
+          <telerik:GroupBox Header="Analysis specific" BorderThickness="1">
+            <StackPanel Margin="5">
+              <TextBlock
+                      Text="These samples highlight a specific graph analysis aspect of the API:"
+                      TextWrapping="Wrap" MaxWidth="250" Margin="5" />
+              <telerik:RadComboBox
+                      ToolTipService.ToolTip="Specific examples illustrating a certain graph-theoretic aspect of graphs"
+                      x:Name="SamplesCombo"
+                      SelectionChanged="SamplesCombo_OnSelectionChanged"
+                      Margin="0,0,0,0" Height="30">
+                <telerik:RadComboBox.ItemTemplate>
+                  <DataTemplate>
+                    <Border BorderThickness="0,0,0,1" BorderBrush="DimGray"
+                            MaxWidth="200">
+                      <Grid Margin="5">
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto" />
+                          <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Title}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Description}" Grid.Row="1"
+                                Margin="0,5,0,0" FontStyle="Italic"
+                                FontSize="10" TextWrapping="Wrap" />
+                      </Grid>
+                    </Border>
+                  </DataTemplate>
+                </telerik:RadComboBox.ItemTemplate>
+              </telerik:RadComboBox>
+            </StackPanel>
+          </telerik:GroupBox>
+        </StackPanel>
+      </telerik:RadTabItem>
+      <telerik:RadTabItem Header="Components">
+        <StackPanel>
+          <telerik:GroupBox Header="Components margin" Margin="5">
+            <Grid Margin="5">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" Orientation="Vertical"
+                      VerticalAlignment="Center" Margin="10,5,10,0">
+                <Slider
+                        ToolTipService.ToolTip="Sets the horizontal spacing between components"
+                        x:Name="ComponentMarginWidthSlider"
+                        HorizontalAlignment="Left" Width="150"
+                        VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                        LargeChange="10" Value="20" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Width"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Vertical"
+                      VerticalAlignment="Center" Margin="10,5,10,0"
+                      HorizontalAlignment="Left">
+                <Slider
+                        ToolTipService.ToolTip="Sets the vertical spacing between components"
+                        x:Name="ComponentMarginHeightSlider"
+                        HorizontalAlignment="Left" Width="150"
+                        VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                        LargeChange="10" Value="20" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Height"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+            </Grid>
+          </telerik:GroupBox>
+          <telerik:GroupBox Header="Shapes margin" Margin="5">
+            <Grid Margin="5">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" Orientation="Vertical"
+                      d:LayoutOverrides="Height" VerticalAlignment="Center"
+                      Margin="10,5,10,0">
+                <Slider x:Name="ShapeMarginWidthSlider" HorizontalAlignment="Left"
+                        Width="150" VerticalAlignment="Center" Maximum="150"
+                        SmallChange="1" LargeChange="10" Value="5" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Width"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Vertical"
+                      VerticalAlignment="Center" Margin="10,5,10,0"
+                      HorizontalAlignment="Left">
+                <Slider x:Name="ShapeMarginHeightSlider" HorizontalAlignment="Left"
+                        Width="150" VerticalAlignment="Center" Maximum="150"
+                        SmallChange="1" LargeChange="10" Value="5" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Height"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+            </Grid>
+          </telerik:GroupBox>
+          <telerik:GroupBox Header="Total margin" Margin="5">
+            <Grid Margin="5">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" Orientation="Vertical"
+                      d:LayoutOverrides="Height" VerticalAlignment="Center"
+                      Margin="10,5,10,0">
+                <Slider
+                        ToolTipService.ToolTip="Sets the horizontal margin around the whole graph"
+                        x:Name="TotalMarginWidthSlider" HorizontalAlignment="Left"
+                        Width="150" VerticalAlignment="Center" Maximum="200"
+                        SmallChange="1" LargeChange="10" Value="50" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Width"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Orientation="Vertical"
+                      VerticalAlignment="Center" Margin="10,5,10,0"
+                      HorizontalAlignment="Left">
+                <Slider
+                        ToolTipService.ToolTip="Sets the vertical margin around the whole graph"
+                        x:Name="TotalMarginHeightSlider" HorizontalAlignment="Left"
+                        Width="150" VerticalAlignment="Center" Maximum="200"
+                        SmallChange="1" LargeChange="10" Value="50" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Height"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+            </Grid>
+          </telerik:GroupBox>
+          <telerik:GroupBox Header="Component grid width" Margin="5">
+            <Grid Margin="5">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <StackPanel Grid.Column="0" Orientation="Vertical"
+                      d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="0"
+                      Grid.ColumnSpan="2">
+                <Slider
+                        ToolTipService.ToolTip="Set the width of the grid wherein the components are organized. If too narrow, componets will be placed underneath each other"
+                        x:Name="ComponentGridWidthSlider" HorizontalAlignment="Left"
+                        Width="300" VerticalAlignment="Center" Maximum="3000"
+                        SmallChange="50" LargeChange="100" Value="1200"
+                        Minimum="800" />
+                <TextBlock Height="Auto" TextWrapping="Wrap" Text="Width"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+              </StackPanel>
+            </Grid>
+          </telerik:GroupBox>
+          <TextBlock Margin="15,15" Foreground="Orange" TextWrapping="Wrap"
+                  Text="Note: these options are related to the way the components are arranged after a specific layout has been applied. If the graph is connected it will be centered but if the graph consists of multiple separate components (i.e. connected sub-graphs) they will be arranged in a grid; these settings apply to this grid-layout."
+                  Grid.Row="5" />
+        </StackPanel>
+      </telerik:RadTabItem>
+      <telerik:RadTabItem Header="Sugiyama">
+        <Grid VerticalAlignment="Top" Margin="5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+            <RadioButton x:Name="HorizontalOption" IsChecked="false"
+                    Content="Horizontal" Click="HorizontalOption_OnClick" />
+            <RadioButton x:Name="VerticalOption" IsChecked="true" Content="Vertical"
+                    Click="VerticalOption_OnClick" Margin="10,0,0,0" />
+          </StackPanel>
+          <StackPanel Grid.Row="1" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider ToolTipService.ToolTip="The horizontal spacing between levels"
+                    x:Name="HorizontalDistanceSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="20" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Horizontal Distance"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="2" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider ToolTipService.ToolTip="The vertical spacing between levels"
+                    x:Name="VerticalDistanceSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="20" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Vertical Distance"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <telerik:RadButton Width="120" HorizontalAlignment="Right" Margin="0,10,10,0"
+                  Content="Layout diagram" x:Name="LayoutButton"
+                  Click="LayoutButton_OnClick" Grid.Row="5" />
+        </Grid>
+      </telerik:RadTabItem>
+      <telerik:RadTabItem Header="Tree">
+        <Grid VerticalAlignment="Top" Margin="5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <RadioButton x:Name="TreeDown" IsChecked="True" GroupName="Subtype"
+                  Margin="5,5,0,0">Down</RadioButton>
+          <RadioButton x:Name="TreeRight" Grid.Row="1" GroupName="Subtype"
+                  Margin="5,5,0,0">Right</RadioButton>
+          <RadioButton x:Name="TreeLeft" Grid.Row="2" GroupName="Subtype" Margin="5,5,0,0">Left</RadioButton>
+          <RadioButton x:Name="TreeUp" Grid.Row="3" GroupName="Subtype" Margin="5,5,0,0">Up</RadioButton>
+          <RadioButton x:Name="Radial" Grid.Row="4" GroupName="Subtype" Margin="5,5,0,0">Radial</RadioButton>
+          <RadioButton x:Name="Tipovertree" Grid.Row="5" GroupName="Subtype"
+                  Margin="5,5,0,0">Tip-over-tree</RadioButton>
+          <RadioButton x:Name="MindmapHorizontal" Grid.Row="6" GroupName="Subtype"
+                  Margin="5,5,0,0">Mindmap Horizontal</RadioButton>
+          <RadioButton x:Name="MindmapVertical" Grid.Row="7" GroupName="Subtype"
+                  Margin="5,5,0,0">Mindmap Vertical</RadioButton>
+          <StackPanel Grid.Row="8" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The horizontal spacing between a parent and a child (if tree layout is applied)"
+                    x:Name="HorizontalSeparationSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="90" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Horizontal Separation"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="9" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The vertical spacing between a parent and a child (if tree layout is applied)"
+                    x:Name="VerticalSeparationSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="50" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Vertical Separation"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="10" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The horizontal spacing between a parent and the first child (if tip-over tree layout is applied)"
+                    x:Name="UnderneathHorizontalOffsetSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="15" />
+            <TextBlock Height="24" TextWrapping="Wrap"
+                    Text="Underneath Horizontal Offset" VerticalAlignment="Center"
+                    HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="11" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The vertical spacing between a parent and the first child (if tip-over tree layout is applied)"
+                    x:Name="UnderneathVerticalOffsetSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="15" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Underneath Vertical Offset"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="12" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The spacing between radial levels (if radial layout is applied)"
+                    x:Name="RadialSeparationSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="50" />
+            <TextBlock Height="24" TextWrapping="Wrap" Text="Radial Separation"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Grid.Row="13" Orientation="Vertical" d:LayoutOverrides="Height"
+                  VerticalAlignment="Center" Margin="10,5,10,0">
+            <Slider
+                    ToolTipService.ToolTip="The spacing between the root and the first level (if radial layout is applied)"
+                    x:Name="RadialFirstLevelSeparationSlider" HorizontalAlignment="Left"
+                    Width="300" VerticalAlignment="Center" Maximum="150" SmallChange="1"
+                    LargeChange="10" Value="50" />
+            <TextBlock Height="24" TextWrapping="Wrap"
+                    Text="Radial First-Level Separation" VerticalAlignment="Center"
+                    HorizontalAlignment="Center" />
+          </StackPanel>
+          <telerik:RadButton Grid.Row="14" Width="120" HorizontalAlignment="Right"
+                  Margin="0,10,0,0" Content="Layout diagram" x:Name="TreeLayoutButton"
+                  Click="TreeLayoutButton_OnClick" />
+        </Grid>
+      </telerik:RadTabItem>
+      <telerik:RadTabItem Header="Containers">
+        <Grid VerticalAlignment="Top" Margin="5">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <telerik:GroupBox BorderThickness="1" BorderBrush="Gray" Header="Options">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <CheckBox x:Name="IgnoreContainersCheck"
+                                     ToolTipService.ToolTip="Whether the containers should be ignored"
+                                     IsChecked="false" Grid.Row="0" Margin="0,10,0,0"
+                                     VerticalAlignment="Center" Content="Ignore containers" Click="IgnoreContainersCheck_OnClick"/>
+              <CheckBox x:Name="LayoutContainersCheck"
+                                     ToolTipService.ToolTip="Whether the container's content should be organized"
+                                     IsChecked="True" Grid.Row="1" Margin="0,10,0,0"
+                                     VerticalAlignment="Center" Content="Layout content of containers" />
+              <RadioButton x:Name="TreeLayout" Foreground="{Binding ElementName=IgnoreContainersCheck, Path=Foreground}" IsChecked="True" GroupName="LayoutType" Grid.Row="2" Margin="0,20,0,0">Tree layout</RadioButton>
+              <RadioButton x:Name="SugiLayout" Foreground="{Binding ElementName=IgnoreContainersCheck, Path=Foreground}" Grid.Row="3" GroupName="LayoutType" Margin="0,10,0,0">Sugiyama layout</RadioButton>
+            </Grid>
+
+          </telerik:GroupBox>
+          <telerik:RadButton
+                                                ToolTipService.ToolTip="Press to generate a sample graph with containers"
+                                                Width="120" HorizontalAlignment="Right" Margin="0,10,0,0"
+                                                Content="Create sample" x:Name="CreateContainersButton"
+                                                Click="CreateContainersButton_OnClick" Grid.Row="1" />
+          <telerik:RadButton
+        ToolTipService.ToolTip="Press to layout with the chosen options"
+        Width="120" HorizontalAlignment="Right" Margin="0,10,0,0"
+        Content="Layout" x:Name="LayoutContainersButton"
+        Click="LayoutContainersButton_OnClick" Grid.Row="2" />
+        </Grid>
+
+      </telerik:RadTabItem>
+
+    </telerik:RadTabControl>
+    <telerik:RadDiagram x:Name="diagram" Grid.Column="1" IsBackgroundSurfaceVisible="false"
+            ActiveTool="PointerTool" IsSnapToGridEnabled="False" IsSnapToItemsEnabled="False"
+            Zoom="1" Background="White" Height="Auto" />
+    <telerik:RadDiagramNavigationPane Diagram="{Binding ElementName=diagram}" IsExpanded="True" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1"/>
+  </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="TodayViewDefinition.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:TodayViewDefinition"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <local:ViewModel x:Key="ViewModel"/>
+    </UserControl.Resources>
+    
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Today, StringFormat='This example demonstrates how to create a custom ViewDefinition for the RadScheduleView control in order to create one that will dispaly only the current (today) day ({0:dd/MM/yyyy}).'}"
+				   TextWrapping="Wrap" FontWeight="Bold" Width="400" Margin="20"/>
+        <telerik:RadScheduleView x:Name="scheduleview"
+								 AppointmentsSource="{Binding Appointments}"
+								 CurrentDate="{Binding Date}"
+								 Grid.Row="1">
+            <telerik:RadScheduleView.ViewDefinitions>
+                <local:CustomTodayViewDefinition Title="Today View"/>
+                <telerik:DayViewDefinition Title="Day View"/>
+            </telerik:RadScheduleView.ViewDefinitions>
+        </telerik:RadScheduleView>
+        </Grid>
+</UserControl>

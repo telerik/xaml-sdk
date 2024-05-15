@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+
+	<Node FirstName="Andrew" LastName="Fuller" Email="afuller@contoso.com" Phone="(205) 555 - 9898" Position="CEO" Branch="TopManagement" Address="London, 120 Hanover Sq.">
+		<Node FirstName="Jeremy" LastName="Boather" Email="jboather@contoso.com" Phone="(205) 555 - 9888" Position="President QA" Branch="QA" Address="London, 120 Hanover Sq.">
+			<Node FirstName="Anne" LastName="Dodsworth" Email="adodsworth@contoso.com" Phone="(205) 555 - 9887" Position="VP QA" Branch="QA" Address="London, 120 Hanover Sq.">
+				<Node FirstName="Alexander" LastName="Tuckings" Email="atuckings@contoso.com" Phone="(205) 555 - 9886" Position="Team Lead Team1" Branch="QA" Address="London, 120 Hanover Sq.">
+					<Node FirstName="Brenda" LastName="Smith" Email="bsmith@contoso.com" Phone="(205) 555 - 9885" Position="Senior QA" Branch="QA" Address="London, 120 Hanover Sq."/>
+				</Node>
+				<Node FirstName="Mary" LastName="Bird" Email="mbird@contoso.com" Phone="(205) 555 - 9885" Position="Team Lead Team2" Branch="QA" Address="London, 120 Hanover Sq."/>
+			</Node>
+		</Node>
+		<Node FirstName="Steven" LastName="Buchanan" Email="sbuchanan@contoso.com" Phone="(205) 555 - 9897" Position="President Dev Dept." Branch="Development" Address="London, 120 Hanover Sq.">
+			<Node FirstName="Robert" LastName="King" Email="rking@contoso.com" Phone="(205) 555 - 9896" Position="VP Dev Dept." Branch="Development" Address="London, 120 Hanover Sq.">
+				<Node FirstName="Laura" LastName="Callahan" Email="lcallahan@contoso.com" Phone="(205) 555 - 9892" Position="Team Lead Team1" Branch="Development" Address="London, 120 Hanover Sq.">
+					<Node FirstName="Jason" LastName="Roland" Email="jroland@contoso.com" Phone="(205) 555 - 9872" Position="Senior Dev" Branch="Development" Address="London, 120 Hanover Sq.">
+					</Node>
+				</Node>
+				<Node FirstName="Eric" LastName="Danstin" Email="edanstin@contoso.com" Phone="(205) 555 - 9882" Position="Team Lead Team2" Branch="Development" Address="London, 120 Hanover Sq.">
+					<Node FirstName="Elizabeth" LastName="Lincoln" Email="elincoln@contoso.com" Phone="(205) 555 - 9862" Position="Senior Dev" Branch="Development" Address="London, 120 Hanover Sq.">
+					</Node>
+					<Node FirstName="Margaret" LastName="Peacock" Email="mpeacock@contoso.com" Phone="(205) 555 - 9852" Position="Senior Dev" Branch="Development" Address="London, 120 Hanover Sq.">
+					</Node>
+				</Node>
+			</Node>
+		</Node>
+	</Node>
+	<Node FirstName="Martin" LastName="Sommer" Email="msommer@contoso.com" Phone="(345) 678 - 9999" Position="CEO" Branch="TopManagement" Address="Berlin, Obere Str. 57">
+		<Node FirstName="Nancy" LastName="Davolio" Email="ndavolio@contoso.com" Phone="(345) 678 - 8888" Position="President Sales" Branch="Sales" Address="Berlin, Obere Str. 57">
+			<Node FirstName="Michael" LastName="Suyama" Email="msuyama@contoso.com" Phone="(345) 678 - 7777" Position="VP Sales" Branch="Sales" Address="Berlin, Obere Str. 57">
+				<Node FirstName="Janet" LastName="Levering" Email="jlevering@contoso.com" Phone="(345) 678 - 6666" Position="Team Lead Team1" Branch="Sales" Address="Berlin, Obere Str. 57"/>
+				<Node FirstName="Thomas" LastName="Hardy" Email="thardy@contoso.com" Phone="(345) 678 - 5555" Position="Team Lead Team2" Branch="Sales" Address="Berlin, Obere Str. 57"/>
+			</Node>
+		</Node>
+	</Node>
+</Root>

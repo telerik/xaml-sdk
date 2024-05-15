@@ -1,0 +1,11 @@
+﻿<Window x:Class="SelectedItemsSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SelectedItemsSource"
+        Title="Setting SelectedItemsSource example" 
+        Height="670" Width="785"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <local:Example/>
+    </Grid>
+</Window>

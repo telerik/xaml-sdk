@@ -1,0 +1,55 @@
+﻿<local:RadRichTextBoxWindow x:Class="Telerik.Windows.Controls.RichTextBoxUI.Dialogs.FindReplaceDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+    mc:Ignorable="d" 
+    telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_Header" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="LayoutRoot" MinWidth="350" Margin="12 6 12 12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="70" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <local:DialogLabel telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_TextToFind" Margin="0 0 4 0"/>
+            <TextBox MinHeight="23" Margin="2 6" Name="tbFindText" VerticalAlignment="Center" Grid.Column="1" TextChanged="tbFindText_TextChanged" TabIndex="0" MaxWidth="277" />
+
+            <local:DialogLabel x:Name="textBlockReplaceWith" Grid.Row="1" Grid.Column="0" Margin="0 0 4 0" telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_ReplaceWith" />
+            <TextBox Grid.Column="1" MinHeight="23" Margin="2 6" Name="tbReplaceText" VerticalAlignment="Center" Grid.Row="1" TabIndex="1" TextChanged="tbReplaceText_TextChanged" MaxWidth="277" />
+
+        </Grid>
+        <local:DialogFooter Grid.Row="1" >
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_Replace" HorizontalAlignment="Stretch" Margin="4" Name="btnReplace"  MinWidth="75" Click="btnReplace_Click" TabIndex="3" Grid.Column="2" VerticalAlignment="Center" />
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_ReplaceAll"  HorizontalAlignment="Stretch" Margin="4" Name="btnReplaceAll" VerticalAlignment="Center" MinWidth="85" Click="btnReplaceAll_Click" TabIndex="4" Grid.Column="3" />
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Documents_FindReplaceDialog_FindNext"  Margin="4" Name="btnFindNext" VerticalAlignment="Center" Click="btnFindNext_Click" TabIndex="2" HorizontalAlignment="Stretch" MinWidth="75" />
+                <telerik:RadButton telerik:LocalizationManager.ResourceKey="Close"  HorizontalAlignment="Stretch" Margin="4" Name="btnClose" VerticalAlignment="Center" MinWidth="75" Click="btnClose_Click" TabIndex="5" Grid.Row="1" Grid.Column="3" />
+            </Grid>
+        </local:DialogFooter>
+    </Grid>
+</local:RadRichTextBoxWindow>

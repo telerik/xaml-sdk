@@ -1,0 +1,10 @@
+﻿<Window x:Class="SimulateWatermark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SimulateWatermark"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Button Content="Steal focus" Width="100"/>
+        <local:WatermarkRadRichTextBox WatermarkText="Description..." WatermarkForeground="Gray" Width="380" Height="150" />
+    </StackPanel>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Mappings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:Mappings"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+	<telerik:RadTreeMap Name="treeMap1">
+		<telerik:RadTreeMap.TypeDefinitions>
+			<telerik:TypeDefinition TargetTypeName="Folder"
+									ValuePath="Size"
+									ChildrenPath="Children">
+				<telerik:TypeDefinition.Mappings>
+					<local:FileCustomMapping/>
+				</telerik:TypeDefinition.Mappings>
+			</telerik:TypeDefinition>
+			<telerik:TypeDefinition TargetTypeName="File"
+									ValuePath="Size">
+				<telerik:TypeDefinition.Mappings>
+					<local:FileCustomMapping/>
+				</telerik:TypeDefinition.Mappings>
+			</telerik:TypeDefinition>
+		</telerik:RadTreeMap.TypeDefinitions>
+	</telerik:RadTreeMap>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="LinearRadialScalesBasicsScaleWidth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<telerik:RadVerticalLinearGauge Width="102"
+										Height="210"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale Min="0"
+										 Max="20"
+										 RelativeY="0"
+										 RelativeHeight="1"
+										 StartWidth="0.02"
+										 EndWidth="0.08"
+										 Fill="#FFD6D4D4"
+										 Stroke="#FFD6D4D4"
+										 MajorTickOffset="0.03*"
+										 MinorTickOffset="0.03*"
+										 LabelOffset="0.13*"
+										 MajorTickRelativeHeight="0.003*"
+										 MinorTickRelativeHeight="0.003*"
+										 MiddleTicks="1"
+										 MinorTicks="3"/>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

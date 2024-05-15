@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SpellCheckerDataBase">
+  <DataContextMoniker Name="/SpellCheckerDataBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7c8c078c-8f00-48c2-bb79-4d0ed4eacbcb" absoluteBounds="4.25, 3.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SpellCheckerDataBaseDataContext/Word" />
+      <nestedChildShapes>
+        <elementListCompartment Id="530fb87f-04d3-43ed-9721-5d538cb7ecbb" absoluteBounds="4.265, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

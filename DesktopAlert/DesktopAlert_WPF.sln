@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopAlertWithScreenPositionOffset_WPF", "DesktopAlertWithScreenPositionOffset\DesktopAlertWithScreenPositionOffset_WPF.csproj", "{D3359CD9-B8E9-446B-B515-AA735C6EB273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowingAndHidingUsingAnimationGroup_WPF", "ShowingAndHidingUsingAnimationGroup\ShowingAndHidingUsingAnimationGroup_WPF.csproj", "{4417DC5C-0CC8-4321-B0BF-32F14B357117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayAlertOnlyOnCurrentScreen", "DisplayAlertOnlyOnCurrentScreen\DisplayAlertOnlyOnCurrentScreen.csproj", "{09EFBA56-A8F8-4B1F-AFAB-2E9B6DCF7F5F}"
+EndProject
+Global	
+	 
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3359CD9-B8E9-446B-B515-AA735C6EB273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3359CD9-B8E9-446B-B515-AA735C6EB273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3359CD9-B8E9-446B-B515-AA735C6EB273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3359CD9-B8E9-446B-B515-AA735C6EB273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4417DC5C-0CC8-4321-B0BF-32F14B357117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4417DC5C-0CC8-4321-B0BF-32F14B357117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4417DC5C-0CC8-4321-B0BF-32F14B357117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4417DC5C-0CC8-4321-B0BF-32F14B357117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EFBA56-A8F8-4B1F-AFAB-2E9B6DCF7F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EFBA56-A8F8-4B1F-AFAB-2E9B6DCF7F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EFBA56-A8F8-4B1F-AFAB-2E9B6DCF7F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EFBA56-A8F8-4B1F-AFAB-2E9B6DCF7F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

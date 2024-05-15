@@ -1,0 +1,41 @@
+﻿<Window x:Class="QueryableCalculatedItems.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pivot="http://schemas.telerik.com/2008/xaml/presentation/pivot"
+        xmlns:local="clr-namespace:QueryableCalculatedItems"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="700" Width="1200">
+    <Window.Resources>
+        <pivot:QueryableDataProvider x:Key="QueryableProvider" PrepareDescriptionForField="QueryableDataProvider_PrepareDescriptionForField">
+            <pivot:QueryableDataProvider.RowGroupDescriptions>
+                <pivot:QueryablePropertyGroupDescription PropertyName="ShipCountry">
+                    <pivot:QueryablePropertyGroupDescription.CalculatedItems>
+                        <local:EuropeanOrdersSum GroupName="European Orders Sum" />
+                        <local:AmericanOrdersSum GroupName="American Orders Sum" />
+                    </pivot:QueryablePropertyGroupDescription.CalculatedItems>
+                </pivot:QueryablePropertyGroupDescription>
+            </pivot:QueryableDataProvider.RowGroupDescriptions>
+
+            <pivot:QueryableDataProvider.ColumnGroupDescriptions>
+                <pivot:QueryableDateTimeGroupDescription PropertyName="OrderDate" Step="Quarter">
+                    <pivot:QueryableDateTimeGroupDescription.CalculatedItems>
+                        <local:OrdersFirstHalfYear GroupName="First Half Year" />
+                        <local:OrdersSecondHalfYear GroupName="Second Half Year" />
+                    </pivot:QueryableDateTimeGroupDescription.CalculatedItems>
+                </pivot:QueryableDateTimeGroupDescription>
+            </pivot:QueryableDataProvider.ColumnGroupDescriptions>
+
+            <pivot:QueryableDataProvider.AggregateDescriptions>
+                <pivot:QueryablePropertyAggregateDescription PropertyName="Freight" AggregateFunction="Sum"/>               
+            </pivot:QueryableDataProvider.AggregateDescriptions>
+        </pivot:QueryableDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <pivot:RadPivotGrid x:Name="PivotGrid" DataProvider="{StaticResource QueryableProvider}" ColumnGrandTotalsPosition="None" RowGrandTotalsPosition="None" />
+        <pivot:RadPivotFieldList x:Name="FieldList" Grid.Column="1" DataProvider="{StaticResource QueryableProvider}"/>
+    </Grid>
+</Window>

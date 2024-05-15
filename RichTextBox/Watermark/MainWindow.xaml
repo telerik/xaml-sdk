@@ -1,0 +1,18 @@
+﻿<Window x:Class="Watermark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Watermark"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <local:TelerikEditor x:Name="editor"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Name="addPredefined" Content="Add Predefined Watermark" Click="addPredefined_Click" />
+            <Button Name="addText" Content="Add Text Watermark" Click="addText_Click"/>
+            <Button Name="addImage" Content="Add Image Watermark" Click="addImage_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

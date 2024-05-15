@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="OriginValue.Area"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <FrameworkElement.Resources>
+        <DataTemplate x:Key="hertzAxisLabelTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding}" />
+                <TextBlock Text="Hz" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="decibelsAxisLabelTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding}" />
+                <TextBlock Text=" dB" />
+            </StackPanel>
+        </DataTemplate>
+    </FrameworkElement.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Frequency Domain Spectrum Analysis" />
+            <TextBlock Text="(the sum of all the sound frequencies present in some signal)" />
+        </StackPanel>
+        <telerik:RadCartesianChart Palette="Flower" 
+                                   Grid.Row="1">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:LogarithmicAxis Minimum="500" 
+                                         Maximum="32000"
+                                         LogarithmBase="2"
+                                         ExponentStep="1" 
+                                         LabelTemplate="{StaticResource hertzAxisLabelTemplate}">
+                </telerik:LogarithmicAxis>
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis LabelTemplate="{StaticResource decibelsAxisLabelTemplate}"/>
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:ScatterAreaSeries OriginValue="-100000">
+                    <telerik:ScatterAreaSeries.DataPoints>
+                        <telerik:ScatterDataPoint XValue="500" YValue="2" />
+                        <telerik:ScatterDataPoint XValue="1000" YValue="-12" />
+                        <telerik:ScatterDataPoint XValue="2500" YValue="-17" />
+                        <telerik:ScatterDataPoint XValue="5000" YValue="-19" />
+                        <telerik:ScatterDataPoint XValue="10000" YValue="-32" />
+                        <telerik:ScatterDataPoint XValue="12500" YValue="-40" />
+                        <telerik:ScatterDataPoint XValue="15000" YValue="-54" />
+                        <telerik:ScatterDataPoint XValue="17500" YValue="-66" />
+                        <telerik:ScatterDataPoint XValue="20000" YValue="-68" />
+                        <telerik:ScatterDataPoint XValue="22500" YValue="-69" />
+                    </telerik:ScatterAreaSeries.DataPoints>
+                </telerik:ScatterAreaSeries>
+            </telerik:RadCartesianChart.Series>
+        </telerik:RadCartesianChart>
+    </Grid>
+</UserControl>

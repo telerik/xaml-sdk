@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="DataBinding_SL.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:DataBinding"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+    <DataTemplate x:Key="outlookBarMailContentTemplate">
+        <telerik:RadTreeView ItemsSource="{Binding MailDirectories}" IsLineEnabled="True">
+            <telerik:RadTreeView.Resources>
+                <Style TargetType="telerik:RadTreeViewItem">
+                    <Setter Property="DefaultImageSrc" Value="{Binding IconSource}" />
+                    <Setter Property="IsExpanded" Value="True" />
+                </Style>
+            </telerik:RadTreeView.Resources>
+
+            <telerik:RadTreeView.ItemTemplate>
+                <telerik:HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <TextBlock Text="{Binding Header}" />
+                </telerik:HierarchicalDataTemplate>
+            </telerik:RadTreeView.ItemTemplate>
+        </telerik:RadTreeView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="outlookBarContactsContentTemplate">
+        <telerik:RadListBox ItemsSource="{Binding ContactsList}">
+            <telerik:RadListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5 0 0 5">
+                        <Image Source="{Binding IconSource}" Margin="0 0 5 0"/>
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </telerik:RadListBox.ItemTemplate>
+        </telerik:RadListBox>
+    </DataTemplate>
+
+    <DataTemplate x:Key="outlookBarCalendarContentTemplate">
+        <telerik:RadCalendar Margin="20" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="outlookBarItemTemplate">
+        <TextBlock Text="{Binding Header}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="outlookBarTitleTemplate">
+        <TextBlock Text="{Binding Header}" 
+                       FontWeight="Bold" 
+                       Foreground="#585858" 
+                       Height="26" FontSize="18" 
+                       FontStyle="Italic" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" />
+    </DataTemplate>
+
+    <Style TargetType="telerik:RadOutlookBarItem">
+        <Setter Property="Icon" Value="{Binding IconSource}" />
+        <Setter Property="SmallIcon" Value="{Binding IconSource}" />
+    </Style>
+
+    <local:OutlookBarContentTemplateSelector x:Key="contentTemplateSelector" 
+                                             MailTemplate="{StaticResource outlookBarMailContentTemplate}"
+                                             CalendarTemplate="{StaticResource outlookBarCalendarContentTemplate}"
+                                             ContactsTemplate="{StaticResource outlookBarContactsContentTemplate}"/>
+    </UserControl.Resources>
+    <Grid>
+        <telerik:RadOutlookBar Name="radOutlookBar"  
+                               Width="500"
+                               ItemsSource="{Binding MenuItems}"
+                               MinimizedButtonContent="{Binding RelativeSource={RelativeSource Self},Path=SelectedItem.Header}"
+                               ContentTemplateSelector="{StaticResource contentTemplateSelector}"
+                               ItemTemplate="{StaticResource outlookBarItemTemplate}"
+                               TitleTemplate="{StaticResource outlookBarTitleTemplate}"
+                               ItemDropDownContentTemplate="{StaticResource outlookBarItemTemplate }" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="CustomFindDialog.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+    xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerik:RadToolBar DataContext="{Binding ElementName=viewer, Path=CommandDescriptors}">
+            <telerik:RadToolBar.Resources>
+                <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            </telerik:RadToolBar.Resources>
+            
+            <telerik:RadButton Command="{Binding OpenCommandDescriptor.Command}" Visibility="{Binding OpenCommandDescriptor.IsEnabled, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsBackgroundVisible="False">
+                <ToolTipService.ToolTip>
+                    <TextBlock Text="Open" />
+                </ToolTipService.ToolTip>
+                <Image Source="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/open.png" Stretch="None" />
+            </telerik:RadButton>
+        </telerik:RadToolBar>
+
+        <telerik:RadPdfViewer Mode="TextSelection" Grid.Row="1" x:Name="viewer" DocumentSource="/CustomFindDialog;component/SampleData/Sample.pdf"/>
+    </Grid>
+</UserControl>

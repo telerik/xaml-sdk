@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="RestoreFocus.Example"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<TextBlock Text="The RadBusyIndicator will be shown each 5 seconds for 5 seconds. Note that if you click in any of the TextBoxes after the BusyIndicator is hidden the focus is restored to the correct TextBox."
+				   FontWeight="Bold"
+				   TextWrapping="Wrap"
+				   Margin="20"
+				   Width="400"
+				   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+		<Border BorderBrush="Black" 
+					BorderThickness="2" 
+					Height="200" Width="220"
+					Grid.Row="1"
+					Margin="10">
+			<telerik:RadBusyIndicator x:Name="BusyIndicator">
+				<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+							x:Name="StackPanel">
+					<TextBox Width="170"
+							 Margin="10"
+							 x:Name="TextBox"
+							 Text="Click here to set the focus."/>
+					<TextBox Width="170"
+							 Margin="10"
+							 Text="or here."/>
+				</StackPanel>
+			</telerik:RadBusyIndicator>
+		</Border>
+	</Grid>
+</UserControl>

@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="Zip_Integration_SL.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:ZipIntegration"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.DataContext>
+        <local:ZipViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+            <StackPanel Margin="3">
+            <telerik:RadButton x:Name="buttonSave" Content="Save" Click="OnSave" Margin="0 2"/>
+            <telerik:RadButton x:Name="buttonLoad" Content="Load" Click="OnLoad" Margin="0 2"/>
+        </StackPanel>
+        <Grid Width="605" Height="360" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="10"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="4" BorderBrush="#FFD6D4D4" BorderThickness="1" />
+
+            <telerik:RadToolBar Margin="2" >
+                <telerik:RadToggleButton Width="22" Command="{Binding FontWeightCommand}" Content="B" CommandParameter="{Binding Path=IsChecked, RelativeSource={RelativeSource Self}}">
+                   
+                </telerik:RadToggleButton>
+                <telerik:RadToggleButton Width="22" Command="{Binding FontStyleCommand}" Content="I" FontStyle="Italic" CommandParameter="{Binding Path=IsChecked, RelativeSource={RelativeSource Self}}">
+                </telerik:RadToggleButton>
+                <telerik:RadToolBarSeparator />
+                <telerik:RadRadioButton  Width="72" Command="{Binding TextAlignmentCommand}" Content="Align left" IsChecked="True" CommandParameter="Left">
+                </telerik:RadRadioButton>
+                <telerik:RadRadioButton Width="72" Command="{Binding TextAlignmentCommand}" Content="Align center" CommandParameter="Center">
+                </telerik:RadRadioButton>
+                <telerik:RadRadioButton Width="72" Command="{Binding TextAlignmentCommand}" Content="Align right" CommandParameter="Right">
+                </telerik:RadRadioButton>
+            </telerik:RadToolBar>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="1"  Text="CARD_DETAILS" FontFamily="Segoe UI" FontSize="14" Foreground="Black"/>
+
+                <StackPanel Grid.Column="0" Grid.Row="1" Margin="10">
+                    <TextBlock Text="Normal" TextAlignment="Right" />
+                    <TextBlock Text="{Binding UncompressedSize}" TextAlignment="Right"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1" Grid.ColumnSpan="10" Grid.Column="1" Background="#FF8EBC00">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="30 0 10 0" Grid.Column="0" Source="Images/FAMIA.jpg" Stretch="None" Width="90" Height="110" />
+                    <TextBlock Margin="0 11 0 0" Grid.Column="1" Text="{Binding ContactInformation}" FontFamily="Segoe UI" FontSize="14" Foreground="#FFFFFFFF" />
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="1"  Text="CARD_DETAILS - EDIT" FontFamily="Segoe UI" FontSize="14" Foreground="Black"/>
+
+                <StackPanel Grid.Column="0" Grid.Row="1" Margin="10">
+                    <TextBlock Text="Compressed" TextAlignment="Right"/>
+                    <TextBlock Text="{Binding CompressedSize}" TextAlignment="Right" />
+                </StackPanel>
+
+
+                <Grid Grid.Row="1" Grid.ColumnSpan="10" Grid.Column="1" Background="#FF8EBC00" x:Name="target">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="30 0 10 0" Grid.Column="0" Source="Images/FAMIA.jpg" Stretch="None" Width="90" Height="110" />
+                    <TextBlock Margin="0 11 0 0" Grid.Column="1" Text="{Binding ContactInformation}" FontFamily="Segoe UI" FontSize="14" Foreground="#FFFFFFFF" TextAlignment="{Binding TextAlignment, Mode=TwoWay}" FontWeight="{Binding FontWeight, Mode=TwoWay}" FontStyle="{Binding FontStyle, Mode=TwoWay}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

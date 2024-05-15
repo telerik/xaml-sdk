@@ -1,0 +1,39 @@
+﻿<Window x:Class="GaugeRangeIndicatorColorMixSensitivity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadVerticalLinearGauge Name="gauge"
+										Width="100"
+										Height="300"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale x:Name="scale"
+										 MajorTickStep="10"
+										 IsInteractive="True">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+                                        StartWidth="0.05"
+                                        EndWidth="0.05"
+                                        Background="Green"
+                                        IndicatorBackground="Green" />
+					<telerik:GaugeRange Min="50"
+										Max="100"
+                                        StartWidth="0.05"
+                                        EndWidth="0.05"
+                                        Background="Yellow"
+                                        IndicatorBackground="Yellow"
+                                        IndicatorColorMixSensitivity="0.5" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator UseRangeColor="True"
+										  RangeColorMode="MixedColor"
+										  Value="60" />
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

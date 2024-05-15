@@ -1,0 +1,78 @@
+﻿<Application x:Class="DifferentlyColoredSelectedBoxes.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.VisualStudio2013;component/Themes/System.Windows.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.VisualStudio2013;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.VisualStudio2013;component/Themes/Telerik.Windows.Controls.Input.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="telerik:RadAutoCompleteBoxItem">
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="IsTabStop" Value="False"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Margin" Value="2 2 0 0"/>
+                <Setter Property="MinHeight" Value="18"/>
+                <Setter Property="Padding" Value="3 0 2 0"/>
+                <Setter Property="Foreground" Value="{telerik:VisualStudio2013Resource ResourceKey=MarkerBrush}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="telerik:RadAutoCompleteBoxItem">
+                            <Grid>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="Border" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Disabled">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="Border" Storyboard.TargetProperty="Opacity" To="0.2"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                    <Grid >
+                                        <ContentPresenter x:Name="contentPresenter"
+                                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                        <telerik:RadButton x:Name="RemoveItemButton"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            CornerRadius="0"
+                                            BorderThickness="0"
+                                            CommandParameter="{Binding}"
+                                            Cursor="Arrow"
+                                            IsTabStop="False"
+                                            Command="telerik:RadAutoCompleteBoxCommands.RemoveItem"
+                                            Style="{StaticResource RadButtonCloseStyle}"
+                                            Margin="-4 1 3 1"
+                                            Padding="2 4 2 3" />
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <DataTemplate x:Key="BoxesItemTemplate">
+                <Grid>
+                    <Border BorderBrush="{Binding ItemBorderBrush}" BorderThickness="1">
+                        <Border Background="{Binding ItemBorderBrush}" Opacity="0.2"/>
+                    </Border>
+
+                    <TextBlock Text="{Binding Name}" Margin="3 1 17 1" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,9 @@
+﻿<Window x:Class="GroupingByTimeMarkers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:GroupingByTimeMarkers"
+        Title="MainWindow" Height="650" Width="825">
+    <Grid>
+        <local:Example/>
+    </Grid>
+</Window>

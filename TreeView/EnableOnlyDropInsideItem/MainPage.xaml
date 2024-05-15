@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="EnableOnlyDropInsideItem_SL.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sampleData="clr-namespace:EnableOnlyDropInsideItem.ViewModels"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+    <Grid>
+        <Grid.Resources>
+            <sampleData:RadTreeViewSampleData x:Key="DataSource" />
+
+            <DataTemplate x:Key="Team">
+                <TextBlock Text="{Binding Name}" />
+            </DataTemplate>
+            <telerik:HierarchicalDataTemplate x:Key="Division"
+                                              ItemTemplate="{StaticResource Team}"
+                                              ItemsSource="{Binding Teams}">
+                <TextBlock Text="{Binding Name}" />
+            </telerik:HierarchicalDataTemplate>
+            <telerik:HierarchicalDataTemplate x:Key="League"
+                                              ItemTemplate="{StaticResource Division}"
+                                              ItemsSource="{Binding Divisions}">
+                <TextBlock Text="{Binding Name}" />
+            </telerik:HierarchicalDataTemplate>
+        </Grid.Resources>
+        <telerik:RadTreeView x:Name="xTreeView"
+                             Margin="8"
+                             IsDragDropEnabled="True"
+                             ItemTemplate="{StaticResource League}"
+                             ItemsSource="{Binding Source={StaticResource DataSource},
+                                                   Path=LeaguesDataSource}"
+                             telerik:TreeViewSettings.DragDropExecutionMode="New" />
+    </Grid>
+</UserControl>

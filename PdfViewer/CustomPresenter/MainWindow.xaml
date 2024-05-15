@@ -1,0 +1,22 @@
+﻿<Window x:Class="CustomPresenter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <telerik:RadButton Grid.Row="0" Grid.Column="0" Content="Open" Command="{Binding ElementName=viewer, Path=CommandDescriptors.OpenCommandDescriptor.Command}" />
+        <telerik:RadButton Grid.Row="0" Grid.Column="1" Content="Presenter 1" Click="RadButton1_Click" />
+        <telerik:RadButton Grid.Row="0" Grid.Column="2" Content="Presenter 2" Click="RadButton2_Click" />
+        <telerik:RadPdfViewer Loaded="viewer_Loaded" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="viewer" DocumentSource="/CustomPresenter;component/SampleData/Sample.pdf" />
+    </Grid>
+</Window>

@@ -1,0 +1,85 @@
+﻿<telerik:RadWindow x:Class="AppointmentsReminders.ReminderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="242" SizeToContent="True" Width="383"
+		WindowStartupLocation="CenterOwner" IsTopmost="True"
+        xmlns:local="clr-namespace:AppointmentsReminders"
+		Style="{StaticResource ReminderWindowStyle }"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <telerik:RadWindow.Resources>
+        <local:TimeSpanToStringConverter x:Key="TimeSpanToStringConverter"/>
+		
+		<Style x:Key="TextBlockLabel" TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="Segoe UI Semibold" />
+			<Setter Property="FontSize" Value="12" />
+			<Setter Property="Foreground" Value="{telerik:Windows8Resource ResourceKey=StrongBrush}" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="HorizontalAlignment" Value="Right" />
+			<Setter Property="Margin" Value="0 7" />
+		</Style>
+		
+		<Style x:Key="TextBlockAppointmentLabel" TargetType="TextBlock">
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="25 7 0 7" />
+		</Style>
+	</telerik:RadWindow.Resources>
+	
+    <telerik:RadWindow.Icon>
+        <Path Data="M8.500001,1.7040509 C10.271389,1.8932999 11.66478,2.9541364 12.016057,4.4675074 C12.016057,4.4675074 13.081997,10.971431 14.244841,11.410886 C15.310781,11.674558 15.504589,12.289794 15.504589,12.289794 C15.504589,12.289794 16.08601,13.608157 15.989107,14.487065 C15.907345,15.006171 13.480021,15.525269 9.8712931,15.674813 L9.8477507,15.675737 L9.8205376,15.732287 C9.5401392,16.270744 9.4414282,17.710358 7.9418974,17.710358 C6.4492698,17.710358 6.3436561,16.270744 6.0632572,15.732287 L6.042625,15.689414 L5.8560977,15.682738 C2.2185407,15.544495 -5.6243032E-08,15.015784 0,14.487065 C-5.6243032E-08,13.608157 0.48451835,12.289794 0.48451823,12.289794 C0.48451835,12.289794 0.67832565,11.674558 1.6473625,11.410886 C2.6163993,11.059321 3.7792435,4.4675074 3.7792435,4.4675074 C3.8670626,3.5913453 4.8303266,1.9933451 7.1739092,1.7014208 z"
+			Fill="{telerik:Windows8Resource ResourceKey=MainBrush}"
+			Opacity="1" Margin="0 0 5 0"
+			Stretch="Fill" HorizontalAlignment="Left" Width="16" Height="16" VerticalAlignment="Top" />
+    </telerik:RadWindow.Icon>
+	
+    <telerik:RadWindow.Header>
+        <TextBlock Margin="0 0 0 5" FontSize="16" Foreground="{telerik:Windows8Resource ResourceKey=MainBrush}" Text="Reminder" TextWrapping="Wrap" Height="18.223" FontFamily="Segoe UI Light" VerticalAlignment="Top" HorizontalAlignment="Left" />
+    </telerik:RadWindow.Header>
+    
+	<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+		<TextBlock Grid.Column="0" Grid.Row="0" Text="Subject:" Style="{StaticResource TextBlockLabel}" Margin="0 16 0 7"/>
+		<TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding SelectedAppointment.Subject}" Style="{StaticResource TextBlockAppointmentLabel}" Margin="25 16 0 7" />
+		<TextBlock Grid.Column="0" Grid.Row="1" Text="Start time:" Style="{StaticResource TextBlockLabel}" />
+		<TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding SelectedAppointment.Start}" Style="{StaticResource TextBlockAppointmentLabel}"/>
+		<TextBlock Grid.Column="0" Grid.Row="2" Text="Due in:" Style="{StaticResource TextBlockLabel}" />
+		<TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding SelectedAppointment.SelectedReminder}" Style="{StaticResource TextBlockAppointmentLabel}" />
+		<Border Grid.ColumnSpan="2" Grid.Row="3" BorderBrush="Gray" BorderThickness="0 1 0 0" Height="40" VerticalAlignment="Bottom" Margin="0 7">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 8 0 0">
+				<telerik:RadButton Content="Dismiss" Command="{Binding DismissCommand}" Height="22" CommandParameter="{Binding SelectedAppointment}" 
+						VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="0 0 15 0" Width="82" 
+						FontFamily="{telerik:Windows8Resource ResourceKey=FontFamilyStrong}" />
+				<telerik:RadButton Content="Open item" Grid.Column="1" Height="22" Command="{Binding EditAppointmentCommand}"  Width="82"
+						FontFamily="{telerik:Windows8Resource ResourceKey=FontFamilyStrong}"
+						CommandParameter="{Binding SelectedAppointment}" Margin="0 0 10 0" 
+						VerticalAlignment="Center" HorizontalAlignment="Right"/>
+			</StackPanel>
+		</Border>
+        <TextBlock Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="15 0 0 10" Foreground="Gray"
+				   Text="CLICK SNOOZE TO BE REMINDED AGAIN IN:" FontFamily="Segoe UI" FontSize="10"/>
+		<StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" 
+					VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="15 0 0 0">
+		<telerik:RadComboBox ItemsSource="{Binding ReminderSource}" SelectedItem="{Binding SelectedAppointment.SelectedReminder, Mode=TwoWay}" Width="253">
+            <telerik:RadComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ., Converter={StaticResource TimeSpanToStringConverter}}"/>
+                </DataTemplate>
+            </telerik:RadComboBox.ItemTemplate>
+        </telerik:RadComboBox>
+			<telerik:RadButton Content="Snooze" Margin="15 0 0 0" Width="84" FontFamily="{telerik:Windows8Resource ResourceKey=FontFamilyStrong}"
+                Command="{Binding SnoozeCommand}" CommandParameter="{Binding SelectedAppointment}"/>
+		</StackPanel>
+	</Grid>
+</telerik:RadWindow>

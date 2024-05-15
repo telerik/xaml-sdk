@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{708C761A-E250-473A-8D81-261EA7237A34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualStudioDocking</RootNamespace>
+    <AssemblyName>VisualStudioDocking</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+     
+     
+     
+     
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VisualStudioDocking.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows8">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Windows8.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CustomDockingPanesFactory.cs" />
+    <Compile Include="CustomSaveLoadLayoutHelper.cs" />
+    <Compile Include="ViewModel\PaneViewModel_WPF.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel_WPF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\ErrorList.xaml.cs">
+      <DependentUpon>ErrorList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Output.xaml.cs">
+      <DependentUpon>Output.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PropertiesPane.xaml.cs">
+      <DependentUpon>PropertiesPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServerExplorer.xaml.cs">
+      <DependentUpon>ServerExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SolutionExplorer.xaml.cs">
+      <DependentUpon>SolutionExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ToolBox.xaml.cs">
+      <DependentUpon>ToolBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\ErrorList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Output.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PropertiesPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ServerExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SolutionExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ToolBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Docking\bullet_toggle_minus.png" />
+    <Resource Include="Images\Docking\bullet_toggle_plus.png" />
+    <Resource Include="Images\Docking\connect_to_database.png" />
+    <Resource Include="Images\Docking\connect_to_server.png" />
+    <Resource Include="Images\Docking\data.png" />
+    <Resource Include="Images\Docking\data_white.png" />
+    <Resource Include="Images\Docking\ErrorList\delete.png" />
+    <Resource Include="Images\Docking\ErrorList\information.png" />
+    <Resource Include="Images\Docking\ErrorList\warning.png" />
+    <Resource Include="Images\Docking\icon1.png" />
+    <Resource Include="Images\Docking\icon2.png" />
+    <Resource Include="Images\Docking\lightning.png" />
+    <Resource Include="Images\Docking\Output\01.png" />
+    <Resource Include="Images\Docking\Output\02.png" />
+    <Resource Include="Images\Docking\Output\03.png" />
+    <Resource Include="Images\Docking\Output\04.png" />
+    <Resource Include="Images\Docking\Output\05.png" />
+    <Resource Include="Images\Docking\Products\Big\Docking.png" />
+    <Resource Include="Images\Docking\properties_icon.png" />
+    <Resource Include="Images\Docking\refresh.png" />
+    <Resource Include="Images\Docking\server.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_open_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_events.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\performance_counters.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services_white.png" />
+    <Resource Include="Images\Docking\servers.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\bin.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\description.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon1.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon11.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon2.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon3.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon4.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon5.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon6.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon7.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon8.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon9.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\usercontrol.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\_image.png" />
+    <Resource Include="Images\Docking\sortasc.png" />
+    <Resource Include="Images\Docking\stop_refresh.png" />
+    <Resource Include="Images\Docking\Toolbox\chartview.png" />
+    <Resource Include="Images\Docking\Toolbox\datafilter.png" />
+    <Resource Include="Images\Docking\Toolbox\dataform.png" />
+    <Resource Include="Images\Docking\Toolbox\datapager.png" />
+    <Resource Include="Images\Docking\Toolbox\imageeditor.png" />
+    <Resource Include="Images\Docking\Toolbox\map.png" />
+    <Resource Include="Images\Docking\Toolbox\pdfviewer.png" />
+    <Resource Include="Images\Docking\Toolbox\pivotgrid.png" />
+    <Resource Include="Images\Docking\Toolbox\richtextbox.png" />
+    <Resource Include="Images\Docking\Toolbox\sparklines.png" />
+    <Resource Include="Images\Docking\Toolbox\timebar.png" />
+    <Resource Include="Images\Docking\Toolbox\timeline.png" />
+    <Resource Include="Images\Docking\Toolbox\treemapandpivotmap.png" />
+    <Resource Include="Images\Docking\_data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

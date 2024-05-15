@@ -1,0 +1,173 @@
+﻿<Application x:Class="WinFormsInsideDocking_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml"
+             xmlns:telerikNavigationPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls.Navigation" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Navigation.xaml"/>
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Office_Black;component/Themes/Telerik.Windows.Controls.Docking.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- RadTabControl TopTemplate-->
+            <ControlTemplate x:Key="AutoHideAreaTopTemplate" TargetType="telerik:AutoHideArea">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <!--TabStrip-->
+                    <ItemsPresenter x:Name="ItemsPresenterElement" Grid.Row="0" />
+                    <!--Content-->
+                    <!--NOTE: The AllowTransparency property should be changed to False. -->
+                    <Popup x:Name="ContentPopup" Grid.Row="1" IsOpen="False" AllowsTransparency="False">
+                        <Grid>
+                            <Grid x:Name="PopupChild" MinWidth="50" MinHeight="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <!--Content-->
+                                <ContentControl x:Name="ContentBackground" Grid.Row="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Style="{StaticResource PaneGroup_PaneFrameStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <telerik:PaneHeader x:Name="HeaderElement" Visibility="{Binding SelectedPane.PaneHeaderVisibility, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" MinHeight="16" SelectedPane="{TemplateBinding SelectedPane}"/>
+                                        <ContentPresenter x:Name="ContentElement" Grid.Row="1" ContentTemplate="{TemplateBinding SelectedContentTemplate}"></ContentPresenter>
+                                    </Grid>
+                                </ContentControl>
+                                <!--NOTE: Here set the Background property of the GridResizer to an appropriate colour.-->
+                                <!--Resizer-->
+                                <telerik:RadGridResizer x:Name="Resizer" Placement="Bottom" Grid.Row="1" Height="4" Background="White" HorizontalAlignment="Stretch" Opacity="0.6" VerticalAlignment="Bottom" Cursor="SizeNS" />
+                            </Grid>
+                        </Grid>
+                    </Popup>
+                </Grid>
+            </ControlTemplate>
+            <!-- RadTabControl Bottom Template-->
+            <ControlTemplate x:Key="AutoHideAreaBottomTemplate" TargetType="telerik:AutoHideArea">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <!--TabStrip-->
+                    <ItemsPresenter x:Name="ItemsPresenterElement" Grid.Row="1" />
+                    <!--Content-->
+                    <!--NOTE: The AllowTransparency property should be changed to False. -->
+                    <Popup x:Name="ContentPopup" IsOpen="False" AllowsTransparency="False" Placement="Top">
+                        <Grid>
+                            <Grid x:Name="PopupChild" MinWidth="50" MinHeight="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <!--Resizer-->
+                                <!--NOTE: Here set the Background property of the GridResizer to an appropriate colour.-->
+                                <telerik:RadGridResizer x:Name="Resizer" Grid.Row="0" Placement="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="4" Opacity="0.6" Background="White" Cursor="SizeNS" />
+                                <!--Content-->
+                                <ContentControl x:Name="ContentBackground" Grid.Row="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Style="{StaticResource PaneGroup_PaneFrameStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <telerik:PaneHeader x:Name="HeaderElement" Visibility="{Binding SelectedPane.PaneHeaderVisibility, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" MinHeight="16" SelectedPane="{TemplateBinding SelectedPane}"/>
+                                        <ContentPresenter x:Name="ContentElement" Grid.Row="1" ContentTemplate="{TemplateBinding SelectedContentTemplate}"></ContentPresenter>
+                                    </Grid>
+                                </ContentControl>
+                            </Grid>
+                        </Grid>
+                    </Popup>
+                </Grid>
+            </ControlTemplate>
+            <!-- RadTabControl LeftTemplate-->
+            <ControlTemplate x:Key="AutoHideAreaLeftTemplate" TargetType="telerik:AutoHideArea">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--TabStrip-->
+                    <ItemsPresenter x:Name="ItemsPresenterElement" />
+                    <!--Content-->
+                    <!--NOTE: The AllowTransparency property should be changed to False. -->
+                    <Popup x:Name="ContentPopup" Grid.Column="1" IsOpen="False" Placement="Right" AllowsTransparency="False">
+                        <Grid>
+                            <Grid x:Name="PopupChild" MinWidth="50" MinHeight="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <!--Content-->
+                                <ContentControl x:Name="ContentBackground" Grid.Column="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Style="{StaticResource PaneGroup_PaneFrameStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <telerik:PaneHeader x:Name="HeaderElement" Visibility="{Binding SelectedPane.PaneHeaderVisibility, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" MinHeight="16" SelectedPane="{TemplateBinding SelectedPane}"/>
+                                        <ContentPresenter x:Name="ContentElement" Grid.Row="1" ContentTemplate="{TemplateBinding SelectedContentTemplate}"></ContentPresenter>
+                                    </Grid>
+                                </ContentControl>
+                                <!--Resizer-->
+                                <!--NOTE: Here set the Background property of the GridResizer to an appropriate colour.-->
+                                <telerik:RadGridResizer x:Name="Resizer" Grid.Column="1" Placement="Right" HorizontalAlignment="Right" Opacity="0.6" VerticalAlignment="Stretch" Width="4" Background="White" Cursor="SizeWE" />
+                            </Grid>
+                        </Grid>
+                    </Popup>
+                </Grid>
+            </ControlTemplate>
+            <!-- RadTabControl RightTemplate-->
+            <ControlTemplate x:Key="AutoHideAreaRightTemplate" TargetType="telerik:AutoHideArea">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--TabStrip-->
+                    <ItemsPresenter x:Name="ItemsPresenterElement" Grid.Column="1" />
+                    <!--Content-->
+                    <!--NOTE: The AllowTransparency property should be changed to False. -->
+                    <Popup x:Name="ContentPopup" IsOpen="False" Placement="Left" AllowsTransparency="False">
+                        <Grid>
+                            <Grid x:Name="PopupChild" MinWidth="50" MinHeight="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <!--Content-->
+                                <ContentControl x:Name="ContentBackground" Grid.Column="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Style="{StaticResource PaneGroup_PaneFrameStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <telerik:PaneHeader x:Name="HeaderElement" Visibility="{Binding SelectedPane.PaneHeaderVisibility, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" MinHeight="16" SelectedPane="{TemplateBinding SelectedPane}"/>
+                                        <ContentPresenter x:Name="ContentElement" Grid.Row="1" ContentTemplate="{TemplateBinding SelectedContentTemplate}"></ContentPresenter>
+                                    </Grid>
+                                </ContentControl>
+                                <!--NOTE: Here set the Background property of the GridResizer to an appropriate colour.-->
+                                <telerik:RadGridResizer x:Name="Resizer" Grid.Column="0" Placement="Left" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="4" Background="White" Opacity="0.6" Cursor="SizeWE" />
+                            </Grid>
+                        </Grid>
+                    </Popup>
+                </Grid>
+            </ControlTemplate>
+            <!--AutoHideArea Style-->
+            <!-- RadTabControl -->
+            <Style TargetType="telerik:AutoHideArea" BasedOn="{StaticResource AutoHideAreaStyle}">
+                <Setter Property="Template" Value="{StaticResource AutoHideAreaTopTemplate}" />
+                <Setter Property="TopTemplate" Value="{StaticResource AutoHideAreaTopTemplate}" />
+                <Setter Property="BottomTemplate" Value="{StaticResource AutoHideAreaBottomTemplate}" />
+                <Setter Property="RightTemplate" Value="{StaticResource AutoHideAreaRightTemplate}" />
+                <Setter Property="LeftTemplate" Value="{StaticResource AutoHideAreaLeftTemplate}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualGroups-DataBinding_WPF", "ContextualGroups-DataBinding\ContextualGroups-DataBinding_WPF.csproj", "{32E71AFB-040B-488F-84C0-B1D8D1C0289C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleAccessKeys-KeyTips_WPF", "MultipleAccessKeys-KeyTips\MultipleAccessKeys-KeyTips_WPF.csproj", "{ADBDCA39-E85B-4A10-BD3E-A472AF178741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFunctionality_WPF", "HelpFunctionality\HelpFunctionality_WPF.csproj", "{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office2016InspiredRibbonView_WPF", "Office2016InspiredRibbonView_WPF\Office2016InspiredRibbonView_WPF.csproj", "{1316325F-73A3-4030-ADFB-9442329F887D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSelectionRibbonGallery_WPF", "MultiSelectionRibbonGallery\MultiSelectionRibbonGallery_WPF.csproj", "{C56CEF76-186F-41CB-9372-7196EEFF87C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E71AFB-040B-488F-84C0-B1D8D1C0289C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBDCA39-E85B-4A10-BD3E-A472AF178741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E406C6C-4BD9-4418-BFA1-04CA77D1DEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1316325F-73A3-4030-ADFB-9442329F887D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C56CEF76-186F-41CB-9372-7196EEFF87C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56CEF76-186F-41CB-9372-7196EEFF87C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56CEF76-186F-41CB-9372-7196EEFF87C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56CEF76-186F-41CB-9372-7196EEFF87C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07B30EEC-4D68-49B0-A842-522BBA02C4EA}
+	EndGlobalSection
+	 
+EndGlobal

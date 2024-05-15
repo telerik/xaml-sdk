@@ -1,0 +1,21 @@
+﻿<Window x:Class="BindingToICustomTypeProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:BindingToICustomTypeProvider"
+       
+        Title="MainWindow" Height="600" Width="525">
+    <Window.Resources>
+        <local:MyViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ViewModel}">
+        <telerik:RadGridView x:Name="radGridView"
+                             ItemsSource="{Binding Clubs}"
+                             AutoGenerateColumns="False"
+                             Margin="5" >
+        </telerik:RadGridView>
+
+        <TextBlock Text="NOTE: To successfully use the ICustomTypeProvider interface, please reference the 4.5 version of the Telerik UI for WPF binaries."
+                   FontSize="14" VerticalAlignment="Center" FontWeight="Bold" Width="400" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ComputerVisionApi.ImageUploadControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ComputerVisionApi"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <telerik:RadWatermarkTextBox x:Name="SuscriptionKey" Grid.ColumnSpan="3" Margin="0 0 0 5"
+                                     Text="{Binding SubscriptionKey, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:ImageUploadControl}}"
+                                     WatermarkContent="Paste your subscription key here..." />
+        <telerik:RadButton Grid.Row="1" Content="Upload" Click="Button1_Click" />
+        <telerik:RadHorizontalLinearGauge Grid.Row="1" Grid.Column="1">
+            <telerik:HorizontalLinearScale Min="0" Max="100" Margin="10">
+                <telerik:HorizontalLinearScale.Indicators>
+                    <telerik:BarIndicator Value="{Binding Confidence, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:ImageUploadControl}}"/>
+                </telerik:HorizontalLinearScale.Indicators>
+            </telerik:HorizontalLinearScale>
+        </telerik:RadHorizontalLinearGauge>
+        <Border Grid.Row="1" Grid.Column="2" Margin="10, 0, 0, 0">
+            <Border.ToolTip>
+                <TextBlock MaxWidth="300" TextWrapping="Wrap" Text="The vertical gauge on the left displays how likely we are to approve the profile image you provided. If the value shown by the control is less than 50, you may want to upload a different photo." />
+            </Border.ToolTip>
+            <Path Data="{telerik:RadGlyph Glyph={StaticResource GlyphInformation}}" Fill="{telerik:Office2016Resource ResourceKey=IconBrush}" Width="20" Height="20" Stretch="Uniform" />
+        </Border>
+    </Grid>
+</UserControl>
