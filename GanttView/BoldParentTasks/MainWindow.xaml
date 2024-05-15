@@ -1,9 +1,0 @@
-﻿<Window x:Class="BoldParentTasks.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:BoldParentTasks"
-        Title="MainWindow" Height="350" Width="970">
-    <Grid>
-        <local:Example/>
-    </Grid>
-</Window>

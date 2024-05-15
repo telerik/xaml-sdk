@@ -1,9 +1,0 @@
-﻿<Window x:Class="DirtyTasks.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:DirtyTasks"
-        Title="MainWindow" Height="430" Width="1240">
-    <Grid>
-        <local:Example/>
-    </Grid>
-</Window>

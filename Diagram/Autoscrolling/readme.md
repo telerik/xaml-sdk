@@ -1,4 +1,0 @@
-## Autoscrolling
-This example demonstrates how to implement autoscrolling behavior in RadDiagram. Dragging a shape or connection outside of the viewport will automatically start a pan operation.
-
-[//]: <keywords:connectionmanipulation, pan, drag>

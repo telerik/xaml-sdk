@@ -1,9 +1,0 @@
-﻿<Window x:Class="TaskSnappingDragDropAndResizeBehavior.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:TaskSnappingDragDropAndResizeBehavior"
-        Title="MainWindow" Height="350" Width="1030" MinWidth="1030">
-    <Grid>
-        <local:Example/>
-    </Grid>
-</Window>

@@ -1,9 +1,0 @@
-﻿<Window x:Class="SummaryTaskConsistency.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:SummaryTaskConsistency"
-        Title="MainWindow" Height="400" Width="1110">
-    <Grid>
-        <local:Example/>
-    </Grid>
-</Window>
