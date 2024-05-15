@@ -148,7 +148,7 @@
 
             <Style TargetType="local:TimeLineRecurrenceContainer">
                 <Setter Property="scheduling:DragDropElement.Type" Value="Drag"/>
-                <Setter Property="telerik:DragDropManager.TouchDragTrigger" Value="TapAndHold"/>
+				<Setter Property="telerik:TouchManager.DragStartTrigger" Value="TapAndHold"/>
                 <Setter Property="Background" Value="{StaticResource EventBackground_Normal}"/>
                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                 <Setter Property="VerticalContentAlignment" Value="Stretch"/>

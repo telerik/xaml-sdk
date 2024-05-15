@@ -1,19 +1,17 @@
 namespace DatabaseEntityFramework
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    extern alias DataAnnotations;
+
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class SqlAppointmentResource
     {
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SqlAppointment_SqlAppointmentId { get; set; }
 
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SqlResource_SqlResourceId { get; set; }

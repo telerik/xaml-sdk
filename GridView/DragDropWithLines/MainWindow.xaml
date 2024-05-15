@@ -39,10 +39,8 @@
             </telerik:RadGridView.Resources>
             <telerik:RadGridView.RowStyle>
                 <Style TargetType="telerik:GridViewRow">
-                    <Setter Property="telerik:DragDropManager.AllowDrag"
-                    Value="True" />
-                    <Setter Property="telerik:DragDropManager.TouchDragTrigger"
-                    Value="TapAndHold"/>
+                    <Setter Property="telerik:DragDropManager.AllowDrag" Value="True" />
+					<Setter Property="telerik:TouchManager.DragStartTrigger" Value="TapAndHold"/>
                 </Style>
             </telerik:RadGridView.RowStyle>
         </telerik:RadGridView>

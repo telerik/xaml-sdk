@@ -1,10 +1,7 @@
 namespace DatabaseEntityFramework
 {
-    using System;
+    extern alias DataAnnotations;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class TimeMarker
     {
@@ -15,13 +12,13 @@ namespace DatabaseEntityFramework
             SqlExceptionAppointments = new HashSet<SqlExceptionAppointment>();
         }
         
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int TimeMarkerId { get; set; }
 
-        [StringLength(50)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(50)]
         public string TimeMarkerName { get; set; }
 
-        [StringLength(50)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(50)]
         public string TimeMarkerBrushName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

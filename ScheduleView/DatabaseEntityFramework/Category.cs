@@ -1,10 +1,7 @@
 namespace DatabaseEntityFramework
 {
-    using System;
+    extern alias DataAnnotations;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class Category
     {
@@ -15,16 +12,16 @@ namespace DatabaseEntityFramework
             SqlExceptionAppointments = new HashSet<SqlExceptionAppointment>();
         }
 
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int CategoryID { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string CategoryName { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string DisplayName { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string CategoryBrushName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

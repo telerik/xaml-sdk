@@ -1,10 +1,7 @@
 namespace DatabaseEntityFramework
 {
-    using System;
+    extern alias DataAnnotations;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class SqlResourceType
     {
@@ -14,14 +11,14 @@ namespace DatabaseEntityFramework
             SqlResources = new HashSet<SqlResource>();
         }
 
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int SqlResourceTypeId { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Required]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string Name { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string DisplayName { get; set; }
 
         public bool AllowMultipleSelection { get; set; }
