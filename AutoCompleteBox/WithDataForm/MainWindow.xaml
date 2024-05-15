@@ -1,9 +1,0 @@
-﻿<Window x:Class="WithDataForm.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:local="clr-namespace:WithDataForm"
-        Title="MainWindow" Height="400" Width="760">
-    <Grid>
-		<local:Example/>
-	</Grid>
-</Window>

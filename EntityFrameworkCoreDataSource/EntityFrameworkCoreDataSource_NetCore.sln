@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseFirstNorthwind_NetCore", "DatabaseFirstNorthwind\DatabaseFirstNorthwind_NetCore.csproj", "{05B682E6-E79D-47DE-ACAC-060BA44203BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B682E6-E79D-47DE-ACAC-060BA44203BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B682E6-E79D-47DE-ACAC-060BA44203BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B682E6-E79D-47DE-ACAC-060BA44203BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B682E6-E79D-47DE-ACAC-060BA44203BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {618FCF0F-914D-460B-A57C-AB78AD98576F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfsemea.progress.com:8080/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DatabaseFirstNorthwind\\DatabaseFirstNorthwind_NetCore.csproj
+		SccProjectName1 = DatabaseFirstNorthwind
+		SccLocalPath1 = DatabaseFirstNorthwind
+	EndGlobalSection
+EndGlobal

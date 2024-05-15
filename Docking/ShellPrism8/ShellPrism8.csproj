@@ -1,0 +1,268 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>ShellPrism8.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+    <Page Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Docking\bullet_toggle_minus.png" />
+    <None Remove="Images\Docking\bullet_toggle_plus.png" />
+    <None Remove="Images\Docking\connect_to_database.png" />
+    <None Remove="Images\Docking\connect_to_server.png" />
+    <None Remove="Images\Docking\data.png" />
+    <None Remove="Images\Docking\data_white.png" />
+    <None Remove="Images\Docking\ErrorList\delete.png" />
+    <None Remove="Images\Docking\ErrorList\information.png" />
+    <None Remove="Images\Docking\ErrorList\warning.png" />
+    <None Remove="Images\Docking\icon1.png" />
+    <None Remove="Images\Docking\icon2.png" />
+    <None Remove="Images\Docking\lightning.png" />
+    <None Remove="Images\Docking\Output\01.png" />
+    <None Remove="Images\Docking\Output\02.png" />
+    <None Remove="Images\Docking\Output\03.png" />
+    <None Remove="Images\Docking\Output\04.png" />
+    <None Remove="Images\Docking\Output\05.png" />
+    <None Remove="Images\Docking\Products\Big\Docking.png" />
+    <None Remove="Images\Docking\properties_icon.png" />
+    <None Remove="Images\Docking\refresh.png" />
+    <None Remove="Images\Docking\server.png" />
+    <None Remove="Images\Docking\ServerExplorer\database_connect.png" />
+    <None Remove="Images\Docking\ServerExplorer\database_connect_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\event_log.png" />
+    <None Remove="Images\Docking\ServerExplorer\event_log_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\folder.png" />
+    <None Remove="Images\Docking\ServerExplorer\folder_open_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\folder_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\hristov.png" />
+    <None Remove="Images\Docking\ServerExplorer\hristov_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\management_classes.png" />
+    <None Remove="Images\Docking\ServerExplorer\management_classes_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\management_events.png" />
+    <None Remove="Images\Docking\ServerExplorer\message_queues.png" />
+    <None Remove="Images\Docking\ServerExplorer\message_queues_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\performance_counters.png" />
+    <None Remove="Images\Docking\ServerExplorer\references.png" />
+    <None Remove="Images\Docking\ServerExplorer\references_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\servers.png" />
+    <None Remove="Images\Docking\ServerExplorer\servers_white.png" />
+    <None Remove="Images\Docking\ServerExplorer\services.png" />
+    <None Remove="Images\Docking\ServerExplorer\services_white.png" />
+    <None Remove="Images\Docking\servers.png" />
+    <None Remove="Images\Docking\SolutionExplorer\assembly.png" />
+    <None Remove="Images\Docking\SolutionExplorer\assembly_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\bin.png" />
+    <None Remove="Images\Docking\SolutionExplorer\data.png" />
+    <None Remove="Images\Docking\SolutionExplorer\data_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\description.png" />
+    <None Remove="Images\Docking\SolutionExplorer\enumeration.png" />
+    <None Remove="Images\Docking\SolutionExplorer\enumeration_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\folder.png" />
+    <None Remove="Images\Docking\SolutionExplorer\folder_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon1.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon11.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon2.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon3.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon4.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon5.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon6.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon7.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon8.png" />
+    <None Remove="Images\Docking\SolutionExplorer\icon9.png" />
+    <None Remove="Images\Docking\SolutionExplorer\image.png" />
+    <None Remove="Images\Docking\SolutionExplorer\image_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\namespace.png" />
+    <None Remove="Images\Docking\SolutionExplorer\namespace_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\properties.png" />
+    <None Remove="Images\Docking\SolutionExplorer\properties_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\references.png" />
+    <None Remove="Images\Docking\SolutionExplorer\references_white.png" />
+    <None Remove="Images\Docking\SolutionExplorer\usercontrol.png" />
+    <None Remove="Images\Docking\SolutionExplorer\_image.png" />
+    <None Remove="Images\Docking\sortasc.png" />
+    <None Remove="Images\Docking\stop_refresh.png" />
+    <None Remove="Images\Docking\Toolbox\chartview.png" />
+    <None Remove="Images\Docking\Toolbox\datafilter.png" />
+    <None Remove="Images\Docking\Toolbox\dataform.png" />
+    <None Remove="Images\Docking\Toolbox\datapager.png" />
+    <None Remove="Images\Docking\Toolbox\imageeditor.png" />
+    <None Remove="Images\Docking\Toolbox\map.png" />
+    <None Remove="Images\Docking\Toolbox\pdfviewer.png" />
+    <None Remove="Images\Docking\Toolbox\pivotgrid.png" />
+    <None Remove="Images\Docking\Toolbox\radbook_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radcontextmenu_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radcoverflow_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radcube_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radmenu_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radoutlookbar_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radpanelbar_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radribbonbar_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radribboncontextualgroupcontainer_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radribbonwindow_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radrichtextboxribbonui_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radrichtextbox_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radscheduler_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radslider_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radtabcontrol_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radtileview_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radtoolbar_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radtreelist_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radtreeview_sl.png" />
+    <None Remove="Images\Docking\Toolbox\radwindow_sl.png" />
+    <None Remove="Images\Docking\Toolbox\richtextbox.png" />
+    <None Remove="Images\Docking\Toolbox\sparklines.png" />
+    <None Remove="Images\Docking\Toolbox\timebar.png" />
+    <None Remove="Images\Docking\Toolbox\timeline.png" />
+    <None Remove="Images\Docking\Toolbox\treemapandpivotmap.png" />
+    <None Remove="Images\Docking\_data.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+    <PackageReference Include="Prism.Wpf">
+      <Version>8.1.97</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Telerik.Windows.Controls">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Docking\bullet_toggle_minus.png" />
+    <Resource Include="Images\Docking\bullet_toggle_plus.png" />
+    <Resource Include="Images\Docking\connect_to_database.png" />
+    <Resource Include="Images\Docking\connect_to_server.png" />
+    <Resource Include="Images\Docking\data.png" />
+    <Resource Include="Images\Docking\data_white.png" />
+    <Resource Include="Images\Docking\ErrorList\delete.png" />
+    <Resource Include="Images\Docking\ErrorList\information.png" />
+    <Resource Include="Images\Docking\ErrorList\warning.png" />
+    <Resource Include="Images\Docking\icon1.png" />
+    <Resource Include="Images\Docking\icon2.png" />
+    <Resource Include="Images\Docking\lightning.png" />
+    <Resource Include="Images\Docking\Output\01.png" />
+    <Resource Include="Images\Docking\Output\02.png" />
+    <Resource Include="Images\Docking\Output\03.png" />
+    <Resource Include="Images\Docking\Output\04.png" />
+    <Resource Include="Images\Docking\Output\05.png" />
+    <Resource Include="Images\Docking\Products\Big\Docking.png" />
+    <Resource Include="Images\Docking\properties_icon.png" />
+    <Resource Include="Images\Docking\refresh.png" />
+    <Resource Include="Images\Docking\server.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_open_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_events.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\performance_counters.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services_white.png" />
+    <Resource Include="Images\Docking\servers.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\bin.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\description.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon1.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon11.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon2.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon3.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon4.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon5.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon6.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon7.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon8.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon9.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\usercontrol.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\_image.png" />
+    <Resource Include="Images\Docking\sortasc.png" />
+    <Resource Include="Images\Docking\stop_refresh.png" />
+    <Resource Include="Images\Docking\Toolbox\chartview.png" />
+    <Resource Include="Images\Docking\Toolbox\datafilter.png" />
+    <Resource Include="Images\Docking\Toolbox\dataform.png" />
+    <Resource Include="Images\Docking\Toolbox\datapager.png" />
+    <Resource Include="Images\Docking\Toolbox\imageeditor.png" />
+    <Resource Include="Images\Docking\Toolbox\map.png" />
+    <Resource Include="Images\Docking\Toolbox\pdfviewer.png" />
+    <Resource Include="Images\Docking\Toolbox\pivotgrid.png" />
+    <Resource Include="Images\Docking\Toolbox\radbook_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radcontextmenu_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radcoverflow_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radcube_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radmenu_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radoutlookbar_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radpanelbar_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radribbonbar_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radribboncontextualgroupcontainer_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radribbonwindow_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radrichtextboxribbonui_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radrichtextbox_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radscheduler_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radslider_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radtabcontrol_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radtileview_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radtoolbar_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radtreelist_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radtreeview_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\radwindow_sl.png" />
+    <Resource Include="Images\Docking\Toolbox\richtextbox.png" />
+    <Resource Include="Images\Docking\Toolbox\sparklines.png" />
+    <Resource Include="Images\Docking\Toolbox\timebar.png" />
+    <Resource Include="Images\Docking\Toolbox\timeline.png" />
+    <Resource Include="Images\Docking\Toolbox\treemapandpivotmap.png" />
+    <Resource Include="Images\Docking\_data.png" />
+  </ItemGroup>
+</Project>

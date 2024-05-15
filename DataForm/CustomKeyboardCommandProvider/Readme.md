@@ -1,2 +1,0 @@
-## Custom Keyboard Command Provider
-RadDataForm provides an easy MVVM-friendly approach for customization of its default commands' logic. This example demonstrates how to extend the way RadDataForm handles a particular key.

@@ -1,2 +1,0 @@
-## Cloud Integration
-Examples demonstrating how to integrate the controls from the UI for WPF suite with various cloud services. More specifically, you will use the RadWatermarkTextBox, RadGauge and RadGlyph to create a simple user control which determines whether the text which is entered is in English or not.

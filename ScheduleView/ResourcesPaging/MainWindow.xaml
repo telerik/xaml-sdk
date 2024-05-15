@@ -1,9 +1,0 @@
-﻿<Window x:Class="ResourcesPaging.MainWindow"
-				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"				
-				xmlns:local="clr-namespace:ResourcesPaging"
-				Title="MainWindow" Height="600" Width="800">
-	<Grid x:Name="LayoutRoot" >
-        <local:Example />
-    </Grid>
-</Window>

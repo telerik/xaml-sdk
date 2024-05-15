@@ -1,9 +1,0 @@
-﻿<Window x:Class="Exporting.MainWindow"
-                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                xmlns:local="clr-namespace:Exporting"
-                Title="MainWindow" Height="700" Width="900">
-    <Grid>
-        <local:Example />
-    </Grid>
-</Window>

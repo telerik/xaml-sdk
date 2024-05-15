@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="RadSpellCheckerUsingDataBase.Web.DataService" CodeBehind="DataService.svc.cs" %>

@@ -1,9 +1,0 @@
-﻿<Window x:Class="OldMenuAndItemStyle.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:OldMenuAndItemStyle"
-        Title="Old Menu And Item Style" Height="350" Width="525">
-    <Grid>
-        <local:Example/>
-    </Grid>
-</Window>
