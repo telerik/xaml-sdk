@@ -41,10 +41,10 @@ namespace PaletteResourcesExtractor
         private static DateTime GetDateByFileVersion(AssemblyFileVersionAttribute fileVersion)
         {
             string[] versionParts = fileVersion.Version.Split('.');
-            int year = int.Parse(versionParts[0]);            
+            int year = int.Parse(versionParts[0]);
             string dateNumber = versionParts[2];
-            int month = -1;
-            int day = -1;
+            int month;
+            int day;
             if (dateNumber.Length == 3)
             {
                 month = int.Parse(dateNumber[0].ToString());
@@ -56,6 +56,13 @@ namespace PaletteResourcesExtractor
                 day = int.Parse(dateNumber.Substring(2, 2));
             }
 
+            if (month > 12)
+            {
+                month %= 12;
+                year++;
+            }
+            day = Math.Min(day, DateTime.DaysInMonth(year, month));
+                        
             return new DateTime(year, month, day);
         }
     }

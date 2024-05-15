@@ -1,19 +1,16 @@
 namespace DatabaseEntityFramework
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    extern alias DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class SqlExceptionResource
     {
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SqlExceptionAppointment_ExceptionId { get; set; }
 
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SqlResource_SqlResourceId { get; set; }

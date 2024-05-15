@@ -1,11 +1,9 @@
 namespace DatabaseEntityFramework
 {
+    extern alias DataAnnotations;
+
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-    using Telerik.Windows.Controls.ScheduleView;
 
     public partial class SqlAppointment
     {
@@ -16,13 +14,13 @@ namespace DatabaseEntityFramework
             SqlExceptionOccurrences = new HashSet<SqlExceptionOccurrence>();
         }
 
-        [Key]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.Key]
         public int SqlAppointmentId { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string Subject { get; set; }
 
-        [StringLength(500)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(500)]
         public string Body { get; set; }
 
         public DateTime Start { get; set; }
@@ -31,10 +29,10 @@ namespace DatabaseEntityFramework
 
         public bool IsAllDayEvent { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string RecurrencePattern { get; set; }
 
-        [StringLength(100)]
+        [DataAnnotations.System.ComponentModel.DataAnnotations.StringLength(100)]
         public string TimeZoneString { get; set; }
 
         public int Importance { get; set; }
