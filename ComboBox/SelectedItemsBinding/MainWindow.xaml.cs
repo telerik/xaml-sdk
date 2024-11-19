@@ -1,15 +1,13 @@
-﻿using SelectedItemsBinding;
-using System.Windows;
+﻿using System.Windows;
+using Telerik.Windows.Controls;
 
 namespace SelectedItemsBinding
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
+            StyleManager.ApplicationTheme = new Windows11Theme();
             InitializeComponent();
             this.DataContext = new AgencyViewModel();
         }

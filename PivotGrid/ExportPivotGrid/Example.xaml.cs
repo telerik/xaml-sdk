@@ -275,11 +275,7 @@ namespace ExportPivotGrid
             window.Header = "Print Preview";
             window.Height = 400;
             window.Width = 500;
-#if SILVERLIGHT
-            window.WindowStartupLocation = Telerik.Windows.Controls.WindowStartupLocation.CenterScreen;
-#else
             window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-#endif
             window.Show();
         }
 

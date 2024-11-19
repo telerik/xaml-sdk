@@ -5,11 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
-#if SILVERLIGHT
-using System.Windows.Controls;
-#else
 using Microsoft.Win32;
-#endif
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Telerik.Windows.Controls;

@@ -9,11 +9,7 @@ namespace GettingStarted
 {
     public partial class MainPage : UserControl
     {
-#if SILVERLIGHT
-        string imagePath = @"/GettingStarted;component/Images/RadRichTextBox_SL.png";
-#else
         string imagePath = @"/GettingStarted;component/Images/RadRichTextBox.png";
-#endif
 
         public MainPage()
         {

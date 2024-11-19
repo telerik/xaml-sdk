@@ -26,10 +26,8 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
         public FindReplaceDialog()
         {
             InitializeComponent();
-#if WPF
             this.btnFindNext.IsDefault = true;
             this.btnClose.IsCancel = true;
-#endif
         }
 
         public string TextToFind
@@ -156,7 +154,6 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
             targetLocation.X = point.X;
             targetLocation.Y = point.Y;
 
-#if WPF
             if (System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted)
             {
                 targetLocation = this.richTextBox.TransformToVisual(Application.Current.MainWindow).Transform(targetLocation);
@@ -165,9 +162,6 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
             {
                 targetLocation = this.richTextBox.PointToScreen(targetLocation);
             }
-#else
-            targetLocation = this.richTextBox.TransformToVisual(Application.Current.RootVisual).Transform(targetLocation);
-#endif
 
             Rect dialogRect = new Rect()
             {
@@ -349,26 +343,6 @@ namespace Telerik.Windows.Controls.RichTextBoxUI.Dialogs
                 Owner = this
             });
         }
-
-#if SILVERLIGHT
-        protected override void OnKeyDown(KeyEventArgs e)
-        {
-            base.OnKeyDown(e);
-
-            if (!e.Handled)
-            {
-                if (e.Key == Key.Escape)
-                {
-                    this.Close();
-                }
-                else if (e.Key == Key.Enter)
-                {
-                    this.FindNext();
-                }
-            }
-        }
-
-#endif
 
         protected override void OnClosed(WindowClosedEventArgs args)
         {

@@ -506,20 +506,10 @@ namespace CustomFontPropertiesDialog
             if (this.fontFamilyListBox.SelectedItem != null)
             {
                 this.fontFamilyTextBox.Text = this.fontFamilyListBox.SelectedItem.ToString();
-#if WPF
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
                     this.fontFamilyListBox.ScrollIntoView(this.fontFamilyListBox.SelectedItem);
                 }), Tuples.Windows.Threading.DispatcherPriority.Loaded);
-#else
-                Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    Dispatcher.BeginInvoke(new Action(() =>
-                    {
-                        this.fontFamilyListBox.ScrollIntoView(this.fontFamilyListBox.SelectedItem);
-                    }));
-                }));
-#endif
             }
             else
             {

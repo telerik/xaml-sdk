@@ -15,9 +15,7 @@ using Edge = Telerik.Windows.Diagrams.Core.Edge<object, object>;
 using Graph = Telerik.Windows.Diagrams.Core.GraphBase<Telerik.Windows.Diagrams.Core.Node<object, object>, Telerik.Windows.Diagrams.Core.Edge<object, object>>;
 using Node = Telerik.Windows.Diagrams.Core.Node<object, object>;
 using Orientation = Telerik.Windows.Diagrams.Core.Orientation;
-#if SILVERLIGHT
-using SelectionChangedEventArgs = Telerik.Windows.Controls.SelectionChangedEventArgs;
-#endif
+
 namespace Diagrams.Layout
 {
     /// <summary>
@@ -262,7 +260,7 @@ namespace Diagrams.Layout
         {
             this.Layout();
         }
-#if WPF
+
 		/// <summary>
 		/// Colorizes the specified graph by means of a traversal.
 		/// </summary>
@@ -300,7 +298,7 @@ namespace Diagrams.Layout
 					shape.Content = i;
 				}, center);
 		}
-#endif
+
         #region Samples
 
         /// <summary>

@@ -1,17 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
 using System.IO;
-using System.Linq;
-#if SILVERLIGHT
-using System.Windows.Controls;
-#endif
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands;
 using Telerik.Windows.Documents.Fixed;
-using Telerik.Windows.Documents.Fixed.FormatProviders;
-#if WPF
-using Microsoft.Win32;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import;
-#endif
 
 namespace PdfViewerCustomSaveCommand.Commands
 {
@@ -41,11 +33,7 @@ namespace PdfViewerCustomSaveCommand.Commands
             dialog.Filter = "PDF Files (*.pdf)|*.pdf";
             if (dialog.ShowDialog() == true)
             {
-#if SILVERLIGHT
-                FileStream str = dialog.File.OpenRead();
-#elif WPF
                 Stream str = dialog.OpenFile();
-#endif              
                 str.CopyTo(stream);
                 str.Flush();
                 str.Seek(0, SeekOrigin.Begin);

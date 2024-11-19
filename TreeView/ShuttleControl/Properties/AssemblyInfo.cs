@@ -20,7 +20,6 @@ using System.Windows;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-#if WPF
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
     //(used if a resource is not found in the page, 
@@ -29,7 +28,7 @@ using System.Windows;
     //(used if a resource is not found in the page, 
     // app, or any theme specific resource dictionaries)
 )]
-#endif
+
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("538e4dcb-d9ba-4c29-8d5b-3ea521fa5aab")]
 

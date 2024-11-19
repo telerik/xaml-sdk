@@ -21,12 +21,8 @@ namespace CustomInsertHyperlinkDialog
         private bool callbackCalled;
         private Action<string, HyperlinkInfo> insertHyperlinkCallback;
         private Action cancelCallback;
-
-#if SILVERLIGHT
-        private string hyperlinkPattern = @"^(((http|https|ftp)://)|(mailto:)|(onenote:))(\S+)$";
-#else
         private string hyperlinkPattern = @"^(((http|https|ftp|file)://)|(mailto:)|(\\)|(onenote:)|(www\.))(\S+)$";
-#endif
+
         public string HyperlinkPattern
         {
             get { return hyperlinkPattern; }
@@ -56,12 +52,10 @@ namespace CustomInsertHyperlinkDialog
                 }
             };
 
-#if WPF
             this.buttonOK.IsDefault = true;
             this.buttonCancel.IsCancel = true;
-#endif
         }
-#if WPF
+
         /// <summary>
         /// Shows the dialog for inserting hyperlinks.
         /// </summary>
@@ -75,7 +69,6 @@ namespace CustomInsertHyperlinkDialog
         {
             this.ShowDialogInternal(text, currentHyperlinkInfo, bookmarkNames, insertHyperlinkCallback, cancelCallback, owner);
         }
-#else
 
         /// <summary>
         /// Shows the dialog for inserting hyperlinks.
@@ -89,7 +82,7 @@ namespace CustomInsertHyperlinkDialog
         {
             this.ShowDialogInternal(text, currentHyperlinkInfo, bookmarkNames, insertHyperlinkCallback, cancelCallback, null);
         }
-#endif
+
         private void ShowDialogInternal(string text, HyperlinkInfo currentHyperlinkInfo, IEnumerable<string> bookmarkNames, Action<string, HyperlinkInfo> insertHyperlinkCallback, Action cancelCallback, RadRichTextBox owner)
         {
             this.ResetDialog();
@@ -271,24 +264,5 @@ namespace CustomInsertHyperlinkDialog
         {
             this.ChangeUriUIVisibility(rbBookmark.IsChecked.Value);
         }
-
-#if SILVERLIGHT
-        protected override void OnKeyDown(KeyEventArgs e)
-        {
-            base.OnKeyDown(e);
-
-            if (!e.Handled)
-            {
-                if (e.Key == Key.Escape)
-                {
-                    this.Close();
-                }
-                else if (e.Key == Key.Enter)
-                {
-                    this.OnOkClicked();
-                }
-            }
-        }
-#endif
     }
 }

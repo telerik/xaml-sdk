@@ -127,13 +127,8 @@ namespace CustomWatermarkTool
             ofd.FilterIndex = 3;
             if (ofd.ShowDialog() == true)
             {
-
-#if SILVERLIGHT
-                Stream fileStream = ofd.File.OpenRead();
-#else
-                Stream fileStream = ofd.OpenFile();
-#endif
                 // Open the selected file to read.
+                Stream fileStream = ofd.OpenFile();
                 using (fileStream)
                 {
                     this.watermarkBitmap = new RadBitmap(fileStream);

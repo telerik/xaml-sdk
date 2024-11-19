@@ -138,9 +138,7 @@ namespace DataValidation
                 if (this.selectedEmployee != value)
                 {
                     this.selectedEmployee = value;
-#if !SILVERLIGHT
                     Mouse.Capture(null);
-#endif
                     this.OnPropertyChanged(() => this.SelectedEmployee);
                     this.OnPropertyChanged(() => this.EmployeeSearchText);
                 }
@@ -203,12 +201,7 @@ namespace DataValidation
 
         private void OnSelectionChangedExecute(object obj)
         {
- #if SILVERLIGHT
-            var teamsCollection = obj as Telerik.Windows.Controls.SelectionChangedEventArgs;
- #else
             var teamsCollection = obj as SelectionChangedEventArgs;
- #endif
-
             if (teamsCollection.AddedItems.Count > 0)
             {
                 var addedTeam = teamsCollection.AddedItems[0] as Team;
@@ -235,11 +228,8 @@ namespace DataValidation
                     this.SelectedEmployee = null;
                 }
 
-                this.ForceTextSearchValidation();
-                
- #if !SILVERLIGHT
+                this.ForceTextSearchValidation(); 
                 Mouse.Capture(null);
- #endif
             }
         }
 

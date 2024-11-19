@@ -2,11 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-#if SILVERLIGHT
-using Telerik.Windows.Input;
-#else
 using System.Windows.Input;
-#endif
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.RichTextBoxUI.Dialogs;
 using Telerik.Windows.Documents.TextSearch;
@@ -140,31 +136,11 @@ namespace CustomSpellCheckingDialog
             this.Close();
         }
 
-#if SILVERLIGHT
-        private void ListBoxItemTemplateTextBlock_Loaded(object sender, RoutedEventArgs e)
-        {
-            Mouse.AddMouseDownHandler((TextBlock)sender, this.SuggestionsListBoxItem_MouseDownHandler, true);
-        }
-
-        private void ListBoxItemTemplateTextBlock_Unloaded(object sender, RoutedEventArgs e)
-        {
-            Mouse.RemoveMouseDownHandler((TextBlock)sender, this.SuggestionsListBoxItem_MouseDownHandler);
-        }
-
-        private void SuggestionsListBoxItem_MouseDownHandler(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left && e.ClickCount == 2)
-            {
-                this.ChangeWordWithSuggestion(((TextBlock)sender).Text);
-            }
-        }
-#else
         private void SuggestionsListBoxItem_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             string suggestion = (string)((ListBoxItem)sender).Content;
             this.ChangeWordWithSuggestion(suggestion);
         }
-#endif
 
         private void SuggestionsListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {

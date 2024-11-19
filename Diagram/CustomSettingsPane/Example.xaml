@@ -46,11 +46,11 @@
 
                 </DataTemplate>
                 <!--  ToolboxGroupTemplate  -->
-                <local:HierarchicalDataTemplate x:Key="ToolboxGroupTemplate"
+                <HierarchicalDataTemplate x:Key="ToolboxGroupTemplate"
                                   ItemsSource="{Binding Shapes}"
                                   ItemTemplate="{StaticResource ToolboxItemTemplate}">
                     <TextBlock Text="{Binding Header}" />
-                </local:HierarchicalDataTemplate>
+                </HierarchicalDataTemplate>
 
                 <Style TargetType="telerik:RadDiagramToolboxGroup">
                     <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />

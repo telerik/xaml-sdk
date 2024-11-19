@@ -215,12 +215,7 @@ namespace OrgChart.ViewModels
 
 		private void PopulateWithData()
 		{
-			string projectName;
-#if WPF
-			projectName = "OrgChart_WPF";
-#else
-			projectName = "OrgChart_SL";
-#endif
+			string projectName = "OrgChart_WPF";
 			var stream = Application.GetResourceStream(new Uri("/" + projectName + ";component/XmlSource/Organization.xml", UriKind.RelativeOrAbsolute));
 			XElement dataXml = XElement.Load(stream.Stream);
 

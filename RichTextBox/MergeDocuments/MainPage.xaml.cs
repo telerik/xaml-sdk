@@ -33,27 +33,13 @@ namespace MergeDocuments
 
             if (ofd.ShowDialog() == true)
             {
-                string extension;
-#if SILVERLIGHT
-                extension = ofd.File.Extension.ToLower();
-#else
-                extension = Path.GetExtension(ofd.SafeFileName).ToLower();
-#endif
-
+                string extension = Path.GetExtension(ofd.SafeFileName).ToLower();
                 IDocumentFormatProvider provider = DocumentFormatProvidersManager.GetProviderByExtension(extension);
-
-                Stream stream;
-#if SILVERLIGHT
-                stream = ofd.File.OpenRead();
-#else
-                stream = ofd.OpenFile();
-#endif
-                using (stream)
+                using (Stream stream = ofd.OpenFile())
                 {
                     document = provider.Import(stream);
                 }
             }
-
             return document;
         }
 

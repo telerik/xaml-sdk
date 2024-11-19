@@ -79,7 +79,6 @@ namespace SimulateWatermark
 
         private void FillInputBindingsCollection()
         {
-#if WPF
             this.radRichTextBox.RegisteredApplicationCommands.Clear();
             this.radRichTextBox.RegisteredApplicationCommands.Add(ApplicationCommands.Cut);
             this.radRichTextBox.RegisteredApplicationCommands.Add(ApplicationCommands.Copy);
@@ -87,18 +86,8 @@ namespace SimulateWatermark
             this.radRichTextBox.RegisteredApplicationCommands.Add(ApplicationCommands.SelectAll);
             this.radRichTextBox.RegisteredApplicationCommands.Add(ApplicationCommands.Undo);
             this.radRichTextBox.RegisteredApplicationCommands.Add(ApplicationCommands.Redo);
-#endif
 
             RadRichTextBox.DefaultInputBindings.Clear();
-
-#if SILVERLIGHT
-            this.RegisterCommand(RichTextBoxCommands.Cut, Key.X, ModifierKeys.Control);
-            this.RegisterCommand(RichTextBoxCommands.Copy, Key.C, ModifierKeys.Control);
-            this.RegisterCommand(RichTextBoxCommands.Paste, Key.V, ModifierKeys.Control);
-            this.RegisterCommand(RichTextBoxCommands.SelectAll, Key.A, ModifierKeys.Control);
-            this.RegisterCommand(RichTextBoxCommands.Undo, Key.Z, ModifierKeys.Control);
-            this.RegisterCommand(RichTextBoxCommands.Redo, Key.Y, ModifierKeys.Control);
-#endif
 
             this.RegisterCommand(RichTextBoxCommands.InsertText, Key.Tab, ModifierKeys.Control, "\t");
             this.RegisterCommand(RichTextBoxCommands.Delete, Key.Delete, ModifierKeys.None, false);

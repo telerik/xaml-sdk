@@ -19,12 +19,8 @@ namespace ShellPrism
         protected override void InitializeShell()
         {
             base.InitializeShell();
-#if WPF
             Application.Current.MainWindow = this.Shell as Window;
             Application.Current.MainWindow.Show();
-#else
-            Application.Current.RootVisual = (UIElement)this.Shell;
-#endif
         }
 
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()

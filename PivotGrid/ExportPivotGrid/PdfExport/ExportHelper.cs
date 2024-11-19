@@ -26,21 +26,12 @@ namespace ExportPivotGrid
             renderer.AddRenderer(new BorderRenderer());
             renderer.AddRenderer(new RectangleRenderer());
             renderer.AddRenderer(new LineRenderer());
-#if WPF
             renderer.AddRenderer(new ShapeRenderer());
             renderer.AddRenderer(new FrameworkElementRenderer(
                 typeof(ContentPresenter), 
                 typeof(Control), 
                 typeof(ItemsPresenter),
                 typeof(System.Windows.Documents.AdornerLayer)));
-#elif SILVERLIGHT
-            renderer.AddRenderer(new PathRenderer());
-            renderer.AddRenderer(new FrameworkElementRenderer(
-                typeof(ContentPresenter),
-                typeof(Control),
-                typeof(ItemsPresenter)));
-#endif
-
         }
     }
 }

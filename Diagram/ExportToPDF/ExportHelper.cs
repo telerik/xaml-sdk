@@ -152,14 +152,13 @@ namespace ExportToPDF
 
             var pathGeometry = shape.Geometry as PathGeometry;
             var transformGroup = new TransformGroup();
-#if WPF
+
             if (pathGeometry == null)
             {
                 var streamGeometry = shape.Geometry as StreamGeometry;
                 if (streamGeometry != null)
                     pathGeometry = streamGeometry.AsPathGeometry();
             }
-#endif
 
             var geometrySize = shape.Geometry.Bounds.ToSize();
             if (IsValidSize(geometrySize) && (geometrySize.Width != bounds.Width || geometrySize.Width != bounds.Width))
@@ -213,11 +212,7 @@ namespace ExportToPDF
         private static void ExportGeometry(FixedContentEditor editor, FixedContentEditor filledEditor, Geometry geometry, bool isConnection = false)
         {
             // We need two editors because there might be filled and not filled figures.
-#if WPF
             var pathGeometry = geometry as PathGeometry;
-#else
-            var pathGeometry = GeometryParser.GetGeometry(geometry.ToString()) as PathGeometry;
-#endif
             if (pathGeometry != null)
             {
                 var path = new G.PathGeometry();
@@ -291,20 +286,7 @@ namespace ExportToPDF
                             continue;
                         }
                     }
-#if SILVERLIGHT
-                    if (isConnection)
-                    {
-                        var realGeometry = geometry as PathGeometry;
-                        if (realGeometry != null && realGeometry.Figures.Count > i)
-                        {
-                            if (realGeometry.Figures[i].IsFilled)
-                                filledPath.Figures.Add(newFigure);
-                            else
-                                path.Figures.Add(newFigure);
-                            continue;
-                        }
-                    }
-#endif
+
                     if (figure.IsFilled)
                         filledPath.Figures.Add(newFigure);
                     else

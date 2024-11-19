@@ -23,7 +23,6 @@ using System.Windows;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("c6a2c83e-3f0a-4aa9-9d0c-3976ff20c0fa")]
 
-#if WPF
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
     //(used if a resource is not found in the page, 
@@ -32,7 +31,6 @@ using System.Windows;
     //(used if a resource is not found in the page, 
     // app, or any theme specific resource dictionaries)
 )]
-#endif
 
 // Version information for an assembly consists of the following four values:
 //
