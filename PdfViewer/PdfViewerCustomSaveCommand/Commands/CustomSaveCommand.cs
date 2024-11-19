@@ -1,14 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
 using System.IO;
-using System.Linq;
-#if SILVERLIGHT
-using System.Windows.Controls;
-#endif
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands;
-#if WPF
-using Microsoft.Win32;
-#endif
 
 namespace PdfViewerCustomSaveCommand.Commands
 {

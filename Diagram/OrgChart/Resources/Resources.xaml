@@ -646,12 +646,12 @@
         <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
     </Style>
 
-    <common:HierarchicalDataTemplate ItemsSource="{Binding Children}" x:Key="RadTreeViewItemTemplate">
+    <HierarchicalDataTemplate ItemsSource="{Binding Children}" x:Key="RadTreeViewItemTemplate">
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="{Binding Branch}" Margin="0 0 3 0" />
             <TextBlock Text=":" />
             <TextBlock Text="{Binding FirstName}" Margin="3 0 0 0" />
             <TextBlock Text="{Binding LastName}" Margin="5 0 0 0" />
         </StackPanel>
-    </common:HierarchicalDataTemplate>
+    </HierarchicalDataTemplate>
 </ResourceDictionary>

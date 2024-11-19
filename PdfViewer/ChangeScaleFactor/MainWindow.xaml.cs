@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace ChangeScaleFactor
 {
@@ -17,7 +15,7 @@ namespace ChangeScaleFactor
         {
             this.viewModel = new ViewModel(DefaultInitialScaleFactor);
             InitializeComponent();
-            pdfViewer.DocumentChanged += pdfViewer_DocumentChanged;
+            this.pdfViewer.DocumentChanged += this.OnDocumentChanged;
         } 
 
         public ViewModel ViewModel
@@ -28,9 +26,9 @@ namespace ChangeScaleFactor
             }
         } 
 
-        void pdfViewer_DocumentChanged(object sender, EventArgs e)
+        private void OnDocumentChanged(object sender, EventArgs e)
         {
-            pdfViewer.Commands.FixedDocumentViewer.ScaleFactor = this.ViewModel.InitialScaleFactor;    
+            this.pdfViewer.ScaleFactor = this.ViewModel.InitialScaleFactor;
         }
     }
 }

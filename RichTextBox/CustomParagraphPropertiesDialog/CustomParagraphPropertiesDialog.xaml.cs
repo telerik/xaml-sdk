@@ -14,10 +14,6 @@ using Telerik.Windows.Documents.UI.Extensibility;
 using Telerik.Windows.Controls.RichTextBoxUI;
 using Telerik.Windows.Controls.RichTextBoxUI.ColorPickers;
 
-#if SILVERLIGHT
-using SelectionChangedEventArgs = Telerik.Windows.Controls.SelectionChangedEventArgs;
-#endif
-
 namespace CustomParagraphPropertiesDialogDemo
 {
     /// <summary>
@@ -101,9 +97,6 @@ namespace CustomParagraphPropertiesDialogDemo
                 new Tuple<RadTextAlignment, string>(RadTextAlignment.Center, LocalizationManager.GetString("Documents_ParagraphPropertiesDialog_TextAlignment_Center")),
                 new Tuple<RadTextAlignment, string>(RadTextAlignment.Right, LocalizationManager.GetString("Documents_ParagraphPropertiesDialog_TextAlignment_Right")),
                 new Tuple<RadTextAlignment, string>(RadTextAlignment.Justify, LocalizationManager.GetString("Documents_ParagraphPropertiesDialog_TextAlignment_Justify")),
-#if SILVERLIGHT
-                new Tuple<RadTextAlignment, string>(RadTextAlignment.Distribute, LocalizationManager.GetString("Documents_ParagraphPropertiesDialog_TextAlignment_Distribute")),
-#endif
             };
 
             this.comboLineSpacing.ItemsSource = this.lineSpacingTypes.Values;

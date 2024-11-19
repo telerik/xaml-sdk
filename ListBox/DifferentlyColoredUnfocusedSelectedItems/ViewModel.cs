@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
 using Telerik.Windows.Controls;
 
 namespace DifferentlyColoredUnfocusedSelectedItems
@@ -8,38 +7,12 @@ namespace DifferentlyColoredUnfocusedSelectedItems
     {
         public ObservableCollection<string> CountryList { get; set; }
 
-#if SILVERLIGHT
-        public ICommand FocusChangedCommand { get; set; }
-
-        private bool isListBoxFocused;
-
-        public bool IsListBoxFocused
-        {
-            get
-            {
-                return this.isListBoxFocused;
-            }
-            set
-            {
-                if (this.isListBoxFocused != value)
-                {
-                    this.isListBoxFocused = value;
-                    this.OnPropertyChanged(() => this.IsListBoxFocused);
-                }
-            }
-        }
-#endif
-
         public ViewModel()
         {
-            this.InitializaCountryList();
-
-#if SILVERLIGHT
-            this.FocusChangedCommand = new DelegateCommand(OnFocusChangedCommandExecuted);
-#endif
+            this.InitializeCountryList();
         }
 
-        private void InitializaCountryList()
+        private void InitializeCountryList()
         {
             this.CountryList = new ObservableCollection<string>();
             this.CountryList.Add("Ukraine");
@@ -52,22 +25,5 @@ namespace DifferentlyColoredUnfocusedSelectedItems
             this.CountryList.Add("Croatia");
             this.CountryList.Add("Czech Republic");
         }
-
-#if SILVERLIGHT
-        private void OnFocusChangedCommandExecuted(object obj)
-        {
-            var eventName = obj.ToString();
-
-            switch (eventName)
-            {
-                case "GotFocus":
-                    this.IsListBoxFocused = true;
-                    break;
-                case "LostFocus":
-                    this.IsListBoxFocused = false;
-                    break;
-            }
-        }
-#endif
     }
 }

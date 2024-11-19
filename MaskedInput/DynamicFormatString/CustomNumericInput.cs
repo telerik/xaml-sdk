@@ -21,7 +21,6 @@ namespace DynamicFormatString
             this.ValueChanged += (s, e) => this.UpdateFormatString();
         }
 
-#if WPF
         protected override void OnPreviewKeyDown(KeyEventArgs e)
         {
             if (string.IsNullOrEmpty(this.Mask) && (e.Key == Key.Delete || e.Key == Key.Back))
@@ -36,31 +35,6 @@ namespace DynamicFormatString
 
             base.OnPreviewKeyDown(e);
         }
-#else
-        protected override void HandleDeleteKeyNoMask()
-        {
-            if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
-            {
-                this.PerformCustomDigitDelete();
-            }
-            else
-            {
-                base.HandleDeleteKeyNoMask();
-            }
-        }
-
-        protected override void HandleBackKeyNoMask()
-        {
-            if (this.SelectionStart > this.Text.IndexOf(this.Culture.NumberFormat.NumberDecimalSeparator))
-            {
-                this.PerformCustomDigitDelete();
-            }
-            else
-            {
-                base.HandleBackKeyNoMask();
-            }
-        }
-#endif
 
         protected override void OnKeyDown(KeyEventArgs e)
         {

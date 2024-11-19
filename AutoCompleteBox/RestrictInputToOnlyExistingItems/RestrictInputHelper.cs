@@ -47,115 +47,91 @@ namespace RestrictInputToOnlyExistingItems
 
         private static void OnKeyDown(object sender, KeyEventArgs e)
         {
-#if SILVERLIGHT
-            if(Application.Current.HasElevatedPermissions)
+            var autoComplete = sender as RadAutoCompleteBox;
+
+            var watermark = autoComplete.ChildrenOfType<TextBox>().FirstOrDefault();
+            if (watermark != null)
             {
-#endif
-                var autoComplete = sender as RadAutoCompleteBox;
+                countries = (autoComplete.DataContext as ViewModel).Countries;
+            }
 
-                var watermark = autoComplete.ChildrenOfType<TextBox>().FirstOrDefault();
-                if (watermark != null)
-                {
-                    countries = (autoComplete.DataContext as ViewModel).Countries;
-                }
+            var textSearchMode = autoComplete.TextSearchMode;
+            selectedItems = new ObservableCollection<Country>(autoComplete.SelectedItems.Cast<Country>());
 
-                var textSearchMode = autoComplete.TextSearchMode;
-                selectedItems = new ObservableCollection<Country>(autoComplete.SelectedItems.Cast<Country>());
-#if SILVERLIGHT
-
-                if (!(e.Key == Key.Shift || e.Key == Key.Space || e.Key == Key.Tab || e.Key == Key.Up
-                   || e.Key == Key.Down || e.Key == Key.Left || e.Key == Key.Right))
-#else
             if (!(e.Key == Key.LeftShift || e.Key == Key.RightShift || e.Key == Key.Space || e.Key == Key.Tab || e.Key == Key.Up
                 || e.Key == Key.Down || e.Key == Key.Left || e.Key == Key.Right || e.Key == Key.Capital || e.Key == Key.Return))
-#endif
+            {
+                var pressedKey = (char)KeyInterop.VirtualKeyFromKey(e.Key);
+                var text = watermark.Text;
+                var caretIndex = watermark.SelectionStart;
+                bool CapsLock = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
 
+                if (watermark.SelectionLength != 0)
                 {
-#if SILVERLIGHT
-                    var pressedKey = (char)e.PlatformKeyCode;
-#else
-                    var pressedKey = (char)KeyInterop.VirtualKeyFromKey(e.Key);
-#endif
-                    var text = watermark.Text;
-                    var caretIndex = watermark.SelectionStart;
-                    bool CapsLock = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
+                    text = text.Substring(0, watermark.Text.Length - watermark.SelectionLength);
+                }
 
-                    if (watermark.SelectionLength != 0)
-                    {
-                        text = text.Substring(0, watermark.Text.Length - watermark.SelectionLength);
-                    }
-
-                    switch (textSearchMode)
-                    {
-                        case TextSearchMode.Contains:
-                            e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, null);
-                            break;
-                        case TextSearchMode.ContainsCaseSensitive:
-                            if (CapsLock && Keyboard.Modifiers == ModifierKeys.Shift)
+                switch (textSearchMode)
+                {
+                    case TextSearchMode.Contains:
+                        e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, null);
+                        break;
+                    case TextSearchMode.ContainsCaseSensitive:
+                        if (CapsLock && Keyboard.Modifiers == ModifierKeys.Shift)
+                        {
+                            e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, false);
+                        }
+                        else
+                        {
+                            if (CapsLock)
                             {
-                                e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, false);
+                                e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, true);
                             }
                             else
                             {
-                                if (CapsLock)
+                                if (Keyboard.Modifiers == ModifierKeys.Shift)
                                 {
                                     e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, true);
                                 }
                                 else
                                 {
-                                    if (Keyboard.Modifiers == ModifierKeys.Shift)
-                                    {
-                                        e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, true);
-                                    }
-                                    else
-                                    {
-                                        e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, false);
-                                    }
+                                    e.Handled = IsEnteredTextContainedInsideExistingItems(text, caretIndex, pressedKey, false);
                                 }
                             }
+                        }
 
-                            break;
-                        case TextSearchMode.StartsWith:
-                            e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, null);
-                            break;
-                        case TextSearchMode.StartsWithCaseSensitive:
-                            CapsLock = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
+                        break;
+                    case TextSearchMode.StartsWith:
+                        e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, null);
+                        break;
+                    case TextSearchMode.StartsWithCaseSensitive:
+                        CapsLock = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
 
-                            if (CapsLock && Keyboard.Modifiers == ModifierKeys.Shift)
+                        if (CapsLock && Keyboard.Modifiers == ModifierKeys.Shift)
+                        {
+                            e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, false);
+                        }
+                        else
+                        {
+                            if (CapsLock)
                             {
-                                e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, false);
+                                e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, true);
                             }
                             else
                             {
-                                if (CapsLock)
+                                if (Keyboard.Modifiers == ModifierKeys.Shift)
                                 {
                                     e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, true);
                                 }
                                 else
                                 {
-                                    if (Keyboard.Modifiers == ModifierKeys.Shift)
-                                    {
-                                        e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, true);
-                                    }
-                                    else
-                                    {
-                                        e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, false);
-                                    }
+                                    e.Handled = IsEnteredTextStartsWithExistingItems(text, caretIndex, pressedKey, false);
                                 }
                             }
-
-                            break;
-                    }
+                        }
+                        break;
                 }
-#if SILVERLIGHT
             }
-            else
-            {
-                var autoComplete = sender as RadAutoCompleteBox;
-                autoComplete.IsEnabled = false;
-                MessageBox.Show("You need to enable trusted applications to run inside the browser! Please, check the description of the sample for some more detailed inforamtion how to achieve this.");
-            }
-#endif
         }
 
         private static bool IsEnteredTextContainedInsideExistingItems(string text, int caretIndex, char pressedKey, bool? isUpper)

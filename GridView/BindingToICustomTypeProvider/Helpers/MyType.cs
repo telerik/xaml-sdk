@@ -50,10 +50,7 @@ namespace BindingToICustomTypeProvider.Helpers
 
         protected override ConstructorInfo GetConstructorImpl(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)
         {
-#if WPF 
-                return baseType.GetConstructor(bindingAttr, binder, callConvention, types, modifiers);
-#endif
-            throw new NotImplementedException();
+            return baseType.GetConstructor(bindingAttr, binder, callConvention, types, modifiers);
         }
 
         public override ConstructorInfo[] GetConstructors(BindingFlags bindingAttr)
@@ -233,7 +230,7 @@ namespace BindingToICustomTypeProvider.Helpers
             get { return baseType.GenericParameterPosition; }
         }
 
-#if WPF
+
         public override Type[] GenericTypeArguments
         {
             get { return baseType.GenericTypeArguments; }
@@ -318,7 +315,6 @@ namespace BindingToICustomTypeProvider.Helpers
         {
             get { return baseType.StructLayoutAttribute; }
         }
-#endif
 
         public override EventInfo[] GetEvents()
         {

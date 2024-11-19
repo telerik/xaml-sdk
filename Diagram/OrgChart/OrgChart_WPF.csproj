@@ -32,7 +32,6 @@
      
      
      
-    
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -94,7 +93,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Common\HierarchicalDataTemplate.cs" />
     <Compile Include="Common\PercentageConverter.cs" />
     <Compile Include="Converters\ItemDisplayModeToFluidStateConverter.cs" />
     <Compile Include="Converters\LayoutTypeToRotateAngleConverter.cs" />

@@ -22,11 +22,7 @@ namespace ShuttleControl
 
         private void OnSelectionChanged(object parameter)
         {
-#if SILVERLIGHT
-            var args = (Telerik.Windows.Controls.SelectionChangedEventArgs)parameter;
-#else
             var args = (SelectionChangedEventArgs)parameter;
-#endif
             if (args.RemovedItems.Count > 0)
             {
                 foreach (var oldItem in args.RemovedItems)

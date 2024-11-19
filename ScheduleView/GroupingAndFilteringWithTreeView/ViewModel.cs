@@ -120,10 +120,6 @@ namespace GroupingAndFilteringWithTreeView
 
         private void OnExpandedExecute(object param)
         {
-#if SILVERLIGHT
-            Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-#endif
             this.UpdateGroupFilter();
             if (this.Airlines.Any(a => a.IsExpanded == true))
             {
@@ -134,27 +130,16 @@ namespace GroupingAndFilteringWithTreeView
             {
                 this.AddGroupDescription("Processes");
             }
-#if SILVERLIGHT
-            });
-#endif
         }
 
         private void OnCollapsedExecute(object param)
         {
-#if SILVERLIGHT
-            Deployment.Current.Dispatcher.BeginInvoke(() =>
-            {
-#endif
             this.UpdateGroupFilter();
-
             if (this.Airlines.All(a => a.IsExpanded != true))
             {
                 this.RemoveGroupDescription("Processes");
                 this.RemoveGroupDescription("Segregations");
             }
-#if SILVERLIGHT
-            });       
-#endif
         }
 
         private void RemoveGroupDescription(string groupName)

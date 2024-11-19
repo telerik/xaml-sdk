@@ -198,7 +198,7 @@
                             <telerik:RadRibbonToggleButton telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ToggleItalicCommand}" telerik:ScreenTip.Description="Italicize the selected text." telerik:ScreenTip.Title="Italic" Size="Small" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/italic.png" />
                             <telerik:RadRibbonSplitButton IsToggle="True" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ToggleUnderlineCommand}" telerik:ScreenTip.Description="Underline the selected text." telerik:ScreenTip.Title="Underline" SmallImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/16/underline.png">
                                 <telerik:RadRibbonSplitButton.DropDownContent>
-                                    <telerik:RadGallery ItemHeight="26" ItemWidth="156" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeUnderlineDecorationCommand}" ViewportHeight="210" ViewportWidth="157">
+                                    <telerik:RadGallery ItemHeight="26" ItemWidth="156" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeUnderlineDecorationCommand}" Height="210" ViewportWidth="157">
                                         <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/underline1.png" Tag="Line" />
                                         <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/underline2.png" Tag="DoubleLine" />
                                         <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/underline3.png" Tag="ThickLine" />
@@ -235,7 +235,7 @@
                                         <ScrollViewer MaxHeight="565">
                                             <StackPanel>
                                                 <telerik:RadGroupHeader Content="List Library" />
-                                                <telerik:RadGallery ItemHeight="88" ItemWidth="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeListStyleCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ViewportHeight="176" ViewportWidth="266">
+                                                <telerik:RadGallery ItemHeight="88" ItemWidth="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeListStyleCommand}" ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="176" ViewportWidth="266">
                                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListNone.png" Tag="None" />
                                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListBulleted.png" Tag="Bulleted" />
                                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListNumbered.png" Tag="Numbered" />
@@ -611,7 +611,7 @@
                     </telerik:RadRibbonDropDownButton>
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding Path=ChangePageMarginsCommand}" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageMargin.png" telerik:ScreenTip.Description="Select the margin sizes for the current section." telerik:ScreenTip.Title="Margins" Size="Large" Text="Margins">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
-                            <telerik:RadGallery ItemHeight="54" ItemWidth="114" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangePageMarginsCommand}" ViewportHeight="270" ViewportWidth="115">
+                            <telerik:RadGallery ItemHeight="54" ItemWidth="114" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangePageMarginsCommand}" Height="270" ViewportWidth="115">
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Normal">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/PageMarginNormal.png" Stretch="None" />
@@ -647,7 +647,7 @@
                     </telerik:RadRibbonDropDownButton>
                     <telerik:RadRibbonDropDownButton CollapseToMedium="WhenGroupIsMedium" Command="{Binding Path=ChangePageOrientationCommand}" LargeImage="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientation.png" telerik:ScreenTip.Description="Switch the pages between portrait and landscape layouts." telerik:ScreenTip.Title="Page Orientation" Size="Large" Text="Orientation">
                         <telerik:RadRibbonDropDownButton.DropDownContent>
-                            <telerik:RadGallery ItemHeight="54" ItemWidth="109" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangePageOrientationCommand}" ViewportHeight="216" ViewportWidth="110">
+                            <telerik:RadGallery ItemHeight="54" ItemWidth="109" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangePageOrientationCommand}" Height="216" ViewportWidth="110">
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Portrait">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationPortrait.png" Stretch="None" />
@@ -784,7 +784,7 @@
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <StackPanel Orientation="Vertical">
                                 <telerik:RadGroupHeader Content="Predefined" />
-                                <telerik:RadGallery ItemHeight="100" ItemWidth="115" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeIntegratedWatermarkTypeCommand}" ViewportHeight="200" ViewportWidth="345">
+                                <telerik:RadGallery ItemHeight="100" ItemWidth="115" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding Path=ChangeIntegratedWatermarkTypeCommand}" Height="200" ViewportWidth="345">
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/WatermarkGallery/confidentialR.png" Tag="ConfidentialRotated" />
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/WatermarkGallery/confidential.png" Tag="Confidential" />
                                     <telerik:RadGalleryItem HorizontalContentAlignment="Left" Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/WatermarkGallery/doNotCopyR.png" Tag="DoNotCopyRotated" />

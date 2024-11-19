@@ -40,9 +40,7 @@ namespace PrintPreviewWithSpreadsheet
                 Width = 900,
                 Height = 600,
                 Header = "Print Preview",
-#if wpf
                 WindowStartupLocation = WindowStartupLocation.CenterScreen
-#endif
             };
         }
 

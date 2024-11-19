@@ -83,15 +83,10 @@ namespace OrgChart
 			this.viewModel.CurrentLayoutTypeChanged += (_, __) => this.LayoutOrgChart(false);
 		}
 
-		private void InvokeDispatchedLayout(bool shouldAautofit)
+		private void InvokeDispatchedLayout(bool shouldAutoFit)
 		{
-			Action action = new Action(() => this.LayoutOrgChart(shouldAautofit));
-
-#if WPF
+			Action action = new Action(() => this.LayoutOrgChart(shouldAutoFit));
 			this.Dispatcher.BeginInvoke(action, DispatcherPriority.Background);
-#else
-			this.Dispatcher.BeginInvoke(action);
-#endif
 		}
 
 		private void BindComboBoxes()

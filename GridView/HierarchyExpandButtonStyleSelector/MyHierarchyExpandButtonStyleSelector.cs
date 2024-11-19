@@ -1,14 +1,9 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace HierarchyExpandButtonStyleSelector
 {
-#if !SILVERLIGHT
-    public class MyHierarchyExpandButtonStyleSelector : System.Windows.Controls.StyleSelector
-#else
-	public class MyHierarchyExpandButtonStyleSelector : Telerik.Windows.Controls.StyleSelector
-#endif
+    public class MyHierarchyExpandButtonStyleSelector : StyleSelector
 	{
 		public override Style SelectStyle(object item, DependencyObject container)
 		{

@@ -88,25 +88,21 @@ namespace DiagramDesignToolBox
                         }
                     }
 
-#if WPF
                     Process.Start(saveFileDialog.FileName);
-#endif
                 }
             }
             catch (Exception exc)
             {
-#if WPF
                 if (exc is Win32Exception)
                 {
                     // error finding the file
                 }
+                else if (exc is ObjectDisposedException || exc is FileNotFoundException)
+                {
+                    //failed to start the default browser or HTML viewer					
+                }
                 else
-#endif
-                    if (exc is ObjectDisposedException || exc is FileNotFoundException)
-                    {
-                        //failed to start the default browser or HTML viewer					
-                    }
-                    else throw;
+                    throw;
             }
         }
 

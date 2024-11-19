@@ -4,7 +4,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Windows.Markup;
 using System.Windows.Media;
 using Telerik.Pivot.Core;
 using Telerik.Windows.Controls;
@@ -112,15 +111,6 @@ namespace CustomContextMenuBehavior
 
         private DataTemplate CreateDataTemplate(Color color)
         {
-#if SILVERLIGHT
-            return (DataTemplate)XamlReader.Load(
-                @"<DataTemplate xmlns=""http://schemas.microsoft.com/client/2007"">
-                     <Border BorderThickness=""1 1 0 0"" BorderBrush=""LightGray"" Background=""" + color.ToString() + @""">                        
-                         <TextBlock Text=""{Binding Data, Mode=OneWay}"" Margin=""4"" VerticalAlignment=""Center"" HorizontalAlignment=""Right""/>                           
-                     </Border> 
-                 </DataTemplate>"
-                 );
-#else
             FrameworkElementFactory border = new FrameworkElementFactory(typeof(Border));
             border.SetValue(Border.BorderThicknessProperty, new Thickness(1, 1, 0, 0));
             border.SetValue(Border.BorderBrushProperty, Brushes.LightGray);
@@ -134,9 +124,7 @@ namespace CustomContextMenuBehavior
             textBlock.SetValue(TextBlock.HorizontalAlignmentProperty, HorizontalAlignment.Right);
             border.AppendChild(textBlock);
             dataTemplate.Seal();
-
             return dataTemplate;
-#endif            
         }
     }
 }

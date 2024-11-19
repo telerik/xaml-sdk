@@ -95,7 +95,7 @@
                         <telerik:RadRibbonDropDownButton.DropDownContent>
                             <StackPanel>
                                 <telerik:RadGroupHeader Content="List Library" />
-                                <telerik:RadGallery ItemHeight="88" ItemWidth="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeListStyleCommand}" ViewportHeight="176" ViewportWidth="266">
+                                <telerik:RadGallery ItemHeight="88" ItemWidth="88" telerik:RadRichTextBoxRibbonUI.RichTextCommand="{Binding ChangeListStyleCommand}" Height="176" ViewportWidth="266">
                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListNone.png" Tag="None" />
                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListBulleted.png" Tag="Bulleted" />
                                     <telerik:RadGalleryItem Image="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/MultilevelListNumbered.png" Tag="Numbered" />

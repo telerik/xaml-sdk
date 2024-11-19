@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -9,13 +8,14 @@ using Telerik.Windows.Diagrams.Core;
 
 namespace CustomConnectors
 {
-	public partial class Example : UserControl
+    public partial class Example : UserControl
 	{
 		public Example()
 		{
             // Note: If your connectors are far outside the shape you'd better turn of the segmentation optimization:
             // DiagramConstants.SegmentStep = -1
 
+            DiagramConstants.AllowedSerializationTypes.Add(typeof(AbsoluteConnector));
 			InitializeComponent();
 			this.diagram.Loaded += new RoutedEventHandler(DiagramLoaded);
 		}

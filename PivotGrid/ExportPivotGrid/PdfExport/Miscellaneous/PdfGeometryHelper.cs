@@ -36,11 +36,6 @@ namespace ExportPivotGrid
 
         public static Telerik.Windows.Documents.Fixed.Model.Graphics.GeometryBase ConvertGeometry(Geometry geometry)
         {
-#if SILVERLIGHT
-            var cloner = new Telerik.Windows.Controls.GeometryCloneConverter();
-            geometry = (Geometry)cloner.Convert(geometry, null, null, null);
-#endif
-
             PathGeometry pathGeometry = geometry as PathGeometry;
             if (pathGeometry != null)
             {
@@ -59,13 +54,11 @@ namespace ExportPivotGrid
                 return ConvertEllipseGeometry(ellipseGeometry);
             }
 
-#if WPF
             StreamGeometry streamGeometry = geometry as StreamGeometry;
             if (streamGeometry != null)
             {
                 return ConvertStreamGeometry(streamGeometry);
             }
-#endif
 
             return null;
         }
@@ -83,13 +76,11 @@ namespace ExportPivotGrid
             return pdfPathGeometry;
         }
 
-#if WPF
         public static Telerik.Windows.Documents.Fixed.Model.Graphics.PathGeometry ConvertStreamGeometry(StreamGeometry streamGeometry)
         {
             PathGeometry pathGeometry = streamGeometry.GetFlattenedPathGeometry();
             return ConvertPathGeometry(pathGeometry);
         }
-#endif
 
         public static Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry ConvertRectangleGeometry(RectangleGeometry rectangleGeometry)
         {

@@ -61,11 +61,7 @@ namespace ExportToPDF_SL
             {
                 DefaultExt = "pdf",
                 Filter = "Diagram files|*.pdf|All Files (*.*)|*.*",
-#if WPF
 				FileName = "Diagram.pdf"
-#else
-                DefaultFileName = "Diagram.pdf"
-#endif
             };
             if (dialog.ShowDialog() == true)
             {

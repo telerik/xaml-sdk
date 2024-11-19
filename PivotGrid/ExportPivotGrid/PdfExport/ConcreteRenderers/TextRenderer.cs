@@ -34,17 +34,10 @@ namespace ExportPivotGrid
 
         private static void SetFontFamily(Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily, System.Windows.FontWeight fontWeight)
         {
-#if WPF
             if (!drawingSurface.TextProperties.TrySetFont(fontFamily, new System.Windows.FontStyle(), fontWeight))
             {
                 throw new System.Exception("Unable to set font. Consider embedding the font.");
             }
-#elif SILVERLIGHT
-            
-            drawingSurface.TextProperties.Font = Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.TimesRoman;
-            
-            // To load a custom font, please see the RegisterAndExportPdfFonts sdk sample here https://github.com/telerik/xaml-sdk/tree/master/SpreadProcessing/RegisterAndExportPdfFonts      
-#endif
         }
     }
 }

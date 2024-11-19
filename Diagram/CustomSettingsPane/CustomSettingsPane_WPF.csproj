@@ -17,7 +17,6 @@
      
      
      
-    
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -90,7 +89,6 @@
     </Compile>
     <Compile Include="ViewModels\CustomGallery.cs" />
     <Compile Include="ViewModels\GraphSource.cs" />
-    <Compile Include="ViewModels\HierarchicalDataTemplate.cs" />
     <Compile Include="ViewModels\Link.cs" />
     <Compile Include="ViewModels\ShapeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

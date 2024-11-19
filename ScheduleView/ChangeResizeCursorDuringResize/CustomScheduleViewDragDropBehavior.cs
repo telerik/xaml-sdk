@@ -15,11 +15,7 @@ namespace ChangeResizeCursorAtRuntime
 
             if (duration <= new TimeSpan(0, 30, 0) || duration >= new TimeSpan(2, 0, 1))
             {
-#if !WPF
-                this.ResizeCursor = Cursors.Wait;
-#else
                 this.ResizeCursor = Cursors.No;
-#endif
                 return false;
             }
 
