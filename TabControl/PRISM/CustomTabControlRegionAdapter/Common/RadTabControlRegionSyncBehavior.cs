@@ -156,7 +156,7 @@ namespace CustomTabControlRegionAdapter.Infrastructure
 		}
 
 		/// <summary> 
-		/// Return the appropriate data context.  If the item is a FrameworkElement it cannot be a data context in Silverlight, so we use its data context. 
+		/// Return the appropriate data context.
 		/// Otherwise, we just us the item as the data context. 
 		/// </summary> 
 		private static object GetDataContext(object item)

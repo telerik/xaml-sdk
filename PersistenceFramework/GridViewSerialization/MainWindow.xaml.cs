@@ -25,6 +25,24 @@ namespace GridViewSerialization_WPF
 	public partial class MainWindow : Window
 	{
 		System.IO.Stream stream;
+        private PersistenceManager manager = new PersistenceManager()
+            .AllowDataAssembly()
+            .AllowCoreControls()
+            .AllowGridViewControls()
+            .AllowTypes(
+                typeof(ColumnProxy),
+                typeof(SortDescriptorProxy),
+                typeof(GroupDescriptorProxy),
+                typeof(FilterDescriptorProxy),
+                typeof(FilterSetting),
+                typeof(List<ColumnProxy>),
+                typeof(List<SortDescriptorProxy>),
+                typeof(List<GroupDescriptorProxy>),
+                typeof(List<FilterDescriptorProxy>),
+                typeof(List<FilterSetting>),
+                typeof(List<object>)
+            );
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -36,7 +54,6 @@ namespace GridViewSerialization_WPF
 
 		private void OnSave(object sender, System.Windows.RoutedEventArgs e)
 		{
-			PersistenceManager manager = new PersistenceManager();
 			this.stream = manager.Save(this.gridView);
 			this.EnsureLoadState();
 		}
@@ -44,7 +61,6 @@ namespace GridViewSerialization_WPF
 		private void OnLoad(object sender, System.Windows.RoutedEventArgs e)
 		{
 			this.stream.Position = 0L;
-			PersistenceManager manager = new PersistenceManager();
 			manager.Load(this.gridView, this.stream);
 			this.EnsureLoadState();
 		}

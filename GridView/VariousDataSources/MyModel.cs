@@ -124,8 +124,8 @@ namespace VariousDataSources
   </Product>
   <Product>
     <ID>3</ID>
-    <Name>Silverlight</Name>
-    <Url>http://www.telerik.com/products/silverlight.aspx</Url>
+    <Name>Blazor</Name>
+    <Url>https://www.telerik.com/blazor-ui</Url>
   </Product>
   <Product>
     <ID>4</ID>

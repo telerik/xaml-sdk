@@ -133,6 +133,7 @@
     <EmbeddedResource Include="RadRichTextBoxResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RadRichTextBoxResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <AppDesigner Include="Properties\" />
   </ItemGroup>

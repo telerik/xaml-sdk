@@ -2351,12 +2351,10 @@
     <value>Finished spell checking.</value>
   </data>
   <data name="Documents_RadRichTextBox_HtmlPrintPreview_Close" xml:space="preserve">
-    <value>Close </value>
-    <comment>Silverlight only</comment>
+    <value>Close </value>    
   </data>
   <data name="Documents_RadRichTextBox_HtmlPrintPreview_Print" xml:space="preserve">
-    <value>Print</value>
-    <comment>Silverlight only</comment>
+    <value>Print</value>    
   </data>
   <data name="Documents_RadRichTextBox_HyperlinkToolTipClick" xml:space="preserve">
     <value>Click</value>

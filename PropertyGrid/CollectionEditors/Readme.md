@@ -4,5 +4,4 @@ On the left side a ListBox generates its items based on CollectionEditor's sourc
 On the right side RadPropertyGrid is generated for editing each item.
 
 See also:
-WPF: http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/collectioneditor.html
-SL: http://docs.telerik.com/devtools/silverlight/controls/radpropertygrid/features/collectioneditor.html
+http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/collectioneditor.html

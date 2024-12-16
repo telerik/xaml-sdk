@@ -1,2 +1,2 @@
 ## Grid View
-Examples related to RadGridView for Silverlight and WPF
+Examples related to RadGridView for WPF

@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Persistence;
 
@@ -10,7 +14,44 @@ namespace NativeControls
     {
         private Draft selectedDraft;
         private ObservableCollection<Draft> drafts = new ObservableCollection<Draft>();
-        PersistenceManager manager = new PersistenceManager();
+        PersistenceManager manager = new PersistenceManager()
+                                        .AllowCoreControls()
+                                        .AllowInputControls()
+                                        .AllowTypes(new Type[]
+                                        {
+                                            typeof(UIElementCollection),
+                                            typeof(Grid),
+                                            typeof(ColumnDefinitionCollection),
+                                            typeof(ColumnDefinition),
+                                            typeof(RowDefinitionCollection),
+                                            typeof(RowDefinition),
+                                            typeof(StackPanel),
+                                            typeof(TextBlock),
+                                            typeof(TextBox),
+                                            typeof(GridLength),
+                                            typeof(DependencyObject),
+                                            typeof(InlineCollection),
+                                            typeof(Run),
+                                            typeof(Thickness),
+                                            typeof(ThicknessConverter),
+                                            typeof(Size),
+                                            typeof(SizeConverter),
+                                            typeof(LengthConverter),
+                                            typeof(ItemCollection),
+                                            typeof(CornerRadius),
+                                            typeof(System.Windows.CornerRadiusConverter),
+                                            typeof(FontWeight),
+                                            typeof(FontStyle),
+                                            typeof(SolidColorBrush),
+                                            typeof(Brush),
+                                            typeof(BrushConverter),
+                                            typeof(FontFamily),
+                                            typeof(FontSizeConverter),
+                                            typeof(ListBox),
+                                            typeof(Border),
+                                            typeof(UIElement),
+                                            typeof(NullableBoolConverter)
+                                        });
 
         public DelegateCommand SaveDraft { get; set; }
         public DelegateCommand LoadDraft { get; set; }

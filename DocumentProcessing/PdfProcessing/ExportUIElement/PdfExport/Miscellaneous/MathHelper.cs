@@ -33,7 +33,6 @@ namespace ExportUIElement
         {
             GeneralTransform transform = null;
 
-#if WPF
             Visual parent = VisualTreeHelper.GetParent(element) as Visual;
             if (parent != null)
             {
@@ -52,17 +51,6 @@ namespace ExportUIElement
                 }
                 transform = transformGroup;
             }
-#elif SILVERLIGHT
-            UIElement parent = VisualTreeHelper.GetParent(element) as UIElement;
-            if (parent != null)
-            {
-                transform = element.TransformToVisual(parent);
-            }
-            else
-            {
-                transform = element.RenderTransform;
-            }
-#endif
 
             return transform;
         }
@@ -103,16 +91,9 @@ namespace ExportUIElement
             figure.IsClosed = true;
 
             figure.StartPoint = topLeft;
-#if WPF
             figure.Segments.Add(new LineSegment(topRight, false));
             figure.Segments.Add(new LineSegment(bottomRight, false));
             figure.Segments.Add(new LineSegment(bottomLeft, false));
-#elif SILVERLIGHT
-            figure.Segments.Add(new LineSegment { Point = topRight });
-            figure.Segments.Add(new LineSegment { Point = bottomRight });
-            figure.Segments.Add(new LineSegment { Point = bottomLeft });
-
-#endif
             return path;
         }
 

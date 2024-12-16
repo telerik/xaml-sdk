@@ -158,10 +158,6 @@ namespace CreateDocumentWithImages
                 PngBitmapDecoder decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 BitmapSource source = decoder.Frames[0];
 
-                /* For Silverlight you can use the following code to create the source:
-                BitmapImage source = new BitmapImage();
-                source.SetSource(stream); */
-
                 byte[] rawData, rawAlpha;
                 GetRawDataFromRgbaSource(source, out rawData, out rawAlpha);
                 byte[] data = CompressDataWithDeflate(rawData);
@@ -176,10 +172,6 @@ namespace CreateDocumentWithImages
         {
             int[] pixels = new int[source.PixelWidth * source.PixelHeight];
             source.CopyPixels(pixels, source.PixelWidth * 4, 0);
-
-            /* For Silverlight you can use the following code to extract the pixels:
-             int[] pixels = new WriteableBitmap(source).Pixels;
-            */
 
             data = new byte[pixels.Length * 3];
             alpha = new byte[pixels.Length];
@@ -229,10 +221,6 @@ namespace CreateDocumentWithImages
                 PngBitmapDecoder decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 BitmapSource source = decoder.Frames[0];
 
-                /* For Silverlight use the following code to create the source:
-                BitmapImage source = new BitmapImage();
-                source.SetSource(stream); */
-
                 width = source.PixelWidth;
                 height = source.PixelHeight;
                 int stride = (width + 7) / 8;
@@ -256,41 +244,5 @@ namespace CreateDocumentWithImages
             }
         }
 #endif
-
-        /* Use the following method in Silverlight 
-        private static void CopyDualtonePixels(byte[] data, BitmapImage dualtoneImage)
-        {
-            int width = dualtoneImage.PixelWidth;
-            int height = dualtoneImage.PixelHeight;
-            int blackPixel = 255 << 24;
-
-            WriteableBitmap writeableBitmap = new WriteableBitmap(dualtoneImage);
-            int currentByte = 0;
-            int currentBit = 0;
-            int currentPixel = 0;
-
-            for (int row = 0; row < height; row++)
-            {
-                for (int column = 0; column < width; column++)
-                {
-                    if (currentBit > 7)
-                    {
-                        currentBit = 0;
-                        currentByte++;
-                    }
-
-                    if (writeableBitmap.Pixels[currentPixel] != blackPixel)
-                    {
-                        data[currentByte] = (byte)(data[currentByte] | (1 << (7 - currentBit)));
-                    }
-
-                    currentBit++;
-                    currentPixel++;
-                }
-
-                currentBit = 0;
-                currentByte++;
-            }
-        } */
     }
 }
