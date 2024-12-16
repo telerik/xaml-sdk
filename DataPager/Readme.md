@@ -1,2 +1,2 @@
 ## Data Pager
-Examples related to RadDataPager for Silverlight and WPF
+Examples related to RadDataPager for WPF

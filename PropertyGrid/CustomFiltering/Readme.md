@@ -4,4 +4,3 @@ This example demonstrates how to filter RadPropertyGrid by the values of its pro
 
 See also:
 WPF: http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/filtering.html
-SL: http://docs.telerik.com/devtools/silverlight/controls/radpropertygrid/features/filtering.html

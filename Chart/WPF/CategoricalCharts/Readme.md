@@ -1,2 +1,2 @@
 ## Categorical Charts
-With this feature, the enabled X axis can be used to plot not only values (e.g. number of sales, etc.), but also categories (e.g. months of the year, units, people, etc.). Using a Category axis, the Silverlight Chart treats data as a sequence of non-numerical text labels. The marker is placed according to the position of the category in the sequence. Data is provided per category.
+With this feature, the enabled X axis can be used to plot not only values (e.g. number of sales, etc.), but also categories (e.g. months of the year, units, people, etc.). Using a Category axis, the Chart treats data as a sequence of non-numerical text labels. The marker is placed according to the position of the category in the sequence. Data is provided per category.

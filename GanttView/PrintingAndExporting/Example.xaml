@@ -17,7 +17,7 @@
 		</Grid.ColumnDefinitions>
 
 		<StackPanel Width="300">
-			<TextBlock Text="This example demonstrates how to print the RadGanttView control's GridView and Timeline area for Silverlight and WPF." 
+			<TextBlock Text="This example demonstrates how to print the RadGanttView control's GridView and Timeline area for WPF." 
 					   Margin="20"
 					   FontWeight="Bold"
 					   TextWrapping="Wrap"/>

@@ -1,7 +1,6 @@
 ## Adjust Position Of PanelBarItems when PanelBar has no ScrollBar
 
-The example demonstrates an approach to customizing the RadPanelBarItems to include a ScrollBar when the RadPanelBar's
-vertical ScrollBar is Disabled.
+The example demonstrates an approach to customizing the RadPanelBarItems to include a ScrollBar when the RadPanelBar's vertical ScrollBar is Disabled.
 
 Triggers are used to set the proper ContentTemplate for the RadPanelBarItem, depending on the level they are on.
 

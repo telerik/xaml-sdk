@@ -19,7 +19,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="This project demonstrates how to implement a 'recurring' Task in the RadGanttView control for Silverlight and WPF. The task which has recurrences is displayed on the same row and the drag and drop of its 'recurrences' disabled."
+        <TextBlock Text="This project demonstrates how to implement a 'recurring' Task in the RadGanttView control for WPF. The task which has recurrences is displayed on the same row and the drag and drop of its 'recurrences' disabled."
                    TextWrapping="Wrap" 
 				   Margin="40"
 				   FontWeight="Bold"/>

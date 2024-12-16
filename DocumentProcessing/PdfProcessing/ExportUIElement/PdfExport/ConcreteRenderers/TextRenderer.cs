@@ -33,22 +33,11 @@ namespace ExportUIElement
         }
 
         private static void SetFontFamily(Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily)
-        {
-#if WPF
+        { 
             if (!drawingSurface.TextProperties.TrySetFont(fontFamily))
             {
                 throw new System.Exception("Unable to set font. Consider embedding the font.");
             }
-#elif SILVERLIGHT
-            if (fontFamily.Source == "Times New Roman")
-            {
-                drawingSurface.TextProperties.Font = Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.TimesRoman;
-            }
-            else
-            {
-                throw new System.Exception("Unable to set font. Please see the RegisterAndExportPdfFonts sdk sample here https://github.com/telerik/xaml-sdk/tree/master/SpreadProcessing/RegisterAndExportPdfFonts");
-            }
-#endif
         }
     }
 }

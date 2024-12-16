@@ -4,5 +4,4 @@ This example demonstrates how to extend the way RadPropertyGrid handles a partic
 Press Tab to navigate forward through RadPropertyGrid elements or pres Shift+Tab to navigate backwards.
 
 See also:
-WPF: http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/keyboard-support.html
-SL: http://docs.telerik.com/devtools/silverlight/controls/radpropertygrid/features/keyboard-support.html
+http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/keyboard-support.html

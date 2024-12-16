@@ -31,7 +31,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="This example demonstrates how to create a custom BoxesItemTemplate for RadAutoCompleteBox control in Silverlight and WPF."
+        <TextBlock Text="This example demonstrates how to create a custom BoxesItemTemplate for RadAutoCompleteBox control in WPF."
                    Grid.Row="0"
                    FontSize="16"
                    TextWrapping="Wrap"

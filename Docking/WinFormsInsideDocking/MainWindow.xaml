@@ -5,13 +5,10 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:local="clr-namespace:WinFormsInsideDocking_WPF">
     <Grid>
-        <telerik:RadDocking x:Name="docking">
+        <telerik:RadDocking x:Name="docking" ToolWindowCreated="docking_ToolWindowCreated">
             <telerik:RadDocking.FlyoutBehavior>
                 <telerik:ClickFlyoutBehavior/>
             </telerik:RadDocking.FlyoutBehavior>
-            <telerik:RadDocking.GeneratedItemsFactory>
-                <local:NonTrasparentWindowsGeneratedItemsFactory />
-            </telerik:RadDocking.GeneratedItemsFactory>
             <telerik:RadSplitContainer>
                 <telerik:RadPaneGroup>
                     <telerik:RadPane Header="WinForms" x:Name="winFormsPane">

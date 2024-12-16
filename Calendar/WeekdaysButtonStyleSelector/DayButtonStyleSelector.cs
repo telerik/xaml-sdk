@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Calendar;
 
 namespace WeekdaysButtonStyleSelector
 {
-	public class DayButtonStyleSelector : StyleSelector
+    public class DayButtonStyleSelector : StyleSelector
 	{
 		public Style SpecialStyleWeekDays { get; set; }
 

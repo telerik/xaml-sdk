@@ -5,6 +5,9 @@ using Telerik.Windows.Persistence;
 using Telerik.Windows.Zip;
 using System.Windows;
 using System.Linq;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Documents;
 
 namespace ZipIntegration
 {
@@ -21,6 +24,32 @@ namespace ZipIntegration
         private DelegateCommand fontStyleCommand;
         private DelegateCommand textAlignmentCommand;
         private TextAlignment textAlignment = TextAlignment.Left;
+        private PersistenceManager manager = new PersistenceManager()
+                                            .AllowTypes(new Type[]
+                                            {
+                                                typeof(UIElementCollection),
+                                                typeof(Grid),
+                                                typeof(ColumnDefinitionCollection),
+                                                typeof(ColumnDefinition),
+                                                typeof(GridLength),
+                                                typeof(DependencyObject),
+                                                typeof(SolidColorBrush),
+                                                typeof(Brush),
+                                                typeof(BrushConverter),
+                                                typeof(Image),
+                                                typeof(LengthConverter),
+                                                typeof(Thickness),
+                                                typeof(ThicknessConverter),
+                                                typeof(Size),
+                                                typeof(SizeConverter),
+                                                typeof(TextBlock),
+                                                typeof(InlineCollection),
+                                                typeof(Run),
+                                                typeof(FontFamily),
+                                                typeof(FontStyle),
+                                                typeof(FontWeight),
+                                                typeof(FontSizeConverter),
+                                            });
 
         public long UncompressedSize
         {
@@ -151,9 +180,8 @@ namespace ZipIntegration
 
         public void Save(object parameter)
         {
-            PersistenceManager manager = new PersistenceManager();
             this.compressedStream = new MemoryStream();
-            this.rawStream = manager.Save(parameter);
+            this.rawStream = this.manager.Save(parameter);
             this.rawStream.Position = 0L;
 
             using (ZipArchive archive = ZipArchive.Create(this.compressedStream))
@@ -173,8 +201,7 @@ namespace ZipIntegration
             using (var zip = ZipArchive.Read(this.compressedStream))
             {
                 Stream uncompressedStream = zip.Entries.ElementAt(0).Open();
-                PersistenceManager manager = new PersistenceManager();
-                manager.Load(parameter, uncompressedStream);
+                this.manager.Load(parameter, uncompressedStream);
             }
 
             this.compressedStream.Close();

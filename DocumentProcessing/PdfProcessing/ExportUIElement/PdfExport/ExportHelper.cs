@@ -29,21 +29,12 @@ namespace ExportUIElement
             renderer.AddRenderer(new EllipseRenderer());
             renderer.AddRenderer(new LineRenderer());
             renderer.AddRenderer(new ImageRenderer());
-#if WPF
             renderer.AddRenderer(new ShapeRenderer());
             renderer.AddRenderer(new FrameworkElementRenderer(
                 typeof(ContentPresenter), 
                 typeof(Control), 
                 typeof(ItemsPresenter),
                 typeof(System.Windows.Documents.AdornerLayer)));
-#elif SILVERLIGHT
-            renderer.AddRenderer(new PathRenderer());
-            renderer.AddRenderer(new FrameworkElementRenderer(
-                typeof(ContentPresenter),
-                typeof(Control),
-                typeof(ItemsPresenter)));
-#endif
-
         }
     }
 }

@@ -2,4 +2,3 @@
 
 See also: 
 WPF: http://docs.telerik.com/devtools/wpf/controls/radpropertygrid/features/validation
-SL: http://docs.telerik.com/devtools/silverlight/controls/radpropertygrid/features/validation

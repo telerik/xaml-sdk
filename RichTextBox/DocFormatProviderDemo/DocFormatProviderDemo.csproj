@@ -170,7 +170,6 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="SampleData\DocFormat.doc" />
-    <None Include="SampleData\Test.doc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

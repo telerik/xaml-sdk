@@ -6,9 +6,6 @@ namespace FastGridExportWithSpreadStreamProcessing
 {
     public enum Position
     {
-        /// <summary>
-        /// In Silverlight, you can use the DisplayAttribute.ShortName data annotation as well.
-        /// </summary>
         [Description("Goalkeeper")]
         GK,
 
