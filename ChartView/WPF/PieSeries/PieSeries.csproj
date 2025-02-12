@@ -11,7 +11,6 @@
     <RootNamespace>PieSeries</RootNamespace>
     <AssemblyName>PieSeries</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -49,6 +48,9 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Licensing">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>

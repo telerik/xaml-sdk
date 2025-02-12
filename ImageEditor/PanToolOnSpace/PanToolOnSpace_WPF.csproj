@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A36BE380-B2BD-474A-A9B0-3493B778DA3E}</ProjectGuid>
+    <ProjectGuid>{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PanToolOnSpace</RootNamespace>
@@ -48,6 +48,9 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Licensing">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>

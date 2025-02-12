@@ -55,6 +55,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Telerik.Licensing">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>

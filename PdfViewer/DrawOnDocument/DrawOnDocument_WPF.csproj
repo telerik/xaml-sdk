@@ -48,24 +48,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+	</Reference>
+    <Reference Include="Telerik.Licensing">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls, Version=2020.2.901.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers, Version=2020.2.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI, Version=2020.2.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input, Version=2020.2.901.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2020.2.901.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.Navigation">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
@@ -77,7 +80,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Zip, Version=2020.2.901.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Zip">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
     </Reference>

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropTextBoxToListBox_WPF", "DragDropBetweenTextBoxAndAnotherControl\DragDropTextBoxToListBox_WPF.csproj", "{64078BA9-5339-4AD9-9758-62D7C9A1F6C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropImage_WPF", "DragDropImages\DragDropImage_WPF.csproj", "{2BCBDF25-CC4B-4754-97ED-AC9E1249DBFA}"
@@ -8,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropUserConfirmation_WPF", "DropUserConfirmation\DropUserConfirmation_WPF.csproj", "{4A7A1C09-8708-4431-A0E4-64AB41ED24FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropUsingCommands_WPF", "DragDropUsingCommands\DragDropUsingCommands_WPF.csproj", "{6F4CA258-BF15-465A-A408-55C5D969B442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomArrowCue_WPF", "CustomArrowCue\CustomArrowCue_WPF.csproj", "{296A608D-6662-4A11-A731-0017CDC61892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropUsingDragDropPayloadManager_WPF", "DragDropUsingDragDropPayloadManager\DragDropUsingDragDropPayloadManager_WPF.csproj", "{F568154C-EDE4-454C-8625-E2A575417FA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,9 +37,16 @@ Global
 		{6F4CA258-BF15-465A-A408-55C5D969B442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F4CA258-BF15-465A-A408-55C5D969B442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F4CA258-BF15-465A-A408-55C5D969B442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296A608D-6662-4A11-A731-0017CDC61892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296A608D-6662-4A11-A731-0017CDC61892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296A608D-6662-4A11-A731-0017CDC61892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296A608D-6662-4A11-A731-0017CDC61892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F568154C-EDE4-454C-8625-E2A575417FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F568154C-EDE4-454C-8625-E2A575417FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F568154C-EDE4-454C-8625-E2A575417FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F568154C-EDE4-454C-8625-E2A575417FA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	 
 EndGlobal

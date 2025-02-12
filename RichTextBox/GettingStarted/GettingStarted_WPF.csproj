@@ -47,32 +47,35 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+	</Reference>
+	<Reference Include="Telerik.Licensing">
+	  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
+	</Reference>
+    <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.ImageEditor, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.ImageEditor">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.Navigation">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Data, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Data">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents, Version=2013.1.207.1050, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Windows.Documents">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.dll</HintPath>
     </Reference>
