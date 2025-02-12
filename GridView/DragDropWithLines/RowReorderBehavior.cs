@@ -95,6 +95,8 @@ namespace DragDropWithLines
         {
             this.AssociatedObject.RowLoaded -= this.AssociatedObject_RowLoaded;
             this.AssociatedObject.RowLoaded += this.AssociatedObject_RowLoaded;
+            this.AssociatedObject.RowUnloaded -= AssociatedObject_RowUnloaded;
+            this.AssociatedObject.RowUnloaded += AssociatedObject_RowUnloaded;
             this.UnsubscribeFromDragDropEvents();
             this.SubscribeToDragDropEvents();
 
@@ -125,6 +127,14 @@ namespace DragDropWithLines
 
             GridViewRow row = e.Row as GridViewRow;
             this.InitializeRowDragAndDrop(row);
+        }
+
+        private void AssociatedObject_RowUnloaded(object sender, RowUnloadedEventArgs e)
+        {
+            if (e.Row is GridViewRow)
+            {
+                DragDropManager.RemoveDragOverHandler(e.Row, OnRowDragOver);
+            }
         }
 
         private void InitializeRowDragAndDrop(GridViewRow row)

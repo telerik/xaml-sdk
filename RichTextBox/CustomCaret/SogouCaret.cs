@@ -20,7 +20,7 @@ namespace CustomCaret
 
             if (!string.IsNullOrEmpty(this.lastUpdateString) && !string.IsNullOrWhiteSpace(this.lastUpdateString))
             {
-                this.OnTextInserted(this, new TextInsertedEventArgs(e.Text, false, true));
+                this.OnTextInserted(this, new TextInsertedEventArgs(e.Text, InputEvents.OnTextInputUpdate, this.CurrentImeLanguage));
             }
 
             this.lastUpdateString = e.Text;
@@ -30,7 +30,7 @@ namespace CustomCaret
         {
             this.LastInputEvent = InputEvents.OnTextInput;
 
-            this.OnTextInserted(this, new TextInsertedEventArgs(e.Text, true, true));
+            this.OnTextInserted(this, new TextInsertedEventArgs(e.Text, InputEvents.OnTextInput, this.CurrentImeLanguage));
             this.ClearText();
         }
 
@@ -38,7 +38,7 @@ namespace CustomCaret
         {
             if (this.IsCarriageReturnOrWhiteSpace())
             {
-                this.OnTextInserted(this, new TextInsertedEventArgs(this.Text, true, true));
+                this.OnTextInserted(this, new TextInsertedEventArgs(this.Text, InputEvents.OnTextInput, this.CurrentImeLanguage));
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadImageEditorUIFirstLook_WPF", "RadImageEditorUIFirstLook\RadImageEditorUIFirstLook_WPF.csproj", "{420D0D51-6BF7-4B33-8C53-7886844C2FE7}"
 EndProject
@@ -17,8 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing_WPF", "Drawing\Draw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageFormatProvider_WPF", "CustomImageFormatProvider\CustomImageFormatProvider_WPF.csproj", "{088F7704-0A83-4093-934D-A9B276DAB9D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanToolOnSpace_WPF", "PanToolOnSpace\PanToolOnSpace_WPF.csproj", "{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}"
+EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -52,9 +53,12 @@ Global
 		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{088F7704-0A83-4093-934D-A9B276DAB9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F4BDB6-B43E-487F-AAA6-A2087DC09F6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	 
 EndGlobal

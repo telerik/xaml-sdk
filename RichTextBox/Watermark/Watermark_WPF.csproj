@@ -53,7 +53,10 @@
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Flow">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
-    </Reference>
+	</Reference>
+	<Reference Include="Telerik.Licensing">
+	  <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Licensing.Runtime.dll</HintPath>
+	</Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
