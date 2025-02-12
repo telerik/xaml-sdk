@@ -133,6 +133,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+	  <Reference Include="Telerik.Licensing">
+		  <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Licensing.Runtime.dll</HintPath>
+	  </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>

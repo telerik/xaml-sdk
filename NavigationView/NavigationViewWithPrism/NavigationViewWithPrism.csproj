@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <Reference Include="Telerik.Licensing">
+		  <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Licensing.Runtime.dll</HintPath>
+	  </Reference>
     <Reference Include="Telerik.Windows.Controls">
       <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
