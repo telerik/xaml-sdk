@@ -16,7 +16,7 @@ namespace CreateZipArchive_NetStandard
 
             using (Stream stream = File.Open(zipFileName, FileMode.Create))
             {
-                using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: false, entryNameEncoding: null))
+                using (ZipArchive archive = ZipArchive.Create(stream))
                 {
                     using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
                     {

@@ -70,7 +70,7 @@ namespace CustomRowAndColumnHeadings_WPF
 
                 using (Stream stream = ResourceHelper.GetResourceStream(ResourceFilePath))
                 {
-                    result = formatProvider.Import(stream);
+                    result = formatProvider.Import(stream, null);
                 }
             }
             catch

@@ -43,7 +43,7 @@ namespace PdfViewerIntegration
             MemoryStream stream = new MemoryStream();
 
             // Export the document to a MemoryStream
-            provider.Export(document, stream);
+            provider.Export(document, stream, null);
 
             // Use this stream as a document source for RadPdfViewer
             this.ViewModel.DocumentStream = stream;

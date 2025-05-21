@@ -25,7 +25,7 @@ namespace CustomFunctions
             XlsxFormatProvider formatProvider = new XlsxFormatProvider();
             using (var stream = ResourceHelper.GetResourceStream(filePath))
             {
-                this.radSpreadsheet.Workbook = formatProvider.Import(stream);
+                this.radSpreadsheet.Workbook = formatProvider.Import(stream, null);
             }
         }
 

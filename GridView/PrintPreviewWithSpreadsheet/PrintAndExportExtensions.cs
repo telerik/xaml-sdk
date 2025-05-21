@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
@@ -79,7 +75,7 @@ namespace PrintPreviewWithSpreadsheet
 
                 stream.Position = 0;
 
-                book = new XlsxFormatProvider().Import(stream);
+                book = new XlsxFormatProvider().Import(stream, null);
             }
 
             return book;

@@ -10,9 +10,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-            <TextBlock Text="Please set a valid Bing Maps Key:" Foreground="Red" FontSize="18" />
-            <TextBox x:Name="BingMapsKey" Width="500" Margin="10, 0" BorderBrush="Red" />
-            <Button Click="Button_Click_1" Content="Set Bing Maps Key" />
+            <TextBlock Text="Please set a valid Azure Maps Key:" Foreground="Red" FontSize="18" />
+            <TextBox x:Name="AzureMapsKey" Width="500" Margin="10, 0" BorderBrush="Red" />
+            <Button Click="Button_Click_1" Content="Set Azure Maps Key" />
         </StackPanel>
 
         <StackPanel Width="600"

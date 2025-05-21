@@ -50,7 +50,7 @@ namespace CreateDocumentWithImages
             using (Stream stream = File.OpenWrite(resultFile))
             {
                 provider.ExportSettings.ImageQuality = this.imageQuality;
-                provider.Export(this.document, stream);
+                provider.Export(this.document, stream, null);
             }
 
             Console.WriteLine("Document created.");
@@ -124,7 +124,7 @@ namespace CreateDocumentWithImages
             block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
             block.TextProperties.FontSize = 22;
             block.InsertText(description);
-            Size blockSize = block.Measure(RemainingPageSize);
+            Size blockSize = block.Measure(RemainingPageSize, System.Threading.CancellationToken.None);
             editor.DrawBlock(block, RemainingPageSize);
 
             editor.Position.Translate(Margins.Left, blockSize.Height + Margins.Top + 20);

@@ -1,81 +1,29 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 using System.Windows.Media;
-using BingRest = Telerik.Windows.Controls.DataVisualization.Map.BingRest;
-using Telerik.Windows.Controls.Map;
-using System;
 using System.Windows.Threading;
+using Telerik.Windows.Controls.Map;
 
 namespace Routing
 {
     public partial class MainWindow : Window
     {
         private LocationCollection wayPoints = new LocationCollection();
-        private BingRestMapProvider provider;
-        private BingRestRouteRequest request;
+        private AzureMapProvider provider;
         private bool isProviderInitializedFailed;
         DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
         {
-            InitializeComponent();      
+            InitializeComponent();
             this.InitializeRequestAndOptions();
         }
 
         private void InitializeRequestAndOptions()
         {
-            this.request = new BingRestRouteRequest()
-            {
-                Culture = new System.Globalization.CultureInfo("en-US"),
-            };        
-            this.wayPointsLayer.ItemsSource = this.wayPoints;
-            this.modeCombo.ItemsSource = Enum.GetValues(typeof(BingRestTravelMode));
-            this.routeOptimizatioCombo.ItemsSource = Enum.GetValues(typeof(BingRestRouteOptimization));
-            this.routeAvoidanceCombo.ItemsSource = Enum.GetValues(typeof(BingRestRouteAvoidance));
-        }
-
-        private void Provider_CalculateRouteError(object sender, BingRestCalculateRouteErrorEventArgs e)
-        {
-            MessageBox.Show(e.Error.ToString());
-        }
-
-        private void Provider_CalculateRouteCompleted(object sender, BingRestRoutingCompletedEventArgs e)
-        {
-            this.findRouteButton.IsEnabled = true;
-
-            BingRest.Route route = e.Route;
-            if (route != null)
-            {
-                PolylineData routeLine = this.CreateNewPolyline(Colors.Blue, 3);
-
-                // Building the polyline representing the route.
-                foreach (double[] coordinatePair in route.RoutePath.Line.Coordinates)
-                {
-                    Location point = new Location(coordinatePair[0], coordinatePair[1]);
-                    routeLine.Points.Add(point);
-                }
-
-                this.routeLayer.Items.Add(routeLine);
-
-                // Bringing the route into view.
-                double[] bbox = e.Route.BoundingBox;
-                LocationRect rect = new LocationRect(new Location(bbox[2], bbox[1]), new Location(bbox[0], bbox[3]));
-                this.radMap.SetView(rect);
-            }
-        }
-
-        private PolylineData CreateNewPolyline(Color color, double thickness)
-        {
-            PolylineData routeLine = new PolylineData()
-            {
-                ShapeFill = new MapShapeFill()
-                {
-                    Stroke = new SolidColorBrush(color),
-                    StrokeThickness = thickness,   
-                    StrokeDashArray = this.request.Options.Mode == BingRestTravelMode.Walking ? new DoubleCollection(){2, 1} : new DoubleCollection(),
-                },
-                Points = new LocationCollection(),                
-            };
-            return routeLine;
+            this.WayPointsLayer.ItemsSource = this.wayPoints;
         }
 
         private void MapMouseClick(object sender, MapMouseRoutedEventArgs eventArgs)
@@ -87,29 +35,47 @@ namespace Routing
         {
             this.findRouteButton.IsEnabled = true;
             this.wayPoints.Clear();
-            this.routeLayer.Items.Clear();
-            this.request.Waypoints.Clear();
+            this.RouteLayer.Items.Clear();
         }
 
-        private void FindRouteClicked(object sender, RoutedEventArgs e)
+        private async void FindRouteClicked(object sender, RoutedEventArgs e)
         {
-            this.routeLayer.Items.Clear();
-            this.request.Waypoints.Clear();
-            this.request.Options.Mode = (BingRestTravelMode)this.modeCombo.SelectedValue;
-            this.request.Options.Optimization = (BingRestRouteOptimization)this.routeOptimizatioCombo.SelectedValue;
-            this.request.Options.RouteAvoidance = (BingRestRouteAvoidance)this.routeAvoidanceCombo.SelectedValue;
-            this.request.Options.RouteAttributes = BingRestRouteAttributes.RoutePath;
+            this.RouteLayer.Items.Clear();
 
-            if (this.wayPoints.Count > 1)
+            RouteInfo routeInfo = null;
+            try
             {
-                this.findRouteButton.IsEnabled = false;
-
-                foreach (Location location in this.wayPoints)
-                {
-                    this.request.Waypoints.Add(location.ToString());
-                }
-                this.provider.CalculateRouteAsync(request);
+                routeInfo = await AzureRoutingHelper.GetRouteDirections(this.wayPoints.First(), this.wayPoints.Last());
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Please, update the start or end location!", "Route calculation error.", MessageBoxButton.OK);
+                return;
+            }
+
+            if (routeInfo != null)
+            {
+                PolylineData routeLine = this.CreateNewPolyline(routeInfo.Points, Colors.Red, 3);
+
+                this.RouteLayer.Items.Add(routeLine);
+
+                var routePointModels = new List<RoutePointModel>();
+                for (int i = 0; i < routeInfo.WayPointInfos.Count; i++)
+                {
+                    var wayPointInfo = routeInfo.WayPointInfos[i];
+                    RoutePointModel model = new RoutePointModel()
+                    {
+                        Instruction = wayPointInfo.Message,
+                        Location = wayPointInfo.Location,
+                        IsStartOrEnd = i == 0 || i == routeInfo.WayPointInfos.Count - 1,
+                        Caption = i == 0 ? "A" : i == routeInfo.WayPointInfos.Count - 1 ? "B" : string.Empty
+                    };
+                    routePointModels.Add(model);
+                }
+            }
+
+            var bestView = this.RouteLayer.GetBestView(this.RouteLayer.Items);
+            this.radMap.SetView(bestView);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -120,11 +86,11 @@ namespace Routing
             this.timer.Tick += Timer_Tick;
             this.timer.Start();
 
-            this.provider  = new BingRestMapProvider(MapMode.Road, true, this.BingMapsKey.Text);
+            this.provider = new AzureMapProvider(this.AzureMapsKey.Text, AzureTileSet.Road);
+            AzureRoutingHelper.AzureMapsSubscriptionKey = this.AzureMapsKey.Text;
+
             this.provider.InitializationFaulted += this.Provider_InitializationFaulted;
             this.radMap.Provider = this.provider;
-            this.provider.CalculateRouteCompleted += this.Provider_CalculateRouteCompleted;
-            this.provider.CalculateRouteError += this.Provider_CalculateRouteError;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -140,6 +106,26 @@ namespace Routing
         private void Provider_InitializationFaulted(object sender, InitializationFaultEventArgs e)
         {
             this.isProviderInitializedFailed = true;
-        }       
+        }
+
+        private PolylineData CreateNewPolyline(IEnumerable<Location> directionPoints, Color color, double thickness)
+        {
+            PolylineData routeLine = new PolylineData()
+            {
+                ShapeFill = new MapShapeFill()
+                {
+                    Stroke = new SolidColorBrush(color),
+                    StrokeThickness = thickness
+                },
+                Points = new LocationCollection(),
+            };
+
+            foreach (var point in directionPoints)
+            {
+                routeLine.Points.Add(point);
+            }
+
+            return routeLine;
+        }
     }
 }

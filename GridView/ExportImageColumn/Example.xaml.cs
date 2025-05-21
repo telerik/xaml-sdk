@@ -41,7 +41,7 @@ namespace ExportImageColumn
 			{
 				using (var output = dialog.OpenFile())
 				{
-					provider.Export(this.ExportWorkbook(this.clubsGrid), output);
+					provider.Export(this.ExportWorkbook(this.clubsGrid), output, null);
 				}
 			}
 		}

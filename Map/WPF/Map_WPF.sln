@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersBingMapProvider", "ProvidersBingMapProvider\ProvidersBingMapProvider.csproj", "{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersOpenStreetMapProvider", "ProvidersOpenStreetMapProvider\ProvidersOpenStreetMapProvider.csproj", "{449D06AB-894C-4685-866C-C0AC29B17F1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMap", "MiniMap\MiniMap.csproj", "{7F1DD88D-35BD-431A-8A7B-1EFA0EA3BC6C}"
@@ -26,8 +24,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClickModesCustomBehavior", "ClickModesCustomBehavior\ClickModesCustomBehavior.csproj", "{A8175A0D-7965-4C00-A8BC-7B5F0072B6E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModesExternalMapCommandBar", "ViewModesExternalMapCommandBar\ViewModesExternalMapCommandBar.csproj", "{75DF8934-67B4-4B49-A698-D69728E9650A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModesDisableCommand", "ViewModesDisableCommand\ViewModesDisableCommand.csproj", "{694614C2-9A54-4E7A-ACC8-98CDD373C925}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModesSettingViewMode", "ViewModesSettingViewMode\ViewModesSettingViewMode.csproj", "{71738520-147C-429A-93F8-9E093125A1B2}"
 EndProject
@@ -163,8 +159,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSqlGeospatialDataReade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemMapProvider", "ProvidersFileSystemMapProvider\FileSystemMapProvider.csproj", "{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingGeoDataAPI", "BingGeoDataAPI\BingGeoDataAPI.csproj", "{2624A8F0-543A-4BB3-AE0C-A02BCE152789}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapShapeData", "MapShapeData\MapShapeData.csproj", "{B951808E-1800-49B1-8110-B8950F5B7B36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersMapBoxMapProvider", "ProvidersMapBoxMapProvider\ProvidersMapBoxMapProvider.csproj", "{7A63213A-BAA5-4C09-A033-EFF57334B065}"
@@ -175,10 +169,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69BF076F-CEE0-4A7D-96BA-7D2AA43FD82E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{449D06AB-894C-4685-866C-C0AC29B17F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -223,10 +213,6 @@ Global
 		{75DF8934-67B4-4B49-A698-D69728E9650A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75DF8934-67B4-4B49-A698-D69728E9650A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75DF8934-67B4-4B49-A698-D69728E9650A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{694614C2-9A54-4E7A-ACC8-98CDD373C925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{694614C2-9A54-4E7A-ACC8-98CDD373C925}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{694614C2-9A54-4E7A-ACC8-98CDD373C925}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{694614C2-9A54-4E7A-ACC8-98CDD373C925}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71738520-147C-429A-93F8-9E093125A1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71738520-147C-429A-93F8-9E093125A1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71738520-147C-429A-93F8-9E093125A1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -495,10 +481,6 @@ Global
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A306A36B-9E6F-45F8-A181-BEF7EEF09B90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2624A8F0-543A-4BB3-AE0C-A02BCE152789}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B951808E-1800-49B1-8110-B8950F5B7B36}.Release|Any CPU.ActiveCfg = Release|Any CPU

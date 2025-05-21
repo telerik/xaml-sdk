@@ -57,7 +57,7 @@ namespace ExportUIElement
 
                 using (var output = dialog.OpenFile())
                 {
-                    provider.Export(document, output);
+                    provider.Export(document, output, null);
                 }
             }
         }
