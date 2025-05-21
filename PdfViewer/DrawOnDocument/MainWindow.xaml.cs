@@ -48,7 +48,7 @@ namespace DrawOnDocument
             {
                 PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
                 pdfFormatProvider.ImportSettings = PdfImportSettings.ReadOnDemand;
-                RadFixedDocument document = pdfFormatProvider.Import(stream);
+                RadFixedDocument document = pdfFormatProvider.Import(stream, null);
 
                 this.pdfViewer.Document = document;
             }
@@ -65,7 +65,7 @@ namespace DrawOnDocument
             {
                 using (Stream stream = saveFileDialog.OpenFile())
                 {
-                    provider.Export(this.pdfViewer.Document, stream);
+                    provider.Export(this.pdfViewer.Document, stream, null);
                 }
             }
         }

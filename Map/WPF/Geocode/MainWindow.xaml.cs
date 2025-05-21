@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using Telerik.Windows.Controls.Map;
 
@@ -6,8 +7,6 @@ namespace Geocode
 {
     public partial class MainWindow : Window
     {
-        BingRestMapProvider restProvider;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -15,49 +14,41 @@ namespace Geocode
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string bingMapsKey = this.BingMapsKey.Text;
-
-            this.restProvider = new BingRestMapProvider(MapMode.Aerial, true, bingMapsKey);
-            this.radMap.Provider = this.restProvider;
-            this.restProvider.SearchLocationCompleted += this.restProvider_SearchLocationCompleted;
-            this.restProvider.SearchLocationError += this.restProvider_SearchLocationError;
+            AzureRoutingHelper.AzureMapsSubscriptionKey = this.AzureMapsKey.Text;
+            this.radMap.Provider = new AzureMapProvider(this.AzureMapsKey.Text, AzureTileSet.Road);
             this.GeocodeButton.IsEnabled = true;
         }
 
-        private void restProvider_SearchLocationError(object sender, BingRestSearchLocationErrorEventArgs e)
+        private async void GeocodeButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(e.Error.ToString());
-        }
-
-        private void restProvider_SearchLocationCompleted(object sender, BingRestSearchLocationCompletedEventArgs e)
-        {
-            double[] bbox = e.Locations[0].BoundingBox;
-            LocationRect rect = new LocationRect(new Location(bbox[2], bbox[1]), new Location(bbox[0], bbox[3]));
-            this.radMap.SetView(rect);
-
-            foreach (Telerik.Windows.Controls.DataVisualization.Map.BingRest.Location location in e.Locations)
+            try
             {
-                var coordinates = location.GeocodePoints[0].Coordinates;
-                double latitude = coordinates[0];
-                double longitude = coordinates[1];
-                MessageBox.Show(string.Format("Longitude: {0}, Latitude: {1}, Address: {2}", longitude, latitude, location.Address.FormattedAddress));
+                Location location = await AzureRoutingHelper.GetGeoCode(this.InputBox.Text);
+
+                this.informationLayer.Items.Clear();
+                this.informationLayer.Items.Add(location);
+                this.radMap.Center = location;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please, enter a another location");
             }
         }
 
-        private void GeocodeButton_Click(object sender, RoutedEventArgs e)
+        private async void radMap_MapMouseDoubleClick(object sender, MapMouseRoutedEventArgs e)
         {
-            // Search Location by string Query. Geocode.
-            BingRestSearchLocationRequest request = new BingRestSearchLocationRequest();
-            request.Query = this.InputBox.Text;
-            this.restProvider.SearchLocationAsync(request);
-        }
+            try
+            {
+                Location location = await AzureRoutingHelper.GetGeoCode(e.Location.ToString());
 
-        private void radMap_MapMouseDoubleClick(object sender, MapMouseRoutedEventArgs e)
-        {
-            // Search Address by Location. Reversed geocode.
-            BingRestSearchLocationRequest reverseRequest = new BingRestSearchLocationRequest();
-            reverseRequest.Query = e.Location.ToString();
-            this.restProvider.SearchLocationAsync(reverseRequest);
+                this.informationLayer.Items.Clear();
+                this.informationLayer.Items.Add(location);
+                this.radMap.Center = location;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please, enter a another location");
+            }
         }
     }
 }

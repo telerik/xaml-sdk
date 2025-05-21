@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Telerik.Windows.Controls;
+﻿using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands.Descriptors;
 
 namespace CustomCommandDescriptor

@@ -40,7 +40,7 @@ namespace CreatePdfUsingRadFixedDocumentEditor
             }
 
             PdfFormatProvider provider = new PdfFormatProvider();
-            File.WriteAllBytes(resultFileName, provider.Export(document));
+            File.WriteAllBytes(resultFileName, provider.Export(document, null));
 
             ProcessStartInfo psi = new ProcessStartInfo()
             {

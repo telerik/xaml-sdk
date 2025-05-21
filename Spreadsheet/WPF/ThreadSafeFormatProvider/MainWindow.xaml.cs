@@ -103,7 +103,7 @@ namespace ThreadSafeFormatProvider
 
             using (stream)
             {
-                provider.Export(workbook, stream);
+                provider.Export(workbook, stream, null);
             }
         }
 
@@ -179,7 +179,7 @@ namespace ThreadSafeFormatProvider
 
                 using (Stream stream = ResourceHelper.GetResourceStream(ResourceFilePath))
                 {
-                    result = formatProvider.Import(stream);
+                    result = formatProvider.Import(stream, null);
                 }
             }
             catch

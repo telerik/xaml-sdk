@@ -72,7 +72,7 @@ namespace CustomJpegImageConverter
             using (Stream stream = File.OpenWrite(resultFileName))
             {
                 provider.ExportSettings.ImageQuality = this.imageQuality;
-                provider.Export(this.document, stream);
+                provider.Export(this.document, stream, null);
             }
 
             ProcessStartInfo psi = new ProcessStartInfo()

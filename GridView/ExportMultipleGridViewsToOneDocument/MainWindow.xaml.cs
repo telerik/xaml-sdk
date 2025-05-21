@@ -47,7 +47,7 @@ namespace ExportMultipleGridViewsToOneDocument
 
                 using (Stream stream = dialog.OpenFile())
                 {
-                    new PdfFormatProvider().Export(playersDoc, stream);
+                    new PdfFormatProvider().Export(playersDoc, stream, null);
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace ExportMultipleGridViewsToOneDocument
 
                 using (Stream stream = dialog.OpenFile())
                 {
-                    new XlsxFormatProvider().Export(playersDoc, stream);
+                    new XlsxFormatProvider().Export(playersDoc, stream, null);
                 }
             }
         }
@@ -97,7 +97,7 @@ namespace ExportMultipleGridViewsToOneDocument
             {
                 using (Stream stream = openDialog.OpenFile())
                 {
-                    target = new XlsxFormatProvider().Import(stream);
+                    target = new XlsxFormatProvider().Import(stream, null);
                     fileName = openDialog.FileName;
                 }
 
@@ -129,7 +129,7 @@ namespace ExportMultipleGridViewsToOneDocument
                 //export the combined document back at the same path
                 using (FileStream output = new FileStream(fileName, FileMode.Create))
                 {
-                    new XlsxFormatProvider().Export(target, output);
+                    new XlsxFormatProvider().Export(target, output, null);
                 }
 
                 MessageBox.Show("Check updated file: " + fileName);

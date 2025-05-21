@@ -36,7 +36,7 @@ namespace WatermarkTextDemo
         private static RadFixedDocument ImportDocument(string fileName)
         {
             PdfFormatProvider provider = new PdfFormatProvider();
-            RadFixedDocument document = provider.Import(File.ReadAllBytes(fileName));
+            RadFixedDocument document = provider.Import(File.ReadAllBytes(fileName), null);
 
             return document;
         }
@@ -48,7 +48,7 @@ namespace WatermarkTextDemo
                 File.Delete(exportFileName);
             }
 
-            File.WriteAllBytes(exportFileName, new PdfFormatProvider().Export(document));
+            File.WriteAllBytes(exportFileName, new PdfFormatProvider().Export(document, null));
             ProcessStartInfo psi = new ProcessStartInfo()
             {
                 FileName = exportFileName,

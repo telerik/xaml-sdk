@@ -102,7 +102,7 @@ namespace ExportHierarchy
 
                 using (Stream output = dialog.OpenFile())
                 {
-                    provider.Export(workbook, output);
+                    provider.Export(workbook, output, null);
                 }
 
                 this.subItemsCount = 0;

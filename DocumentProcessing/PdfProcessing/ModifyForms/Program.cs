@@ -19,7 +19,7 @@ namespace ModifyFormValues
         {
             PdfFormatProvider provider = new PdfFormatProvider();
 
-            RadFixedDocument document = provider.Import(File.ReadAllBytes(InputFileWithInteractiveForms));
+            RadFixedDocument document = provider.Import(File.ReadAllBytes(InputFileWithInteractiveForms), null);
 
             ModifyFormFieldValues(document);
 
@@ -30,7 +30,7 @@ namespace ModifyFormValues
                 File.Delete(modifiedFileName);
             }
 
-            File.WriteAllBytes(modifiedFileName, provider.Export(document));
+            File.WriteAllBytes(modifiedFileName, provider.Export(document, null));
 
             ProcessStartInfo psi = new ProcessStartInfo()
             {

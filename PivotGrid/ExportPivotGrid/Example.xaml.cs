@@ -99,7 +99,7 @@ namespace ExportPivotGrid
                         var workbook = GenerateWorkbook();
 
                         XlsxFormatProvider provider = new XlsxFormatProvider();
-                        provider.Export(workbook, stream);
+                        provider.Export(workbook, stream, null);
                     }
                 }
                 catch (IOException ex)

@@ -53,7 +53,7 @@ namespace GenerateDocument
             using (FileStream stream = File.OpenWrite(resultFile))
             {
                 RadFixedDocument document = CreateDocument();
-                formatProvider.Export(document, stream);
+                formatProvider.Export(document, stream, null);
             }
 
             Console.WriteLine("The document is generated.");

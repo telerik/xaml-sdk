@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
@@ -103,14 +101,14 @@ namespace ExportPivotGrid
             }
             PdfFormatProvider provider = new PdfFormatProvider { ExportSettings = { ImageQuality = ImageQuality.High } };
 
-            provider.Export(document, stream);
+            provider.Export(document, stream, null);
         }
 
         public static void ExportToPagedFile(FrameworkElement element, Stream stream, bool lanscaped)
         {
             RadFixedDocument document = PDFExportHelper.CreatePagedDocument(element, lanscaped);
             PdfFormatProvider provider = new PdfFormatProvider { ExportSettings = { ImageQuality = ImageQuality.High } };
-            provider.Export(document, stream);
+            provider.Export(document, stream, null);
         }
     }
 }

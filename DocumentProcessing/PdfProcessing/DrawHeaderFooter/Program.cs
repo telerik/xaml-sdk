@@ -43,7 +43,7 @@ namespace DrawHeaderFooter
         {
             using (Stream stream = File.OpenRead(inputDocumentFile))
             {
-                document = formatProvider.Import(stream);
+                document = formatProvider.Import(stream, null);
             }
         }
 
@@ -98,7 +98,7 @@ namespace DrawHeaderFooter
         {
             using (Stream output = File.OpenWrite(exportedDocument))
             {
-                formatProvider.Export(document, output);
+                formatProvider.Export(document, output, null);
             }
         }
     }
