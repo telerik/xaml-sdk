@@ -1,0 +1,27 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>        
+        <TextBlock Text="This example demonstrates how to data bind the Telerik RadTaskBoard control to different data sources." Margin="5 10" />
+        <telerik:RadTabControl Grid.Row="1">
+            <telerik:RadTabItem Header="ObservableCollection&lt;Business Objects&gt;" FontFamily="Consolas">
+                <local:BindingToBusinessObject />
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="ObservableCollection&lt;TaskBoardCardModel&gt;" FontFamily="Consolas">
+                <local:BindingToTaskBoardCardModel />
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="CollectionViewSource" FontFamily="Consolas">
+                <local:BindingToCollectionView />
+            </telerik:RadTabItem>
+        </telerik:RadTabControl>        
+    </Grid>
+</Window>
