@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Bella.png" />
+    <None Remove="Images\John.png" />
+    <None Remove="Images\Smith.png" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="Telerik.Licensing">
+			<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Licensing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Controls.Navigation">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Navigation.dll</HintPath>
+		</Reference>
+		<Reference Include="Telerik.Windows.Data">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Data.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Resource Include="Images\Bella.png">
+	    <CopyToOutputDirectory></CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Images\John.png">
+	    <CopyToOutputDirectory></CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Images\Smith.png">
+	    <CopyToOutputDirectory></CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>
