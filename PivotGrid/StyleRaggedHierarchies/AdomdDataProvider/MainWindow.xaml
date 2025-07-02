@@ -74,7 +74,7 @@
                 <pivot:AdomdConnectionSettings
                         Cube="Adventure Works"
                         Database="Adventure Works DW 2008R2"
-                        ConnectionString="Provider=MSOLAP.5;Data Source=https://demos.telerik.com/olap/msmdpump.dll;Initial Catalog=Adventure Works DW 2008R2;">
+                        ConnectionString="Provider=MSOLAP.5;Data Source=https://demos.telerik.com/service/v2/olap/msmdpump.dll;Initial Catalog=Adventure Works DW 2008R2;">
                 </pivot:AdomdConnectionSettings>
             </pivot:AdomdDataProvider.ConnectionSettings>
             <pivot:AdomdDataProvider.RowGroupDescriptions>
