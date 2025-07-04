@@ -77,7 +77,7 @@
                 <pivot:XmlaConnectionSettings 
                     Cube="Adventure Works" 
                     Database="Adventure Works DW 2008R2" 
-                    ServerAddress="https://demos.telerik.com/olap/msmdpump.dll"/>
+                    ServerAddress="https://demos.telerik.com/service/v2/olap/msmdpump.dll"/>
             </pivot:XmlaDataProvider.ConnectionSettings>
 
             <pivot:XmlaDataProvider.RowGroupDescriptions>
