@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Data;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.RichTextBoxUI.Dialogs;
 using Telerik.Windows.Documents.Model;
@@ -45,6 +46,7 @@ namespace CustomImageEditorDialogDemoWPF
 
         public void ShowDialogInternal(Inline orgInline, Action<Inline, Inline> replaceCurrentImageCallback, string executeToolName, RadRichTextBox owner)
         {
+            this.ImageEditorUI.ImageEditorLoaded += this.ImageEditorUI_ImageEditorLoaded;
             this.SetOwner(owner);
             this.originalInline = orgInline;
             if (orgInline is ImageInline)
@@ -122,7 +124,6 @@ namespace CustomImageEditorDialogDemoWPF
                 this.ImageEditorUI.ImageEditor.CommitTool();
                 Inline reslut;
                 ImageInline image = new ImageInline(this.ImageEditorUI.Image.Bitmap);
-                image.CopyPropertiesFrom(this.originalImageInline);
 
                 image.Size = new Size(image.Width * this.originalAspect.Width, image.Height * this.originalAspect.Height);
                 if (this.isRotated)
@@ -148,6 +149,22 @@ namespace CustomImageEditorDialogDemoWPF
 
             this.Close();
         }
+        private void ImageEditorUI_ImageEditorLoaded(object sender, EventArgs e)
+        {
+            this.SetImageEditorBinding();
+        }
+
+        private void SetImageEditorBinding()
+        {
+            Binding imageEditorImagePropertyBinding = new Binding()
+            {
+                Mode = BindingMode.TwoWay,
+                Source = this.ImageEditorUI,
+                Path = new PropertyPath("Image")
+            };
+
+            BindingOperations.SetBinding(this.ImageEditorUI.ImageEditor, RadImageEditor.ImageProperty, imageEditorImagePropertyBinding);
+        }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -157,7 +174,7 @@ namespace CustomImageEditorDialogDemoWPF
         protected override void OnClosed(WindowClosedEventArgs args)
         {
             base.OnClosed(args);
-
+            this.ImageEditorUI.ImageEditorLoaded -= this.ImageEditorUI_ImageEditorLoaded;
             this.replaceCurrentImageCallback = null;
             this.Owner = null;
         }

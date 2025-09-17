@@ -66,7 +66,7 @@ namespace ShowTooltipWhenNodeIsClipped
                 headerTextBlock.Foreground);
 
             double roundWidth = Math.Round(formmatedText.Width);
-            bool isTextTrimmed = roundWidth > headerTextBlock.DesiredSize.Width;
+            bool isTextTrimmed = roundWidth > headerTextBlock.ActualWidth;
             return isTextTrimmed;
         }
     }
