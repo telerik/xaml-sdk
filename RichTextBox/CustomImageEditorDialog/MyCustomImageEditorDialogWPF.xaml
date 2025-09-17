@@ -8,6 +8,10 @@
         WindowStartupLocation="CenterOwner" 
         telerik:LocalizationManager.ResourceKey="Documents_ImageEditorDialog_Header"
         KeyDown="RadWindow_KeyDown" Height="670" Width="800" >
+    <telerik:RadWindow.Resources>
+        <tools:ResizeTool x:Key="ResizeTool"/>
+        <tools:CanvasResizeTool x:Key="CanvasResizeTool"/>
+    </telerik:RadWindow.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

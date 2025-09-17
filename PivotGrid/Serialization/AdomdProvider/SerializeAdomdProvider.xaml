@@ -14,7 +14,7 @@
                 <pivot:AdomdConnectionSettings 
                         Cube="Adventure Works"
                         Database="Adventure Works DW 2008R2"
-                        ConnectionString="Data Source=https://demos.telerik.com/service/v2/olap/msmdpump.dll;Catalog=Adventure Works DW 2008R2"/>
+                        ConnectionString="Data Source=https://demos.telerik.com/service/v2/olap/msmdpump.dllCatalog=Adventure Works DW 2008R2"/>
             </pivot:AdomdDataProvider.ConnectionSettings>
 
             <pivot:AdomdDataProvider.FilterDescriptions>
