@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+    <PropertyGroup>
+        <!-- Telerik.Licensing Nuget version used in csproj/nuspec files -->
+	    <TelerikLicensingNugetVersion>[1.6.16,2)</TelerikLicensingNugetVersion>
+	    <!-- Telerik.Licensing Nuget version downloaded in FullDistribution/PreviewDistribution builds and uploaded for offline use -->
+	    <TelerikLicensingNugetExactVersionForDistribution>1.6.16</TelerikLicensingNugetExactVersionForDistribution>
+    </PropertyGroup>
+</Project>
