@@ -49,10 +49,10 @@
     <StartupObject>OData4Consumption.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.OData.Client" Version="6.19.0"  />
-    <PackageReference Include="Microsoft.OData.Core" Version="6.19.0"  />
-    <PackageReference Include="Microsoft.OData.Edm" Version="6.19.0"  />
-    <PackageReference Include="Microsoft.Spatial" Version="6.19.0"  />
+    <PackageReference Include="Microsoft.OData.Client" Version="7.8.3"  />
+    <PackageReference Include="Microsoft.OData.Core" Version="7.8.3"  />
+    <PackageReference Include="Microsoft.OData.Edm" Version="7.8.3"  />
+    <PackageReference Include="Microsoft.Spatial" Version="7.8.3"  />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />

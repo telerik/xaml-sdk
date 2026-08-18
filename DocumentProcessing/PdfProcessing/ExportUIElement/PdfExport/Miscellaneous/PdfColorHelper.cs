@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Fixed.Model.Data;
-using PdfColors = Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Data;
+using PdfColors = Telerik.Documents.Fixed.Model.ColorSpaces;
 
 namespace ExportUIElement
 {
@@ -66,7 +66,7 @@ namespace ExportUIElement
 
             var matrix = new Matrix(width / height, 0, 0, 1, 0, 0);
             var newMatrix = matrix = MathHelper.Multiply(position.Matrix, matrix);
-            pdfGradient.Position = new Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition(newMatrix);
+            pdfGradient.Position = new Telerik.Documents.Fixed.Model.Data.MatrixPosition(newMatrix);
 
             foreach (var gradientStop in brush.GradientStops)
             {

@@ -3,8 +3,8 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Spreadsheet.Controls;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.Model;
 
 namespace PrintPreviewWithSpreadsheet
 {

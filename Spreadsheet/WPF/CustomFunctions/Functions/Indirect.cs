@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Telerik.Windows.Documents.Spreadsheet.Expressions;
-using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
-using Telerik.Windows.Documents.Spreadsheet.Model;
-using Telerik.Windows.Documents.Spreadsheet.Utilities;
+using Telerik.Documents.Spreadsheet.Expressions;
+using Telerik.Documents.Spreadsheet.Expressions.Functions;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Utilities;
 
 namespace CustomFunctions.Functions
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.Model;
 
 namespace ModifyBookmarks
 {

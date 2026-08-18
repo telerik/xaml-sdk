@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Telerik.Windows.Documents.Spreadsheet.Expressions;
-using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
+using Telerik.Documents.Spreadsheet.Expressions;
+using Telerik.Documents.Spreadsheet.Expressions.Functions;
 
 namespace CustomFunctions.Functions
 {

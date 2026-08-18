@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.FormatProviders;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
+using Telerik.Documents.Spreadsheet.Model;
 
 namespace GenerateDocuments
 {
@@ -30,7 +30,7 @@ namespace GenerateDocuments
             string path = "Sample document." + selectedFormat;
             using (FileStream stream = File.OpenWrite(path))
             {
-                formatProvider.Export(workbook, stream);
+                formatProvider.Export(workbook, stream, null);
             }
 
             Console.WriteLine("Document generated.");

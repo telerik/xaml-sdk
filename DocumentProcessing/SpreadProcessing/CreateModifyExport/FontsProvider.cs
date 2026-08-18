@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Telerik.Windows.Documents.Core.Fonts;
+using Telerik.Documents.Core.Fonts;
 using Telerik.Windows.Documents.Extensibility;
 
 namespace CreateModifyExport

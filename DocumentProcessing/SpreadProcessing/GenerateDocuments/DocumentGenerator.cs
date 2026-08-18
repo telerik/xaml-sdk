@@ -8,8 +8,8 @@ using Telerik.Documents.Media;
 using System.Windows.Media;
 #endif
 using GenerateDocuments.SampleData;
-using Telerik.Windows.Documents.Spreadsheet.Model;
-using Telerik.Windows.Documents.Spreadsheet.Utilities;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Utilities;
 
 namespace GenerateDocuments
 {

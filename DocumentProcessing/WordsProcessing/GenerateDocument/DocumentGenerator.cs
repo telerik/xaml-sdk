@@ -10,17 +10,17 @@ using Telerik.Documents.Core.Fonts;
 #else
 using System.Windows;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model;
 #endif
-using Telerik.Windows.Documents.Common.FormatProviders;
-using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
-using Telerik.Windows.Documents.Flow.FormatProviders.Html;
-using Telerik.Windows.Documents.Flow.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
-using Telerik.Windows.Documents.Flow.FormatProviders.Txt;
-using Telerik.Windows.Documents.Flow.Model;
-using Telerik.Windows.Documents.Flow.Model.Editing;
-using Telerik.Windows.Documents.Flow.Model.Styles;
+using Telerik.Documents.Common.FormatProviders;
+using Telerik.Documents.Flow.FormatProviders.Docx;
+using Telerik.Documents.Flow.FormatProviders.Html;
+using Telerik.Documents.Flow.FormatProviders.Pdf;
+using Telerik.Documents.Flow.FormatProviders.Rtf;
+using Telerik.Documents.Flow.FormatProviders.Txt;
+using Telerik.Documents.Flow.Model;
+using Telerik.Documents.Flow.Model.Editing;
+using Telerik.Documents.Flow.Model.Styles;
 
 namespace GenerateDocument
 {
@@ -81,7 +81,7 @@ namespace GenerateDocument
             editor.InsertText("bold, ").FontWeight = FontWeights.Bold;
             editor.InsertText("italic, ").FontStyle = FontStyles.Italic;
             editor.InsertText("underline,").Underline.Pattern = UnderlinePattern.Single;
-            editor.InsertText(" font sizes and ").FontSize = Telerik.Windows.Documents.Media.Unit.PointToDip(20);
+            editor.InsertText(" font sizes and ").FontSize = Telerik.Documents.Media.Unit.PointToDip(20);
             Run coloredRun = editor.InsertText("colors ");
             coloredRun.ForegroundColor = greenColor;
             coloredRun.Shading.BackgroundColor = yellowColor;
@@ -126,7 +126,7 @@ namespace GenerateDocument
             }
 
             // Create cell with name and position
-            signatureTable.Rows[0].Cells[1].Padding = new Telerik.Windows.Documents.Primitives.Padding(12, 0, 0, 0);
+            signatureTable.Rows[0].Cells[1].Padding = new Telerik.Documents.Primitives.Padding(12, 0, 0, 0);
             Paragraph cellParagraph = signatureTable.Rows[0].Cells[1].Blocks.AddParagraph();
             cellParagraph.Spacing.SpacingAfter = 0;
             editor.MoveToParagraphStart(cellParagraph);
@@ -191,7 +191,7 @@ namespace GenerateDocument
             string path = "Sample document." + selectedFormat;
             using (FileStream stream = File.OpenWrite(path))
             {
-                formatProvider.Export(document, stream);
+                formatProvider.Export(document, stream, null);
             }
 
             Console.Write("Document generated.");

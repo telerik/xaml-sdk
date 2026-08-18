@@ -2,7 +2,7 @@
 using System.Linq; 
 using System.Windows;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Documents.Fixed.Search; 
+using Telerik.Documents.Fixed.Search; 
 
 namespace CustomFindDialog.Commands
 {

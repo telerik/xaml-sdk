@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using Telerik.Windows.Documents.Extensibility;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
-using Telerik.Windows.Documents.Fixed.Model.Resources;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Documents.Fixed.Model.Resources;
 
 namespace CustomJpegImageConverter
 {

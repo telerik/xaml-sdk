@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Telerik.Windows.Documents.Common.FormatProviders;
-using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
-using Telerik.Windows.Documents.Flow.FormatProviders.Html;
-using Telerik.Windows.Documents.Flow.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
-using Telerik.Windows.Documents.Flow.FormatProviders.Txt;
-using Telerik.Windows.Documents.Flow.Model;
+using Telerik.Documents.Common.FormatProviders;
+using Telerik.Documents.Flow.FormatProviders.Docx;
+using Telerik.Documents.Flow.FormatProviders.Html;
+using Telerik.Documents.Flow.FormatProviders.Pdf;
+using Telerik.Documents.Flow.FormatProviders.Rtf;
+using Telerik.Documents.Flow.FormatProviders.Txt;
+using Telerik.Documents.Flow.Model;
 
 namespace ConvertDocuments
 {
@@ -58,7 +58,7 @@ namespace ConvertDocuments
                 {
                     try
                     {
-                        this.document = provider.Import(stream);
+                        this.document = provider.Import(stream, null);
                     }
                     catch (Exception)
                     {
@@ -77,7 +77,7 @@ namespace ConvertDocuments
         {
             using (Stream stream = File.OpenRead(DocumentConverter.sampleDocumentFilePath))
             {
-                this.document = new DocxFormatProvider().Import(stream);
+                this.document = new DocxFormatProvider().Import(stream, null);
             }
         }
 
@@ -118,7 +118,7 @@ namespace ConvertDocuments
             string path = "Converted." + format;
             using (FileStream stream = File.OpenWrite(path))
             {
-                formatProvider.Export(this.document, stream);
+                formatProvider.Export(this.document, stream, null);
             }
 
             Console.WriteLine("Document converted.");

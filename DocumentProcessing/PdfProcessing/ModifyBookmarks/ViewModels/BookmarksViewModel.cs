@@ -4,9 +4,9 @@ using System.Windows.Input;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.GridView;
 using Telerik.Windows.Data;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Collections;
-using Telerik.Windows.Documents.Fixed.Model.Navigation;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Collections;
+using Telerik.Documents.Fixed.Model.Navigation;
 
 namespace ModifyBookmarks.ViewModels
 {

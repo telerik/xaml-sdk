@@ -30,7 +30,8 @@ namespace GlyphToolBox
             {"e7", new Gallery(){ Header= "Map" }},
             {"e8", new Gallery(){ Header= "Social" }},
             {"e9", new Gallery(){ Header= "File" }},
-            {"ea", new Gallery(){ Header= "Charts" }}
+            {"ea", new Gallery(){ Header= "Charts" }},
+            {"eb", new Gallery(){ Header= "Misc" }}
         };
         Dictionary<string, ObservableCollection<GalleryItem>> sortedGallleries = new Dictionary<string, ObservableCollection<GalleryItem>>();
 

@@ -11,12 +11,12 @@ using System.Windows;
 using System.Windows.Media;
 #endif
 
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Common;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.Text;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Common;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Text;
 
 namespace WatermarkTextDemo
 {
@@ -64,7 +64,7 @@ namespace WatermarkTextDemo
             Block block = new Block();
             block.TextProperties.FontSize = 80;
             block.TextProperties.TrySetFont(new FontFamily("Arial"), FontStyles.Normal, FontWeights.Bold);
-            block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+            block.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
             block.GraphicProperties.FillColor = new RgbColor(transparency, 255, 0, 0);
             block.InsertText(text);
 

@@ -1,8 +1,8 @@
 ﻿using System.Windows;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
 
 namespace CustomizeUI_WPF
 {

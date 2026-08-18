@@ -7,8 +7,8 @@ using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Diagrams;
 using Telerik.Windows.Controls.Diagrams.Extensions;
 using Telerik.Windows.Diagrams.Core;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.Model;
 
 namespace ExportToPDF_SL
 {
@@ -74,7 +74,7 @@ namespace ExportToPDF_SL
                 PdfFormatProvider provider = new PdfFormatProvider();
                 using (var output = dialog.OpenFile())
                 {
-                    provider.Export(document, output);
+                    provider.Export(document, output, null);
                 }
             }
         }

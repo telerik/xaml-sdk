@@ -1,5 +1,5 @@
 ﻿using System;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Export;
 
 namespace CreateDocumentWithImages
 {

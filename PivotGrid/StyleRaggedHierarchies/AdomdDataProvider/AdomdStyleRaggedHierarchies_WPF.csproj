@@ -83,6 +83,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
     </Reference>
+    <PackageReference Include="Microsoft.AnalysisServices.AdomdClient" Version="19.84.1" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
