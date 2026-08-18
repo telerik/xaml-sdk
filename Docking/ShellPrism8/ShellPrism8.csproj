@@ -137,23 +137,23 @@
 	  <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Docking">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.Docking.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Docking.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
