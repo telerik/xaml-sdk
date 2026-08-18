@@ -1,0 +1,67 @@
+﻿<Window x:Class="CustomBarcodeReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomBarcodeReader" 
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        mc:Ignorable="d"
+        Title="Barcode Scanner" Height="550" Width="800">
+    <Grid Margin="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>            
+            <RowDefinition Height="*"/>            
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2"> 
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock Text="To run this example, make sure to install ffmpeg and add it to the system's PATH" FontWeight="Bold" MaxWidth="750" TextWrapping="Wrap"/>
+                <TextBlock Text="1. Download the ffmpeg release containing the ffmpeg.exe file (from https://www.ffmpeg.org/) and unzip it in a location of your choice (usually C:\ffmpeg\)" MaxWidth="750" TextWrapping="Wrap" Margin="0 5 0 0"/>
+                <TextBlock Text="2. Add the folder that points to the ffmpeg.exe to the Path user's environment variable (usually C:\ffmpeg\bin)" MaxWidth="750" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
+        <Border BorderBrush="Gray" BorderThickness="1" Grid.Row="1" Margin="0 10 0 0">
+            <Image x:Name="VideoImage" Stretch="Uniform" />
+        </Border>
+
+        <Border Grid.Column="1" Margin="10 10 10 0" Width="250" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Center" Text="Video device:" />
+                <telerik:RadComboBox Grid.Row="1" x:Name="videoDevicesComboBox" DisplayMemberPath="Name" />
+                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Video format:" />
+                <telerik:RadComboBox Grid.Row="3" x:Name="videoFormatsComboBox" ItemsSource="{Binding ElementName=videoDevicesComboBox, Path=SelectedItem.OrderedFormats}" />
+                <telerik:RadButton Grid.Row="4" x:Name="StartButton" Content="Start camera" Click="StartButton_Click" Margin="0 20 0 0"/>
+                <telerik:RadButton Grid.Row="5" x:Name="StopButton" Content="Stop camera" Click="StopButton_Click" IsEnabled="False"/>
+                <Border x:Name="barcodeResultBorder" Grid.Row="6" Margin="0 20 0 0" Padding="5" BorderThickness="0" BorderBrush="#C2C2C2">
+                    <Border.Background>
+                        <SolidColorBrush x:Name="AnimatedBrush" Color="Transparent"/>
+                    </Border.Background>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/> 
+                            <RowDefinition/> 
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Barcode text:" VerticalAlignment="Center" FontWeight="Bold"/>
+                        <telerik:RadWatermarkTextBox Grid.Row="1" x:Name="QrResultTextBox" MaxWidth="230"
+                                                     TextWrapping="Wrap" IsReadOnly="True"
+                                                     FontWeight="Bold" VerticalContentAlignment="top"/>
+                    </Grid>
+                </Border>                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -2,7 +2,7 @@
 This example shows how to implement the main functionality of RadDocking using PRISM 8. Here are the covered scenarios
  - MVVM
  - CustomRegionAdapter
- - CustomRegionBehavior which helps Avtivation implementation
+ - CustomRegionBehavior which helps Activation implementation
  - Activation
  - Custom Event aggregators
  - Predefined docking layout at start up

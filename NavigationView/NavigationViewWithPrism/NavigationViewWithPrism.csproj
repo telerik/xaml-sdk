@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -12,17 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <Reference Include="Telerik.Licensing">
-		  <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Licensing.Runtime.dll</HintPath>
-	  </Reference>
+	  <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TelerikBinariesNet)\Telerik.Windows.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 
