@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Windows.Diagrams.Core;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
 
 namespace ExportToPDF
 {
@@ -24,7 +24,7 @@ namespace ExportToPDF
                 LinearGradient gradient = new LinearGradient(startPoint, endPoint);
                 foreach (var stop in linerBrush.GradientStops)
                 {
-                    gradient.GradientStops.Add(new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop(GetRgbColor(stop.Color, opacity), stop.Offset));
+                    gradient.GradientStops.Add(new Telerik.Documents.Fixed.Model.ColorSpaces.GradientStop(GetRgbColor(stop.Color, opacity), stop.Offset));
                 }
 
                 gradient.Position.RotateAt(angle, bounds.Center().X, bounds.Center().Y);
@@ -50,7 +50,7 @@ namespace ExportToPDF
                 {
                     var stop = radialBrush.GradientStops[i];
                     var color = GetRgbColor(stop.Color, opacity);
-                    gradient.GradientStops.Add(new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop(color, stop.Offset));
+                    gradient.GradientStops.Add(new Telerik.Documents.Fixed.Model.ColorSpaces.GradientStop(color, stop.Offset));
                 }
 
                 gradient.Position.ScaleAt(scale.X, scale.Y, bounds.Center().X, bounds.Center().Y);

@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
-using Telerik.Windows.Documents.Flow.Model;
-using Telerik.Windows.Documents.Flow.Model.Editing;
-using Telerik.Windows.Documents.Flow.Model.Fields;
-using Telerik.Windows.Documents.Flow.Model.Styles;
+using Telerik.Documents.Flow.FormatProviders.Docx;
+using Telerik.Documents.Flow.Model;
+using Telerik.Documents.Flow.Model.Editing;
+using Telerik.Documents.Flow.Model.Fields;
+using Telerik.Documents.Flow.Model.Styles;
 #if NETSTANDARD
 using Telerik.Documents.Common.Model;
 using Telerik.Documents.Media;
 #else
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model;
 using System.Windows.Media;
 #endif
 
@@ -83,7 +83,7 @@ namespace MailMerge
             using (Stream stream = File.OpenWrite(path))
             {
                 DocxFormatProvider formatProvder = new DocxFormatProvider();
-                formatProvder.Export(document, stream);
+                formatProvder.Export(document, stream, null);
             }
 
             ProcessStartInfo psi = new ProcessStartInfo()

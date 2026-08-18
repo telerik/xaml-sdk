@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Telerik.Windows.Documents.Spreadsheet.Model;
-using Telerik.Windows.Documents.Spreadsheet.Utilities;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Utilities;
 
 namespace CustomRowAndColumnHeadings.HeaderConverters
 {

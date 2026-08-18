@@ -12,6 +12,7 @@ namespace ExportHierarchy
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		private string name;
+		private bool isExpanded;
 		private DateTime established;
 		private int stadiumCapacity;
 		private ObservableCollection<Player> players;
@@ -29,7 +30,20 @@ namespace ExportHierarchy
 			}
 		}
 
-		public DateTime Established
+        public bool IsExpanded
+        {
+            get { return this.isExpanded; }
+            set
+            {
+                if (value != this.isExpanded)
+                {
+                    this.isExpanded = value;
+                    this.OnPropertyChanged("IsExpanded");
+                }
+            }
+        }
+
+        public DateTime Established
 		{
 			get { return this.established; }
 			set

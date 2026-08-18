@@ -6,11 +6,11 @@ using Telerik.Documents.Primitives;
 #else
 using System.Windows;
 #endif
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.InteractiveForms;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.InteractiveForms;
 
 namespace CreateInteractiveForms
 {
@@ -168,7 +168,7 @@ namespace CreateInteractiveForms
 
             Block block = new Block();
             block.TextProperties.FontSize = 20;
-            block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Center;
+            block.VerticalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Center;
             block.InsertText(description);
             editor.Position.Translate(x + annotationSize.Width + padding, y);
             editor.DrawBlock(block, new Size(editor.Root.Size.Width, annotationSize.Height));

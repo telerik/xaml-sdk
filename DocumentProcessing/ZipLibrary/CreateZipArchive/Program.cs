@@ -3,7 +3,7 @@ using System.IO;
 #if NETCOREAPP
 using Telerik.Zip;
 #else
-using Telerik.Windows.Zip;
+using Telerik.Zip;
 #endif
 
 namespace CreateZipArchive_NetStandard

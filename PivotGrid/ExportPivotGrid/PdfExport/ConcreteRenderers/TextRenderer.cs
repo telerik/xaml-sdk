@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Editing;
 
 namespace ExportPivotGrid
 {
@@ -32,7 +32,7 @@ namespace ExportPivotGrid
             }
         }
 
-        private static void SetFontFamily(Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily, System.Windows.FontWeight fontWeight)
+        private static void SetFontFamily(Telerik.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily, System.Windows.FontWeight fontWeight)
         {
             if (!drawingSurface.TextProperties.TrySetFont(fontFamily, new System.Windows.FontStyle(), fontWeight))
             {

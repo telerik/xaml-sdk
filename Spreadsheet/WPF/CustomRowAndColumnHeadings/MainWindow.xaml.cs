@@ -2,8 +2,8 @@
 using CustomRowAndColumnHeadings.Resources;
 using System.IO;
 using System.Windows;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.Model;
 
 namespace CustomRowAndColumnHeadings_WPF
 {

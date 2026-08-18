@@ -44,6 +44,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Documents.SpreadsheetStreaming">
       <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Telerik.Windows.Zip.Extensions;
+using Telerik.Zip.Extensions;
 
 namespace ExtractZipArchiveToDirectory_NetStandard
 {
@@ -22,7 +22,7 @@ namespace ExtractZipArchiveToDirectory_NetStandard
                 Directory.Delete(destinationFolder, recursive: true);
             }
 
-            ZipFile.ExtractToDirectory(zipFilePath, destinationFolder);
+            ZipFile.ExtractToDirectory(zipFilePath, destinationFolder, null);
 
             Console.WriteLine("Listing files in: " + destinationFolder);
             foreach (string fileName in Directory.EnumerateFiles(destinationFolder))

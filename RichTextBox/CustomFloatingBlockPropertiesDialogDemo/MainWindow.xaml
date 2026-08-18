@@ -594,31 +594,14 @@
                                 </telerik:RadGalleryItem>
                                 <telerik:RadGalleryItem HorizontalContentAlignment="Left">
                                     <telerik:RadGalleryItem.Tag>
-                                        <telerik:PageOrientation>Rotate90</telerik:PageOrientation>
+                                        <telerik:PageOrientation>Landscape</telerik:PageOrientation>
                                     </telerik:RadGalleryItem.Tag>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationLandscape.png" Stretch="None"/>
                                         <TextBlock Text="Landscape" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left">
-                                    <telerik:RadGalleryItem.Tag>
-                                        <telerik:PageOrientation>Rotate180</telerik:PageOrientation>
-                                    </telerik:RadGalleryItem.Tag>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate180.png" Stretch="None"/>
-                                        <TextBlock Text="Rotate 180" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left">
-                                    <telerik:RadGalleryItem.Tag>
-                                        <telerik:PageOrientation>Rotate270</telerik:PageOrientation>
-                                    </telerik:RadGalleryItem.Tag>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate270.png" Stretch="None"/>
-                                        <TextBlock Text="Rotate 270" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
+
                             </telerik:RadGallery>
                         </telerik:RadRibbonDropDownButton.DropDownContent>
                     </telerik:RadRibbonDropDownButton>

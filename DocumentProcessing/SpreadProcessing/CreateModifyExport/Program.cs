@@ -1,7 +1,7 @@
 ﻿using System;
 #if NETCOREAPP
 using Telerik.Windows.Documents.Extensibility;
-using Telerik.Windows.Documents.Core.Imaging;
+using Telerik.Documents.Core.Imaging;
 #endif
 namespace CreateModifyExport
 {

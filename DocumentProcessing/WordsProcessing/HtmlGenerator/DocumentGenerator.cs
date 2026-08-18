@@ -9,12 +9,12 @@ using Telerik.Documents.Primitives;
 #else
 using System.Windows;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model;
 #endif
-using Telerik.Windows.Documents.Flow.FormatProviders.Html;
-using Telerik.Windows.Documents.Flow.Model;
-using Telerik.Windows.Documents.Flow.Model.Editing;
-using Telerik.Windows.Documents.Flow.Model.Styles;
+using Telerik.Documents.Flow.FormatProviders.Html;
+using Telerik.Documents.Flow.Model;
+using Telerik.Documents.Flow.Model.Editing;
+using Telerik.Documents.Flow.Model.Styles;
 
 namespace HtmlGenerator
 {
@@ -77,7 +77,7 @@ namespace HtmlGenerator
             string path = "Sample Document.html";
             using (FileStream stream = File.OpenWrite(path))
             {
-                formatProvider.Export(document, stream);
+                formatProvider.Export(document, stream, null);
             }
 
             Console.Write("Document generated.");

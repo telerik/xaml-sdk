@@ -3,7 +3,7 @@ using System.IO;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Documents.Commands;
 using Telerik.Windows.Documents.Fixed;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Import;
 
 namespace PdfViewerCustomSaveCommand.Commands
 {

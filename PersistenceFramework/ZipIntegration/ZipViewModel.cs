@@ -2,7 +2,7 @@
 using System.IO;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Persistence;
-using Telerik.Windows.Zip;
+using Telerik.Zip;
 using System.Windows;
 using System.Linq;
 using System.Windows.Controls;

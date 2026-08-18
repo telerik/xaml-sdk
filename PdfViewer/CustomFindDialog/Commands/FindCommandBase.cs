@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Documents.Fixed.Search; 
+using Telerik.Documents.Fixed.Search; 
 
 namespace CustomFindDialog.Commands
 {

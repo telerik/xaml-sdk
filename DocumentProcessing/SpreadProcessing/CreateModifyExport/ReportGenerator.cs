@@ -6,15 +6,15 @@ using Telerik.Documents.Common.Model;
 using Telerik.Documents.Media;
 #else
 using System.Windows.Media;
-using Telerik.Windows.Documents.Spreadsheet.Theming;
+using Telerik.Documents.Spreadsheet.Theming;
 #endif
-using Telerik.Windows.Documents.Model;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Spreadsheet.Model;
-using Telerik.Windows.Documents.Spreadsheet.Model.Filtering;
-using Telerik.Windows.Documents.Spreadsheet.Model.Shapes;
-using Telerik.Windows.Documents.Spreadsheet.PropertySystem;
-using Telerik.Windows.Documents.Spreadsheet.Utilities;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model.Filtering;
+using Telerik.Documents.Spreadsheet.Model.Shapes;
+using Telerik.Documents.Spreadsheet.PropertySystem;
+using Telerik.Documents.Spreadsheet.Utilities;
+using Telerik.Documents.Model;
 
 namespace CreateModifyExport
 {
@@ -236,7 +236,7 @@ namespace CreateModifyExport
 
             using (Stream stream = File.OpenRead("Resources/MyCompanyLogo.jpg"))
             {
-                image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, "jpg");
+                image.ImageSource = new Telerik.Documents.Media.ImageSource(stream, "jpg");
             }
 
             this.worksheet.Images.Add(image);
@@ -263,7 +263,7 @@ namespace CreateModifyExport
             using (Stream fileStream = this.GetFileStream(fileName))
             {
                 PdfFormatProvider provider = new PdfFormatProvider();
-                provider.Export(this.Workbook, fileStream);
+                provider.Export(this.Workbook, fileStream  , null);
             }
         }
 
@@ -272,7 +272,7 @@ namespace CreateModifyExport
             using (fileStream)
             {
                 PdfFormatProvider provider = new PdfFormatProvider();
-                provider.Export(this.Workbook, fileStream);
+                provider.Export(this.Workbook, fileStream, null);
             }
         }
 

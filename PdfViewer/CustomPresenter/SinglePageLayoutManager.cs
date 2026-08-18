@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Windows.Documents.Fixed.Layout;
-using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model;
 using Telerik.Windows.Documents.UI;
 
 namespace CustomPresenter

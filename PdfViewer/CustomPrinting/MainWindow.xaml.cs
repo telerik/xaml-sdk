@@ -4,7 +4,7 @@ using System.Linq;
 using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
-using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model;
 using Telerik.Windows.Documents.Fixed.Print;
 
 namespace CustomPrinting

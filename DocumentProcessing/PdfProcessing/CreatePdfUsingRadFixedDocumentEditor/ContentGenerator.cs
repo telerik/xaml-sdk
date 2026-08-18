@@ -7,11 +7,11 @@ using Telerik.Documents.Primitives;
 #else
 using System.Windows;
 #endif
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.Editing.Tables;
-using Telerik.Windows.Documents.Fixed.Model.Fonts;
-using Telerik.Windows.Documents.Fixed.Model.Graphics;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Editing.Tables;
+using Telerik.Documents.Fixed.Model.Fonts;
+using Telerik.Documents.Fixed.Model.Graphics;
 
 namespace CreatePdfUsingRadFixedDocumentEditor
 {
@@ -51,7 +51,7 @@ namespace CreatePdfUsingRadFixedDocumentEditor
             headerCell.Borders = new TableCellBorders(new Border(BorderStyle.None));
             headerCell.ColumnSpan = 5;
             Block headerBlock = headerCell.Blocks.AddBlock();
-            headerBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+            headerBlock.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
             using (Stream companyImage = GetResourceStream("Resources/abCompany.jpg"))
             {
                 headerBlock.InsertImage(companyImage);
@@ -69,7 +69,7 @@ namespace CreatePdfUsingRadFixedDocumentEditor
 
                 Block quarterBlock = quarterCell.Blocks.AddBlock();
                 quarterBlock.GraphicProperties.FillColor = RgbColors.White;
-                quarterBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+                quarterBlock.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
                 quarterBlock.InsertText(String.Format("Q{0}", i + 1));
             }
 
@@ -91,7 +91,7 @@ namespace CreatePdfUsingRadFixedDocumentEditor
                     TableCell quarterAmountCell = productRow.Cells.AddTableCell();
                     quarterAmountCell.Background = rowColor;
                     Block amountBlock = quarterAmountCell.Blocks.AddBlock();
-                    amountBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Right;
+                    amountBlock.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Right;
                     amountBlock.InsertText(string.Format("{0:C}", product.Q[quarterIndex]));
                 }
             }

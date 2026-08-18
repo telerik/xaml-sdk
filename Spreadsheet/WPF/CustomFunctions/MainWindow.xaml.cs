@@ -1,8 +1,8 @@
 ﻿using CustomFunctions.Functions;
 using CustomFunctions.Resources;
 using System.Windows;
-using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.Expressions.Functions;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 
 namespace CustomFunctions
 {

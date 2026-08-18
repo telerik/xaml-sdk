@@ -5,8 +5,8 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Windows.Controls.Diagrams;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Data;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Data;
 
 namespace ExportToPDF
 {
