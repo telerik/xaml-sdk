@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 12.12.2017 г. 17:48:31
+// Generation date: 12.12.2017 17:48:31
 namespace NorthwindModel
 {
     /// <summary>
