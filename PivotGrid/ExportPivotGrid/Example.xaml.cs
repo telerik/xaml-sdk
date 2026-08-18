@@ -14,16 +14,17 @@ using System.Windows.Threading;
 using Microsoft.Win32;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Pivot.Export;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Editing;
 using Telerik.Windows.Documents.FormatProviders;
 using Telerik.Windows.Documents.FormatProviders.Html;
 using Telerik.Windows.Documents.FormatProviders.OpenXml.Docx;
 using Telerik.Windows.Documents.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Model;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Model;
 
 namespace ExportPivotGrid
 {
@@ -362,7 +363,7 @@ namespace ExportPivotGrid
         {
             RadFixedPage page = new RadFixedPage();
             page.Size = new Size(1000, 1000);
-            FixedContentEditor editor = new FixedContentEditor(page, Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition.Default);
+            FixedContentEditor editor = new FixedContentEditor(page, Telerik.Documents.Fixed.Model.Data.MatrixPosition.Default);
 
             ExportHelper.ExportToPdf(element, editor);
 

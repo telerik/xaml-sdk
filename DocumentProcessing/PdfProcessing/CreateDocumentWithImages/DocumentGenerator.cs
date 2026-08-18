@@ -6,22 +6,22 @@ using Telerik.Documents.Primitives;
 #else
 using System.Windows.Media.Imaging;
 using System.Windows;
-using Telerik.Windows.Zip;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters;
+using Telerik.Zip;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Filters;
 #endif
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.Resources;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Resources;
 
 namespace CreateDocumentWithImages
 {
     internal class DocumentGenerator
     {
-        public static readonly Size PageSize = new Size(Telerik.Windows.Documents.Media.Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
-        public static readonly Thickness Margins = new Thickness(Telerik.Windows.Documents.Media.Unit.MmToDip(10));
+        public static readonly Size PageSize = new Size(Telerik.Documents.Media.Unit.MmToDip(210), Telerik.Documents.Media.Unit.MmToDip(297));
+        public static readonly Thickness Margins = new Thickness(Telerik.Documents.Media.Unit.MmToDip(10));
         public static readonly Size RemainingPageSize = new Size(PageSize.Width - Margins.Left - Margins.Right, PageSize.Height - Margins.Top - Margins.Bottom);
         public const int OpaqueAlpha = 255;
 
@@ -121,7 +121,7 @@ namespace CreateDocumentWithImages
             editor.Position.Translate(Margins.Left, Margins.Top);
 
             Block block = new Block();
-            block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+            block.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
             block.TextProperties.FontSize = 22;
             block.InsertText(description);
             Size blockSize = block.Measure(RemainingPageSize, System.Threading.CancellationToken.None);
@@ -130,7 +130,7 @@ namespace CreateDocumentWithImages
             editor.Position.Translate(Margins.Left, blockSize.Height + Margins.Top + 20);
 
             Block imageBlock = new Block();
-            imageBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+            imageBlock.HorizontalAlignment = Telerik.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
             imageBlock.InsertImage(imageSource);
             editor.DrawBlock(imageBlock, RemainingPageSize);
         }

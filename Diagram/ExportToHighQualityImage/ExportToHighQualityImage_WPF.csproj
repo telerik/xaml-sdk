@@ -51,19 +51,19 @@
     <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Diagrams">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Controls.Diagrams.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Diagrams.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Diagrams.Core.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

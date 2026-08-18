@@ -4,11 +4,11 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.GridView;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Spreadsheet.Model;
-using Telerik.Windows.Documents.Spreadsheet.Model.Shapes;
+using Telerik.Documents.Spreadsheet.FormatProviders;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model.Shapes;
 
 namespace ExportImageColumn
 {
@@ -72,7 +72,7 @@ namespace ExportImageColumn
 
 						using (stream)
 						{
-							image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, imageExtension);
+							image.ImageSource = new Telerik.Documents.Media.ImageSource(stream, imageExtension);
 						}
 
 						image.Width = imageWidth;

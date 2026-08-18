@@ -6,11 +6,11 @@ using System.Windows.Media;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Diagrams;
 using Telerik.Windows.Diagrams.Core;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Data;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.Text;
-using G = Telerik.Windows.Documents.Fixed.Model.Graphics;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Data;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Text;
+using G = Telerik.Documents.Fixed.Model.Graphics;
 
 namespace ExportToPDF
 {
@@ -199,7 +199,7 @@ namespace ExportToPDF
             block.InsertText(text);
             var boundsSize = bounds.ToSize();
             var availableSize = new Size(boundsSize.Width - control.Padding.Left - control.Padding.Right, boundsSize.Width - control.Padding.Top - control.Padding.Bottom);
-            var textSize = block.Measure(availableSize);
+            var textSize = block.Measure(availableSize, new System.Threading.CancellationToken());
             var position = positionFunc(textSize);
             var textGroup = new TransformGroup();
             textGroup.Children.Add(new RotateTransform() { Angle = angle, CenterX = textSize.Width / 2, CenterY = textSize.Height / 2 });
@@ -246,12 +246,8 @@ namespace ExportToPDF
                         var bezier = segment as BezierSegment;
                         if (bezier != null)
                         {
-                            var newS = new G.BezierSegment();
-                            newS.Point1 = bezier.Point1;
-                            newS.Point2 = bezier.Point2;
-                            newS.Point3 = bezier.Point3;
+                            newFigure.Segments.AddBezierSegment(bezier.Point1, bezier.Point2, bezier.Point3);
                             newFigure.StartPoint = newFigure.StartPoint;
-                            newFigure.Segments.Add(newS);
                             continue;
                         }
 
@@ -260,9 +256,7 @@ namespace ExportToPDF
                         {
                             foreach (var point in polyLine.Points)
                             {
-                                var newS = new G.LineSegment();
-                                newS.Point = point;
-                                newFigure.Segments.Add(newS);
+                                newFigure.Segments.AddLineSegment(point);
                             }
                             continue;
                         }
@@ -270,19 +264,14 @@ namespace ExportToPDF
                         var line = segment as LineSegment;
                         if (line != null)
                         {
-                            var newS = new G.LineSegment();
-                            newS.Point = line.Point;
-                            newFigure.Segments.Add(newS);
+                            newFigure.Segments.AddLineSegment(line.Point);
                             continue;
                         }
 
                         var quadraticBezier = segment as QuadraticBezierSegment;
                         if (quadraticBezier != null)
                         {
-                            var newS = new G.QuadraticBezierSegment();
-                            newS.Point1 = quadraticBezier.Point1;
-                            newS.Point2 = quadraticBezier.Point2;
-                            newFigure.Segments.Add(newS);
+                            newFigure.Segments.AddQuadraticBezierSegment(quadraticBezier.Point1, quadraticBezier.Point2);
                             continue;
                         }
                     }

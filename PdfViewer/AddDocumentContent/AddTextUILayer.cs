@@ -5,10 +5,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Editing;
 using Telerik.Windows.Documents.Fixed.UI.Layers;
-using Telerik.Windows.Documents.Fixed.Utilities.Rendering;
+using Telerik.Documents.Fixed.Utilities.Rendering;
 
 namespace AddDocumentContent
 {

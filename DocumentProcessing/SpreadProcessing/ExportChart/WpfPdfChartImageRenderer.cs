@@ -2,9 +2,9 @@
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Telerik.Windows.Controls.Spreadsheet.Layers;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export;
-using Telerik.Windows.Documents.Spreadsheet.Model.Shapes;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf.Export;
+using Telerik.Documents.Spreadsheet.Model.Shapes;
 
 namespace ExportChart
 {

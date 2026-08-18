@@ -1,4 +1,4 @@
-﻿using Telerik.Windows.Documents.Fixed.Model.Editing;
+﻿using Telerik.Documents.Fixed.Model.Editing;
 
 namespace ExportUIElement
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Editing;
 
 namespace ExportPivotGrid
 {
@@ -53,7 +53,7 @@ namespace ExportPivotGrid
 
             matrix = MathHelper.Multiply(matrix, drawingSurface.Position.Matrix);
             IDisposable savePosition = drawingSurface.SavePosition();
-            drawingSurface.Position = new Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition(matrix);
+            drawingSurface.Position = new Telerik.Documents.Fixed.Model.Data.MatrixPosition(matrix);
 
             return savePosition;
         }

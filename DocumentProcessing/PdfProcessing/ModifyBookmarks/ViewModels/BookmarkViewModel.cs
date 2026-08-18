@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Telerik.Windows.Data;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Navigation;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Navigation;
 
 namespace ModifyBookmarks.ViewModels
 {

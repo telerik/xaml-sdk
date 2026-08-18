@@ -54,16 +54,16 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GanttView">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.GanttView.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.GanttView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Scheduling.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Scheduling.Core.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Scheduling.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Black">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office_Black.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

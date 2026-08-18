@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.FormatProviders;
+using Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Csv;
+using Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Txt;
+using Telerik.Documents.Spreadsheet.Model;
 
 namespace ConvertDocuments
 {
@@ -114,7 +114,7 @@ namespace ConvertDocuments
                 {
                     try
                     {
-                        this.Workbook = provider.Import(stream);
+                        this.Workbook = provider.Import(stream, null);
                     }
                     catch (Exception)
                     {
@@ -133,7 +133,7 @@ namespace ConvertDocuments
         {
             using (Stream stream = File.OpenRead(DocumentConverter.SampleDocumentFilePath))
             {
-                this.Workbook = new XlsxFormatProvider().Import(stream);
+                this.Workbook = new XlsxFormatProvider().Import(stream, null);
             }
         }
 

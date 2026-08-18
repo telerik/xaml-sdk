@@ -57,22 +57,22 @@
     <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GanttView">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.GanttView.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.GanttView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Scheduling.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Scheduling.Core.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Scheduling.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.VisualStudio2013">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.VisualStudio2013.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Themes.VisualStudio2013.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

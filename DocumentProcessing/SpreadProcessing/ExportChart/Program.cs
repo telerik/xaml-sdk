@@ -1,5 +1,5 @@
 ﻿using System;
-using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
+using Telerik.Documents.Spreadsheet.FormatProviders.Pdf;
 
 namespace ExportChart
 {

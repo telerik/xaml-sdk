@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Export;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Editing;
 
 namespace ExportUIElement
 {
@@ -76,7 +76,7 @@ namespace ExportUIElement
         {
             RadFixedPage page = new RadFixedPage();
             page.Size = new Size(1000, 1000);
-            FixedContentEditor editor = new FixedContentEditor(page, Telerik.Windows.Documents.Fixed.Model.Data.MatrixPosition.Default);
+            FixedContentEditor editor = new FixedContentEditor(page, Telerik.Documents.Fixed.Model.Data.MatrixPosition.Default);
 
             ExportHelper.ExportToPdf(element, editor);
 

@@ -4,11 +4,11 @@
         xmlns:local="clr-namespace:CustomFunctions"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:Controls="clr-namespace:Telerik.Windows.Controls.Spreadsheet.Controls;assembly=Telerik.Windows.Controls.Spreadsheet"
-        xmlns:Txt="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt;assembly=Telerik.Windows.Documents.Spreadsheet"
-        xmlns:Csv="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv;assembly=Telerik.Windows.Documents.Spreadsheet"
-        xmlns:Pdf="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf"
-        xmlns:Xls="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls"
-        xmlns:Xlsx="clr-namespace:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml"
+        xmlns:Txt="clr-namespace:Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Txt;assembly=Telerik.Windows.Documents.Spreadsheet"
+        xmlns:Csv="clr-namespace:Telerik.Documents.Spreadsheet.FormatProviders.TextBased.Csv;assembly=Telerik.Windows.Documents.Spreadsheet"
+        xmlns:Pdf="clr-namespace:Telerik.Documents.Spreadsheet.FormatProviders.Pdf;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf"
+        xmlns:Xls="clr-namespace:Telerik.Documents.Spreadsheet.FormatProviders.Xls;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls"
+        xmlns:Xlsx="clr-namespace:Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;assembly=Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml"
         x:Class="CustomFunctions.MainWindow"
         Title="MainWindow" Height="600" Width="1000">
     <Grid>

@@ -52,9 +52,9 @@
     </Reference>
     <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
-        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>    </Reference>
+        <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Controls.dll</HintPath>    </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-        <HintPath>$(TELERIKWPFDIR)\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>    </Reference>
+        <HintPath>$(TelerikBinariesNetFramework)\Telerik.Windows.Controls.Input.dll</HintPath>    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

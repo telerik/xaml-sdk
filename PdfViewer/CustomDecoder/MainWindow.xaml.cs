@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using Telerik.Windows.Documents.Fixed;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Filters;
 
 namespace CustomDecoder_WPF
 {

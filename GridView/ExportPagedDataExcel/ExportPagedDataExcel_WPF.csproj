@@ -51,37 +51,37 @@
 	</Reference>
     <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.Data.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Documents.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.SpreadSheet">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Documents.SpreadSheet.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Documents.SpreadSheet.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.SpreadSheet.FormatProviders.OpenXml">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Documents.SpreadSheet.FormatProviders.OpenXml.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Documents.SpreadSheet.FormatProviders.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Zip">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Zip.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView.Export">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Office_Black">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF40\Telerik.Windows.Themes.Office_Black.dll</HintPath>
+      <HintPath>$(TelerikBinariesNetFrameworkNoXaml)\Telerik.Windows.Themes.Office_Black.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Streaming;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Streaming;
 
 namespace PdfStreamWriterPerformance
 {

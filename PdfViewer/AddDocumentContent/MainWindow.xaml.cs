@@ -4,9 +4,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Telerik.Windows.Controls.FixedDocumentViewersUI.Dialogs;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import;
-using Telerik.Windows.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Import;
+using Telerik.Documents.Fixed.Model;
 using Telerik.Windows.Documents.Fixed.UI.Extensibility;
 
 namespace AddDocumentContent

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using Telerik.Documents.Primitives;
-using Telerik.Windows.Documents.Core.Imaging;
+using Telerik.Documents.Core.Imaging;
 
 namespace CreateModifyExport
 {

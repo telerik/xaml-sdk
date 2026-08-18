@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using Telerik.Windows.Controls.Spreadsheet.Worksheets;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Model;
 
 namespace CustomCellEditLayer
 {

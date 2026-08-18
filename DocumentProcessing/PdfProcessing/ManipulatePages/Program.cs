@@ -6,11 +6,11 @@ using Telerik.Documents.Primitives;
 #else
 using System.Windows;
 #endif
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
-using Telerik.Windows.Documents.Fixed.Model.Resources;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Streaming;
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.ColorSpaces;
+using Telerik.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Resources;
+using Telerik.Documents.Fixed.FormatProviders.Pdf.Streaming;
 
 namespace ManipulatePages
 {

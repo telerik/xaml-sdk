@@ -654,24 +654,13 @@
                                         <TextBlock Text="Portrait" VerticalAlignment="Center" />
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Rotate90">
+                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Landscape">
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationLandscape.png" Stretch="None" />
                                         <TextBlock Text="Landscape" VerticalAlignment="Center" />
                                     </StackPanel>
                                 </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Rotate180">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate180.png" Stretch="None" />
-                                        <TextBlock Text="Rotate 180" VerticalAlignment="Center" />
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
-                                <telerik:RadGalleryItem HorizontalContentAlignment="Left" Tag="Rotate270">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/32/PageOrientationRotate270.png" Stretch="None" />
-                                        <TextBlock Text="Rotate 270" VerticalAlignment="Center" />
-                                    </StackPanel>
-                                </telerik:RadGalleryItem>
+
                             </telerik:RadGallery>
                         </telerik:RadRibbonDropDownButton.DropDownContent>
                     </telerik:RadRibbonDropDownButton>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Media;
-using Telerik.Windows.Documents.Fixed.Model.Editing;
+using Telerik.Documents.Fixed.Model.Editing;
 
 namespace ExportUIElement
 {
@@ -32,7 +32,7 @@ namespace ExportUIElement
             }
         }
 
-        private static void SetFontFamily(Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily)
+        private static void SetFontFamily(Telerik.Documents.Fixed.Model.Editing.FixedContentEditor drawingSurface, System.Windows.Media.FontFamily fontFamily)
         { 
             if (!drawingSurface.TextProperties.TrySetFont(fontFamily))
             {

@@ -5,8 +5,8 @@ using System.Windows.Media;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Spreadsheet;
 using Telerik.Windows.Controls.Spreadsheet.Worksheets.Layers;
-using Telerik.Windows.Documents.Spreadsheet.Layout;
-using Telerik.Windows.Documents.Spreadsheet.Model;
+using Telerik.Documents.Spreadsheet.Layout;
+using Telerik.Documents.Spreadsheet.Model;
 
 
 namespace CustomCellEditLayer
