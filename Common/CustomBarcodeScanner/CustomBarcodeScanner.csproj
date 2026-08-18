@@ -16,11 +16,11 @@
 		<ItemGroup>
 			<Reference Include="Telerik.Windows.Controls">
 				<SpecificVersion>False</SpecificVersion>
-				<HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.dll</HintPath>
+				<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
 			</Reference>
 			<Reference Include="Telerik.Windows.Controls.Input">
 				<SpecificVersion>False</SpecificVersion>
-				<HintPath>$(TelerikBinariesNet)\Telerik.Windows.Controls.Input.dll</HintPath>
+				<HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Input.dll</HintPath>
 			</Reference>
 		</ItemGroup>
     </Project> 
