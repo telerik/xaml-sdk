@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Office2016InspiredRibbonView_WPF" 
+                    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                    xmlns:appearance="clr-namespace:Office2016InspiredRibbonView_WPF.Appearance"
+                    xmlns:telerikRibbonView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.RibbonView"
+                    xmlns:telerikRibbonViewPrimitives="clr-namespace:Telerik.Windows.Controls.RibbonView.Primitives;assembly=Telerik.Windows.Controls.RibbonView"
+                    xmlns:shell="clr-namespace:Telerik.Windows.Controls.RibbonView.Shell;assembly=Telerik.Windows.Controls.RibbonView">
+
+    <ControlTemplate x:Key="RibbonBackstageTemplate" TargetType="telerik:RadTabControl">
+        <ScrollViewer
+                HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                BorderThickness="0"
+                Padding="0"
+                Background="{TemplateBinding Background}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border x:Name="HeaderBackground"
+                            Grid.RowSpan="2"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding HeaderBackground}"
+                            Visibility="{TemplateBinding BackgroundVisibility}"/>
+                    <telerikRibbonView:RadRibbonButton Style="{StaticResource BackstageCloseButtonStyle}" Command="{x:Static telerik:RibbonCommands.CloseBackstage}"/>
+                    <ItemsPresenter x:Name="ItemsPresenter" Grid.Row="1"/>
+                </Grid>
+                <Grid x:Name="ContentBorder" Grid.Column="1" Grid.Row="1">
+                    <Grid Margin="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                        <ContentPresenter x:Name="ContentElement"
+                                Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsContentPreserved, Converter={StaticResource InvertBoolToVisConverter}}"
+                                ContentTemplate="{TemplateBinding SelectedContentTemplate}"
+                                ContentTemplateSelector="{TemplateBinding SelectedContentTemplateSelector}"/>
+                        <Grid x:Name="ContentElementsPanel" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsContentPreserved, Converter={StaticResource RibbonBooleanToVisibilityConverter}}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </ControlTemplate>
+
+    <Style TargetType="telerik:RadRibbonBackstage" BasedOn="{StaticResource RadRibbonBackstageStyle}">
+        <Setter Property="Template" Value="{StaticResource RibbonBackstageTemplate}" />
+        <Setter Property="Background" Value="{telerik:VisualStudio2013Resource ResourceKey=PrimaryBrush}" />
+        <Setter Property="HeaderBackground" Value="{appearance:Office2016Resource Resource=BackstageBackground}" />
+    </Style>
+
+    <Style TargetType="telerik:RadRibbonBackstageItem" BasedOn="{StaticResource RadRibbonBackstageItemStyle}">
+        <Setter Property="HeaderForeground" Value="White" />
+    </Style>
+</ResourceDictionary>

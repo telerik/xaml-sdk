@@ -1,0 +1,49 @@
+﻿<Window x:Class="DefaultVisualGeometry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="350" Width="525">
+    <FrameworkElement.Resources>
+        <MeshGeometry3D x:Key="octahedron"
+                        Positions="0.5 0.5 0   0.5 0 0.5   1 0.5 0.5    0.5 1 0.5   0 0.5 0.5    0.5 0.5 1" 
+                        TriangleIndices="0 2 1   0 3 2   0 4 3   0 1 4   5 1 2   5 2 3   5 3 4   5 4 1" />
+    </FrameworkElement.Resources>
+    <Grid>
+        <telerik:RadCartesianChart3D>
+            <telerik:RadCartesianChart3D.XAxis>
+                <telerik:CategoricalAxis3D />
+            </telerik:RadCartesianChart3D.XAxis>
+            <telerik:RadCartesianChart3D.YAxis>
+                <telerik:CategoricalAxis3D />
+            </telerik:RadCartesianChart3D.YAxis>
+            <telerik:RadCartesianChart3D.ZAxis>
+                <telerik:LinearAxis3D />
+            </telerik:RadCartesianChart3D.ZAxis>
+            <telerik:RadCartesianChart3D.Grid>
+                <telerik:CartesianChart3DGrid />
+            </telerik:RadCartesianChart3D.Grid>
+            <telerik:RadCartesianChart3D.Behaviors>
+                <telerik:Chart3DCameraBehavior />
+            </telerik:RadCartesianChart3D.Behaviors>
+            <telerik:RadCartesianChart3D.Series>
+                <telerik:PointSeries3D PointSize="100" DefaultVisualGeometry="{StaticResource octahedron}">
+                    <telerik:PointSeries3D.DataPoints>
+                        <telerik:XyzDataPoint3D XValue="2013" YValue="Jan" ZValue="11" />
+                        <telerik:XyzDataPoint3D XValue="2013" YValue="Feb" ZValue="12" />
+                        <telerik:XyzDataPoint3D XValue="2013" YValue="March" ZValue="13" />
+                        <telerik:XyzDataPoint3D XValue="2014" YValue="Jan" ZValue="14" />
+                        <telerik:XyzDataPoint3D XValue="2014" YValue="Feb" ZValue="15" />
+                        <telerik:XyzDataPoint3D XValue="2014" YValue="March" ZValue="16" />
+                        <telerik:XyzDataPoint3D XValue="2015" YValue="Jan" ZValue="17" />
+                        <telerik:XyzDataPoint3D XValue="2015" YValue="Feb" ZValue="18" />
+                        <telerik:XyzDataPoint3D XValue="2015" YValue="March" ZValue="19" />
+                        <telerik:XyzDataPoint3D XValue="2016" YValue="Jan" ZValue="20" />
+                        <telerik:XyzDataPoint3D XValue="2016" YValue="Feb" ZValue="21" />
+                        <telerik:XyzDataPoint3D XValue="2016" YValue="March" ZValue="22" />
+                    </telerik:PointSeries3D.DataPoints>
+                </telerik:PointSeries3D>
+            </telerik:RadCartesianChart3D.Series>
+        </telerik:RadCartesianChart3D>
+
+    </Grid>
+</Window>

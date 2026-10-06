@@ -1,0 +1,73 @@
+﻿<Window x:Class="SeriesDescriptorSelector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:SeriesDescriptorSelector"
+        Title="MainWindow" Height="450" Width="625">
+    <FrameworkElement.Resources>
+        <local:ToLinearAxisConverter x:Key="ToLinearAxisConverter" />
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <telerik:RadCartesianChart x:Name="chart1">
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:DateTimeContinuousAxis MajorStepUnit="Month" MajorStep="1" LabelFormat="MMM" />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis ElementBrush="#FF5AA4D4" />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.SeriesProvider>
+                <telerik:ChartSeriesProvider Source="{Binding SeriesData}" >
+                    <telerik:ChartSeriesProvider.SeriesDescriptorSelector>
+                        <local:CustomSeriesDescriptorSelector>
+                            <local:CustomSeriesDescriptorSelector.DailyDescriptor>
+                                <telerik:CategoricalSeriesDescriptor CategoryPath="Date" ValuePath="UnitsSold" ItemsSourcePath="DailyData">
+                                    <telerik:CategoricalSeriesDescriptor.Style>
+                                        <Style TargetType="telerik:LineSeries">
+                                            <Setter Property="Stroke" Value="{Binding DailyStroke}" />
+                                            <Setter Property="VerticalAxis" Value="{Binding Converter={StaticResource ToLinearAxisConverter}}" />
+                                            <Setter Property="LegendSettings">
+                                                <Setter.Value>
+                                                    <telerik:SeriesLegendSettings Title="daily data" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </telerik:CategoricalSeriesDescriptor.Style>
+                                </telerik:CategoricalSeriesDescriptor>
+                            </local:CustomSeriesDescriptorSelector.DailyDescriptor>
+                            <local:CustomSeriesDescriptorSelector.MonthDescriptor>
+                                <telerik:CategoricalSeriesDescriptor CategoryPath="Date" ValuePath="TotalAmmount" ItemsSourcePath="MonthData">
+                                    <telerik:CategoricalSeriesDescriptor.Style>
+                                        <Style TargetType="telerik:BarSeries">
+                                            <Setter Property="ShowLabels" Value="True" />
+                                            <Setter Property="LegendSettings">
+                                                <Setter.Value>
+                                                    <telerik:SeriesLegendSettings Title="monthly data" />
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter Property="DefaultVisualStyle">
+                                                <Setter.Value>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Background" Value="#FF5AA4D4" />
+                                                        <Setter Property="CornerRadius" Value="4 4 0 0" />
+                                                    </Style>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </telerik:CategoricalSeriesDescriptor.Style>
+                                </telerik:CategoricalSeriesDescriptor>
+                            </local:CustomSeriesDescriptorSelector.MonthDescriptor>
+                        </local:CustomSeriesDescriptorSelector>
+                    </telerik:ChartSeriesProvider.SeriesDescriptorSelector>
+                </telerik:ChartSeriesProvider>
+            </telerik:RadCartesianChart.SeriesProvider>
+        </telerik:RadCartesianChart>
+        <telerik:RadLegend Items="{Binding LegendItems, ElementName=chart1}"
+                           Background="White" 
+                           BorderBrush="LightGray" 
+                           BorderThickness="1"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom"
+                           Margin="0 0 30 30" />
+    </Grid>
+</Window>

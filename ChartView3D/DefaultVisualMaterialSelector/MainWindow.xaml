@@ -1,0 +1,42 @@
+﻿<Window x:Class="DefaultVisualMaterialSelector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:DefaultVisualMaterialSelector"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Width="800"
+        Height="800">
+    <Window.Resources>
+        <local:PointMaterialSelector x:Key="pointMaterialSelector" />
+    </Window.Resources>
+    <Grid>
+        <telerik:RadCartesianChart3D>
+            <telerik:RadCartesianChart3D.XAxis>
+                <telerik:LinearAxis3D />
+            </telerik:RadCartesianChart3D.XAxis>
+            <telerik:RadCartesianChart3D.YAxis>
+                <telerik:LinearAxis3D />
+            </telerik:RadCartesianChart3D.YAxis>
+            <telerik:RadCartesianChart3D.ZAxis>
+                <telerik:CategoricalAxis3D />
+            </telerik:RadCartesianChart3D.ZAxis>
+            <telerik:RadCartesianChart3D.Series>
+                <telerik:PointSeries3D PointSize="100"
+                                       DefaultVisualMaterialSelector="{StaticResource pointMaterialSelector}"
+                                       XValueBinding="XValue"
+                                       YValueBinding="YValue" 
+                                       ZValueBinding="ZValue"
+                                       ItemsSource="{Binding}"/>
+            </telerik:RadCartesianChart3D.Series>
+            <telerik:RadCartesianChart3D.Grid>
+                <telerik:CartesianChart3DGrid />
+            </telerik:RadCartesianChart3D.Grid>
+            <telerik:RadCartesianChart3D.Behaviors>
+                <telerik:Chart3DCameraBehavior />
+            </telerik:RadCartesianChart3D.Behaviors>
+        </telerik:RadCartesianChart3D>
+    </Grid>
+</Window>

@@ -1,0 +1,91 @@
+﻿<Window x:Class="BindingSelectedItemsToViewModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:BindingSelectedItemsToViewModel"
+        Title="MainWindow">
+    <FrameworkElement.Resources>
+        <DataTemplate x:Key="listItemTemplate">
+            <Border Padding="3"                               
+                    Margin="5 1"                               
+                    Background="#304958"                               
+                    TextBlock.Foreground="White">
+                <StackPanel>
+                    <TextBlock Text="{Binding Value}" />
+                    <TextBlock Text="{Binding Category}" />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+        <Style x:Key="listHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="Padding" Value="3" />
+            <Setter Property="Margin" Value="5 5 5 0" />
+        </Style>
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <telerik:RadPieChart x:Name="pieChart" 
+                             Grid.ColumnSpan="2"
+                             Palette="Windows8" 
+                             SelectionPalette="Windows8Selected">
+            <telerik:RadPieChart.Series>
+                <telerik:PieSeries ValueBinding="Value" ItemsSource="{Binding PieDataItems}" />
+            </telerik:RadPieChart.Series>
+            <telerik:RadPieChart.Behaviors>
+                <telerik:ChartSelectionBehavior local:ChartUtilities.SelectedItems="{Binding SelectedPieDataItems}"
+                                                DataPointSelectionMode="Multiple"/>
+            </telerik:RadPieChart.Behaviors>
+        </telerik:RadPieChart>
+
+        <telerik:RadCartesianChart x:Name="chart" 
+                                   Grid.Row="1" 
+                                   Palette="Windows8" 
+                                   SelectionPalette="Windows8Selected">
+            <telerik:RadCartesianChart.VerticalAxis>
+                <telerik:LinearAxis />
+            </telerik:RadCartesianChart.VerticalAxis>
+            <telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:CategoricalAxis />
+            </telerik:RadCartesianChart.HorizontalAxis>
+            <telerik:RadCartesianChart.Series>
+                <telerik:BarSeries ValueBinding="Value" CategoryBinding="Category" ItemsSource="{Binding CartesianDataItems}" />
+            </telerik:RadCartesianChart.Series>
+            <telerik:RadCartesianChart.Behaviors>
+                <telerik:ChartSelectionBehavior local:ChartUtilities.SelectedItems="{Binding SelectedCartesianDataItems}"
+                                                DataPointSelectionMode="Multiple" />
+            </telerik:RadCartesianChart.Behaviors>
+        </telerik:RadCartesianChart>
+
+        <telerik:RadGridView x:Name="gridView" 
+                             Grid.Column="1" 
+                             Grid.Row="1" 
+                             ItemsSource="{Binding CartesianDataItems}" 
+                             SelectionMode="Multiple"
+                             local:GridUtilities.SelectedItems="{Binding SelectedCartesianDataItems}"/>
+
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Selected Pie Data Items" Style="{StaticResource listHeaderStyle}" />
+            <Border Height="2" Background="Black" Margin="5 0 5 2" />
+            <ItemsControl ItemsSource="{Binding SelectedPieDataItems}" ItemTemplate="{StaticResource listItemTemplate}" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="1">
+            <TextBlock Text="Selected Cartesian Data Items" Style="{StaticResource listHeaderStyle}" />
+            <Border Height="2" Background="Black" Margin="5 0 5 2" />
+            <ItemsControl ItemsSource="{Binding SelectedCartesianDataItems}" ItemTemplate="{StaticResource listItemTemplate}" />
+        </StackPanel>
+    </Grid>
+</Window>

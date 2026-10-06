@@ -1,0 +1,158 @@
+﻿<Window x:Class="LinearScaleBarIndicator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="500"
+		Width="Auto">
+    <Grid UseLayoutRounding="True"
+		  VerticalAlignment="Center">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<TextBlock Text="Standard indicator without RangeColorMode"
+				   HorizontalAlignment="Center"/>
+		<telerik:RadVerticalLinearGauge Width="100"
+										Height="250"
+										telerik:StyleManager.Theme="Windows8"
+										Grid.Row="1">
+			<telerik:VerticalLinearScale Min="0"
+										 Max="100">
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator Value="50" />
+				</telerik:VerticalLinearScale.Indicators>
+				<telerik:VerticalLinearScale.CustomItems>
+					<Border BorderBrush="#FF606060"
+							BorderThickness="1,0"
+							telerik:ScaleObject.Value="50"
+							telerik:ScaleObject.Location="OverCenter"
+							telerik:ScaleObject.RelativeHeight="0.8*"
+							telerik:ScaleObject.RelativeWidth="0.14*"/>
+				</telerik:VerticalLinearScale.CustomItems>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+		
+		<TextBlock Text="Using default RangeColorMode"
+				   HorizontalAlignment="Center"
+				   Grid.Column="1"/>
+		<telerik:RadVerticalLinearGauge Width="100"
+										Height="250"
+										telerik:StyleManager.Theme="Windows8"
+										Grid.Row="1"
+										Grid.Column="1">
+			<telerik:VerticalLinearScale IsInteractive="True"
+										 RangeLocation="Outside"
+										 RangeOffset="-0.02*">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FF23568F"
+										TickBackground="#FF23568F"
+										LabelForeground="#FF23568F"
+										IndicatorBackground="#FF23568F" />
+					<telerik:GaugeRange Min="50"
+										Max="100"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FFA0CCFF"
+										TickBackground="#FFA0CCFF"
+										LabelForeground="#FFA0CCFF"
+										IndicatorBackground="#FFA0CCFF" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator UseRangeColor="True"
+										  RangeColorMode="Default"
+										  Value="60"
+										  StartWidth="0.06"/>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+
+		<TextBlock Text="Using RangeColorMode=&quot;ProportionalBrush&quot;"
+				   HorizontalAlignment="Center"
+				   Grid.Column="2"/>
+		<telerik:RadVerticalLinearGauge Width="100"
+										Height="250"
+										telerik:StyleManager.Theme="Windows8"
+										Grid.Row="1"
+										Grid.Column="2">
+			<telerik:VerticalLinearScale IsInteractive="True"
+										 RangeLocation="Outside"
+										 RangeOffset="-0.02*">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FF23568F"
+										TickBackground="#FF23568F"
+										LabelForeground="#FF23568F"
+										IndicatorBackground="#FF23568F" />
+					<telerik:GaugeRange Min="50"
+										Max="100"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FFA0CCFF"
+										TickBackground="#FFA0CCFF"
+										LabelForeground="#FFA0CCFF"
+										IndicatorBackground="#FFA0CCFF" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator UseRangeColor="True" 
+										  RangeColorMode="ProportionalBrush"
+										  Value="60"
+										  StartWidth="0.06"/>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+
+		<TextBlock Text="Using RangeColorMode=&quot;ProportionalGradient&quot;"
+				   HorizontalAlignment="Center"
+				   Grid.Column="3"/>
+		<telerik:RadVerticalLinearGauge Width="100"
+										Height="250"
+										telerik:StyleManager.Theme="Windows8"
+										Grid.Row="1"
+										Grid.Column="3">
+			<telerik:VerticalLinearScale IsInteractive="True"
+										 RangeLocation="Outside"
+										 RangeOffset="-0.02*">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FF23568F"
+										TickBackground="#FF23568F"
+										LabelForeground="#FF23568F"
+										IndicatorBackground="#FF23568F" />
+					<telerik:GaugeRange Min="50"
+										Max="100"
+										StartWidth="0.02"
+										EndWidth="0.02"
+										Background="#FFA0CCFF"
+										TickBackground="#FFA0CCFF"
+										LabelForeground="#FFA0CCFF"
+										IndicatorBackground="#FFA0CCFF" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator UseRangeColor="True"
+										  RangeColorSmoothing="0.5"
+										  RangeColorMode="ProportionalGradient"
+										  Value="60"
+										  StartWidth="0.06"/>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

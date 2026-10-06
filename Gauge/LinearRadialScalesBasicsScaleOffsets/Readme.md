@@ -1,0 +1,4 @@
+## Linear Radial Scales Basics Scale Offsets
+The scales display values depending on their Min and Max properties. However there are cases, in which you might want to modify the value of the first or the last tick of the scale. For example if you have a scale with minimum value of 0.95 and maximum value of 20.8, but you want to show the ticks for integer values only (from 1 to 20 only), you can use the StartTickOffset and the EndTickOffset properties of the scale to adjust the fist and the last tick's values.
+
+[//]: <keywords: radverticallineargauge, verticallinearscale, starttickoffset, endtickoffset>

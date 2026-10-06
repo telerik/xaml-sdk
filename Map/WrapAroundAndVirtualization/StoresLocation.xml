@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StoresLocation>
+  <Area Latitude="40.7303372585072" Longitude="-73.9903430006397"
+		  Name="New York Market Area">
+    <Market Latitude="40.793337949928151" Longitude="-73.945974064779776"
+			  Name="New York Market #1"/>
+    <Store Latitude="40.7283963528265" Longitude="-74.0378397235482"
+			  Name="New York Store #1"/>
+    <Store Latitude="40.732833387389" Longitude="-73.9826237687688"
+			  Name="New York Store #2"/>
+  </Area>
+  <Area Latitude="29.7651699555732" Longitude="-95.3704952261345"
+		  Name="Houston Market Area">
+    <Market Latitude="29.7999226603755" Longitude="-95.4546629450205"
+			  Name="Northwest Mall"/>
+    <Store Latitude="29.8549349724088" Longitude="-95.3009240887029"
+			  Name="Houston Store #1"/>
+    <Store Latitude="29.8122997603266" Longitude="-95.4064690134422"
+			  Name="Houston Store #2"/>
+    <Store Latitude="29.7769777465502" Longitude="-95.371855106105"
+			  Name="Houston Store #3"/>
+  </Area>
+  <Area Latitude="34.0538071316874" Longitude="-118.243429567566"
+		  Name="Los Angeles Market Area">
+    <Market Latitude="33.9878208536392" Longitude="-118.21471115564"
+			  Name="Los Angeles Market #1"/>
+    <Market Latitude="33.0522993049224" Longitude="-118.23227694248"
+			  Name="Los Angeles Market #2"/>    
+    <Store Latitude="34.03069377082" Longitude="-118.15366407846"
+			  Name="Los Angeles Store #1"/>
+  </Area>
+</StoresLocation>

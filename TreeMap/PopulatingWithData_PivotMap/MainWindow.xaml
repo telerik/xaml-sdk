@@ -1,0 +1,16 @@
+﻿<Window x:Class="PopulatingWithData_PivotMap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+	<telerik:RadPivotMap Name="treeMap1"
+						 ValuePath="Value"
+						 ItemsSource="{Binding}">
+		<telerik:RadPivotMap.GroupDefinitions>
+			<telerik:GroupDefinition Member="Category" />
+			<telerik:GroupDefinition Member="SubCategory" />
+		</telerik:RadPivotMap.GroupDefinitions>
+	</telerik:RadPivotMap>
+</Window>

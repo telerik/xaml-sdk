@@ -1,0 +1,34 @@
+﻿<Window x:Class="MvvmSupport.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:MvvmSupport"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="400"
+		Width="700">
+	<Window.DataContext>
+		<local:ExampleViewModel PeriodStart="01/01/2012"
+								PeriodEnd="01/01/2013"
+								VisiblePeriodStart="01/01/2012"
+								VisiblePeriodEnd="01/01/2013" />
+	</Window.DataContext>
+	<Grid VerticalAlignment="Center">
+		<telerik:RadTimeBar Margin="8,8,8,0"
+							Height="150"
+							VerticalAlignment="Top"
+							PeriodStart="{Binding PeriodStart, Mode=TwoWay}"
+							PeriodEnd="{Binding PeriodEnd, Mode=TwoWay}"
+							VisiblePeriodStart="{Binding VisiblePeriodStart, Mode=TwoWay}"
+							VisiblePeriodEnd="{Binding VisiblePeriodEnd, Mode=TwoWay}">
+			<telerik:RadTimeBar.Intervals>
+				<telerik:YearInterval/>
+				<telerik:QuarterInterval/>
+				<telerik:MonthInterval/>
+				<telerik:WeekInterval/>
+				<telerik:DayInterval/>
+			</telerik:RadTimeBar.Intervals>
+
+			<telerik:RadLinearSparkline ItemsSource="{Binding Data}" />
+		</telerik:RadTimeBar>
+	</Grid>
+</Window>

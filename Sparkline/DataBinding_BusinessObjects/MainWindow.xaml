@@ -1,0 +1,41 @@
+﻿<Window x:Class="DataBinding_BusinessObjects.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Width="800"
+		Height="600">
+    <Grid Width="Auto"
+		  HorizontalAlignment="Center"
+		  VerticalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<telerik:RadColumnSparkline x:Name="PART_SparkbarControl"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Top"
+									Height="48"
+									Width="400"
+									ShowAxis="False"
+									ItemsSource="{Binding}"
+									XValuePath="Cost"
+									YValuePath="UnitCost" />
+		
+		<telerik:RadLinearSparkline x:Name="PART_SparklineControl"
+									Grid.Row="1"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Top"
+									Height="48"
+									Width="400"
+									Margin="0,54,0,0"
+									ShowAxis="False"
+									ItemsSource="{Binding}"
+									XValuePath="MyDate"
+									YValuePath="UnitCost"
+									ShowLastPointIndicator="True"
+									ShowHighPointIndicators="True"
+									ShowLowPointIndicators="True" />
+	</Grid>
+</Window>

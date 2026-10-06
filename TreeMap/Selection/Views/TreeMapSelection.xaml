@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="Selection.Views.TreeMapSelection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:Selection"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <telerik:RadTreeMap x:Name="treemap1" 
+                            ItemsSource="{Binding}" 
+                            LayoutStrategy="Squarified"
+                            IsSelectionEnabled="True"
+                            SelectionMode="Extended">
+            <telerik:RadTreeMap.TypeDefinitions>
+                <telerik:TreeMapTypeDefinition TargetTypeName="Category"
+                                               ValuePath="CategoryTotalValue"
+                                               ChildrenPath="Products"
+                                               LayoutStrategy="Squarified"
+                                               LabelPath="CategoryName">
+                    <telerik:TreeMapTypeDefinition.Mappings>
+                        <telerik:BrushColorizer Brush="#EFDFCF" />
+                        <telerik:BrushColorizer Brush="#EFDFCF" TargetPropertyName="BorderBrush" />
+                        <telerik:PaletteColorizer TargetPropertyName="ChildrenBackgroundBrush">
+                            <SolidColorBrush Color="#69C7D3" />
+                            <SolidColorBrush Color="#B1E292" />
+                            <SolidColorBrush Color="#D2B4E2" />
+                            <SolidColorBrush Color="#A2D7F0" />
+                        </telerik:PaletteColorizer>
+                    </telerik:TreeMapTypeDefinition.Mappings>
+                </telerik:TreeMapTypeDefinition>
+                <telerik:TreeMapTypeDefinition TargetTypeName="Product"
+                                               ValuePath="UnitPrice"
+                                               LabelPath="UnitPrice"
+                                               LabelFormat="{}{0:C0}">
+                </telerik:TreeMapTypeDefinition>
+            </telerik:RadTreeMap.TypeDefinitions>
+        </telerik:RadTreeMap>
+        <Border Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <RadioButton Content="Single Selection" Checked="RadioButtonSingleSelection_Checked" />
+                <RadioButton Content="Extended Selection" Checked="RadioButtonExtendedSelection_Checked" IsChecked="True" Grid.Row="1" />
+                <RadioButton Content="Multiple Selection" Checked="RadioButtonMultipleSelection_Checked" Grid.Row="2" />
+                <ListBox Grid.Row="3" ItemsSource="{Binding SelectedItems, ElementName=treemap1, Mode=OneWay}" Width="120">
+                    <FrameworkElement.Resources>
+                        <DataTemplate DataType="{x:Type local:Category}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding CategoryName}" Width="60" />
+                                <TextBlock Text="{Binding CategoryTotalValue, StringFormat=C0}" />
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Product}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding ProductName}" Width="60" />
+                                <TextBlock Text="{Binding TotalValue, StringFormat=C0}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </FrameworkElement.Resources>
+                </ListBox>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

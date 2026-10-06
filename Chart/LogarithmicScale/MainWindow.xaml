@@ -1,0 +1,40 @@
+﻿<Window x:Class="LogarithmicScale.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid>
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisY>
+								<telerik:AxisY IsLogarithmic="True" />
+							</telerik:ChartArea.AxisY>
+							
+							<telerik:ChartArea.DataSeries>
+								<telerik:DataSeries>
+									<telerik:DataPoint XValue="1"
+													   YValue="10" />
+									<telerik:DataPoint XValue="2"
+													   YValue="100" />
+									<telerik:DataPoint XValue="3"
+													   YValue="1000" />
+									<telerik:DataPoint XValue="4"
+													   YValue="10000" />
+									<telerik:DataPoint XValue="5"
+													   YValue="100000" />
+									<telerik:DataPoint XValue="6"
+													   YValue="1000000" />
+								</telerik:DataSeries>
+							</telerik:ChartArea.DataSeries>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+	</Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="TicksDataTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadHorizontalLinearGauge Width="200"
+										  Height="100"
+										  telerik:StyleManager.Theme="Windows8">
+			<telerik:RadHorizontalLinearGauge.Resources>
+				<DataTemplate x:Key="CustomTemplate">
+					<Ellipse Fill="#FFE50000"
+							 HorizontalAlignment="Stretch"
+							 VerticalAlignment="Stretch" />
+				</DataTemplate>
+			</telerik:RadHorizontalLinearGauge.Resources>
+			<telerik:HorizontalLinearScale Min="0"
+										   Max="100" 
+										   MajorTickTemplate="{StaticResource CustomTemplate}"
+										   MajorTickRelativeWidth="0.03*"/>
+		</telerik:RadHorizontalLinearGauge>
+	</Grid>
+</Window>

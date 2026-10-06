@@ -1,0 +1,106 @@
+﻿<Window x:Class="StripLinesAndGridLines.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="400"
+		Width="800">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+
+		<!--Left Chart-->
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding Series1Items}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:BarSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="XCat"
+											 DataPointMember="XCategory" />
+						<telerik:ItemMapping FieldName="YVal"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+
+				<telerik:SeriesMapping ItemsSource="{Binding Series2Items}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:BarSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="XCat"
+											 DataPointMember="XCategory" />
+						<telerik:ItemMapping FieldName="YVal"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX StripLinesVisibility="Visible" />
+							</telerik:ChartArea.AxisX>
+							<telerik:ChartArea.AxisY>
+								<telerik:AxisY StripLinesVisibility="Collapsed"
+											   MajorGridLinesVisibility="Visible"
+											   MinorGridLinesVisibility="Visible" />
+							</telerik:ChartArea.AxisY>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+
+		<!--Right Chart-->
+		<telerik:RadChart x:Name="radChart2"
+						  Grid.Column="1">
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding Series1Items}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="XCat"
+											 DataPointMember="XCategory" />
+						<telerik:ItemMapping FieldName="YVal"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+
+				<telerik:SeriesMapping ItemsSource="{Binding Series2Items}">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition  />
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="XCat"
+											 DataPointMember="XCategory" />
+						<telerik:ItemMapping FieldName="YVal"
+											 DataPointMember="YValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea>
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX MajorGridLinesVisibility="Visible"
+											   LayoutMode="Inside" />
+							</telerik:ChartArea.AxisX>
+							<telerik:ChartArea.AxisY>
+								<telerik:AxisY StripLinesVisibility="Collapsed"
+											   MajorGridLinesVisibility="Visible"
+											   MinorGridLinesVisibility="Collapsed" />
+							</telerik:ChartArea.AxisY>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+	</Grid>
+</Window>

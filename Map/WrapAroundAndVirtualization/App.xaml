@@ -1,0 +1,59 @@
+﻿<Application x:Class="UI_Virtualization_And_Wraparound.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UI_Virtualization_And_Wraparound"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="PinBorderBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#7FFFFFFF" Offset="0"/>
+            <GradientStop Color="White" Offset="0.94"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinGreenBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF17A913"/>
+            <GradientStop Color="#FF85E257" Offset="1"/>
+            <GradientStop Color="#FF4AAF17" Offset="0.5"/>
+            <GradientStop Color="#FF269121" Offset="0.2"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinArrowGreenBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF85E257" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinYellowBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFC79500"/>
+            <GradientStop Color="#FFF0C802" Offset="1"/>
+            <GradientStop Color="#FFD1B009" Offset="0.5"/>
+            <GradientStop Color="#FFBD8500" Offset="0.2"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinArrowYellowBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF0C802" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinRedBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFB52D50"/>
+            <GradientStop Color="#FFF05A3C" Offset="1"/>
+            <GradientStop Color="#FFD13434" Offset="0.5"/>
+            <GradientStop Color="#FFA91F36" Offset="0.198"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinArrowRedBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF05A3C" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinArrowOpacityMask1" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Offset="0.065"/>
+            <GradientStop Color="White" Offset="0.224"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PinArrowOpacityMask2" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop/>
+            <GradientStop Color="White" Offset="0.224"/>
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

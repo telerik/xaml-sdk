@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:_2._5D_Chart">
+    
+    <!--These default values are only to avoid design time problems.-->
+    <sys:Double x:Key="hOffset">0.0</sys:Double>
+    <sys:Double x:Key="hOffsetNegated">0.0</sys:Double>
+    <sys:Double x:Key="hOffsetHalf">0.0</sys:Double>
+    <sys:Double x:Key="vOffset">0.0</sys:Double>
+    <sys:Double x:Key="vOffsetNegated">0.0</sys:Double>
+    <sys:Double x:Key="vOffsetNegatedHalf">0.0</sys:Double>
+    <sys:Double x:Key="chart25DAngleX">0.0</sys:Double>
+    <sys:Double x:Key="chart25DAngleY">0.0</sys:Double>
+
+    <local:PaletteBrushConverter x:Key="paletteBrushConverter" />
+    
+    <DataTemplate x:Key="barTemplate25D">
+        <Grid x:Name="barRoot" 
+              Background="{Binding Converter={StaticResource paletteBrushConverter}}">
+            <Border Tag="top" 
+                    VerticalAlignment="Top" 
+                    Height="{DynamicResource vOffset}" 
+                    local:ChartViewUtilities.MarginTop="{DynamicResource vOffsetNegated}"
+                    Background="{Binding Background, ElementName=barRoot}">
+                <FrameworkElement.RenderTransform>
+                    <SkewTransform CenterX="0" 
+                                   CenterY="{DynamicResource vOffset}" 
+                                   AngleX="{DynamicResource chart25DAngleX}" 
+                                   AngleY="0" />
+                </FrameworkElement.RenderTransform>
+                <Border Background="#33FFFFFF" />
+            </Border>
+            <Border Tag="leftSide" 
+                    HorizontalAlignment="Left" 
+                    Width="{DynamicResource hOffsetNegated}" 
+                    local:ChartViewUtilities.MarginLeft="{DynamicResource hOffset}"
+                    Background="{Binding Background, ElementName=barRoot}">
+                <FrameworkElement.RenderTransform>
+                    <SkewTransform CenterX="{DynamicResource hOffsetNegated}" 
+                                   CenterY="0" 
+                                   AngleX="0" 
+                                   AngleY="{DynamicResource chart25DAngleY}" />
+                </FrameworkElement.RenderTransform>
+                <Border>
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#22000000" Offset="0" />
+                            <GradientStop Color="#88000000" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+            <Border Tag="rightSide" 
+                    HorizontalAlignment="Right" 
+                    Width="{DynamicResource hOffset}" 
+                    local:ChartViewUtilities.MarginRight="{DynamicResource hOffsetNegated}" 
+                    Background="{Binding Background, ElementName=barRoot}">
+                <FrameworkElement.RenderTransform>
+                    <SkewTransform CenterX="0" 
+                                   CenterY="0" 
+                                   AngleX="0" 
+                                   AngleY="{DynamicResource chart25DAngleY}" />
+                </FrameworkElement.RenderTransform>
+                <Border>
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#22000000" Offset="0" />
+                            <GradientStop Color="#88000000" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+            <Border Tag="front">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Transparent" Offset="0.0" />
+                        <GradientStop Color="#66000000" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="ellipseTemplate25D">
+        <Grid>
+            <Grid.RenderTransform>
+                <TranslateTransform X="{DynamicResource hOffsetHalf}" 
+                                    Y="{DynamicResource vOffsetNegatedHalf}" />
+            </Grid.RenderTransform>
+            <Ellipse Fill="{Binding Converter={StaticResource paletteBrushConverter}}" />
+            <Ellipse local:ChartViewUtilities.RadialGradientOriginAndCenterX="{DynamicResource hOffset}" 
+                     local:ChartViewUtilities.RadialGradientOriginAndCenterY="{DynamicResource vOffset}">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#BBFFFFFF" Offset="0.0" />
+                        <GradientStop Color="#66FFFFFF" Offset="0.1" />
+                        <GradientStop Color="#00FFFFFF" Offset="1.0" />
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="tickTemplate25D">
+        <Grid>
+            <Rectangle Height="1" Width="5" Fill="Gray" />
+            <Canvas HorizontalAlignment="Right">
+                <Line X2="{DynamicResource hOffset}" 
+                      Y2="{DynamicResource vOffsetNegated}" 
+                      Stroke="LightGray" />
+            </Canvas>
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,14 +1,17 @@
-﻿<dialogs:RadRichTextBoxWindow x:Class="CustomImageEditorDialogDemo.MyCustomImageEditorDialog"
-           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
-           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-           xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"
-           xmlns:dialogs="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
-           xmlns:commands="clr-namespace:Telerik.Windows.Media.Imaging.ImageEditorCommands.RoutedCommands;assembly=Telerik.Windows.Controls.ImageEditor"
-           WindowStartupLocation="CenterOwner" 
-           telerik:LocalizationManager.ResourceKey="Documents_ImageEditorDialog_Header"
-           KeyDown="RadWindow_KeyDown" Height="670" Width="800" >
+﻿<dialogs:RadRichTextBoxWindow x:Class="CustomImageEditorDialogDemoWPF.MyCustomImageEditorDialogWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:tools="clr-namespace:Telerik.Windows.Media.Imaging.Tools;assembly=Telerik.Windows.Controls.ImageEditor"
+        xmlns:dialogs="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+        xmlns:commands="clr-namespace:Telerik.Windows.Media.Imaging.ImageEditorCommands.RoutedCommands;assembly=Telerik.Windows.Controls.ImageEditor"
+        WindowStartupLocation="CenterOwner" 
+        telerik:LocalizationManager.ResourceKey="Documents_ImageEditorDialog_Header"
+        KeyDown="RadWindow_KeyDown" Height="670" Width="800" >
+    <telerik:RadWindow.Resources>
+        <tools:ResizeTool x:Key="ResizeTool"/>
+        <tools:CanvasResizeTool x:Key="CanvasResizeTool"/>
+    </telerik:RadWindow.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

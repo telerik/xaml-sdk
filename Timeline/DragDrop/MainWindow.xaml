@@ -1,0 +1,67 @@
+﻿<Window x:Class="DragDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:DragDrop"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <FrameworkElement.Resources>
+        <Style TargetType="telerik:TimelineItemControl">
+            <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
+        </Style>
+        <Style TargetType="telerik:TimelineInstantItemControl">
+            <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
+        </Style>
+
+        <Style TargetType="telerik:TimelineItemGroupControl">
+            <Setter Property="IsExpanded" Value="True" />
+        </Style>
+
+        <telerik:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+        <DataTemplate x:Key="TimelineItemDragVisualTemplate">
+            <StackPanel>
+                <Image HorizontalAlignment="Left" 
+                       Source="{Binding ItemImageSource}" 
+                       Width="{Binding ItemImageWidth}" 
+                       Height="{Binding ItemImageHeight}" />
+                <Border Margin="2" Background="#EF3D50" Padding="2" Visibility="{Binding GroupKey, Converter={StaticResource NullToVisibilityConverter}}">
+                    <StackPanel TextElement.Foreground="White">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Row index: " FontWeight="Bold"/>
+                            <TextBlock Text="{Binding RowIndex}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Group key: " FontWeight="Bold" />
+                            <TextBlock Text="{Binding GroupKey}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+    </FrameworkElement.Resources>
+    <Grid>
+        <telerik:RadTimeline x:Name="timeline"
+                              PeriodStart="{Binding PeriodStart}"
+                             PeriodEnd="{Binding PeriodEnd}"
+                             AllowDrop="True"
+                             GroupPath="GroupKey"                             
+                             GroupExpandMode="Multiple"
+                             StartPath="StartDate"                                     
+                             DurationPath="Duration"
+                             ItemsSource="{Binding Items}">
+            <local:TimelineDragDropBehavior.DragDropBehavior>
+                <local:TimelineDragDropBehavior DragVisualTemplate="{StaticResource TimelineItemDragVisualTemplate}"/>
+            </local:TimelineDragDropBehavior.DragDropBehavior>
+            <telerik:RadTimeline.Intervals>
+                <telerik:DecadeInterval />
+                <telerik:YearInterval />
+                <telerik:QuarterInterval />
+                <telerik:MonthInterval />
+                <telerik:WeekInterval />
+                <telerik:DayInterval />
+            </telerik:RadTimeline.Intervals>
+        </telerik:RadTimeline>
+    </Grid>
+</Window>

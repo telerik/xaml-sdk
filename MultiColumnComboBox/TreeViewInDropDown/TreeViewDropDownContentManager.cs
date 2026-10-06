@@ -33,6 +33,10 @@ namespace TreeViewInDropDown
         {
         }
 
+        public override void OnPreviewMouseDown(object sender, MouseButtonEventArgs args)
+        {
+        }
+
         public override void OnMouseDown(object sender, MouseButtonEventArgs args)
         {
         }

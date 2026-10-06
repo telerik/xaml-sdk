@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Data;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.RichTextBoxUI.Dialogs;
 using Telerik.Windows.Documents.Model;
@@ -8,10 +9,14 @@ using Telerik.Windows.Documents.UI.Extensibility;
 using Telerik.Windows.Media.Imaging;
 using Telerik.Windows.Media.Imaging.Tools;
 
-namespace CustomImageEditorDialogDemo
+namespace CustomImageEditorDialogDemoWPF
 {
+    /// <summary>
+    /// Interaction logic for MyCustomImageEditorDialog.xaml
+    /// </summary>
+    /// 
     [CustomImageEditorDialog]
-    public partial class MyCustomImageEditorDialog : RadRichTextBoxWindow, IImageEditorDialog
+    public partial class MyCustomImageEditorDialogWPF : RadRichTextBoxWindow, IImageEditorDialog
     {
         private Inline originalInline;
         private ImageInline originalImageInline;
@@ -21,7 +26,7 @@ namespace CustomImageEditorDialogDemo
         private double originalRotateAngle;
         private Action<Inline, Inline> replaceCurrentImageCallback;
 
-        public MyCustomImageEditorDialog()
+        public MyCustomImageEditorDialogWPF()
         {
             InitializeComponent();
         }
@@ -30,15 +35,18 @@ namespace CustomImageEditorDialogDemo
         /// Shows the dialog. Specified insert image callback is applied on user confirmation.
         /// </summary>
         /// <param name="selectedImage">The selected image.</param>
-        /// <param name="replaceCurrentInlineCallback">The replace image callback.</param>
-        public void ShowDialog(Inline selectedImage, Action<Inline, Inline> replaceCurrentInlineCallback, string executeToolName)
+        /// <param name="replaceCurrentImageCallback">The insert image callback.</param>
+        /// <param name="executeToolName"></param>
+        /// <param name="owner">The owner of the dialog.</param>
+        public void ShowDialog(Inline selectedImage, Action<Inline, Inline> replaceCurrentImageCallback, string executeToolName, RadRichTextBox owner)
         {
-            this.ShowDialogInternal(selectedImage, replaceCurrentInlineCallback, executeToolName, null);
+            this.ShowDialogInternal(selectedImage, replaceCurrentImageCallback, executeToolName, owner);
         }
 
 
         public void ShowDialogInternal(Inline orgInline, Action<Inline, Inline> replaceCurrentImageCallback, string executeToolName, RadRichTextBox owner)
         {
+            this.ImageEditorUI.ImageEditorLoaded += this.ImageEditorUI_ImageEditorLoaded;
             this.SetOwner(owner);
             this.originalInline = orgInline;
             if (orgInline is ImageInline)
@@ -63,8 +71,8 @@ namespace CustomImageEditorDialogDemo
             this.replaceCurrentImageCallback = replaceCurrentImageCallback;
             this.ImageEditorUI.Image = image;
 
-            this.ShowDialog();
             this.StartExecuteTool(executeToolName);
+            this.ShowDialog();
         }
 
         private void StartExecuteTool(string executeToolName)
@@ -116,7 +124,6 @@ namespace CustomImageEditorDialogDemo
                 this.ImageEditorUI.ImageEditor.CommitTool();
                 Inline reslut;
                 ImageInline image = new ImageInline(this.ImageEditorUI.Image.Bitmap);
-                image.CopyPropertiesFrom(this.originalImageInline);
 
                 image.Size = new Size(image.Width * this.originalAspect.Width, image.Height * this.originalAspect.Height);
                 if (this.isRotated)
@@ -142,6 +149,22 @@ namespace CustomImageEditorDialogDemo
 
             this.Close();
         }
+        private void ImageEditorUI_ImageEditorLoaded(object sender, EventArgs e)
+        {
+            this.SetImageEditorBinding();
+        }
+
+        private void SetImageEditorBinding()
+        {
+            Binding imageEditorImagePropertyBinding = new Binding()
+            {
+                Mode = BindingMode.TwoWay,
+                Source = this.ImageEditorUI,
+                Path = new PropertyPath("Image")
+            };
+
+            BindingOperations.SetBinding(this.ImageEditorUI.ImageEditor, RadImageEditor.ImageProperty, imageEditorImagePropertyBinding);
+        }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -151,7 +174,7 @@ namespace CustomImageEditorDialogDemo
         protected override void OnClosed(WindowClosedEventArgs args)
         {
             base.OnClosed(args);
-
+            this.ImageEditorUI.ImageEditorLoaded -= this.ImageEditorUI_ImageEditorLoaded;
             this.replaceCurrentImageCallback = null;
             this.Owner = null;
         }
@@ -162,4 +185,3 @@ namespace CustomImageEditorDialogDemo
         }
     }
 }
-

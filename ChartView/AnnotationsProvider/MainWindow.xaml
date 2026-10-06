@@ -1,0 +1,26 @@
+﻿<Window x:Class="AnnotationsProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnnotationsProvider"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <FrameworkElement.DataContext>
+        <local:MainViewModel />
+    </FrameworkElement.DataContext>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Annotation Descriptor">
+                <local:AnnotationDescriptor />
+            </TabItem>
+            <TabItem Header="Annotation Descriptor Selector">
+                <local:AnnotationDescriptorSelector />
+            </TabItem>
+            <TabItem Header="Annotation Created Event">
+                <local:AnnotationCreated />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
