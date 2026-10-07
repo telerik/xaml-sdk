@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProvidersUriImageProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <telerik:RadMap x:Name="RadMap1"
+                        ZoomLevel="13"
+                        MinZoomLevel="10"
+                        MaxZoomLevel="14"
+                        Center="42.72481708629, 23.3176519378416"
+                        NavigationVisibility="Collapsed"
+                        ZoomBarVisibility="Collapsed"
+                        CommandBarVisibility="Collapsed">
+            <telerik:RadMap.Provider>
+                <telerik:UriImageProvider GeoBounds="42.786, 23.17, 25, 14" Uri="/ProvidersUriImageProvider;component/Resources/osm_{zoom}.png" />
+            </telerik:RadMap.Provider>
+        </telerik:RadMap>
+    </Grid>
+</Window>

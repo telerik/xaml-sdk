@@ -1,0 +1,39 @@
+﻿<Window x:Class="IndicatorsBasicsUsingRangeColor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadVerticalLinearGauge Height="300"
+										Width="50"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale Min="0" 
+										 Max="32"
+										 IsInteractive="True"
+										 RangeLocation="OverCenter">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Background="#F55D1D"
+										Min="0"
+										Max="8"
+										IndicatorBackground="#F55D1D"/>
+					<telerik:GaugeRange Background="#ACD47B"
+										Min="8"
+										Max="20"
+										IndicatorBackground="#ACD47B" />
+					<telerik:GaugeRange Background="#AD95C9"
+										Min="20"
+										Max="32"
+										IndicatorBackground="#AD95C9" />
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:Marker telerik:ScaleObject.RelativeWidth="0.16*"
+									telerik:ScaleObject.RelativeHeight="0.03*"
+									telerik:ScaleObject.Location="Inside"
+									UseRangeColor="True"/>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

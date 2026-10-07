@@ -1,0 +1,35 @@
+﻿<Window x:Class="NumericScaleOverview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<telerik:RadVerticalLinearGauge Width="150"
+										Height="50"
+										telerik:StyleManager.Theme="Windows8">
+			<telerik:NumericScale Min="0">
+				<telerik:NumericScale.Indicators>
+					<telerik:NumericIndicator Name="numericIndicator"
+											  Value="543.216"
+											  Format="{}{0:F2}"
+											  Foreground="#FF1E8D00"
+											  telerik:ScaleObject.RelativeX="0"
+											  telerik:ScaleObject.RelativeY="0"
+											  telerik:ScaleObject.RelativeWidth="1*" 
+											  telerik:ScaleObject.RelativeHeight="1*">
+						<telerik:NumericIndicator.Positions>
+							<telerik:HexagonalNumberPosition />
+							<telerik:HexagonalNumberPosition />
+							<telerik:HexagonalNumberPosition />
+							<telerik:HexagonalNumberPosition />
+							<telerik:HexagonalNumberPosition />
+							<telerik:HexagonalNumberPosition />
+						</telerik:NumericIndicator.Positions>
+					</telerik:NumericIndicator>
+				</telerik:NumericScale.Indicators>
+			</telerik:NumericScale>
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</Window>

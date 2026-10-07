@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CustomHeaderTemplate</RootNamespace>
+    <AssemblyName>CustomHeaderTemplate</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
+    <Reference Include="Telerik.Pivot.Core">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Pivot.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Pivot">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Pivot.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.PivotFieldList">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.PivotFieldList.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ProductImages\Copy holder.png" />
+    <Resource Include="ProductImages\Glare filter.png" />
+    <Resource Include="ProductImages\Mouse pad.png" />
+    <Resource Include="ProductImages\Printer stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>

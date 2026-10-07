@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.MSProject;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +18,7 @@ namespace ImportExportFromAndToMSProject
     public partial class Example : UserControl
     {
         private ViewModel viewModel;
-        private Microsoft.Office.Interop.MSProject.Application msApplication;
+        private dynamic msApplication;
 
         public Example()
         {
@@ -49,7 +48,7 @@ namespace ImportExportFromAndToMSProject
 
             try
             {
-                msApplication = new Microsoft.Office.Interop.MSProject.Application();
+                this.msApplication = Activator.CreateInstance(Type.GetTypeFromProgID("MSProject.Application", true));
             }
             catch (COMException)
             {
@@ -61,20 +60,20 @@ namespace ImportExportFromAndToMSProject
 
             try
             {
-                msApplication.AppMaximize();
-                msApplication.FileNew(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+                this.msApplication.AppMaximize();
+                this.msApplication.FileNew(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 
-                var msProject = msApplication.ActiveProject;
+                var msProject = this.msApplication.ActiveProject;
                 msProject.ManuallyScheduledTasksAutoRespectLinks = false;
                 FillProjectWithTasks(msProject, this.radGanttView1.TasksSource.OfType<IGanttTask>(), null, false);
-                FillTasksWithDependencies(msProject.Tasks.OfType<Task>(), this.radGanttView1.TasksSource.OfType<IGanttTask>());
-                msApplication.Visible = true;
+                this.FillTasksWithDependencies(((System.Collections.IEnumerable)msProject.Tasks).Cast<dynamic>(), this.radGanttView1.TasksSource.OfType<IGanttTask>());
+                this.msApplication.Visible = true;
             }
             catch (COMException)
             {
                 try
                 {
-                    msApplication.Quit(PjSaveType.pjDoNotSave);
+                    this.msApplication.Quit((int)ProjectSaveType.DoNotSave);
                 }
                 catch (COMException)
                 {
@@ -92,12 +91,12 @@ namespace ImportExportFromAndToMSProject
         /// <param name="tasks">A collection of IGanttTasks.</param>
         /// <param name="parentTask">The MSProject task which children will be populated from the IGanttTask.</param>
         /// <param name="isFirstTaskAfterAddedSummary">A property indicating whether the first child of a summary Task will be added.</param>
-        private void FillProjectWithTasks(Project project, IEnumerable<IGanttTask> tasks, Task parentTask, bool isFirstTaskAfterAddedSummary)
+        private void FillProjectWithTasks(dynamic project, IEnumerable<IGanttTask> tasks, dynamic parentTask, bool isFirstTaskAfterAddedSummary)
         {
             foreach (GanttTask ganttTask in tasks)
             {
-                Task task = null;
-                Cell activeCell = null;
+                dynamic task = null;
+                dynamic activeCell = null;
                 try
                 {
                     var taskName = this.ReplaceInvalidCharacters(ganttTask.Title);
@@ -130,7 +129,7 @@ namespace ImportExportFromAndToMSProject
 
                         if (task == null)
                         {
-                            msApplication.Quit(PjSaveType.pjDoNotSave);
+                            this.msApplication.Quit((int)ProjectSaveType.DoNotSave);
                             System.Windows.Application.Current.MainWindow.WindowState = WindowState.Normal;
                             MessageBox.Show("Export has failed. Please, do not interact with MSProject while Exporting is performed.", "Interaction exception");
                             break;
@@ -171,39 +170,39 @@ namespace ImportExportFromAndToMSProject
         /// </summary>
         /// <param name="tasks">A collection of MS Project Tasks.</param>
         /// <param name="ganttTasks">A collection of IGanttTasks.</param>
-        private void FillTasksWithDependencies(IEnumerable<Task> tasks, IEnumerable<IGanttTask> ganttTasks)
+        private void FillTasksWithDependencies(IEnumerable<dynamic> tasks, IEnumerable<IGanttTask> ganttTasks)
         {
             foreach (GanttTask currentGanttTask in ganttTasks)
             {
                 if (currentGanttTask.Dependencies.Count > 0)
                 {
-                    var msProjectTask = tasks.Where(a => a.Name.Equals(this.ReplaceInvalidCharacters(currentGanttTask.Title))).FirstOrDefault();
+                    dynamic msProjectTask = tasks.FirstOrDefault(a => ((string)a.Name).Equals(this.ReplaceInvalidCharacters(currentGanttTask.Title)));
                     if (msProjectTask != null)
                     {
                         foreach (var dependentTask in currentGanttTask.Dependencies)
                         {
-                            var dependentTaskInMsProject = tasks.Where(a => a.Name.Equals(this.ReplaceInvalidCharacters(dependentTask.FromTask.Title))).FirstOrDefault();
+                            dynamic dependentTaskInMsProject = tasks.FirstOrDefault(a => ((string)a.Name).Equals(this.ReplaceInvalidCharacters(dependentTask.FromTask.Title)));
 
                             if (dependentTaskInMsProject != null)
                             {
-                                PjTaskLinkType taskPjType = default(PjTaskLinkType);
+                                ProjectTaskLinkType taskPjType = ProjectTaskLinkType.FinishToFinish;
                                 switch (dependentTask.Type)
                                 {
                                     case DependencyType.FinishFinish:
-                                        taskPjType = PjTaskLinkType.pjFinishToFinish;
+                                        taskPjType = ProjectTaskLinkType.FinishToFinish;
                                         break;
                                     case DependencyType.FinishStart:
-                                        taskPjType = PjTaskLinkType.pjFinishToStart;
+                                        taskPjType = ProjectTaskLinkType.FinishToStart;
                                         break;
                                     case DependencyType.StartFinish:
-                                        taskPjType = PjTaskLinkType.pjStartToFinish;
+                                        taskPjType = ProjectTaskLinkType.StartToFinish;
                                         break;
                                     case DependencyType.StartStart:
-                                        taskPjType = PjTaskLinkType.pjStartToStart;
+                                        taskPjType = ProjectTaskLinkType.StartToStart;
                                         break;
                                 }
 
-                                msProjectTask.LinkPredecessors(dependentTaskInMsProject, taskPjType, Type.Missing);
+                                msProjectTask.LinkPredecessors(dependentTaskInMsProject, (int)taskPjType, Type.Missing);
                             }
                         }
                     }
@@ -226,7 +225,7 @@ namespace ImportExportFromAndToMSProject
         /// </summary>
         /// <param name="parentTask">The MSProject parent Task.</param>
         /// <param name="task">The MSProject Task to be outlined.</param>
-        private void OutlineTaskInProject(Task parentTask, Task task)
+        private void OutlineTaskInProject(dynamic parentTask, dynamic task)
         {
             if (parentTask != null && task.OutlineLevel != 1 && (parentTask.OutlineLevel + 1) != task.OutlineLevel)
             {
@@ -242,6 +241,19 @@ namespace ImportExportFromAndToMSProject
                     task.OutlineLevel = 1;
                 }
             }
+        }
+
+        private enum ProjectSaveType
+        {
+            DoNotSave = 0
+        }
+
+        private enum ProjectTaskLinkType
+        {
+            FinishToFinish = 0,
+            FinishToStart = 1,
+            StartToFinish = 2,
+            StartToStart = 3
         }
     }
 }

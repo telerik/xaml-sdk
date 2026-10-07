@@ -35,9 +35,9 @@ namespace TreeViewInDropDown
             this.Source.SelectedItems.Clear();
         }
 
-        public override void ItemsDeselectedInOwner(IEnumerable<object> removedItems)
+        public override void ItemsDeselectedInOwner(IEnumerable<object> removedItems, bool raiseEvent = true)
         {
-            base.ItemsDeselectedInOwner(removedItems);
+            base.ItemsDeselectedInOwner(removedItems, raiseEvent);
 
             foreach (var item in removedItems)
             {
@@ -45,9 +45,9 @@ namespace TreeViewInDropDown
             }
         }
 
-        public override void ItemsSelectedInOwner(IEnumerable<object> addedItems)
+        public override void ItemsSelectedInOwner(IEnumerable<object> addedItems, bool raiseEvent = true)
         {
-            base.ItemsSelectedInOwner(addedItems);
+            base.ItemsSelectedInOwner(addedItems, raiseEvent);
 
             foreach (var item in addedItems)
             {

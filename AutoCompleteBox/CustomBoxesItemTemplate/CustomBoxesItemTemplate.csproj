@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CustomBoxesItemTemplate</RootNamespace>
+    <AssemblyName>CustomBoxesItemTemplate</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ar.png" />
+    <Resource Include="Images\au.png" />
+    <Resource Include="Images\bg.png" />
+    <Resource Include="Images\br.png" />
+    <Resource Include="Images\ca.png" />
+    <Resource Include="Images\cn.png" />
+    <Resource Include="Images\de.png" />
+    <Resource Include="Images\dk.png" />
+    <Resource Include="Images\eg.png" />
+    <Resource Include="Images\fr.png" />
+    <Resource Include="Images\in.png" />
+    <Resource Include="Images\it.png" />
+    <Resource Include="Images\jp.png" />
+    <Resource Include="Images\ng.png" />
+    <Resource Include="Images\no.png" />
+    <Resource Include="Images\ru.png" />
+    <Resource Include="Images\sp.png" />
+    <Resource Include="Images\uk.png" />
+    <Resource Include="Images\usa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>

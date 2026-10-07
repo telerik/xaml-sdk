@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration_WPF", "PdfViewerIntegration\PdfViewerIntegration_WPF.csproj", "{467F6224-4594-40A9-B5D1-54CB67EFD668}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewerIntegration", "PdfViewerIntegration\PdfViewerIntegration.csproj", "{467F6224-4594-40A9-B5D1-54CB67EFD668}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateDocument", "GenerateDocument\GenerateDocument.csproj", "{7C06B4BC-57A7-4840-BF0B-EC44B30B7210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUIElement_WPF", "ExportUIElement\ExportUIElement_WPF.csproj", "{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUIElement", "ExportUIElement\ExportUIElement.csproj", "{3B8F6FD2-35EE-4FB3-ACA0-4F7FB84F016F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDocumentWithImages", "CreateDocumentWithImages\CreateDocumentWithImages.csproj", "{1D23F89C-9021-4388-AAAB-538F79F6537D}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawHeaderFooter", "DrawHea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWatermark", "AddWatermark\AddWatermark.csproj", "{1273BAEB-EDBC-42B3-A73B-185485129BFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyBookmarks_WPF", "ModifyBookmarks\ModifyBookmarks_WPF.csproj", "{BD58EF11-6552-4279-A341-0E200480A201}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyBookmarks", "ModifyBookmarks\ModifyBookmarks.csproj", "{BD58EF11-6552-4279-A341-0E200480A201}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,5 +88,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8367CD01-3064-4D5D-A3B8-6E7CD36F5B8A}
 	EndGlobalSection
-	 
 EndGlobal

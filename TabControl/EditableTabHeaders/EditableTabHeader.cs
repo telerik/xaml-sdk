@@ -5,79 +5,45 @@ using System.Windows.Input;
 
 namespace EditableTabHeaders
 {
-    [TemplateVisualState(GroupName = "EditStates", Name = "EditMode")]
-    [TemplateVisualState(GroupName = "EditStates", Name = "ViewMode")]
-    public class EditableTabHeader : ContentControl
+    [TemplatePart(Name = "PART_EditArea", Type = typeof(TextBox))]
+    public class EditableTabHeader_WPF : ContentControl
     {
-        private TextBox textBox;
-        private DateTime previosLeftClickTime = DateTime.Now;
-        private Point previosLeftClickPoint;
-        private TimeSpan doubleClickSpan = TimeSpan.FromSeconds(0.4);
-        public static readonly DependencyProperty IsInEditModeProperty = DependencyProperty.Register(
-            "IsInEditMode",
-            typeof(bool),
-            typeof(EditableTabHeader),
-            new PropertyMetadata(OnIsInEditModeChanged));
-
-        public EditableTabHeader()
+        static EditableTabHeader_WPF()
         {
-            DefaultStyleKey = typeof(EditableTabHeader);
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(EditableTabHeader_WPF), new FrameworkPropertyMetadata(typeof(EditableTabHeader_WPF)));
         }
-
+        private TextBox textBox;
+        public static DependencyProperty IsInEditModeProperty =
+         DependencyProperty.Register("IsInEditMode", typeof(Boolean), typeof(EditableTabHeader_WPF));
+        public bool IsInEditMode
+        {
+            get
+            {
+                return (bool)this.GetValue(IsInEditModeProperty);
+            }
+            set
+            {
+                this.SetValue(IsInEditModeProperty, value);
+            }
+        }
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            this.textBox = this.GetTemplateChild("TextBox") as TextBox;
+            this.textBox = this.Template.FindName("PART_EditArea", this) as TextBox;
             this.textBox.LostFocus += new RoutedEventHandler(textBox_LostFocus);
+            this.MouseDoubleClick += new MouseButtonEventHandler(EditableTabHeaderControl_MouseDoubleClick);
         }
-
         private void textBox_LostFocus(object sender, RoutedEventArgs e)
         {
             this.IsInEditMode = false;
         }
-
-        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        private void EditableTabHeaderControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            base.OnMouseLeftButtonDown(e);
-            var currentTime = DateTime.Now;
-            var currentPoint = e.GetPosition(this);
-            var durationBetweenClicks = currentTime - previosLeftClickTime;
-            if (currentPoint == previosLeftClickPoint && durationBetweenClicks < this.doubleClickSpan)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 e.Handled = true;
-                this.IsInEditMode = !this.IsInEditMode;
+                this.IsInEditMode = true;
                 this.textBox.Focus();
-            }
-            this.previosLeftClickTime = DateTime.Now;
-            this.previosLeftClickPoint = e.GetPosition(this);
-        }
-
-        public bool IsInEditMode
-        {
-            get { return (bool)GetValue(IsInEditModeProperty); }
-            set { SetValue(IsInEditModeProperty, value); }
-        }
-
-        private static void OnIsInEditModeChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
-        {
-            var editableContentControl = sender as EditableTabHeader;
-            var newValue = (bool)e.NewValue;
-            if (!newValue)
-            {
-                editableContentControl.Content = editableContentControl.textBox.Text;
-            }
-            editableContentControl.ChangeVisualStates();
-        }
-
-        public void ChangeVisualStates()
-        {
-            if (this.IsInEditMode)
-            {
-                VisualStateManager.GoToState(this, "EditMode", true);
-            }
-            else
-            {
-                VisualStateManager.GoToState(this, "ViewMode", true);
             }
         }
     }

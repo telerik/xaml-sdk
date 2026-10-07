@@ -1,0 +1,36 @@
+﻿<Window x:Class="InformationLayerMapShapeFill.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <telerik:RadMap x:Name="radMap"
+                        ZoomLevel="8"
+                        Center="42.6957539183824, 23.3327663758679">
+            <telerik:RadMap.Provider>
+				<!-- Please specify different user agent string in your application -->
+				<telerik:OpenStreetMapProvider StandardModeUserAgent="Telerik UI for WPF SDK Samples"/>
+			</telerik:RadMap.Provider>
+            <telerik:InformationLayer x:Name="informationLayer">
+                <telerik:InformationLayer.ShapeFill>
+                    <telerik:MapShapeFill Fill="#80808080"
+                                          Stroke="White"
+                                          StrokeThickness="3" />
+                </telerik:InformationLayer.ShapeFill>
+                <telerik:InformationLayer.HighlightFill>
+                    <telerik:MapShapeFill Fill="Orange"
+                                          Stroke="Coral"
+                                          StrokeThickness="3" />
+                </telerik:InformationLayer.HighlightFill>
+                <telerik:MapEllipse telerik:MapLayer.Location="42.6957539183824, 23.3327663758679"
+                                    Width="20"
+                                    Height="20">
+                </telerik:MapEllipse>
+                <telerik:MapEllipse telerik:MapLayer.Location="42.1429369264591, 24.7498095849434"
+                                    Width="20"
+                                    Height="20">
+                </telerik:MapEllipse>
+            </telerik:InformationLayer>
+        </telerik:RadMap>
+    </Grid>
+</Window>

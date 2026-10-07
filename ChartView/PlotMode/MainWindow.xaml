@@ -1,0 +1,100 @@
+﻿<Window x:Class="PlotMode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="450"
+		Width="800">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<telerik:RadCartesianChart>
+			<telerik:RadCartesianChart.HorizontalAxis>
+				<telerik:CategoricalAxis PlotMode="BetweenTicks"/>
+			</telerik:RadCartesianChart.HorizontalAxis>
+
+			<telerik:RadCartesianChart.VerticalAxis>
+				<telerik:LinearAxis/>
+			</telerik:RadCartesianChart.VerticalAxis>
+
+			<telerik:RadCartesianChart.Series>
+				<telerik:BarSeries>
+					<telerik:BarSeries.DataPoints>
+						<telerik:CategoricalDataPoint Category="1" Value="10"/>
+						<telerik:CategoricalDataPoint Category="2" Value="4"/>
+						<telerik:CategoricalDataPoint Category="3" Value="7"/>
+						<telerik:CategoricalDataPoint Category="4" Value="11"/>
+						<telerik:CategoricalDataPoint Category="5" Value="15"/>
+					</telerik:BarSeries.DataPoints>
+				</telerik:BarSeries>
+			</telerik:RadCartesianChart.Series>
+		</telerik:RadCartesianChart>
+
+		<telerik:RadCartesianChart Grid.Column="1">
+			<telerik:RadCartesianChart.HorizontalAxis>
+				<telerik:CategoricalAxis PlotMode="OnTicks"/>
+			</telerik:RadCartesianChart.HorizontalAxis>
+
+			<telerik:RadCartesianChart.VerticalAxis>
+				<telerik:LinearAxis/>
+			</telerik:RadCartesianChart.VerticalAxis>
+
+			<telerik:RadCartesianChart.Series>
+				<telerik:BarSeries>
+					<telerik:BarSeries.DataPoints>
+						<telerik:CategoricalDataPoint Category="1" Value="10"/>
+						<telerik:CategoricalDataPoint Category="2" Value="4"/>
+						<telerik:CategoricalDataPoint Category="3" Value="7"/>
+						<telerik:CategoricalDataPoint Category="4" Value="11"/>
+						<telerik:CategoricalDataPoint Category="5" Value="15"/>
+					</telerik:BarSeries.DataPoints>
+				</telerik:BarSeries>
+			</telerik:RadCartesianChart.Series>
+		</telerik:RadCartesianChart>
+
+		<telerik:RadCartesianChart Grid.Column="2">
+			<telerik:RadCartesianChart.HorizontalAxis>
+				<telerik:CategoricalAxis PlotMode="OnTicksPadded"/>
+			</telerik:RadCartesianChart.HorizontalAxis>
+
+			<telerik:RadCartesianChart.VerticalAxis>
+				<telerik:LinearAxis/>
+			</telerik:RadCartesianChart.VerticalAxis>
+
+			<telerik:RadCartesianChart.Series>
+				<telerik:BarSeries>
+					<telerik:BarSeries.DataPoints>
+						<telerik:CategoricalDataPoint Category="1" Value="10"/>
+						<telerik:CategoricalDataPoint Category="2" Value="4"/>
+						<telerik:CategoricalDataPoint Category="3" Value="7"/>
+						<telerik:CategoricalDataPoint Category="4" Value="11"/>
+						<telerik:CategoricalDataPoint Category="5" Value="15"/>
+					</telerik:BarSeries.DataPoints>
+				</telerik:BarSeries>
+			</telerik:RadCartesianChart.Series>
+		</telerik:RadCartesianChart>
+		
+		<TextBlock Grid.Row="1"
+				   Text="PlotMode=&quot;BetweenTicks&quot;"
+				   TextAlignment="Center"/>
+
+		<TextBlock Grid.Row="1"
+				   Grid.Column="1"
+				   Text="PlotMode=&quot;OnTicks&quot;"
+				   TextAlignment="Center"/>
+
+		<TextBlock Grid.Row="1"
+				   Grid.Column="2"
+				   Text="PlotMode=&quot;OnTicksPadded&quot;"
+				   TextAlignment="Center"/>
+	</Grid>
+</Window>

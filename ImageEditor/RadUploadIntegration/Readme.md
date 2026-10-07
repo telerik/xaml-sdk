@@ -1,2 +1,0 @@
-## RadUpload integration
-This examples shows how a custom Save command can be created and wired with the UI, so that instead of saving files on the client machine, the user can upload them to the server through RadUpload.

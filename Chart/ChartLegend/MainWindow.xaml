@@ -1,0 +1,32 @@
+﻿<Window x:Class="ChartLegend.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:ChartLegend"
+		Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid>
+		<TabControl>
+			<TabItem Header="Automatic Legend Items Generation">
+				<local:AutomaticLegendItemsGeneration />
+			</TabItem>
+			
+			<TabItem Header="Manual Legend Items Generation">
+				<local:ManualLegendItemsGeneration />
+			</TabItem>
+			
+			<TabItem Header="Legend Display Mode">
+				<local:LegendDisplayMode />
+			</TabItem>
+			
+			<TabItem Header="Legend Item Positioning">
+				<local:LegendItemPositioning />
+			</TabItem>
+			
+			<TabItem Header="Legend Items Shape">
+				<local:LegendItemsShape />
+			</TabItem>
+		</TabControl>
+	</Grid>
+</Window>

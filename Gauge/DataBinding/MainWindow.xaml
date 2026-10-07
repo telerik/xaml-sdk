@@ -1,0 +1,69 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="500"
+		Width="600">
+    <Grid UseLayoutRounding="True"
+		  Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="20"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<telerik:RadRadialGauge telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Min="0"
+								 Max="100"
+								 IsInteractive="True">
+				<telerik:RadialScale.Indicators>
+					<telerik:BarIndicator x:Name="radialBar"
+										  Value="6" />
+				</telerik:RadialScale.Indicators>
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+
+		<telerik:RadRadialGauge telerik:StyleManager.Theme="Windows8"
+								Grid.Column="2">
+			<telerik:RadialScale Min="0"
+								 Max="100"
+								 IsInteractive="True">
+				<telerik:RadialScale.Indicators>
+					<telerik:BarIndicator x:Name="radialBar2"
+										  Value="6" />
+				</telerik:RadialScale.Indicators>
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+
+		<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					Grid.Row="1"
+					Grid.ColumnSpan="3">
+			<Button Content="Start Playback"
+					Click="Button_Click"
+					Tag="StartPlayback"
+					Margin="2"
+					Grid.Row="1"/>
+			<Button Content="Stop Playback"
+					Click="Button_Click"
+					Tag="StopPlayback"
+					Margin="2"
+					Grid.Row="1"/>
+			<Button Content="Move Next"
+					Click="Button_Click"
+					Tag="MoveNext"
+					Margin="2"
+					Grid.Row="1"/>
+			<Button Content="Move Previous"
+					Click="Button_Click"
+					Tag="MovePrevious"
+					Margin="2"
+					Grid.Row="1"/>
+		</StackPanel>
+	</Grid>
+</Window>

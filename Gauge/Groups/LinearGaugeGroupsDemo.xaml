@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="Groups.LinearGaugeGroupsDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+			 d:DesignWidth="300">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadVerticalLinearGauge telerik:StyleManager.Theme="Windows8">
+			<telerik:VerticalLinearScale RelativeX="0.25"
+										 StartWidth="0.05" 
+										 EndWidth="0.05"
+										 Fill="Transparent"
+										 IsInteractive="True">
+				<telerik:VerticalLinearScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="55"
+										IndicatorBackground="#7F767676" />
+					<telerik:GaugeRange Min="55"
+										Max="85"
+										IndicatorBackground="#BF767676" />
+					<telerik:GaugeRange Min="85"
+										Max="100"
+										IndicatorBackground="#FF767676" />
+					<telerik:GaugeRangeGroup x:Name="overloadGroup">
+						<telerik:GaugeRange Min="0"
+											Max="80"
+											IndicatorBackground="#FF3AC015" />
+						<telerik:GaugeRange Min="80"
+											Max="100"
+											IndicatorBackground="#FFE50000" />
+					</telerik:GaugeRangeGroup>
+				</telerik:VerticalLinearScale.Ranges>
+				<telerik:VerticalLinearScale.Indicators>
+					<telerik:BarIndicator Name="leftFront"
+										  StartWidth="0.04"
+										  telerik:ScaleObject.Location="CenterInside"
+										  telerik:ScaleObject.Offset="0.01*"
+										  UseRangeColor="True"
+										  RangeColorMode="ProportionalBrush"
+										  Value="100" />
+					<telerik:BarIndicator Name="rightFront"
+										  StartWidth="0.04"
+										  telerik:ScaleObject.Location="CenterInside"
+										  telerik:ScaleObject.Offset="0.11*"
+										  UseRangeColor="True"
+										  RangeColorMode="ProportionalBrush"
+										  Value="95" />
+					<telerik:BarIndicator Name="leftRear"
+										  StartWidth="0.04"
+										  telerik:ScaleObject.Location="CenterInside"
+										  telerik:ScaleObject.Offset="0.21*"
+										  UseRangeColor="True"
+										  RangeColorMode="ProportionalBrush"
+										  Value="75" />
+					<telerik:BarIndicator Name="rightRear"
+										  StartWidth="0.04"
+										  telerik:ScaleObject.Location="CenterInside"
+										  telerik:ScaleObject.Offset="0.31*"
+										  UseRangeColor="True"
+										  RangeColorMode="ProportionalBrush"
+										  Value="50" />
+					<telerik:IndicatorGroup Ranges="{Binding ElementName=overloadGroup}">
+						<telerik:StateIndicator Name="leftFrontOverload"
+												telerik:ScaleObject.RelativeX="0.28"
+												telerik:ScaleObject.RelativeY="0.05"
+												telerik:ScaleObject.RelativeWidth="0.05*"
+												telerik:ScaleObject.RelativeHeight="0.05*"
+												UseRangeColor="True"
+												Value="{Binding ElementName=leftFront,Path=Value}"/>
+						<telerik:StateIndicator Name="rightFrontOverload"
+												telerik:ScaleObject.RelativeX="0.38"
+												telerik:ScaleObject.RelativeY="0.05"
+												telerik:ScaleObject.RelativeWidth="0.05*"
+												telerik:ScaleObject.RelativeHeight="0.05*"
+												UseRangeColor="True"
+												Value="{Binding ElementName=rightFront,Path=Value}"/>
+						<telerik:StateIndicator Name="leftRearOverload"
+												telerik:ScaleObject.RelativeX="0.48"
+												telerik:ScaleObject.RelativeY="0.05"
+												telerik:ScaleObject.RelativeWidth="0.05*"
+												telerik:ScaleObject.RelativeHeight="0.05*"
+												UseRangeColor="True"
+												Value="{Binding ElementName=leftRear,Path=Value}"/>
+						<telerik:StateIndicator Name="rightRearOverload"
+												telerik:ScaleObject.RelativeX="0.58"
+												telerik:ScaleObject.RelativeY="0.05"
+												telerik:ScaleObject.RelativeWidth="0.05*"
+												telerik:ScaleObject.RelativeHeight="0.05*"
+												UseRangeColor="True"
+												Value="{Binding ElementName=rightRear,Path=Value}"/>
+					</telerik:IndicatorGroup>
+				</telerik:VerticalLinearScale.Indicators>
+			</telerik:VerticalLinearScale>
+			<telerik:VerticalLinearScale RelativeX="0.63"
+										 StartWidth="0.01"
+										 EndWidth="0.01"
+										 LabelLocation="Inside"
+										 MajorTickLocation="Inside"
+										 MiddleTickLocation="Inside"
+										 MinorTickLocation="Inside"
+										 Fill="Transparent" />
+		</telerik:RadVerticalLinearGauge>
+	</Grid>
+</UserControl>

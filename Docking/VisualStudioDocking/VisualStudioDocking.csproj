@@ -1,0 +1,139 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VisualStudioDocking</RootNamespace>
+    <AssemblyName>VisualStudioDocking</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VisualStudioDocking.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows8">
+      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Themes.Windows8.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Docking\bullet_toggle_minus.png" />
+    <Resource Include="Images\Docking\bullet_toggle_plus.png" />
+    <Resource Include="Images\Docking\connect_to_database.png" />
+    <Resource Include="Images\Docking\connect_to_server.png" />
+    <Resource Include="Images\Docking\data.png" />
+    <Resource Include="Images\Docking\data_white.png" />
+    <Resource Include="Images\Docking\ErrorList\delete.png" />
+    <Resource Include="Images\Docking\ErrorList\information.png" />
+    <Resource Include="Images\Docking\ErrorList\warning.png" />
+    <Resource Include="Images\Docking\icon1.png" />
+    <Resource Include="Images\Docking\icon2.png" />
+    <Resource Include="Images\Docking\lightning.png" />
+    <Resource Include="Images\Docking\Output\01.png" />
+    <Resource Include="Images\Docking\Output\02.png" />
+    <Resource Include="Images\Docking\Output\03.png" />
+    <Resource Include="Images\Docking\Output\04.png" />
+    <Resource Include="Images\Docking\Output\05.png" />
+    <Resource Include="Images\Docking\Products\Big\Docking.png" />
+    <Resource Include="Images\Docking\properties_icon.png" />
+    <Resource Include="Images\Docking\refresh.png" />
+    <Resource Include="Images\Docking\server.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect.png" />
+    <Resource Include="Images\Docking\ServerExplorer\database_connect_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log.png" />
+    <Resource Include="Images\Docking\ServerExplorer\event_log_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_open_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov.png" />
+    <Resource Include="Images\Docking\ServerExplorer\hristov_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_classes_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\management_events.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues.png" />
+    <Resource Include="Images\Docking\ServerExplorer\message_queues_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\performance_counters.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references.png" />
+    <Resource Include="Images\Docking\ServerExplorer\references_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers.png" />
+    <Resource Include="Images\Docking\ServerExplorer\servers_white.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services.png" />
+    <Resource Include="Images\Docking\ServerExplorer\services_white.png" />
+    <Resource Include="Images\Docking\servers.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\assembly_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\bin.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\data_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\description.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\enumeration_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\folder_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon1.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon11.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon2.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon3.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon4.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon5.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon6.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon7.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon8.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\icon9.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\image_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\namespace_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\properties_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\references_white.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\usercontrol.png" />
+    <Resource Include="Images\Docking\SolutionExplorer\_image.png" />
+    <Resource Include="Images\Docking\sortasc.png" />
+    <Resource Include="Images\Docking\stop_refresh.png" />
+    <Resource Include="Images\Docking\Toolbox\chartview.png" />
+    <Resource Include="Images\Docking\Toolbox\datafilter.png" />
+    <Resource Include="Images\Docking\Toolbox\dataform.png" />
+    <Resource Include="Images\Docking\Toolbox\datapager.png" />
+    <Resource Include="Images\Docking\Toolbox\imageeditor.png" />
+    <Resource Include="Images\Docking\Toolbox\map.png" />
+    <Resource Include="Images\Docking\Toolbox\pdfviewer.png" />
+    <Resource Include="Images\Docking\Toolbox\pivotgrid.png" />
+    <Resource Include="Images\Docking\Toolbox\richtextbox.png" />
+    <Resource Include="Images\Docking\Toolbox\sparklines.png" />
+    <Resource Include="Images\Docking\Toolbox\timebar.png" />
+    <Resource Include="Images\Docking\Toolbox\timeline.png" />
+    <Resource Include="Images\Docking\Toolbox\treemapandpivotmap.png" />
+    <Resource Include="Images\Docking\_data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>

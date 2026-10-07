@@ -73,7 +73,7 @@ namespace GenerateDocument
             page.Size = new Size(600, 800);
             FixedContentEditor editor = new FixedContentEditor(page);
             editor.Position.Translate(defaultLeftIndent, 50);
-            using (Stream stream = File.OpenRead(sampleDataPath + "pdfProcessingWpf.jpg"))
+            using (Stream stream = File.OpenRead(sampleDataPath + "pdfProcessing.jpg"))
             {
                 editor.DrawImage(stream);
             }

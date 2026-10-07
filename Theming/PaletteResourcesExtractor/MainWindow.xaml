@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         mc:Ignorable="d"
-        Icon="wpf.ico"
+        Icon="PaletteResourcesExtractor.ico"
         Title="Telerik Theme Palette Resource Extractor" 
         Height="800" Width="1400">
     <FrameworkElement.Resources>

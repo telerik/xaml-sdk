@@ -1,0 +1,19 @@
+﻿<Window x:Class="NoDataControl.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid>
+		<telerik:RadChart>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea NoDataString="Custom 'No Data' message" />
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+		</telerik:RadChart>
+	</Grid>
+</Window>

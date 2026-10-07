@@ -1,0 +1,62 @@
+﻿<Window x:Class="Axis.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:Axis"
+		Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Grid>
+		<Grid.Resources>
+			<DataTemplate x:Key="GrayTemplate">
+				<Border BorderThickness="2"
+						BorderBrush="Gray">
+					<TextBlock Text="{Binding}"/>
+				</Border>
+			</DataTemplate>
+
+			<DataTemplate x:Key="WhiteTemplate">
+				<Border BorderThickness="2"
+						BorderBrush="White">
+					<TextBlock Text="{Binding}"/>
+				</Border>
+			</DataTemplate>
+
+			<local:BinaryTemplateSelector x:Key="Selector"
+										  Template1="{StaticResource GrayTemplate}"
+										  Template2="{StaticResource WhiteTemplate}"/>
+		</Grid.Resources>
+
+		<telerik:RadCartesianChart x:Name="chart">
+			<telerik:RadCartesianChart.HorizontalAxis>
+				<telerik:LinearAxis Maximum="100"
+									LineStroke="Gray"
+									LineDashArray="5, 10, 15"
+									TickThickness="5"
+									LabelTemplateSelector="{StaticResource Selector}">
+					<telerik:LinearAxis.MajorTickTemplate>
+						<DataTemplate>
+							<Ellipse Fill="White"/>
+						</DataTemplate>
+					</telerik:LinearAxis.MajorTickTemplate>
+				</telerik:LinearAxis>
+			</telerik:RadCartesianChart.HorizontalAxis>
+
+			<telerik:RadCartesianChart.VerticalAxis>
+				<telerik:LinearAxis Maximum="100"/>
+			</telerik:RadCartesianChart.VerticalAxis>
+			
+			<telerik:RadCartesianChart.Series>
+				<telerik:ScatterPointSeries>
+					<telerik:ScatterPointSeries.DataPoints>
+						<telerik:ScatterDataPoint XValue="10" YValue="10"/>
+						<telerik:ScatterDataPoint XValue="30" YValue="30"/>
+						<telerik:ScatterDataPoint XValue="50" YValue="50"/>
+						<telerik:ScatterDataPoint XValue="70" YValue="70"/>
+						<telerik:ScatterDataPoint XValue="90" YValue="90"/>
+					</telerik:ScatterPointSeries.DataPoints>
+				</telerik:ScatterPointSeries>
+			</telerik:RadCartesianChart.Series>
+		</telerik:RadCartesianChart>
+	</Grid>
+</Window>
