@@ -15,7 +15,7 @@
 
 ## Tech stack
 
-- .NET 8 (`net8.0-windows`)
+- .NET 10 (`net10.0-windows`)
 - WPF
 - Telerik UI for WPF (`Telerik.UI.for.Wpf.AllControls.Xaml`)
 - Telerik Document Processing PDF APIs

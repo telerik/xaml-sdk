@@ -18,7 +18,7 @@
 			</DataTemplate>
 		</telerik:RadPivotMap.LeafTemplate>
 		<telerik:RadPivotMap.GroupDefinitions>
-			<telerik:GroupDefinition Member="Country" />
+			<telerik:PivotMapGroupDefinition Member="Country" />
 		</telerik:RadPivotMap.GroupDefinitions>
 	</telerik:RadPivotMap>
 </Window>

@@ -22,13 +22,9 @@ namespace ContentControls
 {
     class DocumentGenerator
     {
-#if NETCOREAPP
-        private const string SampleDataFolder = "../../../SampleData/";
-#else
-        private const string SampleDataFolder = "../../SampleData/";
-#endif
-        private const string TemplatePath = SampleDataFolder + "CVTemplate.docx";
-        private const string ImagePath = SampleDataFolder + "TelerikNinja.png";
+        private static readonly string SampleDataFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SampleData");
+        private static readonly string TemplatePath = Path.Combine(SampleDataFolder, "CVTemplate.docx");
+        private static readonly string ImagePath = Path.Combine(SampleDataFolder, "TelerikNinja.png");
         private static readonly string Heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
 
 

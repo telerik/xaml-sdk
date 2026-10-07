@@ -21,7 +21,7 @@ namespace CustomDecoder_WPF
 
             InitializeComponent();
 
-            var stream = File.OpenRead("../../SampleData/test.pdf");
+            var stream = File.OpenRead(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SampleData", "test.pdf"));
             this.pdfViewer.DocumentSource = new PdfDocumentSource(stream);
         }
     }

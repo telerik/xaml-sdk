@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDocumentContent", "AddDo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawOnDocument", "DrawOnDocument\DrawOnDocument.csproj", "{52C49A13-038F-427D-A06E-919C72A88FA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfElementsEditor", "PdfElementsEditor\PdfElementsEditor.csproj", "{4EBCE347-181F-4E88-B05D-A8738028F1A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{52C49A13-038F-427D-A06E-919C72A88FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C49A13-038F-427D-A06E-919C72A88FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C49A13-038F-427D-A06E-919C72A88FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EBCE347-181F-4E88-B05D-A8738028F1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EBCE347-181F-4E88-B05D-A8738028F1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EBCE347-181F-4E88-B05D-A8738028F1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EBCE347-181F-4E88-B05D-A8738028F1A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
