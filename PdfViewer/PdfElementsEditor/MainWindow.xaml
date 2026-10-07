@@ -1,0 +1,52 @@
+﻿<Window x:Class="PdfElementsEditor.MainWindow"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                Title="MainWindow" Height="1450" Width="1425">
+    <Window.Resources>
+        <telerik:RadContextMenu x:Key="TreeViewContextMenu" Loaded="RadContextMenu_Loaded">
+            <telerik:RadMenuItem Header="Delete" Command="{Binding DeleteCommand}"/>
+            <telerik:RadMenuItem Header="Save Selection" Command="{Binding SaveSelectionCommand}" />
+            <telerik:RadMenuItem Header="EditText" Command="{Binding EditTextCommand}"/>
+        </telerik:RadContextMenu>
+        
+        <DataTemplate x:Key="ElementTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Path Data="{Binding ElementIcon}" Fill="{Binding ElementIconBrush}" Stretch="Uniform"
+                      Width="14" Height="14" VerticalAlignment="Center" Margin="0 0 4 0" />
+                <TextBlock Text="{Binding ElementText}" VerticalAlignment="Center" telerik:RadContextMenu.ContextMenu="{StaticResource TreeViewContextMenu}"/>
+            </StackPanel> 
+        </DataTemplate> 
+        <HierarchicalDataTemplate x:Key="PageTemplate" ItemTemplate="{StaticResource ElementTemplate}" 
+               ItemsSource="{Binding Elements}">
+            <StackPanel Orientation="Horizontal">
+                <Path Data="{Binding PageIcon}" Fill="{Binding PageIconBrush}" Stretch="Uniform"
+                      Width="14" Height="14" VerticalAlignment="Center" Margin="0 0 4 0" />
+                <TextBlock Text="{Binding PageText}" VerticalAlignment="Center" />
+            </StackPanel>
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <telerik:RadPdfViewerToolBar Grid.Row="0" RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneTime}" Grid.ColumnSpan="3" Margin="0 0 0 5" FocusManager.IsFocusScope="False"
+                                     HasClockwiseButton="False" HasCounterclockwiseButton="False" HasSignatureButton="False" />
+        <telerik:RadBusyIndicator Grid.Row="1" x:Name="treeBusyIndicator" BusyContent="Loading elements..." IsIndeterminate="True">
+            <telerik:RadTreeView x:Name="radTreeView" ItemTemplate="{StaticResource PageTemplate}"
+                                 IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling">
+                <telerik:RadTreeView.ItemContainerStyle>
+                    <Style TargetType="telerik:RadTreeViewItem">
+                        <Setter Property="IsExpanded" Value="True"/>
+                    </Style>
+                </telerik:RadTreeView.ItemContainerStyle>
+            </telerik:RadTreeView>
+        </telerik:RadBusyIndicator>
+        <telerik:RadPdfViewer Grid.Row="1" x:Name="pdfViewer" Grid.Column="1" />
+    </Grid>
+</Window>

@@ -24,22 +24,22 @@
   <ItemGroup>
 	  <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Data.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.EntityFrameworkCore">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Controls.EntityFrameworkCore.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.EntityFrameworkCore.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\NetCore\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 
