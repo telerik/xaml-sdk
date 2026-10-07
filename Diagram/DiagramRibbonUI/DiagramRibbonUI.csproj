@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApplication1</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core">
+      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32\align1.png" />
+    <Resource Include="Images\32\align2.png" />
+    <Resource Include="Images\32\align3.png" />
+    <Resource Include="Images\32\align4.png" />
+    <Resource Include="Images\32\align5.png" />
+    <Resource Include="Images\32\align6.png" />
+    <Resource Include="Images\32\bring_backward.png" />
+    <Resource Include="Images\32\bring_Forward.png" />
+    <Resource Include="Images\32\bring_top.png" />
+    <Resource Include="Images\32\export.png" />
+    <Resource Include="Images\32\exportHtml.png" />
+    <Resource Include="Images\32\layout.png" />
+    <Resource Include="Images\32\print.png" />
+    <Resource Include="Images\32\send_back.png" />
+    <Resource Include="Images\AppIcon.png" />
+    <Resource Include="Images\bezier.jpg" />
+    <Resource Include="Images\bgColor.png" />
+    <Resource Include="Images\circle.jpg" />
+    <Resource Include="Images\Connection.png" />
+    <Resource Include="Images\copy.png" />
+    <Resource Include="Images\copy16.png" />
+    <Resource Include="Images\cursor.png" />
+    <Resource Include="Images\cut.png" />
+    <Resource Include="Images\delete_disable.png" />
+    <Resource Include="Images\export.png" />
+    <Resource Include="Images\floorplan.jpg" />
+    <Resource Include="Images\flow.jpg" />
+    <Resource Include="Images\GridColor.png" />
+    <Resource Include="Images\Group.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\new.png" />
+    <Resource Include="Images\open.png" />
+    <Resource Include="Images\paste.png" />
+    <Resource Include="Images\paste16.png" />
+    <Resource Include="Images\path_tool.png" />
+    <Resource Include="Images\pencil_tool.png" />
+    <Resource Include="Images\Pointer.png" />
+    <Resource Include="Images\print.png" />
+    <Resource Include="Images\Redo.png" />
+    <Resource Include="Images\rolls.jpg" />
+    <Resource Include="Images\Rotate_Enabled.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\save_as.png" />
+    <Resource Include="Images\showGrid.png" />
+    <Resource Include="Images\simpleflow.jpg" />
+    <Resource Include="Images\Snap_to_grid_big.png" />
+    <Resource Include="Images\Snap_to_items_big.png" />
+    <Resource Include="Images\stakeholder.jpg" />
+    <Resource Include="Images\Text.png" />
+    <Resource Include="Images\Transform_Enabled.png" />
+    <Resource Include="Images\Undo.png" />
+    <Resource Include="Images\Ungroup.png" />
+    <Resource Include="Images\zoom_to_fit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Common\SampleDiagrams\Cycle3.xml" />
+    <Resource Include="Common\SampleDiagrams\FloorPlan.xml" />
+    <Resource Include="Common\SampleDiagrams\Flow2.xml" />
+    <Resource Include="Common\SampleDiagrams\Rolls.xml" />
+    <Resource Include="Common\SampleDiagrams\SimpleFlow.xml" />
+    <Resource Include="Common\SampleDiagrams\Stakeholder.xml" />
+    <Resource Include="Common\SampleDiagrams\Supply.xml" />
+    <Resource Include="Common\ExportToHTML\ExportStyles.html" />
+    <Resource Include="Common\ExportToHTML\Loader.js" />
+    <Resource Include="Common\ExportToHTML\RadDiagram.js" />
+    <Resource Include="Common\ExportToHTML\RadSVG.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>

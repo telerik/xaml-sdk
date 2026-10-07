@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Colorizers.ValueGradientColorizerExample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:local="clr-namespace:Colorizers"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+			 d:DesignWidth="300">
+	<telerik:RadTreeMap x:Name="treeMap1"
+						ItemsSource="{Binding}"
+						LayoutStrategy="Squarified"
+						BorderThickness="1"
+						BorderBrush="#FF5F031C">
+		<telerik:RadTreeMap.TypeDefinitions>
+			<telerik:TypeDefinition TargetTypeName="GdpInfo"
+									ValuePath="Gdp"
+									LabelPath="Country"
+									ToolTipPath="Gdp"
+									ToolTipFormat="{}{0:C2} mln">
+				<telerik:TypeDefinition.Mappings>
+					<telerik:ValueGradientColorizer RangeMinimum="318" RangeMaximum="5310">
+						<GradientStop Offset="0" Color="#FFFFD000" />
+						<GradientStop Offset="0.50" Color="#FFD11010" />
+						<GradientStop Offset="1" Color="#DE290B" />
+					</telerik:ValueGradientColorizer>
+				</telerik:TypeDefinition.Mappings>
+			</telerik:TypeDefinition>
+		</telerik:RadTreeMap.TypeDefinitions>
+	</telerik:RadTreeMap>
+</UserControl>

@@ -2,6 +2,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
     <PropertyGroup>
         <!-- Telerik.Licensing Nuget version used in csproj files -->
-	    <TelerikLicensingNugetVersion>[1.9.1,2)</TelerikLicensingNugetVersion>
+	    <TelerikLicensingNugetVersion>[1.9.3,2)</TelerikLicensingNugetVersion>
     </PropertyGroup>
 </Project>

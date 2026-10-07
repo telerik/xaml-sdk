@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Groups.RadialGaugeGroupsDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+			 d:DesignWidth="300">
+    <Grid UseLayoutRounding="True">
+		<telerik:RadRadialGauge telerik:StyleManager.Theme="Windows8">
+			<telerik:RadialScale Radius="0.99"
+								 RangeLocation="Outside">
+				<telerik:RadialScale.Ranges>
+					<telerik:GaugeRange Min="0"
+										Max="50"
+										StartWidth="0.01" 
+										Background="#FF3AC015"
+										IndicatorBackground="#FF3AC015"
+										IndicatorColorMixSensitivity="2" />
+					<telerik:GaugeRange Min="50"
+										Max="80"
+										StartWidth="0.01"
+										Background="#FFD9ED27"
+										IndicatorBackground="#FFD9ED27"
+										IndicatorColorMixSensitivity="2" />
+					<telerik:GaugeRange Min="80"
+										Max="100"
+										StartWidth="0.01"
+										Background="#FFE50000"
+										IndicatorBackground="#FFE50000"
+										IndicatorColorMixSensitivity="2"/>
+					<telerik:GaugeRangeGroup x:Name="overload"
+											 Location="Inside">
+						<telerik:GaugeRange Min="0"
+											Max="50"
+											StartWidth="0.01"
+											Background="#FF767676"
+											IndicatorBackground="#FF767676" />
+						<telerik:GaugeRange Min="50"
+											Max="100"
+											StartWidth="0.01"
+											Background="#FFD6D4D4"
+											IndicatorBackground="#FFD6D4D4" />
+					</telerik:GaugeRangeGroup>
+				</telerik:RadialScale.Ranges>
+				<telerik:RadialScale.Indicators>
+					<telerik:Marker telerik:ScaleObject.Location="OverOutside"
+									UseRangeColor="True"
+									Value="85" />
+					<telerik:IndicatorGroup Ranges="{Binding ElementName=overload}">
+						<telerik:Marker telerik:ScaleObject.Location="OverOutside"
+										UseRangeColor="True"
+										Value="20" />
+					</telerik:IndicatorGroup>
+				</telerik:RadialScale.Indicators>
+			</telerik:RadialScale>
+		</telerik:RadRadialGauge>
+	</Grid>
+</UserControl>

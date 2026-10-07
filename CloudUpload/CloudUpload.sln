@@ -10,7 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragAndDrop", "DragAndDrop\DragAndDrop.csproj", "{39CA94F0-5DF9-4291-A9CA-8BAB46D0D13C}"
 EndProject
 Global
-	 
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug.NoXaml|Any CPU = Debug.NoXaml|Any CPU
 		Debug|Any CPU = Debug|Any CPU

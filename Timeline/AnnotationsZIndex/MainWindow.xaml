@@ -1,0 +1,54 @@
+﻿<Window x:Class="AnnotationsZIndex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:AnnotationsZIndex"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+	<Window.DataContext>
+		<local:RadTimelineAnnotationsViewModel/>
+	</Window.DataContext>
+	
+    <Grid>
+		<telerik:RadTimeline PeriodStart="2011-01-01"
+                        PeriodEnd="2012-01-01"
+                        VisiblePeriodStart="2011-01-01"
+                        VisiblePeriodEnd="2011-02-01"
+                        StartPath="StartDate"
+                        DurationPath="Duration"
+                        ItemsSource="{Binding TimelineItems}">
+
+			<telerik:RadTimeline.Resources>
+				<DataTemplate x:Key="TimelineAnnotationTemplate">
+					<Border Background="#FF25A0DA">
+						<TextBlock Text="{Binding}"
+								   VerticalAlignment="Bottom"
+								   HorizontalAlignment="Center"
+								   Margin="5" />
+					</Border>
+				</DataTemplate>
+			</telerik:RadTimeline.Resources>
+
+			<telerik:RadTimeline.Intervals>
+				<telerik:YearInterval />
+				<telerik:MonthInterval />
+				<telerik:WeekInterval />
+				<telerik:DayInterval />
+			</telerik:RadTimeline.Intervals>
+			<telerik:RadTimeline.Annotations>
+				<telerik:TimelineAnnotation StartDate="2011-01-05"
+                                    Duration="5.00:00:00"
+                                    ContentTemplate="{StaticResource TimelineAnnotationTemplate}" />
+				<telerik:TimelineAnnotation StartDate="2011-01-15"
+                                    Duration="5.00:00:00"
+                                    Canvas.ZIndex="150"
+                                    ContentTemplate="{StaticResource TimelineAnnotationTemplate}" />
+				<telerik:TimelineAnnotation StartDate="2011-01-25"
+                                    Duration="5.00:00:00"
+                                    Canvas.ZIndex="50"
+                                    ContentTemplate="{StaticResource TimelineAnnotationTemplate}" />
+			</telerik:RadTimeline.Annotations>
+		</telerik:RadTimeline>
+	</Grid>
+</Window>

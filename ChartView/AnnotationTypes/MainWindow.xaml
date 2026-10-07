@@ -1,0 +1,46 @@
+﻿<Window x:Class="AnnotationTypes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		xmlns:local="clr-namespace:AnnotationTypes"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<TabControl>
+			<TabControl.Items>
+				<TabItem Header="CartesianGridLineAnnotation">
+					<local:CartesianGridLineAnnotationDemo/>
+				</TabItem>
+
+				<TabItem Header="PolarAxisGridLineAnnotation">
+					<local:PolarAxisGridLineAnnotationDemo/>
+				</TabItem>
+
+				<TabItem Header="RadialAxisGridLineAnnotation">
+					<local:RadialAxisGridLineAnnotationDemo/>
+				</TabItem>
+				
+				<TabItem Header="CartesianPlotBandAnnotation">
+					<local:CartesianPlotBandAnnotationDemo/>
+				</TabItem>
+				
+				<TabItem Header="PolarAxisPlotBandAnnotation">
+					<local:PolarAxisPlotBandAnnotationDemo/>
+				</TabItem>
+				
+				<TabItem Header="RadialAxisPlotBandAnnotation">
+					<local:RadialAxisPlotBandAnnotationDemo/>
+				</TabItem>
+				
+				<TabItem Header="CartesianCustomAnnotation">
+					<local:CartesianCustomAnnotationDemo/>
+				</TabItem>
+
+				<TabItem Header="PolarCustomAnnotation">
+					<local:PolarCustomAnnotationDemo/>
+				</TabItem>
+			</TabControl.Items>
+		</TabControl>
+	</Grid>
+</Window>

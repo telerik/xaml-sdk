@@ -1,0 +1,61 @@
+﻿<Window x:Class="ChartTitle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid>
+		<telerik:RadChart x:Name="radChart">
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartLegend>
+						<telerik:ChartLegend Name="legend" />
+					</telerik:ChartDefaultView.ChartLegend>
+					<telerik:ChartDefaultView.ChartTitle>
+						<telerik:ChartTitle HorizontalAlignment="Center">
+							<Border BorderBrush="LightBlue"
+									CornerRadius="5"
+									BorderThickness="2">
+								<TextBlock Text="Monthly Sales for 2009" />
+							</Border>
+						</telerik:ChartTitle>
+					</telerik:ChartDefaultView.ChartTitle>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea LegendName="legend">
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX DefaultLabelFormat="MMM" />
+							</telerik:ChartArea.AxisX>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+			
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping ItemsSource="{Binding}"
+									   LegendLabel="Turnover">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:LineSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+
+					<telerik:ItemMapping FieldName="Date"
+										 DataPointMember="XCategory" />
+					<telerik:ItemMapping FieldName="Turnover"
+										 DataPointMember="YValue" />
+				</telerik:SeriesMapping>
+				
+				<telerik:SeriesMapping ItemsSource="{Binding}"
+									   LegendLabel="Expenses">
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:BarSeriesDefinition />
+					</telerik:SeriesMapping.SeriesDefinition>
+
+					<telerik:ItemMapping FieldName="Date"
+										 DataPointMember="XCategory" />
+					<telerik:ItemMapping FieldName="Expenses"
+										 DataPointMember="YValue" />
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+		</telerik:RadChart>
+	</Grid>
+</Window>

@@ -12,7 +12,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel Width="300">
-            <TextBlock Text="This example demonstrates how to import XML MS Project files into RadGanttView and export RadGanttView to MSProject using the COM Interop binary Microsoft.Office.Interop.MSProject." 
+            <TextBlock Text="This example demonstrates how to import XML MS Project files into RadGanttView and export RadGanttView to Microsoft Project using COM automation."
                        Margin="24" TextAlignment="Center"
                        FontStyle="Italic" FontSize="14"
                        TextWrapping="Wrap"/>

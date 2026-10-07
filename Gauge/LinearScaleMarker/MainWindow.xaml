@@ -1,0 +1,26 @@
+﻿<Window x:Class="LinearScaleMarker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="MainWindow"
+		Height="350"
+		Width="525">
+    <Grid UseLayoutRounding="True"
+		  HorizontalAlignment="Center"
+		  VerticalAlignment="Center">
+		<telerik:RadHorizontalLinearGauge Width="250"
+										  Height="100"
+										  telerik:StyleManager.Theme="Windows8">
+			<telerik:HorizontalLinearScale Min="0"
+										   Max="100">
+				<telerik:HorizontalLinearScale.Indicators>
+					<telerik:Marker Value="75"
+									telerik:ScaleObject.Offset="0.02*"
+									telerik:ScaleObject.RelativeWidth="0.03*"
+									telerik:ScaleObject.RelativeHeight="0.08*"
+									telerik:ScaleObject.Location="OverOutside" />
+				</telerik:HorizontalLinearScale.Indicators>
+			</telerik:HorizontalLinearScale>
+		</telerik:RadHorizontalLinearGauge>
+	</Grid>
+</Window>
