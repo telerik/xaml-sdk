@@ -9,8 +9,8 @@
 						 ValuePath="Value"
 						 ItemsSource="{Binding}">
 		<telerik:RadPivotMap.GroupDefinitions>
-			<telerik:GroupDefinition Member="Category" />
-			<telerik:GroupDefinition Member="SubCategory" />
+			<telerik:PivotMapGroupDefinition Member="Category" />
+			<telerik:PivotMapGroupDefinition Member="SubCategory" />
 		</telerik:RadPivotMap.GroupDefinitions>
 	</telerik:RadPivotMap>
 </Window>

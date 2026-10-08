@@ -4,7 +4,8 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
 using FilterSearchSort.ViewModels;
-using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
+using Category = FilterSearchSort.ViewModels.Category;
 
 namespace FilterSearchSort
 {

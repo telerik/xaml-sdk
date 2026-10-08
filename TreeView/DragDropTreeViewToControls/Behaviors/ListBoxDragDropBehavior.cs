@@ -8,7 +8,8 @@ using Telerik.Windows.Controls;
 using Telerik.Windows.DragDrop.Behaviors;
 using System.Collections;
 using System.Windows.Input;
-using Telerik.Windows.Controls.TreeView;
+using Telerik.Windows.Controls.TreeView;
+using DragVisual = Telerik.Windows.Controls.DragVisual;
 
 namespace DragDropTreeViewToControls.Behaviors
 {

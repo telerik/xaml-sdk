@@ -10,7 +10,8 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.ScheduleView;
-using Telerik.Windows.Media.Imaging;
+using Telerik.Windows.Media.Imaging;
+using ExportExtensions = Telerik.Windows.Media.Imaging.ExportExtensions;
 
 
 namespace Exporting

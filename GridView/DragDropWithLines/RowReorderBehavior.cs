@@ -9,7 +9,8 @@ using System.Windows.Shapes;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.GridView;
 using Telerik.Windows.DragDrop;
-using Telerik.Windows.DragDrop.Behaviors;
+using Telerik.Windows.DragDrop.Behaviors;
+using DragVisual = Telerik.Windows.Controls.DragVisual;
 
 namespace DragDropWithLines
 {
