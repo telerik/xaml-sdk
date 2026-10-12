@@ -7,4 +7,4 @@ You can also install the __Telerik SDK SAMPLES BROWSER for [WPF](http://blogs.te
 
 The examples for each of the components in the suite are listed in [the documentation](http://docs.telerik.com/devtools/wpf/sdk-examples.html) along with a short description.
 
-Make sure that you have a valid [telerik license key](https://docs.telerik.com/devtools/wpf/getting-started/licensing/installing-license-key) included in the "%appdata%\Telerik" directory to avoid invalid license errors when running the SDK examples. 
+Make sure that you have a valid [telerik license key](https://www.telerik.com/products/wpf/documentation/installation/licensing/installing-license-key) included in the "%appdata%\Telerik" directory to avoid invalid license errors when running the SDK examples. 
