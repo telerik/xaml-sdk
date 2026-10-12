@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OData4Consumption", "OData4Consumption\OData4Consumption.csproj", "{6F7B2C87-4407-40E9-9885-5BD32E2352E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OData4ConsumptionNetCore", "OData4ConsumptionNetCore", "{DCFB0B96-3A48-5181-65FD-BC2152DAB704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OData4Consumption", "OData4ConsumptionNetCore\OData4Consumption.csproj", "{6F14C0DF-006D-4DA3-99CF-5A2238E384A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{6F7B2C87-4407-40E9-9885-5BD32E2352E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F7B2C87-4407-40E9-9885-5BD32E2352E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F7B2C87-4407-40E9-9885-5BD32E2352E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F14C0DF-006D-4DA3-99CF-5A2238E384A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F14C0DF-006D-4DA3-99CF-5A2238E384A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F14C0DF-006D-4DA3-99CF-5A2238E384A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F14C0DF-006D-4DA3-99CF-5A2238E384A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F14C0DF-006D-4DA3-99CF-5A2238E384A0} = {DCFB0B96-3A48-5181-65FD-BC2152DAB704}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E16B0EF9-C470-4E1F-A245-37920C8D61A4}

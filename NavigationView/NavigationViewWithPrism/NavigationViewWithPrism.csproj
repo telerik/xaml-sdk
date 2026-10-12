@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -13,16 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF80\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
+	  <PackageReference Include="Telerik.UI.for.Wpf.AllControls.Xaml" Version="*" />
   </ItemGroup>
 
 </Project>

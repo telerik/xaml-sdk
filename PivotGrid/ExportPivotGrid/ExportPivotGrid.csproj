@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ExportPivotGrid</RootNamespace>
     <AssemblyName>ExportPivotGrid</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
@@ -16,64 +14,10 @@
     <DefineConstants>TRACE;WPF</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Pivot.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Pivot.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Pivot">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Pivot.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.PivotFieldList">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.PivotFieldList.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.Fixed.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Telerik.UI.for.Wpf.AllControls.Xaml" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\ExcelIcon.png" />

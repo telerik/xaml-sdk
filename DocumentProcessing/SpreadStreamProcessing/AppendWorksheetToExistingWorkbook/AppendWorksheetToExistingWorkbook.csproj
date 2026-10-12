@@ -1,17 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\..\Build\Imports\LicensingConfig.targets" />
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>Exe</OutputType>
     <RootNamespace>GenerateDocuments</RootNamespace>
     <AssemblyName>GenerateDocuments</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Telerik.UI.for.Wpf.AllControls.Xaml" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

@@ -179,7 +179,7 @@ namespace OrgChart.ViewModels
 			foreach (var subElement in element.Elements("Node"))
 			{
 				Node node = this.CreateNode(subElement, parent);
-				node.Children.AddRange(this.GetSubNodes(subElement, node));
+				foreach (var child in this.GetSubNodes(subElement, node)) node.Children.Add(child);
 				nodes.Add(node);
 			}
 			return nodes;
@@ -222,7 +222,7 @@ namespace OrgChart.ViewModels
 			foreach (XElement element in dataXml.Elements("Node"))
 			{
 				Node node = this.CreateNode(element, null);
-				node.Children.AddRange(this.GetSubNodes(element, node));
+				foreach (var child in this.GetSubNodes(element, node)) node.Children.Add(child);
 				this.HierarchicalDataSource.Add(node);
 			}
 		}

@@ -1,0 +1,84 @@
+trigger: none
+
+pr:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - '**/*.csproj'
+      - '**/*.vbproj'
+      - '**/*.cs'
+      - '**/*.xaml'
+      - '**/*.vb'
+      - .github/ci.yml
+
+schedules:
+  - cron: '0 3 * * 0'
+    displayName: Weekly full build
+    branches:
+      include:
+        - master
+    always: true
+
+pool:
+  vmImage: windows-latest
+
+jobs:
+  - job: Build
+    displayName: Build
+    timeoutInMinutes: 180
+    strategy:
+      maxParallel: 5
+      matrix:
+        # PR and full builds use the same five shards; PRs only build changed projects.
+        examples_batch_0: { shard: 0, shardCount: 5 }
+        examples_batch_1: { shard: 1, shardCount: 5 }
+        examples_batch_2: { shard: 2, shardCount: 5 }
+        examples_batch_3: { shard: 3, shardCount: 5 }
+        examples_batch_4: { shard: 4, shardCount: 5 }
+    steps:
+      - checkout: self
+        fetchDepth: 0
+
+      - pwsh: |
+          $root = $env:BUILD_SOURCESDIRECTORY
+          $all = Get-ChildItem $root -Recurse -File -Include *.csproj, *.vbproj | Sort-Object FullName
+          $candidateProjects = @($all)
+
+          if ($env:BUILD_REASON -eq 'PullRequest') {
+            $target = $env:SYSTEM_PULLREQUEST_TARGETBRANCHNAME
+            git fetch origin $target --quiet
+            $changed = git diff --name-only "origin/$target...HEAD" | ForEach-Object { Join-Path $root $_ }
+            $candidateProjects = @($all | Where-Object {
+              $dir = $_.DirectoryName + [IO.Path]::DirectorySeparatorChar
+              $changed | Where-Object { $_.StartsWith($dir, [StringComparison]::OrdinalIgnoreCase) }
+            })
+          }
+
+          $shard = [int]$env:SHARD
+          $count = [int]$env:SHARD_COUNT
+          $projects = for ($i = 0; $i -lt $candidateProjects.Count; $i++) {
+            if ($i % $count -eq $shard) { $candidateProjects[$i].FullName }
+          }
+
+          if (-not $projects) { Write-Host 'No projects to build.'; exit 0 }
+          Write-Host "Building $(@($projects).Count) project(s)."
+
+          $failed = @()
+          foreach ($project in $projects) {
+            $name = $project.Substring($root.Length + 1)
+            Write-Host "##[group]$name"
+            dotnet build $project -c Release --nologo -v:minimal
+            if ($LASTEXITCODE -ne 0) { $failed += $name }
+            Write-Host '##[endgroup]'
+          }
+
+          if ($failed) {
+            $failed | ForEach-Object { Write-Host "##vso[task.logissue type=error]Build failed: $_" }
+            exit 1
+          }
+        displayName: Build projects
+        env:
+          SHARD: $(shard)
+          SHARD_COUNT: $(shardCount)

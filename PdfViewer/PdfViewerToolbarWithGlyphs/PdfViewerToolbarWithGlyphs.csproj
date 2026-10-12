@@ -1,43 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PdfViewerToolbarWithGlyphs</RootNamespace>
     <AssemblyName>PdfViewerToolbarWithGlyphs</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Documents.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Documents.Fixed.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Themes.Office2016">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Themes.Office2016.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Telerik.UI.for.Wpf.AllControls.NoXaml" Version="*" />
   </ItemGroup>
   <ItemGroup>
-    <AppDesigner Include="Properties\" />
     <Resource Include="TelerikWebUI.ttf" />
   </ItemGroup>
   <ItemGroup>

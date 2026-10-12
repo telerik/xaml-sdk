@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
-using Telerik.Windows.DragDrop.Behaviors;
+using Telerik.Windows.DragDrop.Behaviors;
+using DragDropState = Telerik.Windows.DragDrop.Behaviors.DragDropState;
 
 namespace CustomListBoxDragDropBehavior
 {

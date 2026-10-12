@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlayer.Example", "Medi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlayer.Library", "MediaPlayer.Library\MediaPlayer.Library.csproj", "{F489A6B0-5281-4615-B293-6AAA53FC5F99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBarcodeScanner", "CustomBarcodeScanner\CustomBarcodeScanner.csproj", "{42C0228E-5B2B-427C-9EDE-18863E1447CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F489A6B0-5281-4615-B293-6AAA53FC5F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F489A6B0-5281-4615-B293-6AAA53FC5F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F489A6B0-5281-4615-B293-6AAA53FC5F99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C0228E-5B2B-427C-9EDE-18863E1447CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C0228E-5B2B-427C-9EDE-18863E1447CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C0228E-5B2B-427C-9EDE-18863E1447CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C0228E-5B2B-427C-9EDE-18863E1447CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

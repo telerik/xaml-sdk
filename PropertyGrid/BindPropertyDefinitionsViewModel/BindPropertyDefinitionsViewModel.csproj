@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DynamicSettings</RootNamespace>
     <AssemblyName>DynamicSettings</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
@@ -17,26 +15,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\System.Windows.Interactivity.dll</HintPath>
     </Reference>
-    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Windows.Controls">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TELERIKWPFDIR)\Binaries\WPF462\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
+    <PackageReference Include="Telerik.UI.for.Wpf.AllControls.Xaml" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\Build\Imports\LicensingConfig.targets" />
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DatabaseEntityFramework</RootNamespace>
     <AssemblyName>DatabaseEntityFramework</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
@@ -22,28 +20,7 @@
       <HintPath>lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
-    <PackageReference Include="Telerik.Licensing" Version="$(TelerikLicensingNugetVersion)" />
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ScheduleView">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Controls.ScheduleView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Themes.Office2016">
-      <HintPath>$(TELERIKWPFDIR)\Binaries.NoXaml\WPF462\Telerik.Windows.Themes.Office2016.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
+    <PackageReference Include="Telerik.UI.for.Wpf.AllControls.NoXaml" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\EntityFramework.dll" />
@@ -51,7 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.ComponentModel.DataAnnotations"><Aliases>DataAnnotations</Aliases></Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"><Aliases>global,DataAnnotations</Aliases></Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="WindowsBase" />
