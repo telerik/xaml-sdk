@@ -16,7 +16,7 @@ namespace DocFormatProviderDemo
             InitializeComponent();
 
             var provider = new DocFormatProvider();
-            this.radRichTextBox.Document = provider.Import(new FileStream("../../SampleData/DocFormat.doc", FileMode.Open));
+            this.radRichTextBox.Document = provider.Import(new FileStream(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "SampleData", "DocFormat.doc"), FileMode.Open));
         }
 
         private void btnImport_Click(object sender, System.Windows.RoutedEventArgs e)

@@ -617,7 +617,7 @@ namespace Diagrams.Layout
                     LayoutContainerChildren = this.LayoutContainersCheck.IsChecked.Value,
                     ComponentsGridWidth = 15000
                 };
-                if (this.containerSampleRoots != null) settings.Roots.AddRange(this.containerSampleRoots);
+                if (this.containerSampleRoots != null) foreach (var root in this.containerSampleRoots) settings.Roots.Add(root);
                 this.diagram.Layout(LayoutType.Tree, settings);
             }
             else

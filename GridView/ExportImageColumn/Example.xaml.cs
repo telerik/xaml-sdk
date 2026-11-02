@@ -68,7 +68,7 @@ namespace ExportImageColumn
 					{
 						FloatingImage image = new FloatingImage(worksheet, new CellIndex(i, j), padding, padding);
 
-						Stream stream = File.Open("../../" + cellValue, FileMode.Open, FileAccess.Read);
+						Stream stream = File.Open(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, cellValue), FileMode.Open, FileAccess.Read);
 
 						using (stream)
 						{

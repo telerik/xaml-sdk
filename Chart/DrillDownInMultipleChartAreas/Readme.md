@@ -1,2 +1,0 @@
-## Drill Down In Multiple Chart Areas
-Displaying drill down charts via the RadChart control can be done in multiple chart areas, whose count depends on the levels of the hierarchy. Of course you can combine drill down in single area and multiple chart areas.

@@ -1,2 +1,0 @@
-## Multi Series Charts
-RadChart provides support of multi-series charts. This is useful, when you want to display two or more charts bound to different data series on the same chart area. Usually these data series are semantically related and putting them together allows the user to compare the values easily.

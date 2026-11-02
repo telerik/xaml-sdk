@@ -27,7 +27,7 @@ namespace AddDocumentContent
 
             this.InitializeComponent();
 
-            this.OpenFile(File.OpenRead("../../SampleData/Sample.pdf"));
+            this.OpenFile(File.OpenRead(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "SampleData", "Sample.pdf")));
         }
 
         private void tbCurrentPage_KeyDown(object sender, KeyEventArgs e)

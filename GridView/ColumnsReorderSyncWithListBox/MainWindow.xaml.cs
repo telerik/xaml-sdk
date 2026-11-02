@@ -4,7 +4,8 @@ using System.Windows;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
 using Telerik.Windows.DragDrop;
-using ColumnsReorderSyncWithListBoxSL;
+using ColumnsReorderSyncWithListBoxSL;
+using DragVisual = Telerik.Windows.Controls.DragVisual;
 
 namespace ColumnsReorderSyncWithListBox_WPF
 {

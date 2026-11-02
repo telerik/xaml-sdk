@@ -1,7 +1,8 @@
 ﻿using System.Windows;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Data;
-using ValidationSummaryOutsideDataForm;
+using ValidationSummaryOutsideDataForm;
+using ErrorInfo = Telerik.Windows.Controls.Data.ErrorInfo;
 
 namespace ValidationSummaryOutsideDataForm_WPF
 {

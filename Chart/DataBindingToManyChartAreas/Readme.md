@@ -1,2 +1,0 @@
-## Data Binding To Many Chart Areas
-RadChart's DefaultView provides you with layout that consists of Chart Title, Chart Area and Chart Legend. However, in some cases, you might need to have more than one ChartArea in order to display two or more charts separately. Of course, you will also need to use data binding via SeriesMapping/ItemMapping in order to populate the RadChart with data.

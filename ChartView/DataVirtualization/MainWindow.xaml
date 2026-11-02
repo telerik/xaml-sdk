@@ -20,7 +20,7 @@
             <telerik:RadCartesianChart.Series>
                 <telerik:ScatterLineSeries XValueBinding="XValue" YValueBinding="YValue" ItemsSource="{Binding VisibleData}">
                     <telerik:ScatterLineSeries.RenderOptions>
-                        <telerik:Direct2DRenderOptions  />
+                        <telerik:SkiaRenderOptions />
                     </telerik:ScatterLineSeries.RenderOptions>
                 </telerik:ScatterLineSeries>
             </telerik:RadCartesianChart.Series>
